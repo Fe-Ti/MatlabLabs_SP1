@@ -1,0 +1,4041 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE></STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+      <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 6. Обычная графика MATLAB </a></font></b> </li>
+    <ul>
+      <li><font face="Times New Roman CYR" size=3><a href="#2">Построение графиков отрезками прямых </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#3">Графики в логарифмическом масштабе </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#4">Графики в полулогарифмическом масштабе </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#5">Столбцовые диаграммы </a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#6">Построение гистограмм  </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#7">Лестничные графики - команды stairs</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#8">Графики с зонами погрешности</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#9">График дискретных отсчетов функции </a></font> </li>
+	 <li><font face="Times New Roman CYR" size=3><a href="#10">Графики в полярной системе координат </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#11">Угловые гистограммы </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#12">Графики векторов</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#13">График проекций векторов на плоскость </a></font> </li>
+	 
+	  <li><font face="Times New Roman CYR" size=3><a href="#14">Контурные графики </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#15">Создание массивов данных для трехмерной графики </a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#16">Графики поля градиентов quiver </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#17">Построение графиков поверхностей</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#18">Сетчатые 3D-графики с окраской </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#19">Сетчатые 3D-графики с проекциями</a></font> </li>
+	 <li><font face="Times New Roman CYR" size=3><a href="#20">Построение поверхности столбцами </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#21">Построение поверхности с окраской</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#22">Построение поверхности и ее проекции </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#23">Построение освещенной поверхности</a></font> </li>
+	 
+	  <li><font face="Times New Roman CYR" size=3><a href="#24">Средства управления подсветкой и обзором фигур </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#25">Построение графиков функций трех переменных </a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#26">График трехмерной слоеной поверхности</a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#27">Трехмерные контурные графики </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#28">Установка титульной надписи </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#29">Установка осевых надписей</a></font> </li>
+	 <li><font face="Times New Roman CYR" size=3><a href="#30">Ввод текста в любое место графика </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#31">Позиционирование текста с помощью мыши </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#32">Вывод пояснений </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#33">Маркировка линий уровня на контурных графиках </a></font> </li>
+	 
+	  <li><font face="Times New Roman CYR" size=3><a href="#34">Управление свойствами осей графиков </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#35">Включение и выключение сетки</a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#36">Наложение графиков друг на друга  </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#37">Разбиение графического окна </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#38">Изменение масштаба графика </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#39">Установка палитры цветов</a></font> </li>
+	 <li><font face="Times New Roman CYR" size=3><a href="#40">Установка соответствия между палитрой цветов и масштабом осей </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#41">Окраска поверхностей</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#42">Установка палитры псевдоцветов </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#43">Создание закрашенного многоугольника </a></font> </li>
+	 
+	  <li><font face="Times New Roman CYR" size=3><a href="#44">Окраска плоских многоугольников </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#45">Вывод шкалы цветов </a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#46">Цветные плоские круговые диаграммы</a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#47">Другие команды управления световыми эффектами</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#48">Окрашенные многоугольники в пространстве </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#49">Цветные объемные круговые диаграммы </a></font> </li>
+	 <li><font face="Times New Roman CYR" size=3><a href="#50">Построение цилиндра </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#51">Построение сферы </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#52">Трехмерная графика с треугольными плоскостями </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#53">Что нового мы узнали? </a></font> </li>
+</ul></ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №6.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Обычная графика MATLAB</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Построение графиков точками и отрезками прямых
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Графики в логарифмическоми полулогарифмическом масштабе</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Гистограммы и диаграммы&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Графики специальных типов</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Создание массивов данных для трехмерной графики</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Построение графиков трехмерных поверхностей, сечений и контуров</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Средства управления подсветкой и обзором фигур</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Средства оформления графиков</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Одновременный вывод нескольких графиков</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Управление цветовой палитрой&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Окраска трехмерных поверхностей</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Двумерные и трехмерные графические объекты</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Одно из достоинств системы MATLAB — обилие средств графики, начиная от команд построения простых графиков функций одной переменной в декартовой системе координат и кончая комбинированными и презентационными графиками с элементами анимации, а также средствами проектирования графического пользовательского интерфейса (GUI). Особое внимание в системе уделено трехмерной графике с функциональной окраской отображаемых фигур и имитацией различных световых эффектов.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Описанию графических функций и команд посвящена обширная электронная книга в формате PDF. Объем материала по графике настолько велик, что помимо вводного описания графики в уроке 3 в этой книге даются еще два урока по средствам обычной и специальной графики. Они намеренно предшествуют систематизированному описанию большинства функций системы MATLAB, поскольку графическая визуализация вычислений довольно широко используется в последующих материалах книги. При этом графические средства системы доступны как в командном режиме вычислений, так и в программах. Этот урок рекомендуется изучать выборочно или выделить на него не менее 4 часов.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Построение 
+  графиков отрезками прямых</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Функции одной переменной <I>у(х) </I>находят широкое применение в практике математических и других расчетов, а также в технике компьютерного математического моделирования. Для отображения таких функций используются графики в декартовой (прямоугольной) системе координат. При этом обычно строятся две оси — горизонтальная <I>X </I>и вертикальная <I>Y, </I>и задаются координаты <I>х </I>и <I>у, </I>определяющие узловые точки функции <I>у(х). </I>Эти точки соединяются друг с другом отрезками прямых, т. е. при построении графика осуществляется линейная интерполяция для промежуточных точек. Поскольку MATLAB — матричная система, совокупность точек <I>у(х) </I>задается векторами X и Y одинакового размера.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Команда plot служит для построения графиков функций в декартовой системе координат. Эта команда имеет ряд параметров, рассматриваемых ниже.</font>
+</P>
+<ul>
+  <li>
+    <p align="justify"><font size="3" face="Times New Roman">plot (X, Y) — строит график функции <I>у(х), </I>координаты точек <I>(х, у) </I>которой берутся из векторов одинакового размера Y и X. Если X или Y — матрица, то строится семейство графиков по данным, содержащимся в колонках матрицы.</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Приведенный ниже пример иллюстрирует построение графиков двух функций — <I>sin(x) </I>и <I>cos(x), </I>значения функции которых содержатся в матрице Y, а значения аргумента <I>х </I>хранятся в векторе
+X:</font></P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=[0 1 2 3 4 5];&nbsp;</font></P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Y=[sin(x):cos(x)];&nbsp;</font></P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; plot(x,Y)</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">На рис. 6.1 показан график 
+  функций из этого примера. В данном случае отчетливо видно, что график состоит 
+  из отрезков, и если вам нужно, чтобы отображаемая функция имела вид гладкой 
+  кривой, необходимо увеличить количество узловых точек. Расположение их может 
+  быть произвольным. </font></P>
+<P align="left"><img src="6.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.1.jpg" width="438" height="539"> </P>
+<P align="left">
+<B><font size="3" face="Times New Roman"><i>Рис. 6.1. </i> </font> </B><font size="3" face="Times New Roman"><i>Графики двух функций в декартовой системе координат</i>
+</font>
+</P>
+<ul>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">plot(Y) — строит график <I>у(i), </I>где значения <I>у </I>берутся из вектора Y, a <I>i </I>представляет собой индекс соответствующего элемента. Если Y содержит комплексные элементы, то выполняется команда plot (real (Y), imag(Y)). Во всех других случаях мнимая часть данных игнорируется.</font>  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Вот пример использования команды
+plot(Y):
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=2*pi:0.02*pi:2*pi;&nbsp;</font></P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; y=sin(x)+i*cos(3*x);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(y)
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Соответствующий график 
+  показан на рис. 6.2. </font></P>
+<P align="left"><img src="6.2.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.2.jpg" width="438" height="505"> </P>
+<P align="left">
+<B><font size="3" face="Times New Roman"><i>Рис. 6.2. </i> </font> </B><font size="3" face="Times New Roman"><i>График функции, представляющей вектор Y с комплексными элементами</i>
+</font>
+</P>
+<ul>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">&nbsp;plot(X,Y,S) — аналогична команде plot(X,Y), но тип линии графика можно задавать с помощью строковой константы
+S.</font>  </li>
+</ul>
+<p align="left">
+<font size="3" face="Times New Roman">Значениями </font><font size="3" face="Times New Roman">константы S могут быть следующие символы.
+</font>
+</p>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="249" HEIGHT="618">
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="2" ALIGN="LEFT" VALIGN="TOP" HEIGHT="22"> 
+      <DIV WIDTH="478" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman"><b>Цвет линии<BR>
+          </b> </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="22"> 
+      <DIV WIDTH="101" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman">Y<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="22"> 
+      <DIV WIDTH="377" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman">Желтый<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="18"> 
+      <DIV WIDTH="101" HEIGHT="18"> 
+        <P align="left"> <font size="3" face="Times New Roman">М<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="18"> 
+      <DIV WIDTH="377" HEIGHT="18"> 
+        <P align="left"> <font size="3" face="Times New Roman">Фиолетовый<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="22"> 
+      <DIV WIDTH="101" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman">С<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="22"> 
+      <DIV WIDTH="377" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman">Голубой<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="19"> 
+      <DIV WIDTH="101" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">R<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="19"> 
+      <DIV WIDTH="377" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">Красный<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="19"> 
+      <DIV WIDTH="101" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">G<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="19"> 
+      <DIV WIDTH="377" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">Зеленый<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="20"> 
+      <DIV WIDTH="101" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman">В<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="20"> 
+      <DIV WIDTH="377" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman">Синий<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="19"> 
+      <DIV WIDTH="101" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">W<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="19"> 
+      <DIV WIDTH="377" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">Белый<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="28"> 
+      <DIV WIDTH="101" HEIGHT="28"> 
+        <P align="left"> <font size="3" face="Times New Roman">К<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="28"> 
+      <DIV WIDTH="377" HEIGHT="28"> 
+        <P align="left"> <font size="3" face="Times New Roman">Черный<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="2" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" HEIGHT="22"> 
+      <DIV WIDTH="478" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman"><b>Тип точки<BR>
+          </b> </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="22"> 
+      <DIV WIDTH="101" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman"> <BR>
+          . </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="22"> 
+      <DIV WIDTH="377" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman">Точка<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="21"> 
+      <DIV WIDTH="101" HEIGHT="21"> 
+        <P align="left"> <font size="3" face="Times New Roman">0<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="21"> 
+      <DIV WIDTH="377" HEIGHT="21"> 
+        <P align="left"> <font size="3" face="Times New Roman">Окружность<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="21"> 
+      <DIV WIDTH="101" HEIGHT="21"> 
+        <P align="left"> <font size="3" face="Times New Roman">X<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="21"> 
+      <DIV WIDTH="377" HEIGHT="21"> 
+        <P align="left"> <font size="3" face="Times New Roman">Крест<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="18"> 
+      <DIV WIDTH="101" HEIGHT="18"> 
+        <P align="left"> <font size="3" face="Times New Roman">+<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="18"> 
+      <DIV WIDTH="377" HEIGHT="18"> 
+        <P align="left"> <font size="3" face="Times New Roman">Плюс<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="20"> 
+      <DIV WIDTH="101" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman">*<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="20"> 
+      <DIV WIDTH="377" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman">Звездочка<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="21"> 
+      <DIV WIDTH="101" HEIGHT="21"> 
+        <P align="left"> <font size="3" face="Times New Roman">S<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="21"> 
+      <DIV WIDTH="377" HEIGHT="21"> 
+        <P align="left"> <font size="3" face="Times New Roman">Квадрат<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="18"> 
+      <DIV WIDTH="101" HEIGHT="18"> 
+        <P align="left"> <font size="3" face="Times New Roman">D<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="18"> 
+      <DIV WIDTH="377" HEIGHT="18"> 
+        <P align="left"> <font size="3" face="Times New Roman">Ромб<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="22"> 
+      <DIV WIDTH="101" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman">V<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="22"> 
+      <DIV WIDTH="377" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman">Треугольник (вниз)<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="19"> 
+      <DIV WIDTH="101" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">А<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="19"> 
+      <DIV WIDTH="377" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">Треугольник (вверх)<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="19"> 
+      <DIV WIDTH="101" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">&lt;<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="19"> 
+      <DIV WIDTH="377" HEIGHT="19"> 
+        <P align="left"> <font size="3" face="Times New Roman">Треугольник (влево)<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="18"> 
+      <DIV WIDTH="101" HEIGHT="18"> 
+        <P align="left"> <font size="3" face="Times New Roman">&gt;<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="18"> 
+      <DIV WIDTH="377" HEIGHT="18"> 
+        <P align="left"> <font size="3" face="Times New Roman">Треугольник (вправо)<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="20"> 
+      <DIV WIDTH="101" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman">Р<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="20"> 
+      <DIV WIDTH="377" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman">Пятиугольник<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="27"> 
+      <DIV WIDTH="101" HEIGHT="27"> 
+        <P align="left"> <font size="3" face="Times New Roman">H<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="27"> 
+      <DIV WIDTH="377" HEIGHT="27"> 
+        <P align="left"> <font size="3" face="Times New Roman">Шестиугольник<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="2" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" HEIGHT="22"> 
+      <DIV WIDTH="478" HEIGHT="22"> 
+        <P align="left"> <font size="3" face="Times New Roman"><b>Тип линии<BR>
+          </b> </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="23"> 
+      <DIV WIDTH="101" HEIGHT="23"> 
+        <P align="left"> <font size="3" face="Times New Roman">-<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="23"> 
+      <DIV WIDTH="377" HEIGHT="23"> 
+        <P align="left"> <font size="3" face="Times New Roman">Сплошная<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="20"> 
+      <DIV WIDTH="101" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman"> <BR>
+          ; </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="20"> 
+      <DIV WIDTH="377" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman">Двойной пунктир<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="20"> 
+      <DIV WIDTH="101" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman">-.<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="20"> 
+      <DIV WIDTH="377" HEIGHT="20"> 
+        <P align="left"> <font size="3" face="Times New Roman">Штрих-пунктир<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="116" HEIGHT="23"> 
+      <DIV WIDTH="101" HEIGHT="23"> 
+        <P align="left"> <font size="3" face="Times New Roman">--<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="133" HEIGHT="23"> 
+      <DIV WIDTH="377" HEIGHT="23"> 
+        <P align="left"> <font size="3" face="Times New Roman">Штриховая<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+<P align="justify">
+<font size="3" face="Times New Roman">Таким образом, с помощью строковой константы S можно изменять цвет линии, представлять узловые точки различными отметками (точка, окружность, крест, треугольник с разной ориентацией вершины и т. д.) и менять тип линии графика.</font></P>
+<ul>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">&nbsp;рlot (X1, Y1, S1, Х2, Y2, S2, ХЗ, Y3, S3,...) — эта команда строит на одном графике ряд линий, представленных данными вида (X<sub>i</sub>, Y<sub>i</sub>, S<sub>i</sub>), где X<sub>i</sub> и Y<sub>i</sub> — векторы или матрицы, a S<sub>i</sub> — строки. С помощью такой конструкции возможно построение, например, графика функции линией, цвет которой отличается от цвета узловых точек. Так, если надо построить график функции линией синего цвета с красными точками, то вначале надо задать построение графика с точками красного цвета (без линии), а затем графика только линии синего цвета (без точек).</font>  
+  </li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">При отсутствии указания на цвет линий и точек он выбирается автоматически из таблицы цветов (белый исключается). Если линий больше шести, то выбор цветов повторяется. Для монохромных систем линии выделяются стилем.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Рассмотрим пример построения графиков трех функций с различным стилем представления каждой из них:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; x=-2*pi:0.1*pi:2*pi;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">» yl=sin(x);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; y2=sin(x).^2;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; y3=sin(x).^3:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(x,yl,'-m',x,y2,'-.+r',х,у3,'--ok')</font></P>
+<P align="left"> <font size="3" face="Times New Roman">Графики функций для этого 
+  примера показаны на рис. 6.3. </font></P>
+<P align="left"><img src="6.3.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.3.jpg" width="436" height="456"> </P>
+<P align="left">
+<B><font size="3" face="Times New Roman"><i>Рис. 6.3. </i> </font> </B><font size="3" face="Times New Roman"><i>Построение графиков трех функций на одном рисунке с разным стилем линий</i>
+</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Здесь график функции yl строится сплошной фиолетовой линией, график у2 строится штрих пунктирной линией с точками в виде знака &laquo;плюс&raquo; красного цвета, а график уЗ строится штриховой линией с кружками черного цвета. К сожалению, на черно-белых рисунках этой книги вместо разных цветов видны разные градации серого цвета.</font></P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="3"></a>Графики 
+  в логарифмическом масштабе</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Для построения графиков функций со значениями <I>х </I>и <I>у, </I>изменяющимися в широких пределах, нередко используются логарифмические масштабы. Рассмотрим команды, которые используются в таких случаях.</font></P>
+<ul>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">&nbsp;loglog(...) — синтаксис команды аналогичен ранее рассмотренному для функции plot(...). Логарифмический масштаб используется для координатных осей <I>X </I>и У. Ниже дан пример применения данной команды:</font>  
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; x=logspace(-1, 3);&nbsp;</font></P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; loglog(x,exp(x)./x)&nbsp;</font></P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; grid on
+</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">На рис. 6.4 представлен график функции <I>ехр(х)/х </I>в логарифмическом масштабе. Обратите внимание на то, что командой grid on строится координатная сетка.</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Неравномерное расположение 
+  линий координатной сетки указывает на логарифмический масштаб осей. </font></P>
+<P align="left"><img src="6.4.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.4.jpg" width="439" height="463"> </P>
+<P align="left">
+<B><font size="3" face="Times New Roman"><i>Рис. 6.4. </i> </font> </B><i><font size="3" face="Times New Roman">График функции ехр(x)/x в логарифмическом масштабе
+</font>
+</i>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a> Графики 
+  в полулогарифмическом масштабе</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">В некоторых случаях предпочтителен <I>полулогарифмический </I>масштаб графиков, когда по одной оси задается логарифмический масштаб, а по другой — линейный.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Для построения графиков функций в полулогарифмическом масштабе используются следующие команды:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;semilogx(...) — строит график функции в логарифмическом масштабе (основание 10) по оси <I>X </I>и линейном по оси <I>Y;</I></font>  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> semilogxу (...) — строит график функции в логарифмическом масштабе по оси <I>Y </I>и линейном по оси <I>X.</I></font>  </li>
+</ul>
+<P align="left"><img src="6.5.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.5.jpg" width="439" height="475"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.5. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>График экспоненты в полулогарифмическом 
+  масштабе</i> </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Запись параметров (...) выполняется по аналогии с функцией plot(...). Ниже приводится пример построения графика экспоненциальной функции:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=0:0.5:10;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; semilogy(x,exp(x))</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">График функции при логарифмическом масштабе по оси У представлен на рис. 6.5.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Нетрудно заметить, что при таком масштабе график экспоненциальной функции выродился в прямую линию. Масштабной сетки теперь уже нет.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="5"></a> Столбцовые 
+  диаграммы</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Столбцовые диаграммы широко используются в литературе, посвященной финансам и экономике, а также в математической литературе. Ниже представлены команды для построения таких диаграмм.
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">bar(x, Y) — строит столбцовый график элементов вектора Y (или группы столбцов для матрицы Y) со спецификацией положения столбцов, заданной значениями элементов вектора х, которые должны идти в монотонно возрастающем порядке;
+</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">bar(Y) — строит график значений элементов матрицы Y так же, как указано выше, но фактически для построения графика используется вектор х=1:m;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">bar(x,Y,WIDTH) или BAR(Y,WIDTH) — команда аналогична ранее рассмотренным, но со спецификацией ширины столбцов (при WIDTH &gt; 1 столбцы в одной и той же позиции перекрываются). По умолчанию задано WIDTH = 0.8.</font>  </li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Возможно применение этих команд и в следующем виде: bаг(...., 'Спецификация')</font>
+<font size="3" face="Times New Roman">для задания спецификации графиков, например типа линий, цвета и т. д., по аналогии с командой
+plot. Спецификация 'stacked' задает рисование всех
+n столбцов в позиции m друг на друге.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Пример построения столбцовой диаграммы матрицы размером 12x3 приводится ниже:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; <I>% </I>Столбцовая диаграмма с вертикальными столбцами</font></P>
+<P align="left"><font size="3" face="Courier New"> &raquo; bar(rand(12,3),'stacked')</font></P>
+<P align="left"><font size="3" face="Courier New">&raquo; colormap(cool)<BR>
+</font></P>
+<P align="left"> <font size="3" face="Times New Roman">На рис. 6.6 представлен 
+  полученный график. </font></P>
+<P align="left"><img src="6.6.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.6.jpg" width="435" height="457"> </P>
+<P align="left">
+<B><font size="3" face="Times New Roman"><i>Рис. 6.6. </i> </font> </B><i><font size="3" face="Times New Roman">Пример построения диаграммы с вертикальными столбцами
+</font>
+</i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Помимо команды bar(...) существует аналогичная ей по синтаксису команда barh(...), которая&quot; строит столбцовые диаграммы с горизонтальным расположением столбцов. Пример, приведенный ниже, дает построения, показанные на рис. 6.7.</font></P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; barh(rand(5,3),'stacked')</font></P>
+<P align="left"><font size="3" face="Courier New">&raquo; colormap(cool)</font></P>
+<P align="left"><img src="6.7.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.7.jpg" width="455" height="457"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.7. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Пример построения столбцовой диаграммы 
+  с горизонтальными столбцами</i> </font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Какое именно расположение столбцов выбрать, зависит от пользователя, использующего эти команды для представления своих данных.</font></P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="6"></a> Построение 
+  гистограмм</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Классическая гистограмма характеризует числа попаданий значений элементов вектора Y в М интервалов с представлением этих чисел в виде столбцовой диаграммы. Для получения данных для гистограммы служит функция hist, записываемая в следующем виде:</font></P>
+<ul>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">N=hist(Y) — возвращает вектор чисел попаданий для 10 интервалов, выбираемых автоматически. Если Y — матрица, то выдается массив данных о числе попаданий для каждого из ее столбцов;</font>  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">N=hist(Y,M) — аналогична вышерассмотренной, но используется М интервалов</font>
+<font size="3" face="Times New Roman">(М — скаляр);&nbsp;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;N=hist(Y,X) — возвращает числа попаданий элементов вектора Y в интервалы,</font>
+<font size="3" face="Times New Roman">центры которых заданы элементами
+вектора X;</font>&nbsp;</li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">[N,X]=HIST(...) — возвращает числа попаданий в интервалы и данные о центрах интервалов.</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Команда hist(...) с синтаксисом, аналогичным приведенному выше, строит график гистограммы. В следующем примере строится гистограмма для 1000 случайных чисел и выводится вектор с данными о числах их попаданий в интервалы, заданные вектором х:</font></P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=-3:0.2:3;&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; y=randn(1000,1);&nbsp;</font></P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; hist(y,x)</font></P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo;  h=hist(y,x)&nbsp;</font></P>
+<P align="left">
+<font size="3" face="Courier New"> h =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Columns 1 through 12
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0    0    3    7    8    9    11   23   33   43   57
+55
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Columns 13 through 24
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">70   62   83   87   93   68   70   65   41   35   27   21
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Columns 25 through 31
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">12         5 6          3          2          1          0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Построенная гистограмма показана на рис. 6.8.
+</font>
+</P>
+<P align="left"><img src="6.8.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.8.jpg" width="446" height="457"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.8. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Пример построения гистограммы </font> 
+  </i> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Нетрудно заметить, что распределение случайных чисел близко к нормальному закону. Увеличив их количество, можно наблюдать еще большее соответствие этому закону.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="7"></a> Лестничные 
+  графики — команды stairs</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Лестничные графики визуально представляют собой ступеньки с огибающей, представленной функцией <I>у(х). </I>Такие графики используются, например, для отображения процессов квантования функции <I>у(х), </I>представленной рядом своих отсчетов. При этом в промежутках между отсчетами значения функции считаются постоянными и равными величине последнего отсчета.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Для построения лестничных графиков в системе MATLAB используются команды группы
+stairs:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">stairs(Y) — строит лестничный график по данным вектора
+Y;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">stairs(X,Y) — строит лестничный график по данным вектора Y с координатами <I>х </I>переходов от ступеньки к ступеньке, заданными значениями элементов вектора
+X;</font>  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">stairs(...,S) — аналогична по действию вышеописанным командам, но строит график линиями, стиль которых задается строками
+S.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример иллюстрирует построение лестничного графика:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;   х=0:0.25:10;&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo;   stairs(x,x.<sup>^</sup>2);</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Результат построения представлен на рис. 6.9.
+</font>
+</P>
+<P align="left"><img src="6.9.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.9.jpg" width="452" height="537"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.9. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Лестничный график функции х<sup>^</sup>2 
+  </font> </i> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Обратите внимание на то, что отсчеты берутся через равные промежутки по горизонтальной оси. Если, к примеру, отображается функция времени, то stairs имеет вид квантованной по времени функции.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция H=stairs(X,Y) возвращает вектор дескрипторов графических объектов.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">[XX,YY]=stairs(X,Y)</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">сама по себе график не строит, а возвращает векторы XX и YY, которые позволяют
+построить график с помощью команды plot(XX,YY).</font></P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="8"></a> Графики 
+  с зонами погрешности</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Если данные для построения функции определены с заметной погрешностью, то используют графики функций типа
+errorbar с оценкой погрешности каждой точки путем ее представления в виде буквы I, высота которой соответствует заданной погрешности представления точки. Команда
+errorbar используется в следующем виде:</font></P>
+<ul>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">errorbar(X,Y,L,U) — строит график значений элементов вектора Y в зависимости от данных, содержащихся в векторе X, с указанием нижней и верхней границ значений, заданных в векторах L и
+U;</font>  </li>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">errorbar(X,Y,E), errorbar(Y,E) —строит графики функции Y(X) с указанием этих границ в виде [Y-E Y+E], где Е — погрешность;</font>  
+  </li>
+  <li>
+    <p align="justify"><font size="3" face="Times New Roman">errorbar(..., 'LineSpec') — аналогична описанным выше командам, но позволяет строить линии со спецификацией 'LineSpec', аналогичной спецификации, примененной в команде
+    plot.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример иллюстрирует применение команды
+errorbar:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=-2:0.1:2;</font></P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; y=erf(x);</font></P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; е=rand(size(x))/10;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; errorbar(x,y,e);</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Построенный график показан на рис. 6.10.
+</font>
+</P>
+<P align="left"><img src="6.10.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.10.jpg" width="450" height="479"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.10. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График функции erf(x) с зонами 
+  погрешности </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция, записываемая в виде H=errorbar(...), возвращает вектор дескрипторов графических объектов.</font></P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="9"></a> График 
+  дискретных отсчетов функции</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Еще один вид графика функции <I>у(х) — </I>ее представление дискретными отсчетами. Этот вид графика применяется, например, при описании квантования сигналов. Каждый отсчет представляется вертикальной чертой, увенчанной кружком, причем высота черты соответствует y-координате точки.
+</font>
+</P>
+<P align="left"><img src="6.11.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.11.jpg" width="450" height="500"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.11. </i></font> 
+  </B><i><font size="3" face="Times New Roman">График дискретных отсчетов функции 
+  </font></i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для построения графика подобного вида используются команды
+stem(...):
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">stem(X,Y) — строит график отсчетов с ординатами в векторе Y и абсциссами в векторе
+X;</font>  
+  </li>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">stem(...., 'LINESPEC') — дает построения, аналогичные ранее приведенным командам, но со спецификацией линий 'LINESPEC', подобной спецификации, приведенной для функции
+plot;</font>  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">stem(Y) — строит график функции с ординатами в векторе Y в виде отсчетов;
+</font>
+  </li>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">stem(...., 'filled') — строит график функции с закрашенными маркерами. Следующий пример иллюстрирует применение команды
+stem:</font>  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х = 0:0.1:4;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; у = sin(x.<sup>^</sup>2).*exp(-x);</font></P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; stem(x.y)</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Полученный для данного примера график показан на рис. 6.11.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция H=STEM(...) строит график и возвращает вектор дескрипторов графических</font>
+<font size="3" face="Times New Roman">объектов.</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="10"></a> Графики 
+  в полярной системе координат</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">В полярной системе координат любая точка представляется как конец радиус-вектора, исходящего из начала системы координат, имеющего длину RHO и угол ТНЕТА. Для построения графика функции RHO(THETA) используются приведенные ниже команды. Угол ТНЕТА обычно меняется от 0 до 2*pi. Для построения графиков функций в полярной системе координат используются команды типа
+polar(...):</font></P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">polar(THETA, RHO) — строит график в полярной системе координат, представляющий собой положение конца радиус-вектора с длиной RHO и углом ТНЕТА;</font>  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">polar(THETA,RHO,S) — аналогична предыдущей команде, но позволяет задавать стиль построения с помощью строковой константы S по аналогии с командой
+plot.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Рис. 6.12 демонстрирует результат выполнения команд:<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t=0:pi/50:2*pi;&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; polar(t,sin(5*t))</font></P>
+<P align="left"><img src="6.12.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.12.jpg" width="197" height="181"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.12. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График функции в полярной системе 
+  координат </font> </i> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Графики функций в полярных координатах могут иметь весьма разнообразный вид, порой напоминая такие объекты природы, как снежинки или кристаллики
+льда на стекле. Вы можете сами попробовать построить несколько таких графиков — многие получают от этого удовольствие.</font></P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="11"></a> Угловые 
+  гистограммы</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Угловые гистограммы находят применение в индикаторах радиолокационных станций, для отображения &laquo;роз&raquo; ветров и при построении других специальных графиков. Для этого используется ряд команд типа
+rose(...):</font></P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">rose(THETA) — строит угловую гистограмму для 20 интервалов по данным вектора ТНЕТА;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">rose(ТНЕТА, N) — строит угловую гистограмму для N интервалов в пределах угла от 0 до 2*рi по данным вектора ТНЕТА;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">rose(ТНЕТА, X) — строит угловую гистограмму по данным вектора ТНЕТА со спецификацией интервалов, указанной в векторе
+X.</font>  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример иллюстрирует применение команды rose: </font></P>
+<P align="left"><font size="3" face="Times New Roman">&raquo;
+  rose(1:100,12)
+  </font></P>
+<P align="left">
+<font size="3" face="Times New Roman">На рис. 6.13 показан пример построения графика командой
+rose.
+</font>
+</P>
+<P align="left"><img src="6.13.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.13.jpg" width="201" height="189"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.13. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Угловая гистограмма </font> </i> 
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Функция H=rose(...) строит график и возвращает вектор дескрипторов графических объектов, а функция [T,R]=rose(...) сама по себе график не строит, но возвращает векторы Т и R, которые нужны команде polar (Т, R) для построения подобной гистограммы.</font></P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="12"></a> Графики 
+  векторов</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Иногда желательно представление ряда радиус-векторов в их обычном виде, то есть в виде стрелок, исходящих из начала координат и имеющих угол и длину,
+определяемые действительной и мнимой частью комплексных чисел, представляющих эти векторы. Для этого служит группа команд
+compass:</font></P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">compass(U,V) — строит графики радиус-векторов с компонентами (U,V), представляющими действительную и мнимую части каждого из радиус-векторов;</font>  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> compass (Z) — эквивалентно compass (real (Z),
+imag(Z));</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">compass(U,V,LINESPEC) и  Compass(Z,LINESPEC) <B>—
+</B> аналогичны представленным выше</font> <font size="3" face="Times New Roman">командам, но позволяют задавать спецификацию линий построения
+    LINESPEC,</font> <font size="3" face="Times New Roman">подобную описанной для команды plot.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">В следующем примере показано использование команды compass:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Z=[-1+2i,-2-3i,2+3i,5+2i];&nbsp;</font></P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; compass(Z)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Построенный в этом примере график представлен на рис. 6.14.
+</font>
+</P>
+<P align="left"><img src="6.14.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.14.1.jpg" width="290" height="235"></P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.14. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Построение радиус-векторов </font> 
+  </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция H=COMPASS(...) строит график и возвращает дескрипторы графических объектов.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="13"></a> График 
+  проекций векторов на плоскость</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Иногда полезно отображать комплексные величины вида z = <I>х + yi </I>в виде проекции радиус-вектора на плоскость. Для этого используется семейство графических команд класса
+feather:</font></P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">feather(U, V) — строит график проекции векторов, заданных компонентами U и V, на плоскость;</font>  
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> feather (Z) — для вектора Z с комплексными элементами дает построения, аналогичные
+feather(REAL(Z), IMAG(Z));
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">feather(...,  S) — дает построения, описанные выше, но со спецификацией линий, заданной строковой константой S по аналогии с командой
+plot.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример применения команды
+feather:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; x=0:0.1*pi:3*pi;&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; y=0.05+i;&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; z=exp(x*y);&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; feather(z)</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">График, построенный в этом последнем примере, показан на рис. 6.15.</font>
+</P>
+<P align="left"><img src="6.15.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.15.jpg" width="440" height="221"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.15. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График, построенный функцией feather 
+  </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция Н=РЕАТНЕR(...)строит график и возвращает вектор дескрипторов графических объектов.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="14"></a> Контурные 
+  графики</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Контурные графики служат для представления на плоскости функции двух переменных вида <I>z(x, у) с </I>помощью линий равного уровня. Они получаются, если трехмерная поверхность пересекается рядом плоскостей, расположенных параллельно друг другу. При этом контурный график представляет собой совокупность спроецированных на плоскость <I>(х, у) </I>линий пересечения поверхности <I>г(х, у) </I>плоскостями.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Для построения контурных графиков используются команды
+contour:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="justify"><font size="3" face="Times New Roman">contour(Z) — строит контурный график по данным матрицы Z с автоматическим заданием диапазонов изменения <I>х </I>и <I>у;</I></font></li>
+  <li>
+    <p align="justify"><font size="3" face="Times New Roman">contour(X, Y, Z) — строит контурный график по данным матрицы Z с указанием спецификаций для X и
+  Y;</font></li>
+  <li>
+    <p align="justify"><font size="3" face="Times New Roman">contour(Z, N) и contour(X, Y, Z, N) — дает построения, аналогичные ранее описанным командам, с заданием N линий равного уровня (по умолчанию
+      N=10);</font>  
+  </li>
+  <li>
+    <p align="justify"><font size="3" face="Times New Roman">contour(Z, V) и contour(X, Y, Z, V) — строят линии равного уровня для высот, указанных значениями элементов вектора
+    V;</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">contour(Z, [v v]) или contour(X, Y, Z, [v v]) — вычисляет одиночный контур для уровня
+    v;</font>
+  </li>
+  <li>
+    <p><font size="3" face="Times New Roman">&nbsp;[С, Н] = contour (...) — возвращает дескрипторы — матрицу С и вектор-столбец Н. Они могут использоваться как входные параметры для команды
+    clabel;</font>  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">contour(..., 'LINESPEC') — позволяет использовать перечисленные выше команды с указанием спецификации линий, которыми идет построение.</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример построения контурного графика поверхности, заданной функций
+peaks:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; z=peaks(27);&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; contour(z,15)</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Построенный в этом примере график показан на рис. 6,16. Заметим, что объект — функция peaks — задан в MATLAB в готовом виде.</font></P>
+<P align="left"><img src="6.16.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.16.jpg" width="437" height="203"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.16. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Контурный график, построенный с 
+  помощью команды contour </font> </i> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Графики этого типа часто используются в топографии для представления на листе бумаги (как говорят математики — на плоскости) объемного рельефа местности. Для оценки высот контурных линий используется их функциональная окраска.</font></P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="15"></a> Создание 
+  массивов данных для трехмерной графики</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Трехмерные поверхности обычно описываются функцией двух переменных <I>z(x, у). </I>Специфика построения трехмерных графиков требует не просто задания ряда значений <I>х </I>и <I>у, </I>то есть векторов х и у. Она требует определения для X и Y двумерных массивов — матриц. Для создания таких массивов служит функция meshgrid. В основном она используется совместно с функциями построения графиков трехмерных поверхностей. Функция meshgrid записывается в следующих формах:</font></P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">[X, Y] = meshgrid(x) — аналогична  [X, Y] =
+meshgrid(x.x);</font>  
+  </li>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">[X, Y, Z] = meshgrid(x, y, z) — возвращает трехмерные массивы, используемые для вычисления функций трех переменных и построения трехмерных графиков;</font>    </li>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">[X, Y] = meshgrid(x, y) — преобразует область, заданную векторами х и у, в массивы X и Y, которые могут быть использованы для вычисления функции двух</font>
+<font size="3" face="Times New Roman">переменных и построения трехмерных графиков. Строки выходного массива X являются копиями вектора х; а столбцы Y — копиями вектора у.</font>    </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X, Y] = meshgnd(l:4,13:17)&nbsp;</font></P>
+<P align="left">
+<font size="3" face="Courier New"> X =
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="182" HEIGHT="177">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="17">
+<DIV WIDTH="55" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="17">
+<DIV WIDTH="33" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="15">
+<DIV WIDTH="55" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Y=<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="15">
+<DIV WIDTH="33" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="17">
+<DIV WIDTH="55" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="17">
+<DIV WIDTH="33" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">16<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">16<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">16<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">16<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">17<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">17<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">17<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">17<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Times New Roman">Приведем еще один пример применения функции meshgrid:&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; [X, Y] = meshgrid(-2:.2:2, -2:.2:2);</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Такой вызов функции позволяет задать опорную плоскость для построения трехмерной поверхности при изменении аргумента от -2 до 2 с шагом 0.2. Дополнительные примеры применения функции meshgrid будут приведены далее при описании соответствующих команд. Рекомендуется ознакомиться с также командами surf и slice (ломтик).</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция ndgrid является многомерным аналогом функции meshgrid:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">[Х1, .Х2, ХЗ,...] = ndgrid(xl, x2 ,x3, ...) — преобразует область, заданную векторами xl, x2, x3..., в массивы Х1, Х2, ХЗ, ..., которые могут быть использованы для вычисления функций нескольких переменных и многомерной интерполяции, i-я размерность выходного массива
+xi&nbsp; является копией вектора xi;</font>    </li>
+  <li>
+    <p align="justify">
+<font size="3" face="Times New Roman">[XI, Х2, ...] = ndgrid(x) - аналогична [XI, Х2, ...] = ndgrid(x, x, ...). Пример применения функции ndgrid представлен ниже:</font>    </li>
+</ul>
+<P align="left"><font size="3" face="Courier New">&raquo; </font>[X1, X2] = ndgrid(-2:.2:2, -2:.2:2);<br>
+  <font size="3" face="Courier New">&raquo; </font>Z = X1 .* exp(-X1.^2 - X2.^2);<br>
+  <font size="3" face="Courier New">&raquo; </font>mesh(Z)</P>
+<P align="left">
+<font size="3" face="Times New Roman">Рекомендуем читателю опробовать действие этого примера.
+</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="16"></a> Графики 
+  поля градиентов quiver</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для построения графиков полей градиента служат команды quiver:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">quiver(X.Y.U.V) — строит график поля градиентов в виде стрелок для каждой пары элементов массивов X и Y, причем элементы массивов U и V указывают направление и размер стрелок;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> quiver(U, V) — строит векторы скорости в равнорасположенных точках на плоскости <I>(х, у);</I>
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> quiver(U,V,S) или quiver(X,Y.U,V,S) — автоматически масштабирует стрелки по сетке и затем вытягивает их по значению S. Используйте
+S=0, чтобы построить стрелки без автоматического масштабирования;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> quiver(...,LINESPEC) — использует для векторов указанный тип линии. Указанные в LINESPEC маркеры рисуются у оснований, а не на концах векторов. Для отмены любого вида маркера используйте спецификацию '.'. Спецификации линий, цветов и маркеров были подробно описаны в разделе, посвященном команде plot;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> quiver(.... 'filled') — дает график с закрашенными маркерами;&nbsp;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> H=quiver(...) — строит график и возвращает вектор дескрипторов. Ниже представлен пример применения команды quiver:
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х = -2:.2:2: у = -1:.2:1;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [хх.уу] = meshgrid(x.y);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; zz = хх.*ехр(-хх.<SUP>х</SUP>2-уу.~2);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; [рх.ру] = gradient(zz..2..2);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; quiver(x.y.px.py,2);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Построенный в этом примере график показан на рис. 6.17.
+</font>
+</P>
+<P align="left"><img src="6.17.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.17.jpg" width="435" height="232"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.17. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Пример построения графика поля 
+  градиентов</i> </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Нетрудно заметить, что представление поля градиентов стрелками дает весьма наглядное представление о 'линиях поля, указывая области, куда эти линии впадают и откуда они исходят.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="17"></a> Построение 
+  графиков поверхностей</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Команда plot3(...) является аналогом команды plot
+(...), но относится к функции двух переменных <I>z(x, у). </I>Она строит аксонометрическое изображение трехмерных поверхностей и представлена следующими формами:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> plot3(x.y,z) — строит массив точек, представленных векторами х, у и z, соединяя их отрезками прямых. Эта команда имеет ограниченное применение;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">plot3(X,Y,Z), где X, Y и Z — три матрицы одинакового размера, строит точки с координатами X(i.:), Y(i,:) и Z(i,:) и соединяет их отрезками прямых.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Ниже дан пример построения трехмерной поверхности, описываемой функцией&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">z(х.у)=х^2+у^2;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.15:3]);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Z=X.<SUP>A</SUP>2+Y.*2;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot3(X.Y.Z)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">График этой поверхности показан на рис. 6.18.
+</font>
+</P>
+<P align="left"><img src="6.18.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.18.jpg" width="439" height="214"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.18. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График поверхности, построенный 
+  линиями </font> </i> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> plot3 (X. Y, Z, S) — обеспечивает построения, аналогичные рассмотренным ранее, но со спецификацией стиля линий и точек, соответствующей спецификации команды plot. Ниже дан пример применения этой команды для построения поверхности кружками:
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]-meshgrid([-3:0.15:3]):&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=X.<sup>^</sup>2+Y.^2;&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; plot3(X.Y,Z.'o')
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">График поверхности, построенный кружками, показан на рис. 6.19.
+</font>
+</P>
+<P align="left"><img src="6.19.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.19.jpg" width="441" height="225"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.19. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>График поверхности, построенный 
+  разноцветными кружками</i> </font> </P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">plot3(xl ,yl.zl, sl.х2,у2.z2. s2. хЗ,уЗ.z3,s3,...)— строит на одном рисунке графики нескольких функций zl(xl ,yl), z2(x2,y2) и т. д. со спецификацией линий и маркеров каждой из них.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример применения последней команды дан ниже:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.15:3]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Z=X.<sup>^</sup>2+Y.^2;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot3(X.Y.Z.'-k'.Y.X.Z.'-k<sup>'</sup>)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">График функции, соответствующей последнему примеру, представлен на рис. 6.20.
+</font>
+</P>
+<P align="left"><img src="6.20.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.20.jpg" width="442" height="214"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.20. </i></font> 
+  </B><i><font size="3" face="Times New Roman">График функции в сетчатом представлении 
+  </font></i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">В данном случае строятся два графика одной и той же функции с взаимно перпендикулярными образующими линиями. Поэтому график имеет вид сетки без окраски ее ячеек (напоминает проволочный каркас фигуры).
+</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="18"></a> Сетчатые 
+  3D-графики с окраской</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Наиболее представительными и наглядными являются сетчатые графики поверхностей с заданной или функциональной окраской. В названии их команд присутствует слово mesh. Имеются три группы таких команд. Ниже приведены данные о наиболее полных формах этих команд. Наличие более простых форм можно уточнить, используя команду help Имя, где Имя — имя соответствующей команды.
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> mesh(X,Y,Z,C) — выводит в графическое окно сетчатую поверхность Z(X.Y) с цветами узлов поверхности, заданными массивом С;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> mesh(X.Y.Z) — аналог предшествующей команды при C=Z. В данном случае используется функциональная окраска, при которой цвет задается высотой поверхности.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Возможны также формы команды mesh(x,y.Z), mesh(x.y.Z,C), mesh(Z) и mesh(Z.C).
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция mesh возвращает дескриптор для объекта класса surface. Ниже приводится пример применения команды mesh:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.15:3]);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Z=X.^2+Y.^2;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; mesh(X.Y.Z)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">На рис. 6.21 показан график поверхности, созданной командой mesh(X.Y.Z). Нетрудно заметить, что функциональная окраска линий поверхности заметно усиливает наглядность ее представления.
+</font>
+</P>
+<P align="left"><img src="6.21.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.21.jpg" width="432" height="202"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.21. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График поверхности, созданный командой 
+  mesh(X,Y,Z) </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">MATLAB имеет несколько графических функций, возвращающих матричный образ поверхностей. Например, функция peaks(N) возвращает матричный образ поверхности с рядом пиков и впадин. Такие функции удобно использовать для проверки работы графических команд трехмерной графики. Для упомянутой функции peaks можно привести такой пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; z=peaks(25);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; mesh(z);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">График поверхности, описываемой функцией peaks, представлен на рис. 6.22.
+</font>
+</P>
+<P align="left"><img src="6.22.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.22.jpg" width="454" height="210"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.22. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График поверхности, описываемой 
+  функцией peaks </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Рекомендуется ознакомиться с командами и функциями, используемыми совместно с описанными командами: axis, caxis, colormap, hold, shading и view.
+</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="19"></a> Сетчатые 
+  3D-графики с проекциями</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Иногда график поверхности полезно объединить с контурным графиком ее проекции на плоскость, расположенным под поверхностью.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Для этого используется команда meshc:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">meshc(...) — аналогична mesh(...), но помимо графика поверхности дает изображение ее проекции в виде линий равного уровня (графика типа contour).
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Ниже дан пример применения этой команды:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.15:3]);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=X.^2+Y.^2;&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; meshc(X.Y.Z)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Построенный график показан на рис. 6.23.
+</font>
+</P>
+<P align="left"><img src="6.23.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.23.jpg" width="428" height="204"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.23. </i></font> 
+  </B><i><font size="3" face="Times New Roman">График поверхности и ее проекции 
+  на расположенную ниже плоско</font></i><font size="3" face="Times New Roman">сть 
+  </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Нетрудно заметить, что график такого типа дает наилучшее представление об особенностях поверхности.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="20"></a> Построение 
+  поверхности столбцами</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Еще один тип представления поверхности, когда она строится из многочисленных столбцов, дают команды класса meshz:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">meshz(...) — аналогична mesh(...), но строит поверхность как бы в виде столбиков. '   Следующий пример иллюстрирует применение команды mesh:
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.15:3]);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=X.&quot;2+Y.*2;&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; meshz(X.Y.Z)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Столбцовый график поверхности показан на рис. 6.24.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Графики такого типа используются довольно редко. Возможно, он полезен архитекторам или скульпторам, поскольку дает неплохое объемное представление о поверхностях.<BR>
+</font>
+</P>
+<P align="left"><img src="6.24.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.24.jpg" width="456" height="206"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.24. </i></font> 
+  </B><i><font size="3" face="Times New Roman">Построение поверхности столбцами 
+  </font></i> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="21"></a> Построение 
+  поверхности с окраской</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Особенно наглядное представление о поверхностях дают сетчатые графики, использующие функциональную закраску ячеек. Например, цвет окраски поверхности <I>z(x, у) </I>может быть поставлен в соответствие с высотой <I>z </I>поверхности с выбором для малых высот темных тонов, а для больших — светлых. Для построения таких поверхностей используются команды класса surf (...):
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> surf (X, Y, Z. С) — строит цветную параметрическую поверхность по данным матриц X, Y и Z с цветом, задаваемым массивом С;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> surf(X.Y.Z) — аналогична предшествующей команде, где C=Z, так что цвет задается высотой той или иной ячейки поверхности;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> surf(x.y.Z) и surf(x.y.Z.C) с двумя векторными аргументами х и у — векторы х и у заменяют первых два матричных аргумента и должны иметь длины length(x)=n и length(y)=m, где [m.n]=size(Z). В этом случае вершины областей поверхности представлены тройками координат (x(j), yd), Z(1,j)). Заметим, что х соответствует столбцам Z, а у соответствует строкам;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> surf(Z) и surf(Z.C) используют х = 1:n и у = 1:m. В этом случае высота Z — однозначно определенная функция, заданная геометрически прямоугольной сеткой;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> h=surf (...) —строит поверхность и возвращает дескриптор объекта класса surface.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Команды axis, caxis, color-map, hold, shading и view задают координатные оси и свойства поверхности, которые могут использоваться для большей эффектности показа поверхности или фигуры.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Ниже приведен простой пример построения поверхности — параболоида:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.15:3]);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=X.^2+Y.^2;&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Surf(X.Y.Z)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Соответствующий этому примеру график показан на рис. 6.25.
+</font>
+</P>
+<P align="left"><img src="6.25.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.25.jpg" width="452" height="196"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.25. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График параболоида с функциональной 
+  окраской ячеек </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Можно заметить, что благодаря функциональной окраске график поверхности гораздо более выразителен, чем при построениях без такой окраски, представленных ранее (причем даже в том случае, когда цветной график печатается в черно-белом виде).
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">В следующем примере используется функциональная окраска оттенками серого цвета с выводом шкалы цветовых оттенков:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X,Y]=meshgrid([-3:0.1:3]);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=sin(X)./(X.^2+Y.^2+0.3);&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; surf(X.Y.Z)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; colormap(gray)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; shading interp&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; colorbar
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">В этом примере команда colormap(gray) задает окраску тонами серого цвета, а команда shading Interp обеспечивает устранение изображения сетки и задает интерполяцию для оттенков цвета объемной поверхности. На рис. 6.26 показан вид графика, построенного в этом примере.
+</font>
+</P>
+<P align="left"><img src="6.26.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.26.jpg" width="487" height="443"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.26. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График поверхности с функциональной 
+  окраской серым цветом </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Обычно применение интерполяции для окраски придает поверхностям и фигурам более реалистичный вид, но фигуры каркасного вида дают более точные количественные данные о каждой точке.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="22"></a> Построение 
+  поверхности и ее проекции</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для повышения наглядности представления поверхностей можно использовать дополнительный график линий равного уровня, получаемый путем проецирования поверхности на опорную плоскость графика (под поверхностью). Для этого используется команда surf с:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> surfc(...) — аналогична команде surf, но обеспечивает дополнительное построение контурного графика проекции фигуры на опорную плоскость.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример применения команды surf с приводится ниже:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.1:3]);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=sin(X)./(X.^2+Y.^2+0.3);&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; surfc(X.Y.Z)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">На рис. 6.27 показаны графики, построенные в данном примере.
+</font>
+</P>
+<P align="left"><img src="6.27.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.27.jpg" width="425" height="163"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.27. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График поверхности и ее проекции 
+  на опорную плоскость </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Рассмотрим еще один пример применения команды surf с, на этот раз для построения поверхности, описываемой функцией peaks, с применением интерполяции цветов и построением цветовой шкалы:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.1:3]);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=peaks(X,Y;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; surfc(X.Y.Z)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; shading interp&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; colorbar
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Рис. 6.28 показывает график, построенный в этом примере. И здесь нетрудно заметить, что графики сложных поверхностей с интерполяцией цветовых оттенков выглядят более реалистичными, чем графики сетчатого вида и графики без интерполяции цветов.
+</font>
+</P>
+<P align="left"><img src="6.28.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.28.jpg" width="427" height="175"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.28. </i></font> 
+  </B><i><font size="3" face="Times New Roman">График функции peaks с проекцией 
+  и шкалой цветов </font></i> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="23"></a> Построение 
+  освещенной поверхности</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Пожалуй, наиболее реалистичный вид имеют графики поверхностей, в которых имитируется освещение от точечного источника света, расположенного в заданном месте координатной системы. Графики имитируют оптические эффекты рассеивания, отражения и зеркального отражения света. Для получения таких графиков используется команда surf 1:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> surfl(...) — аналогична команде surf (...), но строит график поверхности с подсветкой от источника света;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> surfl (Z.S) или surfl(X,Y,Z,S) — строит графики поверхности с подсветкой от источника света, положение которого в системе декартовых координат задается вектором S=[Sx,Sy.Sz], а в системе сферических координат — вектором
+S=[AZ.EL];
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">surfl (..., 'light') — позволяет при построении задать цвет подсветки с помощью объекта Light;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> surfl (..., 'cdata') — при построении имитирует эффект отражения;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> surfl(X,Y,Z,S.K) — задает построение поверхности с параметрами, заданными вектором K=[ka,kd,ks.spread], где ka — коэффициент фоновой подсветки, kd — коэффициент диффузного отражения, ks — коэффициент зеркального отражения и spread — коэффициент глянцевитости;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> H=surf 1 (...) — строит поверхность и возвращает дескрипторы поверхности и источников света.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">По умолчанию вектор S задает углы азимута и возвышения в 45&deg;. Используя команды cla, hold on, view(AZ,EL), surfl (...) и hold off, можно получить дополнительные возможности управления освещением. Надо полагаться на упорядочение точек в X, Y, и Z матрицах, чтобы определить внутреннюю и внешнюю стороны параметрических поверхностей. Попробуйте транспонировать матрицы и использовать surfHX' .Y' ,Z'), если вам не понравился результат работы этой команды. Для</font>
+<font size="3" face="Times New Roman">вычисления векторов нормалей поверхности surf1 требует в качестве аргументов матрицы с размером по крайней мере 3x3.</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Ниже представлен пример применения команды surfl:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.1:3]);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=sin(X)./(X.<sup>^</sup>2+Y.^2+0.3);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; surfl(X.Y.Z)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; colormap(gray)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; shading interp&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; colorbar
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Построенная в этом примере поверхность представлена на рис. 6.29.
+</font>
+</P>
+<P align="left"><img src="6.29.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.29.jpg" width="422" height="172"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.29. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График поверхности с имитацией 
+  ее освещения точечным источником </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Сравните этот рисунок с рис. 6.26, на котором та же поверхность построена без имитации ее освещения.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman"><i><B>&nbsp;<img border="0" src="Prim-2.gif" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim-2.gif" align="left" width="36" height="35"></B>Нетрудно заметить определенную логику в названиях графических команд. Имя команды состоит из основного слова и суффикса расширения. Например, все команды построения поверхностей имеют основное слово surf (сокращение от
+surface — поверхность) и суффиксы: с — для контурных линий поверхности,
+l — для освещенности и т. д. Это правило облегчает запоминание многочисленных команд графики.</i>
+</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="3"><a name="24"></a><font size="4">Средства 
+  управления подсветкой и обзором фигур</font></FONT></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Рекомендуется с помощью команды
+help ознакомиться с командами, задающими управление подсветкой и связанными с ней оптическими эффектами:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> diffuse — задание эффекта диффузионного рассеяния;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> lighting — управление подсветкой;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> material — имитация свойств рассеивания света различными материалами;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> specular — задание эффекта зеркального отражения.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующие три команды позволяют управлять углами просмотра, под которыми рассматривается видимая в графическом окне фигура:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> view — задание положения точки просмотра;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> viewmtx — задание и вычисление матрицы вращения;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">rotateSd — задание поворота трехмерной фигуры.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">В ряде случаев применением этих команд можно добиться большей выразительности трехмерных объектов. Скорость построения таких графиков сильно зависит от аппаратной поддержки графики в конкретном ПК. Так, использование современных видеоадаптеров с графическим процессором и поддержкой средств OpenGL позволяет повысить скорость построения трехмерных графиков в несколько раз и добиться большей их выразительности.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="25"></a> Построение 
+  графиков функций трех переменных</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Графики сечений функций трех переменных строит команда slice (в переводе — &laquo;ломтик&raquo;). Она используется в следующих формах:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">slice(X.Y.Z.V.Sx,Sy,Sz) — строит плоские сечения объемной фигуры V в направлении осей <I>x,y,z
+c </I>позициями, задаваемыми векторами Sx, Sy, Sz. Массивы X, Y, Z задают координаты для V и должны быть монотонными и трехмерными (как возвращаемые функцией meshgrid) с размером MxNxP. Цвет точек сечений определяется трехмерной интерполяцией в объемной фигуре
+V;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">slice(X,Y.Z.V,XI.YI.ZI) — строит сечения объемной фигуры V по поверхности, определенной массивами
+XI, YI, ZI;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">slice (... 'method') — при построении задается метод интерполяции, который может быть одним из следующих: 'linear', 'cubic' или 'nearest'. По умолчанию используется линейная интерполяция —
+'linear';<BR>
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">slice(V.Sx.Sy.Sz) или slice(V.XI.YI.ZI) - подразумевается
+X=1:N, Y=1:M, Z=1:P;&nbsp;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;H=slice(...) — строит сечение и возвращает дескриптор объекта класса
+surface.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">График примера, приведенного ниже, представлен на рис. 6.30.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [x.y.z]= meshgrid(-2:.2:2.  -2:.25:2.  -2:.16:2);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; v = sin(x) .* ехр(-х.*2 - у.<sup>^</sup>2 - z.<sup>^</sup>2);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; slice(x.y.z.v.[-1.2 .8 2].2.[-2 -.2])
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="26"></a> График 
+  трехмерной слоеной поверхности</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Иногда бывают полезны графики трехмерных слоеных поверхностей, как бы состоящие из тонких пластинок — слоев. Такие поверхности строит функция water-fall (водопад):
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">waterfal(...) — строит поверхность, как команда mesh(...), но без показа ребер сетки. При ориентации графика относительно столбцов следует использовать запись waterfall(Z<SUP>1</SUP>) или waterfall (X<sup>'</sup>
+,Y' ,Z').
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Рассмотрим пример применения команды
+waterfall:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.1:3]);&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=sin(X)./(X.*2+Y.*2+0.3);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; waterfall(X.Y.Z)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; colormap(gray)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; shading interp
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Соответствующий график 
+  показан на рис. 6.30. </font> </P>
+<P align="left"><img src="6.31.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.31.jpg" width="427" height="169"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.30. </i></font> 
+  </B><i><font size="3" face="Times New Roman">Трехмерная слоеная поверхность 
+  </font></i> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="27"></a> Tрехмерные 
+  контурные графики</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Трехмерный контурный график представляет собой расположенные в пространстве линии равного уровня, полученные при расслоении трехмерной фигуры рядом секущих плоскостей, расположенных параллельно опорной плоскости фигуры.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">При этом в отличие от двумерного контурного графика линии равного уровня отображаются в аксонометрии. Для получения трехмерных контурных графиков используется команда
+contourS:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> contour3(...) — имеет синтаксис, аналогичный команде contour(...), но строит линии равного уровня в аксонометрии с использованием функциональной окраски (окраска меняется вдоль оси Z).
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Полезные частные формы записи этой команды:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> contour3(Z) — строит контурные линии для поверхности, заданной массивом Z, без учета диапазона изменения <I>х </I>и <I>у;</I>
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">contour3(Z.n) — строит то же, что предыдущая команда, но с использованием п секущих плоскостей (по умолчанию
+n=10);
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">contour3(X,Y,Z) — строит контурные линии для поверхности, заданной массивом Z, с учетом изменения <I>х и у. </I>Двумерные массивы X и Y создаются с помощью функции
+meshgrid;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">contours(X.Y.Z.n) — строит то же, что предыдущая команда, но с использованием п секущих плоскостей.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример применения команды
+contourS:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; contour3(peaks,20)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; colormap(gray)</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Соответствующий данному 
+  примеру график представлен на рис. 6.31. В данном случае задано построение двадцати 
+  линий уровня. </font> </P>
+<P align="left"><img src="6.32.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.32.jpg" width="432" height="169"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.31. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Трехмерный контурный график для 
+  функции peaks </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">С командой contourS связаны следующие одноименные функции (не выполняющие графические построения):<BR>
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> C=contour3(...) — возвращает матрицу описания контурных линий С для использования командой clabel;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> [С, H]=contour3(...) — возвращает массив С и вектор-столбец Н дескрипторов объектов path для каждой линии уровня. Свойство UserData каждого объекта содержит значение высоты для соответствующего контура.
+</font>
+  </li>
+</ul>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="28"></a> Установка 
+  титульной надписи</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">После того как график уже построен, MATLAB позволяет выполнить его форматирование или оформление в нужном виде. Соответствующие этому средства описаны ниже. Так, для установки над графиком титульной надписи используется следующая команда:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">title( 'string<sup>'</sup>) — установка на двумерных и трехмерных графиках титульной надписи, заданной строковой константой 'string'.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример применения этой команды будет дан в следующем разделе.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="29"></a> Установка 
+  осевых надписей</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для установки надписей возле осей <I>х, у </I>и z используются следующие команды:
+</font>
+</P>
+<p align="left"><font size="3" face="Courier New">xlabe('String')&nbsp;
+</font>
+</p>
+<p align="left"><font size="3" face="Courier New"> ylabeK ('String')&nbsp;
+</font>
+</p>
+<p align="left"><font size="3" face="Courier New"> zlabelС ('String')
+</font>
+</p>
+<P align="left">
+<font size="3" face="Times New Roman">Соответствующая надпись задается символьной константой или переменной 'String<sup>'</sup>. Пример установки титульной надписи и надписей по осям графиков приводится ниже:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y]=meshgrid([-3:0.1:3]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Z=sin(X)./(X.&quot;2+Y.&quot;2+0.3);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; surfl(X.Y.Z)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; colorbar
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; colormap(gray)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; shading interp
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; xlabeK'Axis X')
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; ylabeK'Axis Y')
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; zlabeK'Axis Z')
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; titleC'Surface graphic')
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Построенный в этом примере 
+  график трехмерной поверхности показан на рис. 6.32. </font> </P>
+<P align="left"><img src="6.33.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.33.jpg" width="488" height="470"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.32. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График трехмерной поверхности с 
+  титульной надписью и надписями по координатным осям </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Сравните его с графиком, показанным на рис. 6.29. Надписи делают рисунок более наглядным.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="30"></a> Ввод 
+  текста в любое место графика</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Часто возникает необходимость добавления текста в определенное место графика, например для обозначения той или иной кривой графика. Для этого используется команда
+text:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">text(X.Y. 'string') — добавляет в двумерный график текст, заданный строковой константой 'string', так что начало текста расположено в точке с координатами <I>(X, Y). </I>Если X и Y заданы как одномерные массивы, то надпись помещается во все позиции
+[x(i) ,y(i)];
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">text(X,Y,Z. 'string') — добавляет в трехмерный график текст, заданный строковой константой 'string', так что начало текста расположено в позиции, заданной координатами X, Y и
+Z.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">В приведенном ниже примере надпись &laquo;График функции
+sin(x<sup>^</sup>3)&raquo; размещается под кривой графика в позиции (-4, 0.7):
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=10:0.1:10;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(x.sin(x).^3)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; text(-4.0.7,'Graphic sin(x)^3')
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">График функции с надписью 
+  у кривой показан на рис. 6.33.</font> </P>
+<P align="left"><img src="6.34.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.34.jpg" width="482" height="470"> </P>
+<P align="left"><font size="3" face="Times New Roman"><i><b>Рис. 6.33. </b> Пример 
+  ввода надписи в поле графика функции&nbsp;</i></font> </P>
+<P align="left">
+<font size="3" face="Times New Roman"> Математически правильной записью была бы sin<SUP>3</SUP>x.</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Попробуйте ввести самостоятельно:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=-10:0.1:10;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(x,sin(x).^3)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; text(-4.0.7,'Graphic (sin(х)^3)')
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция h=text(...) возвращает вектор-столбец h дескрипторов объектов класса text, дочерних для объектов класса axes. Следующий пример вычисляет дескриптор h
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; h=text(.25. .5. '\ite^{i\omega\tau} = cos(\omega\tau) + ... i
+sin(\omega\tau)')
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">3.0022 и выводит в пустом графике математическую формулу в формате ТеХ вида:
+</font>
+</P>
+<P align="left">
+<I><font size="3" face="Times New Roman">e<SUP>jwt</SUP>   = </font> </I><font size="3" face="Times New Roman">cos(wt) +
+sin(wt)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Пары координат X,Y (или тройки X,Y,Z для трехмерных графиков) могут сопровождаться парами &laquo;имя параметра/значение параметра&raquo; для задания дополнительных свойств текста. Пары координат X,Y (или тройки X,Y,Z для трехмерных графиков) могут быть полностью опущены, при этом все свойства, в том числе и позиция текста, задаются с помощью пар &laquo;имя параметра/значение параметра&raquo;, заданных по умолчанию.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Используйте функцию get(H), где Н — дескриптор графического объекта (в нашем случае графического объекта класса text), чтобы просмотреть список свойств объекта и их текущие значения. Используйте set(H), чтобы просмотреть список свойств графических объектов и их допустимых значений.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="31"></a> Позиционирование 
+  текста с помощью мыши</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Очень удобный способ ввода текста предоставляет команда
+gtext:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">gtext('string') — задает выводимый на график текст в виде строковой константы ' string' и выводит на график перемещаемый мышью маркер в виде крестика. Установив маркер в нужное место, достаточно щелкнуть любой кнопкой мыши для вывода текста;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> gtext (С) — позволяет аналогичным образом разместить многострочную надпись из массива строковых переменных С.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример применения команды
+gtext:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=-15:0.1:15;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(x. sin(x).<sup>^</sup>3)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; gtext('Function sin(x)*3')
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">При исполнении этого примера 
+  вначале можно увидеть построение графика функции с большим крестом, перемещаемым 
+  мышью (рис. 6.34). </font> </P>
+<P align="left"> <font size="3" face="Times New Roman">Установив перекрестие в 
+  нужное место графика, достаточно нажать любую клавишу или любую кнопку мыши, 
+  и на этом месте появится надпись (рис. 6.35). </font> </P>
+<P align="left"><img src="6.35.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.35.jpg" width="474" height="469"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.34. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График функции с крестообразным 
+  маркером, перемещаемым мышью </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Высокая точность позиционирования надписи и быстрота процесса делает данный способ нанесения надписей на графики одним из наиболее удобных.
+</font>
+</P>
+<P align="left"><img src="6.36.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.36.jpg" width="423" height="185"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.35. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>График функции с надписью, установленной 
+  с помощью мыши</i> </font> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="32"></a> Вывод 
+  пояснений</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Пояснение в виде отрезков линий со справочными надписями, размещаемое внутри графика или около него, называется <I>легендой. </I>Для создания легенды используются различные варианты команды
+legend:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">legend(stringl,string2.
+    strings,...) — добавляет к текущему графику легенду в
+</font>
+<font size="3" face="Times New Roman">виде строк, указанных в списке параметров;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;legend (H.stringl,string2. strings,...) — помещает легенду на график, содержащий
+</font>
+    <font size="3" face="Times New Roman">объекты с дескрипторами Н, используя заданные строки как метки для
+    соответствующих дескрипторов;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;legend( АХ . ...) — помещает легенду в осях (объект класса axes) с дескриптором АХ;&nbsp;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> legend (М) — размещает легенду, используя данные из строковой матрицы М;&nbsp;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">legend OFF — устраняет ранее выведенную легенду;&nbsp;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;legend — перерисовывает текущую легенду, если таковая имеется;&nbsp;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;legend( I egendhandl е) — перерисовывает легенду, указанную дескриптором
+legend</font><font size="3" face="Times New Roman">handle;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">legend (....Pos) — помещает легенду в точно определенное место, специфицированное параметром
+Pos:
+</font>
+    <ul>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">&nbsp;Pos=0 — лучшее место, выбираемое автоматически;
+</font>
+      </li>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">Pos=l — верхний правый угол;
+</font>
+      </li>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">Pos=2 — верхний левый угол;</font></li>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">Pos=3 — нижний левый угол;</font></li>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">Pos=4 — нижний правый угол;
+</font>
+      </li>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">Pos=-l — справа от графика.
+</font>
+      </li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Чтобы перенести легенду, установите на нее курсор, нажмите левую кнопку мыши и перетащите легенду в необходимую позицию.
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">[legh,objh]=legend(...) — эта функция возвращает дескриптор объекта для легенды (legh) и матрицу objh, содержащую дескрипторы объектов, из которых легенда состоит.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Команда 1 egend может использоваться с двумерной и трехмерной графикой и со специальной графикой — столбцовыми и круговыми диаграммами и т. д. Двойным щелчком можно вывести легенду на редактирование.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Пример, приведенный ниже, строит график трех функций с легендой, размещенной в поле графика:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; x=-2*pi:0.1*pi :2*pi;&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; yl=sin(x);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; y2=sin(x).^2;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; p1ot(x,yl. '-m' ,x.y2. '-.+r' .х.уЗ.
+'--ok')
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; legend( 'Function 1'. 'Function 2'. 'Function 3');
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Полученный график представлен 
+  на рис. 6.36. </font> </P>
+<P align="left"><img src="6.36.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.36.jpg" width="423" height="185"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.36. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">График трех функций с легендой 
+  в поле графика </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Незначительная модификация команды
+legend (применение дополнительного параметра -1) позволяет построить график трех функций с легендой вне поля графика:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; x=-2*pi:0.l*pi:2*pi;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; yl=sin(x);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; y2=sin(x).<sup>^</sup>2;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; y3=sin(x).<sup>^</sup>3;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plotCx.yl.'-m',x.y2.'-.+r',x.y3,'--ok')
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; legendC Function Г,'Function 2','Function 3'.-l);
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Соответствующий график 
+  показан на рис. 6.37. </font> </P>
+<P align="left"><img src="6.38.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.38.jpg" width="471" height="470"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.37. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>График трех функций с легендой, 
+  расположенной вне поля графика</i> </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">В данном случае недостатком можно считать сокращение полезной площади самого графика. Остальные варианты расположения легенды пользователю предлагается изучить самостоятельно. Следует отметить, что применение легенды придает графикам более осмысленный и профессиональный вид. При необходимости легенду можно переместить мышью в подходящее место графика.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="33"></a> Маркировка 
+  линий уровня на контурных графиках</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">К сожалению, контурные графики плохо приспособлены для количественных оценок, если их линии не маркированы. В качестве маркеров используются крестики, рядом с которыми располагаются значения высот. Для маркировки контурных графиков используются команды группы clabel:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">clabel(CS.H) — маркирует контурный график с данными в контурной матрице CS и дескрипторами объектов, заданными в массиве Н. Метки вставляются в разрывы контурных линий и ориентируются в соответствии с направлением линий;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> clabel (CS.H, V) — маркируются только те уровни, которые указаны в векторе V. По умолчанию маркируются все контуры. Позиции меток располагаются случайным образом;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> clabel (CS.H, 'manual') — маркирует контурные графики с установкой положения маркеров с помощью мыши. Нажатие клавиши Enter или кнопки мыши завершает установку маркера. При отсутствии мыши для перехода от одной линии уровня к другой используется клавиша пробела, а для перемещения надписи используются клавиши перемещения курсора;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> clabel (CS), clabel (CS.V) и clabel (CS. 'manual') — дополнительные возможности маркировки контурных графиков. При отсутствии аргумента h метки не ориентируются вдоль линий контуров; точную позицию метки отмечает значок &laquo;+&raquo; (далее на рис. 6.39 показан именно этот вариант).
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример применения команды clabel приводится ниже:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X,Y]=meshgrid([-3:0.1:3]);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=sin(X)./(X.^2+Y.^2+0.3);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; C=contour(X.Y.Z.10);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; colormap(gray)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; clabel(С)
+</font>
+</P>
+<P align="left"><img src="6.39.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.39.jpg" width="409" height="193"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.38. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Контурный график с маркированными 
+  линиями уровня</i> </font> </P>
+<P align="left"> <font size="3" face="Times New Roman">Рис. 6.38 показывает построение 
+  контурного графика с маркированными линиями уровня. </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция H=cl abel (...) маркирует график и возвращает дескрипторы создаваемых при маркировке объектов класса TEXT (и, возможно, LINE).
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="34"></a> Управление 
+  свойствами осей графиков</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Обычно графики выводятся в режиме автоматического масштабирования. Следующие команды класса axis меняют эту ситуацию:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">axis([XMIN XMAX YMIN YMAX]) — установка диапазонов координат по осям <I>х </I>и <I>у </I>для текущего двумерного графика;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> axis([XMIN XMAX YMIN YMAX ZMIN ZMAX]) - установка диапазонов координат по</font>
+<font size="3" face="Times New Roman">осям <I>х, у </I>и <I>z </I>текущего трехмерного графика;&nbsp;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> axis auto — установка параметров осей по умолчанию;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">axis manual — &laquo;замораживает&raquo; масштабирование в текущем состоянии, чтобы при использовании команды hold on следующие графики использовали те же параметры осей;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">axis tight — устанавливает диапазоны координат по осям в соответствии с диапазонами изменения данных;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> axis ij — задает &laquo;матричную&raquo; прямоугольную систему координат с началом координат в левом верхнем углу, ось i — вертикальная, размечаемая сверху вниз, ось j — горизонтальная и размечается слева направо;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">axis xy — устанавливает декартову систему координат с горизонтальной осью <I>х, </I>размечаемой слева направо, и вертикальной осью <I>у, </I>размечаемой снизу вверх. Начало координат размещается в нижнем левом углу;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> axis equal — включает масштаб с одинаковым расстоянием между метками по осям <I>х, у </I>и <I>z;</I>
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> axis image — устанавливает масштаб, при котором пикселы изображения становятся квадратами;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> axis square — устанавливает текущие оси в виде квадрата (или куба в трехмерном случае) с одинаковым расстоянием между метками и одинаковой длиной осей;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> axis normal — восстанавливает масштаб, отменяя установки axis equal и axis
+square;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> axis vis3d — &laquo;замораживает&raquo; пропорции осей для возможности поворота трехмерных объектов;
+</font>
+  </li>
+  <li>
+    <p align="left"> <font size="3" face="Times New Roman"> axi s off — убирает 
+      с осей их обозначения и маркеры; 0 axis on — восстанавливает ранее введенные 
+      обозначения осей и маркеры; </font> 
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">V=axis — возвращает вектор-строку, содержащую коэффициенты масштабирования для текущего графика. Если текущий график двумерный, то вектор имеет 4 компонента, если трехмерный — 6 компонентов.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример иллюстрирует применение команды axis при построении двумерного графика функции одной переменной:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=5:0.1:5;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(x,sin(x));
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; axis([-10 10 -1.5 1.5])
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">На рис. 6.40 показан график, который строится в этом примере.
+</font>
+</P>
+<P align="left"><img src="6.40.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.40.jpg" width="392" height="174"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.39. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Пример задания масштаба осей двумерного 
+  графика </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Обратите внимание, что теперь масштабы осей заданы командой axis, а не диапазоном изменения значений <I>х </I>и <I>у.</I>
+</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="3"><a name="35"></a> <font size="4">Включение 
+  и выключение сетки</font></FONT></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">В математической, физической и иной литературе при построении графиков в дополнение к разметке осей часто используют масштабную сетку. Команды grid позволяют задавать построение сетки или отменять это построение:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">grid on — добавляет сетку к текущему графику;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> grid off — отключает сетку;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> grid — последовательно производит включение и отключение сетки.
+</font>
+  </li>
+</ul>
+<P align="left"><img src="6.41.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.41.jpg" width="400" height="182"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.40. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>График синусоиды с сеткой разметки</i> 
+  </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Команды grid устанавливают свойства объектов XGrid, Ygrid и Zgrid для текущих осей. Ниже приведен пример из предшествующего раздела с добавлением в него команды
+grid:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=-5:0.1:5;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(x,sin(x));</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; axis([-10 10 -1.5 1.5])
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; grid on
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Построенный график показан 
+  на рис. 6.40. </font> </P>
+<P align="left"> <font size="3" face="Times New Roman">Сравните этот график с 
+  графиком на рис. 6.39, на котором сетка отсутствует. Нетрудно заметить, что 
+  наличие сетки облегчает количественную оценку координат точек графика. </font> 
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="36"></a> Наложение 
+  графиков друг на друга</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Во многих случаях желательно построение многих наложенных друг на друга графиков в одном и том же окне. Для этого служит команда продолжения графических построений hold. Она используется в следующих формах:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> hold on — обеспечивает продолжение вывода графиков в текущее окно, что позволяет добавлять последующие графики к уже существующим;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> hold off — отменяет режим продолжения графических построений;&nbsp;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> hold — работает как переключатель, последовательно включая режим продолжения графических построений и отменяя его.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Команда hold on устанавливает значение add для свойства NextPlot объектов figure и axes, a hold off устанавливает для этого свойства значение replace. Рекомендуется также ознакомиться с командами ishold, newplot, figure и
+axes.
+</font>
+</P>
+<P align="left"><img src="6.42.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.42.jpg" width="455" height="468"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.41. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Графики синусоиды и трех параметрических 
+  функций в одном окне </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Приведенный ниже пример показывает, как с помощью команды hold on на график синусоиды накладываются еще три графика параметрически заданных функций:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х--5:0.1:5;&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plotCx.sin(x))
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; hold on
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(sin(x).cos(x))
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(2*sin(x).cos(x))
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(4*sin(x).cos(x))&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; hold off
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Графики построенных функций показаны на рис. 6.42.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">В конце приведенного фрагмента программы команда
+hold off отключает режим добавления графиков к ранее построенным графикам.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="37"></a> Разбиение 
+  графического окна</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Бывает, что в одном окне надо расположить несколько координатных осей с различными графиками без наложения их друг на друга. Для этого используются команды subplot, применяемые перед построением графиков:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> subplot — создает новые объекты класса axes (подокна);
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">subplot(m.n.p) или subplot(mnp) — разбивает графическое окно на <I>тхп</I>подокон, при этом m — число подокон по горизонтали,
+n — число подокон по вертикали, а р— номер подокна, в которое будет выводиться текущий график (подокна отсчитываются последовательно по строкам);
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">subplot(H), где Н — дескриптор для объекта axes, дает альтернативный способ задания подокна для текущего графика;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">subplot( 'position',[left bottom width height]) — создает подокно с заданными нормализованными координатами (в пределах от 0.0 до 1.0);
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">subplot(lll) Hclf reset — удаляют все подокна и возвращают графическое окно в обычное состояние.
+</font>
+  </li>
+</ul>
+<P align="left"><img src="6.43.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.43.jpg" width="465" height="468"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.42. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Четыре графика различного типа, 
+  размещенных в подокнах одного окна </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример иллюстрирует применение команды
+subplot:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=-5:0.1:5;&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">subplot(2.2.1).plot(x.sin(x))
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">subplot(2.2.2).plot(sin(5*x).cos(2*x+0.2))
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">subplot(2.2.3).contour(peaks)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">subplot(2.2.4).surf(peaks)
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">В этом примере последовательно 
+  строятся четыре графика различного типа, размещаемых в разных подокнах (рис. 
+  6.42). </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Следует отметить, что для всех графиков возможна индивидуальная установка дополнительных объектов, например титульных надписей, надписей по осям и т. д.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="38"></a> Изменение 
+  масштаба графика</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для изменения масштаба двумерных графиков используются команды класса zoom:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> zoom — переключает состояние режима интерактивного изменения масштаба для текущего графика;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> zoom (FACTOR) устанавливает масштаб в соответствии с коэффициентом FACTOR;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> zoom on — включает режим интерактивного изменения масштаба для текущего графика;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">zoom off — выключает режим интерактивного изменения масштаба для текущего графика;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> zoom out — обеспечивает полный просмотр, т. е. устанавливает стандартный масштаб графика;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> zoom xon или zoom yon — включает режим изменения масштаба только по оси <I>х </I>или по оси <I>у;</I>
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> zoom reset — запоминает текущий масштаб в качестве масштаба по умолчанию для данного графика;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> zoom(FIG,OPTION) — применяется к графику, заданному дескриптором FIG, при этом OPTION может быть любым из перечисленных выше аргументов.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Команда zoom позволяет управлять масштабированием графика с помощью мыши. Для этого надо подвести курсор мыши к интересующей вас области рисунка. Если команда zoom включена (on), то нажатие левой кнопки увеличивает масштаб вдвое, а правой — уменьшает вдвое. При нажатой левой кнопке мыши можно выделить пунктирным черным прямоугольником нужный участок графика — при отпускании кнопки он появится в увеличенном виде и в том масштабе, который соответствует выделяющему прямоугольнику.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Рассмотрим работу команды zoom на следующем примере:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=-5:0.01:5;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; plot(x.sin(x.<sup>^</sup>5)./(x.^5+eps))
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; zoom on
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Рис. 6.44 показывает график функции данного примера в режиме выделения его участка с помощью мыши.
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">После прекращения манипуляций 
+  левой кнопкой мыши график примет вид, показанный на рис. 6.44. Теперь в полный 
+  размер графического окна будет развернуто изображение, попавшее в выделяющий 
+  прямоугольник. </font> </P>
+<P align="left"><img src="6.44.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.44.jpg" width="486" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.43. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Выделение части графика мышью при 
+  использовании команды zoom</i> </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Команда zoom, таким образом, выполняет функцию &laquo;лупы&raquo;, позволяющей наблюдать в увеличенном виде отдельные фрагменты сложных графиков. Однако следует учитывать, что для наблюдения фрагментов графиков при высоком увеличении они должны быть заданы большим количеством точек. Иначе вид отдельных фрагментов и тем более особых точек (в нашем случае это точка при <I>х </I>вблизи нуля) будет существенно отличаться от истинного.
+</font>
+</P>
+<P align="left"><img src="6.45.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.45.jpg" width="483" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.44. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>График выделенного участка</i> 
+  </font> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="39"></a> Установка 
+  палитры цветов</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Поскольку графика MATLAB обеспечивает получение цветных изображений, в ней есть ряд команд для управления цветом и различными световыми эффектами. Среди них важное место занимает установка палитры цветов. Палитра цветов RGB задается матрицей MAP из трех столбцов, определяющих значения интенсивности красного (red), зеленого (green) и синего (blue) цветов. Их интенсивность</font>
+<font size="3" face="Times New Roman">задается в относительных единицах от 0.0 до 1.0. Например, [0 0 0] задает черный цвет, [1 1 1] — белый цвет, [0 0 1] — синий цвет. При изменении интенсивности цветов в указанных пределах возможно задание любого цвета. Таким образом, цвет соответствует общепринятому формату RGB.</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Для установки палитры цветов служит команда colormap, записываемая в следующих формах:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> colormap( 'default') — устанавливает палитру по умолчанию, при которой распределение цветов соответствует радуге;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> colormap(MAP) — устанавливает палитру RGB, заданную матрицей MAP;&nbsp;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">C=colormap — функция возвращает матрицу текущей палитры цветов С. m-файл с именем colormap устанавливает свойства цветов для текущего графика.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Команда help graphSd наряду с прочим выводит полный список характерных палитр, используемых графической системой MATLAB:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> hsv — цвета радуги;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> hot — чередование черного, красного, желтого и белого цветов;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> gray — линейная палитра в оттенках серого цвета;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> bone — серые цвета с оттенком синего;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> copper — линейная палитра с оттенками меди;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> pink — розовые цвета с оттенками пастели;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> white — палитра белого цвета;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> flag — чередование красного, белого, синего и черного цветов;
+</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">lines — палитра с чередованием цветов линий;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> colorcube — расширенная палитра RGB;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> jet — разновидность палитры HSV;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> prism — призматическая палитра цветов;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> cool — оттенки голубого и фиолетового цветов;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> autumn — оттенки красного и желтого цветов;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> spring — оттенки желтого и фиолетового цветов;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">winter — оттенки синего и зеленого цветов;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">summer — оттенки зеленого и желтого цветов.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Все эти палитры могут служить параметрами команды colormap, например
+colormap(hsv) фактически устанавливает то же, что и команда colormap( 'default'). Примеры применения команды colormap будут приведены в следующих разделах.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="40"></a> Установка 
+  соответствия между палитрой цветов и масштабом осей</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">При использовании функциональной окраски важное значение имеет установка соответствия между палитрой цветов и масштабом координатных осей. Так, выбор</font>
+<font size="3" face="Times New Roman">ограниченного диапазона интенсивностей цветов может привести к тому, что цветовая гамма будет блеклой и функциональная закраска не будет достигать своих целей. С помощью команды caxis можно обеспечить соответствие между палитрой цветов и масштабом осей:</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> caxis(V) — с помощью двухэлементного вектора V со списком элементов [cmin cmax] устанавливает диапазон используемой палитры цветов для объектов surface и patch, создаваемых такими командами, как mesh, pcolor и surf. Пикселы, цвета которых выходят за пределы [cmin cmax], приводятся к граничным цветам диапазона;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> caxis('manual') — устанавливает шкалу цветов по текущему интервалу параметра, задающего цвет;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> caxis('auto') — устанавливает типовое масштабирование шкалы цветов, при котором диапазон используемых цветов соответствует диапазону изменения данных от -Inf до Inf. Линии и грани с цветами, равными NaN, отсекаются.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Функция caxis возвращает двухэлементный вектор с элементами [cmin cmax] для текущего светового эффекта, m-файл с именем caxi s задает свойства dim и CLimMode объекта axes (см. команду help axes).
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="41"></a> Окраска 
+  поверхностей</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для окраски поверхностей используется команда shading, которая управляет объектами surface (поверхность) и patch (заплата), создаваемыми командами и функциями surf, mesh, pcolor, fill и fill 3. Команда shading (затенение) работает с параметрами и имеет следующий вид:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">shading flat — задает окраску ячеек или граней в зависимости от текущих данных;&nbsp;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> shading interp — задает окраску с билинейной интерполяцией цветов;&nbsp;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> shading faceted — равномерная раскраска ячеек поверхности (принята по умолчанию).
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Эти команды устанавливают свойства EdgeColor и FaceColor для графических объектов surface и patch в зависимости от того, какая из команд — mesh (сетчатая поверхность) или surf (затененная поверхность) — используется. Примеры применения команд shading уже приводились.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="42"></a> Установка 
+  палитры псевдоцветов</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Довольно часто возникает необходимость представления той или иной матрицы в цветах. Для этого используют <I>псевдоцвета, </I>зависящие от содержимого ячеек. Такое представление реализуют команды класса pcolor:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> pcolor (С) — задает представление матрицы С в псевдоцвете;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> pcolor(X,Y,C) — задает представление матрицы С на сетке, формируемой векторами или матрицами X и Y.
+</font>
+  </li>
+</ul>
+<P align="left"><img src="6.46.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.46.jpg" width="433" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.45. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Пример применения команды pcolor</i> 
+  </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция pcolor возвращает дескриптор объекта класса surface. Пример применения команды pcolor приводится ниже:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; z=peaks(40);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; colormap(hsv)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; pcolor(z)
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">График, построенный в этом 
+  примере, показан на рис. 6.45.</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Характер расцветки поверхности командой pcolor существенно зависит от выбора палитры цветов. В приведенном примере она задается командой colormap.</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="43"></a> Создание 
+  закрашенного многоугольника</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для создания закрашенного пятна в виде многоугольника может использоваться команда patch:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left"> <font size="3" face="Times New Roman"> patch(X,Y,C) — создает 
+      закрашенный многоугольник, вершины которого заданы векторами X и Y в текущей 
+      системе координат, а спецификация окраски задана вектором цветовой палитры 
+      С. Можно также задавать цвет с помощью символьной переменной 'color' вида 
+      'г', 'д', 'b', 'с', 'т', 'у', V или V. X и Y могут быть матрицами; </font> 
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> patch(X,Y.Z,C) — создает многоугольник в трехмерной системе координат, при этом матрица Z должна иметь тот же размер, что X и Y.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример поясняет применение команды patch:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Х=[1 2 3 2 1];</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Y=[l 2 0 5 1];</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; patch(X.Y.[l 0 0])
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Построенный многоугольник 
+  показан на рис. 6.46. </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">В данном случае многоугольник окрашен красным цветом, поскольку вектор цветов [1 0 0] указывает на наличие только красной составляющей цвета (другие составляющие представлены относительным уровнем 0).
+</font>
+</P>
+<P align="left"><img src="6.47.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.47.jpg" width="450" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.46. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Многоугольник, построенный командой 
+  patch</i> </font> </P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="44"></a> Окраска 
+  плоских многоугольников</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для построения окрашенных в заданный цвет плоских многоугольников может использоваться команда fill   (заполнить):
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">fill(X.Y.C) — строит закрашенный плоский многоугольник, вершины которого задаются векторами X и Y с цветом, заданным С. Многоугольник должен быть замкнутым. Для построения нескольких прямоугольников параметры команды должны быть матрицами.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> fill(Xl.Yl,Cl,X2.Y2,C2,...) — представляет собой другой способ построения нескольких закрашенных прямоугольников.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример показывает построение четырехугольника, закрашенного синим цветом:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Х=[1 2321];
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Y=[5 0.5 0 4 5]:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; filKX.Y.[0 0 1])
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Построения, реализованные 
+  этим примером, показаны на рис. 6.47.<BR>
+</font>
+</P>
+<P align="left"><img src="6.48.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.48.jpg" width="453" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.47. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Построение закрашенного четырехугольника 
+  на плоскости</i> </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция H=f 1П (...) строит график и возвращает вектор-столбец дескрипторов для созданных объектов класса patch по одному дескриптору на каждый объект.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="45"></a> Вывод 
+  шкалы цветов</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">При использовании функциональной окраски весьма полезным является вывод шкалы цветов командой colorbar. Ее варианты перечислены ниже:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">colorbar( 'vert') — выводит вертикальную шкалу цветов на текущий график;&nbsp;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">colorbar( 'horiz') — выводит горизонтальную шкалу цветов на текущий график;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> colorbar(H) — выводит шкалу цветов на график с дескриптором Н с автоматическим размещением шкалы по вертикали или по горизонтали в зависимости от соотношения размеров графика;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> colorbar — устанавливает в текущий график новую вертикальную шкалу цветов или обновляет уже имеющуюся.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример показывает применение команды colorbar совместно с командой fill3:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fill3(rand(5.4).rand(5.4).rand(5.4),rand(5.4))&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; colorbar('vert')
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Более подробно функция 
+  f ill3 будет рассмотрена ниже. На рис. 6.48 показана полученная при запуске 
+  этого примера картина. Следует отметить, что, поскольку многоугольники строятся 
+  со случайными значениями координат вершин, то при каждом запуске будет наблюдаться 
+  новая картина. </font> </P>
+<P align="left"><img src="6.49.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.49.jpg" width="443" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.48. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Случайные многоугольники с функциональной 
+  окраской и вертикальной шкалой цветов&nbsp; </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman"> Функция H=col orbar(...) возвращает дескриптор для объекта axes со шкалой цветов.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="46"></a> Цветные 
+  плоские круговые диаграммы</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Закрашенные секторы часто используются для построения круговых диаграмм. Для этого в MATLAB служит команда piе:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> pie(X) — строит круговую диаграмму по данным нормализованного вектора X/ SUM(X). SUM(X)—сумма элементов вектора. Если SUM(X)&lt;=1.0, то значения в X непосредственно определяют площадь секторов;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> pie(X.EXPLODE) — строит круговую диаграмму, у которой отрыв секторов от центра задается вектором EXPLODE, который должен иметь тот же размер, что и вектор данных X.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример строит цветную круговую диаграмму с пятью секторами, причем последний сектор отделен от остальных:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Х=[1 2 3 4 5];
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; pie(X.[0 0 0 0 2])
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Построенная диаграмма показана 
+  на рис. 6.49. </font> </P>
+<P align="left"><img src="6.50.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.50.jpg" width="428" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.49. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Плоская круговая диаграмма</i> 
+  </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция Н=рiе(...) строит график и возвращает вектор дескрипторов созданных объектов классов patch и text.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="47"></a> Другие 
+  команды управления световыми эффектами</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Здесь мы только отметим некоторые дополнительные команды, связанные с управлением цветовыми палитрами:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> col style — выделение цвета и стиля графика из заданного массива;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">rgbplot — изображение палитры;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> hsv2rgb — преобразование палитры HSV в палитру RGB;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> rgb2hsv — преобразование палитры RGB в палитру HSV;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> brighten — управление яркостью;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> contrast — управление контрастом;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">hidden — управление показом невидимых линий;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> whitebg — управление цветом фона.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Рекомендуется ознакомиться с этими командами, используя команду help.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="48"></a> Окрашенные 
+  многоугольники в пространстве</font></B> </P>
+<P align="left"> <font size="3" face="Times New Roman">Для закраски многоугольников, 
+  определенных в пространстве, служит команда f ill3. Ниже представлены основные 
+  ее формы: </font> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> fill3(X,Y,Z,C) — строит закрашенный многоугольник в пространстве с данными вершин, хранящимися в векторах X, Y и Z, и цветом, заданным палитрой С. При построении нескольких закрашенных многоугольников параметры команды должны быть матрицами;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">fill3(Xl.Yl,Zl,Cl.X2,Y2,Z2,C2,...) — другой вариант построения нескольких закрашенных многоугольников в пространстве;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> fill 3 — функция, возвращающая вектор-столбец дескрипторов объектов класса
+patch.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример показывает действие команды
+fill3:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; fill3(rand(5,4),rand(5,4).rand(5.4).rand(5.4))</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">На рис. 6.50 представлены 
+  построенные в этом примере закрашенные многоугольники. Поскольку координаты 
+  вершин многоугольников формируются с применением генератора случайных чисел, 
+  то наблюдаемая картина оказывается случайной и не будет повторяться при последующих 
+  запусках данного примера. </font> </P>
+<P align="left"><img src="6.51.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.51.jpg" width="450" height="397"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.50. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Закрашенные многоугольники в пространстве</i> 
+  </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Следует обратить внимание на то, что команда
+pie3 дает функциональную закраску построенных фигур.</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="3"><a name="49"></a> Ц</FONT><font face="Times New Roman" size="4">ветные 
+  объемные круговые диаграммы</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Иногда используются объемные круговые диаграммы. Для их построения служит команда
+pie3:</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">pie3(...) — аналогична команде pie(...), но дает построение объемных секторов.
+</font>
+  </li>
+</ul>
+<P align="left"> <font size="3" face="Times New Roman">В приведенном ниже примере 
+  строится объемная диаграмма с отделением двух секторов, показанная на рис. 6.51: 
+  </font> </P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Х=[1 2345];</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; pie3(X,[0 0 1 01])
+</font>
+</P>
+<P align="left"><img src="6.52.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.52.jpg" width="466" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.51. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Объемная круговая диаграмма </font> 
+  </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция H=pie3(...) строит график и возвращает вектор, содержащий дескрипторы созданных объектов классов patch, surface и text.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="50"></a> Построение 
+  цилиндра</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для построения цилиндра в виде трехмерной фигуры применяется функция
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">cylinder:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> [X,Y,Z]=cy1inder(R,N) — создает массивы X, Y и Z, описывающие цилиндрическую поверхность с радиусом R и числом узловых точек N для последующего построения с помощью функции surf(X.Y.Z);
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> [X,Y,Z]=cyl1nder(R) и [X,Y,Z]=cylinder — подобны предшествующей функции для
+N=20 и R=[1 1].
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример построения объемного цилиндра:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X.Y.Z]=cyl1nder(10.30);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; surf(X.Y.Z.X)
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">На рис. 6.52 показан результат 
+  построения цилиндра для данного примера. </font> </P>
+<P align="left"><img src="6.53.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.53.jpg" width="488" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.52. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Построение цилиндра</i> </font> 
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Естественность воспроизведения цилиндра существенно зависит от графической команды, используемой для его построения. Команда surf дает возможность задать функциональную окраску с цветом, определяемым вектором X, что делает представление цилиндра достаточно наглядным.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="51"></a> Построение 
+  сферы</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для расчета массивов X, Y и Z координат точек сферы как трехмерной фигуры используется функция sphere:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">[X.Y,Z]=sphere(N) — генерирует матрицы X, Y и Z размера (N+l)x(N+l) для последующего построения сферы с помощью команд surf (X, Y.Z) или surfl (X. Y.Z);
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> [X,Y.Z]=sphere — аналогична предшествующей функции при N=20.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример применения этой функции:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [X,Y,Z]=sphere(30);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; surfl(X.Y.Z)
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">На рис. 6.53 показана построенная 
+  в этом примере сфера. Хорошо видны геометрические искажения (сфера приплюснута), 
+  связанные с разными масштабами по координатным осям. </font> </P>
+<P align="left"><img src="6.54.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.54.jpg" width="440" height="496"> </P>
+<P align="left"><font size="3" face="Times New Roman"><i><b>Рис.</b> <B>6.53. 
+  </B>Построение сферы</i> </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Обратите внимание на то, что именно функциональная окраска сферы придает ей довольно реалистичный вид. В данном случае цвет задается вектором Z.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="52"></a> Трехмерная 
+  графика с треугольными плоскостями</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">К числу специальных видов графики относится построение объемных фигур с помощью плоских треугольников. Для построения таких фигур в виде каркаса (без окраски и отображения плоскостей) используется команда trimesh:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> trimesh(TRI,X,Y,Z,C) — построение объемной каркасной фигуры с треугольниками, специфицированными матрицей поверхности TRI, каждая строка которой содержит три элемента и задает одну треугольную грань путем указания индексов, по которым координаты выбираются из векторов X, Y, Z. Цвета ребер задаются вектором С;
+</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> trimesh(TRI.X.Y.Z) — построение, аналогичное предшествующему при C=Z, т. е. с цветом ребер, зависящим от значений высоты;</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">H=trimesh(...) — строит график и возвращает дескрипторы графических объектов;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">trimesh(..., 'param'. 'value'. 'param', 'value'...) —
+добавляет значения 'value' для параметров 'param'.
+</font>
+  </li>
+</ul>
+<P align="left"><img src="6.55.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.55.jpg" width="452" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 6.54. </i> </font> 
+  </B><i><font size="3" face="Times New Roman">Одна из объемных фигур, построенных 
+  командой trimesh </font> </i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Следующий пример иллюстрирует применение команды trimesh для построения случайной объемной фигуры, параметры которой задаются с помощью генератора случайных чисел:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х = rand(1.40):&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; у = rand(1.40):&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; z = sin(x.*y);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; tri = delaunay(x.y);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; tnmesh(tri .x.y.z)
+</font>
+</P>
+<P align="left"><img src="6.56.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.56.jpg" width="461" height="496"> </P>
+<P align="left"><font size="3" face="Times New Roman"><i><b>Рис. 6.55. </b>Один 
+  из рисунков, построенных командой trisurf</i> </font> </P>
+<P align="left"> <font size="3" face="Times New Roman">Одна из построенных фигур 
+  показана на рис. 6.54. Другая, абсолютно аналогичная, по заданию входных параметров 
+  команда — tnsurf(...) — отличается только закраской треугольных областей, задающих 
+  трехмерную фигуру. Если в приведенном выше примере заменить функцию trimesh 
+  на trisurf, то можно получить графики, подобные приведенному на рис. 6.55. </font> 
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Обратите внимание на то, 
+  что рис. 6.55 также принадлежит к множеству случайных графических построений. 
+  Поэтому возможность его буквального повторения отсутствует. </font> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="53"></a> Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">В этом уроке мы научились:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Строить различные графики функций одной переменной.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">Строить диаграммы и гистограммы.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Строить на плоскости графики специальных типов.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Использовать функции задания массивов трехмерной графики.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Строить трехмерные графики поверхностей и фигур.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Использовать световые эффекты.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Наносить на графики надписи и легенды.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Маркировать оси и линии графиков, наносить на них сетку.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Строить в одном окне несколько графиков и менять их масштаб.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Менять палитры цвета и условия освещения.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Строить графические объекты на плоскости и в пространстве.
+</font>
+  </li>
+</ul>
+</BODY>
+</HTML>
+

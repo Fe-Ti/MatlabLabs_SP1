@@ -1,0 +1,626 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+      <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 14. Массивы структур</a></font></b> </li>
+    <ul>
+      <li><font face="Times New Roman CYR" size=3><a href="#2">Тип данных - структуры </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#3">Создание структур и доступ к их компонентам</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#4">Функция создания структур</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#5">Проверка имен полей и структур</a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#6">Функция возврата имен полей  </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#7">Функция возврата содержимого полей структуры </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#8">Функция присваивания значений полям</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#9">Удаление полей </a></font> </li>
+	 <li><font face="Times New Roman CYR" size=3><a href="#10">Применение массивов структур </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#11">Что нового мы узнали? </a></font> </li>
+     
+</ul></ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №14.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Массивы структур</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Тип данных — структуры</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Создание структур и доступ к их компонентам</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Проверка имен полей и структур&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Функция возврата имен полей</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Функция возврата содержимого полей структуры</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Функция присваивания значений полям</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Удаление полей</font></li>
+</ul>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Тип 
+  данных — структуры</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3"><I>Структуры </I>относятся к сложным типам данных. В предшествующих версиях MATLAB они именовались записями, что приводило к конфликтам в терминологии MATLAB и систем управления базами данных. Этот тип данных стал именоваться структурами после того, как широкое распространение получили средства MATLAB для работы с базами данных с использованием языка запросов Sequential Query Language (SQL).. Структуры MATLAB и их поля в отличие от полей записей баз данных не являются объектами SQL, но зато обращения к структурам могут быть откомпилированы и к ним возможен прямой доступ, минуя сложные и медленные механизмы систем управления базами данных. Структуры могут содержать разнородные данные, относящиеся к некоторому именованному объекту. Например, объект man (человек) может характеризоваться следующими данными:</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="2" CELLSPACING="0" CELLPADDING="0" WIDTH="550" HEIGHT="139">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="88" HEIGHT="23">
+<DIV WIDTH="88" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Поле<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="132" HEIGHT="23">
+<DIV WIDTH="132" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Значение<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="398" HEIGHT="23">
+<DIV WIDTH="398" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Комментарий<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="88" HEIGHT="20">
+<DIV WIDTH="88" HEIGHT="20">
+<P align="left">
+<font face="Times New Roman" size="3">Man(i....)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="132" HEIGHT="20">
+<DIV WIDTH="132" HEIGHT="20">
+<P align="left">
+<font face="Times New Roman" size="3">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="398" HEIGHT="20">
+<DIV WIDTH="398" HEIGHT="20">
+<P align="left">
+<font face="Times New Roman" size="3">Имя записи<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="88" HEIGHT="18">
+<DIV WIDTH="88" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">.name<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="132" HEIGHT="18">
+<DIV WIDTH="132" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Иван<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="398" HEIGHT="18">
+<DIV WIDTH="398" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Имя человека<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="88" HEIGHT="18">
+<DIV WIDTH="88" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">.surname<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="132" HEIGHT="18">
+<DIV WIDTH="132" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Петров<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="398" HEIGHT="18">
+<DIV WIDTH="398" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Фамилия<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="88" HEIGHT="18">
+<DIV WIDTH="88" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">.date<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="132" HEIGHT="18">
+<DIV WIDTH="132" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">1956<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="398" HEIGHT="18">
+<DIV WIDTH="398" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Год рождения<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="88" HEIGHT="18">
+<DIV WIDTH="88" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">.height<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="132" HEIGHT="18">
+<DIV WIDTH="132" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">170.5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="398" HEIGHT="18">
+<DIV WIDTH="398" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Рост<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="88" HEIGHT="24">
+<DIV WIDTH="88" HEIGHT="24">
+<P align="left">
+<font face="Times New Roman" size="3">.weight<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="132" HEIGHT="24">
+<DIV WIDTH="132" HEIGHT="24">
+<P align="left">
+<font face="Times New Roman" size="3">70.34<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="398" HEIGHT="24">
+<DIV WIDTH="398" HEIGHT="24">
+<P align="left">
+<font face="Times New Roman" size="3">Вес<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font face="Times New Roman" size="3">Первые два столбца представляют <I>схему структуры. </I>Как нетрудно заметить, каждая <I>i-я </I>структура состоит из ряда <I>полей, </I>имеющих <I>имена, </I>например man(i).name, man(i) .date и т. д. Поля могут содержать <I>данные </I>любого типа — от пустого поля [ ] до массивов. Приведенная выше структура имеет размер 1x1. MATLAB поддерживает и массивы структур, что позволяет создавать мощные базы данных.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Поле структуры может содержать другую вложенную структуру или массив структур. Это позволяет создавать вложенные структуры и даже многомерные массивы структур. Поскольку в данной книге такие структуры не используются, отсылаем заинтересованного читателя к книге [42], где они описаны более подробно.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a> Создание 
+  структур и доступ к их компонентам</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для задания структур на языке MATLAB можно использовать операторы присваивания, что иллюстрирует следующий пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; man.name='Иван';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; man.surname-'Петров':&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; man.date-1956;&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; man.height=170.5;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; man.weight=70.34;</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Здесь построена базовая структура без индексного указателя. Теперь можно просмотреть полученную структуру, просто указав ее имя:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; man<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">man =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">name: 'Иван'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">surname: 'Петров'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">date: 1956&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">height: 170.5000&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">weight: 70.3400</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Нетрудно догадаться, что компоненты структуры можно вызывать по имени и менять их значения. При этом имя компонента состоит из имени структуры и имени поля, разделенных точкой. Это поясняют следующие примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; man.date&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1956</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; man.date=1964&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> man =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">name:   'Иван'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">surname:   'Петров'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">date: 1964</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">height: 170.5000<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">weight: 70.3400</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3"><i><img border="0" src="Prim-5.gif" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim-5.gif" align="left" width="36" height="35">Как уже отмечалось, в MATLAB 6.0 существует проблема с записью символов кирилли-цы в командном режиме. Так, в командном режиме нельзя вводить в аргументы структур малую букву &laquo;с&raquo; русского алфавита — она ведет к переводу строки. Этого ограничения нет при задании структур в программах, хотя и в этом случае ошибки при вводе символов кириллицы не исключены.</i></font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для создания массива структур вводится их <I>индексация. </I>Например, вектор структур можно создать, введя индекс в скобках после имени структуры. Так, для создания новой, второй структуры, можно поступить следующим образом:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;mаn(2).namе='Петр';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;mаn(2).Surnamе='Сидоров';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; man(2).date=1959;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;mаn(2)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">name: 'Петр'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">surname: 'Сидоров'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">date: 1959</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">height: [ ]<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">weight: [ ]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; man(2).surname&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Сидоров&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; length(man)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans = .2</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Обратите внимание на то, что не все поля данной структуры заполнены. Поэтому значением двух последних полей структуры 2 оказываются пустые массивы. Число структур в массиве структур позволяет найти функция length (см. последний пример). Эта же функция может использоваться и для нахождения размера любого вектора или размерности многомерного непустого массива, так как length(Х)= MAX(size(X)), если X — непустой массив, и length(X)=0, если Х=[ ].</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a> Функция 
+  создания структур</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для создания структур используется следующая функция:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">struct('fieldl' .VALUES1, 'field2' .VALUES2,...) — возвращает созданную данной функцией структуру, содержащую указанные в параметрах поля 'fieldn' с их значениями ' VALUESn'. Значением может быть массив ячеек;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">struct(OBJ) — конвертирует объект OBJ в эквивалентную структуру или массив структур. OBJ может быть объектом или массивом
+    Java.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S=struct('student'.'Иванов'.'group'.2.'estimate','good')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;S =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">student: 'Иванов'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">group: 2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">estimate: 'good'</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="5"></a> Проверка 
+  имен полей и структур</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Выполнение операций с полями и элементами полей выполняется по тем же правилам, что и при работе с обычными массивами. Однако существует ряд функций, осуществляющих специфические для структур операции
+[<i>Помимо функций isstruct и isfields вы можете
+использовать для тестирования массивов
+структур функцию isа(имя объекта, 'struct') и
+команду или функцию whos имя объекта. —
+Примеч. ред.</i>].</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Приведенные ниже функции служат для тестирования имен полей и структур записей:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">isfielcKS, 'field') — возвращает логическую 1, если 'field' является именем поля структуры
+    S;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">isstruct(S) — возвращает логическую 1, если S — структура, и 0 в ином случае. Их применение на примере структуры man показано ниже:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; isfieldCman.'name')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; isfield(man.'family')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; isstruct(man)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; isstruct(many)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">??? Undefined function or variable 'many'.&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; isstruct('many')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="6"></a> Функция 
+  возврата имен полей</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Следующая функция позволяет вывести имена полей заданной структуры:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> fieldnames (S) — возвращает имена полей структуры S в виде массива ячеек (см.</font>
+    <font face="Times New Roman" size="3">урок 15). Пример:&nbsp;</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; fieldnames(man)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'name'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'surname'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'date'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'height'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'weight'</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="7"></a> Функция 
+  возврата содержимого полей структуры</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В конечном счете работа со структурами сводится к выводу и использованию содержимого полей. Для возврата содержимого поля структуры S служит функция
+getfield:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">getfield(S, 'field') — возвращает содержимое поля структуры S, что эквивалентно
+    S. field;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">getfield(S.{i,j}, 'field',
+    {k}) - 'эквивалентно F=S(i J).field(k). Пример:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; getfield(man(2),'name')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Петр</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="8"></a> Функция 
+  присваивания значений полям</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для присваивания полям заданных значений используется описанная далее функция
+selfield:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">setfielcKS. 'field' ,V) — возвращает структуру S с присвоением полю 'field' значения V, что эквивалентно
+    S.field=V;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">setfie1d(S,{i .j}, 'field<SUP>1</SUP> ,{k},V) - эквивалентно S(i ,j).field(k)=V. Пример:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; setfield(man(2).'name'.'Николай')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">name:  'Николай'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">surname:   'Сидоров'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">date: 1959</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">height: [ ]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">weight:  [ ]</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="9"></a> Удаление 
+  полей</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для удаления полей структуры можно использовать следующую функцию:&nbsp;</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;rmfield(S, 'field') — возвращает структуру S с удаленным полем
+    S.'field';</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">rmfield(S,FIELDS) — возвращает структуру S с несколькими удаленными полями. Список удаляемых полей FIELDS задается в виде массива символов (строки) или строкового массива ячеек.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; rmfield(man(2).'surname')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">name:   'Петр'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">date: 1959</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">height:  []</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">weight: []</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="10"></a> Применение 
+  массивов структур</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Массивы структур находят самое широкое применение. Например, они используются для представления цветных изображений. Известно, что цветные изображения формата RGB состоят из массивов интенсивности трех цветов - красного R, зеленого G и синего В. При этом каждый массив содержит данные о координатах точки (они определяются целочисленными индексами массива) и о ее яркости (число от 0 до 1 в формате чисел с плавающей запятой). Чтобы некоторое изображение, например pic, несло данные о цвете всех точек, придется представить изображение массивом структур с полями pic.r, pic.g и
+pic.b.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Еще более сложные структуры (но, в принципе, вполне очевидные) нужны для разработки баз данных, например о работниках предприятия, службах города, городах страны и т. д. Во всех этих случаях особенно важна возможность доступа к отдельным полям структур и возможность присвоения таким полям уникальных имен.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Может показаться, что этот тип данных имеет малое отношение к математическим возможностям системы MATLAB. Однако надо помнить, что поиск инфор</font><font face="Times New Roman" size="3">мации в больших базах данных, сортировка этой информации и прочие операции, не говоря уже о сложной обработке массивов изображений, — все это примеры явно математических, хотя и достаточно специфических, операций. Причем операций нередко с многомерными структурами. Возможность MATLAB выполнять подобные операции быстро и эффективно (прежде всего с позиций минимальных затрат памяти) открывает перед этой системой очень большие возможности в этой области — впрочем, пока еще ждущие своей реализации. Уже в MATLAB 6.1 возможен одновременный прямой обмен данными между массивами структур MATLAB и множеством записей разных баз данных благодаря Database ToolBox (см. урок 23).</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="11"></a> Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Создавать структуры.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Обеспечивать доступ к полям структур.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Проверять имена полей и структур.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Использовать функции возврата имен полей и их содержимого.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Присваивать полям значения и удалять поля.</font></li>
+</ul>
+</BODY>
+</HTML>
+

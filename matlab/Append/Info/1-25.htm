@@ -1,0 +1,415 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<P align="left"><b><font face="Times New Roman, Times, serif">Приложение</font></b></P>
+<P align="left"><font size="5"><font face="Times New Roman">Поддержка&nbsp; средств 
+  Java</font> <font face="Times New Roman">в MATLAB 6</font></font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Язык программирования Java обычно непосредственно не используется для поддержки математических вычислений в системе MATLAB. Однако этот перспективный язык высокого уровня входит в состав ядра системы и широко применяется для создания средств интерфейса и средств Интернета. Поэтому в новых версиях MATLAB 6.0/6.1 существенно расширена поддержка средств языка Java, который приобрел важное значение для решения задач в области создания электронных и Интернет-документов.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Фактически Java интегрирован в MATLAB и используется для построения его графического интерфейса и справочной системы (наряду с HTML). Кроме того, предусмотрены работа с рядом типов данных, классов и объектов, связанных с Java, и поддержка построенной на Java виртуальной машины. Основной материал по использованию средств языка Java имеется в дополнительном руководстве &laquo;MATLAB. External Interfaces. Version 6&raquo;. Для знакомства с тонкостями программирования на Java рекомендуется обращаться в Интернет-сайт www.javasoft.com, посвященный этому языку. Уточнить версию Java, установленную в системе MATLAB, на вашей компьютерной платформе можно, исполнив команду:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; version -Java ans</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Java 1.1.8 from Sun Microsystems Inc.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Вы можете создавать объекты Java в MATLAB с использованием имени класса
+Java:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; f = java.awt.Frame('My Title')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">f =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Java. awt. Frame[f rameO. 0,0, 0x0. i nval i d. hi
+dden. layout=java. awt. Border-Layout.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">resizable.title=my title]</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Методы объектов Java могут быть вызваны как с использованием синтаксиса
+Java,</font> <font face="Times New Roman" size="3">так и с использованием синтаксиса
+MATLAB:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; setTitle (f.  'new title' )&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; t = getTitle(f)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">t =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">new title</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Тот же пример с использованием синтаксиса
+Java:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; f.setTitle ('modify title'  )</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t = f.getTitle</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">t =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">modify title</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; whos f<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Name   Size     Bytes Class<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">f 1x1      Java.awt.Frame&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Grand total is 1 elements using 0 bytes</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Как видно из этого сообщения, в MATLAB поддерживаются Java-классы и Java-объекты.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Для более полного знакомства 
+  с возможностями Java в MATLAB можно воспользоваться справочной системой. Правда, 
+  в индексном каталоге поиск разделов по имени &laquo;Java&raquo; к успеху не 
+  приводит, но в окне расширенного поиска Search можно найти ряд статей по применению 
+  Java.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">В окне справки в разделе 
+  Calling Java from MATLAB можно найти целый ряд разделов справки, посвященных 
+  применению этого языка в системе MATLAB (естественно, на английском языке).</font> 
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для получения информации об объектах и методах Java, с которыми может работать MATLAB, нужно исполнить команду:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;methodsview Java.awt.Menultem</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Данные окна рис. П2 показывают, 
+  что поддержка Java реализована в большом числе объектов и методов системы MATLAB.</font> 
+</P>
+<P align="left"> <font face="Times New Roman" size="3">При использовании объектов 
+  Java пользователь должен учитывать многочисленные отличия в свойствах объектов 
+  Java и объектов MATLAB, что ведет к различиям в результатах исполнения многих 
+  функций. Например, вот как работает функция определения длины строки в MATLAB:</font> 
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; s=<sup>'</sup>Hell о my friend!'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">s =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Hello my friend!</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; size(s)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 16</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Результат означает, что строка s задана как одномерный массив с числом элементов 16. А вот как та же функция работает со строковым массивом
+Java:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; string=java.lang.Sthng( 'Hello my
+friend!')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">string=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Hello my friend!</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; size(string)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 1    1</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Нетрудно заметить, что отдельные символы в этом случае не рассматриваются как элементы массива, и строка представлена одномерным массивом единичной длины.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; C=char(string)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">С=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Hello my friend!</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [m,n]=size(C)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">m =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;n =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">16</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; whos С</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Name   Size     Bytes Class</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">С     1x16     32 char array Grand total is 16 elements using 32 bytes</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Использовав преобразование объекта класса java.lang.string в массив символов MATLAB, мы все-таки подсчитали число символов обычными средствами MATLAB. Но в среде MATLAB мы можем сделать это и средствами
+Java.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; string.length</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">16</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Или</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; e=java.lang.StringBuffer(string)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">e =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Hello my friend!</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; e.length</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">16</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Следующий пример показывает создание Java-структуры многоугольника:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; polygon=java.awt.Polygon([14 42 98 124],[55 12 -2 62].4)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> polygon =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> java.awt.Pol ygon@94067b</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для выявления структуры Java объекта может использоваться функция struct (object), которая преобразует объект в структуру (массив структур) MATLAB с потерей информации о классе.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пример: .</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; struct(string)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0x0 struct array with fields:&raquo; struct(polygon)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">npoints: 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">xpoints: [4x1 int32]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ypoints: [4x1 int32]</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Следует отметить, что указание имени объекта с большой буквы (кстати, как это задано в определении класса) ведет к ошибке, поскольку сам объект, преобразуемый в структуру, по правилам MATLAB, где регистр имеет значение, называется</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">polygon:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; struct(Polygon)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">??? Undefined function or variable 'Polygon'.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Эти примеры, и их можно привести множество, свидетельствуют о том, что пользователь, рискнувший применить средства Java в MATLAB на практике, должен хорошо знать как возможности языка Java, так и особенности среды и языка программирования MATLAB. И быть готовым к различным сюрпризам.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для обычных пользователей системой MATLAB по ее прямому назначению — математические вычисления — большинство возможностей Java представляет ограниченный интерес. Исключением, пожалуй, является работа с такими важными объектами Java, как массивы и классы url. Напомним, что Java-массивы входят в иерархию объектов языка программирования системы
+MATLAB.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Массивы в Java считаются одномерными (подобными векторам-столбцам MAT-LAB). Однако возможно построение массивов в массивах без ограничения числа уровней вложения. Тем не менее функция ndims MATLAB, если ее входным аргументом является такой &laquo;многомерный&raquo; массив Java, всегда возвращает 2. Форма таких массивов в общем случае не прямоугольная, т. е. число элементов по рядам и столбцам может различаться. В MATLAB все массивы, кроме массивов Java, могут быть одномерными, двумерными и многомерными. Нумерация элементов Java-массивов в обычных системах программирования на Java идет с нуля. В MATLAB нумерация всех элементов массивов, в том числе и Java-массива (Java-array), начинается с единицы. (База массива равна единице.) Ниже приведен пример задания прямоугольного Java-массива в массиве с числами двойной точности с именем dblArray: dblArray = javaArrayC
+Java.lang.Double'.3.4);</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В следующем фрагменте программы на языке MATLAB с помощью циклов элементам массива присваиваются конкретные значения:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">for 1=1:3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">for j-l:4 dblArray(i.j) = Java.lang.Double((i*5)+j);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">end end</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Теперь несложно проверить созданный массив:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">dblArray</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">dblArray =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Java.lang.Double[][]:</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="196" HEIGHT="96">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="114" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="42" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="39" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="96">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="114" HEIGHT="96">
+<DIV WIDTH="114" HEIGHT="96">
+<P align="left">
+<font size="3" face="Courier New">[6]     [7]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> [11]    [12]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> [16]    [17]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; dblArray(2.3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 13.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="42" HEIGHT="96">
+<DIV WIDTH="42" HEIGHT="96">
+<P align="left">
+<font size="3" face="Courier New">[ 8]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> [13]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> [18]<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="39" HEIGHT="96">
+<DIV WIDTH="39" HEIGHT="96">
+<P align="left">
+<font size="3" face="Courier New">[9]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> [14]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> [19]<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="96">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="114" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="42" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="39" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font face="Times New Roman" size="3">Из этого примера в целом ясно, что, несмотря на отдельные нюансы, работа с Java-массивами в основном подобна таковой для MATLAB массивов. При этом система MATLAB поддерживает ряд типов преобразований массивов и иных данных из форматов, принятых на языке программирования Java, в форматы MATLAB и наоборот.</font>
+</P>
+</BODY>
+</HTML>
+

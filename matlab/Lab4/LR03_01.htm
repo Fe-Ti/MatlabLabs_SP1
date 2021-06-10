@@ -1,0 +1,449 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Задача 8</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:36.0pt;
+	line-height:150%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+h2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+h3
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 1.0cm 72.0pt 70.9pt;}
+div.Section1
+	{page:Section1;}
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab4/Fon.jpg*//*tpa=http://orloff.am.tpu.ru/matlab/Lab4/Fon.jpg*/);
+}
+.style1 {color: #009900}
+.style3 {color: #009900; font-weight: bold; }
+-->
+</style>
+
+</head>
+
+<body>
+
+
+
+<p class=MsoNormal align=center style='text-align:center; color: #0033CC;'><b><span
+style='font-size:12.0pt'>ЛАБОРАТОРНАЯ РАБОТА № 4. ЗАДАЧИ</span></b></p>
+
+<p class=MsoNormal style='background:#33CCCC'><b><span style='font-size:12.0pt'>Задача
+1. </span></b><span style='font-size:12.0pt'>Вычислить значение интеграла</span></p>
+
+<p class=MsoNormal style='background:#33CCCC'><span style='position:relative;top:19pt'><img
+width=113 height=60 src="LR03_01.files/image001.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/LR03_01.files/image001.png"></span>, где <span
+style='position:relative;top:17pt'><img width=112 height=55
+src="LR03_01.files/image002.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/LR03_01.files/image002.png"></span></p>
+
+</span>
+
+<p class=MsoNormal style='background:#33CCCC'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;background:#33CCCC'><span
+style='font-size:12.0pt'>с помощью квадратурных формул левых прямоугольников,
+средних прямоугольников, трапеций и Симпсона для элементарного отрезка
+интегрирования. Оценить величину погрешности. Применяя те же квадратурные
+формулы для составного отрезка интегрирования, вычислить интеграл <em>I</em> с точностью 0.0001.
+Предварительно оценить шаг интегрирования, при котором достигается заданная
+точность. </span></p>
+
+<p class=MsoNormal style='background:#FFCC99'>&nbsp;</p>
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt;
+color:navy'>ПОРЯДОК РЕШЕНИЯ ЗАДАЧИ:</span></p>
+<p class=MsoNormal style='background:#FFCC99; font-size: 12.0pt; color: navy; font-weight: bold;'>Часть I. Элементарный метод. </p>
+<p class=MsoNormal style='background:#FFCC99'> <span style='font-size:12.0pt; font-weight: bold;'>1.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>Задать  функцию </span><i><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>) = <i><span
+lang=EN-US style='font-size:12.0pt'>P<sub>n</sub></span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>)</span></i> в <span class="style1">m-файле</span> функции.</span></i></p>
+
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt; font-weight: bold;'>2.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>Вычислить значение интеграла<em> I</em> аналитически, т.е. найти его точное значение.</span></p>
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt; font-weight: bold;'>3.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>Построить график функции на отрезке [</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>].</span></p>
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt; font-weight: bold;'>4.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>Вычислить значение интеграла <em>I</em> по
+формулам левых прямоугольников, средних прямоугольников, трапеций и Симпсона,
+считая отрезок [1, 1.44] элементарным отрезком
+интегрирования.</span></p>
+
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt; font-weight: bold;'>5.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>Найти абсолютные и относительные погрешности
+результатов. Результаты занести в таблицу. </span></p>
+<p class=MsoNormal style='background:#FFCC99'>&nbsp;</p>
+<p class=MsoNormal style='background:#FFCC99; font-size: 12.0pt; color: navy; font-weight: bold;'>Часть II. Составной метод. </p>
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt; font-weight: bold;'>6.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>Используя выражение для остаточных членов
+интегрирования R (см. <a href="formula.htm" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.htm">...</a> ), оценить
+шаг интегрирования<span class="style3"> h</span> и количество узлов интегрирования <span class="style3">n</span>, при которых величина погрешности каждой квадратурной
+формулы будет меньше 0.0001.</span></p>
+
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt; font-weight: bold;'>5.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>Вычислить значения интеграла по составной квадратурной
+формуле с найденными <span class="style3">h</span> и <span class="style3">n</span>.</span></p>
+
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt; font-weight: bold;'>6.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>Найти абсолютные погрешности результатов.</span></p>
+
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt; font-weight: bold;'>7.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'><span
+style='font-size:12.0pt'>Результаты занести в таблицу.</span></span></p>
+<p class=MsoNormal style='background:#FFCC99'>&nbsp;</p>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:-1.15pt;background:#FFCC99;border-collapse:collapse'>
+ <tr style='height:19.7pt'>
+  <td width=188 rowspan=3 style='width:141.25pt;border:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt'>Метод вычислений</span></b></p>
+  </td>
+  <td width=227 colspan=4 style='width:6.0cm;border:double windowtext 1.5pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt'>Элементарный метод</span></b></p>
+  </td>
+  <td width=189 colspan=3 rowspan=2 style='width:5.0cm;border:double windowtext 1.5pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt'>Составной метод.</span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt'>Заданная погрешность</span></b></p>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:12.0pt'>R</span></b><b><span style='font-size:
+  12.0pt'> = 0.0001</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:19.7pt'>
+  <td width=113 colspan=2 style='width:3.0cm;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt'>Эксперимент</span></b></p>
+  </td>
+  <td width=113 colspan=2 style='width:3.0cm;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt'>Теория</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:19.7pt'>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt;font-family:Symbol'>D</span></b></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt;font-family:Symbol'>d</span></b></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt;font-family:Symbol'>D</span></b></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt;font-family:Symbol'>d</span></b></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:12.0pt'>n</span></b></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:12.0pt'>h</span></b></p>
+  </td>
+  <td width=66 style='width:49.65pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:12.0pt;font-family:Symbol'>D</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:19.75pt'>
+  <td width=188 style='width:141.25pt;border:double windowtext 1.5pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:19.75pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>Левых
+  прямоуг&nbsp;-&nbsp;ков</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=66 style='width:49.65pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:19.7pt'>
+  <td width=188 style='width:141.25pt;border:double windowtext 1.5pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>Средних
+  прямоуг&nbsp;-&nbsp;ков</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=66 style='width:49.65pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:19.7pt'>
+  <td width=188 style='width:141.25pt;border:double windowtext 1.5pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>Трапеций</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=66 style='width:49.65pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.7pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='height:19.75pt'>
+  <td width=188 style='width:141.25pt;border:double windowtext 1.5pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:19.75pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>Симпсона</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.55pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=57 style='width:42.5pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=66 style='width:49.6pt;border-top:none;border-left:none;border-bottom:
+  double windowtext 1.5pt;border-right:double windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=66 style='width:49.65pt;border-top:none;border-left:none;
+  border-bottom:double windowtext 1.5pt;border-right:double windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:19.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='background:#FFCC99'>&nbsp;</p>
+<p class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt; font-weight: bold;'>8.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-size:12.0pt'>В отчете проанализировать и объяснить полученные
+  результаты. Сформировать заключение.</span></p>
+<p class=MsoNormal style='background:#FFCC99'>&nbsp;</p>
+<hr>
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;background:
+#33CCCC'><b><span style='font-size:12.0pt'>Задача 2.</span></b><span
+style='font-size:12.0pt'> Вычислить заданный интеграл аналитически и используя
+  квадратурную формулу, указанную в индивидуальном варианте, с шагом </span><i><span
+lang=EN-US style='font-size:12.0pt'>h</span></i><span style='font-size:12.0pt'>=(</span><i><span
+lang=EN-US style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>-</span><span
+lang=EN-US style='font-size:12.0pt'>a</span></i><span style='font-size:12.0pt'>)/8.
+  Оценить погрешность по правилу Рунге. Сравнить данную оценку погрешности с точным значением погрешности. Сделать выводы.</span></p>
+<hr>
+<p class=MsoNormal style='text-align:justify; text-indent:35.45pt; background: #33CCCC; font-size: 12.0pt; font-weight: bold;'>Задача 3. </p>
+<p align="left" class=MsoNormal style='text-align:justify; text-indent:35.45pt; background: #33CCCC; font-size: 12.0pt;'><strong>А.</strong> Оценить погрешность численного интегрирования с помощью функции <strong>trapz(x,y)</strong> (метод трапеций).</p>
+<p align="left" class=MsoNormal style='text-align:justify; text-indent:35.45pt; background: #33CCCC; font-size: 12.0pt;'><strong>Б.</strong> Для функции <strong>quad('fun',a,b,tol)</strong> (метод Симпсона) убедится, что результат действительно вычисляется с точностью tol.</p>
+<p  class=MsoNormal style='background:#FFCC99'><span style='font-size:12.0pt;
+color:navy'>ПОРЯДОК РЕШЕНИЯ ЗАДАЧИ:</span></p>
+<p  class=MsoNormal style='background:#FFCC99; font-size: 12.0pt; color: navy;'>1. <em>Любым</em> способом вычислить точное значение интеграла от произвольной функции (кроме многочлена степени n). </p>
+<p  class=MsoNormal style='background:#FFCC99; font-size: 12.0pt; color: navy;'>2. Вычислить численное значение данного интеграла с помощью функции <strong>trapz(x,y)</strong> при нескольких значениях количества узлов интегрирования.  Оценить погрешность   интегрирования. Сделать выводы. </p>
+<p  class=MsoNormal style='background:#FFCC99; font-size: 12.0pt; color: navy;'>4. Вычислить численное значение интеграла с помощью функции <strong>quad('fun',a,b,tol)</strong> при заданной точности <strong>tol</strong>.  Оценить погрешность интегрирования. Сравнить с <strong>tol</strong>. Сделать выводы. </p>
+</body>
+
+</html>

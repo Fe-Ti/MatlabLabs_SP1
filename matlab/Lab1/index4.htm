@@ -1,0 +1,229 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+</HEAD>
+
+<body background="Fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/Fon.jpg" oncopy = "return false">
+<p><b><font face="Times New Roman CYR" size=3>4.  Графика в MATLAB </font></b> </p>
+
+  
+<p align="justify">Подробное описание всех возможностей MATLAB выходит далеко за рамки одной лабораторной работы. Поэтому здесь мы ограничимся рассмотрением простейших графических средств, используемых в MATLAB.</p>
+<table width="784" border="1" bgcolor="#FFFFFF">
+  <tr>
+    <td width="786"><div align="justify">В процессе выполнения данного раздела лабораторной работы вам следует <strong>выполнять указанные <em><font color="#0000FF">упражнения</font></em></strong>. <em><font color="#0000FF">Графические файлы (в формате </font></em><font color="#0000FF"><strong>*.fig</strong><em>) должны сохраняться в ваш рабочий каталог (например, в папку LAB1), который должен быть создан в вашей папке</em>. <em>Данные файлы будут являться <strong>приложением</strong> к отчету. </em></font></div></td>
+  </tr>
+</table>
+<p align="justify"><B><font face="Times New Roman" size="4">Построение 
+графика функций одной переменной</font></B> </p>
+<P align="justify">
+<font face="Times New Roman" size="3">Графики строятся в <em>отдельных</em> масштабируемых и перемещаемых окнах.</font>
+</P>
+<P align="justify">
+<font face="Times New Roman" size="3">Возьмем вначале простейший пример — построение графика синусоиды. Следует помнить, что MATLAB строит графики функций по ряду точек, соединяя их отрезками прямых, т. е. осуществляя линейную интерполяцию функции в интервале между смежными точками. Зададим интервал изменения аргумента <I>х </I>от 0 до 10 с шагом 0.1. Для построения графика достаточно вначале задать вектор <strong>х=0:0.1:10</strong>, а затем использовать команду построения графиков <strong>plot(sin(x))</strong>. Результат показан на</font><font face="Times New Roman" size="3">  рис. 1.</font>
+</P>
+<P align="justify"><font color="#FF0000">&gt;&gt; x=0:0.1:10<font face="Times New Roman" size="3">;<BR>
+</font>&gt;&gt; plot(sin(x))</font></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font>.</strong> Построить данный график.</P>
+<P align="justify"><font face="Times New Roman" size="3">Вектор х задает интервал изменения независимой переменной от 0 до 10 с шагом 0.1. Почему взят такой шаг, а не, скажем,  1? Дело в том, что plot строит не истинный график функции sin(x), а лишь заданное числом элементов вектора х число точек. Эти точки затем просто соединяются отрезками прямых, т. е. осуществляется кусочно-линейная интерполяция данных графика. При 100 точках</font>
+  <font face="Times New Roman" size="3">полученная кривая глазом воспринимается как вполне плавная, но при 10-20 точках
+  она будет выглядеть состоящей из отрезков прямых.</font>
+</P>
+<P align="justify"> <font face="Times New Roman" size="3">Графики MATLAB строит в 
+  отдельных окнах, называемых <em>графическими окнами</em>. Меню 
+  графического окна, показанного на рис. 1, отличается от меню  главного окна MATLAB. Например, в 
+  меню окна появились позиции Tools (Инструменты) и Insert (Вставка). Средства этой панели (мы их рассмотрим подробнее в дальнейшем) позволяют легко 
+  управлять параметрами графиков и наносить на них текстовые комментарии в любом 
+  месте.</font> </P>
+<table border="1" bordercolor="#FF0000">
+  <tr>
+    <td scope="col"><div align="justify"><font face="Times New Roman" size="3">Меню <strong>File</strong> (Файл) окна графики содержит типовые файловые операции, в частности сохранение графических окон в файлы, и их открытия. Однако они относятся не к файлам документов, а к файлам графиков. В частности, можно присваивать имя записываемым на диск рисункам с графиками.</font> </div></td>
+  </tr>
+</table>
+<p><strong><font color="#0000FF">Упражнение</font>.</strong> Сохранить данный график в файл под именем, например <strong>ris01</strong>.</p>
+<P align="left"><img src="index4.files/3.1.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.1.png" width="395" height="418"></P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 1. </font></i> </B><font face="Times New Roman" size="3"><i>Пример построения графика синусоиды</i></font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"> <strong>Построение 
+  в одном окне графиков нескольких функций</strong></font> </P>
+<P align="justify">
+<font face="Times New Roman" size="3">Пойдем дальше и попытаемся построить графики сразу трех функций: sin(x), cos(x) и sin<I>(x)/х.</I></font></P>
+<P align="justify"><font color="#FF0000" size="3" face="Courier New">&raquo;yl=sin(x); y2=cos(x); y3=sin(x)/x;</font> </P>
+<P align="justify"><font face="Times New Roman" size="3">Отметим, что переменные </font><font size="3" face="Courier New">yl, y2</font><font face="Times New Roman" size="3">, </font><font size="3" face="Courier New">y3</font><font face="Times New Roman" size="3"> в результате выполнения данных команд являются не функциями, а <strong>весторами</strong>, имеющими ту же размерность, что и вектор <strong>x</strong>. Поэтому эти переменные не имеют явного указания аргумента в виде у(х).</font> Обратите внимание, что <em>точка с запятой</em> позволяет писать несколько команд в одной строке.</P>
+<P align="left"><font face="Times New Roman" size="3">Теперь можно использовать одну из  форм команды&nbsp;</font> plot:</P>
+<P align="left">
+<font size="3" face="Courier New"><strong>&gt;&gt; plot(xl,fl,x2,f2,x3,f3,...)</strong></font></P>
+<P align="justify">
+<font face="Times New Roman" size="3">где xl, x2, xЗ,... — векторы аргументов функций (в нашем случае все они равны х), a f1, f2, f3,... —векторы значений функций, графики которых строятся в одном окне. В нашем случае для построения графиков указанных функций мы должны записать следующее:&nbsp;</font></P>
+<P align="left">
+<font color="#FF0000" size="3" face="Courier New"> <strong>&raquo; plot(x,yl,x,y2,x,y3)</strong></font>
+</P>
+<P align="left"><strong><font color="#0000FF">Упражнение</font>.</strong> Построить данный график.</P>
+<P align="justify">
+<font face="Times New Roman" size="3">Можно ожидать, что MATLAB в этом случае построит, как обычно, точки графиков этих функций и соединит их отрезками линий. Но если мы выполним</font>
+<font face="Times New Roman" size="3">эти команды, то  графика третьей функции не получим. Не исключен даже сбой <I>в </I>работе программы. Причина этого в том, что  при вычислении функции y3=sin(x)/x, если х представляет собой массив (вектор), то нельзя использовать оператор матричного деления /.</font></P>
+<P align="justify"> <font face="Times New Roman" size="3">Этот пример еще раз наглядно 
+  указывает на то, что чисто поверхностное применение даже такой мощной системы, 
+  как MATLAB, иногда приводит к досадным срывам. Чтобы все же получить график, 
+  надо вычислять отношение <I>sin(x) к х </I>с помощью оператора поэлементного 
+  деления массивов <font color="#FF0000"><strong>./</strong></font> (точка+слэш).</font></P>
+<P align="left"><font face="Times New Roman" size="3"><img src="index4.files/3.2.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.2.png" width="396" height="418"><BR>
+</font>
+  <B><i><font face="Times New Roman" size="3">Рис. 2. </font></i> </B><font face="Times New Roman" size="3"><i>Построение графиков трех функций</i></font></P>
+<P align="justify">
+<font face="Times New Roman" size="3">Обратите внимание на то, что хотя на этот раз MATLAB построил графики всех трех функций, в окне командного режима может появиться предупреждение о делении на 0 — в момент, когда х=0 (при соответствующих настройках MATLAB). Это говорит о том, что MATLAB в некоторых случаях &laquo;может не знать&raquo; о том, что неопределенность sin(x)/x вида 0/0 устранимая и дает 1. Это недостаток практически всех систем для численных вычислений.</font></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font>.</strong> Сохранить данный график в файл под именем, например <strong>ris02</strong>.</P>
+<P align="left"> <font face="Times New Roman" size="4"> <strong>Графическая 
+  функция fplot</strong></font> </P>
+<P align="justify">
+<font face="Times New Roman" size="3">Разумеется, MATLAB имеет средства для построения графиков и таких функций, как sin(x)/x, которые имеют устранимые неопределенности. Не обсуждая эти средства подробно, просто покажем, как это делается, с помощью другой графической команды —&nbsp;</font></P>
+<P align="left"><font size="3" face="Courier New"> <strong>fplot('f(x)', [xmin xmax])</strong></font></P>
+<P align="justify"> <font face="Times New Roman" size="3">Она позволяет строить функцию, 
+  заданную в символьном виде, в интервале изменения аргумента х от xmin до xmax 
+  без фиксированного шага изменения х. Один из вариантов ее применения демонстрирует 
+  рис. 3. </font></P>
+<P align="justify"><font color="#FF0000" size="3" face="Courier New">&raquo; </font><font color="#FF0000" size="3" face="Times New Roman">clear</font><font color="#FF0000"><BR>
+</font><font color="#FF0000" size="3" face="Courier New">&raquo; fplot('sin(x)/x', [-15 15])</font><br>
+<font color="#FF0000" size="3" face="Courier New">&raquo; </font><font color="#FF0000" size="3" face="Times New Roman">grid on</font></P>
+<P align="justify"><font face="Times New Roman" size="3">Хотя в процессе вычислений предупреждение об ошибке (деление на 0) 
+      выводится, но график строится правильно, т.е. при х=0 sin(x)/x = l. Обратите также внимание 
+      на две используемые команды: <strong>clear</strong> (очистить)— очистка графического окна и <strong>grid 
+      on</strong> (сетка)— включение отображения сетки, которая строится пунктирными линиями.</font></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font>.</strong> Построить данный график. Сохранить данный график в файл под именем, например <strong>ris03</strong>.</P>
+<P align="left"><font face="Times New Roman" size="3"><img src="index4.files/3.3.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.3.png" width="464" height="446"><BR>
+</font>
+<B><i><font face="Times New Roman" size="3">Рис. 3. </font></i> </B><font face="Times New Roman" size="3"><i>Построение графика sin(x)/x функцией fplot</i></font></P>
+<P align="justify"><B><font face="Times New Roman" size="4">Столбцовые 
+диаграммы</font></B> </P>
+<P align="justify">
+<font face="Times New Roman" size="3">В прикладных расчетах часто встречаются графики, именуемые столбцовыми диаграммами, отражающие содержание некоторого вектора <strong>V</strong>. При этом каждый элемент вектора представляется столбцом, высота которого пропорциональна значению элемента. Столбцы нумеруются и масштабируются по отношению к максимальному значению наиболее высокого столбца. Выполняет построение такого графика команда <strong>bar(V)</strong> (рис. 4).</font></P>
+<P align="justify"><font color="#FF0000">&gt;&gt; V=1:8<font face="Times New Roman" size="3"><BR>
+</font>V =<font face="Times New Roman" size="3"><BR>
+</font> 1 2 3 4 5 6 7 8<font face="Times New Roman" size="3"><BR>
+</font>&gt;&gt; bar(V)</font></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font>.</strong> Построить данный график. Сохранить данный график в файл под именем, например <strong>ris04</strong>.</P>
+<P align="justify"><img src="index4.files/3.4.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.4.png" width="364" height="331"></P>
+<P align="justify"><font face="Times New Roman" size="3"><b><i><font face="Times New Roman" size="3">Рис. 4. </font></i> </b><font face="Times New Roman" size="3"><i>Построение столбцовой диаграммы значений элементов вектора</i></font></font></P>
+<P align="justify">
+<font face="Times New Roman" size="3">Столбцовые диаграммы — лишь один из многих типов <I>графиков, </I>которые может строить система MATLAB. Особенно часто столбцовые диаграммы используются при представлении данных финансово-экономических расчетов.</font>
+</P>
+<P align="justify"> <B><font face="Times New Roman" size="4">Построение 
+  трехмерных графиков</font></B><font face="Times New Roman" size="3"><BR>
+  </font>
+  <font face="Times New Roman" size="3">Столь же просто обеспечивается построение графиков сложных поверхностей. Надо только знать, какой командой реализуется тот или иной график. Например, для построения графика поверхности и ее проекции в виде контурного графика на плоскость под поверхностью достаточно использовать следующие команды:</font></P>
+<P align="left">
+<font color="#FF0000" size="3" face="Courier New">&raquo; [X,Y]=meshgrid(-5:0.1:5);<BR>
+ &raquo; Z=X.*sin(X+Y);<BR>
+</font>
+
+<font color="#FF0000" size="3" face="Courier New"> &raquo; meshc(X,Y,Z)</font></P>
+<P align="left"><strong><font color="#0000FF">Упражнение</font>.</strong> Построить данный график. Сохранить данный график в файл под именем, например <strong>ris05</strong>. </P>
+<P align="left"><font face="Times New Roman" size="3">Окно с построенным графиком 
+    показано на рис. 5.</font></P>
+<P align="left"><font face="Times New Roman" size="3"><img src="index4.files/3.5.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.5.png" width="484" height="428"><BR>
+</font>
+  <i><B><font face="Times New Roman" size="3">Рис. 5. </font> </B></i><font face="Times New Roman" size="3"><i>Окно с графиками поверхности и ее проекции на плоскость под фигурой</i></font></P>
+<P align="justify">
+<font face="Times New Roman" size="3">В MATLAB  можно в считанные секунды изменить задающую поверхность функцию <I>Z(X, Y) </I>и тут же получить новый график поверхности с окраской, в данном случае заданной вектором Z, и с ее проекцией на плоскость XY.</font></P>
+<P align="justify">
+<font face="Times New Roman" size="3">Мы ограничимся этими примерами построения графиков как достаточно простыми и типовыми. Из них следует важный вывод — для решения той или иной частной задачи надо знать соответствующие команды и функции.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"> Вращение 
+  графиков мышью</font></B> </P>
+<P align="justify"> <font face="Times New Roman" size="3">Можно поворачивать построенную 
+  фигуру мышью и наблюдать ее под разными углами. Рассмотрим эту возможность на 
+  примере построения логотипа системы MATLAB — мембраны. Для этого, введя команду 
+  <strong><font color="#FF0000">membrane</font></strong>, получим  график, представленный на рис. 6.</font> </P>
+<P align="left"><img src="index4.files/3.6.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.6.png" width="509" height="437"></P>
+<P align="left">
+<B><i><font face="Times New Roman" size="3">Рис. 6. </font></i> </B><i><font face="Times New Roman" size="3">Построение мембраны — логотипа системы MATLAB</font></i>
+</P>
+<P align="left"><strong><font color="#0000FF">Упражнение</font>.</strong> Построить данный график. Сохранить данный график в файл под именем, например <strong>ris06</strong>.</P>
+<P align="justify">
+<font face="Times New Roman" size="3">Для вращения графика достаточно активизировать  кнопку панели инструментов с изображением пунктирной окружности со стрелкой (рис. 6). </font></P>
+<P align="justify"><font face="Times New Roman" size="3">Теперь, введя курсор мыши в область графика и нажав левую кнопку мыши, можно круговыми движениями заставить график вращаться вместе с обрамляющим его параллелепипедом.</font></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font>.</strong> Осуществить вращение данного графика<strong></strong>.</P>
+<P align="left"> <B><font face="Times New Roman" size="4"> Контекстное 
+  меню графиков</font></B> </P>
+<P align="justify"> <font face="Times New Roman" size="3">Для переключения в режим 
+  редактирования графика можно ваполнить команду меню <strong>Tools / Edit Plot</strong> или щелкнуть на кнопке <strong>Edit Plot</strong> (Редактировать график) 
+  с изображением курсора-стрелки. В этом режиме графиком можно управлять с помощью 
+  контекстного меню, вызываемого щелчком правой кнопки мыши. Вид этого меню при 
+  курсоре, расположенном в графика вне построенных  
+  графических объектов, показан на рис. 7. С помощью мыши можно также выделить 
+  график. Щелчок левой клавишей выводит рамку вокруг рисунка (см. рис. 7). </font></P>
+<P align="justify"><img src="index4.files/3.7.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.7.png" width="498" height="513"></P>
+<P align="justify"><b><i><font face="Times New Roman" size="3">Рис. 7. </font></i> </b><font face="Times New Roman" size="3"><i>График в состоянии редактирования и контекстное меню</i></font></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font></strong>. Откройте рисунок 1 в вашем рабочем каталоге и найдите контекстное меню графика. Определите назначение пункта меню <strong>Grid</strong>.</P>
+<P align="left">  <font face="Times New Roman" size="4"><strong>Форматирование 
+  свойств графиков</strong></font> </P>
+<P align="justify">
+<font face="Times New Roman" size="3">MATLAB имеет возможность легко настраивать и корректировать свойства графиков с помощью специальных средств. </font>Одним из них является редактор свойств (<strong>Property Editor</strong>).</P>
+<P align="justify">Редактор свойств можно вызвать через команду главного меню <strong>View / Property Editor</strong> или через команду контекстного меню <strong>Show Property Editor</strong>.</P>
+<P align="justify">Вид редактора сойств зависит от того, какой элемент графика выделен. Например, на рис. 8 выделена рамка, а на рис. 9 выделена линия графика.</P>
+<P align="justify"><img src="index4.files/3.8.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.8.png" width="498" height="650"></P>
+<P align="justify"><b><i><font face="Times New Roman" size="3">Рис. 8.</font></i></b></P>
+<P align="justify"><img src="index4.files/3.9.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.9.png" width="562" height="650"></P>
+<P align="justify"><b><i><font face="Times New Roman" size="3">Рис. 9.</font></i></b></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font></strong>. Найти и вывести на экран окна редактора свойств, изображенные на рис. 8 и 9. Определить назначение всех элементов редактора свойств, выделенные красной линией.</P>
+<P align="justify"><B><font face="Times New Roman" size="4">Форматирование 
+линий и маркеров для графика нескольких функций</font></B> </P>
+<P align="justify">
+<font face="Times New Roman" size="3">Если строится график нескольких функций, то можно форматировать линии и маркеры каждой кривой отдельно. Выполним следующие команды:</font>
+</P>
+<P align="left"><font color="#FF0000" size="3" face="Courier New">&raquo; x=-2:.1:5;<BR>
+&raquo; plot(x,sin(x),x,sin(x).<sup>^</sup>3,x,sin(x).^5);</font></P>
+<P align="justify"><font face="Times New Roman" size="3">Обратите внимание 
+  на то, как заданы степени синуса. Записать эти выражения в виде sin(x)^2 и cos(x)^2 
+  будет грубейшей ошибкой, поскольку х здесь вектор. Операторы <font color="#FF0000"><strong>.^</strong></font> в данном случае 
+  дают поэлементное возведение в степень, что и нужно для построения графиков 
+этих функций.</font></P>
+<P align="justify"><font face="Times New Roman" size="3">Рис. 10 показывает пример такого форматирования для графика, полученного исполнением этих команд.</font></P>
+<P align="justify"><img src="index4.files/3.10.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.10.png" width="601" height="520" border="1"></P>
+<P align="justify"><B><i><font face="Times New Roman" size="3">Рис. 10. </font></i> </B><i><font face="Times New Roman" size="3">Пример форматирования для графика трех функций</font></i></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font></strong>. Построить и отформатировать данный график. Сохранить  график в файл под именем, например <strong>ris10</strong> в свой рабочий каталог.</P>
+<P align="justify"><font face="Times New Roman" size="3">Надписи на графиках могут быть сделаны на русском языке<strong>, только если компьютер корректно оснащен должным набором шрифтов</strong>. Средства форматирования надписей дают обширные возможности по выбору набора шрифтов, их стиля, размеров символов и их цвета.</font></P>
+<P align="justify"><font face="Times New Roman" size="4"><strong>Нанесение 
+надписей и стрелок  на график</strong></font> </P>
+<P align="justify">
+<font face="Times New Roman" size="3">Надписи на график можно нанести  с помощью  панели инструментов <strong>Plot Edit Toolbar</strong> (рис. 11). Место надписи фиксируется щелчком мыши. </font></P>
+<P align="justify"><img src="index4.files/3.11.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.11.png" width="600" height="224" border="1"></P>
+<P align="justify"><B><i><font face="Times New Roman" size="3">Рис. 11. </font></i> </B><i><font face="Times New Roman" size="3">Инструменты для нанесения надписей</font></i></P>
+<P align="justify"><font face="Times New Roman" size="3">На рис. 12 показан отформатированный график с тремя надписями.</font> <font face="Times New Roman" size="3">Надписи сделаны с разным размером символов и разным стилем. Обратите внимание, что при задании на надписи возведения в степень знаком <font color="#FF0000"><strong>^</strong></font> надпись на 
+  экране отображается в естественном математическом виде (степень в виде верхнего 
+индекса).</font></P>
+<P align="justify"><img src="index4.files/3.12.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.12.png">&nbsp;</P>
+<P align="justify"><B><i><font face="Times New Roman" size="3">Рис. 12. </font></i> </B><i><font face="Times New Roman" size="3">Нанесение надписей на  график</font></i> </P>
+<P align="justify">Как видно на рисунке, параметры выделенной надписи можно изменять как минимум тремя способами:</P>
+<ul>
+  <li>с помощью редактора свойств;</li>
+  <li>с помощью панели инструментов <font face="Times New Roman" size="3"><strong>Plot Edit Toolbar</strong></font>;</li>
+  <li>с помощью контекстного меню.</li>
+</ul>
+<P align="justify"><font face="Times New Roman" size="3">Полученную таким образом 
+надпись можно выделить и перенести мышью в любое другое место.</font> <font face="Times New Roman" size="3">На рис. 12, в частности, показаны надписи со стрелками, созданные  с помощью соответствующей кнопки панели инструментов. Это стрелку</font>
+<font face="Times New Roman" size="3">в режиме редактирования графика также можно перемещать и вращать мышью, а также менять ее длину. Можно также наносить на график обычные линии (без стрелки) и простейшие геометрические фигуры.</font></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font></strong>. Нанести на график из файла <strong>ris10</strong> подписи для каждой функции, как на рис. 12. Сохранить данный график в файл под именем, например <strong>ris12</strong>.</P>
+<P align="left"> <font face="Times New Roman" size="4"><strong>Построение 
+  легенды на графике</strong></font> </P>
+<P align="justify"> <font face="Times New Roman" size="3">Дополнительно можно изменить 
+  размеры графика (см. меню Tools (Инструменты) и его команды Zoom In (Увеличить)и 
+  Zoom Out (Уменьшить)), выполнить поворот графика мышью (команда Rotate 3D) и подключить к графику 
+  <I>легенду — </I>пояснение в виде отрезков линий со справочными надписями, размещаемое 
+  внутри графика или около него. Поскольку наш график содержит три кривые, то 
+  легенда представляет собой обозначение этих трех линий в правом верхнем углу 
+  рисунка (рис. 13). Каждая линия имеет тот же цвет, что и на графике (и тот 
+  же стиль).</font> </P>
+<P align="left"><img src="index4.files/3.13.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.13.png" width="554" height="620"></P>
+<P align="left">
+<B><i><font face="Times New Roman" size="3">Рис. 13. </font></i> </B><i><font face="Times New Roman" size="3">График с легендой</font></i></P>
+<P align="left">Текстовая часть легенды берется из параметра Display Name редактора свойств (см. рис. 14).</P>
+<P align="left"><img src="index4.files/3.14.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index4.files/3.14.png" width="317" height="298" border="1"></P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 14. </font></i> </B><i><font face="Times New Roman" size="3">Задание имени графика для легенды в редакторе свойств для выделенного графика</font></i></P>
+<P align="justify"><strong><font color="#0000FF">Упражнение</font></strong>. Нанести на график из файла <strong>ris10</strong> легенду. Сохранить данный график в файл под именем, например <strong>ris13</strong>.</P>
+<P align="justify">
+<font face="Times New Roman" size="3">Отметим, что все описанные возможности форматирования графиков доступны и программным способом, путем задания соответствующих графических команд, параметров и примитивов. Например команда <strong>text(х,у, 'legend')</strong> позволяет задать надпись 'legend' с началом, имеющим координаты (х, у).</font></P>
+</BODY>
+</HTML>
+

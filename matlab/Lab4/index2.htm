@@ -1,0 +1,200 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style type="text/css">
+<!--
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab4/Fon.jpg*/);
+}
+-->
+</style>
+<link href="styles.css" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style6 {
+	font-family: "Courier New";
+	color: #990000;
+}
+.style7 {font-size: x-small}
+-->
+</style>
+</head>
+
+<body>
+<p class="style2"><strong>Методы численного интегрирования</strong></p>
+<ol>
+  <li><a href="#0001">Аналитическое интегрирование средствами MATLAB.</a></li>
+  <li><a href="#0002">Аналитическое дифференцирование средствами MATLAB.</a></li>
+  <li> <a href="#0003">Теоретическая оценка погрешности численного интегрирования</a>.</li>
+  <li> <a href="#0004">Численное интегрирование</a></li>
+  <li><a href="#0005">Численное интегрирование средствами MATLAB</a> </li>
+  <li><a href="#0006">Правило Рунге оценки погрешности интегрирования</a> </li>
+</ol>
+<p align="justify">К вычислениям определенных интегралов сводятся многие практические задачи физики, химии, экологии, механики и других естественных наук. На практике взять интеграл аналитически не всегда удается. В этом случае используются методы численного интегрирования.  В данной лабораторной работе рассматриваются методы Ньютона - Котеса, в частности  методы прямоугольников, трапеций и Симпсона (парабол). Кроме того, в лабораторной работе рассматриваются способы аналитического и численного отыскания  интегралов средствами MATLAB.</p>
+<p align="justify">Вычислительные формулы для всех рассматриваемых методов приведены в <a href="formula.htm" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.htm">приложении</a>, теоретический материал следует изучать по материалам лекций и рекомендованной литературе. Здесь же будут рассмотрены практические аспекты реализации методов численного интегрирования в MATLAB.</p>
+<p align="justify">Вам следует внимательно изучить и выполнить приведенные здесь примеры, может быть для функций из ваших вариантов задач.</p>
+<p align="justify" class="style1"><a name="0001"></a>1. Аналитическое интегрирование средствами MATLAB.</p>
+<p align="justify">В лабораторной работе, основной задачей которой является <em>исследование</em> методов численного интегрирования, в некоторых случаях для отыскания погрешности результатов требуется точные значения интегралов. Т.е. эти величины необходимо определить аналитически. </p>
+<p align="justify">Для вычисления определенных и неопределенных интегралов в MATLAB спользуется функция <span class="style1">int</span>.</p>
+<p align="justify"><strong>Синтаксис</strong>:</p>
+<table width="80%" border="1">
+  <tr>
+    <th width="16%" scope="col">Вызов</th>
+    <th width="84%" scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td class="style5"><strong>int(S)</strong></td>
+    <td><p>Вычисляется неопределенный интеграл от функции S по ее символьной переменной, определенной в <span class="style5">syms</span>.</p>    </td>
+  </tr>
+  <tr>
+    <td class="style5"><strong> int(S,v)</strong></td>
+    <td><p>Вычисляется неопределенный интеграл от функции S по ее символьной переменной <span class="style5">v</span>, определенной в <span class="style5">syms</span>.</p>    </td>
+  </tr>
+  <tr>
+    <td class="style5"><strong> int(S,a,b)</strong></td>
+    <td><p>Вычисляется определенный интеграл от <span class="style5">a</span> до <span class="style5">b</span> функции S по ее символьной переменной, определенной в <span class="style5">syms</span>. A и b могут быть переменными символьного или вещественного типа.</p>    </td>
+  </tr>
+  <tr>
+    <td class="style5"><strong>int(S,v,a,b)</strong></td>
+    <td>Вычисляется определенный интеграл от <span class="style5">a</span> до <span class="style5">b</span> функции S по ее символьной переменной <span class="style5">v</span>, определенной в <span class="style5">syms</span>. A и b могут быть переменными символьного или вещественного типа.</td>
+  </tr>
+</table>
+<p align="justify">Пример использования функции <span class="style5">int</span>. В данном примере подинтегральная функция задается явным образом. </p>
+<p align="justify"><img src="index2.files/r001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r001.gif" width="598" height="658"></p>
+<p align="justify">График подинтегральной функции:</p>
+<p align="justify"><img src="index2.files/r002.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r002.gif" width="440" height="339"> </p>
+<p align="justify">Обратите внимание на форматирование графика прямо в тексте программы. </p>
+<p align="justify">В следующем примере подинтегральная функция и переменная интегрирования задаются в символьной форме.</p>
+<p align="justify"><img src="index2.files/r003.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r003.gif" width="579" height="658"></p>
+<p align="justify">Обратите внимание, что в данном примере для построения графика используется <span class="style5">m - файл</span> <strong>f.m</strong>:</p>
+<p align="justify"><img src="index2.files/r004.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r004.gif" width="314" height="99"></p>
+<p align="justify">Это связано с тем, что аргументом функции <span class="style5"><strong>fplot</strong></span> не может быть символьная функция. </p>
+<p align="justify">График интегрируемой функции:</p>
+<p align="justify"><img src="index2.files/r005.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r005.gif" width="406" height="330"> </p>
+<p align="justify"><span class="style1"><a name="0002"></a>2. Аналитическое дифференцирование средствами MATLAB.</span></p>
+<p align="justify">В лабораторной работе, основной задачей которой является <em>исследование</em> методов численного интегрирования,  для отыскания теоретической погрешности результатов требуется знание производной от интегрируемой функции до четвертого порядка включительно.</p>
+<p align="justify">Для вычисления производных аналитически в MATLAB спользуется функция <span class="style1">diff</span>.</p>
+<p align="justify"><strong>Синтаксис</strong>:</p>
+<table width="80%"  border="1">
+  <tr>
+    <th width="15%" scope="col">Вызов</th>
+    <th width="85%" scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td><span class="style5"><strong>diff(S)</strong></span></td>
+    <td>Вычисляется аналитическое выражение для производной от функции S, заданной символьно.</td>
+  </tr>
+  <tr>
+    <td><span class="style5"><strong>diff(S,n)</strong></span></td>
+    <td>Вычисляется аналитическое выражение для производной от функции S порядка n.</td>
+  </tr>
+</table>
+<p align="justify">Пример использования функции diff при вычислении максимума второй производной на отрезке [a, b]</p>
+<p align="justify"><img src="index2.files/r006.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r006.gif" width="601" height="657"></p>
+<p align="justify">График производной:</p>
+<p align="justify"><img src="index2.files/r007.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r007.gif" width="502" height="352"></p>
+<p align="justify" class="style1"><a name="0003"></a>3. Теоретическая оценка погрешности численного интегрирования</p>
+<p align="justify">Рассмотрим примеры использования теоретической оценки погрешности интегрирования на примере двух задач.</p>
+<p align="justify"><strong>Задача 1</strong>. <em>Определить теоретическую погрешность численного интегрирования методом трапеций в случае одного элементарного отрезка интегрирования..</em></p>
+<p align="justify"><a href="formula.htm" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.htm">Теоретическая погрешность</a> для метода трапеций составляет</p>
+<p align="justify"><img src="index2.files/image004.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/image004.png" width="119" height="47"></p>
+<p align="justify">В случае элементарного отрезка иртегрирования, если заданы пределы интегрирования и подинтегральная функция, задачу можно решить например следующим образом:</p>
+<p align="justify"><img src="index2.files/r008.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r008.gif" width="548" height="609"> </p>
+<p align="justify">В результате получим</p>
+<p align="justify" class="style6">  f2 =<br>
+  <br>
+  50*x^3-366/5*x^2+34/5<br>
+  <br>M2 =<br> 16.4000<br>Погрешность<br>R =<br> 0.1164</p>
+<p align="justify">Т.о. теоретическая оценка абсолютной погрешности погрешности составляет <span class="style5"><strong>0.1</strong></span>. В задаче 1 лабораторной работы вам предлагается убедиться, что данная теоретическая оценка действительно справедлива. </p>
+<p align="justify"><strong>Задача 2</strong>. <em>Определить шаг дискретизации и количество узлов интегрирования, необходимые для того. чтобы погрешность интегрирования не превышала величины 0.0001</em>.</p>
+<p align="justify">Если заданы пределы интегрирования и интегрируемая функция, задачу можно решить например следующим образом: </p>
+<p align="justify"><img src="index2.files/r009.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r009.gif" width="540" height="676"></p>
+<p align="justify">В результате получим:</p>
+<p align="justify" class="style6">  f2 =<br>
+50*x^3-366/5*x^2+34/5<br>M2 =<br> 16.4000<br>h =<br> 1.289562396771206e-002<br>n =<br> 3.412010160203707e+001<br>n =<br> 35<br>h =<br> 1.257142857142857e-002</p>
+<p>Таким образом, чтобы вычислить интеграл от функции </p>
+<p class="style5">f(x)=2.5*x<sup>5</sup>-6.1*x<sup>4</sup>+3.4*x<sup>2</sup>-9.1*x+18</p>
+<p align="justify">по методу трапеций c точностью 0.0001, небходимо задать 35 узлов интегрирования. При этом шаг дискретизации составляет <span class="style5">h=1.257142857142857*10<sup>-2</sup></span> . </p>
+<p align="justify">Вам остается убедиться, что погрешность интегрирования с данными параметрами действительно не превышает 0.0001.</p>
+<p class="style1"><a name="0004" id="0004"></a>4. Численное интегрирование</p>
+<p align="justify">Вычислительные формулы приведены в <a href="formula.htm" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.htm">приложении</a> . Их анализ показывает, что  формулы для одного элементарного отрезка интегрирования не требуют каких либо новых знаний. Необходимо только приготовить <span class="style5"><strong>m-функцию</strong></span>, в которой следует определить интегрируемую функцию. И конечно для оценки погрешности интегрирования следует знать точное значение интеграла (см. выше). </p>
+<p>Случай  формул для составного отрезка интегрирования более сложный. Здесь требуется вычислять значения сумм. Например в методе Симпсона</p>
+<p><img src="index2.files/image016.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/image016.png" width="311" height="56"> </p>
+<p>где</p>
+<table border="0">
+  <tr>
+    <td width="124"><img src="index2.files/image017.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/image017.png" width="87" height="23"></td>
+    <td width="281"><img src="index2.files/image018.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/image018.png" width="253" height="27"></td>
+    <td width="105"><img src="index2.files/image019.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/image019.png" width="91" height="21"></td>
+  </tr>
+</table>
+<p align="justify">В языке программировани MATLAB, как и в других языках программирования, существует оператор цикла <span class="style1">for</span> , возможностей которого достаточно для решения поставленных задач. Синтаксис оператора цикла описан в разделе <a href="javascript:if(confirm('http://orloff.am.tpu.ru/matlab/Lab4/index3.htm  \n\nThis file was not retrieved by Teleport VLX, because the server reports that this file cannot be found.  \n\nDo you want to open it from the server?'))window.location='http://orloff.am.tpu.ru/matlab/Lab4/index3.htm'" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index3.htm"><em>Программирование</em></a>. Далее мы просто рассмотрим пример решения задачи численного интегрирования. </p>
+<p><strong>Пример</strong>. <em>Численное интегрирование методом Симпсона</em>. </p>
+<p><img src="index2.files/r010_1.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r010_1.gif" width="567" height="449"></p>
+<p>Закрашенную область следует выполнить самостоятельно</p>
+<p><img src="index2.files/r010_2.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/r010_2.gif" width="569" height="399"></p>
+<p>Результаты:</p>
+<p class="style6">&gt;&gt; Результаты<br>
+  Точное значение интеграла<br>
+2.575860114624924e-001<br>Результат и погрешность для элементарного отрезка<br>
+2.575665708043314e-001 1.944065816106289e-005<br>Количество узлов<br>
+  4<br>Результат и погрешность по методу Симпсона<br>
+2.575859351120611e-001 7.635043136611230e-008</p>
+<p>Конечно, рассматриваемый здесь способ решения задачи является не единственным и не наилучшим. В частности, можно было бы создать <span class="style5">m-функцию</span>, в которой и производилось бы вычисление интеграла. </p>
+<p class="style1"><a name="0005"></a>5. Численное интегрирование средствами MATLAB</p>
+<p align="justify">В MATLAB реализованы множество современных методов численного интегрирования. Мы рассмотрим простейшие из них. </p>
+<p><strong class="style2">А. Метод трапеций.</strong> Метод трапеции реализован в MATLAB несколькими функциями:</p>
+<ul>
+  <li class="style6">cumtrapz(у)</li>
+  <li class="style6">cumtrapz(x,y)</li>
+  <li class="style6">trapz(y)</li>
+  <li class="style6"><strong>trapz(x,y)</strong></li>
+</ul>
+<p align="justify">Наиболее интересна последняя из них. Данная функция вычисляет <span class="style5">интеграл от функции у(х) по х методом трапеций</span>. Аргумент и функция задаются в виде векторов или х — в виде вектора, а у — в виде матрицы. Если 
+  у(х) — матрица, то функция возвращает вектор значений интеграла для каждого столбца матрицы.</p>
+<p align="justify"><strong>Пример. </strong>Пусть подынтегральная функция имеет вид</p>
+<p align="justify">  у(х) = х*е<sup>x</sup> + ln(x) + 1 </p>
+<p align="justify"> Необходимо вычислить определенный интеграл в диапазоне от 1 
+  до 10 с шагом 0.5.<br>
+  Решение:</p>
+<p align="justify" class="style6"> x=1:0.5:10;<br>
+  y=x.*exp(x)+log(x)+1;<br>
+trapz(x,y)</p>
+<p align="justify">Решение:</p>
+<p align="justify" class="style6">ans =<br> 2.032841320958599e+005</p>
+<p align="justify"><strong class="style2">Б. Метод Симпсона.</strong> Метод Симпсона реализован в MATLAB также несколькими функциями. Мы рассмотрим простейшую из них:</p>
+<p class="style6">quad('fun', a, b)<br>
+quad('fun', a, b, tol)</p>
+<p>Обозначения:</p>
+<ul>
+  <li> <span class="style5">'fun'</span>— подынтегральная функция, взятая в одинарные кавычки;</li>
+  <li> <span class="style5">а, b</span> — пределы интегрирования;</li>
+  <li> <span class="style5">tol</span> — относительная погрешность, задаваемая пользователем; по умолчанию tol=10<sup>-3</sup>.</li>
+</ul>
+<p>  <strong>Пример.</strong> Вычислить интеграл от функции <span class="style5"><strong>x+e<sup>x</sup></strong></span> на отрезке [1, 2] с точностью 10<sup>-5</sup>.</p>
+<p class="style6">quad('x+exp(x)', 1, 2, 1e-5)</p>
+<p>Результат:</p>
+<p class="style6">ans = 6.170774280645000e+000</p>
+<p><a name="0006"></a><span class="style1">6. Правило Рунге оценки погрешности интегрирования</span></p>
+<p align="justify">В формулах  для оценки погрешности квадратурных формул <strong>R</strong> используются значения производных подинтегральной функции, что требует дополнительного анализа и вычислений. В связи с этим получило распространение практическое правило Рунге оценки погрешности. </p>
+<p>Пусть </p>
+<ul>
+  <li> I – точное значение интеграла, </li>
+  <li> I(n) – значение интеграла вычисленное при n узлах интегрирования h = (b-a)/n, </li>
+  <li> I(2n) – значение интеграла вычисленное при 2*n узлах интегрирования, h = (b-a)/2n. </li>
+</ul>
+<p> Необходимо определить, с какой точностью вычислен итеграл I(2n), т.е. найти абсолютную погрешность </p>
+<p><img src="index2.files/R011.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/R011.gif" width="88" height="27"> </p>
+<p align="justify">  Для непосредственно определения данной погрешности необходимо найти максимум модуля соответствующей производжной от интегрируемой функции на отрезке [a, b]. Часто это достаточно трудоемкий или вообще невозможный процесс. Напрмер если интегрируемая функция задана таблично. В таких случаях оценку погрешности <img src="index2.files/R012.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/R012.gif" width="15" height="17"> величины I(2n) можно провести следующим образом:</p>
+<table border="1" bordercolor="#0000FF">
+  <tr>
+    <td><img src="index2.files/R013.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/R013.gif" width="113" height="45"></td>
+  </tr>
+</table>
+<p align="justify">Здесь m = 3 для методов средних прямоугольников и трапеций, m = 15 для метода Симпсона.</p>
+<p align="justify" class="style7"><strong>Примечание</strong>. Если решается задача  численного вычисления интеграла с заданной точностью, процесс удвоения числа узлов интегрирования продолжается до тех пор, пока величена <img src="index2.files/R012.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/index2.files/R012.gif" width="15" height="17"> не станет меньше заданной погрешности. </p>
+<p></p>
+<p align="justify">&nbsp;</p>
+</body>
+</html>

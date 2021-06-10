@@ -1,0 +1,4313 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+  <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 10. Операции 
+    с векторами и матрицами </a></font></b> </li>
+  <ul>
+    <li><font face="Times New Roman CYR" size=3><a href="#2">Создание матриц с 
+      заданными свойствами </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#3">Создание единичной 
+          матрицы</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#4">Создание матрицы 
+          с единичными элементами </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#5">Создание матрицы 
+          с нулевыми элементами </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#6">Создание линейного 
+          массива равноотстоящих точек </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#7">Создание вектора 
+          равноотстоящих в логарифмическом масштабе точек</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#8">Создание массивов 
+          со случайными элементами </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#9">Конкатенация матриц</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#10">Создание матриц 
+      с заданной диагональю </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#11">Перестановки элементов 
+      матриц </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#12">Вычисление произведений</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#13">Суммирование элементов</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#14">Функции формирования 
+      матриц</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#15">Поворот матриц</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#16">Выделение треугольных 
+      частей матриц </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#17">Вычисление сопровождающей 
+      матрицы </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#18">Вычисление тестовых 
+      матриц </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#19">Матрицы Адамара</a></font> 
+        </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#20">Матрицы Ганкеля 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#21">Матрицы Гильберта 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#22">Вычисление магического 
+          квадрата</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#23">Матрицы Паскаля 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#24">Матрицы Теплица 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#25">Матрицы Уилкинсона 
+          </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#26">Матричные функции</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#27">Что нового мы узнали? 
+      </a></font> </li>
+  </ul>
+</ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №10.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Операции с векторами и матрицами</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Создание стандартных матриц</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Создание векторов
+    </font><font size="3" face="Times New Roman">равноотстоящих точек в линейном и логарифмическом масштабах</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Создание массивов
+    </font><font size="3" face="Times New Roman">со случайными элементами</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Конкатенация матриц</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Изменение порядка расположения элементов матриц</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Вычисление сумм и произведений&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Изменение формы матриц</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Выделение треугольных частей матриц</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Вычисление тестовых матриц&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Матричные функции</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Матрицы представляют собой самые распространенные объекты системы MATLAB. Ниже описываются основные операции с матрицами. По обилию матричных операторов и функций MATLAB является лидером среди массовых систем компьютерной математики.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Создание 
+  матриц с заданными свойствами</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="3"></a> Создание 
+  единичной матрицы</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для создания единичной матрицы (она обычно обозначается как Е) служит функция eye:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">еуе(n) — возвращает единичную матрицу размера
+    nrn;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> eye(m.n) или еуе([m n]) — возвращают матрицу размера mm с единицами по диагонали и нулями в остальных ячейках;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> eye(size(A)) — возвращает единичную матрицу того же размера, что и А.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Единичная матрица не определена для многомерных массивов. Так, функция у = eye([2,3,4]) при попытке ее вычисления приведет к ошибке.</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Пример использования функции eye:</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="411" HEIGHT="95">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="18">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="75" HEIGHT="18">
+<DIV WIDTH="75" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">&raquo; t=eye(4.<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="18">
+<DIV WIDTH="94" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">5)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="95" HEIGHT="18">
+<DIV WIDTH="95" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="18">
+<DIV WIDTH="94" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="18">
+<DIV WIDTH="53" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="18">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="75" HEIGHT="14">
+<DIV WIDTH="75" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">t =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="14">
+<DIV WIDTH="94" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="95" HEIGHT="14">
+<DIV WIDTH="95" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="14">
+<DIV WIDTH="94" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="14">
+<DIV WIDTH="53" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="75" HEIGHT="15">
+<DIV WIDTH="75" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="95" HEIGHT="15">
+<DIV WIDTH="95" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="15">
+<DIV WIDTH="53" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="75" HEIGHT="16">
+<DIV WIDTH="75" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="95" HEIGHT="16">
+<DIV WIDTH="95" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="16">
+<DIV WIDTH="53" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="75" HEIGHT="16">
+<DIV WIDTH="75" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="95" HEIGHT="16">
+<DIV WIDTH="95" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="16">
+<DIV WIDTH="53" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="75" HEIGHT="16">
+<DIV WIDTH="75" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="95" HEIGHT="16">
+<DIV WIDTH="95" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="16">
+<DIV WIDTH="53" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">&nbsp;
+
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="4"></a>Создание 
+  матрицы с единичными элементами</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для создания матриц, все элементы которых — единицы, используется функция</font>
+<font size="3" face="Times New Roman">ones:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">ones(n) — возвращает матрицу размера
+    nхn, все элементы которой — единицы. Если п — не скаляр, то появится сообщение об ошибке;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">ones(m.n) или ones([m п]) — возвращают матрицу размера mxn, состоящую из единиц;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">ones(dl.d2,d3....) или ones([dl1 d2 d3...]) — возвращает массив из единиц с размером
+    d1xd2xd3x...;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">ones(size(A)) — возвращает массив единиц той же размерности и размера, что и А. Матрица с единичными элементами в отличие от единичной матрицы в MATLAB определена и для многомерных массивов.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; s=ones(3,4)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">s=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp; 1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp; 1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;
+1</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="5"></a> Создание 
+  матрицы с нулевыми элементами</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Иногда нужны матрицы, все элементы которых — нули. Следующая функция обеспечивает создание таких матриц:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">zeros(п) — возвращает матрицу размера
+    nхn, содержащую нули. Если n — не скаляр, то появится сообщение об ошибке;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">zeros(m.n) или zeros([m n]) — возвращают матрицу размера mxn, состоящую из нулей;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">zeros(d1.d2,d3,...) или
+    zeros([d1.d2.d3...]) — возвращают массив из нулей размера
+    d1xd2xd3x...;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">zeros(size(A)) — возвращает массив нулей того же размера и размерности, что и А.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; D=zeros(3.2)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;D=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="6"></a> Создание 
+  линейного массива равноотстоящих точек</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция linspace формирует линейный массив равноотстоящих узлов. Это подобно оператору :, но дает прямой контроль над <I>числом </I>точек. Применяется в следующих формах:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">llnspace(a.b) — возвращает линейный массив из 100 точек, равномерно распределенных между а и
+    b;<BR>
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">linspace(a,b,n) — генерирует п точек, равномерно распределенных в интервале от а до
+    b.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; M-linspace(4.20.14)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Columns I through 7</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4.0000 5.2308 6.4615 7.6923 8.9231 10.153811.3846</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Columns 8 through 14</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">12.615413.846215.076916.307717.538518.769220.0000</font><font size="3" face="Times New Roman"><BR>
+</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="7"></a>Создание 
+  вектора равноотстоящих в логарифмическом масштабе точек</font><font size="3" face="Times New Roman"><BR>
+  </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция logspace генерирует вектор равноотстоящих в логарифмическом масштабе точек. Она особенно эффективна при создании вектора частот. Это логарифмический эквивалент оператора : и функции
+linspace:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">logspace(a.b) — возвращает вектор-строку из 50 равноотстоящих в логарифмическом масштабе точек между декадами 10^0 и
+    10^b;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">logspace(a.b.n) — возвращает
+    n точек между декадами 10^a и 10^b;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">logspace(a.pi) — возвращает точки в интервале между 10^a и <I>п. </I>Эта функция очень полезна в цифровой
+    обработке сигналов.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Все аргументы функции logspace должны быть скалярными величинами. Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; L=logspaced.2,14)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> L =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Columns 1 through 7</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">10.000011.937814.251017.012520.309224.244628.9427</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Columns 8 through 14</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">34.551141.246349.238858.780270.170483.7678100.0000</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="8"></a> Создание 
+  массивов со случайными элементами</font> </P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> р = randperm(n) — возвращает случайные перестановки целых чисел 1:n в векторе-строке. Пример:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; randperm(6)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">243651</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция rand генерирует массивы случайных чисел, значения элементов которых <I>равномерно </I>распределены в промежутке (0, 1):</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> rand(n) — возвращает матрицу размера
+    nхn. Если n — не скаляр, то появится сообщение об ошибке;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;rand(m.n) или rand([m п]) — возвращают матрицу размера mxn;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> rand(m.n,p....) или rand([m
+    n р...]) — возвращает многомерный массив;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> rand(size(A)) — возвращает массив того же размера и размерности, что и А, с элементами, распределенными по равномерному закону;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> rand (без аргументов) — возвращает одно случайное число, которое изменяется при каждом последующем вызове и имеет равномерный закон распределения;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">rand(' state') — возвращает вектор с 35 элементами, содержащий текущее состояние генератора случайных чисел с равномерным распределением. Для изменения состояния генератора можно применять следующие формы этой функции:</font>
+    <ul>
+      <li>
+        <p align="left"><font size="3" face="Times New Roman">rand('state' .s) — устанавливает состояние в s;</font></li>
+      <li>
+        <p align="left"><font size="3" face="Times New Roman">   rand( 'state' ,0) — сбрасывает генератор в начальное состояние;</font></li>
+      <li>
+        <p align="left"><font size="3" face="Times New Roman">   rand( 'state'. j) — для целых j, устанавливает генератор в j-е состояние;</font></li>
+      <li>
+        <p align="left"><font size="3" face="Times New Roman">   rand( 'state' ,sum(100*clock)) — каждый раз сбрасывает генератор в состояние, зависящее от времени.</font></li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Y=rand(4,3)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Y=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.9501&nbsp;&nbsp;&nbsp;&nbsp; 0.8913&nbsp;&nbsp;&nbsp;&nbsp;
+0.8214</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.2311&nbsp;&nbsp;&nbsp;&nbsp; 0.7621&nbsp;&nbsp;&nbsp;&nbsp;
+0.4447</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.6068&nbsp;&nbsp;&nbsp;&nbsp; 0.4565&nbsp;&nbsp;&nbsp;&nbsp;
+0.6154</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.4860&nbsp;&nbsp;&nbsp;&nbsp; 0.0185&nbsp;&nbsp;&nbsp;&nbsp;
+0.7919</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Проверить равномерность распределения случайных чисел можно, построив большое число точек на плоскости со случайными координатами. Это делается с помощью следующих команд:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; X=rand(1000,l);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; Y=rand(1000,1);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; plot(Y,V,'.')</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Полученный при этом график показан на рис. 10.1. Нетрудно заметить, что точки довольно равномерно распределены на плоскости, так что нет оснований не доверять заданному закону распределения координат точек.</font>
+</P>
+<P align="left"><img src="10.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/10.1.jpg" width="457" height="496"> </P>
+<P align="left"><B><i><font size="3" face="Times New Roman">Рис. 10.1. </font></i> 
+  </B><font size="3" face="Times New Roman"><i>Случайные точки с равномерным распределением 
+  координат на плоскости</i></font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция randn генерирует массив со случайными элементами, распределенными по нормальному закону с нулевым математическим ожиданием и среднеквадратическим отклонением, равным 1:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> randn(n) — возвращает матрицу размера
+    nхn. Если n — не скаляр, то появится сообщение об ошибке;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;randn(m.n) или randn([m n]) — возвращают матрицу размера mxn;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">randn(m,n,p,...) или randn([m n р...]) — возвращает массив с элементами, значения которых распределены по нормальному закону;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> randn(size(A)) — возвращает массив того же размера, что и А, с элементами, распределенными по нормальному закону;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> randn (без аргументов) — возвращает одно случайное число, которое изменяется при каждом последующем вызове и имеет нормальное распределение;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> randn( 'state') — возвращает двухэлементный вектор, включающий текущее состояние нормального генератора. Для изменения состояния генератора можно применять следующие формы этой функции:<BR>
+    </font>
+    <ul>
+      <li>
+        <p align="left"><font size="3" face="Times New Roman">   randn('state',s) — устанавливает состояние в <I>s;</I></font></li>
+      <li>
+        <p align="left"><font size="3" face="Times New Roman">   randn('state' ,0) — сбрасывает генератор в начальное состояние;</font></li>
+      <li>
+        <p align="left"><font size="3" face="Times New Roman">   randn('state', j) — для целых j устанавливает генератор в <I>J-e </I>состояние;</font></li>
+      <li>
+        <p align="left"><font size="3" face="Times New Roman">   randn('state', sum( 100*clock)) — каждый раз сбрасывает генератор в состояние, зависящее от времени.</font></li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&gt;&gt;Y=randn(4.3)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Y =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-0.4326&nbsp;&nbsp;&nbsp;
+-1.1465&nbsp;&nbsp;&nbsp;&nbsp; 0.3273</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-1.6656&nbsp;&nbsp;&nbsp;&nbsp; 1.1909&nbsp;&nbsp;&nbsp;&nbsp;
+0.1746&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 0.1253&nbsp;&nbsp;&nbsp;&nbsp; 1.1892&nbsp;&nbsp;&nbsp;&nbsp;
+-0.1867&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 0.2877&nbsp;&nbsp;&nbsp;&nbsp; -0.0376&nbsp;&nbsp;&nbsp;&nbsp;
+0.7258</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Проверить распределение случайных чисел по нормальному закону можно, построив гистограмму распределения большого количества чисел. Например, следующие команды<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Y=randn(10000.1);&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; hist(Y.l00)
+</font>
+<font size="3" face="Times New Roman"><BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">строят гистограмму (рис. 10.2) из 100 столбцов для 10 000 случайных чисел с нормальным распределением.
+</font>
+</P>
+<P align="left"><img src="10.2.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/10.2.jpg" width="486" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 10.2. </i> </font> 
+  </B><font size="3" face="Times New Roman"><i>Гистограмма для 10 000 нормально 
+  распределенных чисел в 100 интервалах</i> </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Из рисунка видно, что огибающая гистограммы действительно близка к нормальному закону распределения.
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">В пакете расширения Statistics Toolbox можно найти множество статистических функций, в том числе для генерации случайных чисел с различными законами распределения и определения их статистических характеристик.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="9"></a> Конкатенация 
+  матриц</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman"><I>Конкатенацией </I>называют объединение массивов, которое реализует следующая функция.
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">С = cat (dim, А, В) — объединяет массивы А и В в соответствии со спецификацией размерности dim и возвращает объединенный массив; dim = 1 — горизонтальная конкатенация, dim = 2 — вертикальная, dim = 3 — многомерный массив размерности 3 и т. д.;<BR>
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> С = cat(dim,Al,A2,A3,A4,...) объединяет все входные массивы (А1, А2, A3, А4 и т. д.) в соответствии со спецификацией размерности dim и возвращает объединенный массив;
+</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">cat(2.A,B) — это то же самое, что и [А,В],асаt(,А,В) —то же самое, что и [А; В]. При записи cat (dim, С (:)) или cat (dim, С. field) эта функция применима к массивам ячеек или структур, содержащим численные матрицы. Пример:
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; A =[2.4:3,5];B=[8,7;9.0];C=cat(1.A.B)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> С =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2&nbsp;&nbsp;&nbsp;&nbsp; 4
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3&nbsp;&nbsp;&nbsp;&nbsp; 5
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8&nbsp;&nbsp;&nbsp;&nbsp; 7
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">9&nbsp;&nbsp;&nbsp;&nbsp; 0
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="10"></a> Создание 
+  матриц с заданной диагональю</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Свойства матриц сильно зависят от их диагональных элементов. Следующая функция MATLAB позволяет создавать специальные типы матриц с заданными диагональными элементами:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> X = diag(v.k) — для вектора v, состоящего из п компонентов, возвращает квадратную матрицу X порядка n+abs(k) с элементами v на <I>k-й </I>диагонали, при k=0 -это главная диагональ (из левого верхнего угла матрицы в правый нижний угол), при k&gt;0 — одна из диагоналей (диагональ в терминологии MATLAB — это линия, параллельная главной диагонали) выше главной диагонали, при k&lt;0 — одна из нижних диагоналей. Остальные элементы матрицы — нули;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> X = diag(v) — помещает вектор v на главную диагональ (то же. что и в предыдущем случае при k=0);
+</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> v = diag(X.k) — для матрицы X возвращает вектор-столбец, состоящий
+    из элементов n-й диагонали матрицы X;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;v = diag(X) — возвращает главную диагональ матрицы X (то же, что и в предыдущем случае при k=0).
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Примеры:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; v=[2.3];X-d1ag(v.2)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;X=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp; 0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp; 3
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp; 0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp; 0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; X=[2,5.45,6;3.5.4.9;7.9.4.8;5.66,45.2];
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">v=diag(X,0)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> v =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="11"></a> Перестановки 
+  элементов матриц</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для перестановок элементов матриц служат следующие функции:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> В = fiiplr(A) — зеркально переставляет столбцы матрицы А относительно вертикальной оси.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; F=[1.2.3;5.45,3]&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> F =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5&nbsp;&nbsp;&nbsp;&nbsp; 45&nbsp;&nbsp;&nbsp;&nbsp;
+3&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; fliplr(F)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 1<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3&nbsp;&nbsp;&nbsp;&nbsp; 45&nbsp;&nbsp;&nbsp;&nbsp;
+5
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">В = flipud(A) — зеркально переставляет строки матрицы А относительно горизонтальной оси.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="137" HEIGHT="118">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="22">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="22">
+<DIV WIDTH="54" HEIGHT="22">
+<P align="left">
+<font size="3" face="Courier New">F =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="22">
+<DIV WIDTH="46" HEIGHT="22">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="22">
+<DIV WIDTH="36" HEIGHT="22">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="22">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="17">
+<DIV WIDTH="54" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="17">
+<DIV WIDTH="46" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="17">
+<DIV WIDTH="36" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">12<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="16">
+<DIV WIDTH="54" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="16">
+<DIV WIDTH="36" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="18">
+<p align="left">
+</TD>
+<TD COLSPAN="3" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="137" HEIGHT="18">
+<DIV WIDTH="137" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">&raquo; flipud(F)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="18">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="14">
+<DIV WIDTH="54" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">ans =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="14">
+<DIV WIDTH="46" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="14">
+<DIV WIDTH="36" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="17">
+<DIV WIDTH="54" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="17">
+<DIV WIDTH="46" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="17">
+<DIV WIDTH="36" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="16">
+<DIV WIDTH="54" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="16">
+<DIV WIDTH="36" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">12<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> perms(v) — возвращает матрицу Р, которая содержит все возможные перестановки элементов вектора v. каждая перестановка в отдельной строке. Матрица Р содержит
+n! строк и n столбцов.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; v=[l 4 6]
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">v =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 4           6
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">P=perms(v)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">6 4 1
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4 6 1
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">6 1 4
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 6 4
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4 1 6
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 4 6
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="12"></a> Вычисление 
+  произведений</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Несколько простых функций служат для перемножения элементов массивов:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">prod(A) — возвращает произведение элементов массива, если А — вектор, или вектор-строку, содержащую произведения элементов каждого столбца, если А — матрица;<BR>
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">prod (A, dim) — возвращает матрицу (массив размерности два) с произведением элементов массива А по столбцам (dim=l),&nbsp;
+по строкам(dim=2), по иным размерностям в зависимости от значения скаляра dim.<BR>
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">34]<BR>
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="177" HEIGHT="127">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="13" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="83" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="2" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="96" HEIGHT="16">
+<DIV WIDTH="96" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">&raquo; A=[l 234;<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="16">
+<DIV WIDTH="60" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">•2457;<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="16">
+<DIV WIDTH="21" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="13" HEIGHT="15">
+<DIV WIDTH="13" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">A<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="83" HEIGHT="15">
+<DIV WIDTH="83" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">-<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="15">
+<DIV WIDTH="60" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="15">
+<DIV WIDTH="21" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="13" HEIGHT="16">
+<DIV WIDTH="13" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="83" HEIGHT="16">
+<DIV WIDTH="83" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">1           2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="16">
+<DIV WIDTH="60" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="16">
+<DIV WIDTH="21" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="13" HEIGHT="16">
+<DIV WIDTH="13" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="83" HEIGHT="16">
+<DIV WIDTH="83" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">2          4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="16">
+<DIV WIDTH="60" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="16">
+<DIV WIDTH="21" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="13" HEIGHT="16">
+<DIV WIDTH="13" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="83" HEIGHT="16">
+<DIV WIDTH="83" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">6          8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="16">
+<DIV WIDTH="60" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="16">
+<DIV WIDTH="21" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="13" HEIGHT="17">
+<DIV WIDTH="13" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">&gt;;<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="83" HEIGHT="17">
+<DIV WIDTH="83" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">&gt; B=prod(A)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="17">
+<DIV WIDTH="60" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="17">
+<DIV WIDTH="21" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="13" HEIGHT="14">
+<DIV WIDTH="13" HEIGHT="14">
+<P align="left">
+<font size="3" face="Times New Roman">В<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="83" HEIGHT="14">
+<DIV WIDTH="83" HEIGHT="14">
+<P align="left">
+<font size="3" face="Times New Roman">=<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="14">
+<DIV WIDTH="60" HEIGHT="14">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="14">
+<DIV WIDTH="21" HEIGHT="14">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="13" HEIGHT="17">
+<DIV WIDTH="13" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="83" HEIGHT="17">
+<DIV WIDTH="83" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">12         64<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="17">
+<DIV WIDTH="60" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">45<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="17">
+<DIV WIDTH="21" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">i:<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="13" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="83" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="60" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="21" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<ul>
+  <li> <font size="3" face="Times New Roman"> cumprod(A) — возвращает произведение 
+    с накоплением. Если А — вектор, cum-prod(A) возвращает вектор, содержащий 
+    произведения с накоплением элементов вектора А. Если А — матрица, cumprod(A) 
+    возвращает матрицу того же размера, что и А, содержащую произведения с накоплением 
+    для каждого столбца матрицы А (Первая строка без изменений, во второй строке 
+    произведение первых двух элементов каждого столбца, в третьей строке элементы 
+    второй строки матрицы-результата умножаются на элементы третьей строки матрицы 
+    входного аргумента по столбцам и т. д.);<BR>
+    </font> </li>
+  <li> <font size="3" face="Times New Roman">cumprod(A,dim) — возвращает произведение 
+    с накоплением элементов по строкам или столбцам матрицы в зависимости от значения 
+    скаляра dim. <BR>
+    </font> </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Примеры:<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; А=[1 2 3; 4 5 6; 7 8 9]&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> А=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 3
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+6&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;
+9&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; В = cumprod(A)
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">cross(U. V) — возвращает векторное произведение векторов U и V в трехмерном пространстве, т. е.
+W=UxV.<B> </B>U и V — обязательно векторы с тремя элементами;<BR>
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> cross(U,V,dim) — возвращает векторное произведение U и V по размерности, определенной скаляром dim. U и V — многомерные массивы, которые должны иметь одну и ту же размерность, причем размер векторов в каждой размерности size(U.dim) и size(V.dim) должен быть равен 3.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; а = [6 5 3]; b= [1 7 6];с = cross(a.b)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> с =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">9 -33      37
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="13"></a> Суммирование 
+  элементов</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Определены следующие функции суммирования элементов массивов:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">sum(A) — возвращает сумму элементов массива, если А — вектор, или вектор-строку, содержащую сумму элементов каждого столбца, если А — матрица;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">sum(A.dim) — возвращает сумму элементов массива по столбцам (dim-1), строкам (dim=2) или иным размерностям в зависимости от значения скаляра dim.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="196" HEIGHT="110">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="104" HEIGHT="17">
+<DIV WIDTH="104" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">&raquo; A=magic(4)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="45" HEIGHT="17">
+<DIV WIDTH="45" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="104" HEIGHT="14">
+<DIV WIDTH="104" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">А =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="14">
+<DIV WIDTH="47" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="45" HEIGHT="14">
+<DIV WIDTH="45" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="104" HEIGHT="16">
+<DIV WIDTH="104" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">16&nbsp;&nbsp;&nbsp; 2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="45" HEIGHT="16">
+<DIV WIDTH="45" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="104" HEIGHT="15">
+<DIV WIDTH="104" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">5&nbsp;&nbsp;&nbsp; 11<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">10<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="45" HEIGHT="15">
+<DIV WIDTH="45" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="104" HEIGHT="16">
+<DIV WIDTH="104" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">9&nbsp;&nbsp;&nbsp;&nbsp; 7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="45" HEIGHT="16">
+<DIV WIDTH="45" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">12<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="104" HEIGHT="15">
+<DIV WIDTH="104" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">4&nbsp;&nbsp;&nbsp;&nbsp; 14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="45" HEIGHT="15">
+<DIV WIDTH="45" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="104" HEIGHT="17">
+<DIV WIDTH="104" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">&raquo;B=sum(A)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="45" HEIGHT="17">
+<DIV WIDTH="45" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="104" HEIGHT="0">
+<p align="left">
+<font size="3" face="Courier New"> В =
+</font>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="45" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Times New Roman">34&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp;
+34&nbsp;&nbsp;&nbsp;&nbsp; 34
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> cumsum(A) — выполняет суммирование с накоплением. Если А — вектор, cumsum(A) возвращает вектор, содержащий результаты суммирования с накоплением элементов вектора А. Если А — матрица, cumsum(A) возвращает матрицу того же размера, что и А, содержащую суммирование с накоплением для каждого столбца матрицы А;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> cumsum(A.dim) — выполняет суммирование с накоплением элементов по размерности, определенной скаляром dim. Например, cumsum(A.l) выполняет суммирование по столбцам.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; A=magic(4)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">А =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">16&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 5&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;
+10&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 9&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp;&nbsp; 12&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 4&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;
+15&nbsp;&nbsp;&nbsp;&nbsp; 1
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; В = cumsum(A)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">В =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">16&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 21&nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp;&nbsp;
+13&nbsp;&nbsp;&nbsp;&nbsp; 21&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 30&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;
+19&nbsp;&nbsp;&nbsp;&nbsp; 33&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 34&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp;
+34&nbsp;&nbsp;&nbsp;&nbsp; 34
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="14"></a> Функции 
+  формирования матриц</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для создания матриц, состоящих из других матриц, используются следующие функции:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">repmat (А, m, п) — возвращает матрицу В, состоящую из mxn копий матрицы А (т. е. в матрице mxn каждый элемент заменяется на копию матрицы А);
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> repmat(А,п) — формирует матрицу, состоящую из пхп копий матрицы А;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">repmat(A,[m n]) — дает тот же результат, что и <B> </B>repmat(A,m,n);
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">repmat(A,[m п р...]) — возвращает многомерный массив (mxnxp...), состоящий из копий многомерного массива или матрицы А;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">repmat (A, m, п) — когда А — скаляр, возвращает матрицу размера mxn со значениями элементов, заданных А, Это делается намного быстрее, чем A*ones(m,n).
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">reshape(A,m,n) — возвращает матрицу В размерностью mxn, сформированную из А путем последовательной выборки по столбцам. Если число элементов А не равно mxn, то выдается сообщение об ошибке;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">reshape(A,m,n,p,...) или В = reshape(A.[m n р...]) — возвращает N-мерный массив с элементами из А, но имеющий размер mxnxp.... Произведение mxnxp... должно быть равно значению prod(size(A)).
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">reshape(A, slz) — возвращает N-мерный массив с элементами из А, но перестроенный к размеру, заданному с помощью вектора siz.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman"> &raquo; F=[3.2.7.4:4.3.3.2:2.2.5.5]&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman"> F =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">3&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 4
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">4&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;
+3&nbsp;&nbsp;&nbsp; 2
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;
+5&nbsp;&nbsp;&nbsp; 5&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman"> &raquo; reshape(F.2,6)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman"> ans=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">3&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;
+3&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 2
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">4&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="15"></a> Поворот 
+  матриц</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Следующая функция обеспечивает поворот матрицы (по расположению элементов): О rot90(A) — осуществляет поворот матрицы А на 90&deg; против часовой стрелки;
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> rot90(A,k) — осуществляет поворот матрицы А на величину 90*k градусов, где k — целое число.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; М=[3.2,7;3.3.2:1.1.1]
+</font>
+<font size="3" face="Times New Roman"><BR>
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="165" HEIGHT="157">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="20">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="20">
+<DIV WIDTH="22" HEIGHT="20">
+<P align="left">
+<font size="3" face="Courier New">м=<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="20">
+<DIV WIDTH="27" HEIGHT="20">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="20">
+<DIV WIDTH="50" HEIGHT="20">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="20">
+<DIV WIDTH="47" HEIGHT="20">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="20">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="22" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="16">
+<DIV WIDTH="27" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="16">
+<DIV WIDTH="50" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="22" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="16">
+<DIV WIDTH="27" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="16">
+<DIV WIDTH="50" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="20">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="20">
+<DIV WIDTH="22" HEIGHT="20">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="20">
+<DIV WIDTH="27" HEIGHT="20">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="20">
+<DIV WIDTH="50" HEIGHT="20">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="20">
+<DIV WIDTH="47" HEIGHT="20">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="20">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="22">
+<p align="left">
+</TD>
+<TD COLSPAN="4" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="152" HEIGHT="22">
+<DIV WIDTH="147" HEIGHT="22">
+<P align="left">
+<font size="3" face="Courier New">&raquo; rot90(M)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="22">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="14">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="14">
+<DIV WIDTH="22" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">ans<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="14">
+<DIV WIDTH="27" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">=<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="14">
+<DIV WIDTH="50" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="14">
+<DIV WIDTH="47" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="14">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="22" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="16">
+<DIV WIDTH="27" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="16">
+<DIV WIDTH="50" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="22" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="16">
+<DIV WIDTH="27" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="16">
+<DIV WIDTH="50" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="17">
+<DIV WIDTH="22" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="17">
+<DIV WIDTH="27" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="17">
+<DIV WIDTH="50" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="27" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="16"></a> Выделение 
+  треугольных частей матриц</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">При выполнении ряда матричных вычислений возникает необходимость в выделении треугольных частей матриц. Следующие функции обеспечивают такое выделение:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> tril(X) — возвращает матрицу, все элементы которой выше главной диагонали X заменены нулями, неизменными остаются лишь элементы нижней треугольной части, включая элементы главной диагонали;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> tril(X.k) — возвращает неизменной нижнюю треугольную часть матрицы X начиная с <I>k-й </I>диагонали. При k=0 это главная диагональ, при k&gt;0 — одна из верхних диагоналей, при k&lt;0 — одна из нижних диагоналей.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; М=[3.1.4:8.3.2;8.1.1]
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">М =&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 3&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+4
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;
+2
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+1
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; tril(M)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 1
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> triu(X) — возвращает неизменной верхнюю треугольную часть матрицы X включая элементы главной диагонали, и заменяет нулями остальные элементы;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">triu(X.k) — возвращает неизменной верхнюю треугольную часть матрицы X начиная с <I>k-й </I>диагонали. При k=0 — это главная диагональ, при k&gt;0 — одна из верхних диагоналей, при k&lt;0 — одна из нижних диагоналей.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">м =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+4
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 2
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+1
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; triu(M)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;
+2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 1</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="17"></a> Вычисление 
+  сопровождающей матрицы</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Начиная с этого раздела рассматриваются функции, относящиеся к различным <I>специальным матрицам. </I>Они довольно широко используются при решении достаточно серьезных задач матричного исчисления. В связи с тем, что назначение соответствующих функций вытекает из их наименования, мы не будем сопровождать описание вводными комментариями. Соответствующие подробные определения вы найдете в книге. Рекомендуем читателю построить графики, представляющие элементы этих матриц.
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> compan(u) — возвращает сопровождающую матрицу, первая строка которой равна
+    -u (2: n) /u(1), где и — вектор полиномиальных коэффициентов. Собственные значения compan(u) — корни многочлена. Пример: для многочлена х^3+х<sup>^</sup>2-6х-8 вектор полиномиальных коэффициентов г имеет следующий вид:<BR>
+    </font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; r=[1.1.-6.-8]&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">r =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+-6&nbsp;&nbsp;&nbsp; -8
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; A=compan(r) <I>% </I>сопровождающая матрица<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">А =&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-1&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;
+8&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;
+0<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; eigtcompan(r)) <I>% </I>корни многочлена<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;-2.0000&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 2.5616&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> -1.5616
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="18"></a> Вычисление 
+  тестовых матриц</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Для выполнения ряда вычислений в области линейной алгебры создан ряд специальных матриц, именуемых <I>тестовыми матрицами. </I>Такие матрицы создаются указанными ниже средствами.
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;[А.В,С....] = gallerу('tmfun',P1.P2,...) — возвращает тестовые матрицы, определенные строкой tmfun, где tmfun — это имя семейства матриц, выбранное из списка. Р1, Р2,„. — входные параметры, требуемые для конкретного семейства матриц. Число используемых параметров
+P1, P2,... изменяется от матрицы к матрице. Функция gallery хранит более 50 различных тестовых матричных функций, полезных для тестирования численных алгоритмов и других целей (включая матрицы Коши, Чебышева, фон Неймана, Вандермонде,Уилкинсо-на и т. д.).
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; A=gallery('dramadah',5.2)
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="224" HEIGHT="95">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="15">
+<DIV WIDTH="53" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">А =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="15">
+<DIV WIDTH="48" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="15">
+<DIV WIDTH="29" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="16">
+<DIV WIDTH="53" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="29" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="16">
+<DIV WIDTH="53" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="29" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="16">
+<DIV WIDTH="53" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="29" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="15">
+<DIV WIDTH="53" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="15">
+<DIV WIDTH="48" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="15">
+<DIV WIDTH="29" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="53" HEIGHT="17">
+<DIV WIDTH="53" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="17">
+<DIV WIDTH="48" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="17">
+<DIV WIDTH="29" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left"> <font face="Times New Roman" size="4"><a name="19"></a> Матрицы 
+  Адамара</font> </P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Н = hadamard(n) — возвращает матрицу Адамара порядка п. Матрица Адамара — это. квадратная матрица размера п, составленная из значений 1 и — 1, столбцы которой ортогональны, так что справедливо соотношение Н' *Н=n* I, где I = eye (п, п) (единичная квадратная матрица размера п). Матрицы Адамара применяются в различных областях, включая комбинаторику, численный анализ, обработку сигналов. Матрица Адамара размера
+    nхn при n&gt;2 существует, только если п делится на 4 без остатка. Алгоритм MATLAB вносит дополнительные ограничения, вычисляя матрицы Адамара только для тех
+    n, когда или n, или n/12, или n/20 являются степенями по основанию 2.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="183" HEIGHT="94">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">&raquo;Н=<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="106" HEIGHT="16">
+<DIV WIDTH="106" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">hadamard(4)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="15">
+<DIV WIDTH="46" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Н =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="106" HEIGHT="15">
+<DIV WIDTH="106" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="15">
+<DIV WIDTH="32" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="106" HEIGHT="16">
+<DIV WIDTH="106" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; 1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="15">
+<DIV WIDTH="46" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="106" HEIGHT="15">
+<DIV WIDTH="106" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">-1&nbsp;&nbsp; 1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="15">
+<DIV WIDTH="32" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">-1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="106" HEIGHT="16">
+<DIV WIDTH="106" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; -1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="106" HEIGHT="16">
+<DIV WIDTH="106" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-1&nbsp;&nbsp; -1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="106" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left"> <font face="Times New Roman" size="4"><a name="20"></a> Матрицы 
+  Ганкеля</font> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> hankel(c.r) — возвращает матрицу Ганкеля, первый столбец которой совпадает с вектором с, а последняя строка — с вектором г. Если последний элемент вектора с отличен от первого элемента вектора г, то выдается предупреждение об ошибке, но предпочтение отдается последнему элементу вектора с.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Примеры:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">&raquo; с=1:4
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">С=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;
+3&nbsp;&nbsp;&nbsp; 4&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman"> &raquo; r=6:10&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">r =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">б&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman"> &raquo; Н - hankel(c.r)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Warning: Column wins anti-diagonal conflict.&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman"> H =</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">1&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;
+3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 7</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp; 8
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;
+7&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 9
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">4&nbsp;&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;
+8&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp; 10
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> hankel (с) — возвращает квадратную матрицу Ганкеля, первый столбец которой совпадает с вектором с и все элементы, лежащие ниже первой антидиагонали (из левого нижнего угла матрицы в правый верхний угол), равны 0.
+</font>
+  </li>
+</ul>
+<P align="left"> <font face="Times New Roman" size="4"><a name="21"></a> Матрицы 
+  Гильберта</font><font size="3" face="Times New Roman"><BR>
+  </font> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> hilb(n) — возвращает матрицу Гильберта порядка п. Матрица Гильберта является примером плохо обусловленной матрицы. Элементы матрицы Гильберта определяются как H(i.j)=l/(i+j-l).
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Н = hilb(5)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Н=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.0000 0.5000 0.3333 0.2500 0.2000
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.5000 0.3333 0.2500 0.2000 0.1667
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.3333 0.2500 0.2000 0.1667 0.1429
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.2500 0.2000 0.1667 0.1429 0.1250
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.2000 0.1667 0.1429 0.1250 0.1111&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; cond(hilb(5))&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4.7661е+005
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Значение числа обусловленности матрицы Гильберта указывает на очень плохо обусловленную матрицу.
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;invhilb(n) — возвращает матрицу, обратную матрице Гильберта порядка п (п&lt;15). Для п&gt;15 функция invhilb(n) возвращает приближенную матриц. Точная обратная матрица — это матрица с очень большими целочисленными значениями. Эти целочисленные значения могут быть представлены как числа с плавающей
+</font>
+    <font size="3" face="Times New Roman">запятой без погрешности округления до тех пор, пока порядок матрицы п не превышает 15.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo;</font><font size="3" face="Courier New">Н=invhilb(S)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Н =
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="271" HEIGHT="81">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="40" HEIGHT="16">
+<DIV WIDTH="40" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">25<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="58" HEIGHT="16">
+<DIV WIDTH="58" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-300<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="62" HEIGHT="16">
+<DIV WIDTH="62" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1050<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="61" HEIGHT="16">
+<DIV WIDTH="61" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-1400<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="16">
+<DIV WIDTH="50" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">630<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="40" HEIGHT="17">
+<DIV WIDTH="40" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">-300<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="58" HEIGHT="17">
+<DIV WIDTH="58" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">480<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="62" HEIGHT="17">
+<DIV WIDTH="62" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">-18900<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="61" HEIGHT="17">
+<DIV WIDTH="61" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">26880<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="17">
+<DIV WIDTH="50" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">-12600<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="40" HEIGHT="16">
+<DIV WIDTH="40" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1050<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="58" HEIGHT="16">
+<DIV WIDTH="58" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">18900<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="62" HEIGHT="16">
+<DIV WIDTH="62" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">79380<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="61" HEIGHT="16">
+<DIV WIDTH="61" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-117600<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="16">
+<DIV WIDTH="50" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">56700<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="40" HEIGHT="16">
+<DIV WIDTH="40" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-1400<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="58" HEIGHT="16">
+<DIV WIDTH="58" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">26880<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="62" HEIGHT="16">
+<DIV WIDTH="62" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-117600<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="61" HEIGHT="16">
+<DIV WIDTH="61" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">179200<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="16">
+<DIV WIDTH="50" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-88200<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="40" HEIGHT="16">
+<DIV WIDTH="40" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">630<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="58" HEIGHT="16">
+<DIV WIDTH="58" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-12600<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="62" HEIGHT="16">
+<DIV WIDTH="62" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">56700<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="61" HEIGHT="16">
+<DIV WIDTH="61" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-88200<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="50" HEIGHT="16">
+<DIV WIDTH="50" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">44100<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Times New Roman">А вот результат обращения матрицы Гильберта с плавающей запятой:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">&raquo; inv(hilb(5))
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">&nbsp;ans =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">l.0e+005 *
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">0.0002&nbsp;&nbsp;&nbsp;
+-0.0030&nbsp;&nbsp;&nbsp;&nbsp; 0.0105&nbsp;&nbsp;&nbsp;&nbsp; -0.0140&nbsp;&nbsp;&nbsp;&nbsp;
+0.0063
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">-0.0030&nbsp;&nbsp;&nbsp;&nbsp;
+0.0480&nbsp;&nbsp;&nbsp; -0.1890&nbsp;&nbsp;&nbsp;&nbsp; 0.2688&nbsp;&nbsp;&nbsp;&nbsp;
+-0.1260&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">0.0105&nbsp;&nbsp;&nbsp;</font> <font size="3" face="Times New Roman">-0.1890&nbsp;&nbsp;&nbsp;&nbsp;
+0.7938&nbsp;&nbsp;&nbsp;&nbsp; -1.1760&nbsp;&nbsp;&nbsp;&nbsp; 0.5670</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">-0.0140&nbsp;&nbsp;&nbsp;&nbsp;</font> <font size="3" face="Times New Roman">0.2688&nbsp;&nbsp;&nbsp;
+-1.1760&nbsp;&nbsp;&nbsp;&nbsp; 1.7920&nbsp;&nbsp;&nbsp;&nbsp; -0.8820&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">0.0063&nbsp;&nbsp;&nbsp;
+-0.1260&nbsp;&nbsp;&nbsp;&nbsp; 0.5670&nbsp;&nbsp;&nbsp;&nbsp; -0.8820&nbsp;&nbsp;&nbsp;&nbsp;
+0.4410</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="22"></a> </font></B><font face="Times New Roman" size="4">Вычисление 
+  магического квадрата</font> </P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> magic(n) — возвращает матрицу размера
+    nхn, состоящую из целых чисел от 1 до n<SUP>2</SUP>, в которой суммы элементов по строкам, столбцам и главным диагоналям равны одному и тому же числу. Порядок матрицы должен быть больше или равен 3.
+</font>
+  </li>
+</ul>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="182" HEIGHT="119">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="41">
+<p align="left">
+</TD>
+<TD COLSPAN="4" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="182" HEIGHT="41">
+<DIV WIDTH="182" HEIGHT="41">
+<P align="left">
+<font size="3" face="Courier New">Пример:<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; M=magic(4)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="41">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="14">
+<DIV WIDTH="55" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">м =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="14">
+<DIV WIDTH="47" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="14">
+<DIV WIDTH="47" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="14">
+<DIV WIDTH="33" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="17">
+<DIV WIDTH="55" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">16<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="17">
+<DIV WIDTH="33" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">11<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">10<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="15">
+<DIV WIDTH="55" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">9<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="15">
+<DIV WIDTH="33" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">12<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="16">
+<DIV WIDTH="55" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="55" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left"> <font face="Times New Roman" size="4"><a name="23"></a> Матрицы 
+  Паскаля</font> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> pascal (n) — возвращает матрицу Паскаля порядка п, т. е. симметрическую положительно определенную матрицу с целочисленными элементами, взятыми из треугольника Паскаля;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> pascal (n. 1) — возвращает нижний треугольный фактор (до знаков столбцов) Холецкого для матрицы Паскаля. Полученная матрица, все элементы которой выше главной диагонали равны нулю, является своей обратной матрицей, т. е. квадратным корнем из единичной матрицы;
+</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">pascal(n,2) — возвращает матрицу, полученную в результате транспонирования и перестановок матрицы pascal (n. 1), при этом результат является кубическим корнем из единичной матрицы.
+</font>
+  </li>
+</ul>
+<P align="left"> <font face="Times New Roman" size="4"><a name="24"></a> Матрицы 
+  Теплица</font> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;toepl itz(c , r) — возвращает несимметрическую матрицу Топлица, где с — ее первый столбец, а г — первая строка. Если первый элемент столбца с и первый элемент строки г различны, то выдается соответствующее предупреждение, но отдается предпочтение элементу столбца;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;toeplitz(r) — возвращает симметрическую, или эрмитову, матрицу Топлица,</font>
+<font size="3" face="Times New Roman">однозначно определяемую вектором
+r. Пример:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; с=1:3;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; r=1.5:4.0;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Т= toeplitz(c.r)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Warning: Column wins diagonal conflict.&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Т =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.0000 2.5000 3.5000
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2.0000 1.0000 2.5000
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3.0000 2.0000 1.0000
+</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="25"></a> Матрицы 
+  Уилкинсона</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">wilkinson(n) — возвращает одну из тестовых матриц Уилкинсона. (Другие матрицы Уилкинсона можно вызвать при помощи функции gallery). Это симметрич-ческая матрица, собственные значения которой попарно близки, но не равны друг другу. Наиболее широко используется wilkinson(21), собственные значения которой (10.746) совпадают до 14-го знака после запятой (различаются с 15-го).</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">W = wilkinson(5)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> W=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 2
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Данные о множестве других тестовых матриц можно найти в справочной системе&nbsp;
+MATLAB.
+</font>
+</P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="26"></a> Матричные 
+  функции</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Весьма представителен в MATLAB набор матричных функций. Они перечислены ниже.
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">ехрт(Х) — возвращает е<SUP>х</SUP> от матрицы X. Комплексный результат получается, если X имеет неположительные собственные значения. Функция expm является встроенной и использует разложение Паде. Ее вариант в виде m-файла располагается в файле expm1.m. Второй метод вычисления матричной экспоненты использует разложение Тейлора и находится в файле expm2.m. Метод Тейлора не рекомендуется применять как основной, так как он зачастую бывает относительно медленным и неточным. Реализация третьего способа вычисления матричной экспоненты находится в файле ехртЗ.m и использует спектральное разложение матрицы А. Этот метод неудачен, если входная матрица не имеет полного набора линейно независимых собственных векторов.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S-[l.0.3:1.3.1:4.0.0]&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> S=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 0          3
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 3 1
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4 0 0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&gt;&gt;a=expm(S)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> а =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">31.2203&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+23.3779
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">38.965920.0855&nbsp;&nbsp;&nbsp;&nbsp; 30.0593
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">31.1705&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+23.4277
+</font>
+<font size="3" face="Times New Roman"><BR>
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> funm(X, @f unction)[</font><font size="3" face="Times New Roman"><i>Форма funm(X,@function), как в предыдущих версиях MATLAB, по-прежнему возможна, но не рекомендуется.—
+    Примеч. ред.</i>]— возвращает любую функцию от квадратной матрицы X, если правильно ввести имя, составленное из латинских букв. Команды funm(X ,@exp), funm(X,@sqrt), funm(X.@log) Hexpm(X),sqrtm(x),logm(X) вычисляют соответственно одинаковые функции, но используют разные алгоритмы. Однако предпочтительнее использовать ехрт(Х), sqrtm(x).logm(X);</font></li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">[Y.esterr] = funm(X.@f uncti on) — не выдает никакого сообщения, но помимо результата вычислений в матрице Y возвращает грубую оценку относительной погрешности результата вычислений funm в esterr. Если матрица X — действительная симметрическая или комплексная эрмитова, то ее форма Шура диагональна и полученный результат может иметь высокую точность.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Примеры:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S=[l,0.3:1.3.1:4,0.0]<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;
+3
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;
+1
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;4&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+0
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; a=funm(S.@exp)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">a=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">31.22030.0000 23.3779
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">38.965920.085530.0593
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">31.1705-0.000023.4277
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> logm(X) — возвращает логарифм матрицы. Результат получается комплексным, если X имеет отрицательные собственные значения;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">[Y.esterr]=logm(X) — не выдает какого-либо предупреждающего сообщения, но возвращает оценку погрешности в виде относительной невязки norm(expm(Y)-X)/norm(X);
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Если матрица X — действительная симметрическая или комплексная эрмитова, то теми же свойствами обладает и logm(X).
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">а=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">31.22030.0000 23.3779&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 38.965920.085530.0593&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 31.1705-0.000023.4277<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; logm(a)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.0000 0.0000 3.0000
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.0000 3.0000 1.0000
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4.0000 -0.0000-0.0000
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> sqrtm(X) — возвращает квадратный корень из X, соответствующий неотрицательным действительным частям собственных значений X. Результат получается комплексным, если X имеет отрицательные собственные значения. Если X вырожденная, то выдает предупреждение об ошибке;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> [Y.resnonii]=sqrtm(X) — не выдает какого-либо предупреждающего сообщения, но возвращает оценку погрешности в виде относительной невязки по нормам Фробениуса (см. урок 11) norm(X-Y<sup>^</sup>2, ' fro') /norm(X, ' fro') ;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> [Y. alpha, condest]=sqrtm(X) — с тремя выходными аргументами функция помимо квадратного корня возвращает также фактор стабильности (но не невязку!) и оценку числа обусловленности результирующей матрицы Y.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S-[2.1.0;6,7.-2:3.4.0]; &raquo; e-sqrtm(S)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> е =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.2586 0.2334 0.0688
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.6066 2.7006 -0.6043
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.5969 1.1055 0.7918
+</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="27"></a> Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">В этом уроке мы научились:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Создавать матрицы различного вида, включая &laquo;магическую&raquo; матрицу.
+</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Создавать векторы равноотстоящих точек с разным масштабом.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">Объединять матрицы, используя функцию конкатенации.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Создавать матрицы с заданной диагональю.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Выполнять перестановки элементов матриц.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Вычислять суммы и произведения элементов матриц.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Осуществлять поворот матриц и выделение их треугольных частей.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Работать с тестовыми матрицами Адамара, Ганкеля, Гильберта, Паскаля, Теплица и Уилкинсона.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Работать с различными матричными функциями.
+</font>
+  </li>
+</ul>
+</BODY>
+</HTML>
+

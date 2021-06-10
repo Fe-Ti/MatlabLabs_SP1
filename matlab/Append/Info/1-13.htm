@@ -1,0 +1,1365 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+      <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 12. Функции разреженных матриц </a></font></b> </li>
+    <ul>
+      <li><font face="Times New Roman CYR" size=3><a href="#2">Элементарные разреженные матрицы </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#3">Преобразование разреженных матрицв</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#4">Работа с ненулевыми элементами разреженных матриц</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#5">Визуализация разреженных матриц</a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#6">Алгоритмы упорядочения </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#7">Норма, число обусловленности и ранг разреженной матрицы </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#8">Разложение Холецкого разреженных матриц </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#9">LU-разложение разреженных матриц</a></font> </li>
+	 <li><font face="Times New Roman CYR" size=3><a href="#10">Вычисление собственных значений и сингулярных чисел разреженных матриц</a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#11">Что нового мы узнали?  </a></font> </li>
+     
+</ul></ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №12.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Функции разреженных матриц</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Элементарные разреженные матрицы</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Преобразование разреженных матриц</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Работа с ненулевыми элементами разреженных матриц</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Визуализация разреженных матриц</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Алгоритмы упорядочения</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Норма, число обусловленности и ранг разреженных матриц</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Разложение Холецкого разреженной матрицы</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    LU-разложение разреженной матрицы</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Вычисление собственных значений и сингулярных чисел разреженных матриц</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Матрицы без нулевых значений называются полными матрицами. Матрицы, содержащие некоторое число элементов с нулевыми значениями, в MATLAB называются разреженными матрицами. Вообще говоря, разреженными называют те матрицы, для которых разумно использовать численные методы, учитывающие упрощение арифметических операций с нулевыми элементами (например, получение нуля при умножении на нуль или пропуск операций сложения и вычитания при использовании этих операций с нулевыми элементами матриц). Они широко используются при решении прикладных задач. Например, моделировацие электронных и электротехнических линейных цепей часто приводит к появлению в матричном описании топологии схем сильно разреженных матриц. Для таких матриц создан ряд функций, обеспечивающих эффективную работу с ними и устраняющих тривиальные операции с нулевыми элементами матриц.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Элементарные 
+  разреженные матрицы</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Вначале рассмотрим элементарные разреженные матрицы и относящиеся к ним функции системы
+MATLAB.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Функция spdiags расширяет возможности встроенной функции diag. Возможны четыре операции, различающиеся числом входных аргументов:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[B.d] = spdiags(A) — извлекает все ненулевые диагонали из матрицы А размера mxn. В — матрица размера min(m,n)xp, столбцы которой р являются ненулевыми диагоналями A. d — вектор длины р, целочисленные элементы которого точно определяют номера диагоналей матрицы А (положительные номера — выше главной диагонали, отрицательные — ниже);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> В = spdiags(A.d) — извлекает диагонали, определенные вектором
+    d;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> А = spdiags(B,d,A) — заменяет столбцами матрицы В диагонали матрицы А, определенные вектором
+    d;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> А = spdiags(B,d,m,n) — создает разреженную матрицу размера mxn, размещая соответствующие столбцы матрицы В вдоль диагоналей, определяемых вектором
+    d.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">&raquo; А=[1 3 4 6 8 0 0; 7 
+  8 0 7 0 0 5; </font></P>
+<P align="left"><font size="3" face="Courier New">0 0 0 0 0 9 8; 7 6 54 32 0 9 
+  6];</font> </P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; d=[l 322]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; В = spdlags(A.d)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">В =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3644. 0077</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0900</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">0699</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> S = speye(m.n) — возвращает разреженную матрицу размера mxn с единицами на главной диагонали и нулевыми недиагональными элементами;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> S = speye(n) — равносильна speye(n.n). Пример:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S = speye(4)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">S =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1,1)&nbsp;&nbsp;&nbsp;&nbsp; 1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.2)&nbsp;&nbsp;&nbsp;&nbsp; 1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.3)&nbsp;&nbsp;&nbsp;&nbsp; 1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(4.4)&nbsp;&nbsp;&nbsp;&nbsp; 1</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Матрица R = sprand(S) имеет ту же структуру, что и разреженная матрица S, но ее элементы распределены по равномерному закону:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> R = sprand(m,n,density) — возвращает случайную разреженную матрицу размера mxn, которая имеет приблизительно densityxmxn равномерно распределенных ненулевых элементов (0&lt;density&lt;l);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> R = sprand(m,n,density,re) 
+      — в дополнение к этому имеет в числе параметров число обусловленности по 
+      отношению к операции обращения, приблизительно равное rс. Если вектор гс 
+      имеет длину lr (A,r&lt;min(m.n)), то матрица R имеет гс в качестве своих 
+      первых 1 r сингулярных чисел, все другие значения равны нулю. В этом случае 
+      матрица R генерируется с помощью матриц случайных плоских вращений, которые 
+      применяются к диагональной матрице с заданными сингулярными числами. Такие 
+      матрицы играют важную роль при анализе алгебраических и топологических структур.</font>
+  </li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; d=sprand(4,3.0.6)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> d =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1.1)&nbsp;&nbsp;&nbsp;&nbsp; 0.6614</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.1)&nbsp;&nbsp;&nbsp;&nbsp; 0.2844</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(4,1)&nbsp;&nbsp;&nbsp;&nbsp; 0.0648</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3,3)&nbsp;&nbsp;&nbsp;&nbsp; 0.4692</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(4,3)&nbsp;&nbsp;&nbsp;&nbsp; 0.9883</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> R = sprandn(S) — возвращает матрицу со структурой разреженной матрицы S, но с элементами, распределенными по нормальному закону с нулевым средним и дисперсией, равной 1;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">R = sprandn(m,n,density) — возвращает случайную разреженную матрицу размера mxn, имеющую примерно densityxmxn нормально распределенных ненулевых элементов (0&lt;density&lt;l);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> R = sprandnCm,n.density,гс) — в дополнение к этому имеет своим параметром число обусловленности по отношению к операции обращения, приблизительно равное
+    rс. Если вектор гс имеет длину 1r (Xr&lt;min(m,n)), то матрица R имеет гс в качестве своих первых 1r сингулярных чисел, все другие значения равны нулю. В этом случае матрица R генерируется с помощью матриц случайных
+    </font><font face="Times New Roman" size="3">плоских вращений, которые применяются к диагональной матрице с заданными сингулярными числами.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; f=sprandn(3,4.0.3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> f =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.1)    -0.4326</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.2)    -1.6656</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.3)      0.1253</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.4)      0.2877</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">sprandsym(S) — возвращает случайную симметрическую матрицу, нижние под-диагонали и главная диагональ которой имеют ту же структуру, что и матрица 5. Элементы результирующей матрицы распределены по нормальному закону со средним, равным 0, и дисперсией, равной 1;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">sprandsym(n,density) — возвращает симметрическую случайную разреженную матрицу размера пхп, которая имеет приблизительно densityxnxn ненулевых элементов; каждый элемент сформирован в виде суммы нормально распределенных случайных чисел (0&lt;density&lt;l);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">R = sprandsym(n,density,гс) — возвращает матрицу с числом обусловленности по отношению к операции обращения, равным гс. Закон распределения не является равномерным; значения случайных элементов симметричны относительно 0 и находятся в пределах [-1, 1]. Если
+    rс — вектор размера п, то матрица R имеет собственные значения, равные элементам вектора rс. Таким образом, если элементы вектора гс положительны, то матрица R является положительно определенной. В любом случае матрица R генерируется с помощью случайного вращения по Якоби диагональных матриц с заданными собственными значениями и числом обусловленности. Такие матрицы играют важную роль при анализе алгебраических и топологических структур;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">R = sprandsym(n.density.rc.klnd) — возвращает положительно определенную матрицу. Аргумент kind может быть следующим:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">kind=l — матрица R генерируется из положительно определенной диагональной матрицы с помощью случайных вращений Якоби. R имеет точно заданное число обусловленности;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">kind=2 — матрица R генерируется как смещенная сумма матриц внешних произведений. Число обусловленности матрицы приблизительно, но структура более компактна (по сравнению с предыдущим случаем);</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">kind=3 — генерируется матрица R той же структуры, что и S, а число обусловленности приближенно равно 1/гс. Значение density игнорируется.</font></li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; a=sprandsym(4,0.3.0.8)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> а =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1.1)     0.9818</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.1)     0.0468</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2,2)    -0.9283</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1,3)     0.0468</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.3)     0.8800</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(4.4)    -0.8000</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="3"><a name="3"></a> П<font size="4">реобразование 
+  разреженных матриц</font></FONT></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Теперь рассмотрим функции преобразования разреженных матриц. Они представлены ниже:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> k = f ind(X) — возвращает индексы вектора х для его ненулевых элементов. Если таких элементов нет, то find возвращает пустой вектор. find(X&gt;100) возвращает индексы элементов вектора с Х&gt;100;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> [1,j] = find(X) — возвращает индексы строки и столбца для ненулевого элемента матрицы
+    X;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> [1 . j . v] = find(X) — возвращает вектор столбец v ненулевых элементов матрицы X и индексы строки i и столбца j. Вместо X можно вставить (X, операция отношения, параметр), и тогда индексы и вектор-столбец будут отражать элементы матрицы, удовлетворяющие данному отношение. Единственное исключение — f ind(x ~= 0). Индексы те же, что и при исполнении find(X), но вектор v
+    содержит только единицы.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; q=sprand(3.4.0.6)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">q =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1.1) 0.7266</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1.2) 0.4120</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.2) 0.2679</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.3) 0.4399</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.4) 0.7446</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.4) 0.9334</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">i=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 3&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">j =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">full(S) — преобразует разреженную матрицу S в полную; если исходная матрица S была полной, то full (S) возвращает S. Пусть X — матрица размера mxn с nz=nnz(X) ненулевыми элементами. Тогда full(X) требует такой объем памяти, чтобы хранить mxn действительных чисел, в то время как sparse(X) требует пространство для хранения лишь nz действительных чисел и (nxz+n) целых чисел — индексов. Большинству компьютеров для хранения действительного числа требуется вдвое больше пространства, чем для целого. Для таких компьютеров sparse(X) требует меньше пространства, чем full(X), если плотность nnz/prod(s1ze(X))&lt;2/3. Выполнение операций над разреженными матрицами,
+    однако, требует больше затрат времени, чем над полными, поэтому для эффективной работы с разреженными матрицами плотность расположения ненулевых элементов должна быть много меньше 2/3.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; q=sprand(3,4,0.6)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">q=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1.1)    0.0129</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1.2) 0.3840&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> (2.2) 0.6831&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> (3,3) 0.0928&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; d=full(q)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;d =</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">0.0129&nbsp;&nbsp;&nbsp;&nbsp; 0.3840&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.6831&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp; 0.0928&nbsp;&nbsp;&nbsp; 0</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">S=sparse(A) — преобразует полную матрицу в разреженную, удаляя нулевые элементы. Если матрица S уже разреженная, то sparse(S) возвращает S. Функция sparse — это встроенная функция, которая формирует матрицы в соответствии с правилами записи разреженных матриц, принятыми в системе
+    MATLAB;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">S=sparse(i,j,s,m,n,nzmax) — использует векторы 1, j и s для того, чтобы генерировать разреженную матрицу размера mxn с ненулевыми элементами, количество которых не превышает nzmax. Векторы 1 и j задают позиции элементов и являются целочисленными, а вектор s определяет числовое значение элемента матрицы, которое может быть действительным или комплексным. Все элементы вектора s, равные нулю, игнорируются вместе с соответствующими значениями i и j. Векторы i, j и s должны быть одной и той же длины;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> S = sparsed' . j.s.m.n) — использует
+    nzmax=length(s).</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> S = sparsed , j .s) — использует m=maxd) и n=max(j). Максимумы вычисляются раньше, чем нулевые строки столбца S будут удалены;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> S = sparse(m.n) равносильно sparse ([ ].[ ].[ ]. m.n, 0). Эта команда генерирует предельную разреженную матрицу, где mxn элементов нулевые.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Все встроенные в MATLAB арифметические, логические и индексные операции могут быть применены и к -разреженным, и к полным матрицам. Операции над разреженными матрицами возвращают разреженные матрицы, а операции над полными матрицами возвращают полные матрицы. В большинстве случаев операции над смешанными матрицами возвращают полные матрицы. Исключение составляют случаи, когда результат смешанной операции явно сохраняет разреженный тип. Так бывает при поэлементном умножении массивов А.*S, где S — разреженный массив.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">&raquo; i=[2.4.3]:j-[1.3.8]:s-[4.5+5i.9]:</font></P>
+<P align="left"><font size="3" face="Courier New">t = sparse(i.j.s,5,8)</font> 
+</P>
+<P align="left">
+<font size="3" face="Courier New">t =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.1) 4.0000</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(4.3)      5.0000+5.00001</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.8)      9.0000</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Функция spconvert используется для создания разреженных матриц из простых разреженных форматов, легко производимых вне средств
+MATLAB:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> S = spconvert(D) — преобразует матрицу D со строками, содержащими [i.j.r] или [i,j,r.s], где i — индекс ряда, j — индекс строки, г — численное значение, в соответствующую разреженную матрицу. Матрица D может иметь nnz или nnz+1 строк и три или четыре столбца. Три элемента в строке генерируют действительную матрицу, четыре элемента в строке генерируют комплексную матрицу (s преобразуется во мнимую часть значения элемента). Последняя строка массива D типа [m n 0] или [m n 0 0] может быть использована для определения size(S). Команда spconvert может быть использована только после того, как матрица D загружена или из МАТ-файла, или из ASCII-файла при помощи команд load, uiload и т. д.:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo;load mydata.dat</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;А = spconvert (rnydata);</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a> Работа 
+  с ненулевыми элементами разреженных матриц</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Поскольку разреженные матрицы содержат ненулевые элементы, то предусмотрен ряд функций для работы с ними:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">nnz(X) — возвращает число ненулевых элементов матрицы X. Плотность разреженной матрицы определяется по формуле nnz(X)/numel (X). Пример:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">h = sparse(hilb(10));&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; nnz(h)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 100</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">nonzeros(A) — возвращает полный вектор-столбец ненулевых элементов матрицы А, выбирая их последовательно по столбцам. Эта функция дает только выход s, но не значения i и j из аналогичного выражения [i, j,s]=find(A). Вообще, length(s)=nnz(A)xnzmax(A)xprod(size(A)). Пример:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; g=nonzeros(sparse(hankel([1,2.8])))</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">g =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">nzmax(S) — возвращает количество ячеек памяти для ненулевых элементов. Обычно функции nnz(S) и nzmax(S) дают один и тот же результат. Но если S создавалась в результате операции над разреженными матрицами, такой как умножение или LU-разложение, может быть выделено больше элементов памяти, чем требуется, и nzmax(S) отражает это. Если S — разреженная матрица,
+    то nzmax(S) — максимальное количество ячеек для хранения ненулевых элементов. Если S — полная матрица, то
+    nzmax(S)=numel(S).</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">&raquo; q=nzmax(sparse(hankel([1.7.23])))</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">q =</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">&nbsp;6</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">S=spalloc(m,n,nzmax) — создает массив для разреженной матрицы S размера mxn с пространством для размещения nzmax ненулевых элементов. Затем матрица может быть заполнена по столбцам;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">spalloc(m,n,nzmax) — эквивалентна функции sparse([ ],[ ],[
+    ],m,n,nzmax).</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S = spalloc(5.4.5);</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> spfun — вычисление функции для ненулевых элементов. Функция spfun применяется выборочно только к ненулевым элементам разреженной матрицы, сохраняя при этом разреженность исходной матрицы;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> f = spfun(@function,S) — вычисляет function(S) для ненулевых элементов матрицы S. Имя function — это имя m-файла или встроенной в ядро функции. function должна работать с матричным аргументом S и вычислить функцию для каждого элемента матрицы
+    S.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S=spfun(@exp.sprand(4,5.0.4))</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">S=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.2) 1.6864</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.3) 2.4112</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.3) 2.6638</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.4) 1.1888</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.4) 1.3119</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(4.4) 2.4007</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.5) 1.2870</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> R = spones(S) — генерирует матрицу R той же разреженности, что и S, но заменяет на 1 все ненулевые элементы исходной матрицы.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S=sprand(3.2,0.3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> S=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.1)       0.2987&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> (1.2)       0.1991&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; spones(S)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.1)     1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> (1.2)     1</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="5"></a> Визуализация 
+  разреженных матриц</font></B> </P>
+<P align="left"><font face="Times New Roman" size="3">Визуализация разреженных матриц нередко позволяет выявить не только любопытные, но и полезные и поучительные свойства тех математических закономерное</font><font face="Times New Roman" size="3">тей, которые порождают такие матрицы или описываются последними. MATLAB имеет специальные средства для визуализации разреженных матриц, реализованные приведенными ниже командами:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">spy(S) — графически отображает разреженность произвольной матрицы
+    S;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">spy(S.markersize) — графически отображает разреженность матрицы S, выводя маркеры в виде точек точно определенного размера
+    markersize;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">spy(S, 'LineSpec') — отображает разреженность матрицы в виде графика с точно определенным (с помощью параметра LineSpec) цветом линии и маркера. Параметр Linespec определяется так же, как параметр команды
+    plot;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">spy(S. 'LineSpec' .markersize) — использует точно определенные тип, цвет и размер графического маркера. Обычно S — разреженная матрица, но допустимо использование и полной матрицы, когда расположение элементов, отличных от нуля, составляет график.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;S=sparse(sprandn(20.30.0.9)):spy(S.'.r'.6)</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Построенный по этому примеру график показан на рис. 12.1.</font>
+</P>
+<P align="left"><img src="12.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/12.1.jpg" width="459" height="496"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 12.1. </font></i> 
+  </B><font face="Times New Roman" size="3"><i>Визуализация разреженной матрицы</i></font> 
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="6"></a> Алгоритмы 
+  упорядочения</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3"><I>Упорядочение — </I>это еще одна характерная для разреженных матриц операция. Ее алгоритм реализуется несколькими функциями:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">р = colmmd(S) — возвращает вектор упорядоченности столбцов разреженной матрицы S.
+    [то nzmax(S) — максимальное количество ячеек для хранения ненулевых элементов. Если S — полная матрица, то
+    nzmax(S)=numel(S).] Для несимметрической матрицы S вектор упорядоченности столбцов р такой, что S(:. р) будет иметь более разреженные L и U в LU-разложении, чем S. Такое упорядочение автоматически применяется при выполнении операций обращения \ и деления /, а также при решении систем линейных уравнений
+    с разреженными матрицами. Можно использовать команду spparms, чтобы изменить некоторые параметры, связанные с эвристикой в алгоритме
+    colmmd;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">j = colperm(S) — возвращает вектор перестановок j, такой что столбцы матрицы S(:. j) будут упорядочены по возрастанию числа ненулевых элементов. Эту функцию полезно иногда применять перед выполнением LU-разложения. Если S — симметрическая матрица, то j=colperm(S) возвращает вектор перестановок j, такой что и столбцы, и строки S(j,j) упорядочены по возрастанию ненулевых элементов. Если матрица S положительно определенная, то иногда полезно применять эту функцию и перед выполнением разложения Холецкого.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">&raquo; S=sparse([2.3.1.4.2].[l,3.2.3.2],[4.3,5.6.7].4.5);full(S)&nbsp;</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3"> ans =</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">0&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">4&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0<BR>
+</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+3&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">0&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+6&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3"> &raquo; t=colperm(S)</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="304" HEIGHT="331">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="123" HEIGHT="40">
+<DIV WIDTH="54" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">t=<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="44" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="40">
+<DIV WIDTH="48" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="40">
+<DIV WIDTH="30" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="123" HEIGHT="27">
+<DIV WIDTH="54" HEIGHT="26">
+<P align="left">
+<font size="3" face="Courier New"><BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="44" HEIGHT="27">
+<DIV WIDTH="46" HEIGHT="26">
+<P align="left">
+<font size="3" face="Courier New">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="27">
+<DIV WIDTH="48" HEIGHT="26">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="27">
+<DIV WIDTH="46" HEIGHT="26">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="27">
+<DIV WIDTH="30" HEIGHT="26">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="123" HEIGHT="22">
+<font size="3" face="Courier New"> &raquo;full(S(;,t))</font>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="44" HEIGHT="22">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="22">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="22">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="22">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="123" HEIGHT="40">
+<DIV WIDTH="54" HEIGHT="22">
+<P align="left">
+<font size="3" face="Courier New">ans =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="44" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="22">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="40">
+<DIV WIDTH="48" HEIGHT="22">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="22">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="40">
+<DIV WIDTH="30" HEIGHT="22">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="123" HEIGHT="40">
+<DIV WIDTH="54" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="44" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="40">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="40">
+<DIV WIDTH="30" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="123" HEIGHT="40">
+<DIV WIDTH="54" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="44" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="40">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="40">
+<DIV WIDTH="30" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="123" HEIGHT="40">
+<DIV WIDTH="54" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="44" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="40">
+<DIV WIDTH="48" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="40">
+<DIV WIDTH="30" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="123" HEIGHT="40">
+<DIV WIDTH="54" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="44" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="40">
+<DIV WIDTH="48" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="40">
+<DIV WIDTH="46" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="40">
+<DIV WIDTH="30" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="21">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> p = dmperm(A) — возвращает вектор максимального соответствия р такой, что если исходная матрица А имеет полный столбцовый ранг, то А(р.:) — квадратная матрица с ненулевой диагональю. Матрица А(р,:) называется декомпозицией Далмейджа-Мендельсона, или DM-декомпозицией.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Если А — приводимая матрица,
+[<i>Квадратная матрица А называется приводимой, если она подобна клеточной матрице, квадратные элементы которой соответствуют индукции линейного оператора А в отдельные подпространства. —
+Примеч. ред.</i>]&nbsp; линейная система Ах=b может быть решена приведением А к верхней блочной треугольной форме с неприводимым диагональным блоком. Решение может быть найдено методом обратной подстановки.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[p.q.r] = dmperm(A) — находит перестановку строк р и перестановку столбцов q квадратной матрицы А, такую что A(p,q) — матрица в блоке верхней треугольной формы.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Третий выходной аргумент г — целочисленный вектор, описывающий границы блоков. <I>К-й </I>блок матрицы A(p,q) имеет индексы
+r(k):r(k+l)-l.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[p.q.r.s] = dmperm(A) — находит перестановки р и q и векторы индексов г и s, так что матрица A(p,q) оказывается в верхней треугольной форме. Блок имеет индексы
+    (r(i):r(i+l)-l,s(i):s(i+l)-l).</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">В терминах теории графов диагональные блоки соответствуют сильным компонентам Холла графа смежности матрицы А.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">&raquo; A=sparse([1.2,1.3.2].[3.2.1.1.1].[7.6,4.5,4],3,3)</font></P>
+<P align="left"><font size="3" face="Courier New">:full(A)&nbsp;</font> </P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left"><font size="3" face="Courier New">4 0&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4 6 0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5 0 0&nbsp;<I><SUP>&nbsp;</SUP> </I></font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;[p.q.r]=dmperm(A)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Р=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 2 3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">q =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3 2 1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">r =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 2 3 4&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; fulKA(p.q))&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7 0          4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0 6 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0 0 5</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">symmmd(S) — возвращает вектор упорядоченности для симметричной положительно определенной матрицы S, так что S(p,p) будет иметь более разреженное разложение Холецкого, чем S. Иногда symmmd хорошо работает с симметрическими неопределенными матрицами. Такое упорядочение автоматически применяется при выполнении операций \ и /, а также при решении линейных систем с разреженными матрицами
+    [<i>Функция symamd работает значительно быстрее. —
+    Примеч. ред.</i>].<sup>&nbsp;</sup></font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Можно использовать команду spparms, чтобы изменить некоторые опции и параметры, связанные с эвристикой в алгоритме.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Алгоритм упорядочения для симметрических матриц основан на алгоритме упорядочения по разреженности столбцов. Фактически symmmd(S) только формирует матрицу К с такой структурой ненулевых элементов, что К' *К имеет тот же трафик разреженности, что и S, и затем вызывает алгоритм упорядочения по разреженности столбцов для К. На рис. 12.2 приводится пример применения функции symmmd к элементам разреженной матрицы.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">&raquo; B=bucky;p=symmmd(B);</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">&raquo; R=B(p.p):</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">&raquo; subp1ot(1.2.1),spy(B);subplot(1.2,2).spy(R)</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;r = symrcm(S) — возвращает вектор упорядоченности для симметричной матрицы S и называется упорядочением Катхилла-Макки. Причем формируется такая перестановка г, что S(r.r) будет концентрировать ненулевые элементы вблизи диагонали. Это хорошее упорядочение как перед LU-разложением, так и перед разложением Холецкого. Упорядочение применимо как для симметрических, так и для несимметрических матриц.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Для вещественной симметрической разреженной матрицы S (такой, что S=S<SUP>T</SUP>) собственные значения S(r.r) совпадают с собственными значениями S, но для вычисления eig(S(r,r)) требуется меньше времени, чем для вычисления
+eig(S).</font>
+</P>
+<P align="left"><img src="12.2.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/12.2.jpg" width="464" height="496"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 12.2. </font></i> 
+  </B><font face="Times New Roman" size="3"><i>Пример применения функции symmmd</i></font> 
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; B=bucky;p=symrcm(B);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; R=B(p.p);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; subplot(l,2,l).spy(B);subp1ot(l,2.2).spy(R)</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">На рис. 12.3 приведен пример концентрации ненулевых элементов разреженной матрицы вблизи главной диагонали.</font>
+</P>
+<P align="left"><img src="12.3.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/12.3.jpg" width="471" height="496"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 12.3. </font></i> 
+  </B><font face="Times New Roman" size="3"><i>Пример применения функции symrcm</i></font> 
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="7"></a> Норма, 
+  число обусловленности и ранг разреженной матрицы</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Ниже представлены функции, позволяющие вычислять числа обусловленности и ранги для разреженных матриц.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">с = condest(A) — использует метод Хейджера в модификации Хаема для оценки числа обусловленности матрицы по первой норме. Вычисленное значение с — нижняя оценка числа обусловленности матрицы А по первой норме. Для повторяемости результатов перед выполнением функции condest нужно обязательно выполнить rand( 'state' ,L), где L -одно и то же целое число;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> с = condest(A.T) — где Т — положительное целое число, чем выше Т, тем выше точность оценки. По умолчанию Т равно 2;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> nrm = normest(S) — возвращает оценку второй нормы матрицы S. Применяется тогда, когда из-за чрезмерного числа элементов в матрице вычисление
+    nrm = norm(S) занимает слишком много времени. Эта функция изначально предназначена для работы с разреженными матрицами, хотя она работает корректно и с большими полными матрицами;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[c.v] = condestCA) — возвращает число обусловленности с и вектор v, такой, что выполняется условие norm(A*V.l) = norm(A.l)*norm(V.l)/c. Таким образом, для больших значений с вектор V близок к нулевому вектору;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> nrm = normest(S,tol) — использует относительную погрешность tol  вместо используемого по умолчанию значения 10-<SUP>6</SUP>;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[nrm.count] = normestC...) — возвращает оценку второй нормы и количество использованных операций. Примеры:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; F=wi1kinson(150); &raquo; condest(sparse(F))&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">460.2219</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; normest(sparse(F))&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">75.2453</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> r=sprank(S) — вычисляет структурный ранг разреженной матрицы S. В терминах теории графов он известен также под следующими названиями: максимальное сечение, максимальное соответствие и максимальное совпадение. Для величины структурного ранга всегда выполняется условие sprank(S)irank(S), а в точной арифметике с вероятностью 1 выполняется условие sprank(S) = rank(sprandnCS)).</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S-[3 0004: 54080; 00013];&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; r=sprank(S)</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="8"></a> Разложение 
+  Холецкого разреженных матриц</font></B> </P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">choli пс(X,'0') — возвращает неполное разложение Холецкого для действительной симметрической положительно определенной разреженной матрицы
+    [nrm = norm(S) занимает слишком много времени. Эта функция изначально предназначена для работы с разреженными матрицами, хотя она работает корректно и с большими полными матрицами;]. Результат представляет собой верхнюю треугольную матрицу;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> R = cholincCX,'0') — возвращает верхнюю треугольную матрицу, которая имеет такую же разреженную структуру, как и верхний треугольник матрицы действительной положительно определенной матрицы X. Результат умножения R' *R соответствует X по своей разреженной структуре. Положительной определенности матрицы X недостаточно, чтобы гарантировать существование
+    неполного разложения Холецкого, и в этом случае выдается сообщение об ошибке;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[R,p] = cho!1nc(X, '0') — никогда не выдает сообщение об ошибке в ходе разложения. Если X — положительно определенная матрица, то р=0 и матрица R — верхняя треугольная, в противном случае р — положительное целое число, R — верхняя треугольная матрица размера qxn, где q=p-l. Разреженная структура матрицы R такая же, как и у верхнего треугольника размера qxn матрицы X, и произведение R' *R размера nxn соответствует структуре разреженности матрицы X по ее первым q строкам и столбцам X(l:q,:) и Х(: ,l:q).</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">R = cho1inc(X,droptol) — возвращает неполное разложение Холецкого любой квадратной разреженной матрицы, используя положительный числовой параметр droptol. Функция cholinc(X,droptol) возвращает приближение к полному разложению Холецкого, вычисленному с помощью функции chol (X). При меньших значениях droptol аппроксимация улучшается, пока значение droptol не станет равным 0. В этом случае cholinc задает полное преобразование Холецкого (chol(X));</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">R = cholinc(X.options) — использует структуру с тремя переменными, которые могут быть использованы в любой из комбинаций: droptol, mi chol, rdi ag. Дополнительные поля игнорируются. Если mi chol =1, chol inc возвращает модифицированное разложение Холецкого. Если rdiag=l, то все нули на диагонали верхней треугольной матрицы заменяются квадратным корнем от произведения droptol и нормы соответствующего столбца матрицы X — sqrt(droptol*norm(X(: ,j))). По умолчанию rdiag=0;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> R = cholinc(X,droptol) и R = cholinc(X.options) — возвращают верхнюю треугольную матрицу R. Результат R'*R — это аппроксимация матрицы;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> R = cholinc(X, 'inf') - возвращает разложение Холецкого в неопределенности, когда не удается получить обычное разложение. Матрица X может быть действительной квадратной положительно полуопределенной.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S = delsqCnumgndCC' .4))&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> S =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1.1) 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.1) -1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(1.2) -1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.2) 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.2) -1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(2.3) -1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(3.3) 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; RD=cholinc(S,'0')</font>
+</P>
+<P align="left"><font size="3" face="Courier New">R0=</font>
+</P>
+<P align="left"><font size="3" face="Courier New">(1.1)&nbsp; 2.0000</font>
+</P>
+<P align="left"><font size="3" face="Courier New">(1.2)&nbsp; -0.5000</font>
+</P>
+<P align="left"><font size="3" face="Courier New">(2.2) 1.9365</font>
+</P>
+<P align="left"><font size="3" face="Courier New">(2.3) -0.5164</font>
+</P>
+<P align="left"><font size="3" face="Courier New">(3.3) 1.9322</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="9"></a> LU-разложение 
+  разреженных матриц</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Функция luinc осуществляет неполное LU-разложение и возвращает нижнюю треугольную матрицу, верхнюю треугольную матрицу и матрицу перестановок для разреженных матриц
+[<i>Благодаря LAPACK в MATLAB 6 появилась отсутствующая в прежних версиях возможность использовать команду lu для точного LU-разложения разреженных матриц. —
+Примеч. ред.</i>]. Используется в следующих формах:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">luincCX, '0') — возвращает неполное LU-разложение уровня 0 квадратной разреженной матрицы. Треугольные факторы (множители) имеют такую же разреженность (т. е. график разреженности, см. spy), как и матрица перестановок квадратной матрицы X, и их произведение имеет ту же разреженность, что и матрица перестановок X. Функция luinc(X, '0') .возвращает нижнюю треугольную часть нижнего фактора (множителя) и верхний треугольный фактор в одной и той же результирующей матрице. Вся информация о матрице перестановок теряется, но зато число ненулевых элементов результирующей матрицы равно числу ненулевых элементов матрицы X с возможностью исключения некоторых нулей из-за сокращения;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> [L,U] = luincCX. 'О'), где X — матрица размером
+    nхn, возвращает нижнюю треугольную матрицу L и верхнюю треугольную матрицу U. Разреженности матриц L, U и X не сравнимы, но сумма числа ненулевых элементов в матрицах L и U поддерживается равной nnz(X)+n с возможностью исключения некоторых нулей в L и U из-за сокращения;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> [L,U.P]=luinc(X, '0') — возвращает нижнюю треугольную матрицу L, верхнюю треугольную матрицу U и матрицу перестановок Р. Матрица L имеет такую же разреженную структуру, как нижняя треугольная часть перестановленной матрицы X — spones(L)=spones(tril(P*X)), с возможными исключениями единиц на диагонали матрицы L, где Р*Х может быть равно 0;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">luinc(X,droptol) — возвращает неполное LU-разложение любой разреженной матрицы, используя порог droptol. Параметр droptol должен быть неотрицательным числом;<BR>
+    </font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> luinc(X,droptol) — возвращает приближение к полному LU-разложению, полученному с помощью функции
+    lu(Х). При меньших значениях droptol аппроксимация улучшается, пока значение droptol не станет равным 0. В этом случае имеет место полное LU- разложение;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">luinc(X,options) — использует структуру с четырьмя переменными, которые могут быть использованы в любой из комбинаций: droptol, milu, udiag, thresh. Дополнительные поля игнорируются. Если miliKL, функция luinc возвращает модифицированное неполное LU-разложение. Если udiag=l, то все нули на диагонали верхней треугольной части заменяются на локальную ошибку droptol;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> luincCX.options) — то же самое, что и luincCX,droptol), если options содержит</font>
+    <font face="Times New Roman" size="3">только параметр droptol; О [L.U] = luincCX,options) — возвращает перестановку треугольной матрицы L и</font>
+    <font face="Times New Roman" size="3">верхнюю треугольную матрицу U. Результат L*U аппроксимирует X;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[L.U.P] = luinc(X.options) — возвращает нижнюю треугольную матрицу L, верхнюю треугольную матрицу U и матрицу перестановок Р. Ненулевые входные элементы матрицы U удовлетворяют выражению abs(U(i. j))&gt;=droptol* norm((X:.j)) с возможным исключением диагональных входов, которые были сохранены, несмотря на неудовлетворение критерию;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> [L.U.P] = luincCX,options) —
+    то же самое, что и [L.U.P] = 1uinc(X,dropto1), если options
+    содержит только параметр droptol.<BR>
+    </font></li>
+</ul>
+<P align="left"> <B> <FONT face="Times New Roman" size="4"><a name="10"></a> Вычисление 
+  собственных значений&nbsp;</FONT></B><font size="4"> <font face="Times New Roman"><B>и 
+  сингулярных чисел разреженных матриц</B></font></font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Применение функции eigs решает проблему собственных значений, состоящую в нахождении нетривиальных решений системы уравнений, которая может быть интерпретирована как алгебраический эквивалент системы обыкновенных дифференциальных уравнений в явной форме Коши: A*v=l*v.[<i>Усовершенствованный алгоритм eig позволяет использовать eig для расчета собственных значений и полных, и разреженных матриц, но для получения собственных векторов разреженных матриц по-прежнему желательно использовать именно eigs. —
+Примеч. ред.</i>] Вычисляются только отдельные выбранные собственные значения или собственные значения и собственные векторы:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> eigs(A.B) решает проблему обобщенных собственных значений A*V = В* V*D. В должна быть симметрической (или эрмитовой) положительно определенной квадратной матрицей того же размера, что и A. eigs С А, []....) решает стандартную проблему собственных значений A*V = V*D.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> [V,D] = eigs(A) или [V.O] = eigs('Afun',n) — возвращает собственные значения для первого входного аргумента — большой и разреженной квадратной матрицы размера п. Этот параметр может быть как квадратной матрицей, так и строкой, содержащей имя m-файла, который применяет линейный оператор к столбцам данной матрицы. Матрица А — действительная и несимметрическая. Y=Afun(X) должна возвращать Y=A*X.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">В случае одного выходного параметра D — вектор, содержащий 6 самых больших собственных значений матрицы А. В случае двух выходных аргументов [V.D] = eigs(A) D — диагональная матрица размера 6x6, содержащая эти 6 самых больших собственных значений, и V — матрица, содержащая б столбцов, являющихся соответствующими собственными векторами. [V.D.flag] = eigs(A) возвращает флаг, равный
+0, если все возвращенные собственные значения сходятся, и 1 в противном случае.</font>
+</P>
+<ol>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">   eigs(A.K) и eigs(A,B,K) возвращают не 6, а К самых больших собственных значений. eigs(A,K,sigma) Heigs(A,B,K.sigma) возвращают не 6, а К собственных значений, выбранных в зависимости от значения параметра sigma;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">'lm' — самые большие (как и по умолчанию) по абсолютной величине;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">' sm' — самые малые по абсолютной величине;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">' l а' и ' sa' — соответственно самые большие и самые малые алгебраически собственные значения для действительных симметрических матриц;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    'be' — для действительных симметрических матриц возвращает и самые большие, и самые малые алгебраически собственные значения поровну, но если К нечетное, то самых больших значений на 1 больше, чем самых малых;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">'lr' и 'sr' — для несимметрических и комплексных матриц возвращают соответственно собственные значения с самыми большими и самыми малыми действительными частями;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">   '1i' и 'si'— для несимметрических и комплексных матриц возвращают соответственно собственные значения с самыми большими и самыми малыми мнимыми частями;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">   скаляр - ближайшие к величине slgma. В этом случае матрица В может быть только симметрической (или эрмитовой) положительно полуопределенной, а функция Y = AFUN(X) должна возвращать Y = (A-SIGMA*B)\X.</font></li>
+</ol>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> eigs(A,K,SIGMA,OPTS) и eigs(A,B,K,SIGMA.OPTS) имеют параметры в полях структуры OPTS (в фигурных скобках { } — значения по умолчанию):</font></li>
+</ul>
+<ol>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">   OPTS.issym: симметрия А или A-SIGMA*B, представленной AFUN [{0}  |  1];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">   OPTS.isreal: комплексные А или A-SIGMA*B, представленной AFUN [0  |
+    {1}];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">   OPTS.tol: сходимость:
+    аbs(с1_вычисленное-с1_действительное) &lt; tоl*аbs(с1_вычисленное) [скаляр){eps}];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">OPTS.maxit: наибольшее число итераций [положительное целое |  {300}];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">OPTS.р: число векторов Ланцо (Lanczos): K+l&lt;p&lt;=N [положительное целое | {2К}];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">OPTS.v0: начальный вектор
+    [вектор размера N| {произвольно выбирается библиотекой ARPACK}];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">OPTS.disp: уровень вывода диагностической информации [0  |  {1}  | 2J;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">OPTS.cholВ: В — это множитель Холецкого chol (В) [{0}  |  1];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">OPTS.permB: разреженная матрица В равна chol (B(perm(B) .perm(B)) [perm(B) | {1:N}], perm — перестановка.</font></li>
+</ol>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">eigs(AFUN.N.К,SIGMA,OPTS,PI,...) иeigsCAFUN.N,В.К.SIGMA.OPTS,PI....) предоставляют дополнительные аргументы Р, которые поступают в AFUN(X,P1....).</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Функция svds служит для вычисления небольшого числа сингулярных чисел и векторов большой разреженной матрицы. По мере возможности старайтесь использовать svd(fulKA)) вместо svds(A). Если А прямоугольная матрица mxn, svds(A....) манипулирует с несколькими собственными значениями и собственными векторами, возвращенными EIGS(B,...), где В = [SPARSE(М.М) A: A' SPARSE(N.N)]. Положительные собственные значения симметрической матрицы В равны сингулярным числам А.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> svds (А) возвращает 6 самых больших сингулярных чисел А;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> svds (А,К) или svds(A,K.'L') возвращает К самых больших сингулярных чисел;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> S = SVDSCA,К,SIGMA,OPTIONS)  устанавливает параметры:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">   OPTIONS.tol  —   порог чувствительности (по умолчанию le-10), norm(A*V-. -U*S,1) &lt;= tol * norm(A.1);</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">   OPTIONS.maxit - наибольшее число итераций (по умолчанию 300);</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">   OPTIONS.disp — число значений, показываемых на каждой итерации (по умолчанию 0).</font></li>
+    </ul>
+  </li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[U.S.V] = svds(A.k) — возвращает k наибольших сингулярных чисел и соответствующих сингулярных векторов матрицы А. Если А — матрица размера mxn, то U — матрица размера mxk с ортонормальными столбцами, S — диагональная матрица размера kxk, V — матрицы размера nxk с ортонормальными столбцами;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> [U.S.V. flag] = svdsC...) — возвращает флаг, равный 0, если eigs сошлась, и 1 в противном случае;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">   [U.S.V] = svds(A.k.sigma) — возвращает k сингулярных чисел, наиболее близких к скаляру sigma, и К сингулярных векторов (при sigma=0 возвращает К наименьших сингулярных чисел и К векторов);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">s = svds(A.k....) — возвращает только вектор сингулярных чисел.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Как видно из приведенного материала, система MATLAB предлагает пользователям уникальный набор матричных операторов и функций, заметно более полный, чем у других математических систем. Это открывает широчайшие возможности в решении всех видов математических задач, в которых используются современные матричные методы.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="11"></a> Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Создавать элементарные разреженные матрицы.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Осуществлять преобразование разреженных матриц.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Работать с ненулевыми элементами разреженных матриц.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Осуществлять графическую визуализацию разреженных матриц.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Использовать функции упорядочения.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Осуществлять разложение Холецкого разреженных матриц.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Проводить LU-разложение разреженных матриц.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Вычислять норму, число обусловленности и ранг разреженных матриц.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Вычислять собственные значения и сингулярные числа разреженных матриц.</font></li>
+</ul>
+</BODY>
+</HTML>
+

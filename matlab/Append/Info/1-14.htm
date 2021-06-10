@@ -1,0 +1,741 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+  <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 13. Многомерные 
+    массивы </a></font></b> </li>
+  <ul>
+    <li><font face="Times New Roman CYR" size=3><a href="#2">Понятие о многомерных 
+      массивах </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#3">Применение оператора 
+      ":" в многомерных массивах</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#4">Доступ к отдельному 
+      элементу многомерного массива</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#5">Удаление размерности 
+      в многомерном массиве </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#6">Создание страниц, 
+      заполненных константами и случайными числами </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#7">Использование функций 
+      ones, zeros, rand и randn </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#8">Объединение массивов</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#9">Работа с размерностями 
+      </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#10">Вычисление числа 
+          размерностей массива </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#11">Вычисление размера 
+          размерности массива </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#12">Перестановки 
+          размерностей массивов</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#13">Сдвиг размерностей 
+          массивов </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#14">Удаление единичных 
+          размерностей</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#15">Что нового мы узнали? 
+      </a></font> </li>
+  </ul>
+</ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №13.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Многомерные массивы</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Понятие о многомерных массивах</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Применение оператора &laquo;:&raquo; в многомерных массивах</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Доступ к отдельному элементу многомерного массива</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Удаление размерности в многомерном массиве</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Создание страниц, заполненных константами и случайными числами</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Объединение массивов</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Вычисление числа размерностей массива и определение размера размерностей</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Перестановки размерностей массивов</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Сдвиг размерностей массивов&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Удаление единичных размерностей</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы коснемся вопросов, связанных с более сложными типами данных, к которым относятся многомерные массивы.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a>Понятие 
+  о многомерных массивах</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В MATLAB двумерный массив является частным случаем многомерного массива. Многомерные массивы характеризуются размерностью более двух. Таким массивам можно дать наглядную интерпретацию. Так, матрицу (двумерный массив) можно записать на одном листе бумаги в виде строк и столбцов, состоящих из элементов матрицы. Тогда блокнот с такими листками можно считать трехмерным массивом, полку в шкафу с блокнотами — четырехмерным массивом, шкаф со множеством полок — пятимерным массивом и т. д. В этой книге практически нигде, кроме этого раздела, мы не будем иметь дело с массивами, размерность которых выше двух, но знать о возможностях MATLAB в части задания и применения многомерных массивов все же полезно.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В нашей литературе понятия &laquo;размер&raquo; и &laquo;размерность&raquo; массивов являются почти синонимами. Однако они имеют явно разный смысл в данной книге, как и в документации и литературе по системе MATLAB. Под <I>размерностью </I>массивов понимается число измерений в пространственном представлении массивов, а под <I>размером — </I>число строк и столбцов (mxn) в каждой размерности массива.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a>Применение 
+  оператора &laquo;:&raquo; в многомерных массивах</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">При обычном задании массивов (с помощью символа точки с запятой &laquo;;&raquo;) число рядов (строк) массива получается на 1 больше, чем число символов &laquo;:&raquo;, но массив остается двумерным. Оператор &laquo;:&raquo; (двоеточие) позволяет легко выполнять операции по увеличению размерности массивов. Приведем пример формирования трехмерного массива путем добавления новой страницы. Пусть у нас задан исходный двумерный массив М размером 3x3:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; М=[1 2 3; 4 5 6;  7 8 9]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 2 3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4 5 6</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7 8 9</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для добавления новой страницы с тем же размером можно расширить М следующим образом:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; М(:.:.2)=[10 11 12; 13 14 15; 16 17 18]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">M(:.:.l) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1    2    3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4 5 6</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7    8    9&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М(:.:.2) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">10   11   12</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">13   14   15</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">16   17   18</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Посмотрим, что теперь содержит массив М при явном его указании:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; М</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">М(:,:.1)=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1    2    3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4 5 6</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7 8 9&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М(:.:.2) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">10   11   12</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">13   14   15</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">16   17   18</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Как можно заметить, числа в выражениях М(:.:, 1) и М(:,: ,2) означают номер страницы.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a>Доступ 
+  к отдельному элементу многомерного массива</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Чтобы вызвать центральный элемент сначала первой, а затем второй страницы, надо записать следующие выражения:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; М(2.2,1)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; МС2.2.2)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">14</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Таким образом, в многомерных массивах используется то же правило индексации, что и в одномерных и двумерных. Произвольный элемент, например, трехмерного массива задается как М(1 .j.k), где 1 — номер строки, j — номер столбца и k — номер страницы. Этот элемент можно вывести, а можно присвоить ему заданное значение х: М(1
+,j,k)=x.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="5"></a>Удаление 
+  размерности в многомерном массиве</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Мы уже отмечали возможность удаления отдельных столбцов присвоением им значений пустого вектора-столбца [ ]. Этот прием нетрудно распространить на страницы и вообще размерности многомерного массива. Например, первую страницу полученного массива М можно удалить следующим образом:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; М(:.:.1)=[ ]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">10        11        12</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">13         14         15</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">16         17         18</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Нетрудно заметить, что в этом массиве осталась только вторая страница и что размерность массива уменьшилась на 1 — он стал двумерным.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="6"></a>Создание 
+  страниц, заполненных константами и случайными числами</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Если после знака присваивания стоит численная константа, то соответствующая часть массива будет содержать элементы, содержащие данную константу. Например, создадим из массива М (см. пример выше) массив, у которого вторая страница содержит единицы:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;M(:.:..2)=1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М(:.:,1) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">10         11         12&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 13         14         15&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 16         17         18&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М(:.:.2) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1 1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1 1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 1 1 1</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">А теперь заменим первую страницу массива на страницу с нулевыми элементами:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;M(:.:.1)=0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">M(:.:.1)=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0 0 0&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0 0 0&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0 0 0&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М(:.:,2) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1 1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1 1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1 1</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="7"></a>Использование 
+  функций ones, zeros, rand и randn</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Функции ones (создание массивов с единичными элементами), zeros (создание массивов с нулевыми элементами) и rand или randn (создание массивов с элементами — случайными числами с соответственно равномерным и нормальным распределением) могут также использоваться для создания многомерных массивов. Примеры приводятся ниже:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; E=ones(3.3.2)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">E(:.:.1)=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1       1       1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1 1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1 1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">E(:.:,2) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1           1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1 1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 1           1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; Z=zeros(2,2,3) Z(:,:.l) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0 0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp; 0&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Z(:.:.2) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp; 0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp; 0&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Z(:.:,3) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp; 0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp; 0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; R=randn(3,2.2) R(:.:.l) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-1.6656-1.1465&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 0.1253 1.1909&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 0.2877 1.1892&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">R(:.:,2) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-0.0376-0.1867&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 0.3273 0.7258&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 0.1746 -0.5883</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Эти примеры достаточно очевидны и не требуют особых комментариев. Обратите, однако, внимание на легкость задания размеров массивов для каждой размерности. Кроме того, следует отметить, что если хотя бы одна размерность массива равна нулю, то массив будет пустым:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; A=randn(3,3,3,0)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> А =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Empty array: 3-bу-3-bу-3-by-0</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Как видно из данного примера, пустой массив возвращается с соответствующим комментарием.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="8"></a>Объединение 
+  массивов</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для создания многомерных массивов служит описанная ранее для матриц специальная функция конкатенации
+cat:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">cat(DIM,A,B) — возвращает результат объединения двух массивов А и В вдоль размерности
+    DIM;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">cat(2.A.B) — возвращает массив [А.В], в котором объединены ряды (горизонтальная конкатенация);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">cat(1, А.В) — возвращает массив [А:В], в котором объединены столбцы (вертикальная конкатенация);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">B=cat(DIM.Al,A2,...) — объединяет множество входных массивов Al, A2,... вдоль размерности
+    DIM.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Функции cat(DIM,C{:}) и cat(DIM.C.FIELD) обеспечивают соответственно конкатенацию (объединение) ячеек массива ячеек (см урок 15) или структур массива структур (см. урок 14), содержащих числовые матрицы, в единую матрицу. Ниже приводятся примеры применения функции
+cat:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; М1=[1 2:3 4]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">M1=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3 4&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; М2=[5 6:78]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М2 =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5 6</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7 8&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; catd.Ml.M2)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5 б</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7 8&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; cat(2.Ml.M2)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 2 5 6<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3 4 7 8&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; M-cat(3.Ml.M2) M(:,:.l) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3 4&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М(:,:,2) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5 6</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7 8</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="9"></a>Работа 
+  с размерностями</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="10"></a>Вычисление 
+  числа размерностей массива</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Функция ndims(A) возвращает размерность массива А (если она больше или равна двум). Но если входной аргумент — массив Java или массив массивов Java, то независимо от размерности массива эта функция вернет 2. Следующий пример иллюстрирует применение функции
+ndims:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; M=rand(2:3:4:5):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; ndims(M)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left"> <font size="3" face="Courier New"> 4</font><font face="Times New Roman" size="3"><BR>
+  </font><font face="Times New Roman" size="4"><a name="11"></a>Вычисление размера 
+  размерности массива</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для вычисления размера каждой размерности массива используется функция
+size:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> М = size(A.DIM) возвращает размер размерности, указанной скаляром DIM, в виде вектора-строки размером 2. Для двумерного или одномерного массива А size(A.l) возвращает число рядов, a size (А, 2) - число столбцов;</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Для N-мерных массивов А при n&gt;2 size(A) возвращает N-мерный вектор-строку, отражающий страничную организацию массива, последняя составляющая этого вектора равна N. В векторе отсутствуют данные о единичных размерностях (тех, где расположены вектор-строка или вектор-столбец, т. е. size(A,DIM)==l). Исключение представляют N-мерные массивы Java массивов javaarray, которые возвращают размер массива самого высокого уровня.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Вообще, когда входным аргументом size является javaarray, то возвращаемое число столбцов всегда 1, а число рядов (строк) равно размеру (длине)
+javarray.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[Ml, М2 ,МЗ,..., MN] = si ze(A) возвращает размер первых N размерностей массива А;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> D = size (А), для mxn матрицы А возвращает двухэлементный вектор-строку, в котором первая составляющая — число строк т, а вторая составляющая — число столбцов
+    n;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[m.n] = size(A) возвращает число рядов и столбцов в разных выходных параметрах (выходных аргументах в терминологии MATLAB) тип.</font></li>
+</ul>
+<P align="left"> <FONT face="Times New Roman" size="4"><a name="12"></a>Перестановки 
+  размерностей массивов</FONT> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Если представить многомерный массив в виде страниц, то их перестановка является перестановкой размерностей массива. Для двумерного массива перестановка часто означает <I>транспонирование </I>— замену строк столбцами и наоборот. Следующие функции обобщают транспонирование матриц для случая многомерных массивов и обеспечивают перестановку размерностей многомерных массивов:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> permute (A, ORDER) — переставляет размерности массива А в порядке, определяемом вектором перестановок ORDER. Вектор ORDER — одна из возможных перестановок всех целых чисел от 1 до <I>N, </I>где <I>N — </I>размерность массива А;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">ipermuteCA, ORDER) —
+    операция, обратная <B> </B>permute: permute(permute(A. ORDER),
+    ORDER)=A</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Ниже приводятся примеры применения этих функций и функции
+size:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; А=[1 2: 3 4]:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; В=[5 6;  7 8];&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; С=[9 10; И 12];&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; D=cat(3.A,B.C)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">D(:,:,l) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3&nbsp; 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">9 10</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">11 12</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; size(D)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2 2 3&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; size(permute(D.[3 2 1]))</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3 2 2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo;size(ipermute(D.[2 1 3]))&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2 2 3&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; ipermute(permute(D,[3 2 1]),[3 2 1])</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3 4&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans(:. :,2) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5 6</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">78&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans(:.:,3) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">9 10&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">11 12</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="13"></a>Сдвиг 
+  размерностей массивов</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Сдвиг размерностей реализуется функцией
+shiftdim:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">B=shiftdim(X,N) — сдвиг размерностей в массиве X на величину N. Если М&gt;0, то сдвиг размерностей, расположенных справа, выполняется влево, а N первых слева размерностей сворачиваются в конец массива, т. е. движение размерностей идет по кругу против часовой стрелки. Если М&lt;0, сдвиг выполняется вправо, причем N первых размерностей, сдвинутых вправо, замещаются единичными размерностями;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[B,NSHIFTS]=shiftdim(X) — возвращает массив В с тем же числом элементов, что и у массива X, но с удаленными начальными единичными размерностями. Выходной параметр NSHIFTS показывает число удаленных размерностей. Если X — скаляр, функция не изменяет X , В,
+    NSHIFTS.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Следующий пример иллюстрирует применение функции
+shiftdim:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; A=randn(1.2.3,4):&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; [B,N]=shiftdim(A)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">B(:.:.l) =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-2.1707-1.01060.5077<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-0.05920.6145 1.6924&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">B(:.:,2) =<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.5913 0.3803 -0.0195</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-0.6436-1.0091-0.0482&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">B(:.:.3) =<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.0000 1.0950 0.4282</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-0.3179-1.87400.8956&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> В(:.:,4) =<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.7310 0.0403 0.5689</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.5779 0.6771 -0.2556&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> N =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;1</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="14"></a>Удаление 
+  единичных размерностей</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Функция squeeze(A) возвращает массив, в котором удалены все единичные размерности. Единичной называется размерность, в которой size(A. dim) == 1. Но если</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">А — одномерный или двумерный массив (матрица или вектор), то функция вернет тот же самый массив А. Следующий пример поясняет работу
+squeeze:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; A=randn(1.2.1.3.1):&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; B=squeeze(A)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> В=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.6145 1.6924 -0.6436</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.5077 0.5913 0.3803</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Обратите внимание на то, что пятимерный массив А превращается в массив с размерностью 2 и размером 2x3.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="15"></a>Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Создавать многомерные массивы.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Применять оператор &laquo;:&raquo; в многомерных массивах.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Получать доступ к отдельным элементам многомерных массивов.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Удалять размерности у многомерного массива.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Создавать массивы, заполненные константами и случайными числами.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Осуществлять объединение массивов.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Вычислять число размерностей массива и определять размер каждой размерности.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Переставлять, сдвигать и удалять единичные размерности в многомерных массивах.</font></li>
+</ul>
+</BODY>
+</HTML>
+

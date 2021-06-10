@@ -1,0 +1,982 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Задача 6 по теме “ Решение  систем линейных  алгебраических уравнений”</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h2
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab3/Fon.jpg*/);
+}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt'>Л<b>АБОРАТОРНАЯ РАБОТА </b>№&nbsp;3. ВАРИАНТЫ</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span style='font-size:12.0pt'>№</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:solid windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <h2><b><span lang=EN-US style='font-style:normal'>      A</span></b></h2>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.5pt;
+  border-left:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>B</span></b></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border:solid windowtext 1.5pt;
+  border-left:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>№</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:solid windowtext 1.5pt;
+  border-left:none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <h2><b><span lang=EN-US style='font-style:normal'>      A</span></b></h2>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.5pt;
+  border-left:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>B</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>1</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   3       
+  12        -1         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -5         
+  2         0       32</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   2         
+  0       16        -3</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 12         
+  3         0         0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>18</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -15</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>21</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>16</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 4       2      
+  32         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 2    
+  30         0        -4</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>36     
+  0         4        -5</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 0      
+  0        11       40</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -19</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>39</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>40</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>31</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>2</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   4       
+  20         1         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 16         
+  2         0        -2</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -4         
+  0         4       32</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   2         
+  0       10         0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>24</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-13</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>7</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>17</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 4     
+  -5        40         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>10    
+  -4         0         50</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>32     
+  0         4          -4</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0     32       
+  0          -9</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>19</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>34</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-49</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>3</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   2       
+  16        -3         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -8         
+  5         0       40</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  25        
+  0        -2         3</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0        
+  -3       20         0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>9</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>98</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>5</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-7</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>18</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  9    
+  40        2           0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>12    
+  -4         0         96</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>-4       0      
+  64           8</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>36     
+  0         0           9</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>81</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>119</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-15</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>7</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>4 </span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   5        
+  -2       32         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   4        
+  25        0        -3</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 20          
+  0        2        -7</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0          
+  0       -9       40</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>27</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>34</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-28</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>5</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>19</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  7     -5      
+  64           0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  9    
+  50        0          -4</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0      
+  9       -7         80</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>40     11       
+  0           0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>18</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>128</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-19</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>5</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -7         
+  2       40         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   9        
+  -5         0       50</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  25        
+  0         4        -1</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0       
+  32         0         9</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>21</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-14</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>13</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>21</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>20</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>11     64      
+  -2           0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>50      
+  3        0        -12</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>0       13      
+  -9       100</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>17       0     
+  80           0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-34</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>131</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>85</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>6</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   8       
+  40        -3         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -7         
+  5         0       50</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   8         
+  0        64      -11</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 32         
+  0         0         5</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>28</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>18</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>12</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>21</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>15     80      
+  -4           0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>64      
+  7        0          -5</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0     11      
+  -8       128</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0     37   
+  100           0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>93</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>131</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-34</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>125</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>7</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -9         
+  4       64         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 10       
+  50         0        -4</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0      
+  -14         7       80</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 40         
+  9         0         0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>24</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-5</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>14</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>29</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>22</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>17   100      
+  -9           0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>80     
+  -7        0          -5</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0     21    
+  128         -4</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0      
+  0       19      256</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-79</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>139</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-54</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>8</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -8       
+  64         5         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 50      
+  -13         0         2</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0       
+  17        -9      100</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>-11        
+  0        80          0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>37</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>38</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>115</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>23</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  4     
+  -1       20          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>18      
+  3         0         -2</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0    
+  10         1         -1</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0      
+  4         0        20</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>38</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-14</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>15</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>29</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>9</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>-13      
+  80          2          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 64        
+  9          0         -5</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0      
+  12         -9      128</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0      
+  27      100          0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>64</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>29</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>231</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>24</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  3    
+  20        -2         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  5     
+  -4         0       20</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0      
+  5       32        -3</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>12      
+  0         0          3</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>41</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-19</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>34</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>29</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>10</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>-13    
+  100          9          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 80      
+  10          0         -5</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0     
+  -14      128          7</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0        
+  0         31     256</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-128</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>34</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>95</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-69</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>25</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  4    
+  25        -1         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  6       5        
+  0        40</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>25      
+  0         3          4</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0     
+  -5       30          0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>17</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-34</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>9</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>11</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   1       
+  -2        16          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 10       
+  -1          0          1</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0      
+  12          1         -1</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0        
+  2          0        16</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>31</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-28</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>29</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>26</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  9     
+  -2       36          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  4     
+  25        0         -3</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>40       
+  0        5         -4</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0       
+  0       11        40</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>19</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-18</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>44</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>21</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>12</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   2      
+  20         -3          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   4       
+  -2          0        24</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0        
+  2        16         -1</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 12        
+  0          0          3</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>39</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-25</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>18</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>27</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  9      
+  -2       40          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>11      
+  -3         0        50</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>30       
+  0        -4          5</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0     
+  32         0          8</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>78</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-114</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-21</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>40</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>13</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   2      
+  16         -1          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   3        -8          0       
+  60</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   4        
+  0        24         -3</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 12        
+  3          0          0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>32</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-64</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>45</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>28       </span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  2     
+  40         5           0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  4      
+  -9         0        72</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  4       
+  0        64         8</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>36       
+  0          0         9</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>42</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>88</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>119</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>54</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>14</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   5       
+  -2        40          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   4      
+  32          0         -6</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   7        
+  0          3        32  </span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 20        
+  0          4          0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>39</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>0</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>21</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-19</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>29</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  8      
+  -3        64         0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> -7     
+  50          0         5</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0      
+  12        -9       80</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>40        
+  9         0         0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>131</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-84</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>52</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>78</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.5pt;
+  border-top:none;background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt'>15</span></b></p>
+  </td>
+  <td width=208 valign=top style='width:155.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   5      
+  30         -3          0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  -8        
+  5          0        40</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'> 24        
+  0          3         -4</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>   0        
+  7        25          0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>17</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>31</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>39</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>8</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  background:#FFCC99;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>30</span></p>
+  </td>
+  <td width=189 valign=top style='width:50.0mm;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  7       64        -2        
+  0</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>50        
+  5         0        -8</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>  0      
+  18         5      112</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-size:12.0pt'>15        
+  0       80          0</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>111</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>98</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>219</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt'>-31</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+</div>
+
+</body>
+
+</html>

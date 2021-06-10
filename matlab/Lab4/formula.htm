@@ -1,0 +1,315 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Задача 8</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+.style1 {
+	color: #0033CC;
+	font-weight: bold;
+}
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab4/Fon.jpg*//*tpa=http://orloff.am.tpu.ru/matlab/Lab4/Fon.jpg*/);
+}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+
+
+<p class="style1">ЛАБОРАТОРНАЯ РАБОТА № 4</span></p>
+
+<p class=style1><strong><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Квадратурные формулы и теоретическая оценка погрешности для методов
+Ньютона - Котеса.</span></font></strong></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>При вычислении интеграла</span></font></p>
+
+<p class=MsoNormal><img
+width=59 height=59 src="formula.files/image001.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image001.png"></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>величину погрешности можно определить, оценив остаточный член R
+согласно нижеприведенным формулам. </span></font></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman">&nbsp;</font></p>
+
+<p class=style1><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Теоретическая оценка погрешности.</span></font></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 bgcolor="#FFCC99"
+ style='background:#FFCC99;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;padding:
+  0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Метод</span></font></b></p>
+  </td>
+  <td width=161 style='width:120.5pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Погрешность</span></font></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Левых прямоугольников</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=107
+  height=41 src="formula.files/image002.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image002.png"></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Правых прямоугольников</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=107
+  height=41 src="formula.files/image002.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image002.png"></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Средних прямоугольников</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=119
+  height=47 src="formula.files/image003.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image003.png"></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Трапеций</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=119
+  height=47 src="formula.files/image004.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image004.png"></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Симпсона</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=119
+  height=47 src="formula.files/image005.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image005.png"></font></p>
+  </td>
+ </tr>
+</table>
+
+<p><img width=221 height=59 src="formula.files/image006.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image006.png"></p>
+
+
+
+<p class=style1><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Вычислительные формулы для элементарного отрезка интегрирования.</span></font></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 bgcolor="#FFCC99"
+ style='background:#FFCC99;border-collapse:collapse;border:none'>
+ <tr height=45 style='height:33.75pt'>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:33.75pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Метод</span></font></b></p></td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:
+  none;padding:0mm 5.4pt 0mm 5.4pt;height:33.75pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Формула</span></font></b></p>  </td>
+ </tr>
+ <tr height=45 style='height:33.75pt'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt;height:33.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Левых прямоугольников</span></font></p>  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:33.75pt'>
+  <p class=MsoNormal><img width=75 height=21
+  src="formula.files/image007.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image007.png"></p>  </td>
+ </tr>
+ <tr height=45 style='height:33.75pt'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt;height:33.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Правых прямоугольников</span></font></p>  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:33.75pt'>
+  <p class=MsoNormal><img width=76 height=21
+  src="formula.files/image008.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image008.png"></p>  </td>
+ </tr>
+ <tr height=45 style='height:33.75pt'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt;height:33.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Средних прямоугольников</span></font></p>  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:33.75pt'>
+  <img width=105 height=45
+  src="formula.files/image009.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image009.png">
+  </td>
+ </tr>
+ <tr height=45 style='height:33.75pt'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt;height:33.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Трапеций</span></font></p>  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:33.75pt'>
+  <img width=123 height=45
+  src="formula.files/image010.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image010.png">
+  </td>
+ </tr>
+ <tr height=45 style='height:33.75pt'>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt;height:33.75pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Симпсона</span></font></p>  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:33.75pt'>
+  <img width=211 height=45
+  src="formula.files/image011.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image011.png">
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Здесь </span></font><span lang=EN-US><strong>h = (b-a)</strong></span></p>
+
+<p class=MsoNormal><font size=3 face="Times New Roman">&nbsp;</font></p>
+
+<p class=style1><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Вычислительные формулы для составного отрезка интегрирования.</span></font></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 bgcolor="#FFCC99"
+ style='background:#FFCC99;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;padding:
+  0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Метод</span></font></b></p>
+  </td>
+  <td width=161 style='width:120.5pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><b><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt;font-weight:bold'>Формула</span></font></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Левых прямоугольников</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=89
+  height=53 src="formula.files/image012.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image012.png"></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Правых прямоугольников</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=89
+  height=53 src="formula.files/image013.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image013.png"></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Средних прямоугольников</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=117
+  height=53 src="formula.files/image014.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image014.png"></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Трапеций</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=211
+  height=56 src="formula.files/image015.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image015.png"></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=215 style='width:161.35pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><span
+  style='font-size:12.0pt'>Симпсона</span></font></p>
+  </td>
+  <td width=161 style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><font size=3 face="Times New Roman"><img width=311
+  height=56 src="formula.files/image016.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image016.png"></font></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
+12.0pt'>Здесь</span></font></p>
+
+<p></p><img width=87 height=23 src="formula.files/image017.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image017.png">
+<p><img width=253 height=27 src="formula.files/image018.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image018.png"></p>
+<p><img width=91 height=21 src="formula.files/image019.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab4/formula.files/image019.png"></p>
+
+
+
+</body>
+
+</html>

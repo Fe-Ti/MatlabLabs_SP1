@@ -1,0 +1,3216 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>2.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+  <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 2. Первые навыки работы</a></font></b> </li>
+  <ul>
+    <li><font face="Times New Roman CYR" size=3><a href="#2">Файловая 
+      система MATLAB </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#3">Запуск MATLAB и работа 
+      в режиме диалога </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#4">Новый и старый облик 
+      системы MATLAB 6.0 </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#5">Операции строчного 
+          редактирования </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#6">Команды управления 
+          окном </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#7">MATLAB в роли 
+          суперкалькулятора</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#8">О переносе строки 
+          в сессии</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#9">Основные объекты 
+      MATLAB</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#10">Понятие о математическом 
+          выражении </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#11">Действительные 
+          и комплексные числа</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#12">Константы и 
+          системные переменные </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#13">Текстовые комментарии</a></font> 
+        </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#14">Переменные и 
+          присваивание им значений </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#15">Уничтожение 
+          определений переменных</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#16">Операторы и 
+          функции</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#17">Применение оператора 
+          : (двоеточие)</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#18">Сообщения об ошибках 
+      и исправление ошибок </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#19">Форматы чисел</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#20">Формирование векторов 
+      и матриц</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#21">Особенности 
+          задания векторов и матриц </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#22">Объединение 
+          малых матриц в большую</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#23">Удаление столбцов 
+          и строк матриц</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#24">Операции с рабочей 
+          областью и текстом сессии </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#25">Дефрагментация 
+          рабочей области </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#26">Сохранение рабочей 
+          области сессии </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#27">Ведение дневника 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#28">Загрузка рабочей 
+          области сессии</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#29">Завершение вычислений 
+      и работы с системой</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#30">Завершение вычислений 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#31">Завершение работы 
+          с системой </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#32">Что нового мы узнали? 
+      </a></font> </li>
+  </ul>
+</ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №2.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Первые 
+  навыки работы</font> </P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Файловая система MATLAB
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Запуск MATLAB и работа в режиме диалога
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Первый опыт работы</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;MATLAB в роли суперкалькулятора
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Числа, константы и системные переменные
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Текстовые комментарии
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Переменные, их создание, изменение и уничтожение
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Операторы и функции
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Сообщения об ошибках и исправление ошибок
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Работа с векторами и матрицами
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Сохранение и загрузка рабочей области сессии
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Ведение дневника
+    </font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Завершение работы с системой
+    </font></li>
+</ul>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a>Файловая система MATLAB</font></B> </P>
+<P align="justify"><font size="3" face="Times New Roman"> Система MATLAB состоит из многих тысяч файлов, находящихся в множестве папок. Полезно иметь представление о содержании основных папок, поскольку это позволяет быстро оценить возможности системы — например, узнать, какие операторы, функции или графические команды входят в систему.<BR>
+В MATLAB особое значение имеют файлы двух типов — с расширениями <strong>.mat</strong> и <strong>.m</strong>. Первые являются бинарными файлами, в которых могут храниться значения переменных. Вторые представляют собой текстовые файлы, содержащие внешние программы, определения команд и функций системы. Именно к ним относится большая часть команд и функций, в том числе задаваемых пользователем для решения своих специфических задач. Нередко встречаются и файлы с расширением <strong>.с</strong> (коды на языке Си), файлы с откомпилированными кодами MATLAB с расширением <strong>.mех</strong> и другие. Исполняемые файлы имеют расширение <strong>.ехе</strong>.<BR>
+Особое значение имеет папка MATLAB/TOOLBOX/MATLAB. В ней содержится набор стандартных m-файлов системы. Просмотр этих файлов позволяет детально оценить возможности поставляемой конкретной версии системы. Ниже перечислены основные подпапки с этими файлами (деление на категории условно, на самом деле все подпапки находятся в общей папке
+MATLAB/TOOLBOX/MATLAB).</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Подпапка команд общего назначения:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;General — команды общего назначения: работа со справкой, управление окном MATLAB, взаимодействие с операционной системой и т. д.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Подпапки операторов, конструкций языка и системных функций:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;ops — операторы и специальные символы;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;tang — конструкции языка программирования;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;strfun — строковые функции;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">iofun — функции ввода/вывода;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;timefun — функции времени и дат;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;datatypes — типы и структуры данных.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Подпапки основных математических и матричных функций:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;elmat — команды создания элементарных матриц и операций с ними;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;elfun — элементарные математические функции;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;specfun — специальные математические функции;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">matfun — матричные функции линейной алгебры;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;datafun — анализ данных и преобразования Фурье;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;polyfun — полиномиальные функции и функции интерполяции;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;funfun — функции функций и функции решения обыкновенных дифференциальных уравнений;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;soarfun — функции разреженных матриц.&nbsp;</font></li>
+</ul>
+<p align="left"><font size="3" face="Times New Roman"> Подпайки команд графики:&nbsp;</font></p>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> graph2d — команды двумерной графики;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> graph3d — команды трехмерной графики;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> specgraph — команды специальной графики;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;graphics — команды дескрипторной графики;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> uitools — графика пользовательского интерфейса.<BR>
+    </font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Полный состав файлов каждой подпапки (их список содержится в файле соп-tents.m) можно вывести на просмотр с помощью команды help имя, где имя — название соответствующей подпапки.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a>Запуск 
+  MATLAB и работа в режиме диалога</font></B> </P>
+<P align="justify"> <font size="3" face="Times New Roman"><BR>
+  В этой книге предполагается, что MATLAB используется в среде операционной системы 
+  Windows 95 или Windows 98/Me/2000/XP. Копии сеансов работы MATLAB даны именно для 
+  этих случаев. Однако пользователи, работающие с Windows NT4, также могут обращаться 
+  к материалам данной книги без каких-либо ограничений, поскольку отличия касаются 
+  лишь мелких деталей пользовательского интерфейса. Это справедливо, хотя в меньшей 
+  мере, и для пользователей систем MATLAB на иных платформах.</font></P>
+<P align="left"><font size="3" face="Times New Roman"><img src="2.8.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/2.8.jpg" width="396" height="556" border="1"><BR>
+  </font> </P>
+<P align="justify"> <B><i><font size="3" face="Times New Roman">Рис. 2.8. </font></i> 
+  </B><font size="3" face="Times New Roman"><i>Подготовка к запуску MATLAB</i><BR>
+  Рис. 2.8 иллюстрирует подготовку к запуску системы MATLAB 6.0 из главного меню 
+  операционной системы Windows 98 со стандартным видом рабочего стола, подобным 
+  использованному в Windows 95. Для раскрытия главного меню активизируется кнопка 
+  Пуск (Start), расположенная внизу рабочего стола слева, или можно щелкнуть на 
+  значке с логотипом системы на рабочем столе Windows.<BR>
+  Далее мы не всегда будем повторять полное название системы — MATLAB 6.0 — и 
+  ограничимся сокращенным названием MATLAB.<BR>
+  После запуска MATLAB (см. рис. 2.8) на экране появляется основное окно системы 
+  MATLAB, показанное на рис. 2.9. Обычно это окно раскрыто не полностью и занимает 
+  часть рабочего стола. Вы можете раскрыть окно полностью, щелкнув на средней 
+  из трех кнопок, расположенных в конце титульной (верхней) строки окна. Левая 
+  кнопка сворачивает окно в кнопку с именем приложения, помещаемую в панель задач 
+  Windows 95/98, а правая закрывает окно и прекращает работу с MATLAB. Система 
+  готова к проведению вычислений в <I>командном режиме. </I>При этом вы можете 
+  не обращать внимания на новации пользовательского интерфейса, привнесенного 
+  операционными системами Windows 95 и 98/Me/2000/NT4, в виде расширяемого окна 
+  и панели инструментов. Мы обсудим их роль позже. Тем не менее сразу бросается 
+  в глаза существенное изменение интерфейса у системы MATLAB 6.0 по сравнению 
+  с предшествующей версией MATLAB 5.3.I.<BR>
+  Для уточнения версии системы следует вывести окно с информацией о системе (команда 
+  About MATLAB (О MATLAB) в меню Help (Помощь). Это окно представлено на рис. 
+  2.10 в центре. Из него видно, что запущена версия 6.0 (R12) от 22 сентября 2000 
+  г. Поскольку номер лицензии имеет конфиденциальный характер, вместо него на 
+  рисунке показан 0.<BR>
+  <img src="2.9.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/2.9.jpg" width="467" height="450" border="1"> </font> </P>
+<P align="left"> <B><i><font size="3" face="Times New Roman">Рис. 2.9. </font></i> 
+  </B><i><font size="3" face="Times New Roman">Окно системы MATLAB после запуска 
+  и выполнения простых вычислений</font></i></P>
+<P align="left"><i><font size="3" face="Times New Roman"><img src="2.10.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/2.10.jpg" width="400" height="457"><BR>
+  </font></i> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><i><B>Рис. 2.10. </B>Окно с логотипом системы MATLAB 6.0</i><BR>
+Полезно знать, что в начале запуска автоматически выполняется команда rnatl abrc, которая исполняет загрузочный файл matlabrc.m и файл startup.m, если таковой существует. Эти файлы выполняют начальную настройку терминала системы и задают ряд ее параметров. В частности, могут быть заданы пути доступа к другим файлам, необходимым для корректной работы системы MATLAB. Таким образом, опытные пользователи могут выполнить настройку системы под свои запросы. Однако в большинстве случаев особой необходимости в этом нет. Поскольку указанные файлы имеют текстовый формат, их легко просмотреть с помощью какого-либо текстового редактора или с помощью команды type в командном режиме работы
+MATLAB.<BR>
+Сеанс работы с MATLAB принято именовать <I>сессией </I>(session). Сессия, в сущности, является текущим документом, отражающим работу пользователя с системой MATLAB. В ней имеются строки ввода, вывода и сообщений об ошибках. Входящие в сессию определения переменных и функций, расположенные в рабочей области памяти, но не саму сессию, можно записать на диск (файлы формата .mat), используя команду save (Сохранить). Команда load (Загрузить) позволяет считать с диска данные рабочей области. Фрагменты сессии можно оформить в виде дневника с помощью команды diary (Дневник). Позже мы обсудим эти команды подробно.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a>Новый 
+  и старый облик системы MATLAB 6.0</font></B> </P>
+<P align="justify"> <font size="3" face="Times New Roman"><BR>
+  </font><font size="3" face="Times New Roman">Пользователи, уже имеющие опыт 
+  работы с системами MATLAB, будут приятно (а кое-кто, напротив, неприятно) удивлены 
+  новациями пользовательского интерфейса системы MATLAB 6.0. В новой версии пользовательского 
+  интерфейса не осталось и следа от прежней строгой скромности.<BR>
+  В новой версии вид окна системы (рис. 2.9) уже вполне отвечает канонам современного 
+  интерфейса. Пользовательский интерфейс многооконный и имеет ряд средств прямого 
+  доступа к различным компонентам системы. Бросается в глаза новый пункт меню 
+  — Web. Он дает прямой выход в Интернет (см. урок 1).<BR>
+  В панели инструментов добавлена позиция ввода ранее отмененной операции и меню 
+  просмотра файловой системы с кнопкой его открытия. Но самые решительные изменения 
+  произошли в левой части общего окна системы — здесь появились окна доступа к 
+  компонентам системы Launch Pad/Workspace (Панель запуска/ Рабочая область) и 
+  окно Current Directory (текущей папки).<BR>
+  Надо прямо признать, что особой необходимости в этих новациях нет, поскольку 
+  старые пользователи уже привыкли к крайней простоте интерфейса систем MATLAB. 
+  Учтя это, разработчики системы ввели в позицию View (Вид) меню команду Desktop 
+  Layout <I>&gt; </I>Command Windows Only (Только командное окно). Стоит ее исполнить, 
+  как вид окна системы будет очень напоминать добрый старый интерфейс версий MATLAB 
+  5.* — рис. 2.11.<BR>
+  <img src="2.11.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/2.11.jpg" width="500" height="375" border="1"> </font> </P>
+<P align="justify">
+<B><i><font size="3" face="Times New Roman">Рис. 2.11. </font></i> </B><font size="3" face="Times New Roman"><i>Упрощенный интерфейс системы MATLAB 6.0</i><BR>
+Если вы все же хотите вкусить прелести нового интерфейса, то исполните в той же позиции меню команду Desktop Layout <I>&gt; </I>Default (Интерфейс по умолчанию). Там же вы найдете и другие возможности модификации вида интерфейса системы MATLAB
+6.0.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="5"></a>Операции 
+  строчного редактирования</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+При работе с MATLAB в командном режиме действует простейший строчный редактор. Его команды перечислены в табл. 2.1.<BR>
+</font><i><B><font size="3" face="Times New Roman">Таблица 2.1. </font> </B></i><font size="3" face="Times New Roman"><i>Команды строчного редактора MATLAB</i><BR>
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="2" CELLSPACING="0" CELLPADDING="0" WIDTH="550" HEIGHT="289">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="20">
+<DIV WIDTH="158" HEIGHT="20">
+<P align="left">
+<font size="3" face="Times New Roman"><b>Комбинация клавиш<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="20">
+<DIV WIDTH="456" HEIGHT="20">
+<P align="left">
+<font size="3" face="Times New Roman"><b>Назначение<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="22">
+<DIV WIDTH="158" HEIGHT="22">
+<P align="left">
+<font size="3" face="Times New Roman">Ctrl+b<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="22">
+<DIV WIDTH="456" HEIGHT="22">
+<P align="left">
+<font size="3" face="Times New Roman">Перемещение курсора вправо на один символ<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="18">
+<DIV WIDTH="158" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Ctrl+f<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="18">
+<DIV WIDTH="456" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Перемещение курсора влево на один символ<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="18">
+<DIV WIDTH="158" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Ctrl +r<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="18">
+<DIV WIDTH="456" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Перемещение курсора вправо на одно слово<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="18">
+<DIV WIDTH="158" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Ctrl +1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="18">
+<DIV WIDTH="456" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Перемещение курсора влево на одно слово<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="18">
+<DIV WIDTH="158" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Home или Ctrl+a<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="18">
+<DIV WIDTH="456" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Перемещение курсора в начало строки<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="18">
+<DIV WIDTH="158" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">End или Ctrl +e<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="18">
+<DIV WIDTH="456" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Перемещение курсора в конец строки<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="17">
+<DIV WIDTH="158" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Ctrl+рu Ctrl+n<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="17">
+<DIV WIDTH="456" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Перелистывание предыдущих команд вверх
+или вниз для подстановки в строку ввода<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="17">
+<DIV WIDTH="158" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Del или Ctrl+d<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="17">
+<DIV WIDTH="456" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Стирание символа справа от курсора<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="17">
+<DIV WIDTH="158" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Ctrl+h<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="17">
+<DIV WIDTH="456" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Стирание символа слева от курсора<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="17">
+<DIV WIDTH="158" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Ctrl+k<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="17">
+<DIV WIDTH="456" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Стирание до конца строки<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="18">
+<DIV WIDTH="158" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Esc<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="18">
+<DIV WIDTH="456" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Очистка строки ввода<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="18">
+<DIV WIDTH="158" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Ins<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="18">
+<DIV WIDTH="456" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Включение/выключение режима вставки<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="18">
+<DIV WIDTH="158" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">PgUp<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="18">
+<DIV WIDTH="456" HEIGHT="18">
+<P align="left">
+<font size="3" face="Times New Roman">Перелистывание страниц сессии вверх<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="158" HEIGHT="23">
+<DIV WIDTH="158" HEIGHT="23">
+<P align="left">
+<font size="3" face="Times New Roman">PgDn<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="456" HEIGHT="23">
+<DIV WIDTH="456" HEIGHT="23">
+<P align="left">
+<font size="3" face="Times New Roman">Перелистывание страниц сессии вниз<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+<P align="justify">
+<font size="3" face="Times New Roman">Эти возможности кажутся примитивными, но позволяют пользователю быстро
+работать в стиле первых версий MATLAB для MS-DOS. Они обеспечивают важное свойство новых версий систем — их совместимость со старыми версиями в
+</font><font size="3" face="Times New Roman">части преемственности навыков работы. Позже вы увидите, что в новых версиях есть вполне современный редактор со средствами отладки создаваемых докумен</font><font size="3" face="Times New Roman">тов — m-файлов.</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Обратите особое внимание на применение клавиш вверх и вниз. Они используются для подстановки после маркера строки ввода &raquo; ранее введенных строк, например для их исправления, дублирования или дополнения. При этом указанные клавиши обеспечивают перелистывание ранее введенных строк снизу вверх или сверху вниз. Такая возможность существует благодаря организации специального стека, хранящего строки с исполненными ранее командами.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="6"></a>Команды 
+  управления окном</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Полезно сразу усвоить некоторые команды управления окном командного режима:&nbsp;</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;clс — очищает экран и размещает курсор в левом верхнем углу пустого экрана.&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;home — возвращает курсор в левый верхний угол окна.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;echo &lt;file_name&gt; on — включает режим вывода на экран текста Script-файла (файла-сценария).</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;echo &lt;file_name&gt; off — выключает режим вывода на экран текста Script-файла.&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> echo &lt;fi1e_name&gt; — меняет режим вывода на противоположный.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;echo on all — включает режим вывода на экран текста всех m-файлов.&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;echo off all — отключает режим вывода на экран текста всех m-файлов.&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;mоrе on — включает режим постраничного вывода (полезен при просмотре больших m-файлов).</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;mоrе off — отключает режим постраничного вывода (в этом случае для просмотра больших фалов надо пользоваться линейкой прокрутки).<BR>
+    </font></li>
+</ul>
+<P align="justify"> <font size="3" face="Times New Roman">В версии MATLAB 6.0 обе 
+  команды clc и home действуют аналогично — очищают экран и помещают курсор в 
+  левый верхний угол окна командного режима работы. Команды echo позволяют включать 
+  или выключать отображение текстов m-файлов при каждом обращении к ним. Как правило, 
+  отображение текста файлов сильно загромождает экран и часто не является необходимым. 
+  При больших размерах файлов начало их текста (листинга) убегает далеко за пределы 
+  области просмотра (текущего окна командного режима). Поэтому для просмотра длинных 
+  листингов файлов полезно включить постраничный вывод командой more on. Различие 
+  между m-файлами сценариев и функций мы обсудим позже.</font> </P>
+<p align="left"><font face="Times New Roman" size="4"><a name="7"></a>MATLAB в 
+  роли суперкалькулятора</font></p>
+<p align="justify"><font size="3" face="Times New Roman"><BR>
+Система MATLAB создана таким образом, что любые (подчас весьма сложные) вычисления можно выполнять в режиме <I>прямых вычислений, </I>то есть без подготовки программы. Это превращает MATLAB в необычайно мощный калькулятор, который способен производить не только обычные для калькуляторов вычисления (например, выполнять арифметические операции и вычислять элементарные функции), но и операции с векторами и матрицами, комплексными числами, рядами и полиномами. Можно почти мгновенно задать и вывести графики различных функций — от простой синусоиды до сложной трехмерной фигуры.<BR>
+Работа с системой в режиме прямых вычислений носит диалоговый характер и происходит по правилу &laquo;задал вопрос, получил ответ&raquo;. Пользователь набирает на клавиатуре вычисляемое выражение, редактирует его (если нужно) в командной строке и завершает ввод нажатием клавиши ENTER. В качестве примера на рис. 2.9 уже были показаны простейшие вычисления — вычисление выражения 2+3 и значения sin(l).<BR>
+Даже из таких простых примеров можно сделать некоторые поучительные выводы:&nbsp;</font></p>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;для указания ввода исходных данных используется символ &raquo;;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;данные вводятся с помощью простейшего строчного редактора;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> для блокировки вывода результата вычислений некоторого выражения после него надо установить знак ; (точка с запятой);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> если не указана переменная для значения результата вычислений, то MATLAB назначает такую переменную с именем
+    <strong>ans</strong>;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;знаком присваивания является привычный математикам знак равенства =, а не комбинированный знак :=, как во многих других языках программирования и математических системах;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;результат вычислений выводится в строках вывода (без знака &raquo;);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;встроенные функции (например, sin) записываются строчными буквами, и их аргументы указываются в <I>круглых скобках;</I></font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;диалог происходит в стиле &laquo;задал вопрос — получил ответ&raquo;.
+    </font></li>
+</ul>
+<P align="justify"> <font size="3" face="Times New Roman">Следующий пример (он показан 
+  на рис. 2.11) иллюстрирует применение системы MATLAB для выполнения простых 
+  векторных операций. В этом примере задается четырехэлементный вектор V со значениями 
+  элементов 1, 2, 3 и 4. Далее (сосредоточьте на этом внимание!) вычисляются функции 
+  синуса и экспоненты с аргументом в виде <I>вектора, </I>а не скаляра.<BR>
+  Две записи для вектора — V=[l 2 3 4] и V=[1,2,3.4] — являются идентичными. Таким 
+  образом, векторы задаются списком своих элементов, разделяемых пробелами или 
+  запятыми. Список заключается в квадратные скобки. Для выделения <I>п-</I>го 
+  элемента вектора V используется выражение V(n). Оно задает соответствующую индексированную 
+  переменную.<BR>
+  В большинстве математических систем вычисление sin(V) и exp(V), где V — вектор, 
+  сопровождалось бы выдачей ошибки, поскольку функции sin и ехр должны иметь аргумент 
+  в виде скалярной величины. Однако MATLAB — матричная система, а вектор является 
+  разновидностью матрицы с размером 1х n. Поэтому в нашем случае результат вычислений 
+  будет вектором того же размера, что и аргумент V, но элементы возвращаемого 
+  вектора будут синусами или экспонентами от элементов вектора V.<BR>
+  <img src="2.12.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/2.12.jpg" width="477" height="470"> </font> </P>
+<P align="justify">
+<B><i><font size="3" face="Times New Roman">Рис. 2.12. </font></i> </B><font size="3" face="Times New Roman"><i>Простейшие операции с матрицей</i><BR>
+Еще один пример (рис. 2.12) демонстрирует простейшие операции с матрицей. Здесь задана матрица М с размером 2x2 и вычислена матрица MX=sin(M).<BR>
+Матрица задается в виде ряда векторов, представляющих ее строки и заключенных в квадратные скобки. Для разделения элементов векторов используется пробелили запятая, а для отделения одного вектора от другого — точка с запятой. Для выделения отдельного элемента матрицы М используется выражение вида M(j,i), где М — имя матрицы, j — номер строки и 1 — номер столбца.<BR>
+Как видно из приведенных примеров, ввод исходных выражений для вычислений в системе MATLAB осуществляется в самом обычном текстовом формате. В этом же формате выдаются результаты вычислений, за исключением графических. Приведем пример записи вычислений, показанных на рис. 2.8 и 2.9:</font></P>
+<P align="justify"><font size="3" face="Times New Roman"><BR>
+  </font><font size="3" face="Courier New">То get started, select &quot;MATLAB Help&quot; from the Help menu.&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; 2+3&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=<BR>
+5<BR>
+&raquo; sin(l)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=<BR>
+0.8415</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; type sin<BR>
+sin is a built-in function.&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; help sin&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> SIN Sine.<BR>
+SIN(X) is the sine'of the elements of X.&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Overloaded methods<BR>
+help sym/sin.m<BR>
+&raquo; V=[l  2 3 4]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> V =<BR>
+1 2 3 4 </font></P>
+<P align="left"><font size="3" face="Courier New">&raquo; sin(V) </font></P>
+<P align="left"><font size="3" face="Courier New">ans =<BR>
+  0.8415&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.9093&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.1411&nbsp;&nbsp;&nbsp;&nbsp;
+  -0.7568&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; 3*V&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;
+9&nbsp;&nbsp;&nbsp;&nbsp; 12</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; V^2<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">??? Error using ==&gt; ^&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Matrix must be square.&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; V.^2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=<BR>
+1  4  9  16</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; V+2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp; 6</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New">&raquo;</font><font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Times New Roman"><i><img border="0" src="Prim-1.gif" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim-1.gif" align="left" width="36" height="35">Обратите внимание на форму ответов при выполнении простых операций без указания переменной, которой присваивается результат. В таких случаях MATLAB сам назначает переменную ans, которой присваивается результат и значение которой затем выводится на экран.</i><BR>
+Сравните эти записи с записями в реальных сессиях (рис. 2.9 и 2.11). Вы наверняка отметите, что они практически идентичны. Разве что в текстовых вариантах примеров для экономии бумаги, на которой печаталась эта книга, убраны пропуски между строками. Мы будем показывать представление сессий в виде прямых копий экрана только в том случае, когда это связано со спецификой проведения
+вычислений, например когда они сопровождаются выводом графиков или демонстрацией элементов пользовательского интерфейса. В остальных случаях будет использоваться представление сессии прямо в тексте книги в представленном выше текстовом формате — основном для командного режима работы с системой MATLAB. При этом строки ввода будут отмечаться маркером ввода &raquo; в их начале. Ради компактности записи пустые строки будут опускаться.</font>
+</P>
+<P align="justify"> <font face="Times New Roman" size="4"><a name="8"></a>О переносе 
+  строки в сессии</font><font size="3" face="Times New Roman"><BR>
+  В некоторых случаях вводимое математическое выражение может оказаться настолько 
+  длинным, что для него не хватит одной строки. В этом случае часть выражения 
+  можно перенести на новую строку с помощью знака многоточия &laquo;...&raquo; 
+  (3 или более точек), например:<BR>
+  </font> </P>
+<P align="justify">
+<font size="3" face="Courier New">s = 1-1/2 + 1/3- 1/4 + 1/5 - 1/6 + 1/7 ... </font></P>
+<P align="justify"><font size="3" face="Courier New">1/8 + 1/9 - 1/10 + 1/11 - 1/12</font></P>
+<P align="justify"><font size="3" face="Times New Roman"><BR>
+  Этот прием может быть весьма полезным для создания наглядных документов, у которых предотвращается заход строк в невидимую область окна. Вообще говоря, максимальное число символов в одной строке командного режима — 4096, а в m-файле — не ограничено, но со столь длинными строками работать неудобно. В ранних версиях в одной строке было не более 256 символов.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="9"></a>Основные 
+  объекты MATLAB</font></B> </P>
+<P align="left"> <font size="3" face="Times New Roman"><BR>
+  </font><font face="Times New Roman" size="4"><a name="10"></a>Понятие о математическом 
+  выражении</font> </P>
+<P align="justify">
+<FONT face="Times New Roman" size="3"><BR>
+Центральным понятием всех математических систем является <I>математическое выражение. </I>Оно задает то, что должно быть вычислено в численном (реже символьном) виде. Вот примеры простых математических выражений:<BR>
+</FONT>
+<FONT face="Courier New" size="3">2+3<BR>
+2.301*sin(x)<BR>
+4+ехр(3)/5<BR>
+sqrt(y)/2<BR>
+sin(pi/2)</FONT>
+<FONT face="Times New Roman" size="3"><BR>
+Математические выражения строятся на основе чисел, констант, переменных, операторов, функций и разных спецзнаков. Ниже даются краткие пояснения сути этих понятий.</FONT>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="11"></a>Действительные 
+  и комплексные числа</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+<I>Число — </I>простейший объект языка MATLAB, представляющий количественные данные. Числа можно считать константами, имена которых совпадают с их значениями. Числа используются в общепринятом представлении о них. Они могут быть целыми, дробными, с фиксированной и плавающей точкой. Возможно представление чисел в хорошо известном научном формате с указанием мантиссы и порядка числа.<BR>
+Ниже приводятся примеры представления чисел:<BR>
+0<BR>
+ 2<BR>
+-3<BR>
+2.301 0.00001 123.45бе-24<BR>
+-234.456е10<BR>
+Как нетрудно заметить, в мантиссе чисел целая часть отделяется от дробной не запятой, а точкой, как принято в большинстве языков программирования. Для отделения порядка числа от мантиссы используется символ е. Знак &laquo;плюс&raquo; у чисел не проставляется, а знак &laquo;минус&raquo; у числа называют <I>унарным минусом. </I>Пробелы между символами в числах не допускаются.<BR>
+Числа могут быть <I>комплексными: z</I>=Rе(x)+Im(x)*i. Такие числа содержат действительную Re(z) и мнимую Im(z) части. Мнимая часть имеет множитель <I>i </I>или <I>j, </I>означающий корень квадратный из -1:<BR>
+</font>
+<font size="3" face="Courier New">
+3i<BR>
+2j<BR>
+2+3i<BR>
+-3.141i<BR>
+-123.456+2.7e-3i<BR>
+</font>
+<font size="3" face="Times New Roman">Функция real (z) возвращает действительную часть комплексного числа, Re(z), a функция imag(z) — мнимую, Im(z). Для получения модуля комплексного числа используется функция abs(z), а для вычисления фазы — angle(Z). Ниже даны простейшие примеры работы с комплексными числами:<BR>
+</font><font size="3" face="Courier New">&raquo;i<BR>
+ans=<BR>
+0 +1.0000i<BR>
+&raquo; j<BR>
+ans =<BR>
+0 + 1.0000i&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; z=2+3i&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> z =<BR>
+2.0000 + 3.0000i&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; abs(z)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;ans =<BR>
+3.6056&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; real(z)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans=<BR>
+2<BR>
+&raquo; imag(z)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+3<BR>
+&raquo; angle(z)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+0.9828</font><font size="3" face="Times New Roman"><BR>
+</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">В MATLAB не принято делить числа на целые и дробные, короткие и длинные и т. д., как это принято в большинстве языков программирования, хотя задавать числа в таких формах можно. Вообще же операции над числами выполняются в формате, который принято считать форматом <I>с двойной точностью. </I>Такой формат</font>
+<font size="3" face="Times New Roman">удовлетворяет подавляющему большинству требований к численным расчетам, но совершенно не подходит для символьных вычислений с произвольной (абсолютной) точностью. Символьные вычисления MATLAB может выполнять с помощью специального пакета расширения Symbolic Math
+Toolbox.</font>
+</P>
+<p align="left"><font face="Times New Roman" size="4"><a name="12"></a>Константы 
+  и системные переменные</font></p>
+<p align="justify"><font size="3" face="Times New Roman"><BR>
+<I>Константа — </I>это предварительно определенное числовое или символьное значение, представленное уникальным именем. Числа (например 1, -2 и 1.23) являются безымянными <I>числовыми константами.&nbsp;</I><BR>
+Другие виды констант в MATLAB принято назвать <I>системными переменными, </I>поскольку, с одной стороны, они задаются системой при ее загрузке, а с другой — могут переопределяться. Основные системные переменные, применяемые в системе MATLAB, указаны ниже:<BR>
+</font></p>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">i или j — мнимая единица (корень квадратный из -1);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;pi - число <I>п - </I>3.1415926...;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;eps — погрешность операций над числами с плавающей точкой (2-<SUP>52</SUP>);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;realmin — наименьшее число с плавающей точкой (2-<SUP>1022</SUP>);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;realmax — наибольшее число с плавающей точкой (2<SUP>1023</SUP>);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> inf — значение машинной бесконечности;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> ans — переменная, хранящая результат последней операции и обычно вызывающая его отображение на экране дисплея;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> NaN — указание на нечисловой характер данных (Not-a-Number).&nbsp;</font></li>
+</ul>
+<p align="left"><font size="3" face="Times New Roman"> Вот примеры применения системных переменных:<BR>
+</font><font size="3" face="Courier New">&raquo;&nbsp;</font></p>
+<P align="left">
+<font size="3" face="Courier New"> 2*pi ans =<BR>
+6.2832</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; eps&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+2.2204е-016&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; real min&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans=<BR>
+2.2251e-308&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; realmax&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans=<BR>
+1.7977e+308</font>
+</P>
+<P align="left">
+<font face="Courier New"><font size="3">&raquo; 1/0<BR>
+</font><font size="3">Warning: Divide by zero,&nbsp;</font></font>
+</P>
+<P align="left">
+<font face="Courier New"><font size="3">ans=<BR>
+Inf<BR>
+</font><font size="3">&raquo; 0/0<BR>
+Warning: Divide by zero,&nbsp;</font></font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New"> ans =<BR>
+NaN</font></P>
+<P align="justify"><font size="3" face="Times New Roman"><BR>
+  Как отмечалось, системные переменные могут <I>переопределяться. </I>Можно задать системной переменной eps иное значение, например eps=0.0001. Однако важно то,</font>
+  <font size="3" face="Times New Roman">что их значения по умолчанию задаются сразу после загрузки системы. Поэтому неопределенными в отличие от обычных переменных системные переменные не могут быть никогда.<BR>
+    </font><I><font size="3" face="Times New Roman">Символьная константа —
+  </font> </I><font size="3" face="Times New Roman">это цепочка символов, заключенных в апострофы, например:<BR>
+  </font><font size="3" face="Courier New">'Hello my friend!'<BR>
+  'Привет'<BR>
+  '2+3'</font><font size="3" face="Times New Roman"><BR>
+  </font><font size="3" face="Times New Roman">Если в апострофы помещено математическое выражение, то оно <I>не вычисляется </I>и рассматривается просто как цепочка символов. Так что ' 2+3' не будет возвращать число 5. Однако с помощью специальных функций преобразования символьные выражения могут быть преобразованы в вычисляемые. Соответствующие функции преобразования будут рассмотрены в дальнейшем.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="13"></a>Текстовые 
+  комментарии</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+Поскольку MATLAB используется для достаточно сложных вычислений, важное значение имеет наглядность их описания. Она достигается, в частности, <I>с </I>помощью текстовых комментариев. <I>Текстовые комментарии </I>вводятся с помощью символа <I>%, </I>например так:<BR>
+</font><font size="3" face="Times New Roman"><I>%</I></font> <font size="3" face="Courier New">Bit is factorial function</font><font size="3" face="Times New Roman"><BR>
+<i><img border="0" src="Prim-1.gif" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim-1.gif" align="left" width="36" height="35">В каждой большой программе есть свои &laquo;ложки дегтя&raquo;. В MATLAB 6 такой &laquo;ложкой дегтя&raquo; является перевод строки при вводе буквы &laquo;с&raquo; русского алфавита в командной строке. В итоге ввод комментариев в командной строке на русском языке превращается в проблему. Пока автор может порекомендовать заменять русское &laquo;с&raquo; на английское, что на виде текстового комментария никак не сказывается. Не рекомендуется вводить русскоязычные комментарии и в тесты m-файлов при подготовке их в редакторе/отладчике (он будет описан позже). Это нередко делает программы неработоспособными. Жаловаться тут бесполезно — MATLAB англоязычный продукт и официальной локализованной под Россию версии этой системы пока нет.<BR>
+</i>Обычно первые строки m-файлов служат для описания их назначения, которое выводится на экран дисплея после команды &raquo; help Имя_файла.<BR>
+Считается правилом хорошего тона вводить в m-файлы достаточно подробные текстовые комментарии. Без таких комментариев даже разработчик программных модулей быстро забывает о сути собственных решений. В текстовых комментариях и в символьных константах могут использоваться буквы русского алфавита — при условии, что установлены содержащие эти буквы наборы шрифтов (см. примечание . выше).</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="14"></a>Переменные 
+  и присваивание им значений</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+<I>Переменные — </I>это имеющие имена объекты, способные хранить некоторые, обычно разные по значению, данные. В зависимости от этих данных переменные могут быть числовыми или символьными, векторными или матричными.<BR>
+В системе MATLAB можно задавать переменным определенные значения. Для этого используется операция <I>присваивания, </I>вводимая знаком равенства =:<BR>
+</font><font size="3" face="Courier New">Имя_переменной = Выражение</font><font size="3" face="Times New Roman"><BR>
+Типы переменных заранее не декларируются. Они определяются выражением, значение которого присваивается переменной. Так, если это выражение — вектор или матрица, то переменная будет векторной или матричной.<BR>
+</font><I><font size="3" face="Times New Roman">Имя переменной (ее идентификатор)
+</font> </I><font size="3" face="Times New Roman">может содержать сколько угодно символов, но запоминается и идентифицируется только 31 начальный символ. Имя любой переменной не должно совпадать с именами других переменных, функций и процедур системы, т. е. оно должно быть уникальным. Имя должно начинаться с буквы, может содержать буквы, цифры и символ подчеркивания _. Недопустимо включать в имена переменных пробелы и специальные знаки, например +,.-, *, / и т. д., поскольку в этом случае правильная интерпретация выражений становится невозможной.<BR>
+Желательно использовать содержательные имена для обозначений переменных, например speed_l для переменной, обозначающей скорость первого объекта. Переменные могут быть обычными и <I>индексированными, </I>то есть элементами векторов или матриц (см. выше). Могут использоваться и <I>символьные </I>переменные, причем символьные значения заключаются в апострофы, например
+s='Demo'.</font>
+</P>
+<p align="left"><font face="Times New Roman" size="4"><a name="15"></a>Уничтожение 
+  определений переменных</font></p>
+<p align="justify"><font size="3" face="Times New Roman"><BR>
+В памяти компьютера переменные занимают определенное место, называемое <I>рабочей областью </I>(workspace). Для очистки рабочей области используется функция clear в разных формах, например:<BR>
+</font></p>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;clear — уничтожение определений всех переменных;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;clear x — уничтожение определения переменной х;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;clear a, b, с — уничтожение определений нескольких переменных.</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Уничтоженная (стертая в рабочей области) переменная становится неопределенной. Использовать неопределенные переменные нельзя, и такие попытки будут сопровождаться выдачей сообщений об ошибке. Приведем примеры задания и уничтожения переменных:<BR>
+</font><font size="3" face="Courier New">&raquo; x=2*pi&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> х =<BR>
+6.2832<BR>
+&raquo; V=[l 2 3 4 5]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> V =<BR>
+1 2 3 4 5&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; MAT<BR>
+??? Undefined function or variable 'MAT'.&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; MAT=[1 2 3 4;  5 6 7 8]&nbsp;</font>
+</P>
+<P align="left">
+<font face="Courier New"><font size="3">MAT=<BR>
+1234<BR>
+5678&nbsp;</font></font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; clear V&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; V&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ??? Undefined function or variable 'V'.<BR>
+&raquo; clear&nbsp;</font>
+</P>
+<P align="left">
+<font face="Courier New"><font size="3"> &raquo; x<BR>
+</font><font size="3">??? Undefined function or variable 'x'.<BR>
+</font><font size="3">&raquo; M<BR>
+??? Undefined function or variable 'M'.</font></font><font size="3" face="Times New Roman"><BR>
+Обратите внимание на то, что сначала выборочно стерта переменная V, а затем командой clear без параметров стерты все остальные переменные.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="16"></a>Операторы 
+  и функции</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+<I>Оператор — </I>это специальное обозначение для определенной операции над данными — <I>операндами. </I>Например, простейшими арифметическими операторами являются знаки суммы +, вычитания -, умножения * и деления /. Операторы используются совместно с операндами. Например, в выражении 2+3 знак + является оператором сложения, а числа 2 и 3 — операндами.<BR>
+Следует отметить, что большинство операторов относится к матричным операциям, что может служить причиной серьезных недоразумений. Например, операторы умножения * и деления / вычисляют произведение и частное от деления двух многомерных массивов, векторов или матриц. Есть ряд специальных операторов, например, оператор \ означает деление <I>справа налево, </I>а операторы . * и . / означают соответственно <I>поэлементное </I>умножение и <I>поэлементное </I>деление массивов.<BR>
+Следующие примеры поясняют сказанное на примере операций с векторами:<BR>
+</font><font size="3" face="Courier New">&raquo; Vl=[2&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 8]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> V1=<BR>
+2 4 6 8&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; V2=[l&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> V2 =<BR>
+1 2 3 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; V1/V2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+2<BR>
+&raquo; V1.*V2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans=<BR>
+2&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 32</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; V1./V2&nbsp;</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New"> ans =<BR>
+2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 2</font><font size="3" face="Times New Roman"><BR>
+Полный список операторов можно получить, используя команду &raquo; help ops. Постепенно мы рассмотрим все операторы системы MATLAB и обсудим особенности их применения. А пока приведем только часть полного списка операторов, содержащую арифметические операторы:<BR>
+</font><font size="3" face="Courier New">&raquo; help ops<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Operators and special characters.<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Arithmetic operators.<BR>
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="266" HEIGHT="82">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="151" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="31" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="16">
+<DIV WIDTH="67" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">Plus<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="151" HEIGHT="16">
+<DIV WIDTH="151" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">- Plus<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="31" HEIGHT="16">
+<DIV WIDTH="31" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="17">
+<DIV WIDTH="67" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Up! us<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="151" HEIGHT="17">
+<DIV WIDTH="151" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">- Unary plus<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="31" HEIGHT="17">
+<DIV WIDTH="31" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="14">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="14">
+<DIV WIDTH="67" HEIGHT="14">
+<P align="left">
+<font size="3" face="Times New Roman">Minus<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="151" HEIGHT="14">
+<DIV WIDTH="151" HEIGHT="14">
+<P align="left">
+<font size="3" face="Times New Roman">- Minus<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="31" HEIGHT="14">
+<DIV WIDTH="31" HEIGHT="14">
+<P align="left">
+<font size="3" face="Times New Roman">—<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="14">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="17">
+<DIV WIDTH="67" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Umlnus<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="151" HEIGHT="17">
+<DIV WIDTH="151" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">- Unary minus<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="31" HEIGHT="17">
+<DIV WIDTH="31" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">-<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="17">
+<DIV WIDTH="67" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">Mtimes<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="151" HEIGHT="17">
+<DIV WIDTH="151" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">- Matrix multiply<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="31" HEIGHT="17">
+<DIV WIDTH="31" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">*<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="151" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="31" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="354" HEIGHT="129">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="17">
+<DIV WIDTH="73" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">times<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="17">
+<DIV WIDTH="245" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">- Array multiply<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="17">
+<DIV WIDTH="36" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">*<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="16">
+<DIV WIDTH="73" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">mpower<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="16">
+<DIV WIDTH="245" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">- Matrix power<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="16">
+<DIV WIDTH="36" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">^<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="16">
+<DIV WIDTH="73" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">poWer<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="16">
+<DIV WIDTH="245" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">- Array power<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="16">
+<DIV WIDTH="36" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">.^<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="15">
+<DIV WIDTH="73" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">mldlvlde<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="15">
+<DIV WIDTH="245" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">- Backslash or left matrix divide<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="15">
+<DIV WIDTH="36" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">\<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="16">
+<DIV WIDTH="73" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">mrdlvlde<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="16">
+<DIV WIDTH="245" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">- Slash or right matrix divide<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="16">
+<DIV WIDTH="36" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">/<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="16">
+<DIV WIDTH="73" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">Idi-vide<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="16">
+<DIV WIDTH="245" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">- Left array divide<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="16">
+<DIV WIDTH="36" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">.\<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="16">
+<DIV WIDTH="73" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">rdlvlde<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="16">
+<DIV WIDTH="245" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">- Right array divide<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="16">
+<DIV WIDTH="36" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">./<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="17">
+<DIV WIDTH="73" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">kron<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="17">
+<DIV WIDTH="245" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">- Kronecker tensor product<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="17">
+<DIV WIDTH="36" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">kron<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="73" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="245" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="36" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="justify">
+<I><font size="3" face="Times New Roman">Функции — </font> </I><font size="3" face="Times New Roman">это имеющие уникальные имена объекты, выполняющие определенные преобразования своих аргументов и при этом возвращающие результаты этих преобразований. <I>Возврат результата — </I>отличительная черта функций. При этом результат вычисления функции с одним выходным параметром подставляется на место ее вызова, что позволяет использовать функции в математических выражениях, например функцию sin в 2*sin(pi/2).<BR>
+Функции в общем случае имеют список аргументов (параметров), заключенный в круглые скобки. Например, функция Бесселя записывается как bessel(NU,X). В данном случае список параметров содержит два аргумента — NU в виде скаляра и X в виде вектора. Многие функции допускают ряд форм записи, отличающихся списком параметров. Если функция возвращает несколько значений, то она записывается в виде
+[Yl, Y2....]=func(Xl. X2...)<BR>
+где Yl, Y2,... — список <I>выходных </I>параметров и XI, Х2.... — список <I>входных </I>аргументов (параметров).<BR>
+Со списком элементарных функций можно ознакомиться, выполнив команду hel p elfun, а со списком специальных функций — с помощью команды help specfun. Функции могут быть <I>встроенными </I>(внутренними) и <I>внешними, </I>или <I>т-функциями. </I>Так, встроенными являются наиболее распространенные элементарные функции например, sin(x) и ехр(у), тогда как функция sinh(x) является внешней функцией. Внешние функции содержат свои определения в m-файлах. Задание таких функций с помощью специального редактора m-файлов мы рассмотрим в уроке 5. Встроенные функции хранятся в откомпилированном ядре системы MATLAB, в силу чего они выполняются предельно быстро.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="17"></a>Применение 
+  оператора: (двоеточие)</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Times New Roman">Очень часто необходимо произвести формирование упорядоченных числовых последовательностей. Такие последовательности нужны для создания векторов или значений абсциссы при построении графиков. Для этого в MATLAB используется оператор : (двоеточие):<BR>
+</font><font size="3" face="Courier New">Начальное_значение:Шаг:Конечное_значение</font><font size="3" face="Times New Roman"><BR>
+Данная конструкция порождает возрастающую последовательность чисел, которая начинается с начального значения, идет с заданным шагом и завершается конечным значением. Если Шаг не задан, то он принимает значение 1. Если конечное значение указано меньшим, чем начальное значение, — выдается сообщение об ошибке. Примеры применения оператора : даны ниже:<BR>
+</font><font size="3" face="Courier New">» 1:5<BR>
+ans =<BR>
+12345</font>
+</P>
+<P align="left">
+<font face="Courier New"><font size="3">&raquo;</font> <font size="3">i=0:2:10&nbsp;</font></font>
+</P>
+<P align="left">
+<font face="Courier New"><font size="3">i =</font> <font size="3">0        2        4        6        8       10&nbsp;</font></font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; j=10:-2:2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> j =10        8        6        4        2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; V=0:pi/2:2*pi;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; V&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> V =<BR>
+0       1.5708       3.1416      4.7124      6.2832</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; X= l:-.2:0&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">X=<BR>
+1.0000       0.8000       0.6000       0.4000       0.2000 0&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; 5:2<BR>
+</font><font size="3" face="Courier New">ans=<BR>
+</font><font size="3" face="Courier New">Empty matrix:1-by-0</font><font size="3" face="Times New Roman"><BR>
+</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Как отмечалось, принадлежность MATLAB к матричным системам вносит коррективы в назначение операторов и приводит при неумелом их использовании к казусам. Рассмотрим следующий характерный пример:<BR>
+</font><font size="3" face="Courier New">&raquo; х=0:5<BR>
+х=<BR>
+0 1         2 3 4         5&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; cos(x)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+1.0000  0.5403  -0.4161  -0.9900  -0.6536  0.2837&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; sin(x)/x&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans = -0.0862<BR>
+</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Вычисление массива косинусов здесь прошло корректно. А вот вычисление массива значений функции <I>sin(x)/x </I>дает неожиданный, на первый взгляд, эффект — вместо массива с шестью элементами вычислено единственное значение!<BR>
+Причина &laquo;парадокса&raquo; здесь в том, что оператор / вычисляет отношение двух <I>матриц, векторов </I>или многомерных <I>массивов. </I>Если они одной размерности, то результат будет одним числом, что в данном случае и выдала система. Чтобы действительно получить вектор значений sin(x)<I>/x, </I>надо использовать специальный оператор <I>поэлементного </I>деления массивов — . /. Тогда будет получен массив чисел:<BR>
+</font><font size="3" face="Courier New">&raquo; sin(x)./x<BR>
+Warning: Divide by zero.<BR>
+ans =<BR>
+NaN  0.8415 0.4546 0.0470 -0.1892-0.1918</font><font size="3" face="Times New Roman"><BR>
+Впрочем, и тут без особенностей не обошлось. Так, при <I>х </I>= 0 значение <I>sin(x)/x </I>дает устранимую неопределенность вида 0/0=1. Однако, как и всякая численная система, MATLAB классифицирует попытку деления на 0 как ошибку и выводит соответствующее предупреждение. А вместо ожидаемого численного значения выводится символьная константа NaN, означающая, что неопределенность
+0/0 — это все же не обычное число.<BR>
+Выражения с оператором : могут использоваться в качестве аргументов функций для получения множественных их значений. Например, в приводимом ниже примере вычислены функции Бесселя порядка от 0 до 5 со значением аргумента 0.5:<BR>
+</font><font size="3" face="Courier New">&raquo; bessel(0:l:5,l/2)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+0.9385 0.2423 0.0306 0.0026 0.0002 0.0000</font><font size="3" face="Times New Roman"><BR>
+А в следующем примере вычислено шесть значений функции Бесселя нулевого порядка для значений аргумента от 0 до 5 с шагом 1:<BR>
+</font><font size="3" face="Courier New">&raquo; bessel(0.0:1:5)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+1.0000&nbsp; 0.7652&nbsp;&nbsp; 0.2239 -0.2601&nbsp;&nbsp; -0.3971&nbsp; -0.1776</font><font size="3" face="Times New Roman"><BR>
+</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Таким образом, оператор : является весьма удобным средством задания регулярной последовательности чисел. Он широко используется при работе со средствами построения графиков. В дальнейшем мы расширим представление о возможностях этого оператора.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="18"></a>Сообщения 
+  об ошибках и исправление ошибок</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+Важное значение при диалоге с системой MATLAB имеет <I>диагностика ошибок. </I>Вряд ли есть пользователь, помнящий точное написание тысяч операторов и функций, входящих в систему MATLAB и в пакеты прикладных программ. Поэтому никто не застрахован от ошибочного написания математических выражений или команд. MATLAB диагностирует вводимые команды и выражения и выдает соответствующие сообщения об ошибках или предупреждения. Пример вывода сообщения об ошибке (деление на 0) только что приводился.<BR>
+Рассмотрим еще ряд примеров. Введем, к примеру, ошибочное выражение &raquo; sqr(2)<BR>
+и нажмем клавишу ENTER. Система сообщит об ошибке:<BR>
+</font><font size="3" face="Courier New">??? Undefined function or variable 'sqr'.</font><font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Times New Roman">Это сообщение говорит о том, что не определена переменная или функция, и указывает, какая именно — sqr. В данном случае, разумеется, можно просто набрать правильное выражение. Однако в случае громоздкого выражения лучше воспользоваться редактором. Для этого достаточно нажать клавишу вниз<I> </I>для перелистывания предыдущих строк. В результате в строке ввода появится выражение &raquo; sqr(2)<BR>
+с курсором в его конце. В версии MATLAB 6 можно теперь нажать клавишу Tab. Система введет подсказку, анализируя уже введенные символы. Если вариантов несколько, клавишу Tab придется нажать еще раз. Из предложенных системой трех операторов выбираем sqrt. Теперь с помощью клавиши вниз вновь выбираем нужную строку и, пользуясь клавишей влево , устанавливаем курсор после буквы г. Теперь нажмем клавишу вверх, а затем клавишу ENTER. Выражение примет следующий вид:<BR>
+</font><font size="3" face="Courier New">&raquo; sqrt(2)<BR>
+ans= 1.4142</font><font size="3" face="Times New Roman"><BR>
+Если бы был только один вариант окончания введенных символов, то после нажатия клавиши Tab система бы закончила наш ввод без перевода строки. Вычисления дают ожидаемый результат — значение квадратного корня из двух.<BR>
+В системе MATLAB внешние определения используются точно так же, как и встроенные функции и операторы. Никаких дополнительных указаний на их применение делать не надо. Достаточно лишь позаботиться о том, чтобы используемые определения действительно существовали в виде файлов с расширением .m. Впрочем, если вы забудете об этом или введете имя несуществующего определения, то система отреагирует на это звуковым сигналом (звонком) и выводом сообщения об ошибке:<BR>
+</font><font size="3" face="Courier New">&raquo; hsin(1)<BR>
+??? Undefined function or variable 'hsin'.<BR>
+&raquo; sinh(1)<BR>
+ans=                                1.1752</font><font size="3" face="Times New Roman"><BR>
+В этом примере мы забыли (нарочно), какое имя имеет внешняя функция, вычисляющая гиперболический синус. Система подсказала, что функция или переменная с именем hsin не определена ни как внутренняя, ни как m-функция. Зато далее мы видим, что функция с именем sinh есть в составе функций системы MATLAB — она задана в виде М-функции. Между тем в последнем примере мы не давали системе никаких указаний на то, что следует искать именно внешнюю функцию! И это вычисление прошло так же просто, как вычисление встроенной функции, такой как sin. Разумеется, скорость вычислений по внешним определениям несколько ниже, чем по встроенным функциям или операторам.<BR>
+При этом вычисления происходят следующим образом: вначале система быстро определяет, имеется ли введенное слово среди служебных слов системы. Если да, то нужные вычисления выполняются сразу, если нет, система ищет m-файл с соответствующим именем на диске. Если файла нет, то выдается сообщение об ошибке, и вычисления останавливаются. Если же файл найден, он загружается с жесткого диска в память машины и исполняется. Этот алгоритм аналогичен применяемому в развиваемых и адаптируемых к задачам пользователя языкам программирования ЛОГО и ФОРТ [7, 8].<BR>
+Иногда в ходе вывода результатов вычислений появляется сокращение NaN (от слов Not a Number — не число). Оно обозначает неопределенность, например вида 0/0 или Inf/Inf, где Inf — системная переменная со значением машинной бесконечности. Могут появляться и различные предупреждения об ошибках (на английском языке). Например, при делении на 0 конечного/ числа появляется предупреждение &laquo;Warning: Devide by Zero.&raquo; (&laquo;Внимание: Деление на ноль&raquo;). Диапазон чисел, представимых в системе, лежит от 10-<SUP>308</SUP> до 10+<SUP>308</SUP>.<BR>
+Вообще говоря, в MATLAB надо отличать <I>предупреждение </I>об ошибке от <I>сообщения </I>о ней. <I>Предупреждения </I>(обычно после слова Warning) не останавливают вычисления и лишь предупреждают пользователя о том, что диагностируемая ошибка способна повлиять на ход вычислений. <I>Сообщение </I>об ошибке (после знаков ???) останавливает вычисления.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="19"></a>Форматы 
+  чисел</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+По умолчанию MATLAB выдает числовые результаты в <I>нормализованной форме </I>с четырьмя цифрами после десятичной точки и одной до нее. Многих такая форма представления не всегда устраивает. Поэтому при работе с числовыми данными можно задавать различные <I>форматы </I>представления чисел. Однако в любом случае все вычисления проводятся с предельной, так называемой <I>двойной, </I>точностью. Для установки формата представления чисел используется команда &raquo; format name
+где name — имя формата. Для числовых данных name может быть следующим сообщением: short — короткое представление в фиксированном формате (5 знаков), short e — короткое представление в экспоненциальном формате (5 знаков мантиссы и 3 знака порядка), long — длинное представление в фиксированном формате (15 знаков), long e — длинное представление в экспоненциальном формате (15 знаков мантиссы и 3 знака порядка), hex — представление чисел в шестнадцатеричной форме; bank — представление для денежных единиц.<BR>
+Для иллюстрации различных форматов рассмотрим вектор, содержащий два элемента-числа:<BR>
+</font><font size="3" face="Courier New">х=[4/3 1.2345е-6]</font><font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Times New Roman">В различных форматах их представления будут иметь следующий вид:
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="445" HEIGHT="79">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="107" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="174" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="163" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="79">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="107" HEIGHT="79">
+<DIV WIDTH="107" HEIGHT="79">
+<P align="left">
+<font size="3" face="Times New Roman">format short format short e format long format long e format bank<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="174" HEIGHT="79">
+<DIV WIDTH="174" HEIGHT="79">
+<P align="left">
+<font size="3" face="Times New Roman">1.3333 1.3333E+000 1.333333333333338 1.333333333333338E+000 1.33<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="163" HEIGHT="79">
+<DIV WIDTH="163" HEIGHT="79">
+<P align="left">
+<font size="3" face="Times New Roman">0.0000 1.2345E-006 0.000001234500000 1.234500000000000E-006 0.00<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="79">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="107" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="174" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="163" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Times New Roman">Задание формата сказывается только на <I>форме вывода </I>чисел. Вычисления все равно происходят в формате двойной точности, а ввод чисел возможен в любом удобном для пользователя виде.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="20"></a>Формирование 
+  векторов и матриц</font></B><font size="3" face="Times New Roman"><BR>
+  </font> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="21"></a>Особенности 
+  задания векторов и матриц</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+Описанные выше простые правила вычислений распространяются и на гораздо более сложные вычисления, которые (при использовании обычных языков программирования типа Бейсик или Паскаль) требуют составления специальных программ. MATLAB — система, специально предназначенная для проведения сложных вычислений с векторами, матрицами и массивами. При этом она по умолчанию предполагает, что каждая заданная переменная — это вектор, матрица или массив. Все определяется конкретным значением переменной. Например, если задано Х=1, то это значит, что X —это вектор с единственным элементом, имеющим значение 1. Если надо задать вектор из трех элементов, то их значения следует перечислить в квадратных скобках, разделяя пробелами. Так, например, присваивавание<BR>
+</font><font size="3" face="Courier New">&raquo; V=[l 2 3]&nbsp;</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New">V=<BR>
+1&nbsp;&nbsp; 2&nbsp;&nbsp; 3</font><font size="3" face="Times New Roman"><BR>
+задает вектор V, имеющий три элемента со значениями 1, 2 и 3. После ввода вектора система выводит его на экран дисплея.<BR>
+Задание матрицы требует указания нескольких строк. Для разграничения строк используется знак ; (точка с запятой). Этот же знак в конце ввода предотвращает вывод матрицы или вектора (и вообще результата любой операции) на экран дисплея. Так, ввод<BR>
+</font><font size="3" face="Courier New">&raquo; М=[1 2 3; 4 5 6;  7 8 9];</font><font size="3" face="Times New Roman"><BR>
+задает квадратную матрицу, которую можно вывести:<BR>
+&raquo; M<BR>
+M =<BR>
+1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">4&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;
+6<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">7&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;
+9<BR>
+</font><font size="3" face="Times New Roman">Возможен ввод элементов матриц и векторов в виде арифметических выражений, содержащих любые доступные системе функции, например:<BR>
+</font><font size="3" face="Courier New">&raquo; V= [2+2/(3+4) exp(5) sqrt(l0)]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; V&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> V =<BR>
+</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New">2.2857&nbsp;&nbsp;&nbsp;&nbsp; 148.4132&nbsp;&nbsp;&nbsp;&nbsp;
+3.1623</font><font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Times New Roman">Для указания отдельного элемента вектора или матрицы используются выражения вида V(1) или M(i. j). Например, если задать<BR>
+</font><font size="3" face="Courier New">&raquo; М(2, 2)<BR>
+</font><font size="3" face="Courier New">arts= 5<BR>
+</font><font size="3" face="Times New Roman">то результат будет равен 5. Если нужно присвоить элементу M(i. j) [<I>В тексте программ MATLAB лучше не использовать i и j как индексы, так как i и j — обозначение квадратного корня из -1. Но можно использовать I и J. — Примеч. ред.</I>] новое значение х, следует использовать выражение<BR>
+</font><font size="3" face="Courier New">M(i,j)=x</font><font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Times New Roman">Например, если элементу М(2, 2) надо присвоить значение 10, следует записать&nbsp;</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New"> &raquo; М(2, 2)=10</font><font size="3" face="Times New Roman"><BR>
+Выражение М( i) с одним индексом дает доступ к элементам матрицы, развернутым в один столбец. Такая матрица образуется из исходной, если подряд выписать ее столбцы.<BR>
+Следующий пример поясняет такой доступ к элементам матрицы М:<BR>
+</font><font size="3" face="Courier New">&raquo; М=[1 2 3; 4 5 6; 7 8 9]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М =<BR>
+1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3<BR>
+4&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 6<BR>
+7&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; М(2)<BR>
+ans =<BR>
+4<BR>
+&raquo; M(8)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+6<BR>
+&raquo; M(9)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+9<BR>
+&raquo; М(5)=100;&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; М&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М =<BR>
+1&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 3<BR>
+4&nbsp;&nbsp;&nbsp;&nbsp; 100&nbsp;&nbsp; 6<BR>
+7&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 9</font><font size="3" face="Times New Roman"><BR>
+Возможно задание векторов и матриц с комплексными элементами, например:<BR>
+</font><font size="3" face="Courier New">&raquo; i=sqrt(-l):<BR>
+&raquo; СМ =[1 2: 3 4] + i*[5 6: 7 8]</font><font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Times New Roman">или<BR>
+</font><font size="3" face="Courier New">&raquo; СМ - [1+5*1 2+6*1; 3+7*1 4+8*1]</font><font size="3" face="Times New Roman"><BR>
+Это создает матрицу:<BR>
+</font><font size="3" face="Courier New">CM=<BR>
+1.0000 + 5.00001&nbsp;&nbsp;&nbsp;&nbsp; 2.0000 + 6.00001&nbsp;</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New"> 3.0000 + 7.00001&nbsp;&nbsp;&nbsp;&nbsp; 4.0000 + 8.00001</font><font size="3" face="Times New Roman"><BR>
+Наряду с операциями над отдельными элементами матриц и векторов система позволяет производить операции умножения, деления и возведения в степень сразу над всеми элементами, т. е. над массивами. Для этого перед знаком операции ставится точка. Например, оператор * означает умножение для векторов или матриц, а оператор .* —поэлементное умножение всех элементов массива. Так, если М — матрица, то М.*2 даст матрицу, все элементы которой умножены на скаляр — число 2. Впрочем, для умножения матрицы,на скаляр оба выражения — М*2 и М.*2 — оказываются эквивалентными.<BR>
+Имеется также ряд особых функций для задания векторов и матриц. Например, функция magic(n) задает магическую матрицу размера <I>пхп, у </I>которой сумма всех столбцов, всех строк и даже диагоналей равна одному и тому же числу:<BR>
+</font><font size="3" face="Courier New">&raquo; M=magic(4)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> М =</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="159" HEIGHT="65">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">16<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">11<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">10<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">9<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">12<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="17">
+<DIV WIDTH="32" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="17">
+<DIV WIDTH="48" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="17">
+<DIV WIDTH="32" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Courier New">&raquo; sum(M)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=<BR>
+34&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp;
+34&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; sum(M')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=<BR>
+34&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp;&nbsp;
+34&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; sum(diag(M))&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=<BR>
+34&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; M(1,2)+M(2,2)+M(3,2)+M(4,2)<BR>
+ans= 34<BR>
+</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Уже сама по себе возможность создания такой матрицы с помощью простой функции magic заинтересует любителей математики. Но векторных и матричных функций в системе множество, и мы их детально рассмотрим в дальнейшем. Напомним, что для стирания переменных из рабочей области памяти служит команда clear.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="22"></a>Объединение 
+  малых матриц в большую</font></P>
+<P align="left"><font size="3" face="Times New Roman"><BR>
+  Описанный способ задания матриц позволяет выполнить операцию <I>конкатенации 
+  — </I>объединения малых матриц в большую. Например, создадим вначале магическую 
+  матрицу размера 3x3:<BR>
+  &raquo; A=magic(3)<BR>
+  А=</font> </P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="106" HEIGHT="48">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="15">
+<DIV WIDTH="30" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="15">
+<DIV WIDTH="30" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="16">
+<DIV WIDTH="30" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="16">
+<DIV WIDTH="30" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="17">
+<DIV WIDTH="30" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="17">
+<DIV WIDTH="47" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">9<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="30" HEIGHT="17">
+<DIV WIDTH="30" HEIGHT="17">
+<P align="left">
+<font size="3" face="Times New Roman">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Times New Roman">Теперь можно построить матрицу, содержащую четыре матрицы:<BR>
+</font><font size="3" face="Courier New">&raquo; В-[А А+16;А+32 А+16]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> В =</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="263" HEIGHT="106">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="26">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="42" HEIGHT="26">
+<DIV WIDTH="42" HEIGHT="26">
+<P align="left">
+<font size="3" face="Times New Roman">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="26">
+<DIV WIDTH="47" HEIGHT="26">
+<P align="left">
+<font size="3" face="Times New Roman">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="26">
+<DIV WIDTH="47" HEIGHT="26">
+<P align="left">
+<font size="3" face="Times New Roman">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="26">
+<DIV WIDTH="47" HEIGHT="26">
+<P align="left">
+<font size="3" face="Times New Roman">24<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="26">
+<DIV WIDTH="47" HEIGHT="26">
+<P align="left">
+<font size="3" face="Times New Roman">17<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="26">
+<DIV WIDTH="32" HEIGHT="26">
+<P align="left">
+<font size="3" face="Times New Roman">22<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="26">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="42" HEIGHT="16">
+<DIV WIDTH="42" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">19<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">21<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">23<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="42" HEIGHT="16">
+<DIV WIDTH="42" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">9<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">20<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">25<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">18<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="42" HEIGHT="16">
+<DIV WIDTH="42" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">40<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">33<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">38<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">24<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">17<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">22<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="42" HEIGHT="16">
+<DIV WIDTH="42" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">35<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">37<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">39<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">19<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">21<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">23<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="42" HEIGHT="16">
+<DIV WIDTH="42" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">36<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">41<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">34<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">20<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">25<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">18<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Times New Roman">Полученная матрица имеет уже размер 6x6. Вычислим сумму ее столбцов:<BR>
+</font><font size="3" face="Courier New">&raquo; sum(B)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;ans =<BR>
+126&nbsp;&nbsp;&nbsp;&nbsp; 126&nbsp;&nbsp;&nbsp;&nbsp; 126&nbsp;&nbsp;&nbsp;&nbsp;
+126&nbsp;&nbsp;&nbsp;&nbsp; 126&nbsp;&nbsp;&nbsp;&nbsp; 126<BR>
+</font><font size="3" face="Times New Roman">Любопытно, что она одинакова для всех столбцов. А для вычисления суммы строк используем команду<BR>
+</font><font size="3" face="Courier New">&raquo; sum(B')&nbsp;</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New"> ans =<BR>
+78&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp; 174&nbsp;&nbsp;&nbsp;&nbsp;
+174&nbsp;&nbsp;&nbsp;&nbsp; 174</font><font size="3" face="Times New Roman"><BR>
+Здесь запись В' означает транспонирование матрицы В, т. е. замену строк столб цами. На этот раз сумма оказалась разной. Это отвергает изначально возникши предположение, что матрица В тоже является магической. Для истинно магической матрицы суммы столбцов и строк должны быть одинаковыми:<BR>
+</font><font size="3" face="Courier New">&raquo; D=magic(6)<BR>
+D=</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="275" HEIGHT="100">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="22">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="22">
+<DIV WIDTH="54" HEIGHT="22">
+<P align="left">
+<font size="3" face="Times New Roman">35<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="22">
+<DIV WIDTH="47" HEIGHT="22">
+<P align="left">
+<font size="3" face="Times New Roman">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="22">
+<DIV WIDTH="47" HEIGHT="22">
+<P align="left">
+<font size="3" face="Times New Roman">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="22">
+<DIV WIDTH="47" HEIGHT="22">
+<P align="left">
+<font size="3" face="Times New Roman">26<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="22">
+<DIV WIDTH="47" HEIGHT="22">
+<P align="left">
+<font size="3" face="Times New Roman">19<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="22">
+<DIV WIDTH="33" HEIGHT="22">
+<P align="left">
+<font size="3" face="Times New Roman">24<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="22">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="16">
+<DIV WIDTH="54" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">32<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">21<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">23<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">25<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="15">
+<DIV WIDTH="54" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">31<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">9<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">22<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">27<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="15">
+<DIV WIDTH="33" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">20<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="16">
+<DIV WIDTH="54" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">28<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">33<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">17<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">10<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="16">
+<DIV WIDTH="54" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">30<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">34<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">12<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">16<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="54" HEIGHT="15">
+<DIV WIDTH="54" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">36<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">29<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">18<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="15">
+<DIV WIDTH="33" HEIGHT="15">
+<P align="left">
+<font size="3" face="Times New Roman">11<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Courier New">&raquo; sum(D)<BR>
+ans=<BR>
+111  111  111  111  111  111&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; sum(D')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=<BR>
+111  111  111  111  111  111</font><font size="3" face="Times New Roman"><BR>
+Более того, для магической матрицы одинаковой является и сумма элементов по основным диагоналям (главной диагонали и главной антидиагонали).<BR>
+</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="23"></a>Удаление 
+  столбцов и строк матриц</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+Для формирования матриц и выполнения ряда матричных операций возникает необходимость удаления отдельных столбцов и строк матрицы. Для этого используются пустые квадратные скобки [ ]. Проделаем это с матрицей М:<BR>
+</font><font size="3" face="Courier New">&raquo; М=[1 2 3; 4 5 6; 7 8 9]<BR>
+М =</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="105" HEIGHT="48">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="29" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="29" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="29" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="29" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="29" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="29" HEIGHT="16">
+<DIV WIDTH="29" HEIGHT="16">
+<P align="left">
+<font size="3" face="Times New Roman">9<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Times New Roman">Удалим второй столбец используя оператор : (двоеточие):&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; М(:,2)=[ ]</font><font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Courier New">1&nbsp;&nbsp;&nbsp; 3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4&nbsp;&nbsp;&nbsp; 6</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7&nbsp;&nbsp;&nbsp; 9</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">А теперь, используя оператор : (двоеточие), удалим вторую строку:<BR>
+</font><font size="3" face="Courier New">&raquo; М(2,:)=[ ]<BR>
+М =<BR>
+1&nbsp;&nbsp;&nbsp; 3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7&nbsp;&nbsp;&nbsp; 9</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="24"></a>Операции 
+  с рабочей областью и текстом сессии</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="25"></a>Дефрагментация 
+  рабочей области</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+По мере задания одних переменных и стирания других рабочая область перестает быть непрерывной и начинает содержать &laquo;дыры&raquo; и всякий &laquo;мусор&raquo;. Это рано или поздно может привести к ухудшению работы системы или даже к нехватке оперативной памяти. Подобная ситуация становится возможной, если вы работаете с достаточно большими массивами данных.<BR>
+Во избежание непроизводительных потерь памяти при работе с объемными данными (а векторы, матрицы и массивы относятся к таковым) следует использовать команду pack, осуществляющую дефрагментацию рабочей области. Эта команда переписывает все определения рабочей области на жесткий диск, очищает рабочую область и затем заново считывает все определения без &laquo;дыр&raquo; и &laquo;мусора&raquo; в рабочую область.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="26"></a>Сохранение 
+  рабочей области сессии</font> </P>
+<P align="justify">
+<FONT face="Times New Roman" size="3"><BR>
+Переменные и определения новых функций в системе MATLAB хранятся в особой области памяти, именуемой рабочей областью. MATLAB позволяет сохранять значения переменных в виде бинарных файлов с расширением .mat Для этого служит команда save, которая может использоваться в ряде форм:<BR>
+</FONT>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;save fname — записывается рабочая область всех переменных в файле бинарного формата с именем fname.mat;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;save fname X — записывает только значение переменной X;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;save fname X Y Z — записывает значения переменных X, Y и Z.&nbsp;</font></li>
+</ul>
+<p align="left"><font size="3" face="Times New Roman"> После этих параметров можно указать ключи, уточняющие формат записи файлов:&nbsp;</font></p>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;-mat — двоичный МАТ-формат, используемый по умолчанию;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;-ascii — ASCII-формат единичной точности (8 цифр);&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;-ascii -double — ASCII-формат двойной точности (16 цифр);&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;-ascii -double -tabs — формат с разделителем и метками табуляции;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;V4 — запись МАТ-файла в формате версии MATLAB 4;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;-append — добавление в существующий МАТ-файл.<BR>
+    </font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Возможно использование слова save и в формате функции, а не команды, например:<BR>
+</font><font size="3" face="Courier New">save ('fname', 'varT . 'var2')</font><font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Times New Roman">В этом случае имена файлов и переменных задаются строковыми константами.<BR>
+Следует отметить, что возможности сохранения всего <I>текста сессии, </I>формируемой в командном режиме, команда save не дает. И не случайно! Дело в том, что сессия является результатом проб и ошибок, и ее текст наряду с правильными определениями содержит сообщения об ошибках, переопределения функций и переменных и много прочей &laquo;шелухи&raquo;. Необходимости сохранять такое &laquo;творчество&raquo; обычно нет. А если есть — для этого служит команда diary, описанная чуть ниже.<BR>
+Тем не менее это не значит, что вы не имеете возможности записать только то рациональное зерно, которое родилось в ходе попыток реализации ваших алгоритмов и методов решения задач. Надо просто воспользоваться редактором и отладчиком, которые позволяют (после отладки программы) получить документ в корректной форме без синтаксических и иных ошибок. Такой документ сохраняется в текстовом формате в виде файла с расширением .m.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="27"></a>Ведение 
+  дневника</font></P>
+<P align="justify"><font size="3" face="Times New Roman"><BR>
+  Мы отмечали, что сессии не записываются на диск стандартной командой save. Однако 
+  если такая необходимость есть, можно воспользоваться специальной командой для 
+  ведения так называемого <I>дневника </I>сессии:<BR>
+  </font> </P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> diary filename — ведет запись на диск всех команд в строках ввода и полученных результатов в виде текстового файла с указанным именем;</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;diary off — приостанавливает запись в файл;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;diary on — вновь начинает запись в файл.<BR>
+    </font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Таким образом, чередуя команды diary off и diary on, можно сохранять нужные фрагменты сессии в их формальном виде. Команду diary можно задать и в виде функции diary('file'), где строка 'file' задает имя файла. Следующий пример поясняет технику применения команды diary:<BR>
+</font><font size="3" face="Courier New">&raquo; diary myfile.m&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; 1+2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 3<BR>
+&raquo; diary off</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; 2+3&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+5&nbsp;</font>
+</P>
+<P align="left">
+<font face="Courier New"><font size="3"> &raquo; diary on<BR>
+</font><I><font size="3">&raquo; </font> </I><font size="3">sin(l)&nbsp;</font></font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =<BR>
+0.8415&nbsp;</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New"> &raquo; diary off</font><font size="3" face="Times New Roman"><BR>
+Нетрудно заметить, что в данном примере первая операция — 1+2=3 — будет записана в файл myfile.m, вторая — 2+3=5 — не будет записана, третья операция — sin(1)=0.8415 — снова будет записана. Таким образом, будет создан файл сценария (Script-файл) следующего вида:<BR>
+</font><font size="3" face="Courier New">1+2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 3<BR>
+diary off sin(1)<BR>
+ans =<BR>
+0.8415&nbsp;</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New"> diary off</font><font size="3" face="Times New Roman"><BR>
+Он приведен в том виде, как записан, т. е. с пробелами между строк. Одна из распространенных ошибок начинающих пользователей — попытка запустить подобный файл в командной строке указанием его имени:<BR>
+</font><font size="3" face="Courier New">&raquo; myfile<BR>
+??? ans =<BR>
+|</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;Missing variable or function.<BR>
+Error in ==&gt; С:\MATLAB\bin\niyfile.m&nbsp;</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New"> On line 3   --&gt; ans =</font><font size="3" face="Times New Roman"><BR>
+</font><font size="3" face="Times New Roman">Обычно это приводит к ошибкам, так как данный файл — это просто текстовая запись команд и результатов их выполнения, не проверяемая на корректность и содержащая ряд строк, ошибочных с позиций синтаксиса языка программирования MATLAB — например, выражения ans =. Зато команда type позволяет просмотреть текст такого файла со всеми записанными действиями:<BR>
+</font><font size="3" face="Courier New">&raquo; type myfile<BR>
+1+2<BR>
+ans=<BR>
+3&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> diary off.<BR>
+ans=<BR>
+0.8415&nbsp;</font>
+</P>
+<P align="justify">
+<font size="3" face="Courier New"> diary off</font><font size="3" face="Times New Roman"><BR>
+Во избежание отмеченных казусов рекомендуется записывать файл с расширением, отличным от .m, например .txt. Это позволит встраивать подобные текстовые файлы дневника сессии в документы, содержащие ее описание.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="28"></a>Загрузка 
+  рабочей области сессии</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman"><BR>
+Для загрузки рабочей области ранее проведенной сессии (если она была сохранена) можно использовать команду load:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;load fname ... — загрузка ранее сохраненных в файле fname.mat определений со спецификациями на месте многоточия, подобными описанным для команды save (включая ключ -mat для загрузки файлов с расширением .mat обычного бинарного формата, используемого по умолчанию);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">1oad( 'fname'....) — загрузка файла fname.mat в форме функции.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Если команда (или функция) load используется в ходе проведения сессии, то произойдет замена текущих значений переменных теми значениями, которые были сохранены в считываемом МАТ-файле.</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Для задания имен загружаемых файлов может использоваться знак *, означающий загрузку всех файлов с определенными признаками. Например, load demo*.mat означает загрузку всех файлов с началом имени demo, например demol, demo2, demoa, demob и т. д. Имена загружаемых файлов можно формировать с помощью операций над строковыми выражениями.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="29"></a>Завершение 
+  вычислений и работы с системой</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="30"></a>Завершение 
+  вычислений</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+Иногда из-за ошибок в программе или из-за сложности решаемой задачи MATLAB &laquo;зацикливается&raquo; и перестает выдавать результаты либо непрерывно выдает их, хотя в этом уже нет необходимости. Для прерывания вычислений в этом случае достаточно нажать одновременно клавиши Ctrl и С (латинское).</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="31"></a>Завершение 
+  работы с системой</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman"><BR>
+Для завершения работы с системой можно использовать команды exit, quit (которые сохраняют содержимое рабочей области и выполняет другие действия в соот</font><font FACE="Times New Roman" SIZE="3" COLOR="#000000">ветствии
+с файлом сценария finish.m) или комбинацию
+клавиш Ctrl+Q. Если необходимо сохранить
+значения всех переменных (векторов, матриц)
+системы, то перед вводом команды exit следует
+дать команду save нужной формы. Команда load
+после загрузки системы считывает значения
+этих переменных и позволяет начать работу с
+системой с того момента, когда она была
+прервана.
+</font></P>
+<font FACE="Times New Roman" SIZE="3" COLOR="#000000">
+<p>На этом мы закончим начальную экскурсию в
+технику матричных вычислений системы MATLAB.
+Мы расширим представления о ней в
+последующих уроках.</p>
+</font> 
+<p align="left"><font size="3" face="Times New Roman"><BR>
+  </font><B><font face="Times New Roman" size="4"><a name="32"></a>Что нового 
+  мы узнали?</font></B><font size="3" face="Times New Roman"><BR>
+  </font><font size="3" face="Times New Roman">В этом уроке мы научились:</font></p>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Запускать систему MATLAB.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Редактировать документы и управлять их окном.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Выполнять простые расчеты.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Работать с числами, константами и переменными разного типа.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Задавать текстовые комментарии.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Использовать наиболее распространенные операторы и функции.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Распознавать сообщения об ошибках и предупреждения.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Задавать разные форматы чисел.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Осуществлять простые операции с матрицами.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Вести дневник сессии.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Дефрагментировать, сохранять и загружать рабочую область.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Завершать работу с системой.<BR>
+    </font></li>
+</ul>
+</BODY>
+</HTML>
+

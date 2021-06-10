@@ -1,0 +1,1232 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="sistema.files/filelist.xml">
+<link rel=Edit-Time-Data href="sistema.files/editdata.mso">
+<link rel=OLE-Object-Data href="sistema.files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Решение системы линейных алгебраических уравнений</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Орлов</o:Author>
+  <o:LastAuthor>Орлов</o:LastAuthor>
+  <o:Revision>11</o:Revision>
+  <o:TotalTime>683</o:TotalTime>
+  <o:LastPrinted>2009-03-02T08:50:00Z</o:LastPrinted>
+  <o:Created>2009-03-17T15:44:00Z</o:Created>
+  <o:LastSaved>2009-03-20T16:05:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>631</o:Words>
+  <o:Characters>3602</o:Characters>
+  <o:Lines>30</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4225</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:AutoHyphenation/>
+  <w:HyphenationZone>17</w:HyphenationZone>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Обычный;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	tab-stops:411.1pt;
+	font-size:18.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-next:Обычный;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	tab-stops:411.1pt;
+	font-size:16.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	color:#993300;
+	mso-bidi-font-weight:normal;}
+h3
+	{mso-style-next:Обычный;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	tab-stops:411.1pt;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+h4
+	{mso-style-next:Обычный;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	text-indent:21.3pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	tab-stops:411.1pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Обычный;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:21.25pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	tab-stops:411.1pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:EN-US;
+	font-weight:normal;}
+h6
+	{mso-style-next:Обычный;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Обычный;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:center;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 233.85pt right 467.75pt;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 233.85pt right 467.75pt;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{mso-style-noshow:yes;
+	mso-style-next:Обычный;
+	margin-top:3.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:1.0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.45pt;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("sistema.files/header.htm"/*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*//*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*/) fs;
+	mso-footnote-continuation-separator:url("sistema.files/header.htm"/*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*//*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*/) fcs;
+	mso-endnote-separator:url("sistema.files/header.htm"/*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*//*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*/) es;
+	mso-endnote-continuation-separator:url("sistema.files/header.htm"/*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*//*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*/) ecs;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 1.0cm 70.9pt 70.9pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-page-numbers:num-in-dash 1;
+	mso-even-header:url("sistema.files/header.htm"/*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*//*tpa=http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/header.htm*/) eh1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:143591471;
+	mso-list-type:hybrid;
+	mso-list-template-ids:779243976 68747265 68747267 68747269 68747265 68747267 68747269 68747265 68747267 68747269;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:1571453467;
+	mso-list-type:hybrid;
+	mso-list-template-ids:988458488 68747281 68747289 68747291 68747279 68747289 68747291 68747279 68747289 68747291;}
+@list l1:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:1882787698;
+	mso-list-type:simple;
+	mso-list-template-ids:68747281;}
+@list l2:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:18.0pt;
+	mso-level-number-position:left;
+	margin-left:18.0pt;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab3/Fon.jpg*//*tpa=http://orloff.am.tpu.ru/matlab/Lab3/Fon.jpg*/);
+}
+div.MsoNormal1 {mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+li.MsoNormal1 {mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+p.MsoNormal1 {mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:black;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Обычная таблица";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+table.MsoTableGrid
+	{mso-style-name:"Сетка таблицы";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin-top:3.0pt;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:3.0pt;
+	mso-para-margin-left:0cm;
+	text-align:justify;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="3074"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=RU style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<h2>Решение системы линейных алгебраических уравнений</h2>
+
+<p class=MsoNormal1 style='margin-top:3.0pt;margin-right:0cm;margin-bottom:3.0pt;
+margin-left:0cm;text-align:justify;text-indent:36.0pt'><span style='font-size:
+14.0pt;mso-bidi-font-size:10.0pt;color:windowtext'>СЛАУ в матричной форме записывается
+  в виде
+      <o:p></o:p>
+</span></p>
+<p class=MsoNormal1 style='margin-top:3.0pt;margin-right:0cm;margin-bottom:3.0pt;
+margin-left:72.0pt;text-align:justify'><i style='mso-bidi-font-style:normal'><span style='font-size:14.0pt;mso-bidi-font-size:10.0pt;color:windowtext;
+mso-ansi-language:EN-US'
+lang=EN-US><strong>AX</strong></span></i><span style='font-size:14.0pt;mso-bidi-font-size:
+10.0pt;color:windowtext'><strong> = </strong></span><span style="font-weight: bold"><i style='mso-bidi-font-style:normal'><span
+lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:10.0pt;color:windowtext;
+mso-ansi-language:EN-US'>B</span></i></span><span style='font-size:14.0pt;mso-bidi-font-size:
+10.0pt;color:windowtext'>,<span style='mso-tab-count:10'>                                                                                           </span>(1)
+      <o:p></o:p>
+</span></p>
+<p class=MsoNormal1 style='margin-top:3.0pt;margin-right:0cm;margin-bottom:3.0pt;
+margin-left:0cm;text-align:justify;text-indent:36.0pt'><span style='font-size:
+14.0pt;mso-bidi-font-size:10.0pt;color:windowtext'>где</span></p>
+<img src="index5.files/p01.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/index5.files/p01.gif" width="467" height="114" border="1">
+<p class=MsoNormal1 style='margin-top:3.0pt;margin-right:0cm;margin-bottom:3.0pt;
+margin-left:0cm;text-align:justify;text-indent:36.0pt'><span style='font-size:
+14.0pt;mso-bidi-font-size:10.0pt;color:windowtext'>В скалярной форме записи
+      <o:p></o:p>
+</span></p>
+<img src="index5.files/p03.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/index5.files/p03.gif" width="421" height="114" border="1">
+<p class=MsoNormal1 style='margin-top:3.0pt;margin-right:0cm;margin-bottom:3.0pt;
+margin-left:0cm;text-align:justify;text-indent:36.0pt'><span style='font-size:
+14.0pt;mso-bidi-font-size:10.0pt;color:windowtext'>Система (1) имеет
+  единственное решение, если</span></p>
+<p class=MsoNormal1 style='margin-top:3.0pt;margin-right:0cm;margin-bottom:3.0pt;
+margin-left:0cm;text-align:justify;text-indent:36.0pt'><span style='font-size:
+14.0pt;mso-bidi-font-size:10.0pt;color:windowtext'><img src="index5.files/p02.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/index5.files/p02.gif" width="117" height="31" border="1">.
+  <o:p></o:p>
+</span></p>
+<h2 style='page-break-after:auto'>1. Нормы векторов и матриц</h2>
+
+<h2>1.1. Нормы векторов</h2>
+
+<table border=1 cellpadding=0 cellspacing=0 bgcolor="#FFFFFF" class=MsoTableGrid
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=676 valign=top style='width:506.85pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Определение. </b>Пусть
+  имеется <i style='mso-bidi-font-style:normal'><span lang=EN-US
+  style='mso-ansi-language:EN-US'>n</span><span lang=EN-US> </span></i>- мерное
+  пространство вещественных чисел <sub><!--[if gte vml 1]><v:shape id="_x0000_i1032"
+   type="#_x0000_t75" style='width:18.75pt;height:18pt'>
+   <v:imagedata src="sistema.files/image139.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image139.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=25 height=24
+  src="sistema.files/image016.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image016.gif" v:shapes="_x0000_i1032"><![endif]></sub>.
+  Если для любого вектора <sub><!--[if gte vml 1]><v:shape id="_x0000_i1033"
+   type="#_x0000_t75" style='width:44.25pt;height:18pt'>
+   <v:imagedata src="sistema.files/image140.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image140.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=59 height=24
+  src="sistema.files/image018.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image018.gif" v:shapes="_x0000_i1033"><![endif]></sub><span
+  style='mso-spacerun:yes'> </span>существует число <sub><!--[if gte vml 1]><v:shape
+   id="_x0000_i1034" type="#_x0000_t75" style='width:21pt;height:21pt'>
+   <v:imagedata src="sistema.files/image141.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image141.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=28 height=28
+  src="sistema.files/image020.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image020.gif" v:shapes="_x0000_i1034"><![endif]></sub><span
+  style='mso-spacerun:yes'> </span>такое, что:</p>
+  <p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:
+  l2 level1 lfo2;tab-stops:list 18.0pt'><![if !supportLists]><span
+  style='mso-list:Ignore'>1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><sub><!--[if gte vml 1]><v:shape id="_x0000_i1035"
+   type="#_x0000_t75" style='width:41.25pt;height:21pt'>
+   <v:imagedata src="sistema.files/image142.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image142.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=55 height=28
+  src="sistema.files/image022.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image022.gif" v:shapes="_x0000_i1035"><![endif]></sub>,
+  причем <sub><!--[if gte vml 1]><v:shape id="_x0000_i1036" type="#_x0000_t75"
+   style='width:95.25pt;height:21pt'>
+   <v:imagedata src="sistema.files/image143.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image143.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=127 height=28
+  src="sistema.files/image024.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image024.gif" v:shapes="_x0000_i1036"><![endif]></sub>;</p>
+  <p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:
+  l2 level1 lfo2;tab-stops:list 18.0pt'><![if !supportLists]><span
+  style='mso-list:Ignore'>2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><sub><!--[if gte vml 1]><v:shape id="_x0000_i1037"
+   type="#_x0000_t75" style='width:78pt;height:21pt'>
+   <v:imagedata src="sistema.files/image144.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image144.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=104 height=28
+  src="sistema.files/image026.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image026.gif" v:shapes="_x0000_i1037"><![endif]></sub>,
+  где <span style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";
+  mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:
+  Symbol'><span style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>a</span></span><span
+  style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+  "Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+  style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>&Icirc;</span></span><i
+  style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
+  EN-US'>R</span></i>;</p>
+  <p class=MsoNormal style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:
+  l2 level1 lfo2;tab-stops:list 18.0pt'><![if !supportLists]><span
+  style='mso-list:Ignore'>3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><![endif]><sub><!--[if gte vml 1]><v:shape id="_x0000_i1038"
+   type="#_x0000_t75" style='width:177.75pt;height:23.25pt'>
+   <v:imagedata src="sistema.files/image145.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image145.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=237 height=31
+  src="sistema.files/image028.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image028.gif" v:shapes="_x0000_i1038"><![endif]></sub>,<span
+  style='mso-ansi-language:EN-US'> </span>&#8209;<span lang=EN-US
+  style='mso-ansi-language:EN-US'> неравенство треугольника</span>;</p>
+  <p class=MsoNormal style='text-indent:0cm'>то <sub><!--[if gte vml 1]><v:shape
+   id="_x0000_i1039" type="#_x0000_t75" style='width:21pt;height:21pt'>
+   <v:imagedata src="sistema.files/image146.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image146.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=28 height=28
+  src="sistema.files/image020.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image020.gif" v:shapes="_x0000_i1039"><![endif]></sub><span
+  style='mso-spacerun:yes'> </span>называется <b style='mso-bidi-font-weight:
+  normal'>нормой</b> вектора <i style='mso-bidi-font-style:normal'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>X</span></i>.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>Чаще всего используются следующие нормы:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:0cm'>1. <i
+style='mso-bidi-font-style:normal'>max</i>-норма, или <i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='mso-ansi-language:EN-US'>m</span></i> - норма:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1040" type="#_x0000_t75" style='width:81.75pt;height:27pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image147.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image147.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=109 height=36
+src="sistema.files/image031.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image031.gif" v:shapes="_x0000_i1040"><![endif]></sub>;<span
+style='mso-tab-count:9'>                                                                                   </span>(2)</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:0cm'>2. <i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
+EN-US'>l</span></i>-норма:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1041" type="#_x0000_t75" style='width:69pt;height:41.25pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image148.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image148.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=92 height=55
+src="sistema.files/image033.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image033.gif" v:shapes="_x0000_i1041"><![endif]></sub>;<span
+style='mso-tab-count:9'>                                                                                      </span>(3)</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:0cm'>3. Евклидова
+норма:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1042" type="#_x0000_t75" style='width:87pt;height:44.25pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image149.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image149.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=116 height=59
+src="sistema.files/image035.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image035.gif" v:shapes="_x0000_i1042"><![endif]></sub>.<span
+style='mso-tab-count:9'>                                                                                 </span>(4)</p>
+
+<p class=MsoNormal>Далее будем всюду считать, что в пространстве <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1043" type="#_x0000_t75" style='width:18.75pt;height:18pt'>
+ <v:imagedata src="sistema.files/image139.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image139.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=25 height=24
+src="sistema.files/image016.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image016.gif" v:shapes="_x0000_i1043"><![endif]></sub><span
+style='mso-spacerun:yes'> </span>введена некоторая норма <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1044" type="#_x0000_t75" style='width:21pt;height:21pt'>
+ <v:imagedata src="sistema.files/image141.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image141.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=28 height=28
+src="sistema.files/image020.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image020.gif" v:shapes="_x0000_i1044"><![endif]></sub><span
+style='mso-spacerun:yes'> </span>(например, одна из норм (2-4)). Выбор
+конкретной нормы в практических задачах определяется тем, какие требования
+предъявляются к точности решения.</p>
+
+<table border=1 cellpadding=0 cellspacing=0 bgcolor="#FFFFFF" class=MsoTableGrid
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=676 valign=top style='width:506.85pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Определение. </b>Пусть
+  <i style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
+  EN-US'>X</span></i>* – точное значение вектора, <i style='mso-bidi-font-style:
+  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>X</span></i> &#8209;
+  приближенное значение. Определим <i style='mso-bidi-font-style:normal'>абсолютную
+  и относительную погрешность вектора</i> <i style='mso-bidi-font-style:normal'><span
+  lang=EN-US style='mso-ansi-language:EN-US'>X</span></i>*:</p>
+  <p class=MsoNormal style='text-indent:0cm'><span style='mso-tab-count:2'>                   </span><sub><!--[if gte vml 1]><v:shape
+   id="_x0000_i1045" type="#_x0000_t75" style='width:95.25pt;height:27pt'>
+   <v:imagedata src="sistema.files/image150.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image150.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=127 height=36
+  src="sistema.files/image037.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image037.gif" v:shapes="_x0000_i1045"><![endif]></sub>,<span
+  style='mso-tab-count:2'>            </span><sub><!--[if gte vml 1]><v:shape
+   id="_x0000_i1046" type="#_x0000_t75" style='width:95.25pt;height:48pt'>
+   <v:imagedata src="sistema.files/image151.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image151.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=127 height=64
+  src="sistema.files/image039.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image039.gif" v:shapes="_x0000_i1046"><![endif]></sub>.<span
+  style='mso-tab-count:5'>                                         </span><span
+  lang=EN-US style='mso-ansi-language:EN-US'>(5)<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2 style='page-break-after:auto'>1.<span lang=EN-US style='mso-ansi-language:
+EN-US'>2</span>. Нормы матриц</h2>
+
+<p class=MsoNormal>Согласованные с (2)-(4) нормы матрицы <i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A</span></i>:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:0cm'>1. <i
+style='mso-bidi-font-style:normal'>max</i>-норма, или <i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='mso-ansi-language:EN-US'>m</span></i> - норма:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1047" type="#_x0000_t75" style='width:116.25pt;height:47.25pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image152.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image152.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=155 height=63
+src="sistema.files/image041.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image041.gif" v:shapes="_x0000_i1047"><![endif]></sub>;<span
+style='mso-tab-count:8'>                                                                          </span>(6)</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:0cm'>2. <i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
+EN-US'>l</span></i>-норма:</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1048" type="#_x0000_t75" style='width:111pt;height:42.75pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image153.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image153.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=148 height=57
+src="sistema.files/image043.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image043.gif" v:shapes="_x0000_i1048"><![endif]></sub>;<span
+style='mso-tab-count:8'>                                                                           </span>(7)</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-indent:0cm'>3. Евклидова норма:</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1049" type="#_x0000_t75" style='width:102.75pt;height:42pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image154.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image154.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=137 height=56
+src="sistema.files/image045.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image045.gif" v:shapes="_x0000_i1049"><![endif]></sub>.<span
+style='mso-tab-count:9'>                                                                             </span>(8)</p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:0cm'><b><span
+style='color:#993300'>Свойства норм матриц.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo4;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='mso-list:Ignore'>1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><![endif]><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1050" type="#_x0000_t75" style='width:39pt;height:21pt'>
+ <v:imagedata src="sistema.files/image155.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image155.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=52 height=28
+src="sistema.files/image047.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image047.gif" v:shapes="_x0000_i1050"><![endif]></sub>,
+причем <sub><!--[if gte vml 1]><v:shape id="_x0000_i1051" type="#_x0000_t75"
+ style='width:126pt;height:21.75pt'>
+ <v:imagedata src="sistema.files/image156.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image156.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=168 height=29
+src="sistema.files/image049.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image049.gif" v:shapes="_x0000_i1051"><![endif]></sub>;</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo4;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='mso-list:Ignore'>2)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><![endif]><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1052" type="#_x0000_t75" style='width:72.75pt;height:21pt'>
+ <v:imagedata src="sistema.files/image157.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image157.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=97 height=28
+src="sistema.files/image051.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image051.gif" v:shapes="_x0000_i1052"><![endif]></sub>, где <span
+style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>a</span></span><span
+style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>&Icirc;</span></span><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
+EN-US'>R</span></i>;</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo4;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='mso-list:Ignore'>3)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><![endif]><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1053" type="#_x0000_t75" style='width:96pt;height:21pt'>
+ <v:imagedata src="sistema.files/image158.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image158.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=128 height=28
+src="sistema.files/image053.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image053.gif" v:shapes="_x0000_i1053"><![endif]></sub>;</p>
+
+<p class=MsoNormal>Дополнительно верны следующие свойства:</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo4;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='mso-list:Ignore'>4)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><![endif]><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1054" type="#_x0000_t75" style='width:77.25pt;height:21pt'>
+ <v:imagedata src="sistema.files/image159.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image159.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=103 height=28
+src="sistema.files/image055.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image055.gif" v:shapes="_x0000_i1054"><![endif]></sub>;</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l1 level1 lfo4;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='mso-list:Ignore'>5)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><![endif]><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1055" type="#_x0000_t75" style='width:81pt;height:21pt'>
+ <v:imagedata src="sistema.files/image160.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image160.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=108 height=28
+src="sistema.files/image057.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image057.gif" v:shapes="_x0000_i1055"><![endif]></sub><span
+lang=EN-US style='mso-ansi-language:EN-US'>, </span>здесь <i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='mso-ansi-language:EN-US'>X</span></i> – вектор.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:0cm'><b
+style='mso-bidi-font-weight:normal'>Пример.</b> Пусть</p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1056" type="#_x0000_t75"
+ style='width:86.25pt;height:63pt'>
+ <v:imagedata src="sistema.files/image161.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image161.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=115 height=84
+src="sistema.files/image059.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image059.gif" v:shapes="_x0000_i1056"><![endif]></sub>.</p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1057" type="#_x0000_t75"
+ style='width:332.25pt;height:21.75pt'>
+ <v:imagedata src="sistema.files/image162.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image162.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=443 height=29
+src="sistema.files/image061.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image061.gif" v:shapes="_x0000_i1057"><![endif]></sub>;</p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1058" type="#_x0000_t75"
+ style='width:329.25pt;height:21.75pt'>
+ <v:imagedata src="sistema.files/image163.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image163.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=439 height=29
+src="sistema.files/image063.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image063.gif" v:shapes="_x0000_i1058"><![endif]></sub>;</p>
+
+<p class=MsoNormal><sub><!--[if gte vml 1]><v:shape id="_x0000_i1059" type="#_x0000_t75"
+ style='width:218.25pt;height:26.25pt'>
+ <v:imagedata src="sistema.files/image164.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image164.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=291 height=35
+src="sistema.files/image065.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image065.gif" v:shapes="_x0000_i1059"><![endif]></sub>.</p>
+
+<h2>1.3. Вычисление норм в <span lang=EN-US style='mso-ansi-language:EN-US'>MATLAB</span></h2>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:0cm'>1. <i
+style='mso-bidi-font-style:normal'>max</i>-норма, или <i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='mso-ansi-language:EN-US'>m</span></i> - норма:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:14.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>nm = norm(A, inf);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:0cm'><span lang=EN-US
+style='mso-ansi-language:EN-US'>2. <i style='mso-bidi-font-style:normal'>l</i>-</span>норма<span
+lang=EN-US style='mso-ansi-language:EN-US'>:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:14.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>nl = norm(A,1);<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:0cm'><span lang=EN-US
+style='mso-ansi-language:EN-US'>3. </span>Евклидова<span style='mso-ansi-language:
+EN-US'> </span>норма<span lang=EN-US style='mso-ansi-language:EN-US'>:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='mso-bidi-font-size:14.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>ne = norm(A) = norm(A, 2).<o:p></o:p></span></b></p>
+
+<h2 style='page-break-after:auto'>2. Метод простых итераций</h2>
+
+<p class=MsoNormal>При большом числе неизвестных схема метода Гаусса, дающая
+точное решение, становится весьма сложной. В таких случаях более эффективным
+способом численного решения уравнений является метод итерации. </p>
+
+<p class=MsoNormal>Пусть дано уравнение (1)</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1060" type="#_x0000_t75" style='width:47.25pt;height:14.25pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image165.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image165.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=63 height=19
+src="sistema.files/image067.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image067.gif" v:shapes="_x0000_i1060"><![endif]></sub>.</p>
+
+<p class=MsoNormal>Заменим его равносильным уравнением</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1061" type="#_x0000_t75" style='width:69.75pt;height:17.25pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image166.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image166.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=93 height=23
+src="sistema.files/image069.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image069.gif" v:shapes="_x0000_i1061"><![endif]></sub>.<span
+style='mso-tab-count:9'>                                                                                      </span>(9)</p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt'>Здесь</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
+margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape id="_x0000_i1062" type="#_x0000_t75"
+ style='width:111.75pt;height:21.75pt' fillcolor="window">
+ <v:imagedata src="sistema.files/image167.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image167.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=149 height=29
+src="sistema.files/image071.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image071.gif" v:shapes="_x0000_i1062"><![endif]></sub>;<span
+style='mso-tab-count:1'>        </span><sub><span lang=EN-US style='mso-ansi-language:
+EN-US'><!--[if gte vml 1]><v:shape id="_x0000_i1063" type="#_x0000_t75"
+ style='width:50.25pt;height:84.75pt'>
+ <v:imagedata src="sistema.files/image168.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image168.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=113
+src="sistema.files/image073.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image073.gif" v:shapes="_x0000_i1063"><![endif]></span></sub>.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:0cm'>Вычислительная
+формула метода простых итераций:</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:0cm'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1064" type="#_x0000_t75" style='width:111pt;height:21pt'
+ o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+ o:borderrightcolor="this" fillcolor="window">
+ <v:imagedata src="sistema.files/image169.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image169.wmz" o:title=""/>
+ <w:bordertop type="single" width="4"/>
+ <w:borderleft type="single" width="4"/>
+ <w:borderbottom type="single" width="4"/>
+ <w:borderright type="single" width="4"/>
+</v:shape><![endif]--><![if !vml]><img width=150 height=30
+src="sistema.files/image170.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image170.gif" v:shapes="_x0000_i1064"><![endif]></sub>. <span
+style='mso-tab-count:8'>                                                                          </span>(10)</p>
+
+<p class=MsoNormal>Если последовательность <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1065" type="#_x0000_t75" style='width:36pt;height:21.75pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image171.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image171.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=48 height=29
+src="sistema.files/image077.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image077.gif" v:shapes="_x0000_i1065"><![endif]></sub><span
+style='mso-spacerun:yes'> </span>имеет предел <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1066" type="#_x0000_t75" style='width:87pt;height:29.25pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image172.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image172.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=116 height=39
+src="sistema.files/image079.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image079.gif" v:shapes="_x0000_i1066"><![endif]></sub>, то
+этот предел является решением системы (10). </p>
+
+<table border=1 cellpadding=0 cellspacing=0 bgcolor="#FFFFFF" class=MsoTableGrid
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=676 valign=top style='width:506.85pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:0cm'><b style='mso-bidi-font-weight:
+  normal'>Теорема.</b> Если <sub><!--[if gte vml 1]><v:shape id="_x0000_i1067"
+   type="#_x0000_t75" style='width:35.25pt;height:21pt' fillcolor="window">
+   <v:imagedata src="sistema.files/image173.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image173.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=47 height=28
+  src="sistema.files/image081.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image081.gif" v:shapes="_x0000_i1067"><![endif]></sub>, то
+  система уравнений (9) имеет единственное решение и итерационный процесс (10)
+  сходится к решению независимо от начального приближения.</p>
+  <p class=MsoNormal style='text-indent:0cm'><span style='mso-tab-count:1'>          </span>Критерий
+  окончания итерационного процесса: <span style='mso-spacerun:yes'> </span><span
+  style='position:relative;top:18.0pt;mso-text-raise:-18.0pt'><!--[if gte vml 1]><v:shape
+   id="_x0000_i1095" type="#_x0000_t75" style='width:120pt;height:42pt' o:ole=""
+   o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+   o:borderrightcolor="this">
+   <v:imagedata src="sistema.files/image174.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image174.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=160 height=56
+  src="sistema.files/image175.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image175.gif" v:shapes="_x0000_i1095"><![endif]></span><!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.3" ShapeID="_x0000_i1095"
+    DrawAspect="Content" ObjectID="_1299091870">
+   </o:OLEObject>
+  </xml><![endif]-->.</p>
+  <p class=MsoNormal style='text-indent:0cm'><o:p>&nbsp;</o:p></p>
+  <p class=MsoNormal style='text-indent:0cm'>Здесь <span style='font-family:
+  Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+  mso-char-type:symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:
+  symbol;mso-symbol-font-family:Symbol'>e</span></span> - заданная точность
+  вычислений. В качестве решения берется величина <i style='mso-bidi-font-style:
+  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>X<sub>n</sub></span></i>.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:0cm'><b><span
+style='color:#993300'>Первый способ приведения </span></b><b><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='color:#993300;
+mso-ansi-language:EN-US'>AX</span></i><span style='color:#993300'> = </span></b><b><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='color:#993300;
+mso-ansi-language:EN-US'>B</span></i><span style='color:#993300'> к виду (9)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal>Предполагая, что <sub><!--[if gte vml 1]><v:shape id="_x0000_i1068"
+ type="#_x0000_t75" style='width:86.25pt;height:20.25pt' fillcolor="window">
+ <v:imagedata src="sistema.files/image176.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image176.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=115 height=27
+src="sistema.files/image083.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image083.gif" v:shapes="_x0000_i1068"><![endif]></sub><span
+style='mso-spacerun:yes'> </span>разрешим первое уравнение системы (1) относительно
+<sub><!--[if gte vml 1]><v:shape id="_x0000_i1069" type="#_x0000_t75" style='width:14.25pt;
+ height:18.75pt' fillcolor="window">
+ <v:imagedata src="sistema.files/image177.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image177.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=19 height=25
+src="sistema.files/image085.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image085.gif" v:shapes="_x0000_i1069"><![endif]></sub>,
+второе – относительно <sub><!--[if gte vml 1]><v:shape id="_x0000_i1070"
+ type="#_x0000_t75" style='width:15.75pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="sistema.files/image178.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image178.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=21 height=25
+src="sistema.files/image087.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image087.gif" v:shapes="_x0000_i1070"><![endif]></sub>,<span
+style='mso-spacerun:yes'>   </span>, <i style='mso-bidi-font-style:normal'><span
+lang=EN-US style='mso-ansi-language:EN-US'>n</span></i> &#8209;-ое уравнение –
+относительно <sub><!--[if gte vml 1]><v:shape id="_x0000_i1071" type="#_x0000_t75"
+ style='width:15.75pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="sistema.files/image179.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image179.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=21 height=25
+src="sistema.files/image089.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image089.gif" v:shapes="_x0000_i1071"><![endif]></sub>. В
+результате получим</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1072" type="#_x0000_t75" style='width:239.25pt;height:65.25pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image180.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image180.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=319 height=87
+src="sistema.files/image091.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image091.gif" v:shapes="_x0000_i1072"><![endif]></sub>,<span
+style='mso-tab-count:5'>                                         </span>(11)</p>
+
+<p class=MsoNormal style='text-indent:0cm'>где <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1073" type="#_x0000_t75" style='width:62.25pt;height:18.75pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image181.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image181.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=83 height=25
+src="sistema.files/image093.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image093.gif" v:shapes="_x0000_i1073"><![endif]></sub>; <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1074" type="#_x0000_t75" style='width:81pt;height:21pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image182.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image182.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=108 height=28
+src="sistema.files/image095.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image095.gif" v:shapes="_x0000_i1074"><![endif]></sub><span
+style='mso-spacerun:yes'> </span>при <sub><!--[if gte vml 1]><v:shape id="_x0000_i1075"
+ type="#_x0000_t75" style='width:71.25pt;height:18.75pt' fillcolor="window">
+ <v:imagedata src="sistema.files/image183.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image183.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=95 height=25
+src="sistema.files/image097.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image097.gif" v:shapes="_x0000_i1075"><![endif]></sub>.
+Система (9) в матричной форме имеет вид (9).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>При таком способе получения уравнения (9) справедливо
+следствие из теоремы 1, определяющее условие сходимости итерационного процесса.</p>
+
+<table border=1 cellpadding=0 cellspacing=0 bgcolor="#FFFFFF" class=MsoTableGrid
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=676 valign=top style='width:506.85pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Следствие.</b> Для
+  системы </p>
+  <p class=MsoNormal style='margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape
+   id="_x0000_i1076" type="#_x0000_t75" style='width:66.75pt;height:32.25pt'
+   fillcolor="window">
+   <v:imagedata src="sistema.files/image136.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image136.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=89 height=43
+  src="sistema.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image010.gif" v:shapes="_x0000_i1076"><![endif]></sub></p>
+  <p class=MsoNormal style='text-indent:0cm'>метод итераций сходится, если
+  выполнены неравенства</p>
+  <p class=MsoNormal style='text-indent:0cm'><span style='mso-tab-count:2'>                   </span><sub><!--[if gte vml 1]><v:shape
+   id="_x0000_i1077" type="#_x0000_t75" style='width:75pt;height:42.75pt'
+   fillcolor="window">
+   <v:imagedata src="sistema.files/image184.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image184.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=100 height=57
+  src="sistema.files/image099.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image099.gif" v:shapes="_x0000_i1077"><![endif]></sub>, <sub><!--[if gte vml 1]><v:shape
+   id="_x0000_i1078" type="#_x0000_t75" style='width:48.75pt;height:20.25pt'>
+   <v:imagedata src="sistema.files/image137.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image137.wmz" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=65 height=27
+  src="sistema.files/image012.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image012.gif" v:shapes="_x0000_i1078"><![endif]></sub>.<span
+  style='mso-tab-count:8'>                                                                      </span>(12)</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>Выражение (12) означает, что в матрице <i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A</span></i> в каждой строке
+диагональный элемент по модулю больше суммы модулей остальных элементов строки.
+Если данное условие не выполняется, необходимо соответствующим образом
+преобразовать СЛАУ. Это можно сделать, выполнив эквивалентные преобразования
+системы:</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo6;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>перестановка строк;</p>
+
+<p class=MsoNormal style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:l0 level1 lfo6;
+tab-stops:list 72.0pt'><![if !supportLists]><span style='font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>линейная комбинация строк.</p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Пример.</b> Дана
+система уравнений.</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1079" type="#_x0000_t75" style='width:159pt;height:60.75pt'>
+ <v:imagedata src="sistema.files/image185.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image185.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=212 height=81
+src="sistema.files/image101.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image101.gif" v:shapes="_x0000_i1079"><![endif]></sub>.</p>
+
+<p class=MsoNormal>Привести ее к виду, пригодному для решения методом простых
+итераций первым способом.</p>
+
+<p class=MsoNormal>Условие (12) не выполняется ни в одной из строк. Поместим
+строку (<span lang=EN-US style='mso-ansi-language:EN-US'>c</span>) на первое
+место:</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1080" type="#_x0000_t75" style='width:159pt;height:60.75pt'>
+ <v:imagedata src="sistema.files/image186.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image186.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=212 height=81
+src="sistema.files/image103.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image103.gif" v:shapes="_x0000_i1080"><![endif]></sub>.</p>
+
+<p class=MsoNormal>Теперь для первой и третьей строки условие (12) выполняется.
+В качестве третьей строки возьмем линейную комбинацию (<span lang=EN-US
+style='mso-ansi-language:EN-US'>c</span>) – (<span lang=EN-US style='mso-ansi-language:
+EN-US'>a</span>):</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1081" type="#_x0000_t75" style='width:192pt;height:60.75pt'>
+ <v:imagedata src="sistema.files/image187.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image187.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=256 height=81
+src="sistema.files/image105.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image105.gif" v:shapes="_x0000_i1081"><![endif]></sub>.</p>
+
+<p class=MsoNormal>Данную систему уже можно приводить к виду (9):</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1082" type="#_x0000_t75" style='width:147.75pt;height:99.75pt'>
+ <v:imagedata src="sistema.files/image188.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image188.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=197 height=133
+src="sistema.files/image107.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image107.gif" v:shapes="_x0000_i1082"><![endif]></sub>.</p>
+
+<p class=MsoNormal>Т.о.</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1083" type="#_x0000_t75" style='width:111pt;height:102.75pt'>
+ <v:imagedata src="sistema.files/image189.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image189.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=148 height=137
+src="sistema.files/image109.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image109.gif" v:shapes="_x0000_i1083"><![endif]></sub>, <span
+style='mso-tab-count:1'>       </span><sub><!--[if gte vml 1]><v:shape id="_x0000_i1084"
+ type="#_x0000_t75" style='width:56.25pt;height:102.75pt'>
+ <v:imagedata src="sistema.files/image190.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image190.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=75 height=137
+src="sistema.files/image111.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image111.gif" v:shapes="_x0000_i1084"><![endif]></sub>. </p>
+
+<p class=MsoNormal>В качестве нулевого приближения примем <sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1085" type="#_x0000_t75" style='width:50.25pt;height:21pt'
+ fillcolor="window">
+ <v:imagedata src="sistema.files/image191.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image191.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=67 height=28
+src="sistema.files/image113.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image113.gif" v:shapes="_x0000_i1085"><![endif]></sub>.</p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:0cm'><b><span
+style='color:#993300'>Второй способ приведения </span></b><b><span lang=EN-US
+style='color:#993300;mso-ansi-language:EN-US'>AX</span><span style='color:#993300'>
+= </span></b><b><span lang=EN-US style='color:#993300;mso-ansi-language:EN-US'>B</span><span
+style='color:#993300'> к виду (9)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal>В предыдущем способе обязательным условием являлось
+выполнение неравенства (12). Во многих случаях это далеко не просто. Во втором
+способе <i style='mso-bidi-font-style:normal'>любую</i> невырожденную систему
+уравнений <i style='mso-bidi-font-style:normal'><span lang=EN-US
+style='mso-ansi-language:EN-US;mso-bidi-font-weight:bold'>AX</span></i><span
+style='mso-bidi-font-weight:bold'> = </span><i style='mso-bidi-font-style:normal'><span
+lang=EN-US style='mso-ansi-language:EN-US;mso-bidi-font-weight:bold'>B</span><span
+lang=EN-US style='mso-bidi-font-weight:bold'> </span></i><span
+style='mso-bidi-font-weight:bold'>всегда можно заменить эквивалентной системой
+так, что условие сходимости будет выполняться.</span></p>
+
+<p class=MsoNormal>Для этого умножим уравнение <i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='mso-ansi-language:EN-US;mso-bidi-font-weight:
+bold'>AX</span></i><span style='mso-bidi-font-weight:bold'> = </span><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
+EN-US;mso-bidi-font-weight:bold'>B</span><span lang=EN-US style='mso-bidi-font-weight:
+bold'> </span></i>на матрицу <i style='mso-bidi-font-style:normal'><span
+lang=EN-US style='mso-ansi-language:EN-US;mso-bidi-font-weight:bold'>D</span></i><span
+lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;</span>=<span lang=EN-US
+style='mso-ansi-language:EN-US'>&nbsp;</span><i style='mso-bidi-font-style:
+normal'><span style='mso-bidi-font-weight:bold'>А</span></i><sup>–1</sup>&nbsp;–&nbsp;<span
+style='font-family:Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-char-type:symbol;mso-symbol-font-family:Symbol;
+mso-bidi-font-weight:bold'><span style='mso-char-type:symbol;mso-symbol-font-family:
+Symbol'>D</span></span>, где <span style='font-family:Symbol;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-char-type:symbol;
+mso-symbol-font-family:Symbol;mso-bidi-font-weight:bold'><span
+style='mso-char-type:symbol;mso-symbol-font-family:Symbol'>D</span></span>&nbsp;–&nbsp;матрица
+с малыми по модулю элементами. Последовательно получим:</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1086" type="#_x0000_t75" style='width:105.75pt;height:21pt'>
+ <v:imagedata src="sistema.files/image192.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image192.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=141 height=28
+src="sistema.files/image115.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image115.gif" v:shapes="_x0000_i1086"><![endif]></sub>;</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1087" type="#_x0000_t75" style='width:117.75pt;height:18pt'>
+ <v:imagedata src="sistema.files/image193.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image193.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=157 height=24
+src="sistema.files/image117.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image117.gif" v:shapes="_x0000_i1087"><![endif]></sub>;</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1088" type="#_x0000_t75" style='width:117.75pt;height:18pt'>
+ <v:imagedata src="sistema.files/image194.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image194.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=157 height=24
+src="sistema.files/image119.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image119.gif" v:shapes="_x0000_i1088"><![endif]></sub>.</p>
+
+<p class=MsoNormal>Обозначим</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1089" type="#_x0000_t75" style='width:42.75pt;height:15pt'
+ o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+ o:borderrightcolor="this">
+ <v:imagedata src="sistema.files/image195.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image195.wmz" o:title=""/>
+ <w:bordertop type="single" width="4"/>
+ <w:borderleft type="single" width="4"/>
+ <w:borderbottom type="single" width="4"/>
+ <w:borderright type="single" width="4"/>
+</v:shape><![endif]--><![if !vml]><img width=59 height=22
+src="sistema.files/image196.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image196.gif" v:shapes="_x0000_i1089"><![endif]></sub>;<span
+style='mso-tab-count:1'>      </span><sub><!--[if gte vml 1]><v:shape id="_x0000_i1090"
+ type="#_x0000_t75" style='width:44.25pt;height:17.25pt' o:bordertopcolor="this"
+ o:borderleftcolor="this" o:borderbottomcolor="this" o:borderrightcolor="this">
+ <v:imagedata src="sistema.files/image197.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image197.wmz" o:title=""/>
+ <w:bordertop type="single" width="4"/>
+ <w:borderleft type="single" width="4"/>
+ <w:borderbottom type="single" width="4"/>
+ <w:borderright type="single" width="4"/>
+</v:shape><![endif]--><![if !vml]><img width=61 height=25
+src="sistema.files/image198.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image198.gif" v:shapes="_x0000_i1090"><![endif]></sub>.</p>
+
+<p class=MsoNormal>В результате получим систему вида</p>
+
+<p class=MsoNormal><span style='mso-tab-count:1'>          </span><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1091" type="#_x0000_t75" style='width:69pt;height:17.25pt'
+ o:bordertopcolor="this" o:borderleftcolor="this" o:borderbottomcolor="this"
+ o:borderrightcolor="this" fillcolor="window">
+ <v:imagedata src="sistema.files/image199.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image199.wmz" o:title=""/>
+ <w:bordertop type="single" width="4"/>
+ <w:borderleft type="single" width="4"/>
+ <w:borderbottom type="single" width="4"/>
+ <w:borderright type="single" width="4"/>
+</v:shape><![endif]--><![if !vml]><img width=94 height=25
+src="sistema.files/image200.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image200.gif" v:shapes="_x0000_i1091"><![endif]></sub><span
+style='mso-spacerun:yes'> </span>.</p>
+
+<p class=MsoNormal>Очевидно, что если элементы матрицы <span style='font-family:
+Symbol;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:"Times New Roman";
+mso-char-type:symbol;mso-symbol-font-family:Symbol'><span style='mso-char-type:
+symbol;mso-symbol-font-family:Symbol'>D</span></span> выбрать достаточно малыми
+по модулю, то можно обеспечить выполнение условия </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><sub><!--[if gte vml 1]><v:shape
+ id="_x0000_i1092" type="#_x0000_t75" style='width:120pt;height:21pt'>
+ <v:imagedata src="sistema.files/image201.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image201.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=160 height=28
+src="sistema.files/image127.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image127.gif" v:shapes="_x0000_i1092"><![endif]></sub>.</p>
+
+<p class=MsoNormal>Т.е. для сходимости итерационного процесса необходимо
+выполнение условия </p>
+
+<p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt'><span
+style='mso-tab-count:1'>          </span><sub><!--[if gte vml 1]><v:shape id="_x0000_i1093"
+ type="#_x0000_t75" style='width:42.75pt;height:21pt'>
+ <v:imagedata src="sistema.files/image202.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image202.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=57 height=28
+src="sistema.files/image129.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image129.gif" v:shapes="_x0000_i1093"><![endif]></sub><span
+style='mso-spacerun:yes'> </span>или <sub><!--[if gte vml 1]><v:shape id="_x0000_i1094"
+ type="#_x0000_t75" style='width:47.25pt;height:39.75pt' o:bordertopcolor="this"
+ o:borderleftcolor="this" o:borderbottomcolor="this" o:borderrightcolor="this">
+ <v:imagedata src="sistema.files/image203.wmz" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image203.wmz" o:title=""/>
+ <w:bordertop type="single" width="4"/>
+ <w:borderleft type="single" width="4"/>
+ <w:borderbottom type="single" width="4"/>
+ <w:borderright type="single" width="4"/>
+</v:shape><![endif]--><![if !vml]><img width=65 height=55
+src="sistema.files/image204.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab3/sistema.files/image204.gif" v:shapes="_x0000_i1094"><![endif]></sub>.</p>
+
+</div>
+
+</body>
+
+</html>

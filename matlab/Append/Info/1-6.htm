@@ -1,0 +1,1324 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+  <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 5. Пользовательский 
+    интерфейс MATLAB</a></font></b> </li>
+  <ul>
+    <li><font face="Times New Roman CYR" size=3><a href="#2">Общая характеристика 
+      пользовательского интерфейса</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#3">Упрощенный интерфейс</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#4">Работа с панелью 
+      инструментов </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#5">Средства панели 
+          инструментов </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#6">Вызов окна открытия 
+          нового файла</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#7">Вызов окна загрузки 
+          имеющегося файла </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#8">Операции с буфером 
+          обмена </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#9">Отмена результата 
+          предшествующей операции </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#10">Запуск приложения 
+          Simulink </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#11">Вызов справки 
+          MATLAB </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#12">Средства контроля 
+      рабочей области и файловой системы </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#13">Браузер рабочей 
+          области</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#14">Команды просмотра 
+          рабочей области who и whos</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#15">Браузер файловой 
+          структуры </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#16">Работа с меню</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#17">Команды, операции 
+          и параметры</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#18">Меню системы</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#19">Подменю File 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#20">Открытие окон 
+          для подготовки новых файлов </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#21">Загрузка и сохранение 
+          файлов </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#22">Установка путей 
+          доступа файловой системы </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#23">Настройка элементов 
+          интерфейса</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#24">Обеспечение 
+          печати - команды Print и Print Selection </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#25">Меню Edit - 
+          средства редактирования документов </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#26">Меню View и 
+          Window</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#27">Основы редактирования 
+      и отладки m-файлов </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#28">Интерфейс редактора/отладчика 
+          m-файлов</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#29">Цветовые выделения 
+          и синтаксический контроль </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#30">Понятие о файлах-сценариях 
+          и файлах-функциях</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#31">Панель инструментов 
+          редактора и отладчика </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#32">Работа сточками 
+          прерывания</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#33">Интерфейс графических 
+      окон</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#34">Обзор интерфейса 
+          графических окон </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#35">Панель инструментов 
+          камеры обзора </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#36">Меню инструментов 
+          Tools</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#37">Вращение графиков 
+          мышью </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#38">Операции вставки 
+          </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#39">Общение MATLAB с 
+      операционной системой </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#40">Работа с папками 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#41">Выполнение команд 
+          !, dos, unix и vms</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#42">Общение с Интернетом 
+          из командной строки </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#43">Некоторые другие 
+          команды </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#44">Что нового мы узнали? 
+      </a></font> </li>
+  </ul>
+</ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №5.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Пользовательский интерфейс 
+  MATLAB</font> </P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Общая характеристика
+    </font><font size="3" face="Times New Roman">пользовательского интерфейса</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Панель инструментов</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Операции с буфером обмена</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Браузеры рабочей области и файловой структуры</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Запуск приложения Simulink</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Вызов справки по системе MATLAB</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Меню системы MATLAB</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Работа с файлами</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Настройка MATLAB и функция path</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Обеспечение печати</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Интерфейс редактора и отладчика т-файлов</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Файлы сценариев и функций&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Интерфейс графических окон</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Общение MATLAB с операционной системой</font></li>
+</ul>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a>Общая 
+  характеристика пользовательского интерфейса</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Как видно из материалов предыдущих уроков, в новой версии MATLAB в полной мере сохранен командный интерактивный режим работы. Это старый фасад дворца MATLAB. Командный режим остается одним из наиболее удобных и проверенных методов работы с системой.</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Имеются и типовые средства 
+  приложений Windows 95/98/Me/2000/NT4 — меню и панель инструментов. Но они по-прежнему 
+  выглядят намного скромнее, чем у большинства современных приложений Windows. 
+  Видимо, так и должно быть — чем серьезнее математическая система, тем меньше 
+  она нуждается в использовании всевозможных кнопок на панели инструментов и тем 
+  скромнее может быть ее главное меню.</font> </P>
+<P align="left"><img src="5.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.1.jpg" width="464" height="449"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.1. </font></i> </B><i><font size="3" face="Times New Roman">Окно системы MATLAB</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">И, тем не менее, пользовательский интерфейс в системе MATLAB 6.0 кардинально переработан. Это видно из рис. 5.1, на котором показано основное полностью</font>
+<font size="3" face="Times New Roman">открытое окно системы MATLAB 6.0 так, как оно предстает перед пользователем при запуске.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Главными отличиями от весьма скромного интерфейса прежних версий системы MATLAB у новой версии стали:</font></P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> позиция Web меню, открывающая доступ к Интернет ресурсам фирмы Math-Works
+    Inc.;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;меню используемых разделов текущей папки файловой системы Current Directory в конце панели инструментов справа;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">окно с вкладками Launch Path (Доступ к частям системы) и Workspace (Рабочая область) в левой части основного окна (сверху);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> окно с вкладками Command History (Обзор ранее исполненных команд) и Current Directory (Текущая папка) в левой части основного окна (сверху)</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> применение цветового выделения выражений в командной строке, что упрощает оперативный контроль их синтаксиса по мере ввода.</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Эти отличия указывают на то, что разработчики новой версии уделили больше внимания оперативному контролю за состоянием системы, который ранее (в прежних версиях) был как бы за кадром.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a>Упрощенный 
+  интерфейс</font></B> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Сделав решительный шаг в обновлении интерфейса, разработчики MATLAB 6.0, похоже, испугались недовольства старых пользователей, уже привыкших работать со скромным и отчасти даже ущербным интерфейсом прежних версий MATLAB. А потому они ввели возможности изменения интерфейса системы, в том числе представления его в добром старом виде. Все эти возможности реализуются командами в позиции View (Вид) меню. На рис. 5.1 вкладка View показана в открытом состоянии.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Теперь пользователь может настраивать вид интерфейса и по-разному располагать его окна. В частности, исполнив команду View &gt; Desktop Layout &gt; Command Window Only (Только командное окно) можно получить &laquo;старый&raquo; вид интерфейса — рис. 5.2. Теперь о новациях в интерфейсе напоминают лишь позиция меню Web и доступ из панели инструментов к папкам файловой системы. Кстати, окно доступа к папкам файловой системы также показано на рис. 5.2.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Нередко MATLAB отказывается исполнять некоторые команды из-за того, что их m-файлов нет в текущей папке. Поэтому обеспечение быстрого доступа к файловой системе из пользовательского интерфейса можно приветствовать.</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Для редактирования и отладки 
+  m-файлов MATLAB имеет встроенный современный редактор, интерфейс которого выполнен 
+  в лучших традициях Windpws-приложений. В том же стиле выполнены окно просмотра 
+  ресурсов памяти, окно просмотра путей файловой системы, справочник по возможностям 
+  системы и демонстрационные программы. Редактор графики и окно графики со средствами 
+  редактирования рисунков уже были описаны.</font></P>
+<P align="left"><img src="5.2.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.2.jpg" width="324" height="331"> </P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.2. </font></i> </B><i><font size="3" face="Times New Roman">Упрощенный интерфейс системы MATLAB 6.0</font></i>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a>Работа 
+  с панелью инструментов</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="5"></a>Средства 
+  панели инструментов</font> </P>
+<P align="justify"> <font size="3" face="Times New Roman">Панель инструментов (рис. 
+  5.3) дает наиболее простой и удобный (особенно для начинающих пользователей) 
+  способ работы с системой MATLAB. При этом основные команды вводятся указанием 
+  курсором мыши на нужную кнопку с нажатием левой клавиши мыши. Кнопки имеют изображение, 
+  явно подсказывающее их назначение.</font> </P>
+<P align="left"><img src="5.3.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.3.jpg" width="438" height="31"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.3. </font></i> </B><i><font size="3" face="Times New Roman">Часть окна системы MATLAB с меню и панелью инструментов</font></i>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Прежде всего перечислим назначение всех кнопок панели инструментов:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> New M-file (Новый m-файл) — выводит пустое окно редактора
+    m-файлов;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Open file (Открыть файл) — открывает окно для загрузки
+    m-файла;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Cut (Вырезать)— вырезает выделенный фрагмент и помещает его в буфер;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Сору (Копировать)— копирует выделенный фрагмент в буфер;<BR>
+ Paste (Вставить)— переносит фрагмент из буфера в текущую строку
+    ВВОДА</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Undo (Отменить)— отменяет предшествующую операцию;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Redo (Повторить) — восстанавливает последнюю отмененную операцию;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Simulink — открывает окно браузера библиотек
+    Simulink;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Help (Помощь)— открывает окно справки.</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Набор кнопок панели инструментов обеспечивает выполнение наиболее часто необходимых команд и вполне достаточен для повседневной работы с системой.&nbsp;</font></P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;назначении кнопок говорят и всплывающие подсказки, появляющиеся, когда курсор мыши устанавливается на соответствующую кнопку.&nbsp;</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">ни имеют вид желтого прямоугольника с текстом короткой справки — см. пример такой подсказки на рис. 2.12 у кнопки Help панели инструментов. Любопытно отметить, что доступ к браузерам рабочей области и файловой системы из панели инструментов убран.</font>
+  </li>
+</ul>
+<P align="left"> <font face="Times New Roman" size="4"><a name="6"></a>Вызов окна 
+  открытия нового файла</font> </P>
+<P align="justify"> <font size="3" face="Times New Roman">Кнопка New M-file открывает 
+  окно редактора/отладчика m-файлов. Это окно показано на рис. 5.4. Работу с этим 
+  средством мы обсудим позже.</font> </P>
+<P align="left"><img src="5.4.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.4.jpg" width="487" height="342"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. </font></i> </B><i><font size="3" face="Times New Roman">5.4. Пустое окно редактора/отладчика m-файлов</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">По умолчанию файлу дается имя Untitled (безымянный), которое впоследствии (при записи файла) можно изменить на другое, отражающее тему задачи. Это имя отображается в титульной строке окна редактирования m-файла, которое размещается в окне редактора/отладчика и видно на рис. 5.4. В редакторе/отладчике можно редактировать несколько m-файлов, и каждый из них будет находиться в своем окне редактирования, хотя активным может быть только одно окно, расположенное поверх других окон.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman"><i><img border="0" src="Prim.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim.GIF" align="left" width="36" height="35">Обратите внимание, что панель инструментов является контекстно-зависимой. Для редактора/отладчика m-файлов она имеет несколько иной набор инструментов, чем для окна командного режима работы (см. рис. 5.1). Позже мы уточним эти отличия.</i></font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="7"></a>Вызов окна 
+  загрузки имеющегося файла</font> </P>
+<P align="justify"> <font size="3" face="Times New Roman">Кнопка Open file (Открыть 
+  файл) служит для загрузки в редактор/отладчик ранее созданных m-файлов, например 
+  входящих в пакет расширения (Toolbox) системы или разработанных пользователем. 
+  Она открывает окно, которое является типичным элементом интерфейса Windows-приложений 
+  и показано на рис. 5.5 внутри окна редактора/отладчика m-файлов.</font> </P>
+<P align="left"><img src="5.5.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.5.jpg" width="426" height="264"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. </font></i> </B><i><font size="3" face="Times New Roman">5.5. Окно загрузки файла в окне редактора/отладчика</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">В окне загрузки файлов с помощью раскрывающегося списка Папка и вертикальной полосы прокрутки можно &laquo;пройтись&raquo; по всем дискам, папкам и файлам. Чтобы выбрать нужный файл для загрузки, его требуется выделить мышью. Выбор завершается двойным щелчком на имени файла, нажатием клавиши Enter или щелчком на кнопке Открыть. Любое из этих действий приводит к загрузке документа в текущее окно системы. Кнопка Отмена или клавиша Esc позволяет отказаться от загрузки.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman"><i><img border="0" src="Prim.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim.GIF" align="left" width="36" height="35">Пусть читателя не волнуют внезапно появившиеся русскоязычные надписи на элемен-тах интерфейса окна загрузки файлов. Они говорят лишь о том, что используется окно стандартной русифицированной операционной системы Windows 95/98/Ме, которая обычно устанавливается у наших пользователей.</i></font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Для вызова одного из ранее использовавшихся документов достаточно щелкнуть мышью на его имени в списке, находящемся над командой Exit (Выход) в меню File. После загрузки файла с документом его текст появляется в текущем окне — на рис. 5.5 показан текст выбранного файла graf2d.rn (демонстрация возможностей двумерной графики). Его можно начинать редактировать или запускать на исполнение.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="8"></a>Операции 
+  с буфером обмена</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Кнопки Cut (Вырезать), Сору (Копировать) и Paste (Вставить) реализуют
+наиболее характерные команды работы с буфером обмена (Clipboard). Первые две операции относятся к выделенным фрагментам сессии или текста m-файлов (если они выполняются в окне редактора/отладчика). Для выделения объектов можно ис</font><font size="3" face="Times New Roman">пользовать мышь, перемещая курсор по тексту при нажатой левой кнопке, или клавиши со стрелками в комбинации с клавишей
+Shift.</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">На рис. 5.6 показан пример 
+  выделения содержимого матрицы М в окне документа MATLAB. Эта матрица формируется 
+  функцией magiс (n) и называется магической, поскольку сумма элементов любого 
+  столбца, любой строки и даже любой диагонали равна одному и тому же числу — 
+  34 для матрицы при n=4.</font> </P>
+<P align="left"><img src="5.6.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.6.jpg" width="424" height="301"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.6. </font></i> </B><font size="3" face="Times New Roman"><i>Окно документа с выделенным содержимым матрицы М</i></font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Команда Cut (Вырезать) осуществляет вырезание выделенного фрагмента и размещение его в буфере. При этом вырезанный фрагмент удаляется из текста документа. Команда Сору (Копировать) просто копирует выделенный фрагмент в буфер, сохраняя его в тексте. Команда Paste (Вставить) вызывает объект из буфера (сохраняя объект в буфере) и помещает копию объекта на место в документе, указанное текстовым курсором. Эти операции реализуются как соответствующими кнопками, так и командами меню Edit (Редактировать). В MATLAB можно использовать контекстное меню, появляющееся при нажатии правой кнопки мыши. Например, установив курсор мыши на выделенный фрагмент матрицы М и нажав правую кнопку, можно увидеть меню, показанное на рис. 5.6. В нем, кстати, дублируется позиция с командой Сору (Копировать). Есть и ряд других доступных в данный момент команд. Обратите внимание, что в момент подготовки магической матрицы М ее имя появилось в окне браузера рабочей области — в правой части экрана. При этом матрица представляется изображением таблицы.</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Содержимое буфера можно 
+  перенести в строку ввода, в окно редактора-отладчика m-файлов или даже в другое 
+  приложение. Допустим, мы хотим создать матрицу M1 с содержимым, которое размещено 
+  в буфере. Для этого достаточно набрать</font> <font size="3" face="Times New Roman">М1=[ 
+  и, нажав правую клавишу мыши, выбрать из появившегося меню команду Paste (Вставить). 
+  Этот момент фиксирует рис. 5.7.</font> </P>
+<P align="left"><img src="5.7.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.7.jpg" width="417" height="350"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.7. </font></i> </B><font size="3" face="Times New Roman"><i>Подготовка к вставке данных матрицы из буфера</i></font>
+</P>
+<P align="justify"> <font size="3" face="Times New Roman">Исполнив команду Paste, 
+  можно увидеть, что данные хранящейся в буфере матрицы появятся после открывающей 
+  квадратной скобки. Для создания матрицы Ml остается ввести закрывающую квадратную 
+  скобку ] и нажать клавишу Enter. На рис. 5.8 показано, как создается матрица 
+  Ml, по содержимому аналогичная матрице М.</font> </P>
+<P align="left"><img src="5.8.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.8.jpg" width="398" height="450"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.8. </font></i> </B><i><font size="3" face="Times New Roman">Пример создания матрицы Ml с содержимым, взятым из буфера</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Разумеется, этот пример является чисто учебным. Не обращаясь к помощи буфера, можно было бы просто записать М1=М. Или М2=М — именно так на рис. 5.8 задана матрица М2. Однако зачастую операции с буфером весьма полезны. Так, все примеры в тексте этой книги получены переносом выделенных фрагментов соответствующей сессии в окно текстового редактора Microsoft Word. Возможен и обратный перенос - записанных в документах редактора Microsoft Word примеров в командную строку MATLAB для исполнения примеров.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman"><i><img border="0" src="Prim.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim.GIF" align="left" width="36" height="35">Обратите внимание на команду Select All в контекстном меню. Эта команда позволяет выделить весь текст текущей сессии-А команда Clear Session очищает окно от содержимого данной сессии.</i></font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="9"></a>Отмена 
+  результата предшествующей операции</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Часто, выполнив какую-то операцию, мы отмечаем, что она оказалась ошибочной. При работе в MATLAB такой ситуации пугаться не стоит, — нажатие кнопки Undo (Отменить) панели инструментов приведет к отмене последнего действия, выполненного в текущей строке. Операции в предыдущих строках документа этой командой не отменяются. Если оказалось, что вы зря произвели отмену последней операции, то ее легко восстановить, введя с панели инструментов операцию Redo (Восстановить).</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="10"></a>Запуск 
+  приложения Simulink</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Кнопка Simulink панели инструментов (или команда simulink из строки ввода) запускает одно из самых мощных приложений системы MATLAB — программу моделирования систем, построенных из типовых блоков. Эта система (пакет инструментов (toolbox) Simulink) в данной книге подробно не описывается (см. и описание предшествующей версии в), так что пока отметим лишь, что щелчок на указанной кнопке выводит окно библиотеки типов блоков (рис. 5.9 слева).</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">В MATLAB 6.0 применена новая версия Simulink 4 с библиотекой блоков Block Library. Эта библиотека содержит существенно расширенный набор компонентов — блоков, объединенных в тематические группы. Чтобы упростить поиск и выбор блоков, окно библиотеки организовано в виде браузера библиотеки, очень напоминающего Проводник (Windows Explorer) операционной системы Windows 95/98/ Me/2000/NT4. Окно браузера показано на рис. 5.9 слева. В нем видно дерево моделей с раскрывающимися ветвями-блоками. Изображение компонентов выделенного блока дерева показывается в поле просмотра в правой части окна браузера.</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Для загрузки модели какой 
+  либо системы или устройства (в том числе из числа демонстрационных примеров) 
+  достаточно активизировать кнопку Ореn.(Открыть), имеющую вид открывающейся папки. 
+  При этом появится окно редактора модели программы Simulink, которое показано 
+  на рис. 5.9 справа. Это стандартное окно загрузки файлов, принятое во всех приложениях 
+  операционной системы Windows 95/98/Ме/2000. В нем можно выбрать и загрузить 
+  файл нужной модели или демонстрационного примера.</font> </P>
+<P align="left"><img src="5.9.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.9.jpg" width="460" height="532"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.9. </font></i> </B><i><font size="3" face="Times New Roman">Окно браузера библиотечных блоков программы
+Simulink</font></i>
+</P>
+<P align="justify"> <font size="3" face="Times New Roman">Рис. 5.10 показывает загруженную 
+  в Simulink модель аттрактора Лоренца — демонстрационный файл lorenz. Здесь видно 
+  окно с загруженной моделью (она находится слева) и окна встроенного виртуального 
+  осциллографа — одного из многих виртуальных регистрирующих устройств, которые 
+  имеются в составе Simulink.</font> </P>
+<P align="left"><img src="5.10.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.10.jpg" width="337" height="345"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.10. </font></i> </B><font size="3" face="Times New Roman"><i>Пример работы программы Simulink</i></font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Кнопка с треугольником в панели инструментов Simulink запускает процесс моделирования. О его результатах можно судить по показаниям регистрирующих приборов — в частности, упомянутого уже осциллографа. В его окнах появляются сложные и довольно хаотические колебания, характерные для аттрактора Лоренца. Параметры каждого блока можно уточнить или задать с помощью окна параметров блока. На рис. 5.10 снизу справа показано такое окно для блока Beta*z — множительного устройства. Большинство установок параметров блоков довольно очевидны — даже несмотря на то, что их параметры указаны на английском языке.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Кнопка Create a new model (Создать новую модель) в окне библиотек Simulink открывает чистое окно редактора моделей. Любой блок можно перетащить мышью в это окно. Введенные таким образом блоки соединяются друг с другом линиями, для чего используется мышь, с помощью которой указываются точки соединений и осуществляется протягивание соединительных линий.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Таким образом, легко создать новую модель системы. Однако описание подготовки новых моделей для Simulink в тематику данной книги не входит, поскольку книга посвящена лишь описанию базовой системы MATLAB. Заинтересованные читатели могут обратиться к изданиям. Тем не менее приведенные сведения позволят заинтересованному читателю начать работу с
+Simulink.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="11"></a>Вызов 
+  справки MATLAB</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Последняя кнопка панели инструментов Help (Помощь) открывает окно с перечнем разделов справочной системы. Это окно было показано на рис. 4.8. В уроке 4 мы подробно ознакомились с работой со справочной системой, так что на этом можно закончить описание средств системы MATLAB, доступ к которым обеспечивает панель инструментов.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="12"></a>Средства 
+  контроля рабочей области и файловой системы</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="13"></a>Браузер 
+  рабочей области</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Векторы и матрицы могут занимать большой объем памяти. Конечно, речь не идет о векторах или матрицах, содержащих несколько элементов или даже несколько десятков элементов. Хотя и в этом случае оценка их размеров полезна при разработке алгоритмов матричных вычислений и оценке их эффективности в части использования памяти.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Как отмечалось, в левой части окна системы MATLAB 6.0 имеется окно специального браузера рабочей области — Workspace Browser. Он служит для просмотра ресурсов рабочей области памяти. Браузер дает наглядную визуализацию содержимого рабочей области. Окно браузера рабочей области выполняет и другие важные функции — позволяет просматривать существующие в памяти объекты, редактировать их содержимое и удалять объекты из памяти. Для вывода содержимого объекта достаточно выделить его имя с помощью мыши и щелкнуть на кнопке</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Open (Открыть). Объект 
+  можно открыть и двойным щелчком на его имени в списке. Откроется окно редактирования 
+  массива Array Editor, показанное на рис. 5.11 применительно к матрице М2.</font></P>
+<P align="left"><img src="5.11.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.11.jpg" width="421" height="247"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.11. </font></i> </B><i><font size="3" face="Times New Roman">Пример просмотра содержимого матрицы</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Окно редактирования матрицы дает удобный доступ для редактирования любого элемента матрицы по правилам, принятым при работе с электронными таблицами.<sup>[</sup><i>В уроке 23 показано, как использовать Microsoft Excel для ввода матриц. —
+Примеч. ред.</i><sup>]</sup>. Основное из них — быстрый доступ к любому элементу матрицы. Можно также менять тип значений элементов, выбирая его из списка, предоставляемого меню Numeric format (Формат чисел). В окне также выводятся данные о числе строк и столбцов матрицы.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="14"></a>Команды 
+  просмотра рабочей области who и whos</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Следует отметить, что просмотр рабочей области возможен и в командном режиме, без обращения к браузеру Workspace Browser. Команда who выводит список определенных переменных, а команда whos — список неременных с указанием их размера и объема занимаемой памяти. Следующие примеры иллюстрируют действие этих команд:</font></P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х=1.234;&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; V=[l&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5]:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; M=magic(4);&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; who</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Your variables are:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">M&nbsp;&nbsp;&nbsp;&nbsp; V&nbsp;&nbsp;&nbsp;&nbsp;
+x&nbsp;</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="335" HEIGHT="82">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="67" HEIGHT="16">
+<DIV WIDTH="67" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">&raquo; whos<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="16">
+<DIV WIDTH="74" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="86" HEIGHT="16">
+<DIV WIDTH="86" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="108" HEIGHT="16">
+<DIV WIDTH="108" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="67" HEIGHT="17">
+<DIV WIDTH="67" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Name<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="17">
+<DIV WIDTH="74" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Size<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="86" HEIGHT="17">
+<DIV WIDTH="86" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Bytes<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="108" HEIGHT="17">
+<DIV WIDTH="108" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Class<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="67" HEIGHT="16">
+<DIV WIDTH="67" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">M<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="16">
+<DIV WIDTH="74" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">4x4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="86" HEIGHT="16">
+<DIV WIDTH="86" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">128<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="108" HEIGHT="16">
+<DIV WIDTH="108" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">double array<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="67" HEIGHT="16">
+<DIV WIDTH="67" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">V<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="16">
+<DIV WIDTH="74" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1x5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="86" HEIGHT="16">
+<DIV WIDTH="86" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">40<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="108" HEIGHT="16">
+<DIV WIDTH="108" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">double array<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="67" HEIGHT="17">
+<DIV WIDTH="67" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">X<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="74" HEIGHT="17">
+<DIV WIDTH="74" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">1x1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="86" HEIGHT="17">
+<DIV WIDTH="86" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="108" HEIGHT="17">
+<DIV WIDTH="108" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">double array<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="justify">
+<font size="3" face="Times New Roman">Если вы хотите просмотреть данные одной переменной, например М, следует использовать команду whos M. Естественно, просмотр рабочей области с помощью браузера рабочей области (Workspace Browser) более удобен и нагляден.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="15"></a>Браузер 
+  файловой структуры</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Для просмотра файловой структуры MATLAB служит специальный браузер файловой системы (Path Browser), который запускается при обычной загрузке системы. Если был установлен упрощенный интерфейс, то для запуска браузера файловой системы используется окно Current Directory (Текущая папка). На рис. 5.12 в левой части показано окно этого браузера.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Нетрудно заметить, что браузер файловой системы построен по типу общеизвестного Проводника (Explorer) операционных систем Windows 95/98/Me/2000/NT4. Окно дает возможность просмотра файловой системы ПК и выбора любого файла. Для примера на рис. 5.12 показан выбор m-файла функции синуса.</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Исполнив команду Open (Открыть) 
+  из контекстного меню правой клавиши мыши или дважды щелкнув по выделенной строке 
+  с именем файла, можно ввести этот файл в окно редактора/отладчика m-файлов. 
+  При этом редактор запустится автоматически и его окно с готовым для редактирования 
+  выбранным файлом появится на экране&nbsp; рис. 5.12.</font> </P>
+<P align="left"><img src="5.12.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.12.jpg" width="425" height="218"></P>
+<P align="left">
+<B><font size="3" face="Times New Roman">Р<i>ис. 5.12. </i></font> </B><i><font size="3" face="Times New Roman">Пример окна браузера Path Browser</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman"><i><img border="0" src="Prim.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim.GIF" align="left" width="36" height="35">Обратите внимание на то, что m-файл функции синуса содержит только комментарии по этой функции, которые используются справочной системой. Самого определения функции синуса на языке программирования системы MATLAB нет. Это связано с тем, что данная функция является встроенной в ядро системы. Так что модифицировать такие функции попросту нельзя. Ничто, однако, не мешает вам создать свой метод (и алгоритм) вычисления встроенных функций и оформить их в виде m-файлов, дав им свои имена — например,
+mysin.m.</i></font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Таким образом, браузер просмотра файловой структуры позволяет детально ознакомиться с файловой системой MATLAB и вывести любой из m-файлов или файлов демонстрационных примеров для просмотра, редактирования и модификации.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="16"></a>Работа 
+  с меню</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="17"></a>Команды, 
+  операции и параметры</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Открытая позиция строки меню содержит различные операции и команды. Выделенная команда или операция исполняется при нажатии клавиши Enter (Ввод). Выполнение команды можно также осуществить щелчком мыши или нажатием на клавиатуре клавиши, соответствующей выделенному символу в названии команды.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Между командами и операциями нет особых отличий, и в литературе по информатике их часто путают. Мы будем считать <I>командой </I>действие, которое исполняется немедленно. А <I>операцией — </I>действие, которое требует определенной подготовки, например открытие окна для установки определенных параметров.</font></P>
+<P align="justify">
+<I><font size="3" face="Times New Roman">Параметр </font> </I><font size="3" face="Times New Roman">(option)— это значение определенной величины, действующее во время текущей сессии. Параметрами обычно являются указания на применяемые наборы шрифтов, размеры окна, цвет фона и т. д.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="18"></a>Меню 
+  системы</font></B> </P>
+<P align="justify"> <font size="3" face="Times New Roman">Перейдем к описанию основного 
+  меню системы MATLAB 6.0. Это меню (см. рис. 5.1 сверху) выглядит довольно скромно 
+  и содержит всего шесть пунктов:</font> </P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;File — работа с файлами;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Edit — редактирование сессии;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">View — вывод и скрытие панели инструментов;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Web — доступ к Интернет-ресурсам;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Windows — установка Windows-свойств окна;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Help — доступ к справочным подсистемам.</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">По сравнению с версией 5.3.1 добавлена единственная позиция Web, дающая доступ к Интернет-ресурсам, описанный в уроке 1.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="19"></a>Подменю 
+  File</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Подменю File содержит ряд операций и команд для работы с файлами. Оно показано на рис. 5.13. Число операций и команд значительно сокращено по сравнению с тем же меню у предшествующей версии системы
+MATLAB.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Теперь меню File содержит следующие операции:&nbsp;</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;New - открывает подменю с позициями:</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">   M-file — открытие окна редактора/отладчика m-файлов;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Figure — открытие пустого окна графики;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">   Model — открытие пустого окна для создания Simulink-модели;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">GUI — открытие окна разработки элементов графического интерфейса</font>
+    <font size="3" face="Times New Roman">пользователя.&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Open — открывает окно загрузки файла.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Close Command Windows — закрывает окно командного режима работы (оно при этом исчезает с экрана).</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Import data — открывает окно импорта файлов данных.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Save Workspace As... — открывает окно записи рабочей области в виде файла с заданным именем.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Set Path — открывает окно установки путей доступа файловой системы.&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Preferences... — открывает окно настройки элементов интерфейса.&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Print... — открывает окно печати всего текущего документа.&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Print Selection... — открывает окно печати выделенной части документа.&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Exit — завершает работу с системой.</font></li>
+</ul>
+<P align="left"><img src="5.13.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.13.jpg" width="212" height="270"> </P>
+<P align="left"><B><i><font size="3" face="Times New Roman">Рис. 5.13. </font></i> 
+  </B><i><font size="3" face="Times New Roman">Меню файловых операций File</font></i> 
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="20"></a>Открытие 
+  окон для подготовки новых файлов</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Команда New, как отмечено, открывает окна для подготовки новых файлов. Для трех типов файлов (m-файлы, графические файлы и файлы Simulink-моделей) окна их
+редакторов уже описывались. 
+  Новой является позиция GUI подменю File. Она открывает окно редактора элементов 
+  пользовательского интерфейса, показанное на рис. 5.14.</font></P>
+<P align="left"><img src="5.14.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.14.jpg" width="427" height="348"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.14. </font></i> </B><i><font size="3" face="Times New Roman">Окно редактора элементов GUI</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">К подробному описанию этого окна мы еще вернемся. А пока отметим, что работа с редактором довольно очевидна.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="21"></a>Загрузка 
+  и сохранение файлов</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Команды Open... (Открыть) и Import data... (Импортировать данные) выводят стандартные окна (см. рис. 5.5) для загрузки m-файлов и файлов данных. Команда Save Workspace As... (Сохраните рабочую область как...) открывает стандартное окно записи файлов с расширением .mat. Они хранят определения переменных, массивов, функций пользователя и иных объектов, созданных в ходе текущей сессии работы. Эти команды в силу общеизвестности в более подробных комментариях не нуждаются.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="22"></a>Установка 
+  путей доступа файловой системы</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Команда Set Path... (Установить путь) открывает окно редактора путей доступа файловой системы. Это окно показано на рис. 5.15.</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Окно дает список папок 
+  с файлами системы MATLAB. Имеется возможность переноса папок вверх или вниз 
+  по списку, уничтожения их и переименования. По умолчанию задается правильная 
+  установка путей доступа, так что данными возможностями стоит пользоваться только 
+  в особых обстоятельствах, например при случайном переносе папок в другое место 
+  или при их переименовании.<BR>
+  <img src="5.15.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.15.jpg" width="439" height="400"> </font> </P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.15. </font></i> </B><i><font size="3" face="Times New Roman">Окно редактора путей доступа файловой системы</font></i>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="23"></a>Настройка 
+  элементов интерфейса</font> </P>
+<P align="left"> <font size="3" face="Times New Roman">Окно настройки элементов 
+  интерфейса представлено на рис. 5.16.<BR>
+  <img src="5.16.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.16.jpg" width="473" height="460"> </font> </P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.16. </font></i> </B><i><font size="3" face="Times New Roman">Окно настройки элементов интерфейса</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Интерфейс MATLAB 6.0 стал настолько удобным и даже изысканным, что мало вероятно, что кому-либо захочется менять его в мере, большей, чем это предусмотрено командами подменю
+View [<i>Это может потребоваться даже для настройки под особенности операционной системы. Например, для уточнения расположения вашей программы чтения PDF-файлов, вам, возможно, придется вручную удалить апострофы из пути к ее исполняемому файлу. —
+Примеч. ред.</i>]. Однако такая возможность есть — команда Preferences... (Предпочтения) выводит окно детальной настройки элементов интерфейса (рис. 5.16). В левой части этого окна имеется древообразный список элементов интерфейса системы, а в правой части—поле задания параметров для выбранного типа элементов. Поскольку изменение параметров производится обычно очень редко, мы не будем детально рассматривать это окно. Заинтересованный читатель наверняка разберется с нужными ему параметрами самостоятельно.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="24"></a>Обеспечение 
+  печати — команды Print и Print Selection</font> </P>
+<P align="justify"> <font size="3" face="Times New Roman">В MATLAB для печати используются 
+  стандартные средства Windows. Меню File содержит две команды печати. Первая 
+  из них — Print — служит для вывода окна печати, показанного на рис. 5.17 применительно 
+  к широко распространенному струйному принтеру Epson Stylus COLOR 600. В этом 
+  окне также имеется возможность вывода окна со свойствами печати. В нем можно 
+  также определить, с какой страницы начинается печать, и задать число страниц 
+  при печати, если печатаемый материал не укладывается в одну страницу.</font></P>
+<P align="left"><img src="5.17.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.17.jpg" width="438" height="334"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.17. </font></i> </B><i><font size="3" face="Times New Roman">Окно печати</font></i>
+</P>
+<P align="justify"> <font size="3" face="Times New Roman">Окно установки свойств 
+  печати для данного принтера показано на рис. 5.18. Оно имеет три вкладки для 
+  установки соответственно параметров печати, параметров бумаги и использования 
+  утилит профилактики принтера. Многие, даже дешевые струйные принтеры обеспечивают 
+  печать в цвете, тогда как такую возможность имеют только дорогие лазерные принтеры.<BR>
+  <img src="5.18.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.18.jpg" width="439" height="443"> </font> </P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.18. </font></i> </B><font size="3" face="Times New Roman"><i>Окно свойств печати</i></font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Следует отметить, что окна печати — типичные для операционной системы Windows. Их вид зависит от примененного принтера, точнее от установленного для него драйвера. Установки окон довольно очевидны, поэтому более подробно они не описываются. В то же время окно свойств принтера русифицировано лишь частично.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Вторая операция — Print Selection — становится доступной, только если в сессии выделен какой-либо фрагмент. На печать при этом выводится только выделенный фрагмент.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Вообще говоря, MATLAB имеет специальные команды для печати, которые вводятся в командной строке, однако возможности Windows настолько удобны, что командными средствами MATLAB для печати приходится пользоваться редко.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="25"></a>Меню Edit 
+  — средства редактирования документов</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Меню Edit (рис.5.19) содержит операции и команды редактирования, типичные для большинства приложений
+Windows:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Undo (Отменить) — отмена результата предшествующей операции;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Redo (Повторить) — отмена действия последней операции
+    Undo;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Cut (Вырезать) — вырезание выделенного фрагмента и перенос его в буфер;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Сору (Копировать) — копирование выделенного фрагмента в буфер;<BR>
+    О Paste (Вставить) — вставка фрагмента из буфера в текущую позицию курсора;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Clear (Очистить) — операция очистки выделенной области;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Select All (Выделить) — выделение всей сессии;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Delete (Стереть) — уничтожение выделенного объекта;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Clear Command Windows (Очистить командное окно) — очистка текста сессии (с сохранением созданных объектов);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Clear Command History (Очистить окно истории команд) — очистка окна истории; О Clear Workspace — очистка окна браузера рабочей области.</font></li>
+</ul>
+<P align="left"><img src="5.19.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.19.jpg" width="197" height="238"> </P>
+<P align="left"><B><i><font size="3" face="Times New Roman">Рис. 5.19. </font></i> 
+  </B><font size="3" face="Times New Roman"><i>Меню Edit</i></font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Назначение указанных команд и операций уже обсуждалось. Отметим лишь, что команда Clear Command Window очищает окно командного режима работы и помещает курсор в верхний левый угол окна. Однако все определения, сделанные в течение стертых таким образом сессий, сохраняются в памяти компьютера. Для очистки экрана используется также команда clc, вводимая в командном режиме.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="26"></a>Меню View 
+  и Window</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">В MATLAB 6.0, что уже описывалось, набор команд меню View существенно расширен, и теперь с помощью этого меню можно существенно менять вид пользовательского интерфейса.<BR>
+Меню Window активно только в случае, если в систему загружены файлы. При этом оно имеет единственную команду Close All (закрыть все окна) и открывающийся список всех загруженных файлов. Он позволяет выбрать окно указанного пользователем файла и сделать его открытым.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="27"></a>Основы 
+  редактирования и отладки m-файлов</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="28"></a>Интерфейс 
+  редактора/отладчика m-файлов</font> </P>
+<P align="justify"> <font size="3" face="Times New Roman">Для подготовки, редактирования 
+  и отладки m-файлов служит специальный многооконный редактор. Он выполнен как 
+  типичное приложение Windows. Редактор можно вызвать командой edit из командной 
+  строки или командой New <I>&gt; </I>M-file из</font> <font size="3" face="Times New Roman">меню 
+  File. После этого в окне редактора можно создавать свой файл, пользоваться средствами 
+  его отладки и запуска. Перед запуском файла его необходимо записать на диск, 
+  используя команду Filе &gt; Save as в меню редактора.</font> </P>
+<P align="left"><img src="5.20.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.20.jpg" width="428" height="266"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.20. </font></i> </B><i><font size="3" face="Times New Roman">Редактор/отладчик файлов при записи файла на диск</font></i>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">На рис. 5.20 показано окно редактора/отладчика с текстом простого файла в окне редактирования и отладки.</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Подготовленный текст файла (это простейшая и наша первая программа на языке программирования MATLAB) надо записать на диск. Для этого используется команда Save As, окно которой видно на рис. 5.20 внутри окна системы редактора/ отладчика. Работа с окном команды Save As уже описывалась.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">После записи файла на диск можно заметить, что команда Run в меню Tools (Инструменты) редактора становится активной (до записи файла на диск она пассивна) и позволяет произвести запуск файла. Запустив команду Run, можно наблюдать исполнение m-файла; в нашем случае — это построение рисунка в графическом окне и вывод надписи о делении на ноль в ходе вычисления функции <I>sin(x)/x </I>в командном окне системы (рис. 5.21).</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">На первый взгляд может показаться, что редактор/отладчик — просто лишнее звено в цепочке &laquo;пользователь — MATLAB&raquo;. И в самом деле, текст файла можно было бы ввести в окно системы и получить тот же результат. Однако на деле редактор/отладчик выполняет важную роль. Он позволяет создать m-файл (программу) без той многочисленной &laquo;шелухи&raquo;, которая сопровождает работу в командном режиме. Далее мы убедимся, что текст такого файла подвергается тщательной синтаксической проверке, в ходе которой выявляются и отсеиваются многие ошибки пользователя. Таким образом, редактор обеспечивает синтаксический контроль файла.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Редактор имеет и другие важные отладочные средства — он позволяет устанавливать в тексте файла специальные метки, именуемые точками прерывания (breakpoints). При их достижении вычисления приостанавливаются, и пользователь может оценить промежуточные результаты вычислений (например, значения переменных), проверить правильность выполнения циклов и т. д. Наконец, редактор позволяет записать файл в текстовом формате и увековечить ваши труды в файловой системе MATLAB.</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Для удобства работы с редактором/отладчиком 
+  строки программы в нем нумеруются в последовательном порядке. Редактор является 
+  многооконным. Окно каждой программы оформляется как вкладка.</font> </P>
+<P align="left"><img src="5.21.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.21.jpg" width="429" height="496"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.21. </font></i> </B><font size="3" face="Times New Roman"><i>Исполнение файла, показанного в окне редактора на рис. 5.20</i></font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="29"></a>Цветовые 
+  выделения и синтаксический контроль</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Редактор/отладчик m-файлов выполняет синтаксический контроль программного кода по мере ввода текста. При этом используются следующие цветовые выделения:</font></P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> ключевые слова языка программирования — синий цвет;&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> операторы, константы и переменные — черный цвет;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">комментарии после знака <I>% — </I>зеленый цвет;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">символьные переменные (в апострофах) — зеленый цвет;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">синтаксические ошибки — красный цвет.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Благодаря цветовым выделениям вероятность синтаксических ошибок снижается.</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Однако далеко не все ошибки диагностируются. Ошибки, связанные с неверным применением операторов или функций (например, применение оператора - вместо + или функции cos(x) вместо sin(x) и т. д.), не способна обнаружить ни одна система программирования. Устранение такого рода ошибок (их называют семантическими) — дело пользователя, отлаживающего свои алгоритмы и программы.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="30"></a>Понятие 
+  о файлах-сценариях и файлах-функциях</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Здесь полезно отметить, что m-файлы, создаваемые редактором/отладчиком, делятся на два класса:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> файлы-сценарии, не имеющие входных параметров;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">файлы-функции, имеющие входные параметры.</font></li>
+</ul>
+<P align="justify"> <font size="3" face="Times New Roman">Видимый в окне редактора 
+  на рис. 5.21 файл является файлом-сценарием, или Script-файлом. Данный файл 
+  не имеет списка входных параметров и является примером простой процедуры без 
+  параметров. Он использует <I>глобальные переменные, </I>т. е. такие переменные, 
+  значения которых могут быть изменены в любой момент сеанса работы и в любом 
+  месте программы.</font> </P>
+<P align="left"><img src="5.22.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.22.jpg" width="449" height="496"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.22. </font></i> </B><i><font size="3" face="Times New Roman">Исполнение файла-сценария из командной строки</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Для запуска файла-сценария из командной строки MATLAB достаточно указать его имя в этой строке. Рис. 5.22 поясняет это. Обратите внимание на команду grid on, исполняемую после запуска созданного файла. Эта команда наносит на график сетку из точечных линий.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Файл-функция отличается от файла-сценария прежде всего тем, что созданная им функция имеет <I>входные параметры, </I>список которых указывается в круглых скобках. Используемые в файле-функции переменные являются <I>локальными переменными, </I>изменение значений которых в теле функции никоим образом не влияет на значения, которые те же самые переменные могут иметь за пределами функции.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Иными словами, локальные переменные могут иметь те же имена (идентификаторы), что и глобальные переменные (хотя правила культурного программирования не рекомендуют смешивать имена локальных и глобальных переменных). В дальнейшем мы рассмотрим этот вопрос более подробно, а пока вернемся к теме данного урока — описанию интерфейса компонентов системы MATLAB.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="31"></a>Панель 
+  инструментов редактора и отладчика</font> </P>
+<P align="justify"> <font size="3" face="Times New Roman">Редактор имеет свое меню 
+  и свою инструментальную панель. Внешний вид инструментальной панели показан 
+  на рис. 5.23. По стилю данная панель похожа на панель инструментов окна командного 
+  режима работы, но имеет несколько иной набор кнопок.</font> </P>
+<P align="left"><img src="5.23.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.23.jpg" width="482" height="30"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.23. </font></i> </B><i><font size="3" face="Times New Roman">Панель инструментов редактора/отладчика
+m-файлов</font></i>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Назначение кнопок панели инструментов редактора/отладчика следующее:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> New — создание нового
+    m-файла;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Open — вывод окна загрузки файла;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Save — запись файла на диск;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Print — печать содержимого текущего окна редактора;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Cut — вырезание выделенного фрагмента и перенос его в буфер;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Сору — копирование выделенного объекта в буфер;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Paste — размещение фрагмента из буфера в позиции текстового курсора;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Undo — отмена предшествующей операции;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Redo — повтор отмененной операции;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Find text — нахождение указанного текста;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Show function — показ функции;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Set/Clear Breakpoint — установка/сброс точки прерывания;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Clear All Breakpoints — сброс всех точек прерывания;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Step — выполнение шага трассировки;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Step In — пошаговая трассировка с заходом в вызываемые m-файлы;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Step Out — пошаговая трассировка без захода в вызываемые
+    m-файлы;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Save and Run — запись и сохранение;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Exit Debug Mode —
+    выход из режима отладки.</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">С назначением ряда из этих кнопок вы уже знакомы, поскольку оно аналогично описанному ранее для основного окна MATLAB. А вот о назначении других кнопок надо поговорить.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="32"></a>Работа 
+  с точками прерывания</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Основным приемом отладки rn-файлов является установка в их тексте точек прерывания (Breakpoints). Они устанавливаются (и сбрасываются) с помощью кнопки Set/Clear Breakpoint Сброс всех точек прерывания обеспечивается кнопкой Clear All Breakpoints.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Рассмотрим рис. 5.24, на котором в окне редактора/отладчика видна конструкция цикла. Как будет меняться переменная s, значение которой должно давать ряд натуральных чисел?</font></P>
+<P align="justify"> <font size="3" face="Times New Roman">Прежде всего для отладки 
+  надо записать программу на диск, а. затем установить напротив выражения s=s+l 
+  точку прерывания — она отчетливо видна на рис. 5.24 как красный кружок. Для 
+  установки точки прерывания необходимо поместить текстовый курсор в нужное место 
+  (напротив указанного выражения) и щелкнуть на кнопке Set/Clear Breakpoint или 
+  щелкнуть справа от номера строки.</font> </P>
+<P align="left"><img src="5.24.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.24.jpg" width="320" height="342"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.24. </font></i> </B><i><font size="3" face="Times New Roman">Простейший пример на применение точки прерывания в программе</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Теперь при пуске программы командой Run она будет исполнена до точки прерывания, после чего текущие значения s будут выведены в окне MATLAB. С помощью кнопки Step (Шаг) можно выполнить очередной шаг вычислений и т. д. Если отпала необходимость останова в точках прерывания, достаточно кнопкой Clear All Breakpoints удалить разом все точки прерывания. Желтая стрелка указывает, в каком месте программы произошла остановка. Обратите внимание на то, что в этом примере каждый шаг исполнения цикла фиксируется в окне командного режима системы MATLAB. При остановке в точке прерывания вы можете провести контроль значений переменных как &laquo;вручную&raquo;, так и с помощью организации вывода на просмотр перед точкой прерывания.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Вы можете задать выполнение программы без остановки при заходе, но с остановкой при выходе (кнопка Step Out), и с остановкой при заходе в вызываемые
+m-файлы (кнопка Step In). Кнопка Exit Debug Mode (Выход из режима отладки) прекращает операции отладки.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="33"></a>Интерфейс 
+  графических окон</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="34"></a>Обзор 
+  интерфейса графических окон</font> </P>
+<P align="justify"> <font size="3" face="Times New Roman">В уроке 3 мы уже описывали 
+  в общих чертах окно графики. Ниже мы рассмотрим его более детально. Графическое 
+  окно MATLAB 6.0 представлено на рис. 5.25. Это обычное масштабируемое и перемещаемое 
+  окно Windows-приложений. MATLAB может создавать множество таких окон. Однако 
+  размещение графики в окне сессии не предусмотрено. Это возможно в специальном 
+  расширении Notebook, позволяющем встраивать объекты MATLAB (тексты, строки ввода 
+  и вывода, графики) в документы популярного текстового редактора Word 95/97/2000.<BR>
+  <img src="5.25.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.25.jpg" width="437" height="526"> </font> </P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.25. </font></i> </B><i><font size="3" face="Times New Roman">Графическое окно MATLAB</font></i>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Меню этого окна похоже на меню окна командного режима работы системы
+MATLAB. Однако при внимательном просмотре заметен ряд отличий.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Прежде всего в меню Edit окна графики наряду со стандартными операциями работы с буфером есть ряд новых команд:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Copy Figure (Копировать рисунок) — копирование в буфер рисунка (графика);&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Copy Options (Копировать параметры) — копирование параметров графика:&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Figure Properties (Свойства рисунка) — вывод окна свойств графика;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Axes Properties (Свойства осей) — вывод окна свойств осей графика;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Current Object Properties (Свойства текущего объекта) - вывод окна свойств текущего объекта.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Для вывода свойств графиков, их осей и текущих объектов используется окно свойств графиков с соответствующими вкладками, работа с которым описывалась в уроке 3.</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman"><i><img border="0" src="Prim.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim.GIF" align="left" width="36" height="35">Большинство графиков, которые описываются в книге, представлены копиями толь-ко самих графиков, а не всего графического окна. Для получения таких копий использовалась команда Copy Figure из меню Edit окна графики или просто вырезалась нужная часть копии экрана, получаемой нажатием клавиши Print Scrn. Такое представление делает приведенные рисунки одинаковыми для всех версий MATLAB от 5.0 и выше.</i></font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="35"></a>Панель 
+  инструментов камеры обзора</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Отличительной особенностью окна графики в версии MATLAB 6.0 стало появление второй инструментальной панели со средствами форматирования трехмерной (3D) графики. Эта панель (она видна на рис. 5.25 под основной панелью инструментов) выводится командой View <I>&gt; </I>Camera Toolbar.</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Эта панель управляет некоторой воображаемой фотокамерой (или просто камерой), <I>с </I>помощью которой как бы наблюдается объект. Кнопки имеют наглядные изображения, поясняющие действия кнопок. В связи с этим их подробное описание лишено смысла — проще опробовать их в действии.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="36"></a>Меню инструментов 
+  Tools</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Действия кнопок панели инструментов камеры обзора продублированы в меню Tools (Инструменты) — на рис. 5.25 оно представлено в открытом состоянии. Состав команд указанного подменю в версии MATLAB 6.0 существенно изменен и обновлен. Теперь в нем имеются следующие команды:</font></P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Edit Plot (Редактировать график) — редактирование графика;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Zoom In (Увеличение) — увеличение масштаба графика;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;Zoom Out (Уменьшение) — уменьшение масштаба графика;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Rotate 3D (Вращение 3D) — вращение в пространстве;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Move Camera (Передвинуть камеру) — установка камеры обзора;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Camera Motion (Передвижение камеры) — установка перемещения камеры обзора;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Camera Axes (Оси камеры) — установка координатных осей при работе с камерой;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Camera Reset (Установка начального состояния камеры) — сброс установок камеры;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Basic Fitting — проведение аппроксимации и регрессии;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Data Statistics — получение статистических данных для точек графика.</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Две последние позиции этого меню дают весьма оригинальные возможности обработки точек графика — выполнение регрессии множеством методов с выводом (где это возможно) уравнения регрессии на график и вычисление статистических параметров для этих точек.</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Поскольку эти операции относятся к обработке данных, мы рассмотрим их более детально в уроке 17.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="37"></a>Вращение 
+  графиков мышью</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Хорошее впечатление оставляет возможность вращения графиков мышью — прием, введенный в целый ряд систем компьютерной математики (Mathcad, Maple 6 и Mathematica 4). При вводе этой команды вокруг фигуры появляется обрамляющий ее параллелепипед, который можно вращать мышью (при нажатой левой кнопке) в том или ином направлении. Отпустив кнопку мыши, можно наблюдать график в пространстве. Интересно, что эта возможность действует даже в отношении двумерных графиков (см. рис. 5.25).- При этом вращается плоскость, в которой расположен график. Эта плоскость размещается в упомянутом параллелепипеде.</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="38"></a>Операции 
+  вставки</font> </P>
+<P align="justify"> <font size="3" face="Times New Roman">В уроке 3 мы уже рассматривали 
+  операции вставки с помощью основной панели инструментов. Эти возможности продублированы 
+  в позиции Insert (Вставка) меню графического окна. Рис. 5.26 показывает пример 
+  рисунка, в котором выполнены основные операции вставки с помощью команд меню 
+  Insert (Вставка). Это нанесение надписей по осям, титульной надписи, надписи 
+  внутри рисунка, стрелки, отрезка прямой, легенды и шкалы цветов. На этом рисунке 
+  меню Insert показано в открытом состоянии.</font> </P>
+<P align="left"><img src="5.26.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/5.26.jpg" width="437" height="538"></P>
+<P align="left">
+<B><i><font size="3" face="Times New Roman">Рис. 5.26. </font></i> </B><font size="3" face="Times New Roman"><i>Примеры операций вставки в графическом окне</i></font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="39"></a>Общение 
+  MATLAB с операционной системой</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="40"></a>Работа 
+  с папками</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Общение системы MATLAB с операционной системой MS-DOS многим покажется рудиментарной возможностью. Так, во время написания данной книги такое обще</font><font size="3" face="Times New Roman">ние не потребовалось.<sup>[</sup></font><font size="3" face="Times New Roman"><i>Это очень важно для систем, работающих в реальном масштабе времени, причем наличие наряду с ! возможности явного задания ОС (dos, unix, vms) позволяет программировать для ОС на управляющем компьютере, отличающемся от ОС пользователя MATLAB.—
+Примеч. ред.</i><sup>]</sup>. Но, как говорится, из песни слов не выкинешь — MATLAB позволяет из командой строки пользоваться основными услугами старушки MS-DOS и Windows. Есть возможность общения и с другими операционными системами и даже с глобальной сетью Интернет, в том числе и с помощью собственного HTML-браузера MATLAB (браузера помощи).</font></P>
+<P align="left">
+<font size="3" face="Times New Roman">Для перехода в новую папку служит команда cd:&nbsp;</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">&nbsp;cd wd — переход в указанную папку wd;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">cd (или произвольное имя переменной ad ad=cd) — возвращает строку с полным именем текущей папки;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> cd .. — переход к папке, родительской по отношению к текущей.&nbsp;</font></li>
+</ul>
+<p align="left"><font size="3" face="Times New Roman"> Примеры (предполагается, что MATLAB установлен на диске Е):</font></p>
+<P align="left">
+<font size="3" face="Courier New">&raquo; cd</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">E:\matlabR12\toolbox</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; cd E:\matlabR12\tool</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">??? Name is nonexistent or not a directory</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; cd </font>
+<font size="3" face="Courier New">E:\matlabR12\toolbox\</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; cd&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> E:\matlabR12\toolbox</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Для указания пути к текущей папке может использоваться функция pwd:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; pwd</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> E:\matlabR12\toolbox</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Для получения информации о содержимом текущей папки используется команда dir:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; cd E:\matlabR12\too1box\matlab</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; dir</font>
+</P>
+<table border="0" width="550">
+  <tr>
+    <td width="20%"><font size="3" face="Courier New">.&nbsp;</font></td>
+    <td width="20%"><font size="3" face="Courier New">&nbsp;&nbsp; datatypes</font></td>
+    <td width="20%"><font size="3" face="Courier New">&nbsp; funfun&nbsp; graphics</font></td>
+    <td width="20%"><font size="3" face="Courier New">&nbsp; ops</font></td>
+    <td width="20%"><font size="3" face="Courier New"> specgraph verctrl</font></td>
+  </tr>
+  <tr>
+    <td width="20%"><font size="3" face="Courier New">..</font></td>
+    <td width="20%"><font size="3" face="Courier New">demos</font></td>
+    <td width="20%"><font size="3" face="Courier New"> general iofun&nbsp;</font></td>
+    <td width="20%"><font size="3" face="Courier New">&nbsp;polyfun&nbsp;</font></td>
+    <td width="20%"><font size="3" face="Courier New">&nbsp;strfun&nbsp; winfun</font></td>
+  </tr>
+  <tr>
+    <td width="20%"><font size="3" face="Courier New">audio&nbsp;</font></td>
+    <td width="20%"><font size="3" face="Courier New">         el fun&nbsp;</font></td>
+    <td width="20%"><font size="3" face="Courier New">&nbsp;graph2d lang&nbsp;</font></td>
+    <td width="20%"><font size="3" face="Courier New">&nbsp;sparfun&nbsp;</font></td>
+    <td width="20%"><font size="3" face="Courier New">&nbsp;timefun</font></td>
+  </tr>
+  <tr>
+    <td width="20%"><font size="3" face="Courier New">datafun</font></td>
+    <td width="20%"><font size="3" face="Courier New">      elmat</font></td>
+    <td width="20%"><font size="3" face="Courier New">graph3d mat</font></td>
+    <td width="20%"><font size="3" face="Courier New"> fun&nbsp;</font></td>
+    <td width="20%"><font size="3" face="Courier New"> specfun uitools</font></td>
+  </tr>
+</table>
+<P align="justify">
+<font size="3" face="Times New Roman">Обратите внимание, что в последнем примере выведено содержимое подпапки matlab одной из самых важных папок системы MATLAB — TOOLBOX. В папке TOOLBOX содержатся 46 самых важных подпапок с хранящимися в них пакетами расширения системы MATLAB, например comm — папка пакета проектирования средств телекоммуникаций, compiler — компилятор программ в коды языка С, symbolic — символьные (аналитические) вычисления и т. д. Впрочем, надо отметить, что в разных поставках системы число подпапок может различаться. Функция dir может использоваться для получения списка файлов в любой папке:
+files-dir ('путь к папке и имя папки').</font></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="41"></a>Выполнение 
+  команд !, dos, unix и vms</font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Из командной строки MATLAB возможно выполнение команд наиболее распространенных операционных систем:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> ! команда — выполнение заданной команды из набора операционной системы; в среде которой установлена MATLAB;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> unix команда — выполнение заданной команды из операционной системы UNIX или UNIX-подобных систем (версии Linux);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> vms команда — выполнение заданной команды из операционной системы VMS (Open VMS);</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">dos команда — выполнение заданной команды из набора команд MS-DOS или установленной ОС семейства Windows, в последнем случае команда выполняется в фоновом режиме.</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Выведем блокнот Windows для редактирования
+m-файла:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">dos 'notepad myfile.m'</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">или&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">[s w]=dos('notepad myfile.m')</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">s=0, когда команда выполнена успешно, в противном случае
+s=1, w содержит сообщение DOS.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="42"></a>Общение 
+  с Интернетом из командной строки</font> </P>
+<P align="justify">
+<font size="3" face="Times New Roman">Для общения с Интернетом служит команда web: О web спецификация — дает связь с Web-сервером.
+[</font><font size="3" face="Times New Roman"><i>Те же команды web с параметром —browser (например, web <A href="javascript:if(confirm('http://www.mathworks.com/  \n\nЭтот файл не был найден Teleport Pro, потому что it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nВы хотите открыть это с сервера?'))window.location='http://www.mathworks.com/'" tppabs="http://www.mathworks.com/">http://www.mathworks.com</A> —browser) вызывают вместо браузера помощи MATLAB браузер HTML, установленный в ваших настройках операционной системы Windows как браузер по умолчанию. В UNIX (Linux) браузер, вызываемый командой web с параметром —browser, определяется командой MATLAB [doccmd.options, ] - docopt, где doccmd — наименование браузера, например netscape, вместо options можно подставить параметры браузера. Можно также отредактировать файл docopt в папке matlabr!2/toolbox/local и указать в нем браузер по умолчанию. —
+Примеч. ред.</i>]<SUP> </SUP>Примеры применения команды web:</font></P>
+<ul>
+  <li>
+    <p align="justify"><font size="3" face="Times New Roman">web <A href="javascript:if(confirm('http://www.mathworks.com/  \n\nЭтот файл не был найден Teleport Pro, потому что it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nВы хотите открыть это с сервера?'))window.location='http://www.mathworks.com/'" tppabs="http://www.mathworks.com/">http://www.mathworks.com</A> —
+    загружает Web-страницу MathWorks Web [</font><font size="3" face="Times New Roman"><i>Команда support сразу открывает страницу технической поддержки MATLAB. —
+    Примеч. ред.</i>] в браузер помощи; [<i>При запуске с параметром —browser можно ввести URL в виде www.mathworks.com, но сайт будет открыт в браузере ОС по умолчанию. —
+    Примеч. ред.</i>]</font></li>
+  <li>
+    <p align="justify"><font size="3" face="Times New Roman">web mailto:email_address — использует программу для отправки электронной почты, установленную по умолчанию в настройках операционной системы;</font></li>
+  <li>
+    <p align="justify"><font size="3" face="Times New Roman">&nbsp;все формы команды web могут использоваться в функциях. Например, функция s = web('www.mathworks.com', ' -browser') запускает браузер Интернета операционной системы
+    [<i>Для UNIX и Linux браузера Интернета можно задавать из MATLAB. —
+    Примеч. ред.</i>] и выдает s=0, если браузер запущен, даже если браузер Интернета открывает страницу в автономном режиме (off-line) или не может ее найти, s=l, если браузер Интернет не был обнаружен, s=2, если браузер был обнаружен, но не был запущен.</font></li>
+</ul>
+<P align="justify">
+<font size="3" face="Times New Roman">Такой выход в Интернет иначе чем экзотикой назвать трудно, благо в Windows есть куда более простые способы выхода в Интернет. Отнесем эту возможность к числу приятных мелочей
+[<i>Необходимых для работы систем, работающих в реальном масштабе времени. —
+Примеч. ред.</i>], которых в MATLAB очень много. Например, приятной мелочью является также собственный web-сервер MATLAB (только в версиях для Microsoft Windows NT4/2000, Linux и Sun Solaris). Доступ к нему может быть ограничен только компьютерами, перечисленными в списке файла hosts.conf.</font></P>
+<P align="left"> <FONT face="Times New Roman" size="4"><a name="43"></a>Некоторые 
+  другие команды</FONT> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Есть еще несколько команд для общения с операционными системами:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> delete name — стирание файла с заданным именем name (имя записывается по</font>
+    <font size="3" face="Times New Roman">правилам операционной системы);&nbsp;</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> getenvCname') — возвращает значение переменной 'name' среды окружения.<BR>
+    </font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; getenv('temp')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">C:\TEMP</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Команда tempdir дает информацию о папке для хранения временных файлов:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; tempdir</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">С:\ТЕМР\ ...</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Еще одна команда — computer — используется в двух формах:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; computer&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> PCWIN</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">и</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [С S]=computer&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> С = PCWIN&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> S =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2.1475е+009</font>
+</P>
+<P align="justify">
+<font size="3" face="Times New Roman">Во втором случае помимо сообщения о типе компьютера выводится максимально возможное число элементов в массивах. Оно зависит от объема памяти и свойственных операционной системе ограничений (приведенные данные получены при использовании компьютера с процессором Pentium II, емкостью ОЗУ 128 Мбайт и установленной ОС Windows 98).</font></P>
+<P align="justify">
+<font size="3" face="Times New Roman">Для установки типа терминала может использоваться еще одна команда — terminal. Возможные типы терминалов можно найти в справке по этой команде, выводимой командой help terminal. На этом рассмотрение команд прямого общения с операционными системами можно считать законченным.</font></P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="44"></a>Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Работать с меню, панелями инструментов и буфером обмена.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Использовать браузеры рабочего пространства и файловой системы.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Запускать примеры приложения Simulink.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Осуществлять печать документов.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Работать с редактором/отладчиком
+    m-файлов.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Различать файлы-сценарии и файлы-функции.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Работать с окнами графики.</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Использовать команды взаимодействия MATLAB с операционной системой и Интернетом.</font></li>
+</ul>
+</BODY>
+</HTML>
+

@@ -1,0 +1,175 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+
+<title>№</title>
+
+<style>
+<!--
+
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab2/Fon.jpg*//*tpa=http://orloff.am.tpu.ru/matlab/Lab2/Fon.jpg*/);
+}
+.style3 {
+	color: #0033CC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+-->
+</style>
+
+<link href="styles.css" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style6 {font-size: smaller}
+.style7 {font-size: x-small}
+-->
+</style>
+</head>
+<body lang=RU>
+<p><span class="style3">2. Интерфейс MATLAB </span> </p>
+<p class="style3">2.1. Основной интерфейс MATLAB
+</p>
+<p align="justify">Пользователь может настраивать вид интерфейса и по разному располагать его окна. Для редактирования и отладки m-файлов (файлов с программами) MATLAB имеет встроенный редактор. Также имеются окно просмотра ресурсов памяти, окно просмотра путей файловой системы, справочник по возможностям системы и демонстрационные программы. Редактор графики и окно графики со средствами редактирования рисунков  были рассмотрены в лаб. работе 1.</p>
+<p align="justify"><span class="style5">Панель инструментов</span> (рис. 1) дает  простой и удобный (особенно для начинающих пользователей) способ работы с системой MATLAB. При этом основные команды вводятся указанием курсором мыши на нужную кнопку с нажатием левой клавиши мыши. Кнопки имеют изображение, явно подсказывающее их назначение. </p>
+<p align="center"> <img height="369" src="index2.files/3.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/3.GIF" width="582"> </p>
+<p align="center">Рис. 1. Панель инструментов </p>
+<p>Назначение  кнопок панели инструментов: </p>
+<ul>
+  <li><span class="style5">New M-file</span> (Новый m-файл) — выводит пустое окно редактора m-файлов; </li>
+  <li> <span class="style5">Open file</span> (Открыть файл) — открывает окно для загрузки m-файла; </li>
+  <li> <span class="style5">Cut</span> (Вырезать)— вырезает выделенный фрагмент и помещает его в буфер; </li>
+  <li><span class="style5">Сору</span> (Копировать)— копирует выделенный фрагмент в буфер; </li>
+  <li>    <span class="style5">Paste</span> (Вставить)— переносит фрагмент из буфера в текущую строку ввода; </li>
+  <li><span class="style5">Undo</span> (Отменить)— отменяет предшествующую операцию; </li>
+  <li><span class="style5">Redo</span> (Повторить) — восстанавливает последнюю отмененную операцию; </li>
+  <li> <span class="style5">Simulink</span> — открывает окно браузера библиотек Simulink; </li>
+  <li> <span class="style5">Help</span> (Помощь)— открывает окно справки. </li>
+</ul>
+<p align="justify">Набор кнопок панели инструментов обеспечивает выполнение наиболее часто встречающихся команд и вполне достаточен для повседневной работы с системой. </p>
+<p align="justify"> О назначении кнопок говорят и всплывающие подсказки, появляющиеся, когда курсор мыши устанавливается на соответствующую кнопку. Они имеют вид желтого прямоугольника с текстом короткой справки.</p>
+<p class="style1">Вызов окна открытия нового файла
+</p>
+<p align="justify">Кнопка <span class="style5">New M-file</span> открывает окно редактора/отладчика m-файлов. Это окно показано на рис. 2. Работу с этим средством мы обсудим позже. </p>
+<p></p>
+<p align="center"><img height="435" src="index2.files/4.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/4.GIF" width="560">
+</p>
+<p align="center">Рис. 2. Окно редактора/отладчика m-файлов</p>
+<p align="justify">По умолчанию файлу дается имя <span class="style5">Untitled</span> (безымянный), которое впоследствии (при записи файла) можно изменить на другое, отражающее тему задачи. Это имя отображается в титульной строке окна редактирования m-файла, которое размещается в окне редактора/отладчика и видно на рис. 2. В редакторе/отладчике можно редактировать несколько m-файлов, и каждый из них будет находиться в своем окне редактирования, хотя активным может быть только одно окно, расположенное поверх других окон.</p>
+<blockquote>
+  <p align="justify" class="style6"><span class="style5"><strong>Примечание</strong></span>. Обратите внимание, что панель инструментов является контекстно-зависимой. Для редактора/отладчика m-файлов она имеет несколько иной набор инструментов, чем для окна командного режима работы. </p>
+</blockquote>
+<p class="style1">Вызов окна загрузки имеющегося файла </p>
+<p align="justify">Кнопка <span class="style5">Open file</span> (Открыть файл) служит для загрузки в редактор/отладчик ранее созданных m-файлов, например входящих в пакет расширения (Toolbox) системы или разработанных пользователем. Она открывает окно, которое является типичным элементом интерфейса Windows-приложений и показано на рис. 3 внутри окна редактора/отладчика m-файлов. </p>
+<p align="center"> <img height="271" src="index2.files/5.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/5.GIF" width="426">  </p>
+<p align="center">Рис. 3. Окно загрузки файла в окне редактора/отладчика </p>
+<p align="justify">В окне загрузки файлов с помощью раскрывающегося списка <em>Папка</em> и вертикальной полосы прокрутки можно «пройтись» по всем дискам, папкам и файлам. Чтобы выбрать нужный файл для загрузки, его требуется выделить мышью. Выбор завершается двойным щелчком на имени файла, нажатием клавиши <em>Enter</em> или щелчком на кнопке <em>Открыть</em>. Любое из этих действий приводит к загрузке документа в текущее окно системы. Кнопка <em>Отмена</em> или клавиша <em>Esc</em> позволяет отказаться от загрузки.</p>
+<p class="style1"><strong>Вызов справки MATLAB </strong></p>
+<p align="justify">Последняя кнопка панели инструментов <span class="style5">Help</span> (Помощь) открывает окно с перечнем разделов справочной системы.</p>
+<p class="style3">2.2. Средства контроля рабочей области и файловой системы 
+</p>
+<p class="style3"><strong>Браузер рабочей области </strong></p>
+<p align="justify">Предназначен для слежения за векторами, матрицами, переменными и т.д., создаваемыми в процессе сеанса работы с MATLAB.</p>
+<p align="justify">В левой части окна системы MATLAB имеется окно специального браузера рабочей области — <span class="style5">Workspace Browser</span>:</p>
+<p align="center"><img src="index2.files/12.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/12.GIF" width="409" height="390"></p>
+<p align="justify">Он служит для просмотра ресурсов рабочей области памяти. Браузер дает наглядную визуализацию содержимого рабочей области. Окно браузера рабочей области выполняет и другие важные функции — позволяет просматривать существующие в памяти объекты, редактировать их содержимое и удалять объекты из памяти. Для вывода содержимого объекта достаточно выделить его имя с помощью мыши и щелкнуть на кнопке Open (Открыть). </p>
+<p align="center"><img src="index2.files/20.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/20.gif" width="177" height="146"></p>
+<p align="justify">Объект можно открыть и двойным щелчком на его имени в списке. Откроется окно редактирования массива Array Editor, показанное на рис. 4. </p>
+<p align="center"><img height="377" src="index2.files/11.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/11.GIF" width="449">  </p>
+<p align="center"> <img height="377" src="index2.files/11B.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/11B.GIF" width="449"> </p>
+<p align="center">Рис. 4. Пример просмотра содержимого матрицы </p>
+<p align="justify">Окно редактирования матрицы дает удобный доступ для редактирования любого элемента матрицы по правилам, принятым при работе с электронными таблицами. Основное из них — быстрый доступ к любому элементу матрицы. Можно также менять тип значений элементов, выбирая его из списка, предоставляемого меню <span class="style5">Numeric format</span> (Формат чисел). В окне также выводятся данные о числе строк и столбцов матрицы. </p>
+<p class="style1">Команды просмотра рабочей области who и whos 
+</p>
+<p align="justify">Следует отметить, что просмотр рабочей области возможен и в командном режиме, без обращения к браузеру Workspace Browser. Команда <span class="style5"><strong>who</strong></span> выводит список определенных переменных, а команда <span class="style5"><strong>whos</strong></span> — список неременных с указанием их размера и объема занимаемой памяти. Следующий пример иллюстрируют действие этих команд: </p>
+<p><img src="index2.files/21.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/21.gif" width="386" height="321"></p>
+<p align="justify">Если вы хотите просмотреть данные одной переменной, например М, следует использовать команду <span class="style5">whos M</span>. Естественно, просмотр рабочей области с помощью браузера рабочей области (Workspace Browser) более удобен и нагляден.</p>
+<blockquote>
+  <p align="justify"><span class="style3">Упражнение 1. </span>Создать в командной строке матрицу размером 3*3 и вектор из 4-х элементов. Далее: </p>
+  <ul>
+    <li> изучить возможности браузера рабочей области на примере данных переменных;</li>
+    <li>выполнить просмотр  рабочей области с помощью команд who и whos.</li>
+  </ul>
+</blockquote>
+<p class="style3">Браузер файловой структуры</p>
+<p align="justify">Для просмотра файловой структуры MATLAB служит специальный браузер файловой системы <span class="style5">Current Directory</span> (Текущая папка), который запускается при  загрузке системы. На рис. 5 в левой части показано окно этого браузера. </p>
+<p align="justify"><img src="index2.files/12A.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/12A.GIF" width="721" height="310"></p>
+<p align="center">Рис. 5. Браузер файловой структуры </p>
+<p align="justify">Нетрудно заметить, что браузер файловой системы построен по типу общеизвестного Проводника операционных систем Windows 95/98/Me/2000/XP. Окно дает возможность просмотра файловой системы ПК и выбора любого файла. Для примера на рис. 6 показан выбор m-файла <span class="style2">Zadacha1.m</span>. Исполнив команду <em class="style5">Open</em> (Открыть) из контекстного меню правой клавиши мыши (рис. 6) или дважды щелкнув по выделенной строке с именем файла, можно загрузить этот файл в окно редактора/отладчика m-файлов. При этом редактор запустится автоматически и его окно с готовым для редактирования выбранным файлом появится на экране.</p>
+<p align="center"><img src="index2.files/12b.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/12b.gif" width="212" height="478"></p>
+<p align="center">Рис. 6. Открытие файла</p>
+<blockquote>
+  <p align="justify" class="style7"><span class="style5"><strong>Примечание</strong>.</span> Обратите внимание на то, что в поле Description отображается первый встречающийся в m-файле комментарий, в котором пользователь описывает файл.</p>
+</blockquote>
+<p>Таким образом, браузер просмотра файловой структуры позволяет детально ознакомиться с файловой системой MATLAB и вывести любой из m-файлов или файлов демонстрационных примеров для просмотра, редактирования и модификации. </p>
+<table width="100%" border="1" bordercolor="#FF0000">
+  <tr>
+    <td width="100%" bordercolor="#FF0000" bgcolor="#FFCC00" scope="col"><div align="justify">
+      <p><span class="style1">Важно. </span>В MATLAB перед началом решения задачи пользователь обязан выбрать рабочий каталог для решения данной задачи. Все файлы, необходимые для решения задачи, должны сохраняться в данный каталог. Выбор каталога осуществляется с помощью элементов<br>
+      <img src="index2.files/22.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/22.gif" width="247" height="27"> </p>
+    </div></td>
+  </tr>
+</table>
+<blockquote>
+  <p align="left"><span class="style3">Упражнение 2. </span>Создать  каталог для лабораторный работы № 2 и выбрать его в качестве рабочего каталога в MATLAB.</p>
+  <p align="left"><span class="style3">Упражнение 3. </span>Создать m - файл для решения первой задачи и сохранить его в ваш рабочий каталог с именем, например <span class="style5">Zadacha1.m</span>.</p>
+</blockquote>
+<p class="style3">2.3. Меню системы MATLAB </p>
+<p align="justify">Перейдем к описанию основного меню системы MATLAB. Это меню (см. рис. 5 вверху) выглядит довольно скромно и содержит всего шесть пунктов: </p>
+<ul>
+  <li> <span class="style5">File</span> — работа с файлами; </li>
+  <li><span class="style5">Edit</span> — редактирование сессии; </li>
+  <li><span class="style5">View</span> — вывод и скрытие панели инструментов; </li>
+  <li><span class="style5">Web</span> — доступ к Интернет-ресурсам; </li>
+  <li><span class="style5">Windows</span> — установка Windows-свойств окна; </li>
+  <li><span class="style5">Help</span> — доступ к справочным подсистемам. </li>
+</ul>
+<p class="style1"><strong>Меню File</strong></p>
+<p align="justify">Меню <span class="style5">File</span> содержит ряд операций и команд для работы с файлами. Оно показано на рис. 7:</p>
+<p align="center"> <img height="257" src="index2.files/13.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/13.GIF" width="220"> </p>
+<p align="center">Рис. 7. Меню файловых операций File </p>
+<ul>
+  <li> <span class="style5">New</span> - открывает подменю с позициями: 
+    <ul>
+      <li><span class="style5">M-file</span> — открытие окна редактора/отладчика m-файлов; </li>
+      <li><span class="style5">Figure</span> — открытие пустого окна графики; </li>
+      <li><span class="style5">Model</span> — открытие пустого окна для создания Simulink-модели; </li>
+      <li><span class="style5">GUI</span> — открытие окна разработки элементов графического интерфейса пользователя. </li>
+    </ul>
+  </li>
+  <li> <span class="style5">Open</span> — открывает окно загрузки файла. </li>
+  <li> <span class="style5">Close Command Windows</span> — закрывает окно командного режима работы (оно при этом исчезает с экрана). </li>
+  <li><span class="style5">Import data</span> — открывает окно импорта файлов данных. </li>
+  <li> <span class="style5">Save Workspace As...</span> — открывает окно записи рабочей области в виде файла с заданным именем. </li>
+  <li><span class="style5">Set Path</span> — открывает окно установки путей доступа файловой системы. </li>
+  <li><span class="style5">Preferences...</span> — открывает окно настройки элементов интерфейса. </li>
+  <li><span class="style5">Print...</span> — открывает окно печати всего текущего документа. </li>
+  <li><span class="style5">Print Selection...</span> — открывает окно печати выделенной части документа. </li>
+  <li><span class="style5">Exit</span> — завершает работу с системой.</li>
+</ul>
+<p class="style1"><strong>Меню Edit:</strong></p>
+<p>Меню <span class="style5">Edit</span> (рис.5.19) содержит операции и команды редактирования, типичные для большинства приложений Windows: </p>
+<ul>
+  <li><span class="style5">Undo</span> (Отменить) — отмена результата предшествующей операции; </li>
+  <li><span class="style5">Redo</span> (Повторить) — отмена действия последней операции Undo; </li>
+  <li><span class="style5">Cut</span> (Вырезать) — вырезание выделенного фрагмента и перенос его в буфер; </li>
+  <li><span class="style5">Сору</span> (Копировать) — копирование выделенного фрагмента в буфер; </li>
+  <li> <span class="style5">Paste</span> (Вставить) — вставка фрагмента из буфера в текущую позицию курсора; </li>
+  <li><span class="style5">Clear</span> (Очистить) — операция очистки выделенной области; </li>
+  <li><span class="style5">Select All</span> (Выделить) — выделение всей сессии; </li>
+  <li><span class="style5">Delete</span> (Стереть) — уничтожение выделенного объекта; </li>
+  <li><span class="style5">Clear Command Windows</span> (Очистить командное окно) — очистка текста сессии (с сохранением созданных объектов); </li>
+  <li><span class="style5">Clear Command History</span> (Очистить окно истории команд) — очистка окна истории;</li>
+  <li> <span class="style5">Clear Workspace</span> — очистка окна браузера рабочей области. </li>
+</ul>
+<p align="center"> <img height="271" src="index2.files/19.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index2.files/19.GIF" width="350"> </p>
+<p align="center">Рис. 8. Меню Edit </p>
+<p align="justify">Отметим , что команда Clear Command Window очищает окно командного режима работы и помещает курсор в верхний левый угол окна. Однако все определения, сделанные в течение стертых таким образом сессий, сохраняются в памяти компьютера. Для очистки экрана используется также команда <span class="style5">clc</span>, вводимая в командном режиме.</p>
+<blockquote>
+  <p align="justify"><span class="style3">Упражнение 4. </span>Очистить рабочую область. Очистить командное окно. Очистить историю команд. </p>
+</blockquote>
+<p></p>
+</body>
+
+</html>

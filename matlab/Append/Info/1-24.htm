@@ -1,0 +1,3119 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+  <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 23. Знакомство 
+    с пакетами расширения MATLAB </a></font></b> </li>
+  <ul>
+    <li><font face="Times New Roman CYR" size=3><a href="#2">Вывод списка пакетов 
+      расширения</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#3">Simulink for Windows 
+      </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#4">Real Time Windows 
+      Target и Workshop </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#5">Report Generator 
+      для MATLAB и Simulink </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#6">Neural Networks Toolbox 
+      </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#7">Fuzzy Logic Toolbox 
+      </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#8">Symbolic Math Toolbox 
+      </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#9">Пакеты математических 
+      вычислений</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#10">NAG Foundation 
+          Toolbox</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#11">Spline Toolbox</a></font> 
+        </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#12">Statistics Toolbox 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#13">Optimization 
+          Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#14">Partial Differential 
+          Equations Toolbox </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#15">Пакеты анализа и 
+      синтеза систем управления </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#16">Control System 
+          Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#17">Nonlinear Control 
+          Design Toolbox</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#18">Robust Control 
+          Toolbox</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#19">Model Predictive 
+          Control Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#20">мю - Analysis 
+          and Synthesis</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#21">Stateflow</a></font> 
+        </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#22">Quantitative 
+          Feedback Theory Toolbox </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#23">LMI Control Toolbox 
+      </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#24">Пакеты идентификации 
+      систем </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#25">System Identification 
+          Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#26">Frequency Domain 
+          System Identification Toolbox </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#27">Дополнительные пакеты 
+      расширения MATLAB </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#28">Communications 
+          Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#29">Digital Signal 
+          Processing (DSP) Blockset</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#30">Fixed-Point 
+          Blockset</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#31">Пакеты для обработки 
+      сигналов и изображений </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#32">Signal Processing 
+          Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#33">Higher-Order 
+          Spectral Analysis Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#34">Image Processing 
+          Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#35">Wavelet Toolbox 
+          </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#36">Прочие пакеты прикладных 
+      программ</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#37">Financial Toolbox</a></font> 
+        </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#38">Mapping Toolbox</a></font> 
+        </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#39">Power System 
+          Blockset</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#40">Data Acquisition 
+          Toolbox и Instrument Control Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#41">Database toolbox 
+          и Virtual Reality Toolbox </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#42">Excel Link </a></font> 
+        </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#43">MATLAB Compiler</a></font> 
+        </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#44">Что нового мы узнали? 
+      </a></font> </li>
+  </ul>
+</ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №23.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Знакомство с пакетами расширения 
+  МАТLАВ</font> </P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Вывод списка пакетов расширения</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Simulinc for Windows</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Пакет символьной математики</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Пакеты математических вычислений</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Пакеты анализа и синтеза систем управления</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Пакеты идентификации систем</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Дополнительные средства пакета
+    Simulinc</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Пакеты для обработки сигналов и изображений</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Прочие пакеты прикладных программ</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы кратко ознакомимся с основными средствами профессионального расширения системы и ее адаптации под решение определенных классов математических и научно-технических задач — с пакетами расширения системы MATLAB. Несомненно, что хотя бы части из этих пакетов должен быть посвящен отдельный учебный курс или справочник, быть может, и не один. За рубежом по большинству таких расширений опубликованы отдельные книги, а объем документации по ним составляет сотни мегабайт. К сожалению, объем данной книги позволяет лишь немного пройтись по пакетам расширения, с тем чтобы дать читателю представление о том, в каких направлениях развивается система.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Вывод 
+  списка пакетов расширения</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Полный состав системы MATLAB 6.0 содержит ряд компонентов, название, номер версии и дату создания которых можно вывести на просмотр командой ver:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; ver</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">MATLAB Version 6.0.0.88 (R12) on PCWIN MATLAB License
+Number: 0</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="496" HEIGHT="362">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="25">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="25">
+<DIV WIDTH="216" HEIGHT="25">
+<P align="left">
+<font size="3" face="Courier New">MATLAB Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="25">
+<DIV WIDTH="122" HEIGHT="25">
+<P align="left">
+<font size="3" face="Courier New">Version 6.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="25">
+<DIV WIDTH="64" HEIGHT="25">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="25">
+<DIV WIDTH="94" HEIGHT="25">
+<P align="left">
+<font size="3" face="Courier New">06-0ct-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="25">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Si mul ink<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 4.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">16-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Stateflow<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 4.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">04-0ct-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="15">
+<DIV WIDTH="216" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Stateflow Coder<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="15">
+<DIV WIDTH="122" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 4.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="15">
+<DIV WIDTH="64" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">04-0ct-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="17">
+<DIV WIDTH="216" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Real -Time Workshop<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="17">
+<DIV WIDTH="122" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Version 4.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="17">
+<DIV WIDTH="64" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="17">
+<DIV WIDTH="94" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Ol-Mar-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">COMA Reference Blockset<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0.2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Communications Blockset<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 2.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Communications Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 2.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Control System Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 5.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">DSP Blockset<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 4.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Data Acquisition Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 2.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">05-0ct-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="15">
+<DIV WIDTH="216" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Database Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="15">
+<DIV WIDTH="122" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 2.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="15">
+<DIV WIDTH="64" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">18-Jan-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="17">
+<DIV WIDTH="216" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Datafeed Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="17">
+<DIV WIDTH="122" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Version 1.2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="17">
+<DIV WIDTH="64" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="17">
+<DIV WIDTH="94" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">08-May-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Dials &amp; Gauges Blockset<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">12-May-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Filter Design Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 2.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Aug-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="15">
+<DIV WIDTH="216" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Financial Derivatives Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="15">
+<DIV WIDTH="122" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="15">
+<DIV WIDTH="64" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">14-Aug-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Financial Time Series Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Apr-1999<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Financial Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 2.1.2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Fixed-Point Blockset<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 3.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">26-May-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="16">
+<DIV WIDTH="216" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Fuzzy Logic Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="16">
+<DIV WIDTH="122" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 2.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="16">
+<DIV WIDTH="64" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">15-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="14">
+<DIV WIDTH="216" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">GARCH Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="14">
+<DIV WIDTH="122" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="14">
+<DIV WIDTH="64" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="14">
+<DIV WIDTH="94" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">Ol-Jun-1999<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="14">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="19">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="216" HEIGHT="19">
+<DIV WIDTH="216" HEIGHT="19">
+<P align="left">
+<font size="3" face="Courier New">Image Processing Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="122" HEIGHT="19">
+<DIV WIDTH="122" HEIGHT="19">
+<P align="left">
+<font size="3" face="Courier New">Version 2.2.2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="64" HEIGHT="19">
+<DIV WIDTH="64" HEIGHT="19">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="19">
+<DIV WIDTH="94" HEIGHT="19">
+<P align="left">
+<font size="3" face="Courier New">10-Mar-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="19">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="556" HEIGHT="480">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Instrument Control Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="15">
+<DIV WIDTH="267" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">LMI Control Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="15">
+<DIV WIDTH="118" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0.6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="15">
+<DIV WIDTH="65" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">12-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="17">
+<DIV WIDTH="267" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">MATLAB Compiler<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="17">
+<DIV WIDTH="118" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Version 2.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="17">
+<DIV WIDTH="65" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="17">
+<DIV WIDTH="94" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">26-Jul-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">MATLAB Report Generator<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Apr-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Mapping Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">22-May-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Model Predictive Control Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0.5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">10-May-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Motorola DSP Developer's Kit<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ми-Analysis and Synthesis Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 3.0.5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">12-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Neural Network Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 4.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">26-May-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Nonlinear Control Design Blockset<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.1.4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">12-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="15">
+<DIV WIDTH="267" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Optimization Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="15">
+<DIV WIDTH="118" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 2.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="15">
+<DIV WIDTH="65" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">07-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="17">
+<DIV WIDTH="267" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Partial Differential Equation Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="17">
+<DIV WIDTH="118" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0.3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="17">
+<DIV WIDTH="65" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="17">
+<DIV WIDTH="94" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">31 -Dec -1999<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="15">
+<DIV WIDTH="267" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Power System Blockset<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="15">
+<DIV WIDTH="118" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 2.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="15">
+<DIV WIDTH="65" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">12-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="17">
+<DIV WIDTH="267" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Real -Time Workshop Ada Coder<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="17">
+<DIV WIDTH="118" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Version 4.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="17">
+<DIV WIDTH="65" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="17">
+<DIV WIDTH="94" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Ol-Mar-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="15">
+<DIV WIDTH="267" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Real -Time Workshop Embedded Coder<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="15">
+<DIV WIDTH="118" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="15">
+<DIV WIDTH="65" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Ol-Mar-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Requirements Management Interface<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">03-Mar-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="15">
+<DIV WIDTH="267" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Robust Control Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="15">
+<DIV WIDTH="118" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 2.0.7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="15">
+<DIV WIDTH="65" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">10-May-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="17">
+<DIV WIDTH="267" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">SB2SL (converts SystemBuild to Simu<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="17">
+<DIV WIDTH="118" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Version 2.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="17">
+<DIV WIDTH="65" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="17">
+<DIV WIDTH="94" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">16-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Signal Processing Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 5.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="14">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="14">
+<DIV WIDTH="267" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">Simulink Accelerator<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="14">
+<DIV WIDTH="118" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="14">
+<DIV WIDTH="65" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="14">
+<DIV WIDTH="94" HEIGHT="14">
+<P align="left">
+<font size="3" face="Courier New">Ol-Mar-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="14">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="18">
+<DIV WIDTH="267" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">Model Differencing for Simulink and...<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="18">
+<DIV WIDTH="118" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="18">
+<DIV WIDTH="65" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="18">
+<DIV WIDTH="94" HEIGHT="18">
+<P align="left">
+<font size="3" face="Courier New">19-Jul-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Simulink Model Coverage Tool<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">02-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Simulink Report Generator<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 1.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Ol-Apr-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Spline Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 3.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">13-Mar-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="15">
+<DIV WIDTH="267" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Statistics Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="15">
+<DIV WIDTH="118" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 3.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="15">
+<DIV WIDTH="65" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Ol-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="16">
+<DIV WIDTH="267" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Symbolic Math Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="16">
+<DIV WIDTH="118" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">Version 2.1.2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="16">
+<DIV WIDTH="65" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">ll-Sep-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="15">
+<DIV WIDTH="267" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">System Identification Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="15">
+<DIV WIDTH="118" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 5.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="15">
+<DIV WIDTH="65" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">27-Aug-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="15">
+<DIV WIDTH="267" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Wavelet Toolbox<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="15">
+<DIV WIDTH="118" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">Version 2.0<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="15">
+<DIV WIDTH="65" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="15">
+<DIV WIDTH="94" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">16-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="17">
+<DIV WIDTH="267" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">xPC Target<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="17">
+<DIV WIDTH="118" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">Version 1.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="17">
+<DIV WIDTH="65" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="17">
+<DIV WIDTH="94" HEIGHT="17">
+<P align="left">
+<font size="3" face="Courier New">16-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="18">
+<DIV WIDTH="267" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">xPC Target Embedded Option<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="118" HEIGHT="18">
+<DIV WIDTH="118" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Version 1.1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="65" HEIGHT="18">
+<DIV WIDTH="65" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">(R12)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="18">
+<DIV WIDTH="94" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">16-Jun-2000<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font face="Times New Roman" size="3">Обратите внимание, что практически все пакеты расширения в MATLAB 6.0 обновлены и датируются 2000 годом. Заметно расширено их описание, которое в PDF-формате уже занимает много более десятка тысяч страниц. Ниже дано краткое описание основных пакетов расширения</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a> Simulink 
+  for Windows</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет расширения Simulink служит для имитационного моделирования моделей, состоящих из графических блоков с заданными свойствами (параметрами). Компоненты моделей, в свою очередь, являются графическими блоками и моделями, которые содержатся в ряде библиотек и с помощью мыши могут переноситься в основное окно и соединяться друг с другом необходимыми связями. В состав моделей могут включаться источники сигналов различного вида, виртуальные регистрирующие приборы, графические средства анимации. Двойной щелчок мышью на блоке модели выводит окно со списком его параметров, которые пользователь может менять. Запуск имитации обеспечивает математическое моделирование построенной модели с наглядным визуальным представлением результатов. Пакет основан на построении блочных схем путем переноса блоков из библиотеки компонентов в окно редактирования создаваемой пользователем модели. Затем модель запускается на выполнение. На рис. 23.1 показан процесс моделиро</font><font face="Times New Roman" size="3">вания простой системы — гидравлического цилиндра. Контроль осуществляется с помощью виртуальных осциллографов — на рис. 23.1 видны экраны двух таких осциллографов и окно простой подсистемы модели. Возможно моделирование сложных систем, состоящих из множества подсистем.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Simulink составляет и решает уравнения состояния модели и позволяет подключать в нужные ее точки разнообразные виртуальные измерительные приборы. Поражает наглядность представления результатов моделирования. Ряд примеров применения пакета Simulink уже приводился в уроке 4. Предшествующая версия пакета достаточно подробно описана в книгах. Основным нововведением является обработка матричных сигналов. Добавлены отдельные пакеты повышения производительности Simulink, такие как Simulink Accelerator для компиляции кода моделей, Simulink profiler для анализа кода и т. д.</font>
+</P>
+<P align="left"><img src="23.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/23.1.jpg" width="415" height="511"> </P>
+<P align="left"><i><B><font face="Times New Roman" size="3">Рис. 23.1. </font> 
+  </B><font face="Times New Roman" size="3">Пример моделирования системы гидравлического 
+  цилиндра с помощью расширения Simulink</font></i> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a> Real 
+  Time Windows Target и Workshop</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Подключающаяся к Simulink мощная подсистема имитационного моделирования в реальном масштабе времени (при наличии дополнительных аппаратных средств в виде плат расширения компьютера), представленная пакетами расширения Real Time Windows Target и Workshop, — мощное средство управления реальными объектами и системами. Кроме того, эти расширения позволяют создавать исполняемые коды моделей. Рис. 4.21 в уроке 4 показывает пример такого моделирования для системы, описываемой нелинейными дифференциальными уравнениями Ван-дер-Поля. Достоинством такого моделирования является его математическая и физическая наглядность. В компонентах моделей Simulink можно задавать не</font>
+<font face="Times New Roman" size="3">только фиксированные параметры, но и математические соотношения, описывающие поведение моделей.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="5"></a> Report 
+  Generator для MATLAB и Simulink</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="3">Генераторы отчетов — средство, 
+  введенное еще в MATLAB 5.3.1, дает информацию о работе системы MATLAB и пакета 
+  расширения Simulink. Это средство очень полезно при отладке сложных вычислительных 
+  алгоритмов или при моделировании сложных систем. Генераторы отчетов запускаются 
+  командой Report. Отчеты могут быть представлены в виде программ и редактироваться.</font></P>
+<P align="left">
+<font face="Times New Roman" size="3">Генераторы отчетов могут запускать входящие в отчеты команды и фрагменты программ и позволяют проконтролировать поведение сложных вычислений.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="6"></a> </font></B><font face="Times New Roman" size="4">Neural 
+  Networks Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет прикладных программ, содержащих средства для построения нейронных сетей, базирующихся на поведении математического аналога нейрона. Па-кет обеспечивает эффективную поддержку проектирования, обучения и моделирования множества известных сетевых парадигм, от базовых моделей персептрона до самых современных ассоциативных и самоорганизующихся сетей. Пакет может быть использован для исследования и применения нейронных сетей к таким задачам,</font>
+<font face="Times New Roman" size="3">как обработка сигналов, нелинейное управление и финансовое моделирование. Обеспечена возможность генерации переносимого С-кода с помощью Real Time
+Workshop.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В пакет включены более 15 известных типов сетей и обучающих правил, позволяющих пользователю выбирать наиболее подходящую для конкретного приложения или исследовательской задачи парадигму. Для каждого типа архитектуры и обучающих правил имеются функции инициализации, обучения, адаптации, создания и моделирования, демонстрации и пример приложения сети.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для управляемых сетей можно выбрать прямую или рекуррентную архитектуру, используя множество обучающих правил и методов проектирования, таких как персептрон, обратное распространение, обратное распространение Левенберга, сети с радиальным базисом и рекуррентные сети. Вы можете легко изменять любые архитектуры, обучающие правила или переходные функции, добавлять новые, — и все это без написания единой строки на Си или ФОРТРАН. Пример применения пакета для распознавания образа буквы приводился в уроке 4. Детальное описание предшествующей версии пакета можно найти в книге.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="7"></a> Fuzzy 
+  Logic Toolbox</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="3">Пакет прикладных программ 
+  Fuzzy Logic относится к теории нечетких (размытых) множеств. Обеспечивается 
+  поддержка современных методов нечеткой кластеризации и адаптивных нечетких нейронных 
+  сетей. Графические средства пакета позволяют интерактивно отслеживать особенности 
+  поведения системы.</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Основные возможности пакета:</font>
+</P>
+<ul>
+  <li> <font face="Times New Roman" size="3">определение переменных, нечетких 
+    правил и функций принадлежности; </font></li>
+  <li><font face="Times New Roman" size="3"> интерактивный просмотр нечеткого 
+    логического вывода; </font></li>
+  <li><font face="Times New Roman" size="3">современные методы: адаптивный нечеткий 
+    вывод с использованием нейронных сетей, нечеткая кластеризация;</font> </li>
+  <li><font face="Times New Roman" size="3"> интерактивное динамическое моделирование 
+    в Simulink;</font></li>
+  <li> 
+    <p align="left"><font face="Times New Roman" size="3"> генерация переносимого 
+      Си кода с помощью Real-Time Workshop.</font>
+  </li>
+</ul>
+<P align="left"> <font face="Times New Roman" size="3">Этот пример наглядно показывает 
+  отличия в поведении модели при учете нечеткой логики и без такого учета.&nbsp;</font> 
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="8"></a> Symbolic 
+  Math Toolbox</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет прикладных программ, дающих системе MATLAB принципиально новые возможности — возможности решения задач в символьном (аналитическом) виде, включая реализацию точной арифметики произвольной разрядности. Пакет базируется на применении ядра символьной математики одной из самых мощных систем компьютерной алгебры — Maple V R4. Обеспечивает выполнение символьного дифференцирования и интегрирования, вычисление сумм и произведений, разложение в ряды Тейлора и Маклорена, операции со степенными многочленами (полиномами), вычисление корней полиномов, решение в аналитическом виде нелинейных уравнений, всевозможные символьные преобразования, подстановки и многое другое. Имеет команды прямого доступа к ядру системы Maple V.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет позволяет готовить процедуры с синтаксисом языка программирования системы Maple V R4 и устанавливать их в системе MATLAB. К сожалению, по возможностям символьной математики пакет сильно уступает специализированным системам компьютерной алгебры, таким как новейшие версии Maple и
+Mathematica.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="9"></a> Пакеты 
+  математических вычислений</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В MATLAB входит множество пакетов расширения, усиливающих математические возможности системы, повышающих скорость, эффективность и точность вычислений.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="10"></a> NAG 
+  Foundation Toolbox</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Одна из самых мощных библиотек математических функций, созданная специальной группой The Numerical Algorithms Group, Ltd. Пакет содержит сотни новых</font>
+<font face="Times New Roman" size="3">функций. Названия функций и синтаксис их вызова заимствованы из известной библиотеки NAG Foundation Library. Вследствие этого опытные пользователи NAG ФОРТРАН могут без затруднений работать с пакетом NAG в MATLAB. Библиотека NAG Foundation предоставляет свои функции в виде объектных кодов и соответствующих m-файлов для их вызова. Пользователь может легко модифицировать эти МЕХ-файлы на уровне исходного кода.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет обеспечивает следующие возможности:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;корни многочленов и модифицированный метод Лагерра;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">вычисление суммы ряда: дискретное и эрмитово-дискретное преобразование Фурье;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">обыкновенные дифференциальные уравнения: методы Адамса и Рунге-Кутта;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;уравнения в частных производных;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;интерполяция;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">вычисление собственных значений и векторов, сингулярных чисел, поддержка комплексных и действительных матриц;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">аппроксимация кривых и поверхностей: полиномы, кубические сплайны, полиномы Чебышева;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">минимизация и максимизация функций: линейное и квадратичное программирование, экстремумы функций нескольких переменных;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">разложение матриц;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;решение систем линейных уравнений;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">линейные уравнения
+    (LAPACK);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">статистические расчеты, включая описательную статистику и распределения вероятностей;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">корреляционный и регрессионный анализ: линейные, многомерные и обобщенные линейные модели;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">многомерные методы: главных компонент, ортогональные вращения;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">генерация случайных чисел: нормальное распределение, распределения Пуассона, Вейбулла и Кощи;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">непараметрические статистики: Фридмана, Крускала-Уоллиса, Манна-Уитни; О временные ряды: одномерные и многомерные;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">аппроксимации специальных функций: интегральная экспонента, гамма-функция, функции Бесселя и Ганкеля.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Наконец, этот пакет позволяет пользователю создавать программы на ФОРТРАН, которые динамически линкуются с
+MATLAB.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="11"></a> Spline 
+  Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет прикладных программ для работы со сплайнами. Поддерживает одномерную, двумерную и многомерную сплайн-интерполяцию и аппроксимацию. Обеспечивает представление и отображение сложных данных и поддержку графики.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Пакет позволяет выполнять 
+  интерполяцию, аппроксимацию и преобразование сплайнов из В-формы в кусочно-полиномиальную, 
+  интерполяцию кубическими сплайнами и сглаживание, выполнение операций над сплайнами: 
+  вычисление производной, интеграла и отображение.</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Spline оснащен программами работы с В-сплайнами, описанными в работе &laquo;A Practical Guide to Splines&raquo; Карлом Дебуром, создателем сплайнов и автором пакета Spline. Функции пакета в сочетании с языком MATLAB и подробным руководством пользователя облегчают понимание сплайнов и их эффективное применение к решению разнообразных задач.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В пакет включены программы для работы с двумя наиболее широко распространенными формами представления сплайнов: В-формой и кусочно-полиномиальной формой. В-форма удобна на этапе построения сплайнов, в то время как кусочно-полиномиальная форма более эффективна во время постоянной работы со сплайном. Пакет включает функции для создания, отображения, интерполяции, аппроксимации и обработки сплайнов в В-форме и в виде отрезков полиномов.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="12"></a> Statistics 
+  Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет прикладных программ по статистике, резко расширяющий возможности системы MATLAB в области реализации статистических вычислений и статистической обработки данных. Содержит весьма представительный набор средств генерации случайных чисел, векторов, матриц и массивов с различными законами распределения, а также множество статистических функций. Следует отметить, что наиболее распространенные статистические функции входят в состав ядра
+системы MATLAB (в том числе функции генерации случайных данных с равномерным и нормальным распределением). Основные возможности пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> описательная статистика;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">распределения вероятностей;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">оценка параметров и аппроксимация;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">проверка гипотез;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">множественная регрессия;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">интерактивная пошаговая регрессия;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">моделирование Монте-Карло;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">аппроксимация на интервалах;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">статистическое управление процессами;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">планирование эксперимента;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">моделирование поверхности отклика;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">аппроксимация нелинейной модели;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">анализ главных компонент;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">статистические графики;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">графический интерфейс пользователя.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет включает 20 различных распределений вероятностей, включая t (Стъюдента), F и Хи-квадрат. Подбор параметров, графическое отображение распределений и способ вычисления лучших аппроксимаций предоставляются для всех типов распределений. Предусмотрено множество интерактивных инструментов для динамической визуализации и анализа данных. Имеются специализированные интерфейсы для моделирования поверхности отклика, визуализации распределений, генерации случайных чисел и линий уровня.&nbsp;</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="13"></a> Optimization 
+  Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет прикладных задач- для решения оптимизационных задач и систем нелинейных уравнений. Поддерживает основные методы оптимизации функций ряда переменных:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> безусловная оптимизация нелинейных функций;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> метод наименьших квадратов и нелинейная интерполяция;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">решение нелинейных уравнений;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">линейное программирование;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">квадратичное программирование; 
+      </font>
+  </li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">условная минимизация нелинейных функций;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">метод минимакса;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">многокритериальная оптимизация.</font></li>
+</ul>
+<P align="left"> <font face="Times New Roman" size="3">Разнообразные примеры демонстрируют 
+  эффективное применение функций пакета. С их помощью можно также сравнить, как 
+  одна и та же задача решается разными методами.</font> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="14"></a> Partial 
+  Differential Equations Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Весьма важный пакет прикладных программ, содержащий множество функций для решения систем дифференциальных уравнений в частных производных. Дает эффективные средства для решения таких систем уравнений, в том числе жестких. В пакете используется метод конечных элементов. Команды и графический интерфейс пакета могут быть использованы для математического моделирования уравнений в частных производных применительно к широкому классу инженерных и научных приложений, включая задачи сопротивления материалов, расчеты электромагнитных устройств, задачи тепломассопереноса и диффузии. Основные возможности пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;полноценный графический интерфейс для обработки  уравнений с частными</font>
+    <font face="Times New Roman" size="3">производными второго порядка;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">автоматический и адаптивный выбор сетки;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> задание граничных условий: Дирихле, Неймана и смешанных;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> гибкая постановка задачи с использованием синтаксиса MATLAB;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> полностью автоматическое сеточное разбиение и выбор величины конечных</font>
+    <font face="Times New Roman" size="3">элементов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">нелинейные и адаптивные расчетные схемы;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">возможность визуализации полей различных параметров и функций решения, демонстрация принятого разбиения и анимационные эффекты.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет интуитивно следует шести шагам решения PDE с помощью метода конечных элементов. Эти шаги и соответствующие режимы пакета таковы: определение геометрии (режим рисования), задание граничных условий (режим граничных условий), выбор коэффициентов, определяющих задачу (режим PDE), дисркре-тизация конечных элементов (режим сетки), задание начальных условий и решение уравнений (режим решения), последующая обработка решения (режим графика).</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="4"><a name="15"></a> Пакеты 
+  анализа и синтеза систем управления</FONT></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="16"></a> Control 
+  System Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Control System предназначен для моделирования, анализа и проектирования систем автоматического управления — как непрерывных, так и дискретных. Функции пакета реализуют традиционные методы передаточных функций и современные методы пространства состояний. Частотные и временные отклики, диаграммы расположения нулей и полюсов могут быть быстро вычислены и отображены на экране. В пакете реализованы:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> полный набор средств для анализа MIMO-систем (множество входов — множество выходов) систем;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> временные характеристики: передаточная и переходная функции, реакция на произвольное воздействие;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> частотные характеристики: диаграммы Боде, Николса, Найквиста и др.;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> разработка обратных связей;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> проектирование LQR/LQE-регуляторов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">характеристики моделей: управляемость, наблюдаемость, понижение порядка моделей;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> поддержка систем с запаздыванием.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Дополнительные функции построения моделей позволяют конструировать более сложные модели. Временной отклик может быть рассчитан для импульсного входа, единичного скачка или произвольного входного сигнала. Имеются также функции для анализа сингулярных чисел.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Интерактивная среда для сравнения временного и частотного отклика систем предоставляет пользователю графические управляющие элементы для одновременного отображения откликов и переключения между ними. Можно вычислять различные характеристики откликов, такие как время разгона и время регулирования.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Control System содержит средства для выбора параметров обратной связи. Среди традиционных методов: анализ особых точек, определение коэффициента усиления и затухания. Среди современных методов: линейно-квадратичное регулирование и др. Пакет Control System включает большое количество алгоритмов для проектирования и анализа систем управления. Кроме того, он обладает настраиваемым окружением и позволяет создавать свои собственные m-файлы.&nbsp;</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="17"></a> Nonlinear 
+  Control Design Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Nonlinear Control Design (NCD) Blockset реализует- метод динамической оптимизации для проектирования систем управления. Этот инструмент, разработанный для использования с Simulink, автоматически настраивает системные параметры, основываясь на определенных пользователем ограничениях на временные характеристики.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет использует перенос объектов мышью для изменения временных ограничений прямо на графиках, что позволяет легко настраивать переменные и указывать неопределенные параметры, обеспечивает интерактивную оптимизацию, реализует моделирование методом Монте-Карло, поддерживает проектирование SISO- (один вход — один выход) и MIMO-систем управления, позволяет моделировать подавление помех, слежение и другие типы откликов, поддерживает проблемы повторяющегося параметра и задачи управления системами с запаздыванием, позволяет осуществлять выбор между удовлетворенными и недостижимыми ограничениями.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="18"></a> Robust 
+  Control Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Robust Control включает средства для проектирования и анализа многопараметрических устойчивых систем управления. Это системы с ошибками моделирования, динамика которых известна не полностью или параметры которых могут изменяться в ходе моделирования. Мощные алгоритмы пакета позволяют выполнять сложные вычисления с учетом изменения множества параметров. Возможности пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> синтез LQG-регуляторов на основе минимизации равномерной и интегральной нормы;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> многопараметрический частотный отклик;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">построение модели пространства состояний;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">преобразование моделей на основе сингулярных чисел;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">понижение порядка модели;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">спектральная факторизация.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Robust Control базируется на функциях пакета Control System, одновременно предоставляя усовершенствованный набор алгоритмов для проектирования систем управления. Пакет обеспечивает переход между современной теорией управления и практическими приложениями. Он имеет множество функций,</font>
+<font face="Times New Roman" size="3">реализующих современные методы проектирования и анализа многопараметрических робастных регуляторов.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Проявления неопределенностей, нарушающих устойчивость систем, многообразны — шумы и возмущения в сигналах, неточность модели передаточной функции, немоделируемая нелинейная динамика. Пакет Robust Control позволяет оценить многопараметрическую границу устойчивости при различных неопределенностях. Среди используемых методов: алгоритм Перрона, анализ особенностей передаточных функций и др.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Robust Control обеспечивает различные методы проектирования обратных связей, среди которых: LQR, LQG, LQG/LTR и др. Необходимость понижения порядка модели возникает в нескольких случаях: понижение порядка объекта, понижение порядка регулятора, моделирование больших систем. Качественная процедура понижения порядка модели должна быть численно устойчива. Процедуры, включенные в пакет Robust Control, успешно справляются с этой задачей.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="19"></a> Model 
+  Predictive Control Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Model Predictive Control содержит полный набор средств для реализации стратегии предиктивного (упреждающего) управления. Эта стратегия была разработана для решения практических задач управления сложными многоканальными процессами при наличии ограничений на переменные состояния и управление. Методы предикативного управления используются в химической промышленности и для управления другими непрерывными процессами. Пакет обеспечивает:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> моделирование, идентификацию и диагностику систем;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> поддержку MISO (много входов — один выход), MIMO, переходных характеристик, моделей пространства состояний;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">системный анализ;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">конвертирование моделей в различные формы представления (пространство состояний, передаточные функции);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">предоставление учебников и демонстрационных примеров.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Предикативный подход к задачам управления использует явную линейную динамическую модель объекта для прогнозирования влияния будущих изменений управляющих переменных на поведение объекта. Проблема оптимизации формулируется в виде задачи квадратичного программирования с ограничениями, решаемой на каждом такте моделирования заново. Пакет позволяет создавать и тестировать регуляторы как для простых, так и для сложных объектов.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет содержит более полусотни специализированных функций для проектирования, анализа и моделирования динамических систем с использованием предикативного управления. Он поддерживает следующие типы систем: импульсные, непрерывные и дискретные по времени, пространство состояний. Обрабатываются различные виды возмущений. Кроме того, в модель могут быть явно включены ограничения на входные и выходные переменные.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Средства моделирования позволяют осуществлять слежение и стабилизацию. Средства анализа включают вычисление полюсов замкнутого контура, частотно</font><font face="Times New Roman" size="3">го отклика, другие характеристики системы управления. Для идентификации модели в пакете имеются функции взаимодействия с пакетом System Identification. Пакет также включает две функции Simulink, позволяющие тестировать нелинейные модели.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="20"></a> (Мю)-Analysis 
+  and Synthesis</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет p-Analysis and Synthesis содержит функции для проектирования устойчивых систем управления. Пакет использует оптимизацию в равномерной норме и сингулярный параметр и. В этот пакет включен графический интерфейс для упрощения операций с блоками при проектировании оптимальных регуляторов. Свойства пакета:</font>
+</P>
+<ul>
+  <li> <font face="Times New Roman" size="3"> проектирование регуляторов, оптимальных 
+    в равномерной и интегральной норме;</font> </li>
+  <li><font face="Times New Roman" size="3"> оценка действительного и комплексного 
+    сингулярного параметра <I>мю;</I></font></li>
+  <li> 
+    <p align="left"><font face="Times New Roman" size="3"> D-K-итерации для приближенного 
+      <I>мю</I>-синтеза;</font>
+  </li>
+  <li> 
+    <p align="left"><font face="Times New Roman" size="3"> графический интерфейс 
+      для анализа отклика замкнутого контура;</font>
+  </li>
+  <li> 
+    <p align="left"><font face="Times New Roman" size="3">средства понижения порядка 
+      модели;</font>
+  </li>
+  <li> 
+    <p align="left"><font face="Times New Roman" size="3">непосредственное связывание 
+      отдельных блоков больших систем.</font>
+  </li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Модель пространства состояний может быть создана и проанализирована на основе системных матриц. Пакет поддерживает работу с непрерывными и дискретными моделями. Пакет обладает полноценным графическим интерфейсом, включающим в себя: возможность устанавливать диапазон вводимых данных, специальное окно для редактирования свойств D-K итераций и графическое представление частотных характеристик. Имеет функции для матричного сложения, умножения, различных преобразований и других операций над матрицами. Обеспечивает возможность понижения порядка моделей.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="21"></a> Stateflow</font> 
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Stateflow — пакет моделирования событийно-управляемых систем, основанный на теории конечных автоматов. Этот пакет предназначен для использования вместе с пакетом моделирования динамических систем Simulink. В любую Simulink-мо-дель можно вставить Stateflow-диаграмму (или SF-диаграмму), которая будет отражать поведение компонентов объекта (или системы) моделирования. SF-диаграмма является анимационной. По ее выделяющимся цветом блокам и связям можно проследить все стадии работы моделируемой системы или устройства и поставить ее работу в зависимость от тех или иных событий. Рис. 23.6 иллюстрирует моделирование поведения автомобиля при возникновении чрезвычайного обстоятельства на дороге. Под моделью автомобиля видна SF-диаграмма (точнее, один кадр ее работы).</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Для создания SF-диаграмм 
+  пакет имеет удобный и простой редактор, а также средства пользовательского интерфейса.</font> 
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="22"></a> Quantitative 
+  Feedback Theory Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет содержит функции для создания робастных (устойчивых) систем с обратной связью. QFT (количественная теория обратных связей) — инженерный метод, использующий частотное представление моделей для удовлетворения различных требований к качеству при наличии неопределенных характеристик объекта. В основе метода лежит наблюдение, что обратная связь необходима в тех случаях, когда некоторые характеристики объекта неопределенны и/или на его вход подаются неизвестные возмущения. Возможности пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> оценка частотных границ неопределенности, присущей обратной связи;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">графический интерфейс пользователя, позволяющий оптимизировать процесс нахождения требуемых параметров обратной связи;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">функции для определения влияния различных блоков, вводимых в модель (мультиплексоров, сумматоров, петель обратной связи) при наличии неопределенностей;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">поддержка моделирования аналоговых и цифровых контуров обратной связи, каскадов и многоконтурных схем;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">разрешение неопределенности в параметрах объекта с использованием параметрических и непараметрических моделей или комбинации этих типов моделей.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Теория обратных связей является естественным продолжением классического частотного подхода к проектированию. Ее основная цель — проектирование простых регуляторов небольшого порядка с минимальной шириной полосы пропуска</font><font face="Times New Roman" size="3">ния, удовлетворяющих качественным характеристикам при наличии неопределенностей.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет позволяет вычислять различные параметры обратных связей, фильтров, проводить тестирование регуляторов как в непрерывном, так и в дискретном пространстве. Имеет удобный графический интерфейс, позволяющий создавать простые регуляторы, удовлетворяющие требованиям пользователя.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">QFT позволяет проектировать регуляторы, удовлетворяющие различным требованиям, несмотря на изменения параметров модели. Измеряемые данные могут быть непосредственно использованы для проектирования регуляторов, без необходимости идентификации сложного отклика системы.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="23"></a> LMI Control 
+  Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет LMI (Linear Matrix Inequality) Control обеспечивает интегрированную среду для постановки и решения задач линейного программирования. Предназначенный первоначально для проектирования систем управления пакет позволяет решать любые задачи линейного программирования практически в любой сфере деятельности, где такие задачи возникают. Основные возможности пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> решение задач линейного программирования: задачи совместности ограничений, минимизация линейных целей при наличии линейных ограничений, минимизация собственных значений;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">исследование задач линейного программирования;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">графический редактор задач линейного программирования;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">задание ограничений в символьном виде;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">многокритериальное проектирование регуляторов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">проверка устойчивости: квадратичная устойчивость линейных систем, устойчивость по Ляпунову, проверка критерия Попова для нелинейных систем.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет LMI Control содержит современные симплексные алгоритмы для решения задач линейного программирования. Использует структурное представление линейных ограничений, что повышает эффективность и минимизирует требования к памяти. Пакет имеет специализированные средства для анализа и проектирования систем управления на основе линейного программирования.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">С помощью решателей задач линейного программирования можно легко выполнять проверку устойчивости динамических систем и систем с нелинейными компонентами. Ранее этот вид анализа считался слишком сложным для реализации. Пакет позволяет даже такое комбинирование критериев, которое ранее считалось слишком сложным и разрешимым лишь с помощью эвристических подходов.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет является мощным средством для решения выпуклых задач оптимизации, возникающих в таких областях, как управление, идентификация, фильтрация,' структурное проектирование, теория графов, интерполяция и линейная алгебра. Пакет LMI Control включает два вида графического интерфейса пользователя: редактор задачи линейного программирования (LMI Editor) и интерфейс Magshape. LMI Editor позволяет задавать ограничения в символьном виде, a Magshape обеспечивает пользователя удобными средствами работы с пакетом.</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="4"><a name="24"></a> Пакеты 
+  идентификации систем</FONT></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="25"></a> System 
+  Identification Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет System Identification содержит средства для создания математических моделей динамических систем на основе наблюдаемых входных и выходных данных. Он имеет гибкий графический интерфейс, помогающий организовать данные и создавать модели. Методы идентификации, входящие в пакет, применимы для решения широкого класса задач, от проектирования систем управления и обработки сигналов до анализа временных рядов и вибрации. Основные свойства пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> простой и гибкий интерфейс;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> предварительная обработка данных, включая предварительную фильтрацию,</font>
+    <font face="Times New Roman" size="3">удаление трендов и смещений; О выбор диапазона данных для анализа;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> методы авторегрессии;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">анализ отклика во временной и частотной области;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> отображение нулей и полюсов передаточной функции системы;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> анализ невязок при тестировании модели;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> построение сложных диаграмм, таких как диаграмма Найквиста и др.</font></li>
+</ul>
+<P align="left"> <font face="Times New Roman" size="3">Графический интерфейс упрощает 
+  предварительную обработку данных, а также диалоговый процесс идентификации модели. 
+  Возможна также работа с пакетом в командном режиме и с применением расширения 
+  Simulink. Операции загрузки и сохранения данных, выбора диапазона, удаления 
+  смещений и трендов выполняются с минимальными усилиями и находятся в главном 
+  меню.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Представление данных и 
+  идентифицированных моделей организовано графически таким образом, что в процессе 
+  интерактивной идентификации пользователь легко может вернуться к предыдущему 
+  шагу работы. Для новичков существует возможность просматривать следующие возможные 
+  шаги. Специалисту графические средства позволяют отыскать любую из ранее полученных 
+  моделей и оценить ее качество в сравнении с другими моделями.</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Начав с измерения выхода и входа, можно создать параметрическую модель системы, описывающую ее поведение в динамике. Пакет поддерживает все традиционные структуры моделей, включая авторегрессию, структуру Бокса-Дженкинса и др. Он поддерживает линейные модели пространства состояний, которые могут быть определены как в дискретном, так и в непрерывном пространстве. Эти модели могут включать произвольное число входов и выходов. В пакет включены функции, которые можно использовать как тестовые данные для идентифицированных моделей. Идентификация линейных моделей широко используется при проектировании систем управления, когда требуется создать модель объекта. В задачах обработки сигналов модели могут быть использованы для адаптивной обработки сигналов. Методы идентификации успешно применяются и для финансовых приложений.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="26"></a> Frequency 
+  Domain System Identification Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Frequency Domain System Identification предоставляет специализированные средства для идентификации линейных динамических систем по их временному или частотному отклику. Частотные методы направлены на идентификацию непрерывных систем, что является мощным дополнением к более традиционной дискретной методике. Методы пакета могут быть применены к таким задачам, как моделирование электрических, механических и акустических систем. Свойства пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> периодические возмущения, пик-фактор, оптимальный спектр, псевдослучайные и дискретные двоичные последовательности;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">расчет доверительных интервалов амплитуды и фазы, нулей и полюсов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">идентификация непрерывных и дискретных систем с неизвестным запаздыванием;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">диагностика модели, включая моделирование и вычисление невязок;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">преобразование моделей в формат System Identification Toolbox и обратно.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Используя частотный подход, можно добиться наилучшей модели в частотной области; избежать ошибок дискретизации; легко выделять постоянную составляющую сигнала; существенно улучшить отношение сигнал/шум. Для получения возмущающих сигналов пакет предоставляет функции генерации двоичных последовательностей, минимизации величины пика и улучшения спектральных характеристик. Пакетом обеспечивается идентификация непрерывных и дискретных линейных статических систем, автоматическая генерация входных сигналов, а также графическое изображение нулей и полюсов передаточной функции результирующей системы. Функции для тестирования модели включают вычисление невязок, передаточных функций, нулей и полюсов, прогонку модели с использованием тестовых данных.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="27"></a> Дополнительные 
+  пакеты расширения MATLAB</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="28"></a> Communications 
+  Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет прикладных программ для построения и моделирования разнообразных телекоммуникационных устройств: цифровых линий связи, модемов, преобразователей сигналов и др. Имеет богатейший набор моделей самых различных устройств связи и телекоммуникаций. Содержит ряд интересных примеров моделирования коммуникационных средств, например модема, работающего по протоколу v34, модулятора для обеспечения однополосной модуляции и др.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="29"></a> Digital 
+  Signal Processing (DSP) Blockset</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет прикладных программ для проектирования устройств, использующих процессоры цифровой обработки сигналов. Это прежде всего высокоэффективные цифровые фильтры с заданной или адаптируемой к параметрам сигналов частотной характеристикой (АЧХ). Результаты моделирования и проектирования цифровых устройств с помощью этого пакета могут использоваться для построения высокоэффективных цифровых фильтров на современных микропроцессорах цифровой обработки сигналов.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="30"></a> Fixed-Point 
+  Blockset</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Этот специальный пакет ориентирован на моделирование цифровых систем управления и цифровых фильтров в составе пакета Simulink. Специальный набор компонентов позволяет быстро переключаться между вычислениями с фиксированной и плавающей запятой (точкой). Можно указывать 8-, 16- или 32-битовую длину слова. Пакет обладает рядом полезных свойств:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> применение беззнаковой или двоичной арифметики;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">выбор пользователем положения двоичной точки;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> автоматическая установка положения двоичной точки;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> просмотр максимального и минимального диапазонов сигнала модели;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> переключение между вычислениями с фиксированной и плавающей точкой;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> коррекция переполнения и наличие ключевых компонентов для операций с</font>
+    <font face="Times New Roman" size="3">фиксированной точкой; логические операторы, одно- и двумерные справочные таблицы.</font></li>
+</ul>
+<P align="left"> <B> <FONT face="Times New Roman" size="4"><a name="31"></a> Пакеты 
+  для обработки сигналов и изображений</FONT></B> </P>
+<P align="left"> <FONT face="Times New Roman" size="4"><a name="32"></a> Signal 
+  Processing Toolbox</FONT> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Мощный пакет по анализу, моделированию и проектированию устройств обработки всевозможных сигналов, обеспечению их фильтрации и множества преобразований.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Signal Processing обеспечивает чрезвычайно обширные возможности создания программ обработки сигналов для современных научных и технических приложений. В пакете используется разнообразная техника фильтрации и новейшие алгоритмы спектрального анализа. Пакет содержит модули для разработки линейных систем и анализа временных рядов. Пакет будет полезен, в частности, в таких областях, как обработка аудио- и видеоинформации, телекоммуникации, геофизика, задачи управления в реальном режиме времени, экономика, финансы и медицина. Основные свойства пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> моделирование сигналов и линейных систем;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> проектирование, анализ и реализация цифровых и аналоговых фильтров;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> быстрое преобразование Фурье, дискретное косинусное и другие преобразования;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> оценка спектров и статистическая обработка сигналов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> параметрическая обработка временных рядов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">генерация сигналов различной формы.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Signal Processing — идеальная оболочка для анализа и обработки сигналов. В нем используются проверенные практикой алгоритмы, выбранные по критериям максимальной эффективности и надежности. Пакет содержит широкий спектр алгоритмов для представления сигналов и линейных моделей. Этот набор позволяет пользователю достаточно гибко подходить к созданию сценария обработки сигналов. Пакет включает алгоритмы для преобразования модели из одного представления в другое.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Signal Processing включает полный набор методов для создания цифровых фильтров с разнообразными характеристиками. Он позволяет быстро разрабатывать фильтры верхних и нижних частот, полосовые пропускающие и задерживающие фильтры, многополосные фильтры, в том числе фильтры Чебышева, Юла-Уолкера, эллиптические и др.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Графический интерфейс позволяет проектировать фильтры, задавая требования к ним в режиме переноса объектов мышью. В пакет включены следующие новые методы проектирования фильтров:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> обобщенный метод Чебышева для создания фильтров с нелинейной фазовой характеристикой, комплексными коэффициентами или произвольным откликом. Алгоритм разработан Макленаном и Карамом в 1995 г.;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">метод наименьших квадратов с ограничениями позволяет пользователю явно контролировать максимальную ошибку (сглаживание);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">метод расчета минимального порядка фильтра с окном Кайзера;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">обобщенный метод Баттерворта для проектирования низкочастотных фильтров с максимально однородными полосами пропускания и затухания.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Основанный на оптимальном алгоритме быстрого преобразования Фурье пакет Signal Processing обладает непревзойденными характеристиками для частотного анализа и спектральных оценок. Пакет включает функции для вычисления дискретного преобразования Фурье, дискретного косинусного преобразования, преобразования Гильберта и других преобразований, часто применяемых для анализа, кодирования и фильтрации. В пакете реализованы такие методы спектрального анализа как метод Вельха, метод максимальной энтропии и др.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Новый графический интерфейс позволяет просматривать и визуально оценивать характеристики сигналов, проектировать и применять фильтры, производить спектральный анализ, исследуя влияние различных методов и их параметров на получаемый результат. Графический интерфейс особенно полезен для визуализации временных рядов, спектров, временных и частотных характеристик, расположения нулей и полюсов передаточных функций систем.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Signal Processing является основой для решения многих других задач. Например, комбинируя его с пакетом Image Processing, можно обрабатывать и анализировать двумерные сигналы и изображения. В паре с пакетом System Identification пакет Signal Processing позволяет выполнять параметрическое моделирование систем во временной области. В сочетании с пакетами Neural Network и Fuzzy Logic может быть создано множество средств для обработки данных или выделения классификационных характеристик. Средство генерации сигналов позволяет создавать импульсные сигналы различной формы.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="33"></a> Higher-Order 
+  Spectral Analysis Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Higher-Order Spectral Analysis содержит специальные алгоритмы для анализа сигналов с использованием моментов высшего порядка. Пакет предоставляет широкие возможности для анализа негауссовых сигналов, так как содержит алгоритмы, пожалуй, самых передовых методов для анализа и обработки сигналов. Основные возможности пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> оценка спектров высокого порядка;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> традиционный или параметрический подход;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">восстановление амплитуды и фазы;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">адаптивное линейное прогнозирование;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> восстановление гармоник;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> оценка запаздывания;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> блочная обработка сигналов.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Higher-Order Spectral Analysis позволяет анализировать сигналы, поврежденные негауссовым шумом, и процессы, происходящие в нелинейных системах. Спектры высокого порядка, определяемые в терминах моментов высокого порядка сигнала, содержат дополнительную информацию, которую невозможно получить, пользуясь только анализом автокорреляции или спектра мощности сигнала. Спектры высокого порядка позволяют:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> подавить аддитивный цветной гауссов шум;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> идентифицировать неминимально-фазовые сигналы;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> выделить информацию, обусловленную негауссовым характером шума;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> обнаружить и проанализировать нелинейные свойства сигналов.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Возможные приложения спектрального анализа высокого порядка включают акустику, биомедицину, эконометрию, сейсмологию, океанографию, физику плазмы,</font>
+<font face="Times New Roman" size="3">радары и локаторы. Основные функции пакета поддерживают спектры высокого порядка, взаимную спектральную оценку, линейные модели прогноза и оценку запаздывания.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="34"></a> Image 
+  Processing Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Image Processing предоставляет ученым, инженерам и даже художникам широкий спектр средств для цифровой обработки и анализа изображений. Будучи тесно связанным со средой разработки приложений MATLAB, пакет Image Processing Toolbox освобождает вас от выполнения длительных операций кодирования и отладки алгоритмов, позволяя сосредоточить усилия на решении основной научной или практической задачи. Основные свойства пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> восстановление и выделение деталей изображений;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> работа с выделенным участком изображения;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> анализ изображения;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> линейная фильтрация;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> преобразование изображений;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> геометрические преобразования;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> увеличение контрастности важных деталей;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> бинарные преобразования;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> обработка изображений и статистика;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> цветовые преобразования;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> изменение палитры;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> преобразование типов изображений.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Image Processing дает широкие возможности для создания и анализа графических изображений в среде MATLAB. Этот пакет обеспечивает чрезвычайно гибкий интерфейс, позволяющий манипулировать изображениями, интерактивно разрабатывать графические картины, визуализировать наборы данных и аннотировать результаты для технических описаний, докладов и публикаций. Гибкость, соединение алгоритмов пакета с такой особенностью MATLAB, как матрично-векторное описание делают пакет очень удачно приспособленным для решения практически любых задач по разработке и представлению графики. Примеры применения этого пакета в среде системы MATLAB были даны в уроке 7. В MATLAB входят специально разработанные процедуры, позволяющие повысить эффективность графической оболочки. Можно отметить, в частности, такие особенности:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> интерактивная отладка при разработке графики;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> профилировщик для оптимизации времени выполнения алгоритма;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> средства построения интерактивного графического интерфейса пользователя (GUI Builder) для ускорения разработки GUI-шаблонов, позволяющие настраивать его под задачи пользователя.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Этот пакет позволяет пользователю тратить значительно меньше времени и сил на создание стандартных графических изображений и, таким образом, сконцентрировать усилия на важных деталях и особенностях изображений.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">MATLAB и пакет Image Processing максимально приспособлены для развития, внедрения новых идей и методов пользователя. Для этого имеется набор сопрягаемых пакетов, направленных на решение всевозможных специфических задач и задач в нетрадиционной постановке.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Image Processing в настоящее время интенсивно используется в более чем 4000 компаниях и университетах по всему миру. При этом имеется очень широкий круг задач, которые пользователи решают с помощью данного пакета, например космические исследования, военные разработки, астрономия, медицина, биология, робототехника, материаловедение, генетика и т. д.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="35"></a> Wavelet 
+  Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Wavelet предоставляет пользователю полный набор программ для исследования многомерных нестационарных явлений с помощью вейвлетов (коротких волновых пакетов). Сравнительно недавно созданные методы пакета Wavelet расширяют возможности пользователя в тех областях, где обычно применяется техника Фурье-разложения. Пакет может быть полезен для таких приложений, как обработка речи и аудиосигналов, телекоммуникации, геофизика, финансы и медицина. Основные свойства пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">усовершенствованный графический пользовательский интерфейс и набор команд для анализа, синтеза, фильтрации сигналов и изображений;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> преобразование многомерных непрерывных сигналов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> дискретное преобразование сигналов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">декомпозиция и анализ 
+      сигналов и изображений;</font>
+  </li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">широкий выбор базисных функций, включая коррекцию граничных эффектов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> пакетная обработка сигналов и изображений;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> анализ пакетов сигналов, основанный на энтропии;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> фильтрация с возможностью установления жестких и нежестких порогов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> оптимальное сжатие сигналов.</font></li>
+</ul>
+<P align="left"> <font face="Times New Roman" size="3">Пользуясь пакетом, можно 
+  анализировать такие особенности, которые упускают другие методы анализа сигналов, 
+  т. е. тренды, выбросы, разрывы в производных высоких порядков. Пакет позволяет 
+  сжимать и фильтровать сигналы без явных потерь даже в тех случаях, когда нужно 
+  сохранить и высоко- и низкочастотные компоненты сигнала. Имеются алгоритмы сжатия 
+  и фильтрации и для пакетной обработки сигналов. Программы сжатия выделяют минимальное 
+  число коэффициентов, представляющих исходную информацию наиболее точно, что 
+  очень важно для последующих стадий работы системы сжатия. В пакет включены следующие 
+  базисные наборы вейвлетов: биортогональный, Хаара, &laquo;Мексиканская шляпа&raquo;, 
+  Майера и др. Вы также можете добавить в пакет свои собственные базисы.</font></P>
+<P align="left">
+<font face="Times New Roman" size="3">Обширное руководство пользователя объясняет принципы работы с методами пакета, сопровождая их многочисленными примерами и полноценным разделом ссылок.</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="4"><a name="36"></a> Прочие 
+  пакеты прикладных программ</FONT></B> </P>
+<P align="left"> <FONT face="Times New Roman" size="4"><a name="37"></a> Financial 
+  Toolbox</FONT> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Довольно актуальный для нашего периода рыночных реформ пакет прикладных программ по финансово-экономическим расчетам. Содержит множество функций по расчету сложных процентов, операций по банковским вкладам, вычисления прибыли и многое другое. К сожалению, из за многочисленных (хотя, в общем-то, не слишком принципиальных) различий в финансово-экономических формулах его применение в наших условиях не всегда разумно — есть множество отечественных программ для таких расчетов, — например &laquo;Бухгалтерия 1C&raquo;. Но если вы хотите подключиться к базам данных агентств финансовых новостей — Bloom-berg, IDC через пакет Datafeed Toolbox MATLAB, то, конечно, обязательно пользуйтесь и финансовыми пакетами расширения MATLAB.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Financial является основой для решения в MATLAB множества финансовых задач, от простых вычислений до полномасштабных распределенных приложений. Пакет Financial может быть использован для расчета процентных ставок и прибыли, анализа производных доходов и депозитов, оптимизации портфеля инвестиций. Основные возможности пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> обработка данных;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> дисперсионный анализ эффективности портфеля инвестиций;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> анализ временных рядов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">расчет доходности ценных бумаг и оценка курсов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> статистический анализ и анализ чувствительности рынка;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> калькуляция ежегодного дохода и расчет денежных потоков;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> методы начисления износа и амортизационных отчислений.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Учитывая важность даты той или иной финансовой операции, в пакет Financial включены несколько функций для манипулирования датами и временем в различных форматах. Пакет Financial позволяет рассчитывать цены и доходы при инвестициях в облигации. Пользователь имеет возможность задавать нестандартные, в том числе нерегулярные и несовпадающие друг с другом, графики дебитных и кредитных операций и окончательного расчета при погашении векселей. Экономические функции чувствительности могут быть вычислены с учетом разновременных сроков погашения.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Алгоритмы пакета Financial для расчета показателей движения денежных средств и других данных, отражаемых в финансовых счетах, позволяют вычислять, в частности, процентные ставки по займам и кредитам, коэффициенты рентабельности, кредитные поступления и итоговые начисления, оценивать и прогнозировать стоимость инвестиционного портфеля, вычислять показатели износа и т. п. Функции пакета могут быть использованы с учетом положительного и отрицательного денежных потоков (cash-flow) (превышения денежных поступлений над платежами или денежных выплат над поступлениями соответственно).</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Financial содержит алгоритмы, которые позволяют анализировать портфель инвестиций, динамику и экономические коэффициенты чувствительности. В частности, при определении эффективности инвестиций функции пакета позволяют сформировать портфель, удовлетворяющий классической задаче Г. Марковица. Пользователь может комбинировать алгоритмы пакета для вычисления коэффициентов Шарпе и ставок дохода. Анализ динамики и экономических коэффициентов чувствительности позволяет пользователю определить позиции для стреддл-сделок, хеджирования и сделок с фиксированными ставками. Пакет Financial обеспечивает также обширные возможности для представления и презентации данных и результатов в виде традиционных для экономической и финансовой сфер деятельности графиков и диаграмм. Денежные средства могут по желанию пользователя отображаться в десятичном, банковском и процентном форматах.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="38"></a> Mapping 
+  Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Mapping предоставляет графический и командный интерфейс для анализа географических данных, отображения карт и доступа к внешним источникам данных по географии. Кроме того, пакет пригоден для работы с множеством широко известных атласов. Все эти средства в комбинации с MATLAB предоставляют пользователям все условия для продуктивной работы с научными географическими данными. Основные возможности пакета:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> визуализация, обработка и анализ графических и научных данных;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> более 60 проекций карт (прямые и инверсные);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> проектирование и отображение векторных, матричных и составных карт;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> графический интерфейс для построения и обработки карт и данных;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">глобальные и региональные атласы данных и сопряжение с правительственными данными высокого разрешения;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> функции географической статистики и навигации;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">трехмерное представление карт со встроенными средствами подсветки и затенения;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">конвертеры для популярных форматов географических данных: DCW, TIGER, ЕТОРО5.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Mapping включает более 60 наиболее широко известных проекций, включая цилиндрическую, псевдоцилиндрическую, коническую, поликоническую и псевдоконическую, азимутальную и псевдоазимутальную. Возможны прямые и обратные проекции, а также нестандартные виды проекции, задаваемые пользователем.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">В пакете Mapping <I>картой 
+  </I>называется любая переменная или множество переменных, отражающих или назначающих 
+  численное значение географической точке или области. Пакет позволяет работать 
+  с векторными, матричными и смешанными картами данных. Мощный графический интерфейс 
+  обеспечивает интерактивную работу с картами, например возможность подвести указатель 
+  к объекту и, щелкнув на нем, получить информацию. Графический интерфейс MAPTOOL 
+  — полная среда разработки приложений для работы с картами. </font></P>
+<P align="left"> <font face="Times New Roman" size="3">Наиболее широко известные 
+  атласы мира, Соединенных Штатов, астрономические атласы входят в состав пакета. 
+  Географическая структура данных упрощает извлечение и обработку данных из атласов 
+  и карт. Географическая структура данных и функции взаимодействия с внешними 
+  географическими данными форматов Digital Chart of the World (DCW), TIGER, TBASE 
+  и ЕТОРО5 собраны воедино, чтобы обеспечить мощный и гибкий инструмент для доступа 
+  к уже существующим и будущим географическим базам данных. Тщательный анализ 
+  географических данных часто требует математических методов, работающих в сферической 
+  системе координат. Пакет Mapping снабжен подмножеством географических, статистических 
+  и навигационных функций для анализа географических данных. Функции навигации 
+  дают широкие возможности для выполнения задач перемещения, таких как позиционирование 
+  и планирование маршрутов.</font> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="39"></a> Power 
+  System Blockset</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Пакет моделирования мощных 
+  энергетических (в основном электротехнических) систем, таких как линии передачи, 
+  силовые ключи, регуляторы напряжения и тока, устройства управления электродвигателями 
+  различного типа и нагревательными системами. </font></P>
+<P align="left"><font face="Times New Roman" size="3">Этот пакет обеспечивает 
+  моделирование широкого спектра энергетических систем и устройств — начиная с 
+  анализа простейших электрических цепей и кончая моделированием сложных преобразовательных 
+  устройств и даже целых электрических систем. Результаты моделирования отображаются 
+  разнообразными виртуальными измерительными приборами, такими как графопостроители, 
+  осциллографы и др.</font> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="40"></a> Data 
+  Acquisition Toolbox и Instrument Control Toolbox</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Data Acquisition Toolbox 
+  — пакет расширения, относящийся к области сбора данных через блоки, подключаемые 
+  к внутренней шине компьютера, функциональных генераторов, анализаторов спектра 
+  — словом, приборов, широко используемых в исследовательских целях для получения 
+  данных. Они поддержаны соответствующей вычислительной базой. Новый блок Instrument 
+  Control Toolbox позволяет подключать приборы и устройства с последовательным 
+  интерфейсом и с интерфейсами Канал общего пользования и VXI.</font> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="41"></a> Database 
+  toolbox и Virtual Reality Toolbox</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Более чем в 100 раз повышена скорость работы Database toolbox, при помощи которого осуществляется обмен информацией с целым рядом систем управления базами данных через драйверы ODBC или JDBC:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Oracle 7.3.3;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Access 95 или 97 Microsoft;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Microsoft SQL Server 6.5 или 7.0;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Sybase Adaptive Server 11;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Sybase (бывший Watcom) SQL Server Anywhere 5.0;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> IBM DB2 Universal 5.0;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Informix 7.2.2;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Computer Associates Ingres (все версии).</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Все данные предварительно преобразуются в массив ячеек в MATLAB 6.0. В MATLAB 6.1 можно использовать и массив структур. Визуальный конструктор (Visual Query Builder) позволяет составлять сколь угодно сложные запросы на диалектах языка SQL этих баз данных даже без знания SQL. В одном сеансе может быть открыто много неоднородных баз данных.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Virtual Reality Toolbox доступен начиная с версии MATLAB 6.1. Позволяет осуществлять трехмерную анимацию и мультипликацию, в том числе моделей Simulink. Язык программирования — VRML — язык моделирования виртуальной реальности (Virtual Reality Modeling Language). Просмотр анимации возможен с любого компьютера, оснащенного браузером с поддержкой VRML. Подтверждает, что математика — наука о количественных соотношениях и пространственных формах любых действительных или виртуальных миров.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="42"></a> Excel 
+  Link</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Позволяет использовать 
+  Microsoft Excel 97 как процессор ввода-вывода MATLAB. Для этого достаточно установить 
+  в Excel как add-in функцию поставляемый Math Works файл excllinkxla. В Excel 
+  нужно набрать Сервис <I>&gt; </I>Надстройки &gt; Обзор, выбрать файл в каталоге 
+  \matlabrl2\toolbox\exlink и установить его. Теперь при каждом запуске Excel 
+  появится командное окно MATLAB, а панель управления Excel дополнится кнопками 
+  getmatrix, putmatrix, evalstring. Для закрытия MATLAB из Excel достаточно набрать 
+  =MLC1ose() в любой ячейке Excel. Для открытия после выполнения этой команды 
+  нужно либо щелкнуть мышью на одной из кнопок getmatrix, putmatrix, evalstring, 
+  либо набрать в Excel Сервис &gt; Макрос &gt;Выполнить mat! abi ni t. Выделив 
+  мышью диапазон ячеек Excel, вы можете щелкнуть на getmatrix и набрать имя переменной 
+  MATLAB. Матрица появится в Excel. Заполнив числами диапазон ячеек Excel, вы 
+  можете выделить этот диапазон, щелкнуть на putmatrix и ввести имя переменной 
+  MATLAB. Работа, таким образом, интуитивно понятна. В отличие от MATLAB Excel 
+  Link не чувствителен к регистру: I и i, J и j равноценны.</font> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="43"></a> MATLAB 
+  Compiler</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Компилятор для программ, создаваемых на языке программирования системы MATLAB. Транслирует коды этих программ в программы на языке Си++. Применение компилятора обеспечивает возможность создания исполняемых кодов (полностью законченных программ), время выполнения которых для программ с большим числом циклических операций уменьшается в 10-15 раз. Может интегрироваться в среду Microsoft Visual Studio и использоваться вместе с Visual C++. Помимо него вы можете использовать и другие компиляторы Си++.&nbsp;</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="44"></a> Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Выводить список пакетов расширения системы MATLAB.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Вызывать демонстрационные примеры пакетов расширения.</font></li>
+</ul>
+</BODY>
+</HTML>
+

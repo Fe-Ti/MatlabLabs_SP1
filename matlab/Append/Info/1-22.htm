@@ -1,0 +1,595 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+  <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 21. Отладка 
+    программ </a></font></b> </li>
+  <ul>
+    <li><font face="Times New Roman CYR" size=3><a href="#2">Общие замечания по 
+      отладке m-файлов </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#3">Команды отладки программ</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#4">Вывод листинга m-файла 
+      с пронумерованными строками </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#5">Установка, удаление 
+      и просмотр точек прерывания </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#6">Управление исполнением 
+      m-файла</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#7">Просмотр рабочей 
+      области</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#8">Профилирование m-файлов 
+      </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#9">Создание итогового 
+          отчета</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#10">Построение диаграмм 
+          Парето </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#11">Работа с системой 
+          контроля версий </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#12">Что нового мы узнали? 
+      </a></font> </li>
+  </ul>
+</ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №21.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Отладка программ</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Общие замечания по отладке
+    m-файлов</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Вывод листинга
+    m-файла с пронумерованными строками</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Установка, удаление и просмотр точек прерывания</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Управление исполнением
+    m-файла</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Просмотр рабочей области&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Профилирование
+    m-файлов</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Работа с системой контроля версий программ</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3"><I>Отладка программ </I>— не менее серьезный этап, чем их подготовка. К сожалению, это редко учитывают начинающие программисты, ослепленные успехом работы первых простеньких программ. Однако по мере усложнения программ необходимость в средствах их отладки возрастает. Этот урок посвящен тем средствам отладки, которые имеются в системе
+MATLAB.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Общие 
+  замечания по отладке m-файлов</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Вряд ли существует программа с длиной более десятка строк, которая после запуска сразу бы выдала верный результат. Как правило, любую программу надо отлаживать в интерактивном режиме, запуская и анализируя полученные при каждой модификации результаты. Основным средством отладки m-файлов в системе MATLAB является встроенный редактор/отладчик (M-File Editor/Debuger) с современным графическим интерфейсом. Работа с ним была описана в уроке 5. Однако MATLAB предусматривает основные возможности отладки и в командном режиме. Именно они и рассматриваются в данном разделе.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Вообще говоря, отладка программ — процесс сугубо индивидуальный и творческий. Большинство пользователей средней квалификации обычно отлаживают программы, не обращаясь к специальным средствам отладки, требующим дополнительного времени для освоения и приобретения навыков использования. Если алгоритм решения задачи достаточно прост, то после нескольких модернизаций программы ее удается довести до нужной &laquo;кондиции&raquo;, т. е. заставить работать корректно.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для этого часто бывает достаточно ввести в программу режим просмотра результатов промежуточных вычислений, разблокировав их вывод снятием операторов ; (точка с запятой) или введя дополнительные переменные, значения которых отражают ход вычислений. После отладки можно вновь ввести блокирующие вывод операторы и убрать указанные переменные.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Серьезная необходимость в применении средств отладки возникает при отладке сложных программ опытными программистами, которые наверняка имеют практику работы с универсальными языками программирования с использованием развитых отладочных средств.</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="4"><a name="3"></a> Команды 
+  отладки программ</FONT></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для перехода в командный режим отладки в m-файл следует включить команду keyboard. Ее можно запустить и в командном режиме:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; keyboard&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> К&raquo; type swl</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">switch var case {1.2,3}</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">dispCПервый квартал')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> case {4.5.6}</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">dispC Второй квартал')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> case {7,8,9}</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">dispC'Третий квартал')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> case {10,11.12}</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">disp('Четвертый квартал')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;otherwise</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">disp('Ошибка в задании')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> end</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">К&raquo; return&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo;</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Признаком перехода в режим отладки становится появление комбинированного символа К&raquo;. Он меняется на символ &raquo; после возврата командой return в обычный командный режим работы. То же самое происходит при использовании команды dbquit, также прекращающей режим отладки, но прекращающей и выполнение т-файла. Если команда return находится в самом m-файле, она прекратит его выполнение и передаст управление туда, откуда был вызван этот файл.</font>
+</P>
+<P align="left"> <B><font size="4"><font face="Times New Roman"><a name="4"></a> 
+  Вывод листинга m-файла</font></font></B><font size="4"> <font face="Times New Roman"><B>с 
+  пронумерованными строками</B></font></font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Один из способов отладки m-файлов — размещение в них точек прерывания. Однако в командном режиме нельзя задать установку таких точек с помощью курсора мыши (как в отладчике Windows). Поэтому необходимо иметь листинг программы с пронумерованными строками. Он создается с помощью команды
+dbtype.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">&raquo; keyboard&nbsp;</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3"> К&raquo; dbtype sw1</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">1 switch var</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">2 case {1.2.3}</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">3 disp(' Первый квартал')</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">4 case {4.5,6}</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">5 disp('Второй квартал')</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">6 case {7,8.9}</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">7 disp('Третий квартал')</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">8 case {10.11,12}</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">9 disp('Четвертый квартал')</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">10 otherwise</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">11 disp('Ошибка в задании')</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">12 end</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">K&raquo;</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="5"></a> Установка, 
+  удаление и просмотр точек прерывания</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для установки в тестируемый m-файл точек прерывания используются следующие команды:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">dbstop In M-file at lineno — установить точку прерывания в заданной строке;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstop In M-file at subfun — установить точку прерывания в подфункции;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstop in M-file — установить точку прерывания в
+    m-файле;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstop if error — установить точку прерывания при сообщении об ошибке, но не при ошибках внутри цикла
+    try...catch;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstop if all error — установить точку прерывания при сообщении о любой ошибке;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstop if warning — установить точку прерывания при предупреждении;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstop if infnan или naninf — установить точку прерывания при результате Inf или
+    NaN.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Можно использовать упрощенный ввод этих команд без использования слов in, at и if. При установке контрольной точки она появляется в окне редактора/отладчика m-файлов. Для удаления точек прерывания используется команда dbclear с тем же синтаксисом, что и dbstop, например:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbclear M-file at 1 ineno — удалить точку прерывания в заданной строке заданного файла.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Команда dbstatus выводит список установленных в данной сессии точек прерывания.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">К&raquo; dbstatus</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Breakpoint for C:\MATLAB\bin\demol.m is on line 2.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Breakpoint for C:\MATLAB\bin\sd.m is on line 3.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">MATLAB 6 значительно изменила синтаксис по сравнению с предыдущими версиями. Поэтому полезно перед отладкой старых программ выполнить команду featureCorAndError' ,0) или просто feature('orAndError') — для выдачи предупреждений об ошибке при выполнении тех конструкций, интерпретация которых в новой версии изменилась.
+feature('orAndError' ,1) выдает сообщение об ошибке вместо предупреждения об ошибке.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="6"></a> Управление 
+  исполнением m-файла</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">После установки точек прерывания начинается собственно процесс тестирования m-файла. Он заключается в исполнении одного или нескольких шагов программы с возможностью просмотра содержимого рабочей области, т. е. значений переменных, меняющихся в ходе выполнения программы. Для пошагового выполнения программы используется команда dbstep в следующих формах:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstep — выполнение очередного шага;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstep nlines — выполнение заданного числа строк программы;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstep In — если следующая выполняемая строка текущего m-файла является вызовом функции из другого m-файла, эта форма позволяет перейти к первой исполняемой строке <I>вызываемой </I>функции и остановиться там;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbstep out — если следующая выполняемая строка текущего m-файла является вызовом функции из другого m-файла, эта форма позволяет перейти к <I>вызываемой </I>функции и остановиться сразу же после ее выполнения.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Для перехода от одной остановки программы к другой используется команда
+dbcont.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="7"></a> Просмотр 
+  рабочей области</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В точках прерывания пользователь имеет возможность просмотреть состояние рабочей области с помощью ранее описанных команд who и whos — см. урок 5. Кроме того, для перемещения по рабочим областям стека вызванных функций вверх или вниз используются следующие команды:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbdown — перемещение в стеке вызываемых функций сверху вниз;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dbup — перемещение в стеке вызываемых функций снизу вверх.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Находясь в рабочей области, можно не только просматривать значения переменных, но и менять их в ходе отладки программы. С помощью команды dbstack можно просматривать стек функций. Для завершения отладки используется команда</font>
+<font face="Times New Roman" size="3">dbquit.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В заключение еще раз обращаем внимание читателя на то, что все возможности отладки реализованы в редакторе/отладчике m-файлов, который характеризуется удобным графическим интерфейсом и средствами визуализации отладки программ. К ним относятся возможность выделения различными цветами элементов m-файла (ключевых слов, переменных, комментариев и т. д.), наглядное представление точек прерывания, простота их установки и т. д. Щелкнув мышью справа от колонки с номерами строк, вы можете установить/снять точку прерывания в окне редактора-отладчика. После остановки в точке прерывания вы можете просмотреть значения всех переменных, подведя курсор мыши к символьному обозначению переменной в окне редактора-отладчика.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом отношении некоторые описанные выше приемы отладки в командном режиме выглядят несколько архаично. Скорее всего, они ориентированы на пользователей, привыкших к командному режиму работы с системой.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="8"></a> Профилирование 
+  m-файлов</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Вообще говоря, достижение работоспособности программы — лишь один из этапов ее отладки. Не менее важным вопросом является <I>оптимизация </I>программы по минимуму времени исполнения или по минимуму объема кодов. Современные</font>
+<font face="Times New Roman" size="3">компьютеры, в которых используется система MATLAB, имеют достаточные резервы памяти, так что размеры программы, как правило, не имеют особого значения. Намного важнее проблема оптимизации программы в части быстродействия.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Оценка времени исполнения отдельных частей программы называется ее <I>профилированием. </I>Для выполнения такой процедуры служит команда
+profile [<i>Средства профилирования MATLAB позволяют анализировать только m-файлы функций, но не сценариев. Чтобы получить профиль выполнения сценария, приходится преобразовывать его в функции (как правило, не имеющую входных и выходных параметров), добавляя соответствующий заголовок function.</i>], имеющая ряд опций:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">profile fun — запуск профилирования для функции fun;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> profile report — вывод отчета о профилировании;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">profile plot — графическое представление результатов профилирования в виде диаграммы Парето;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> profile filename — профилирование файла с заданным именем и путем;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> prof ile report N — вывод отчета по профилированию заданных N строк;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> profile report frac — выводит отчет по профилированию тех строк, относительная доля выполнения которых в общем времени выполнения составляет не менее чем frac (от 0.0 до 1.0);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">profileon — включение профилирования;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> profile off — выключение профилирования;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">profile reset — выключение профилирования с уничтожением всех накопленных данных;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> INFO = profile — возвращает структуру со следующими полями:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">file — полный путь к профилируемому файлу;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">interval — интервалы времени в секундах;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">count — вектор измерений;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">state — состояние профилировщика: 'on' (включен) или 'off (выключен).</font></li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Ниже приводится пример на профилирование m-файла ellipj (эллиптическая функция Якоби):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; profile on&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; profile ellipj&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; ellipj([0:0.01:1].0.5); .&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; profile report</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">Total time in &quot;C:\MATLAB\toolbox\matlab</font></P>
+<P align="left"><font size="3" face="Courier New">\specfun\ellipj.m&quot;: 0.16 
+  seconds&nbsp;</font> </P>
+<P align="left">
+<font size="3" face="Courier New">100% of the total time was spent on lines:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> [96 97 86]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">85:       if -isempty(in)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 0.01s. 6% 86: phin(i.in) = 0.5 * ...</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">87:(asin(c(i+l.in).*sin(rem(phin(i+l.in)</font></P>
+<P align="left"><font size="3" face="Courier New">.2*pi))./a(i+l,in))</font> </P>
+<P align="left">
+<font size="3" face="Courier New">95: ml = find(m==l):&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.11s. 69% 96: sn(ml) = tanh(u(ml)): 0.04s. 25*97:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> cn(ml) = sech(u(ml));<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">98: dn(ml) = sech(udnl)):&nbsp;</font>
+</P>
+<P align="left"> <font size="3" face="Courier New"> &raquo; INFO=profile INFO=file: 
+  </font></P>
+<P align="left"><font size="3" face="Courier New">'С:\MATLAB\toolboxNmatlab\specfun\el11pj.m'</font> 
+</P>
+<P align="left">
+<font size="3" face="Courier New">interval: 0.0100</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">count:  [98x1 double]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">state: 'off '</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; profile plot</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Нетрудно заметить, что при профилировании выводятся номера строк программы, у которых время выполнения превосходит 0.01 с. С использованием этого интервала и оценивается время исполнения программного кода. Последняя команда выводит графическую диаграмму профилирования, показанную на рис. 21.1.</font>
+</P>
+<P align="left"><img src="21.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/21.1.jpg" width="121" height="144"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 21.1. </font></i> 
+  </B><i><font face="Times New Roman" size="3">Графическое представление результатов 
+  профилирования</font></i> </P>
+<P align="left">
+<font face="Times New Roman" size="3">При графическом представлении профилирования по горизонтальной оси указываются номера строк, а по вертикальной — время их выполнения. Сначала показываются строки с наибольшим временем выполнения. Таким образом, программист, отлаживающий работу программы, имеет возможность наглядно оценить, где именно находятся критические по быстродействию фрагменты.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="9"></a> Создание 
+  итогового отчета</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для создания суммарного отчета о профилировании служит команда profsum, которая используется в нескольких формах:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> profsumm — вывод полного отчета о результатах профилирования т-файла. Выводятся данные о времени выполнения для строк, суммарное время выполнения которых составляет 95% от общего времени (если таких строк много, выводятся данные о 10 строках, выполнение которых заняло наибольшее время);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">profsumm(FRACTION) — выводит часть отчета для строк, относительное время выполнения которых составляет FRACTION (от 0.0 до 1.0) от общего времени выполнения файла;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">profsurmi(N) — выводится отчет по N строкам с максимальным временем выполнения;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">profsumm(STR) — выводит отчет только по тем строкам, в которых встречается строковое выражение
+    STR;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">profsumm(INFO),
+    profsurmKINFO, FRACTION), profsumm(INFO, N) HprofsummdNFO, STR) -выводят итоговый отчет по строкам, заданным массивом
+    INFO.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример применения команды
+profsumm:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; profile erfcore</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; z = erf(0:.01:100):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; profsumm. profile done</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">Total time in </font><font size="3" face="Courier New">&quot;C:\MATLAB\toolbox\mat1ab</font></P>
+<P align="left"><font size="3" face="Courier New">\specfun\erfcore.m&quot;: 0.16 
+  seconds</font> </P>
+<P align="left"> <I><font size="3" face="Courier New">94% </font> </I><font size="3" face="Courier New">of 
+  the total time was spent on lines: </font></P>
+<P align="left"><font size="3" face="Courier New">[99 109 108 97 95 94 92 86 71 
+  48]</font> </P>
+<P align="left">
+<font size="3" face="Courier New">47: <I>%</I></font>
+</P>
+<P align="left"> <font size="3" face="Courier New">0.01s. 6*48: k = find((abs(x) 
+  </font></P>
+<P align="left"><font size="3" face="Courier New">&gt; xbreak) &amp; (abs(x) &lt;= 
+  4.)):</font> </P>
+<P align="left">
+<font size="3" face="Courier New">49: if -isempty(k)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">70: del = (y-z).*(y+z):</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">0.01s, 6*71: result(k) </font></P>
+<P align="left"><font size="3" face="Courier New">= exp(-z.*z) .* exp(-del) .* 
+  result(k)</font> </P>
+<P align="left">
+<font size="3" face="Courier New">72: end</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">85: 0.01s. <I>6% </I>86:       <I>у </I>= abs(x(k)):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">87:       z = 1 ./ (y .* y):&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">91: xnum = (xnum + p(i)) .* z:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.01s, 6*92: xden = (xden + q(i)) .* z:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">93: end</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">0.01s, 6*94: result(k) = </font></P>
+<P align="left"><font size="3" face="Courier New">z .* (xnum + p(5)) ./ (xden 
+  + q(5)):</font> </P>
+<P align="left"> <font size="3" face="Courier New">0.01s, 6*95: result(k) </font></P>
+<P align="left"><font size="3" face="Courier New">= (l/sqrt(pi) - result(k)) ./y:</font> 
+</P>
+<P align="left"> <font size="3" face="Courier New">96: if jint — 2 0.01s, <I>6% 
+  </I>97;</font></P>
+<P align="left"><font size="3" face="Courier New"><I>z </I>= fix(y*16)/16;</font> 
+</P>
+<P align="left">
+<font size="3" face="Courier New">98: del - (y-z).*(y+z):</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">0.06s. 38*99: result(k) </font><font size="3" face="Courier New">= 
+  </font></P>
+<P align="left"><font size="3" face="Courier New">exp(-z.*z) .* exp(-del) .* result(k)</font> 
+</P>
+<P align="left">
+<font size="3" face="Courier New">100: k - find(~isfinite(result));</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">107: if jint ==0&nbsp;</font>
+</P>
+<P align="left"><font size="3" face="Courier New">0.01s, <I>6% </I>108: k = find(x &gt;
+xbreak);</font>
+</P>
+<P align="left"><font size="3" face="Courier New">0.01s, <I>6% </I>109: result(k)</font><font size="3" face="Courier New">= 
+  </font></P>
+<P align="left"><font size="3" face="Courier New">(0.5 - result(k)) + 0.5;</font> 
+</P>
+<P align="left">
+<font size="3" face="Courier New">110: k = find(x &lt; -xbreak);</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="10"></a> Построение 
+  диаграмм Парето</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Команда profile plot использует для построения графическую команду pareto. Диаграмма Парето представляет собой столбцы, расположенные в порядке убывания отображаемых значений. С другими возможностями команды pareto можно ознакомиться, выполнив команду help
+pareto.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">pareto(Y,NAMES) — строит диаграмму Парето с пометкой столбцов значений вектора Y соответствующими именами, содержащимися в векторе
+    NAMES;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">pareto(Y.X) — строит диаграмму Парето для значений вектора Y в зависимости
+    от значений вектора X;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;pareti(Y) — строит диаграмму Парето для значений вектора Y в зависимости
+    </font><font face="Times New Roman" size="3">от индексов его элементов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[H,AX]=pareto(...) — возвращает вектор дескрипторов графических объектов диаграммы Н и их осей АХ.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример построения диаграммы Парето был рассмотрен  выше (см. рис. 21.1).</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="11"></a> Работа 
+  с системой контроля версий</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">MATLAB поддерживает системы контроля версий кода Visual Source Safe фирмы Microsoft (поступает вместе с Visual Studio), PVCS фирмы Merant (упрощенные версии этой системы бесплатно поступают с продуктами Borland), Clear Case фирмы Rational Software (в особенности на UNIX-Linux версиях MATLAB), RCS и имеет настраиваемый пользовательский интерфейс, так что вместо вышеперечисленных вы можете подключить свою любимую систему. Функция cmopts выводит информацию об установленной системе контроля версий. Свежеустановленная система MATLAB реагирует следующим образом:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; cmopts&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> none</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для подключения PVCS или ее варианта вам нужно отредактировать
+m-файл cmopts.m в папке C:\matlabrl2\toolbox\local Введите комментарий Ubegin customization section и введите на следующей строчке m-файла, если файл конфигурации проекта
+Proj.cfg:</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">DefaultConfigFile=</font></P>
+<P align="left"><font size="3" face="Courier New">'с:\\pvcs\pvcsproj\projmgrprj\\Proj.cfg'.</font> 
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Проверим правильность нашей установки:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;cmopts( 'DefaultConflgFile')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">DefaultConfigFile =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">с:\\pvcs\pvcsproj\projmgrprj\\Proj.cfg</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Командаcheckin(f11ename. 'COMMENTS', Текст комментариев, OPTION1, VALUE1.0PTION2, VALUE2.......)  включает ваши файлы в систему контроля версий. Filename — полный</font>
+    <font face="Times New Roman" size="3">путь к файлу или строковый массив ячеек, где каждая ячейка указывает путь к файлам, Текст комментариев — массив символов, в данной версии option может быть только lock, value может быть on (замкнута) или off (позволяет доступ к файлу без
+    checkout).</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Команда checkout(filename, OPTION1, VALUE1.0PTION2. VALUE2.......) извлекает файлы из системы контроля версий. OPTION могут быть lock — аналогично checkin — и ревизия, т. е. указание конкретной версии файла. Команда undocheckout (Filename) — отменяет действие checkout, например замыкание файлов.</font></li>
+</ul>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="12"></a> Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Использовать команды отладки.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Выводить листинги m-файлов с нумерованными строками.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Устанавливать, удалять и просматривать точки прерывания.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Осуществлять пошаговое выполнение m-файлов.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Просматривать рабочую область.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Профилировать m-файлы.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Работать с системой контроля версий
+    m-файлов.</font></li>
+</ul>
+</BODY>
+</HTML>
+

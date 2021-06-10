@@ -1,0 +1,704 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+
+<title>№</title>
+
+<style>
+<!--
+
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab2/Fon.jpg*//*tpa=http://orloff.am.tpu.ru/matlab/Lab2/Fon.jpg*/);
+}
+.style1 {color: #0033CC}
+.style3 {
+	color: #0033CC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+-->
+</style>
+
+<link href="styles.css" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body lang=RU>
+<p><span class="style3">4. <strong>Программирование в MATLAB </strong></span></p>
+<p align="justify">До сих пор мы в основном использовали систему MATLAB в режиме непосредственного счета — в командном режиме. Однако при решении серьезных задач возникает необходимость сохранения используемых последовательностей вычислений, а также их дальнейшей модификации. Иными словами, существует необходимость программирования решения задач. </p>
+<p align="justify">Это может показаться отходом от важной цели, которая преследуется разработчиками большинства математических систем, — выполнения математических вычислений без использования традиционного программирования. Однако это не так. Множество математических задач решается в системе MATLAB без программирования. С использованием языков высокого уровня для их решения потребовалось бы написать и оттестировать сотни программ. </p>
+<p align="justify">Практически невозможно предусмотреть в одной, даже самой большой и мощной, математической системе возможность решения всех задач, которые могут интересовать пользователя. Программирование в системе MATLAB является эффективным средством ее расширения и адаптации к решению специфических проблем. Оно реализуется с помощью языка программирования системы. </p>
+<p align="justify">Большинство объектов этого языка, в частности все команды, операторы и функции, одновременно являются объектами входного языка общения с системой в командном режиме работы. Так что фактически мы приступили к изучению языка программирования системы MATLAB, начиная с первой лабораторной работы. </p>
+<p align="justify">Так в чем же отличие входного языка от языка программирования? В основном — в способе фиксации создаваемых ими кодов. Сессии в командном режиме работы не сохраняются в памяти компьютера. Хранятся только определения созданных в ходе их выполнения переменных и функций. А вот программы на языке программирования MATLAB сохраняются в виде текстовых <span class="style5"><strong>m-файлов</strong></span>. При этом могут сохраняться как целые программы в виде файлов-сценариев, так и отдельные программные модули — функции. Кроме того, важно, что программа может менять структуру алгоритмов вычислений в зависимости от входных данных и данных, создаваемых в ходе вычислений. </p>
+<p align="justify">С позиций программиста язык программирования системы является типичным проблемно-ориентированным языком программирования высокого уровня. Точнее говоря, это даже язык сверхвысокого уровня, содержащий сложные операторы и функции, реализация которых на обычных языках (например Бейсике, Паскале или Си) потребовала бы много усилий и времени. К таким функциям относятся матричные функции, функции быстрого преобразования Фурье (БПФ) и др., а к операторам — операторы построения разнообразных графиков, генерации матриц определенного вида и т. д. </p>
+<p class="style3">4.1. Основы редактирования и отладки m-файлов </p>
+<p class="style1">Интерфейс редактора/отладчика m-файлов </p>
+<p align="justify">Для подготовки, редактирования и отладки m-файлов служит специальный многооконный редактор. Он выполнен как типичное приложение Windows. Редактор можно вызвать командой <strong>edit</strong> из командной строки или командой <span class="style5">New &gt; M-file</span> из меню <span class="style5">File</span>. После этого в окне редактора можно создавать свой файл, пользоваться средствами его отладки и запуска. Перед запуском файла его необходимо записать на диск, используя команду <span class="style5">Filе &gt; Save as</span> в меню редактора. </p>
+<p align="center"><img src="index3.files/02.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index3.files/02.gif" width="536" height="205"></p>
+<p align="center">Рис. 1. Редактор/отладчик файлов при записи файла на диск </p>
+<p>На рис. 1 показано окно редактора/отладчика с текстом простого файла в окне редактирования и отладки.</p>
+<p align="justify">После записи файла на диск можно заметить, что команда <span class="style5">Run</span> в меню <span class="style5">Tools</span> (Инструменты) редактора становится активной (до записи файла на диск она пассивна) и позволяет произвести запуск файла. Запустив команду <span class="style5">Run</span>, можно наблюдать исполнение m-файла; в нашем случае — это построение рисунка в графическом окне и <em>вывод надписи о делении на ноль</em> в ходе вычисления функции sin(x)/x в командном окне системы.</p>
+<blockquote>
+  <p align="justify"><span class="style3">Упражнение 1. </span>Выполнить пример, изображенный на рис. 1..</p>
+</blockquote>
+<p align="justify">На первый взгляд может показаться, что редактор/отладчик — просто лишнее звено в цепочке «пользователь — MATLAB». И в самом деле, текст файла можно было бы ввести в окно системы и получить тот же результат. Однако на деле редактор/отладчик выполняет важную роль. Он позволяет создать <span class="style5"><strong>m-файл</strong></span> (программу) без той многочисленной «шелухи», которая сопровождает работу в командном режиме. Далее мы убедимся, что текст такого файла подвергается тщательной синтаксической проверке, в ходе которой выявляются и отсеиваются многие ошибки пользователя. Таким образом, <em>редактор обеспечивает синтаксический контроль</em> файла. </p>
+<p align="justify">Редактор имеет и другие важные отладочные средства — он позволяет устанавливать в тексте файла специальные метки, именуемые <em>точками прерывания</em> (breakpoints). При их достижении вычисления приостанавливаются, и пользователь может оценить промежуточные результаты вычислений (например, значения переменных), проверить правильность выполнения циклов и т. д. Наконец, редактор позволяет записать файл в текстовом формате и увековечить ваши труды в файловой системе MATLAB. </p>
+<p align="justify">Для удобства работы с редактором/отладчиком <em>строки программы в нем нумеруются</em> в последовательном порядке. Редактор является многооконным. Окно каждой программы оформляется как вкладка.</p>
+<p class="style1">Цветовые выделения и синтаксический контроль </p>
+<p align="justify">Редактор/отладчик m-файлов выполняет синтаксический контроль программного кода по мере ввода текста. При этом используются следующие цветовые выделения: </p>
+<ul>
+  <li>ключевые слова языка программирования — синий цвет; </li>
+  <li>операторы, константы и переменные — черный цвет; </li>
+  <li>комментарии после знака % — зеленый цвет; </li>
+  <li>символьные переменные (в апострофах) — зеленый цвет; </li>
+  <li>синтаксические ошибки — красный цвет. </li>
+</ul>
+<p align="justify">Благодаря цветовым выделениям вероятность синтаксических ошибок снижается. </p>
+<p align="justify">Однако далеко не все ошибки диагностируются. Ошибки, связанные с неверным применением операторов или функций (например, применение оператора - вместо + или функции cos(x) вместо sin(x) и т. д.), не способна обнаружить ни одна система программирования. Устранение такого рода ошибок (их называют семантическими) — дело пользователя, отлаживающего свои алгоритмы и программы. </p>
+<p class="style1">Панель инструментов редактора и отладчика </p>
+<p align="justify">Редактор имеет свое меню и свою инструментальную панель. Внешний вид инструментальной панели показан на рис. 2. По стилю данная панель похожа на панель инструментов окна командного режима работы, но имеет несколько иной набор кнопок.</p>
+<p align="center"> <img height="30" src="index3.files/23.GIF" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index3.files/23.GIF" width="492"> </p>
+<p align="center">Рис. 2. Панель инструментов редактора/отладчика m-файлов </p>
+<p>Назначение кнопок панели инструментов редактора/отладчика следующее: </p>
+<ul>
+  <li><span class="style5">New</span> — создание нового m-файла; </li>
+  <li><span class="style5">Open</span> — вывод окна загрузки файла; </li>
+  <li><span class="style5">Save</span> — запись файла на диск; </li>
+  <li><span class="style5">Print</span> — печать содержимого текущего окна редактора; </li>
+  <li><span class="style5">Cut</span> — вырезание выделенного фрагмента и перенос его в буфер; </li>
+  <li><span class="style5">Сору</span> — копирование выделенного объекта в буфер; </li>
+  <li><span class="style5">Paste</span> — размещение фрагмента из буфера в позиции текстового курсора; </li>
+  <li><span class="style5">Undo</span> — отмена предшествующей операции; </li>
+  <li><span class="style5">Redo</span> — повтор отмененной операции; </li>
+  <li><span class="style5">Find text </span>— нахождение указанного текста; </li>
+  <li><span class="style5">Show function</span> — показ функции; </li>
+  <li><span class="style5">Set/Clear Breakpoint</span> — установка/сброс точки прерывания; </li>
+  <li><span class="style5">Clear All Breakpoints</span> — сброс всех точек прерывания; </li>
+  <li><span class="style5">Step</span> — выполнение шага трассировки; </li>
+  <li><span class="style5">Step In</span> — пошаговая трассировка с заходом в вызываемые m-файлы; </li>
+  <li><span class="style5">Step Out </span>— пошаговая трассировка без захода в вызываемые m-файлы; </li>
+  <li><span class="style5"><strong>Save and Run</strong></span> — сохранение и запуск; </li>
+  <li><span class="style5">Exit Debug Mode</span> — выход из режима отладки. </li>
+</ul>
+<p align="justify">С назначением ряда из этих кнопок вы уже знакомы, поскольку оно аналогично описанному ранее для основного окна MATLAB.</p>
+<p class="style3">4.2. Алфавит языка программирования</p>
+<p align="justify"> В MATLAB, как и в других системах, используются все буквы латинского алфавита от А до Z и арабские цифры от 0 до 9. Как и в С++, большие и малые буквы это разные символы. Кроме букв латинского алфавита используются все специальные символы клавиатуры компьютера.</p>
+<p align="justify" class="style3"><b><span style='line-height:150%'>4.3. Арифметические и логические операторы</span></b></p>
+<p align="justify" class="MsoNormal">Список арифметических операторов.</p>
+<table border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>      <span class="MsoNormalTable"><strong>Функция</strong></span></td>
+    <td width=235 valign=top style='width:176.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><strong>Обозначение (синтаксис)</strong></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>      <span class="MsoNormalTable">Сложение</span></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>+ (М1+М2)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Вычитание</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>- (М1-М2)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Умножение чисел или матриц</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>* (М1*М2)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Поэлементное умножение матриц </span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>.* (М1.*М2)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Возведение числа или матрицы в степень</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable">^<b> (М1^ <i>х</i>)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+    <p style='line-height:150%'><span class="MsoNormalTable">Поэлементное возведение матрицы в степень</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>.^ (М1.^ <i>х</i>)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Деление чисел или деление матриц слева направо</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>/ (М1 / М2)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+    <p style='line-height:150%'><span class="MsoNormalTable">Поэлементное деление матриц слева направо</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>./ (М1 ./ М2)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Деление матриц справа налево</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>\ (М1 \ М2)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Поэлементное деление матриц справа налево</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>.\</b> (<b>М1 </b><b>.\ М2</b>)</span></p></td>
+  </tr>
+</table>
+<p align=justify>В математических выражениях операторы имеют определенный приоритет исполнения. В <span lang=EN-US>MATLAB</span> приоритет логических операторов выше, чем арифметических, приоритет возведения в степень выше приоритетов умножения и деления, приоритет умножения и деления выше сложения и вычитания. Для повышения приоритета операций нужно использовать круглые скобки. Степень вложения скобок не ограничивается.</p>
+<p align="justify"><span class="MsoBodyTextIndent"><i>Операторы отношения</i> служат для сравнения двух величин, векторов или матриц, все операторы отношения имеют две сравниваемые величины и записываются, как показано в таблице:</span></p>
+<table border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>      <span class="MsoNormalTable"><strong>Функция</strong></span></td>
+    <td width=235 valign=top style='width:176.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><strong>Оператор (синтаксис)</strong></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>      <span class="MsoNormalTable">Равно</span></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>= = (<i>х </i>= = <i>у</i>)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Не равно</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>~</b><b> = (<i>х </i></b><b>~</b><b> = <i>у</i>)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Меньше</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>&lt;</b><b> (<i>х </i></b><b>&lt;</b><b> <i>у</i>)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Больше</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>&gt;</b><b> (<i>х </i></b><b>&gt;</b><b> <i>у</i>)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Меньше или равно</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>&lt;</b><b> = (<i>х </i></b><b>&lt;</b><b> = <i>у</i>)</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=403 valign=top style='width:302.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Больше или равно</span></p></td>
+    <td width=235 valign=top style='width:176.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>&gt;</b><b> = (<i>х </i></b><b>&gt;</b><b> = <i>у</i>)</b></span></p></td>
+  </tr>
+</table>
+
+<p align="justify"><span class="MsoBodyTextIndent">Данные операторы выполняют поэлементное сравнение векторов или матриц одинакового размера и логическое выражение принимает значение 1 (<span lang=EN-US><em>True</em></span>), если элементы идентичны, и значение 0 (<span lang=EN-US><em>False</em></span>) в противном случае.</span></p>
+<p align="justify"><span class="MsoBodyTextIndent"><i>Логические операторы</i> служат для реализации поэлементных логических операций над элементами одинаковых по размеру массивов согласно таблице:</span></p>
+<table border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>      <span class="MsoNormalTable"><strong>Функция</strong></span></td>
+    <td width=211 valign=top style='width:158.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><strong>Оператор (синтаксис)</strong></span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>      <span class="MsoNormalTable">Логическое И</span></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b> </b><b>&amp;</b><b>; </b><b><i>and</i></b><b> (</b><b><i>and</i></b><b><i> </i></b><b>(<i>a, b</i>))</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Логическое ИЛИ</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable">|<b>; <i>or</i> (<i>or </i>(<i>a, b</i>))</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Логическое НЕ</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b>~</b><b> ; </b><b><i>not</i></b><b> (</b><b><i>not</i></b><b><i> </i></b><b>(</b><b><i>a</i></b><b><i>, </i></b><b><i>b</i></b><b>))</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Исключающее ИЛИ</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b><i>xor</i></b><b> (<i>xor </i>(<i>a, b</i>))</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Верно, если все элементы вектора равны нулю</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b><i>any</i></b><b> (<i>any </i>(a))</b></span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">Верно, если все элементы вектора не равны нулю</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><b><i>all</i></b><b> (<i>all </i>(<i>a</i>))</b></span></p></td>
+  </tr>
+</table>
+<p><span class="style3"><b><span lang=EN-US>4.4</span>. Элементарные функции</b></span></p>
+<p><span class="MsoBodyTextIndent">В тригонометрических функциях углы измеряются в <i>радианах</i>.</span></p>
+<table border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>      <strong>Функция</strong></td>
+    <td width=211 valign=top style='width:158.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><strong>Синтаксис</strong></span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>      <span class="MsoNormalTable">|<i>х|</i> - модуль </span></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>abs</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>е<sup>х</sup></i> – экспонента </span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>exp</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"> ln x - натуральный логарифм</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>log</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">логарифм по основанию 2</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>log</i>2(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">lg x - десятичный логарифм</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>log</i>10(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">2<i><sup>х</sup></i> - 2 в степени <i>х</i></span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>pow</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable">квадратный корень</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>sqrt</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>arc</i><i>с</i><i>os</i><i> </i><i>x</i><i> </i>– арккосинус</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>acos</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>ar</i><i>с</i><i>ctg</i><i> </i><i>x</i><i> </i>– арккотангенс</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>acot</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>arc</i><i>с</i><i>osec</i><i> </i><i>x</i><i> </i>– арккосеканс</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>acsc</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>arc</i><i>с</i><i>es</i><i> </i><i>x</i><i> </i>– арксеканс</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>asec</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>arcsin</i><i> </i><i>x</i><i> </i>– арксинус</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>asin</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>ar</i><i>с</i><i>tg</i><i> </i><i>x</i><i> </i>– арктангенс</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>atan</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>с</i><i>os</i><i> </i><i>x</i><i> </i>– косинус</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>cos</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>ctg</i><i> </i><i>x</i><i> </i>– котангенс</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>cot</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>sec x </i>– секанс</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>sec</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>с</i><i>osec x </i>– косеканс</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>csc</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>sin x </i>– синус</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>sin</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>tg x </i>– тангенс</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>tan</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>ar</i><i>с</i><i>ch</i><i> </i><i>x</i><i> </i>– арккосинус гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>acosh</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>ar</i><i>с</i><i>cth</i><i> </i><i>x</i><i> </i>– арккотангенс гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>acoth</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>ar</i><i>сс</i><i>osech</i><i> </i><i>x</i><i> </i>– арккосеканс гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>acsch</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>ar</i><i>с</i><i>sech</i><i> </i><i>x</i><i> </i>– арксеканс гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>asech</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>      <span class="MsoNormalTable"><i>arс</i><i>sh </i><i>x </i>– арккосинус гиперболический</span></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>asinh</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>ar</i><i>с</i><i>tgh</i><i> </i><i>x</i><i> </i>– арктангенс гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>atanh</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>ch</i><i> </i><i>x</i><i> </i>– косинус гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>cosh</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>с</i><i>tgh</i><i> </i><i>x</i><i> </i>– котангенс гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>coth</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>с</i><i>osech</i><i> </i><i>x</i><i> </i>– косеканс гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>csch</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>sech</i><i> </i><i>x</i><i> </i>– секанс гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>sech</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>sh</i><i> </i><i>x</i><i> </i>– синус гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>sinh</i>(<i>x</i>)</span></p></td>
+  </tr>
+  <tr>
+    <td width=427 valign=top style='width:320.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+      <p style='line-height:150%'><span class="MsoNormalTable"><i>tgh</i><i> </i><i>x</i><i> </i>– тангенс гиперболический</span></p></td>
+    <td width=211 valign=top style='width:158.15pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+      <p align=center style='text-align:center;line-height:150%'><span class="MsoNormalTable"><i>tanh</i>(<i>x</i>)</span></p></td>
+  </tr>
+</table>
+<p align="justify"><span class="MsoBodyTextIndent">Следует помнить, что все элементарные функции должны записываться в программах <i><strong>малыми</strong> <strong>буквами</strong></i>. Существуют также специальные математические функции, на которых мы не будем останавливаться.</span></p>
+<p class="style3">4.5. Понятие о файлах-сценариях и файлах-функциях </p>
+<p align="justify">Здесь полезно отметить, что m-файлы, создаваемые редактором/отладчиком, делятся на два класса: </p>
+<ul>
+  <li><span class="style5"><strong>файлы-сценарии</strong></span>, не имеющие входных параметров; </li>
+  <li><span class="style5"><strong>файлы-функции</strong></span>, имеющие входные параметры. </li>
+</ul>
+<p align="justify" class="style1">Файл-сценарий</p>
+<p align="justify">Файл сценарий называется также <strong class="style5">Script-файлом </strong>или просто <span class="style5"><strong>скриптом</strong></span>. </p>
+<p align="justify"><span class="style5"><strong>Файл-сценарий</strong></span> имеет весьма простую <em>структуру</em>:</p>
+<ol>
+  <li class="style2"> % Основной комментарий, если необходимо.</li>
+  <li class="style2"> % Дополнительный комментарий, если необходимо.</li>
+  <li class="style2"> Тело программы с любыми допустимыми выражениями.</li>
+</ol>
+<p>Важными являются следующие <em>свойства файлов-сценариев</em>:</p>
+<ol>
+  <li>  Они не имеют входных и выходных аргументов.</li>
+  <li>  Работают с данными из рабочей области.</li>
+  <li>  В процессе выполнения не компилируются.</li>
+  <li>  Представляют собой последовательность операций, аналогичную той, что используется в сеансе работы из командной строки.</li>
+</ol>
+<p><span class="style1">Пример.</span> Видимый в окне редактора на рис. 1 файл является файлом-сценарием, или Script-файлом.</p>
+<p align="justify" class="style1">Файл-функция</p>
+<p align="justify"><span class="style5"><em>Отличие М-файла функции от сценария состоит в том, что он является аналогом подпрограммы типа <strong>function</strong> в языке Pascal.</em></span></p>
+<p align="justify"><span class="style5"><strong>Файл-функция</strong></span>  имеет входные параметры, список которых указывается в круглых скобках. Используемые в файле-функции переменные являются локальными переменными, изменение значений которых в теле функции никоим образом не влияет на значения, которые те же самые переменные могут иметь за пределами функции. </p>
+<p align="justify">Иными словами, локальные переменные могут иметь те же имена (идентификаторы), что и глобальные переменные (хотя правила культурного программирования не рекомендуют смешивать имена локальных и глобальных переменных). В дальнейшем мы рассмотрим этот вопрос более подробно, а пока вернемся к описанию интерфейса компонентов системы MATLAB. </p>
+<p align="justify" class="style5">Структура М-файла функции <em><strong>с одним выходным параметром</strong></em> имеет вид:</p>
+<ul>
+  <li class="style2"> function var = f _ name (Список параметров)</li>
+  <li class="style2"> % Основной комментарий, если необходимо.</li>
+  <li class="style2"> % Дополнительный комментарий, если необходимо.</li>
+  <li class="style2"> Тело программы с любыми выражениями.</li>
+  <li class="style2"> var = выражение</li>
+</ul>
+<p>М-файл функция обладает следующими свойствами:</p>
+<ol>
+  <li>
+    <div align="justify">  Он начинается с ключевого слова <strong>function</strong>, после которого указывается имя переменной var – выходного параметра, имя самой функции f _ name и список ее входных параметров, отделенных запятой.<br> 
+    <span class="style1"><strong>Внимание</strong>:</span> Имя М-файла функции должно совпадать с именем самой функции (f _ name) . MATLAB автоматически присваивает данное имя при выполнении команды Save as.</div>
+  </li>
+  <li>
+    <div align="justify"> Результат выполнения М-файла функции присваивается имени функции, которое может использоваться в математических выражениях подобно функциям sin(x), log(x) и т. п.</div>
+  </li>
+  <li>
+    <div align="justify">  Все переменные, используемые в файле-функции, являются локальными, т.е. действуют только в пределах тела функции.</div>
+  </li>
+  <li>
+    <div align="justify">Последняя конструкция <strong>vаг=выражение</strong> вводится, если требуется, чтобы функция возвращала результат вычислений. Вместо имени var можно ипользовать любое другое имя.</div>
+  </li>
+  <li>
+    <div align="justify">  Файл-функция является самостоятельным программным модулем, который связан с другими модулями и головной программой через входные и выходные параметры.</div>
+  </li>
+  <li>
+    <div align="justify"> При вызове файла-функции он компилируется и затем исполняется.</div>
+  </li>
+  <li>m-файл функция должен сохраняться в ваш рабочий каталог. </li>
+</ol>
+<p><span class="style1">Пример</span>. m-файл, содержащий текст</p>
+<p align="justify"><img src="index3.files/03.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index3.files/03.gif" width="527" height="230"> </p>
+<p>Данную функцию можно использовать, например, следующим образом: </p>
+<p><img src="index3.files/04.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index3.files/04.gif" width="500" height="230"></p>
+<blockquote>
+  <p><span class="style3">Упражнение 2. </span>Выполнить данный пример, придумав свою собственную функцию.</p>
+</blockquote>
+<p class="style3">4.6. Основы программирования</p>
+<p class="style1">  Оператор присваивания</p>
+<p align="justify"> Программирование в системе MATLAB является средством ее расширения и использовании в решении специфических проблем. Некоторые вопросы программирования изложены выше, здесь рассмотрим правила, дополняющие синтаксис языка MATLAB.</p>
+<p align="justify"> Программы оперируют с переменными и константами. Переменные – это имеющие имена объекты, способные хранить разные по значению данные. В зависимости от этих данных переменные могут быть числовыми или символьными, векторными или матричными.</p>
+<p> Для задания переменным определенных значений используется <em>оператор присваивания</em>, вводимый знаком равенства =</p>
+<p class="style5"><strong> Имя _ переменной = Выражение ;</strong></p>
+<p align="justify"><em>Типы переменных заранее не объявляются</em>. Они определяются выражением, значение которого присваивается переменной. </p>
+<p align="justify"><span class="style5"><em><strong>Имя переменной</strong></em></span><em> может содержать сколько угодно символов, но идентифицируется только 31 начальный символ. Имя любой переменной должно быть уникальным. Имя должно начинаться с буквы, может содержать буквы, цифры и символ подчеркивания _. Недопустимо включать в имена пробелы и специальные знаки.</em></p>
+<p class="style1">Перенос строки</p>
+<p align="justify"> Если математическое выражение выходит за размер экрана монитора, то целесообразно перенести его часть на следующую строку. Для этого используется символ многоточие <strong>…</strong> - три и более точки. В командном режиме число возможных символов в одной строке – 4096, в М-файле – не ограничено, но с такими длинными строками работать неудобно. Поэтому применение в файлах-сценариях символа переноса строки улучшает наглядность программ.</p>
+<p class="style1">Ввод и вывод данных</p>
+<p align="justify"> В языке MATLAB нет явных операторов ввода вывода данных в режиме диалога. Эта проблема решается для <strong>ввода</strong> данных оператором присваивания и использованием системных констант. <strong>Вывод</strong> данных осуществляется еще проще. Для этого необходимо после математического выражения не ставить символ  <em>точку с запятой </em>(;). </p>
+<p align="justify">К <em>системным</em> константам относятся:</p>
+<p> <strong>pi</strong> = 3,1415 …  число “ПИ”;<br>
+  <strong>i</strong> или <strong>j</strong> - мнимые единицы;<br>
+  <strong>NaN</strong> - неопределенность в виде 0/0;<br>
+  <strong>Inf</strong> - бесконечность типа а/o ;<br>
+  <strong>ans</strong> результат последней операции.</p>
+<p class="style1">Оператор двоеточие</p>
+<p align="justify">Весьма часто необходимо выполнить формирование упорядоченных числовых последовательностей. Такие последовательности нужны для созда-ния векторов или значений аргументов х при построении графиков. В MATLAB для этого используется оператор <em>двоеточие</em> (:), который представляется следующим образом:</p>
+<p align="justify" class="style5"><strong> х = Начальное _ значение : Шаг : Конечное _ значение ;</strong></p>
+<p align="justify">Эта конструкция создает возрастающую последовательность чисел, которая начинается с начального значения, изменяется на заданный шаг и завершается конечным значением. Если шаг не задан, то он принимает значение 1. Если конечное значение указано меньшим, чем начальное значение,  то выдается сообщение об ошибке.</p>
+<p align="justify">Например, оператор</p>
+<p align="justify" class="style2">s = 2:0.25:3;</p>
+<p align="justify">формирует вектор </p>
+<p align="justify" class="style2">s = [2 2.25 2.5 2.75 3] </p>
+<p class="style1">Сообщения об ошибках и исправление ошибок</p>
+<p align="justify"> Система MATLAB контролирует правильность написания программ и, при наличии ошибок, выдает соответствующее сообщение в окне команд. При этом указывается номер строки, где допущена ошибка, и характер ошибки. После уяснения сути ошибки ее необходимо исправить в тексте программы, сохранить М-файл командой <span class="style5">Save</span> и снова выполнить программу. Перед этим желательно очистить окно команд от сообщения об ошибках (чтобы не загромождать полученную картинку) с помощью команды Clear Command Windows (Очистить окно команд) в меню Edit.</p>
+<p></p>
+<p align="justify"><span class="style3">Примечание. </span>Более сложные элементы программирования будут рассмотрены позднее.  </p>
+<p></p>
+</body>
+
+</html>

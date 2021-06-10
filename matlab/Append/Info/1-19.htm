@@ -1,0 +1,1043 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+  <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 18. Работа 
+    с символьными данными</a></font></b> </li>
+  <ul>
+    <li><font face="Times New Roman CYR" size=3><a href="#2">Основные функции 
+      символьных данных </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#3">Операции над строками 
+      </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#4">Преобразование символов 
+      и строк </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#5">Функции преобразования 
+          систем счисления</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#6">Вычисление строковых 
+      выражений </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#7">Что нового мы узнали? 
+      </a></font> </li>
+  </ul>
+</ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №18.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Работа с символьными данными</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Основные функции символьных данных</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Операции над строками</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Преобразование символов и строк</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Функции преобразования систем счисления</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Вычисление строковых выражений</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Функции <I>обработки массивов символов или рядов этих массивов (строкой в терминологии MATLAB называется любой массив символов или ряд массива символов) </I>для математической системы могут показаться второстепенными. Однако это не так. Строковое представление данных лежит в основе <I>символьной математики, </I>арифметики произвольной точности и многочисленных программных конструкций, не говоря уже о том, что оно широко применяется в базах данных и массивах ячеек. Этот урок посвящен возможностям обработки символьных переменных и выражений в системе
+MATLAB.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Основные 
+  функции символьных данных</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В основе представления символов в строках лежит их кодирование с помощью сменных <I>таблиц кодов. </I>Такие таблицы ставят в однозначное соответствие каждому символу некоторый код со значением от 0 до 255.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Вектор, содержащий строку символов, в системе MATLAB задается следующим образом:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">S= 'Any Characters' — вектор, компонентами которого являются числовые коды, соответствующие символам
+    [<i>Символ&nbsp; внутри такой строки дублируется (заменяется на ''). —
+    Примеч. ред.</i>].</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Первые 127 чисел — это коды ASCII, представляющие буквы латинского языка, цифры и спецзнаки. Они образуют основную таблицу кодов. Вторая таблица (коды от 128 до 255) является дополнительной и может использоваться для представления символов других языков, например русского. Длина вектора S соответствует числу символов в строке, включая пробелы. Апостроф  внутри строки символов должен вводиться как два апострофа ' '.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">К основным <I>строковым функциям </I>относятся следующие:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">   char (X) — преобразует массив X положительных целых чисел (числовых кодов от 0 до 65 535) в массив символов системы MATLAB (причем только первые 127 кодов — английский набор ASCII, со 128 до 255 — расширенный набор ASCII) и возвращает его, на платформе Windows при значении выше 65 535 выдает предупреждение об ошибке, но возвращает русскую букву я (я повторяется так же, как char(255+256rt), где п — целые неотрицательные числа)
+    [<i>Результат char(x) при х&gt;65535 зависит от платформы, русификации и т. д. —
+    Примеч. ред.</i>];</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; X=reshape(32:127,32,3);&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; S= char(X')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">S=<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">!&quot;#$*&amp;'()*+.-./0123456789::&lt;=&gt;?&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">(aABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&quot;abcdefghijklmnopqrstuvwxyz{|}-[]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t1=<sup>'</sup>computer'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t2='for';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t3='home':</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t4='users':<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S = Char(tl.t2.t3.t4)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">S =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">computer</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">for</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">home</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">users</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">char (С) — преобразует каждый элемент строкового массива ячеек в ряды массива символов, если строки массива ячеек разного размера, к ним в конце добавляются пробелы (осуществляется набивка (padding) в терминах MATLAB) так чтобы в каждом ряде массива символов было одинаковое число символов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> char (Tl, T2, ТЗ), где Т — строки, возвращает массив символов, при этом копии строк
+    T1, T2, Т3 преобразуются в ряды массива символов добавлением при необходимости пробелов в конце рядов массивов символов, как описано ранее;char
+    (java.Tang.string) — преобразует объект класса java.lang. string вмассив символов
+    MATLAB;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> char (javaarray of java.lang.string) — единственный случай, когда выходным аргументом функции является не массив символов, а строковый массив ячеек, в который преобразуется массив строк
+    Java;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">double(S) — преобразует символы строки S в числовые коды 0—65535 и возвращает вектор с этими числовыми кодами;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">ischar'(S) — возвращает логическую единицу, если S является символьной переменной, и логический ноль в противном случае;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">deblank(str) — возвращает строку, полученную из аргумента — строки str с удаленными из ее конца пробелами;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">deblank(c) — применяет функцию deblank к каждому элементу строкового массива ячеек с.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S = 'computer'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">S =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">computer</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; X = double(S)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">X =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">99         111       109       112       117       116       101       114</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; ischar(S)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;c{l,l}='My ';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; c{l,2}='home ';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; c{1.3}='computer ';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; с</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">с=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'My  '    'home '    'computer&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; с = deblank(c)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> с =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'My' 'home' 'computer'</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3"><i><img border="0" src="Prim-8.gif" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim-8.gif" align="left" width="36" height="35">Правильная работа строковых функций с дополнительной кодовой таблицей ASCII возможна, но не гарантируется для систем, не прошедших адаптацию под тот или иной язык. В частности, проблемы работы с символами кириллицы (например перевод строки при наборе малой буквы &laquo;с&raquo; в командной строке) уже обсуждались. Поэтому примеры в этой главе даны для строк с символами основной кодовой таблицы.</i></font>
+</P>
+<P align="left"> <B><FONT face="Times New Roman" size="3"><a name="3"></a> <font size="4">Операции 
+  над строками</font></FONT></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">К <I>операциям над строками </I>обычно относят поиск вхождений одних строк в другие, замену регистров символов, объединение строк и т. д. Следующие функции осуществляют операции над строками:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">findstr(strl,str2) — обеспечивает поиск начальных индексов более короткой строки внутри более длинной и возвращает вектор этих индексов. Индексы указывают положение первого символа более короткой строки в более длинной строке.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; strb'Example of the function Is the findstr
+function';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str2='the';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; k = findstr(strl,str2)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">k =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">12        28</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">lower('str') — возвращает строку символов str, в которой символы верхнего регистра переводятся в нижний регистр, а все остальные символы остаются без изменений.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str='Example Of The Function';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t=lower(str)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">t =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">example of the function</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">upper( 'str') — возвращает строку символов str, в которой все символы нижнего регистра переводятся в верхний регистр, а все остальные символы остаются без изменений.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str='danger!';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t = upper(str)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">t =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">DANGER!</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strcat(sl,s2,s3,...) — выполняет горизонтальное объединение соответствующих рядов массивов символов s1, s2, s3 и т. д., причем пробелы в конце каждого ряда отбрасываются, и возвращает объединенную строку (ряд) результирующего массива символов, пробелы добавляются заново после анализа строк в полученном массиве. Все входные массивы должны иметь одинаковое число строк (в частном случае должны быть представлены в виде одной строки символов), но если один из входных аргументов — не массив символов, а строковый массив ячеек, то любой из других входных аргументов может быть скаляром или любым массивом той же размерности и того же размера. Если входной массив состоит только из символов, то выходной массив также будет являться массивом символов. Если любой из входных массивов является строковым массивом ячеек, то функция strcat возвращает строковый массив ячеек, сформированный из объединенных соответствующих элементов массивов si, s2, s3. при этом любой из элементов может быть скаляром и т. д.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; sl{1.2}='book'<SUB>:&nbsp; </SUB></font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; sl sl =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'Home' 'book'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; s2{ 1.1}= 'home<sup>'</sup>:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; s2{ 1,2}= 'reading';&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; s2 s2 =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'home' 'reading'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; t = strcat(sl.s2)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">t =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'Homehome' 'book read ing'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; sl=['wri ']&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">s1 =wri</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; s2=['ter']&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> s2 =ter</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t = strcat(sl.s2)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;t =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> writer</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strvcat(t1,t2,t3....) — выполняет вертикальное объединение строк tl, t2, t3,..
+    в массив символов S аналогично char(tl,t2.t3....). Пример:</font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; tl=['string'];</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t2=['concatenation']:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S = strvcat(tl.t2)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">S =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">string concatenation</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strcmp( 'str1' . 'str2') — возвращает логическую единицу, если две сравниваемые строки
+    str1 и str2 идентичны, и логический ноль в противном случае;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> TF = strcmp(S.T) — возвращает строковый массив ячеек TF, содержащий единицы для идентичных элементов массивов S и Т и нули для всех остальных, причем если один из массивов — не массив символов, а строковый массив ячеек, то перед сравнением из сравниваемых копий рядов массива символов удаляются пробелы в конце строк. Массивы S и Т должны иметь одинаковый размер, или один из них может быть скалярной ячейкой.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; strl='computer';&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; str2='computer';&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; k = strcmp(strl.str2)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> k =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S{l,l}='first';&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; S{1,2}='second<sup>'</sup>:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; S S =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'first''second'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; T{l.l}='third';&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; TF = strcmp(S.T)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> TF =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0    0</font>
+</P>
+<P align="left"><font size="3" face="Courier New">&raquo; T{1.1}='second';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; TF - strcmp(S.T)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> TF =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0    1</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strncmp( 'strT , 'str2' ,n) — возвращает логическую единицу, если две сравниваемые строки strl и str2 содержат
+    n первых идентичных символов, и логический ноль в противном случае. Аргументы strl и str2 могут быть также строковыми массивами ячеек.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> TF = strncmp(S,T,n) — возвращает строковый массив ячеек TF, содержащий единицы для идентичных (до
+    n символов) элементов массивов S и Т и нули для всех остальных.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; strl='computer'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">strl =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">computer</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; strl='computer for me'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">strl =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">computer for me</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; k = strncmp(strl.str2,3)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">k =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; k = strncmp(strl,str2.12)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">L =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0&nbsp;</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strmatch( 'str' ,STRS,
+    'exact') — возвращает только индексы строк символов массива STRS, точно совпадающих со строкой символов
+    str;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strjust(S) — возвращает выровненный вправо массив символов (т. е. перемещает пробелы в конце рядов массива символов, если они есть, в начало тех же рядов)
+    [<i>Функция strjusttS, 'left')  возвращает массив символов, где все строки выровнены влево, a
+    strjusttS. 'center') — где все строки выровнены по центру.—
+    Примеч.ред.</i>];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strmatch( 'str' ,STRS) — просматривает массив символов или строковый массив ячеек STRS по строкам, находит строки символов, начинающиеся с строки str, и возвращает соответствующие индексы строк;</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; STRS{1.1}='character':</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; STRS{1.2}='array';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; STRS{2.1}='character array':</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; STRS{2.2}='string':</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; STRS</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">STRS =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'character' 'array'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'character array' 'string'&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; i = strmatchCcharac'.STRS)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;i =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo;i = strmatch('character'.STRS.'exact')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> i =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strrep(strl,str2,str3) — заменяет все подстроки str2, найденные внутри строки символов
+    str1 на строку str3;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strrep(strl,str2,str3) — возвращает строковый массив ячеек, полученный в результате выполнения функции strrep над соответствующими рядами входных массивов символов или ячеек, если один из аргументов strl, str2 или str3 — строковый массив ячеек. В этом случае любой из аргументов может быть также скалярной ячейкой.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; strl='This is a good example for me.':</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str2='good';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str3='best';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str = strrep(strl.str2.str3)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">str =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">This is a best example for me.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strtokCstr' .delimiter) — возвращает часть текстовой строки str, ограниченную с ее конца разделителем del i miter. Символы-разделители в начале строки игнорируются. Вектор delimiter содержит возможные символы-разделители;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">strtokCstr') — использует символ-разделитель по умолчанию (&laquo;белое пространство&raquo;). Реальными символами-разделителями при этом являются символ табуляции (ASCII-код 9), символ возврата каретки (ASCII-код 13) и пробел (ASCII-код 32);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[token,rem]=strtok(...) — возвращает остаток rem исходной строки.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str='This is a good example for me.':&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; token = strtok(str)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> token =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">This</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; token = strtok(str.'f')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> token =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">This is a good example&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; [token,rem] = strtok(str)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> token =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> This&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> rem =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">is a good example for me.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a> Преобразование 
+  символов и строк</font></B> </P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> int2str(X) — округляет элементы массива X до целых чисел и возвращает массив символов, содержащих символьные представления округленных целых чисел. Аргумент X может быть скаляром, вектором или матрицей.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; X=magic(3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> X =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8 1          б</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3 5 7</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4 9 2&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Х=Х+0.05&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> X =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8.0500 1.0500 6.0500</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3.0500 5.0500 7.0500</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4.0500 9.0500 2.0500&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; str=int2str(X)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> str =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">8 1 б 357 492</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;mat2str(A) — преобразует матрицу А в единую строку; если элемент матрицы не скаляр, то он заменяется на [ ], при этом учитываются 15 знаков после десятичной точки;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">mat2str(A,n) — преобразует матрицу А в строку, используя точность до
+    n цифр после десятичной точки. Функция eval(str) осуществляет обратное преобразование.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; randС state');&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; A=rand(4.3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> А =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.9501 0.8913 0.8214</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.2311 0.7621 0.4447</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.6068 0.4565 0.6154</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.4860 0.0185 0.7919&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; str = mat2str(A,2)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">str =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">[0.95 0.89 0.82:0.23 0.76 0.44:0.61 0.46 0.62:0.49 0.019 0.79]</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> num2str(A) — выполняет преобразование массива А в строку символов str с точностью до четырех десятичных разрядов и экспоненциальным представлением, если требуется. Обычно используется при выводе графиков совместно с
+    title, xlabel. ylabel или text;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">num2str(A,precision) — выполняет преобразование массива А в строку символов str с максимальной точностью, определенной аргументом precision. Аргумент precision определяет число разрядов в выходной строке;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">num2str(A,format) — выполняет преобразование массива чисел А, используя заданный формат format. По умолчанию принимается формат, который использует четыре разряда после десятичной точки для чисел с фиксированной или плавающей точкой.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str = num2str(pi.7)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">str =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3.141593</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; randCstate'):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; A=rand(3,5)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">A =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.9501 0.4860 0.4565 0.4447 0.9218</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.2311 0.8913 0.0185 0.6154 0.7382</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.6068 0.7621 0.8214 0.7919 0.1763&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; str = num2str(A,l)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> str =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1 0.5       0.5       0.4       0.9 0.20.9       0.02     0.6       0.7 0.60.8      0.8      0.8      0.2</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> str2double( 'str') — выполняет преобразование численной строки s, которая представлена в ASCII-символах, в число с двойной точностью. При этом + и -могут быть только в начале строки.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х = str2double('5.45+2.67Г)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 5.4500 + 2.67001</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Обратите особое внимание на последнюю функцию, поскольку именно она в MATLAB 6 обычно обеспечивает переход от символьного представления математических выражений к их вычисленным численным значениям;</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> str2num(s) — выполняет преобразование численного массива символов — матрицы или строки s, который представлен в ASCII-символах, в матрицу (массив размерности 2).</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х = str2num('5.45+2.67')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 8.1200</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Обратите особое внимание, что при этом можно вводить знаки + и - в любом месте строки. Предыдущая функция выдала бы NaN. Но фирма MathWorks рекомендует использовать str2num с осторожностью и по возможности заменять ее на str2double.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="5"></a> Функции 
+  преобразования систем счисления</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Некоторые строковые функции служат для преобразования систем счисления. Ниже представлен набор этих функций.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> bin2dec( 'binarystr') — возвращает десятичное число, эквивалентное строке <I>двоичных </I>символов
+    binarystr.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; bin2dec('101')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dec2bin(d) — возвращает строку двоичных символов (0 и 1), эквивалентную десятичному числу d. Аргумент d должен быть неотрицательным целым числом, меньшим чем 2<SUP>52</SUP>;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">dec2bin(d.n) — возвращает строку двоичных символов, содержащую по меньшей мере
+    n бит.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str = dec2bin(12)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">str =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1100</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">dec2base(d.n) — возвращает строку символов, представляющих десятичное число d как число в системе счисления с основанием
+    n.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str = dec2base(1234.16)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">str =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4D2</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dec2hex(d) — возвращает шестнадцатеричную строку символов, эквивалентную числу d. Аргумент d должен быть неотрицательным целым числом, меньшим чем 2<SUP>52</SUP>;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> str = dec2hex(d.n) — возвращает шестнадцатеричную строку, содержащую по меньшей мере
+    n цифр.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; str = dec2hex(1234)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">str =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 4D2</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">base2dec(S, В) — преобразует строку символов S, представляющих число в системе счисления по основанию В, в символьное представление десятичного числа.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; d = base2dec('4D2',16)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;d =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1234;<BR>
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">hex2dec('hex_value') — возвращает число d, представленное строкой шестнадцатеричных символов hex_value. Если аргумент hex_value является массивоу символов, то каждая строка этого массива интерпретируется как шестнадца-теричное представление числа.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; d = hex2dec('4D2')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> d =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1234</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;hex2num( 'hex_value') — возвращает десятичное число f с удвоенной точностью, эквивалентное шестнадцатеричному числу, находящемуся в строке символов
+    </font><font face="Times New Roman" size="3">hex_va1ue.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; f = hex2num('4831fb52al8')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">f =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">6.1189е+039</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="6"></a> Вычисление 
+  строковых выражений</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Строковые выражения обычно не вычисляются, так что, к примеру, вывод строки ' 2+3' просто повторяет строку:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; '2+3'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 2+3</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Однако с помощью функции eval ('строковое выражение'.) строка, представляющая математическое выражение, может быть вычислена:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; eval C2+3')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; eval('2*sin(l)')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.6829</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Ниже использование eval возвращает 12 матриц, представляющих магические квадраты чисел от 1 до 12:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">for n = 1:12<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">eval(['IT num2str(n)  ' = magic(n)'])&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> end</font><font face="Times New Roman" size="3"><BR>
+</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">eval (SI,S2) — в случае ошибки в вычислении выражения
+s1 оценивает выражение s2.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">T=evalc (S) выполняет то же, что и функция eval(s), но то, что выводится в командное окно, записывается также и в массив Т;</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Еще одна функция — feval (@имя_функции,х1,х2,...) — имеет важное достоинство — она позволяет передавать в вычисляемую функцию список ее аргументов. При этом вычисляемая функция задается только своим именем. Это поясняют следующие примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; feval(@prod.[l 23])&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 6</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Существовавшая в прежних версиях MATLAB форма feval (' иня_функции' ,xl. х2,...) по-прежнему работает, но применять ее не рекомендуется.&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; feval(@sum.[l 2 3: 4 5 6].2)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">6</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">15</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Рекомендуется применять функцию feval при вычислении значений функций, записанных в виде строки, вместо eval. m-файлы-функции, содержащие функцию feval, корректно компилируются компилятором системы
+MATLAB.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для выполнения вычислений, представленных строкой expression, в заданной рабочей области ws служит функция evalin(ws.expression). Переменная ws может иметь два значения: 'base' — для основной рабочей области и 'caller' — для рабочей области вызванной функции. В приведенном ниже примере в рабочей области записаны переменные а и b и вычисляется символьное значение 'а+b':</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; а=2:b=3:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; evalin('base','a+b')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 5</font><font face="Times New Roman" size="3">Функция может также записываться в виде [а1.а2,аЗ,...] = eval in(ws, expression), где a1, а2,
+а3,... — переменные, возвращающие результаты вычислений. А функция evalin(ws,expression, catch_expr) позволяет проверить правильность выражения expression в рабочей области и сформировать сообщение, заданное в строке</font>&nbsp;
+<font face="Times New Roman" size="3">catch_expr.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Например (в продолжение последнего примера):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; h='Error in expression':&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; evalin('base'.  'a+b'.  'h');&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 5</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; evalinCbase'.  'a+c',  'h'); h = Error in expression</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Здесь выражение а+с ошибочно (переменная с не определена), поэтому выдана переменная h с ее значением в виде строки.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="7"></a> Что 
+  нового мы узнали?</font></B><font face="Times New Roman" size="3"><BR>
+  </font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Использовать функции строковых данных.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Выполнять операции над строками.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Преобразовывать символы в строки.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Использовать функции преобразования систем счисления.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Вычислять строковые выражения.</font></li>
+</ul>
+</BODY>
+</HTML>
+

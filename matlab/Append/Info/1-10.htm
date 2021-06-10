@@ -1,0 +1,1138 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+      <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 9. Специальные математические функции</a></font></b> </li>
+    <ul>
+      <li><font face="Times New Roman CYR" size=3><a href="#2">Функции Эйри </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#3">Функции Бесселя </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#4">Бета-функция и ее варианты </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#5">Эллиптические функции и интегралы</a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#6">Функции ошибки </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#7">Интегральная показательная функция </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#8">Гамма-функция и ее варианты </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#9">Ортогональные полиномы Лежандра </a></font> </li>
+	 <li><font face="Times New Roman CYR" size=3><a href="#10">Что нового мы узнали? </a></font> </li>
+      
+</ul></ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №9.</font></b></font> </P>
+<P align="left"><font size="5"><font face="Times New Roman">Специальные</font> 
+  <font face="Times New Roman">математические</font> <font face="Times New Roman">функции</font></font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Функции Эйри</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">Функции Бесселя</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> Бета-функция и ее варианты</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Эллиптические функции и интегралы</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Функции ошибки</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Интегральная показательная функция</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Гамма-функция и ее варианты</font></li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman">    Ортогональные полиномы Лежандра<BR>
+    </font></li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Специальные математические функции являются решениями дифференциальных уравнений специального вида или обозначениями некоторых видов интегралов. Довольно полный обзор специальных функций дается в книгах [55-58], так что ниже мы ограничимся только указанием функций системы MATLAB, реализующих их вычисление. Набор специальных математических функций в системе MATLAB настолько представителен, что позволяет решать практически все задачи, связанные с применением таких функций. Если и обнаруживаются недостающие специальные функции, то пользователь может сам задать их вычисления. Специфика специальных функций в MATLAB та же, что и элементарных, — их аргументами могут быть как одиночные численные значения, так и массивы чисел. В последнем случае функции возвращают массив тех же размерности и размера с преобразованием каждого элемента в соответствии с действием функции. В версии MATLAB 6 вы теперь можете получить справку с записью формул в стандартной математической форме, набрав в командной строке doc function, где function — имя специальной функции.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Функции 
+  Эйри</font></B> </P>
+<P align="left"> <font size="3" face="Times New Roman">Функция Эйри формирует 
+  пару линейно независимых решений линейного дифференциального уравнения вида</font></P>
+<P align="left"> <font size="3" face="Times New Roman"><img src="1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.jpg" width="117" height="65"></font></P>
+<P align="left"> <font size="3" face="Times New Roman">Связь между функцией Эйри 
+  и модифицированной функцией Бесселя выражается следующей формулой:</font></P>
+<P align="left"><font size="3" face="Times New Roman"><img src="2.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/2.jpg" width="150" height="80"><BR>
+  </font> </P>
+ 
+<P align="left"> <font size="3" face="Times New Roman">где </font></P>
+<P align="left"><img src="3.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/3.jpg" width="67" height="63"> </P>
+<ul>
+  <li> <font size="3" face="Times New Roman"> airy(Z) — возвращает функцию Эйри, 
+    AKZ), для каждого элемента комплексного массива Z;
+    </font> </li>
+  <li> <font size="3" face="Times New Roman">airy(k.Z) — возвращает различные 
+    варианты результата в зависимости от значения k:
+    </font> 
+    <ul>
+      <li><font size="3" face="Times New Roman">k=0 — тот же результат, что и 
+        airy(Z);
+        </font> </li>
+      <li><font size="3" face="Times New Roman">k=l — производную от А1 (Z);
+        </font> </li>
+      <li><font size="3" face="Times New Roman"> k=2 — функцию Эйри второго рода, 
+        61 (Z) :
+        </font> </li>
+      <li><font size="3" face="Times New Roman"> k=3 — производную от B1(Z). Пример:
+        </font> </li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">D=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.0000     3.0000 + 2.00001
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S=airy(D)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> S =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.1353 -0.0097 + 0.00551
+</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="3"><a name="3"></a>  </FONT><font face="Times New Roman" size="4">Функции 
+  Бесселя</font></B> </P>
+<P align="left"> <font size="3" face="Times New Roman">Линейное дифференциальное 
+  уравнение второго порядка вида </font></P>
+<P align="left"><img src="4.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/4.jpg" width="206" height="66"> </P>
+ <P align="left">
+<font size="3" face="Times New Roman">где v — неотрицательная константа, называется <I>уравнением Бесселя, </I>а его решения известны как <I>функции Бесселя. </I>Функции J<SUB>v</SUB>(z) и J_<SUB>v</SUB>(z) формируют фундаментальное множество решений уравнения Бесселя для неотрицательных значений п (это так называемые <I>функции Бесселя первого рода):</I></font>
+<font size="3" face="Times New Roman">где для гамма-функции используется следующее представление:</font>
+</P>
+ <P align="left">
+<font size="3" face="Times New Roman">Второе решение уравнения Бесселя, линейно независимое от J<SUB>v</SUB>(z), определяется как</font>
+<font size="3" face="Times New Roman">и задает <I>функции Бесселя второго рода </I>Y<SUB>v</SUB>(z).</font>
+</P>
+ 
+<P align="left"> <I><font size="3" face="Times New Roman">Функции Бесселя третьего 
+  рода </font> </I><font size="3" face="Times New Roman">(функции Ханкеля) и функция 
+  Бесселя первого</font> <font size="3" face="Times New Roman">и второго рода 
+  связаны следующим выражением:</font> </P>
+<P align="left"><img src="6.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/6.jpg" width="150" height="72"></P>
+<P align="left"><img src="7.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.jpg" width="235" height="74"></P>
+<ul>
+  <li> 
+    <p align="left"> <font size="3" face="Times New Roman"> bessel j(nu,Z) — возвращает 
+      функцию Бесселя первого рода, J<SUB>v</SUB>(z), для каждого элемента комплексного 
+      массива Z. Порядок ш может не быть целым, однако должен быть вещественным. 
+      Аргумент Z может быть комплексным. Результат вещественный, если Z положительно. 
+      Если nu и Z — массивы одинакового размера, то результат имеет тот же размер. 
+      Если любая входная величина — скаляр, результат расширяется до размера другой 
+      входной величины. Если одна входная величина — вектор-строка, а другая — 
+      вектор-столбец, результат представляет собой двумерный массив значений функции. 
+      </font> 
+  </li>
+  <li> 
+    <p align="left"> <font size="3" face="Times New Roman"> bessely(nu.Z) — возвращает 
+      функцию Бесселя второго рода, Y<SUB>v</SUB>(z). </font> 
+  </li>
+  <li> 
+    <p align="left"> <font size="3" face="Times New Roman">&nbsp; [J.ierr] = besse1j(nu,Z) 
+      и [Y.ierr] = bessely(nu.Z) функции всегда возвращают массив с флагами ошибок: 
+      </font> 
+    <ul>
+      <li> 
+        <p align="left"> <font size="3" face="Times New Roman">&nbsp;ierr = 1 
+          — запрещенные аргументы; </font> 
+      </li>
+      <li> 
+        <p align="left"> <font size="3" face="Times New Roman"> ierr = 2 — переполнение 
+          (возвращает Inf); </font> 
+      </li>
+      <li> 
+        <p align="left"> <font size="3" face="Times New Roman">&nbsp;ierr = 3 
+          — некоторая потеря точности при приведении аргумента; </font> 
+      </li>
+      <li> 
+        <p align="left"> <font size="3" face="Times New Roman">ierr = 4 — недопустимая 
+          потеря точности: Z или nu слишком велики; </font> 
+      </li>
+      <li> 
+        <p align="left"> <font size="3" face="Times New Roman">ierr = 5 — нет 
+          сходимости (возвращает NaN). </font> 
+      </li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Примеры:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; S=[2-51.4.7];T=[8.l.3]:g=besselj(T.S)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">g=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.1114-0.05081        -0.0660 -0.1676&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; S-[2-5i,4.7];T=[8.1.3J;[g.ierr]=bessely(T.S)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">g=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.1871 - 0.03241         0.3979 0.2681&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ierr =
+</font>
+</P>
+<p align="left">
+<font size="3" face="Courier New">0 0 0
+</font>
+</p>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">&nbsp;besselh(nu,К,Z) — для К=1 или 2 возвращает функцию Бесселя третьего рода (функцию Ханкеля) для каждого элемента комплексного массива Z. Если nu и Z — массивы одинакового размера, то результат имеет тот же размер. Если одна из входных величин — скаляр, результат формируется по размеру другой входной величины. Если одна входная величина — вектор-строка, а другая — вектор-столбец, результат представляет собой двумерный массив значений функции.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> bessel h(nu.Z) — использует по умолчанию К = 1.&nbsp;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> besselh(nu.l.Z.l) — масштабирует H<SUP>(1)</SUP><SUB>v</SUB>(z) с коэффициентом exp(-i*z).&nbsp;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> besse1h(nu,2,Z.l) — масштабирует H<SUP>(2)</SUP><SUB>v</SUB>(z) с коэффициентом exp(+i*z).&nbsp;
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> [H.ierr] = besselhC...) — всегда возвращает массив с флагами ошибок:
+</font>
+    <ul>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">   ierr = 1 — запрещенные аргументы;
+</font>
+      </li>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">&nbsp;ierr = 2 — переполнение (возвращает Inf);
+</font>
+      </li>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">&nbsp;ierr = 3 — некоторая потеря точности при приведении аргумента;
+</font>
+      </li>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">ierr = 4 — недопустимая потеря точности: Z или nu слишком велики;
+</font>
+      </li>
+      <li>
+        <p align="left">
+<font size="3" face="Times New Roman">ierr = 5 — нет сходимости (возвращает NaN).
+</font>
+      </li>
+    </ul>
+  </li>
+</ul>
+<P align="left">&nbsp; </P>
+<P align="left"><font size="3" face="Courier New">&raquo; D=[1.3+2i];F=[3.2]:[K.ierr]=besselk(F,D)&nbsp; 
+  </font> </P>
+<P align="left">
+<font size="3" face="Courier New"> К =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">7.1013 -0.0401 - 0.02851
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;lerr =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0 0
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman">Естественно, что возможно 
+  построение графиков специальных функций. </font></P>
+<P align="left"><img src="4.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/4.jpg" width="206" height="66"></P>
+<P align="left"><img src="293(2).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/293(2).jpg" width="234" height="94"></P>
+<P align="left"><img src="293(3).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/293(3).jpg" width="198" height="61"></P>
+<P align="left"><font size="3" face="Times New Roman">В качестве примера рассмотрим 
+  m-файл-сценарий, приведенный ниже: </font> </P>
+<P align="left">
+<font size="3" face="Courier New">х=0:0.1:10;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">y0=besselj(0.x);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">y1=besselj(l.x):
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">y2=besselj(2.x);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">y3=besselj(3.x);
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">plot(x.y0.'-m'.x.y1.'--r',x.y2.'-.k',x.y3.':b')
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">legend('besselj(0.x)'. 'besselj(l.x)' ,'besse1j(2,x)'. <SUP>(</SUP>besselj(3,x)');
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Рис. 9.1 иллюстрирует построение четырех функций Бесселя bessel j(n,x) для п-0, 1, 2 и 3 с легендой, облегчающей идентификацию каждой кривой рисунка.
+</font>
+</P>
+<P align="left"><img src="9.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/9.1.jpg" width="470" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 9.1. </i></font> 
+  </B><i><font size="3" face="Times New Roman">Графики четырех функций Бесселя 
+  besselj(n,x)</font></i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Эти графики дают наглядное представление о поведении функций Бесселя, широко используемых при анализе поведения систем, описываемых линейными дифференциальными уравнениями второго порядка.&nbsp;
+</font>
+</P>
+<P align="left"> <B><font size="3" face="Times New Roman"><a name="4"></a> </font><font face="Times New Roman" size="4">
+Бета-функция 
+  и ее варианты</font></B> </P>
+<P align="left"> <font size="3" face="Times New Roman">Бета-функция определяется 
+  как </font></P>
+<P align="left"><img src="294(1).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/294(1).jpg" width="234" height="72"> </P>
+<p align="left"> <font size="3" face="Times New Roman"> где Г (z) — гамма-функция. 
+  Неполная бета-функция определяется по формуле </font></p>
+<p align="left"><img src="295(1).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/295(1).jpg" width="268" height="68"> </p>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> beta(Z.W) — возвращает бета-функцию для соответствующих элементов комплексных массивов Z и W. Массивы должны быть одинакового размера (или одна из величин может быть скаляром).
+</font>
+  </li>
+  <li>
+    <p align="left"><font size="3" face="Times New Roman"> beta i nc ( X , Z , W ) — возвращает неполную бета-функцию. Элементы X должны быть в закрытом интервале [0, 1].
+</font>
+  </li>
+  <li>
+    <p align="left"> <font size="3" face="Times New Roman"> beta 1 п ( Z , W ) 
+      — возвращает натуральный логарифм бета-функции log ( beta ( Z , W ) ) , 
+      без вычисления beta(Z.W). Так как сама бета-функция может принимать очень 
+      большие или очень малые значения, функция betaln(Z.W) иногда более полезна, 
+      так как позволяет избежать переполнения. </font> 
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; format rat;beta((l:10)<SUP>4</SUP>,4)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/4
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/20
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/60</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/140</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/280
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/504
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/840
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/1320
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/1980
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1/2860
+</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="3"><a name="5"></a>  </FONT><font face="Times New Roman" size="4">Эллиптические 
+  функции и интегралы</font></B> </P>
+<P align="left"> <font size="3" face="Times New Roman">Эллиптические функции Якоби 
+  определяются интегралом</font> <font size="3" face="Times New Roman">и соотношениями 
+  </font></P>
+<P align="left"><img src="295(2).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/295(2).jpg" width="175" height="113"> </P>
+<P align="left">
+<font size="3" face="Courier New">сn(u) = cos ф,
+</font>
+</P>
+<P align="left">
+<font face="Courier New"><font size="3">cn(u)=cos</font><font size="3">ф,
+</font>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">dn(u) = (1-sin<SUP>2</SUP>ф)<SUP>1/2</SUP>,&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">аm(u) = ф.<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">В некоторых случаях при определении эллиптических функций используются модули k вместо параметра гл. Они связаны выражением <I>k   = т = </I>sin  a .
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">[SN.CN.DN] = ellipj(U.M) — возвращает эллиптические функции Якоби SN, CN и . DN, вычисленные для соответствующих элементов — аргумента U и параметра М. Входные величины U и М должны иметь один и тот же размер (или любая из них может быть скаляром).
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">[SN.CN.DN] = ellipj(U,M,to1) — возвращает эллиптическую функцию Якоби, вычисленную с точностью tol . Значение tol по умолчанию — eps; его можно увеличить, тогда результат будет вычислен быстрее, но с меньшей точностью. Пример:
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [SN.CN.DN]=ellipj([23.1].[0.5.0.2])
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="182" HEIGHT="94">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="102" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="80" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="102" HEIGHT="15">
+<DIV WIDTH="102" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">SN =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="80" HEIGHT="15">
+<DIV WIDTH="80" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="102" HEIGHT="16">
+<DIV WIDTH="102" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">474/719<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="80" HEIGHT="16">
+<DIV WIDTH="80" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1224/1481<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="102" HEIGHT="15">
+<DIV WIDTH="102" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">CN =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="80" HEIGHT="15">
+<DIV WIDTH="80" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="102" HEIGHT="16">
+<DIV WIDTH="102" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1270/1689<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="80" HEIGHT="16">
+<DIV WIDTH="80" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1457/2588<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="102" HEIGHT="15">
+<DIV WIDTH="102" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">DN =<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="80" HEIGHT="15">
+<DIV WIDTH="80" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="102" HEIGHT="16">
+<DIV WIDTH="102" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">399/451<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="80" HEIGHT="16">
+<DIV WIDTH="80" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">538/579<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="102" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="80" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<I><font size="3" face="Times New Roman">Полные эллиптические интегралы первого и второго рода
+</font> </I><font size="3" face="Times New Roman">определяются следующим образом:
+</font>
+</P>
+<P align="left"><img src="256(1).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/256(1).jpg" width="239" height="96"></P>
+<P align="left"><img src="296(2).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/296(2).jpg" width="256" height="103"> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">ellipke(M) — возвращает полный эллиптический интеграл первого рода для элементов М.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">[К.Е] = ellipke(M) — возвращает полные эллиптические интегралы первого и второго рода.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">[К.Е] = ellipke(M.tol) — возвращает эллиптические функции Якоби, вычисленные с точностью tol. Значение по умолчанию — eps; его можно увеличить, тогда результат будет вычислен быстрее, но с меньшей точностью. Пример:
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [f.e]=ellipke([0.2.0.8])
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;f =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">707/426     1018/451
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;е =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">679/456    515/437
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Для вычисления этих функций используется итерационный метод арифметико-геометрического среднего (см. детали в Reference Book по системе
+MATLAB).
+</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="3"><a name="6"></a>  </FONT><font face="Times New Roman" size="4">Функции 
+  ошибки</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Функция ошибки определяется следующим образом:</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman"><img src="296(3).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/296(3).jpg" width="171" height="64"><BR>
+  </font> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">erf(X) — возвращает значение функции ошибки для каждого элемента вещественного массива
+X. Дополнительная (остаточная) функция ошибки задается соотношением
+</font>
+  </li>
+</ul>
+<P align="left"> <img src="297(2).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/297(2).jpg" width="167" height="64"></P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">erfc(X) — возвращает значение остаточной функции ошибки.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">erfcx(X) — возвращает значение масштабированной остаточной функции ошибки. Эта функция
+определяется так:
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">егfсх(х) = <I>е<SUP>х</SUP> </I>erfc(x).
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">erfinv(Y) — возвращает значение обратной функции ошибки для каждого элемента массива Y. Элементы массива Y должны лежать в области -1&lt;Y&lt;1. Примеры:
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Y=[0.2,-0.3];a=erf(Y)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;а =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.2227 -0.3286
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; b=erfc(Y)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> b =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.7773 1.3286
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; c=erfcx(Y)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> с =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.8090 1.4537<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; d=erfinv(Y)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> d =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.1791 -0.2725
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">При вычислении данных функций используется аппроксимация по Чебышеву (см. детали алгоритма в Reference Book no
+MATLAB).
+</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="3"><a name="7"></a>  </FONT><font face="Times New Roman" size="4">Интегральная 
+  показательная функция</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Интегральная показательная функция определяется следующим образом:
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman"><img src="297(3).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/297(3).jpg" width="134" height="85"><BR>
+  </font> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">expint(X) — возвращает интегральную показательную функцию для каждого
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">элемента X. Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; d=expint([2,3+7i]}&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> d =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.0489 -0.0013 -0.00601
+</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Для вычисления этой функции используется ее разложение в ряд.
+</font>
+</P>
+<P align="left"> <B><font size="3" face="Times New Roman"><a name="8"></a> </font><font face="Times New Roman" size="4">
+Гамма-функция 
+  и ее варианты</font></B> </P>
+<P align="left"> <font size="3" face="Times New Roman">Гамма-функция определяется 
+  выражением </font></P>
+<P align="left"><img src="298(1).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/298(1).jpg" width="192" height="89"></P>
+<p> <font size="3" face="Times New Roman">Неполная гамма-функция определяется 
+  как </font></p>
+<p><img src="298(2).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/298(2).jpg" width="208" height="72"></p>
+<ul>
+  <li> 
+    <p align="left"> <font size="3" face="Times New Roman">gamma (А) — возвращает 
+      гамма-функцию элементов А. Аргумент А должен быть вещественным. </font> 
+  </li>
+  <li> 
+    <p align="left"> <font size="3" face="Times New Roman"> gamma iпс(X,А) — возвращает 
+      неполную гамма-функцию соответствующих элементов X и А. Аргументы X и А 
+      должны быть вещественными и иметь одинаковый размер (или любой из них может 
+      быть скалярным).<BR>
+      gammaln(A) —возвращает логарифмическую гамма-функцию, gammaln(A) = 1og(gamma(A)). 
+      Команда gammaln позволяет избежать переполнения, которое может происходить, 
+      если вычислять логарифмическую гамма-функцию непосредственно, используя 
+      1og(gamma(A)). </font> 
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Примеры:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; f=[5.3];d=gamma(f)
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;d =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">24 2 &raquo; h=gammaln(f)&nbsp;
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> h =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3.1781 0.6931</font>
+</P>
+<P align="left">
+<font size="3" face="Times New Roman">Гамма-функция имеет довольно сложный&raquo;, график, заслуживающий построения (рис. 9.2).
+</font>
+</P>
+<P align="left"><img src="9.2.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/9.2.jpg" width="484" height="496"> </P>
+<P align="left"><B><font size="3" face="Times New Roman"><i>Рис. 9.2. </i></font> 
+  </B><i><font size="3" face="Times New Roman">График гамма-функции</font></i> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Это можно осуществить с помощью следующего файла-сценария:
+</font>
+</P>
+<P align="left"> <font size="3" face="Courier New, Courier, mono">%Ganrna- function 
+  graphicclear syms x </font> </P>
+<P align="left"> <font size="3" face="Courier New, Courier, mono">ezplot(gamma(x).[-4 
+  4]) grid on </font> </P>
+<P align="left">
+<font size="3" face="Times New Roman">Гамма-функция вычисляется по известному алгоритму W. J. Kody (1989 г.). Для вычисления неполной гамма-функции используются рекуррентные формулы.
+</font>
+</P>
+<P align="left"> <B> <FONT face="Times New Roman" size="3"><a name="9"></a>  </FONT><font face="Times New Roman" size="4">Ортогональные 
+  полиномы Лежандра</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman"><I>Функция Лежандра </I>определяется следующим образом:
+<BR>
+</font>
+</P>
+<P align="left"> <font size="3" face="Times New Roman"><img src="299(1).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/299(1).jpg" width="204" height="95"><BR>
+  </font> </P>
+<P align="left"> <font size="3" face="Times New Roman">где Рn(*) — <I>полином 
+  Лежандра </I>степени <I>п, </I>рассчитываемый как </font></P>
+<P align="left"><img src="299(2).jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/299(2).jpg" width="184" height="81"> </P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">legendre(n.X) —возвращает функции Лежандра степени п и порядков m = 0,1..... n, вычисленные для элементов X. Аргумент п должен быть скалярным целым числом, не превосходящим 256, а X должен содержать действительные значения в области -UxJl. Возвращаемый массив Р имеет большую размерность, чем X, и каждый элемент P(m+l,dl,d2...) содержит связанную функцию Лежандра степени п и порядка т, вычисленную в точках
+X(dl,d2...).
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman">1egendre(n,X, 'sch') — возвращает <I>квазинормализованные </I>по Шмидту функции Лежандра.
+</font>
+  </li>
+</ul>
+<P align="left">
+<font size="3" face="Times New Roman">Пример:
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; g=rand(3.2);legendre(3,g)
+</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="239" HEIGHT="64">
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="69" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="16">
+<DIV WIDTH="76" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-0.4469<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-0.0277<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="69" HEIGHT="16">
+<DIV WIDTH="69" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0.1534<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="16">
+<DIV WIDTH="76" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-0.0558<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1.4972<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="69" HEIGHT="16">
+<DIV WIDTH="69" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-2.0306<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="16">
+<DIV WIDTH="76" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">5.4204<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">0.2775<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="69" HEIGHT="16">
+<DIV WIDTH="69" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">4.0079<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="16">
+<DIV WIDTH="76" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-10.5653<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="16">
+<DIV WIDTH="94" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-14.9923<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="69" HEIGHT="16">
+<DIV WIDTH="69" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">-2.7829<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="94" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="69" HEIGHT="0">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Times New Roman">a</font><font size="3" face="Courier New">ns(:.:.2) =
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-0.4472-0.34040.0538
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.0150 -1.0567            -1.9562
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">5.3514     5.7350     4.4289
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-10.7782    -7.3449     -3.4148
+</font>
+</P>
+<P align="left"> <B><font size="3" face="Times New Roman"><a name="10"></a>  </font><font face="Times New Roman" size="4">Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font size="3" face="Times New Roman">В этом уроке мы научились:
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Вычислять функции Эйри.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Вычислять функции Бесселя разного рода.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Вычислять бета-функцию и ее варианты.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Использовать эллиптические функции и интегралы.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Вычислять функции ошибки.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Вычислять интегральные показательные функции.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Вычислять гамма-функцию и ее варианты.
+</font>
+  </li>
+  <li>
+    <p align="left">
+<font size="3" face="Times New Roman"> Использовать ортогональные полиномы Лежандра.
+</font>
+  </li>
+</ul>
+</BODY>
+</HTML>
+

@@ -1,0 +1,1272 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Предупреждения</title>
+</head>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+  <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 1. Знакомство 
+    с матричной лабораторией MATLAB</a></font></b> </li>
+  <ul>
+    <li><font face="Times New Roman CYR" size=3><a href="#2">История появления 
+      системы MATLAB</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#3">Возможности систем 
+      MATLAB </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#4">Возможности прежних 
+          версий MATLAB 4.x </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#5">Возможности версий 
+          MATLAB 5.x </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#6">Возможности новейшей 
+          версии MATLAB 6 </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#7">Интеграция с другими 
+      программными системами </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#8">Ориентация на матричные 
+      операции </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#9">Расширяемость системы 
+      </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#10">Мощные средства 
+      программирования </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#11">Визуализация и графические 
+      средства </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#12">Техническая документация 
+      по системе</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#13">MATLAB в Интернете</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#14">Главная страница 
+          фирмы MathWorks </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#15">Регистрация 
+          через Интернет</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#16">Поддержка системы 
+          MATLAB фирмой MathWorks</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#17">MATLAB в образовании 
+          </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#18">Обновление системы 
+          MATLAB через Интернет </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#19">Доступ к FTP-серверу 
+          фирмы MathWorks</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#20">Данные о системных 
+          ресурсах и пакетах расширения </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#21">Что нового мы узнали? 
+      </a></font> </li>
+  </ul>
+</ul>
+
+
+<A NAME="1"></A>
+
+<p align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №1.</font></b></font></p>
+<p align="left"><font size="5" face="Times New Roman, Times, serif">Знакомство 
+  с матричной лабораторией MATLAB</font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif">История появления системы 
+    MATLAB&nbsp;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">&nbsp;Возможности систем MATLAB</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Интеграция с другими 
+    программными системами</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Ориентация на матричные 
+    операции</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Расширяемость системы</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Мощные средства программирования</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Визуализация и графические 
+    средства</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Техническая документация 
+    по системе</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> MATLAB в Интернете</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Данные о системных 
+    ресурсах и пакетах расширения<br>
+    </font></li>
+</ul>
+<p><font size="4" face="Times New Roman, Times, serif"><b><a name="2"></a> История 
+  появления системы MATLAB</b></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Современная компьютерная математика предлагает целый набор интегрированных программных 
+  систем и пакетов программ для автоматизации математических расчетов: Eureka, 
+  Gauss, TK Solver!, Derive, Mathcad, Mathematica, Maple V и др. Возникает вопрос: 
+  «А какое место занимает среди них система MATLAB?»<br>
+  MATLAB — одна из старейших, тщательно проработанных и проверенных временем систем 
+  автоматизации математических расчетов, построенная на расширенном представлении 
+  и применении матричных операций. Это нашло отражение в названии системы — MATrix 
+  LABoratory — матричная лаборатория. Однако синтаксис языка программирования 
+  системы продуман настолько тщательно, что эта ориентация почти не ощущается 
+  теми пользователями, которых не интересуют непосредственно матричные вычисления.<br>
+  Матрицы широко применяются в сложных математических расчетах, например при решении 
+  задач линейной алгебры и математического моделирования статических и динамических 
+  систем и объектов. Они являются основой автоматического составления и решения 
+  уравнений состояния динамических объектов и систем. Примером может служить расширение 
+  MATLAB — Simulink. Это существенно повышает интерес к системе MATLAB, вобравшей 
+  в себя лучшие достижения в области быстрого решения матричных задач.<br>
+  . Однако в настоящее время MATLAB далеко вышла за пределы специализированной 
+  матричной системы и стала одной из наиболее мощных универсальных интегрированных 
+  СКМ. Слово «интегрированная» указывает на то, что в этой системе объединены 
+  удобная оболочка, редактор выражений и текстовых комментариев, вычислитель и 
+  графический программный процессор. В новой версии используются такие мощные 
+  типы данных, как многомерные массивы, массивы ячеек, массивы структур, массивы 
+  Java и разреженные матрицы, что открывает возможности применения системы при 
+  создании и отладке новых алгоритмов матричных и основанных на них параллельных 
+  вычислений и крупных баз данных.<br>
+  В целом MATLAB — это уникальная коллекция реализаций современных численных методов 
+  компьютерной математики, созданных за последние три десятка лет. Она вобрала 
+  в себя и опыт, правила и методы математических вычислений, накопленные за тысячи 
+  лет развития математики. Это сочетается с мощными средствами графической визуализации 
+  и даже анимационной графики. Систему с прилагаемой к ней обширной документацией 
+  вполне можно рассматривать как фундаментальный многотомный электронный справочник 
+  по математическому обеспечению ЭВМ — от массовых персональных компьютеров до 
+  супер-ЭВМ.<br>
+  Увы, пока представленный полностью лишь на английском и частично на японском 
+  языках!<br>
+  Система MATLAB была разработана Молером (С. В. Moler) и с конца 70-х гг. широко 
+  использовалась на больших ЭВМ. В начале 80-х гг. Джон Литл (John Little) из 
+  фирмы MathWorks, Inc. разработал версии системы PC MATLAB для компьютеров класса 
+  IBM PC, VAX и Macintosh. В дальнейшем были созданы версии для рабочих станций 
+  Sun, компьютеров с операционной системой UNIX и многих других типов больших 
+  и малых ЭВМ. Сейчас свыше десятка популярных компьютерных платформ могут работать 
+  с системой MATLAB. К расширению системы были привлечены крупнейшие научные школы 
+  мира в области математики, программирования и естествознания. И вот теперь появилась 
+  новейшая версия этой системы — MATLAB 6. Одной из основных задач системы было 
+  предоставление пользователям мощного языка программирования, ориентированного 
+  на математические расчеты и способного превзойти возможности традиционных языков 
+  программирования, которые многие годы использовались для реализации численных 
+  методов. При этом особое внимание уделялось как повышению скорости вычислений, 
+  так и- адаптации системы к решению самых разнообразных задач пользователей.<br>
+  Возможности MATLAB весьма обширны, а по скорости выполнения задач система нередко 
+  превосходит своих конкурентов. Она применима для расчетов практически в любой 
+  области науки и техники. Например, очень широко используется при математическом 
+  моделировании механических устройств и систем, в частности в динамике, гидродинамике, 
+  аэродинамике, акустике, энергетике и т. д. Этому способствует не только расширенный 
+  набор матричных и иных операций и функций, но и наличие пакета расширения (toolbox) 
+  Simulink, специально предназначенного для решения задач блочного моделирования 
+  динамических систем и устройств, а также десятков других пакетов расширений.<br>
+  В обширном и постоянно пополняемом комплексе команд, функций и прикладных программ 
+  (пакетов расширения, пакетов инструментов, (toolbox)) [Пакет инструментов, пакет 
+  расширения, прикладная программа — почти синонимы при переводе термина toolbox, 
+  но пакет инструментов собственно MATLAB 6 рассматривается как один из toolbox 
+  всей системы, включающей MATLAB 6, Simulink и другие пакеты. Редакция старалась 
+  максимально сохранить авторский стиль, но следует помнить, что и под прикладной 
+  программой, и иод пакетом расширения автор имеет в виду toolbox в терминах MATLAB. 
+  — Примеч. ред.<br>
+  ] системы MATLAB содержатся специальные средства для электротехнических и радиотехнических 
+  расчетов (операции с комплексными числами, матрицами, векторами и полиномами, 
+  обработка данных, анализ сигналов и цифровая фильтрация), обработки изображений, 
+  реализации нейронных сетей, а также средства, относящиеся к другим новым направлениям 
+  науки и техники. Они иллюстрируются множеством практически полезных примеров. 
+  К разработкам расширений для системы MATLAB привлечены многие научные школы 
+  мира и руководящие ими крупные ученые и педагоги университетов.<br>
+  Важными достоинствами системы являются ее открытость и расширяемость. Большинство 
+  команд и функций системы реализованы в виде текстовых m-файлов (с расширением 
+  .m) и файлов на языке Си, причем все файлы доступны для </font><font size="3" face="Times New Roman, Times, serif">модификации. 
+  Пользователю дана возможность создавать не только отдельные файлы, но и библиотеки 
+  файлов для реализации специфических задач.<br>
+  Поразительная легкость модификации системы и возможность ее адаптации к решению 
+  специфических задач науки и техники привели к созданию десятков пакетов прикладных 
+  программ (toolbox), намного расширивших сферы применения системы. Некоторые 
+  из них, например Notebook (интеграция с текстовым процессором Word и подготовка 
+  «живых» электронных книг), Symbolic Math и Extended Symbolic Math (символьные 
+  вычисления с применением ядра системы Maple V R5) и Simulink (моделирование 
+  динамических систем и устройств, заданных в виде системы блоков), настолько 
+  органично интегрировались с системой MATLAB, что стали ее составными частями. 
+  Аннотационное описание этих и ряда других пакетов дано в уроке 23. Более подробно, 
+  хотя в версиях для выпуска 11.
+  </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><font size="4"><b><a name="3"></a></b></font><br>
+  <font size="4"><b>Возможности систем MATLAB</b></font> </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  <font size="4"><a name="4"></a> Возможности прежних версий MATLAB 4.x</font> 
+  </font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Уже первые ориентированные на Microsoft Windows версии системы (MATLAB 4.x) 
+  обладали мощными средствами. В области математических вычислений:<br>
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif">матричные, векторные, 
+    логические операторы;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">элементарные и специальные 
+    функции;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> полиномиальная арифметика;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> многомерные массивы;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> массивы записей;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">массивы ячеек.</font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">В области реализации численных 
+  методов:</font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> дифференциальные уравнения;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">вычисление одномерных 
+    и двумерных квадратур;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> поиск корней нелинейных 
+    алгебраических уравнений;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> оптимизация функций 
+    нескольких переменных;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> одномерная и многомерная 
+    интерполяция.</font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  В области программирования:</font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif">свыше 500 встроенных 
+    математических функций;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">ввод/вывод двоичных 
+    и текстовых файлов;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> применение программ, 
+    написанных на Си и ФОРТРАН;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> автоматическая перекодировка 
+    процедур MATLAB в тексты программ на языках Си и C++; </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> типовые управляющие 
+    структуры.<br>
+    </font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">В области визуализации 
+  и графики:</font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif">возможность создания 
+    двумерных и трехмерных графиков;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> осуществление визуального 
+    анализа данных.<br>
+    </font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">Эти средства сочетались 
+  с открытой архитектурой систем, позволяющей изменять уже существующие функции 
+  и добавлять свои собственные. Входящая в состав MATLAB программа Simulink дает 
+  возможность имитировать реальные системы и устройства, задавая их моделями, 
+  составленными из функциональных блоков. Simulink имеет обширную и расширяемую 
+  пользователями библиотеку блоков и простые средства задания и изменения их параметров.</font></p>
+<p><font size="4" face="Times New Roman, Times, serif"><br>
+  <a name="5"></a> Возможности версий MATLAB 5.x</font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  В версиях системы MATLAB 5.x введены новые мощные средства. Улучшенная среда 
+  программирования:<br>
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> профилировщик m-файлов 
+    для оценки времени исполнения фрагментов программ;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">редактор/отладчик m-файлов 
+    с удобным графическим интерфейсом;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> объектно-ориентированное 
+    программирование, включая переназначение функций и операторов;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> средства просмотра 
+    содержимого рабочей области и путей доступа; </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> конвертирование m-файлов 
+    функций в промежуточный р-код.</font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif"> Графический интерфейс 
+  пользователя (GUI):</font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif">интерактивное средство 
+    построения графического интерфейса пользователя — GUI;<br>
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">новый редактор свойств 
+    графических объектов — Handle Graphics Property Editor (редактор свойств дескрипторной 
+    графики);<br>
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">панели списков, включая 
+    списки с множественным выбором; </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> форма диалоговых панелей 
+    и панелей сообщений; </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> многострочный режим 
+    редактирования текста;<br>
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> запоминание последовательности 
+    графических элементов управления; </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> расширение параметров 
+    элементов управления; </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> свойство переносимости 
+    между платформами; </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> курсор, определяемый 
+    пользователем;<br>
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">подготовка документов 
+    в формате HTML (языка разметки гипертекста Hypertext Mark Up Language) начиная 
+    с версии 5.3.
+    </font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">Новые типы данных:</font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> многомерные массивы;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> массивы структур (записей);
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> массивы ячеек данных 
+    разного типа;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> массивы символов с 
+    16-разрядной кодировкой;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> массивы с 8-разрядной 
+    кодировкой элементов.
+    </font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">Средства программирования:
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif">списки аргументов переменной 
+    длины;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> переназначение функций 
+    и операторов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> применение локальных 
+    функций в m-файлах;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> оператор-переключатель
+    switch...case...end;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> оператор wait
+    for;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> функции обработки битов.</font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">Математические вычисления 
+  и анализ данных:
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif">пять новых численных 
+    методов решения (solver) обыкновенных дифференциальных уравнений (ОДУ);<br>
+ ускоренное вычисление 
+    функций Бесселя;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> вычисление собственных 
+    значений и сингулярных чисел для матриц разреженной структуры;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> двумерные квадратурные 
+    формулы;&nbsp;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> &nbsp;многомерная интерполяция;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> триангуляция и вывод 
+    на терминал данных, определенных на неравномерной сетке;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> анализ и обработка 
+    многомерных массивов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> функции обработки времени 
+    и даты.
+    </font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">Новые возможности обычной 
+  графики:
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> Z-буферизация для быстрой 
+    и точной трехмерной визуализации;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> 24-битовая поддержка
+    RGB;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> множественная подсветка 
+    поверхностей и полигонов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> перспективные изображения 
+    из произвольной точки;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новые модели подсветки;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> векторизованные полигоны 
+    для больших трехмерных моделей;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> поддержка данных, определенных 
+    на неравномерной сетке, включая триангуляционные и сеточные
+    двух- и трехмерные 
+    поверхности;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> дескрипторная графика 
+    для множественных объектов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> вывод на терминал, 
+    хранение и импорт 8-разрядных изображений;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> дополнительные форматы 
+    графических объектов.
+    </font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">Презентационная графика 
+  и звук:
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> двойные х- и y-оси;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">легенда — пояснение 
+    в виде отрезков линий со справочными надписями, размещаемое внутри графика 
+    или около него;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">управление шрифтом текстовых 
+    объектов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> надстрочные, подстрочные 
+    и греческие символы;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">трехмерные диаграммы, 
+    поля направлений, ленточные и стержневые графики;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> увеличенное количество 
+    стилей для маркировки линий;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> 16-битный стереозвук.
+    </font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">Интерактивная документация:
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> возможность просмотра 
+    с помощью Netscape Navigator или Microsoft Internet Explorer;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> полная справочная документация 
+    в форматах HTML и PDF; О возможность создания «живых» книг с помощью специального 
+    приложения<br>
+    Notebook.
+    </font></li>
+</ul>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif">Версия MATLAB 5.3.1 (выпуск 
+  11.1) интегрирует в своем составе 42 программных продукта, среди которых основу 
+  составляют базовая система MATLAB и новая реализация пакета расширения Simulink 
+  3.1. В систему введен ряд новых компонентов, включая следующие:
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> Data Analysis, Visualization 
+    and Application Development — анализ данных, их визуализация и применение;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Control Design —проектирование 
+    устройств управления;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> DSP and Communications 
+    System Design — проектирование коммуникационных систем и систем цифровой обработки 
+    сигналов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Financial Engineering 
+    — финансовые расчеты и др.
+    </font></li>
+</ul>
+<p><font size="3" face="Times New Roman, Times, serif">Из других возможностей 
+  версии MATLAB 5.3.1 наиболее значимыми являются следующие:
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> существенное обновление 
+    пакетов расширения (toolbox) системы MATLAB; О новые улучшенные версии Simulink 
+    3.1 и Real-Time Workshop 3.0;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Real-Time Windows Target, 
+    позволяющая исполнять управляющие программы реального времени на том же компьютере 
+    или ноутбуке, где установлены MATLAB, Simulink и Real Time
+    Workshop;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> стандартный пакет расширения 
+    хРС для управления системами реального времени на управляющем компьютере (PC) 
+    без участия хост-компьютера с установленной системой
+    MATLAB;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Data Acquisition Toolbox 
+    для обмена информацией с блоками сбора данных, подключаемыми к шине компьютера, 
+    в реальном масштабе времени;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новое меню View (Вид), 
+    позволяющее выводить или скрывать панель инструментов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> расширенные возможности 
+    работы с целочисленными данными; </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> улучшенное окно графики 
+    с панелью инструментов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> возможность вращения 
+    графиков в пространстве с помощью мыши в любом направлении простым включением 
+    режима вращения с помощью кнопки панели инструментов графического окна;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> поддержка нового стандарта
+    NTSC;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новый графический интерактивный 
+    редактор, облегчающий форматирование графиков;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> обеспечение записи 
+    и считывания изображений в формате PNG (Portable Network Graphics) (Переносимая 
+    сетевая графика);
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> улучшенная визуализация 
+    трехмерных скалярных и векторных данных объемных поверхностей;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новые решатели дифференциальных 
+    уравнений и дифференциально-алгебраических уравнений;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> улучшенный редактор 
+    и профилировщик m-файлов, содержащий генератор отчетов и поддерживающий HTML 
+    (язык разметки гипертекста)-формат записи файлов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> улучшенная печать, 
+    предусматривающая предварительный просмотр печатаемых страниц — команда Print 
+    Preview (предварительный просмотр области печати).
+    </font></li>
+</ul>
+<p><font size="4" face="Times New Roman, Times, serif"><a name="6"></a> Возможности 
+  новейшей версии MATLAB 6</font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Новейшая версия системы MATLAB 6 не только имеет перечисленные выше возможности 
+  предшествующих версий, но и характеризуется целым рядом новых и важных возможностей:
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> доведенное до более 
+    чем 600 число встроенных функций и команд;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новый интерфейс с набором 
+    инструментов для управления средой, включающий в себя окно команд (Command 
+    Window), окно истории команд (Command History), браузер рабочей области (Workspace 
+    Browser) и редактор массивов (Array Editor);
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новые инструменты, 
+    позволяющие при помощи мыши интерактивно редактировать и форматировать графики, 
+    оптимизировать их коды и затраты памяти на графические команды и атрибуты;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> улучшенные алгоритмы 
+    на основе оптимизированной библиотеки
+    LAPACK;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новая библиотека FFTW 
+    (быстрых преобразований Фурье) Массачусетского технологического института 
+    </font> <font size="3" face="Times New Roman, Times, serif">Кембриджского 
+    университета (США);</font></li>
+  <li> <font size="3" face="Times New Roman, Times, serif">ускоренные методы интегральных 
+    преобразований;</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новые, более мощные 
+    и точные, алгоритмы интегрирования дифференциальных уравнений и квадратур;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новые современные функции 
+    визуализации: вывод на экран двумерных изображений, поверхностей и объемных 
+    фигур в виде прозрачных объектов;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новая инструментальная 
+    панель Camera для управления перспективой и ускорение вывода графики с помощью
+    OpenGL;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новый интерфейс для 
+    вызова Java-процедур и использования Java-объектов непосредственно из
+    MATLAB;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новые, современные 
+    инструменты проектирования графического пользовательского интерфейса;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> обработка (регрессия, 
+    интерполяция, аппроксимация и вычисление основных статистических параметров) 
+    графических данных прямо из окна графики;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новое приложение MATLAB 
+    для системы разработки Visual Studio, позволяющее автоматически, непосредственно 
+    из Microsoft Visual Studio, преобразовывать Си и Си++ коды в выполняемые MATLAB 
+    файлы (МЕХ-файлы);
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> интеграция с системами 
+    контроля версий кода, такими как Visual Source
+    Safe;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новый интерфейс (последовательный 
+    порт) для обмена данными с внешним оборудованием из
+    MATLAB;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> новый пакет управления 
+    измерительными приборами (Instrument Control ToolBox) для обмена информацией 
+    с приборами, подключенными к Каналу общего пользования (GPIB, HP-IB, IEEE-488)[ 
+    Существует аналогичные международные МЭК (IEC) 625.1 и российские государственные 
+    стандарты. Несмотря на логическую и электрическую совместимость, международные 
+    и отечественные стандарты предполагают использование других разъемов. — Примеч. 
+    ред. или к шине VXI через адаптер VXI — GPIB (только в версиях для Windows 
+    и Sun Solaris) и последовательному интерфейсу RS-232, RS-422, RS-485 (также 
+    и для Linux-версии), в том числе в соответствии со стандартом VISA (Virtual 
+    Instruments Systems Application) (Применение виртуальных измерительных приборов);
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> существенно обновленные 
+    пакеты расширения, в частности новые версии пакета моделирования динамических 
+    систем Simulink 4 и Real Time Workshop 4;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> интеграция с системами 
+    управления потребностями, например DOORS.<br>
+    Поставляемый с системой MATLAB 6.0 новый пакет расширения Simulink 4 также 
+    имеет ряд новинок. Они перечислены ниже по категориям.
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Усовершенствование 
+    пользовательского интерфейса:</font> 
+    <ul>
+      <li><font size="3" face="Times New Roman, Times, serif">новый графический 
+        отладчик для интерактивного поиска и диагностики ошибок в модели;
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif">усовершенствован 
+        навигатор моделей (Model Browser, Windows 95/98/Me/ 2000/NT4);
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif"> новый однооконный 
+        режим для открытия подсистем;
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif"> контекстное меню 
+        для блок-диаграмм (открывается щелчком правой кнопки мыши) как в Windows, 
+        так и в Unix версиях;
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif"> новый диалог Finder 
+        для поиска моделей и библиотек.
+        </font></li>
+    </ul>
+  </li>
+</ul>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif">Simulink поступает к пользователям 
+  с более 100 встроенными блоками, в состав которых входят наиболее необходимые 
+  функции моделирования. Блоки сгруппированы в библиотеки в соответствии с их 
+  назначением: источники сигнала, приемники, дискретные, непрерывные, нелинейные, 
+  математика, функции и таблицы, сигналы и системы. В дополнение к обширному набору 
+  встроенных блоков Simulink имеет расширяемую библиотеку блоков благодаря функции 
+  создания пользовательских блоков и библиотек. Вы можете настраивать не только 
+  функциональность встроенных и пользовательских блоков, но также пользовательский 
+  интерфейс, используя значки и диалоги. Например, вы можете создать блоки для 
+  моделирования поведения специальных механических, электрических и программных 
+  компонентов, как, например, моторы, преобразователи, серво-клапаны, источники 
+  питания, энергетические установки, фильтры, шины, модемы,</font></p>
+<ul>
+  <li>
+    <div align="justify"><font size="3" face="Times New Roman, Times, serif">приемники или другие 
+      динамические компоненты. Однажды созданные пользовательские блоки могут быть 
+      сохранены в библиотеке блоков для использования в будущем. Любые пользовательские 
+      блоки или библиотеки блоков могут быть легально распространены в рабочих группах, 
+      переданы поставщикам и заказчикам как с исходным кодом, так и без него.<br>
+      Новые и улучшенные возможности блоков:
+      </font> 
+        <ul>
+          <li><font size="3" face="Times New Roman, Times, serif"> наряду с существовавшей 
+            ранее поддержкой скалярных и векторных сигналов обеспечена поддержка матричных 
+            сигналов многими блоками Simu-link;
+          </font></li>
+          <li><font size="3" face="Times New Roman, Times, serif">блоки Product, Multiplication, 
+            Gain и Math Function теперь поддерживают матричные операции на матричных 
+            сигналах;
+          </font></li>
+          <li><font size="3" face="Times New Roman, Times, serif"> Мих и Demux блоки 
+            теперь поддерживают мультиплексирование матричных сигналов;
+          </font></li>
+          <li><font size="3" face="Times New Roman, Times, serif"> новый блок Reshape 
+            изменяет размер матрицы своего входного сигнала;
+          </font></li>
+          <li><font size="3" face="Times New Roman, Times, serif"> блок Probe теперь 
+            по умолчанию выводит размер матрицы сигнала, подаваемого на вход;
+          </font></li>
+          <li><font size="3" face="Times New Roman, Times, serif"> новый блок Bitwise 
+            Logical Operator (логические операции по битам) накладывает маску, инвертирует 
+            или производит логические операции с отдельными битами целочисленного 
+            сигнала без знака;
+          </font></li>
+          <li><font size="3" face="Times New Roman, Times, serif"> четыре новых блока 
+            Look-Up Table (просмотра таблиц);
+          </font></li>
+          <li><font size="3" face="Times New Roman, Times, serif"> новый Polynomial 
+            блок выводит полиномиальную функцию от входного сигнала.
+          </font></li>
+        </ul>
+    </div>
+  </li>
+  <li><font size="3" face="Times New Roman, Times, serif">Расширенная поддержка 
+    для крупных приложений:
+    </font> 
+    <ul>
+      <li><font size="3" face="Times New Roman, Times, serif"> новые объекты данных 
+        Simulink позволяют создавать специфические для приложений типы данных
+        MATLAB;
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif"> новый графический 
+        пользовательский интерфейс Simulink Explorer для наблюдения и редактирования 
+        объектов данных Simulink;
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif"> усовершенствование 
+        блока Configurable Subsystems (конфигурируемые подсистемы);
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif"> новое меню выбора 
+        блока конфигурируемой подсистемы;
+        </font></li>
+      <li>
+        <div align="justify"><font size="3" face="Times New Roman, Times, serif"> поддержка защиты 
+          интеллектуальной собственности с помощью S-функ-ций, позволяющая не передавать 
+          исходный код S-функций (требуется Real-Time Workshop 4.0 (Лаборатория 
+          реального времени)) [S-функция — пользовательский программный модуль, 
+          который определяет поведение Simulink блока. Simulink содержит шаблоны 
+          для создания S-функций с помощью существующих или разработанных заново 
+          кодов на Си, Ada (в версии Simulink 4.0/Real Workshop 4.0, нужен отдельный 
+          блок Real Workshop Ada Coder), Fortran или MATLAB. Созданную S-функцию 
+          вы можете включить в вашу модель, используя соответствующий ей блок Simulink—будь 
+          то стандартный или пользовательский. S-функции уменьшают время, необходимое 
+          для моделирования крупномасштабных систем, позволяя оперативно вставлять 
+          существующие коды в модель. Это, например, особенно важно, если система 
+          MATLAB+Simulink+Real Workshop+Real Time Windows Target используется для 
+          управления сложными объектами в реальном масштабе времени. Simulink обеспечивает 
+          многопортовую и многоскоростную поддержку и разрешает различные интервалы 
+          дискретизации (только S-функции на Си и MATLAB). — Примеч. ред.];</font></div>
+      </li>
+      <li><font size="3" face="Times New Roman, Times, serif"> поддержка S-функций, 
+        кодируемых на языке ADA (требуется новый отдельный пакет Real Time Workshop 
+        Ada Coder);
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif">улучшенная интеграция 
+        со Stateflow — пакетом инструментов моделирования систем, управляемых 
+        событиями, значительно усовершенствованный Stateflow Coder для генерации 
+        кода;
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif"> run-time сервер 
+        MATLAB для запуска программ MATLAB, в том числе в р-кодах, без установленной 
+        системы MATLAB;
+        </font></li>
+      <li>
+        <div align="justify"><font size="3" face="Times New Roman, Times, serif"> улучшенная версия 
+          хРС Embedded Target для записи генерируемого кода не только на переносимые 
+          носители, но и в постоянные запоминающие устройства, твердотельные диски 
+          и на жесткий диск управляющего компьютера. Наряду с хРС поддерживаются 
+          другие платформы встроенных управляющих систем, включая VxWorks/Tornado 
+          (причем как UNIX, так и Windows хостом с MATLAB), Real Time Windows Target; 
+          Lynx Embedded OSEK Target, стандартизированную в автомобилестроении, DOS 
+          Target на управляющем компьютере Intel386 и старше (последняя только со 
+          снятым с производства компилятором Watcom Си/Си++ с расширителем DOS4GW.exe 
+          для DOS и несовместима с приложениями Windows). Но возможность работы 
+          без хоста с системой MATLAB (Stand-Alone) имеется только в хРС;
+        </font></div>
+      </li>
+      <li><font size="3" face="Times New Roman, Times, serif"> поддержка хРС Target 
+        стандартной полевой шины промышленной автоматизации CAN, возможность синхронизации 
+        хРС сигналами, поступающими по этой шине;
+        </font></li>
+      <li><font size="3" face="Times New Roman, Times, serif"> web-сервер, встроенный 
+        в хРС Target, позволяющий осуществлять управление встроенными компьютерами 
+        и просмотр их состояния при помощи браузеров Интернета (Microsoft Explorer 
+        4.0 и старше и Netscape Navigator 4.5 и старше).
+        </font></li>
+    </ul>
+  </li>
+</ul>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif">Все это говорит о том, 
+  что двенадцатый выпуск системы (MATLAB 6.0 + Simu-link 4.0 + Stateflow 4.0 + 
+  ...) подвергся не косметической, а самой серьезной переработке, выдвигающей 
+  эту систему на абсолютно новый уровень развития и применения.</font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  <b><font size="4"><a name="7"></a> Интеграция с другими программными системами</font></b></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  В последние годы разработчики математических систем уделяют огромное внимание 
+  их интеграции и совместному использованию. Это не только расширяет класс решаемых 
+  каждой системой задач, но и позволяет подобрать для них самые лучшие и наиболее 
+  подходящие инструментальные средства. Решение сложных математических задач сразу 
+  на нескольких системах существенно повышает вероятность получения корректных 
+  результатов — увы, как математики так и математические системы способны ошибаться, 
+  особенно при некорректной постановке задач неопытными пользователями.<br>
+  С системой MATLAB могут интегрироваться такие популярные математические системы, 
+  как Mathcad, Maple V и Mathematica. Есть тенденция и к объединению<br>
+  математических систем с современными текстовыми процессорами. Так, новое средство 
+  последних версий MATLAB — Notebook — позволяет готовить документы в текстовом 
+  процессоре Word 95/97/2000 [Здесь и далее Word 95 и Word 97 — синонимы соотвественно 
+  Microsoft Word 7 из пакета Microsoft Office 95 и Microsoft Word 8 из пакета 
+  Microsoft Office 97. — Примеч. ред.] со вставками в виде документов MATLAB и 
+  результатов вычислений, представленных в численном, табличном или графическом 
+  виде. Таким образом, становится возможной подготовка «живых» электронных книг, 
+  в которых демонстрируемые примеры могут быть оперативно изменены. Так, вы можете 
+  менять условия задач и тут же наблюдать изменение результатов их решения. В 
+  версии MATLAB 6 предусмотрены также улучшенные средства для экспорта графики 
+  в слайды презентационной программы Microsoft PowerPoint.<br>
+  В MATLAB задачи расширения системы решаются с помощью специализированных пакетов 
+  расширения — наборов инструментов (Toolbox). Многие из них содержат специальные 
+  средства для интеграции с другими программами, поддержки объектно-ориентированного 
+  и визуального программирования, для генерации различных приложений. Краткое 
+  описание пакетов расширения дано в уроке 23. Кроме того, этой теме посвящены 
+  отдельные книги.<br>
+  В состав системы MATLAB входит ядро одной из самых мощных, популярных и хорошо 
+  апробированных систем символьной математики (компьютерной алгебры) Maple V Release 
+  5. Оно используется пакетами расширения Symbolic Math Toolbox и Extended Symbolic 
+  Math Toolbox, благодаря которым в среде MATLAB стали доступны принципиально 
+  новые возможности символьных и аналитических вычислений.<br>
+  Новые свойства системе MATLAB придала ее интеграция с программной системой Simulink, 
+  созданной для моделирования динамических систем и устройств, заданных в виде 
+  системы блоков. Базируясь на принципах визуально-ориентированного программирования, 
+  Simulink позволяет выполнять моделирование сложных устройств с высокой степенью 
+  достоверности и с прекрасными средствами представления результатов. Помимо естественной 
+  интеграции с пакетами расширения Symbolic Math и Simulink MATLAB интегрируется 
+  с десятками мощных пакетов расширения, описанными в уроке 23, и значительно 
+  более подробно, хотя в версиях для выпуска И, в монографии.<br>
+  В свою очередь, многие другие математические системы, например Mathcad и Maple, 
+  допускают установление объектных и динамических связей с системой MATLAB, что 
+  позволяет использовать в них эффективные средства MATLAB для работы с матрицами. 
+  Эта прогрессивная тенденция интегрирования компьютерных математических систем, 
+  несомненно, будет продолжена.</font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  <b><font size="4"><a name="8"></a> Ориентация на матричные операции</font></b></font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  Напомним, что двумерный массив чисел или математических выражений принято называть 
+  матрицей. А одномерный массив называют вектором. Примеры векторов и матриц даны 
+  ниже:{l, 2, 3, 4} — вектор из 4 элементов;<br>
+  1 2 3 4 <br>
+  5 6 7 8 матрица размера 3x4;<br>
+  9 8 7 6 </font></p>
+<table width="13%" border="0">
+  <tr>
+    <td width="6%"><font size="3" face="Times New Roman, Times, serif">а</font></td>
+    <td width="17%"><font size="3" face="Times New Roman, Times, serif">а+b</font></td>
+    <td width="77%"><font size="3" face="Times New Roman, Times, serif">а+b/с</font></td>
+  </tr>
+  <tr>
+    <td width="6%"><font size="3" face="Times New Roman, Times, serif">х</font></td>
+    <td width="17%"><font size="3" face="Times New Roman, Times, serif">у*х</font></td>
+    <td width="77%"><font size="3" face="Times New Roman, Times, serif">z</font></td>
+  </tr>
+  <tr>
+    <td width="6%">1</td>
+    <td width="17%">2</td>
+    <td width="77%">3</td>
+  </tr>
+</table>
+<font size="3" face="Times New Roman, Times, serif">матрица с элементами разного 
+типа.</font>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"> Векторы и матрицы характеризуются 
+  размерностью и размером. Размерность определяет структурную организацию массивов 
+  в виде строки (размерность 1), страницы (размерность 2), куба (размерность 3) 
+  и т. д. Так что вектор является одномерным массивом, а матрица представляет 
+  собой двумерный массив с размерностью 2. MATLAB допускает задание и использование 
+  многомерных массивов, но в этой главе мы пока ограничимся только одномерными 
+  и двумерными массивами — векторами и матрицами.<br>
+  Размер вектора — это число его элементов, а размер матрицы определяется числом 
+  ее строк т и столбцов п. Обычно размер матрицы указывают как тхп. Матрица называется 
+  квадратной, если m = n, то есть число строк матрицы равно числу ее столбцов.<br>
+  Векторы и матрицы могут иметь имена, например V — вектор или М — матрица. В 
+  данной книге имена векторов и матриц набираются полужирным шрифтом. Элементы 
+  векторов и матриц рассматриваются как индексированные переменные, например:</font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif">V<font size="1">2</font> 
+    — второй элемент вектора V;
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif">М<font size="1">23</font> 
+    — третий элемент второй строки матрицы М.</font></li>
+</ul>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif">
+  Система MATLAB выполняет сложные и трудоемкие операции над векторами и матрицами 
+  даже в режиме прямых вычислений без какого-либо программирования. Ею можно пользоваться 
+  как мощнейшим калькулятором, в котором наряду с обычными арифметическими и алгебраическими 
+  действиями могут использоваться такие сложные операции, как инвертирование матрицы, 
+  вычисление ее собственных значений и принадлежащих им векторов, решение систем 
+  линейных уравнений, вывод графиков двумерных и трехмерных функций и многое другое.<br>
+  Интересно отметить, что даже обычные числа и переменные в MATLAB рассматриваются 
+  как матрицы размера 1x1, что дает единообразные формы и методы проведения операций 
+  над обычными числами и массивами. Данная операция обычно называется векторизацией. 
+  Векторизация обеспечивает и упрощение записи операций, производимых одновременно 
+  над всеми элементами вектрров и матриц, и существенное повышение скорости их 
+  выполнения. Это также означает, что большинство функций может работать с аргументами 
+  в виде векторов и матриц. При необходимости вектора и матрицы преобразуются 
+  в массивы, и значения вычисляются для каждого их элемента.</font></p>
+<p align="left"><font size="3" face="Times New Roman, Times, serif"><br>
+  <b><font size="4"><a name="9"></a> Расширяемость системы</font></b></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Какой бы мощной ни была та или иная математическая система, она не способна 
+  включить в себя все средства, которые могут потребоваться сотням тысяч пользователей. 
+  Поэтому важно, чтобы система была достаточно гибкой и способной адаптироваться 
+  к различным задачам пользователей самых разных категорий — начинающих и опытных 
+  математиков, инженеров и научных работников, аспирантов и студентов вузов и 
+  даже школьников.<br>
+  MATLAB — расширяемая система, и ее легко приспособить к решению нужных вам классов 
+  задач. Ее огромное достоинство заключается в том, что это расширение достигается 
+  естественным путем и реализуется в виде так называемых т-файлов (с расширением 
+  .m). Иными словами, расширения системы хранятся на жестком диске компьютера 
+  и в нужный момент вызываются для использования точно так же, как встроенные 
+  в MATLAB (внутренние) функции и процедуры.<br>
+  Благодаря текстовому формату m-файлов пользователь может ввести в систему любую 
+  новую команду, оператор или функцию и затем пользоваться ими столь же просто, 
+  как и встроенными операторами или функциями. При этом в отличие от таких языков 
+  программирования, как Бейсик, Си или Паскаль не требуется никакого объявления 
+  этих новых функций. Это роднит MATLAB с языками Лого и Форт, имеющими словарную 
+  организацию операторов и функций и возможности пополнения словаря новыми определениями-словами. 
+  Но, поскольку новые определения в системе MATLAB хранятся в виде файлов на диске, 
+  это делает набор операторов и функций практически неограниченным.<br>
+  В базовый набор слов системы входят спецзнаки, знаки арифметических и логических 
+  операций, арифметические, алгебраические, тригонометрические и некоторые специальные 
+  функции, функции быстрого преобразования Фурье и фильтрации, векторные и матричные 
+  функции, средства для работы с комплексными числами, операторы построения графиков 
+  в декартовой и полярной системах координат, трехмерных поверхностей и т. д. 
+  Словом, MATLAB предоставляет пользователю обширный набор готовых средств (большая 
+  часть из них — это внешние расширения в виде m-файлов).<br>
+  Дополнительный уровень системы образуют ее пакеты расширения (toolbox). Они 
+  позволяют быстро ориентировать систему на решение задач в той или иной предметной 
+  области: в специальных разделах математики, в физике и в астрономии, в области 
+  нейтронных сетей и средств телекоммуникаций, в математическом моделировании, 
+  проектировании событийно-управляемых систем и т. д. Благодаря этому MATLAB обеспечивает 
+  высочайший уровень адаптации к решению задач конечного пользователя.<br>
+</font></p>
+<p align="left"><font size="3" face="Times New Roman, Times, serif"> <b><font size="4"><a name="10"></a> 
+  Мощные средства программирования</font></b></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"> <br>
+  Многие математические системы создавались исходя из предположения, что пользователь 
+  будет решать свои задачи, практически не занимаясь программированием. Однако 
+  с самого начала было ясно, что подобный путь имеет недостатки 
+  и, вообще говоря, порочен. Ведь многие задачи нуждаются в развитых средствах 
+  программирования, которые упрощают запись алгоритмов задач и порой открывают 
+  новые методы создания алгоритмов.<br>
+  С одной стороны, MATLAB содержит огромное число операторов и функций, которые 
+  решают множество практических задач, для чего ранее приходилось готовить достаточно 
+  сложные программы. К примеру, это функции обращения или транспонирования матриц, 
+  вычисления значений производной или интеграла и т. д. и т. п. Число таких функций 
+  с учетом пакетов расширения системы уже достигает многих тысяч и непрерывно 
+  увеличивается.<br>
+  Но, с другой стороны, система MATLAB с момента своего создания создавалась как 
+  мощный математико-ориентированный язык программирования высокого уровня. И многие 
+  рассматривали это как важное достоинство системы, свидетельствующее о возможности 
+  ее применения для решения новых, наиболее сложных математических задач.<br>
+  Система MATLAB имеет входной язык, напоминающий Бейсик (с примесью Фортрана 
+  и Паскаля). Запись программ в системе традиционна и потому привычна для большинства 
+  пользователей компьютеров. К тому же система дает возможность редактировать 
+  программы с помощью любого привычного для пользователя текстового редактора. 
+  Имеет она и собственный редактор с отладчиком. Отказ от присущего системе Mathcad 
+  «шика» — задания задач в виде формул — компенсируется заметным увеличением скорости 
+  вычислений — при прочих равных условиях она почти на порядок выше, чем у системы 
+  Mathcad. А это немаловажное достоинство!<br>
+  Язык системы MATLAB в части программирования математических вычислений намного 
+  богаче любого универсального языка программирования высокого уровня. Он реализует 
+  почти все известные средства программирования, в том числе объектно-ориентированное 
+  и (средствами Simulink) визуальное программирование. Это дает опытным программистам 
+  необъятные возможности для самовыражения.</font></p>
+<p align="left"><font size="3" face="Times New Roman, Times, serif"><br>
+  <b><font size="4"><a name="11"></a> Визуализация и графические средства</font></b> 
+  </font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  В последнее время создатели математических систем уделяют огромное внимание 
+  визуализации решения математических задач. Говоря проще, это означает, что постановка 
+  и описание решаемой задачи и результаты решения должны быть предельно понятными 
+  не только тем, кто решает задачи, но и тем, кто в дальнейшем их изучает или 
+  просто просматривает. Большую роль в визуализации решения математических задач 
+  играет графическое представление результатов, причем как конечных, так и промежуточных.<br>
+  Визуализация постановки задачи в MATLAB решается применением приложения Notebook 
+  и назначением именам функций достаточно ясных имен (идентификаторов). А визуализация 
+  результатов вычислений достигается применением обширных средств графики, в том 
+  числе анимационной, а также использованием (там, где это нужно) средств символьной 
+  математики.<br>
+  Новая версия MATLAB напрочь избавилась от некоторой примитивности графиков, 
+  которая была присуща первым версиям этой системы. Теперь новые графические средства 
+  Handle Graphics (дескрипторная или описательная графика) позволяют создавать 
+  полноценные объекты графики высокого разрешения, как геометрического, так и 
+  цветового. Возможности этой графики поддерживаются объектно-ориентированным 
+  программированием, средства которого также имеются в языке программирования 
+  системы MATLAB.<br>
+  Реализуются, причем с повышенной скоростью, построения графиков практически 
+  всех известных в науке и технике типов. Широко практикуется функциональная закраска 
+  сложных поверхностей, в том числе с интерполяцией по цвету. Возможен учет всевозможных 
+  световых эффектов — вплоть до бликов на поверхности сложных фигур при освещении 
+  их различными источниками света и с учетом свойств материалов отражающих поверхностей. 
+  Применение дескрипторной графики позволяет создавать и типовые элементы пользовательского 
+  интерфейса — кнопки, меню, информационные и инструментальные панели и т. д., 
+  то есть реализовать элементы визуально-ориентированного программирования.<br>
+  Графики выводятся отдельно от текстов в отдельных окнах. На одном графике можно 
+  представить множество кривых, отличающихся цветом (при цветном дисплее) и отличительными 
+  символами (кружками, крестиками, прямоугольниками и т. д.). Графики можно выводить 
+  в одно или в несколько окон. Наконец, в статьях и книгах формата Notebook, реализованных 
+  при совместной работе системы MATLAB с популярным текстовым процессором Microsoft 
+  Word 95/97/2000, графики могут располагаться вместе с текстом, формулами и результатами 
+  вычислений (числами, векторами и матрицами, таблицами и т. д.). В этом случае 
+  степень визуализации оказывается особенно высокой, поскольку документы класса 
+  Notebook по существу являются превосходно оформленными электронными книгами 
+  с действующими (вычисляемыми) примерами.<br>
+  Особенно привлекательной выглядит возможность построения трехмерных поверхностей 
+  и фигур. Если в MATLAB 4 рендеринг трехмерных фигур осуществлялся только при 
+  помощи фирменного механизма painters, а в MATLAB 5 был добавлен программный 
+  рендеринг при помощи Z-буфера, то в MATLAB б основным является индустриальный 
+  стандарт Open GL. Он может поддерживаться аппаратно графическими ускорителями. 
+  Система автоматически подбирает наиболее оптимальный механизм рендеринга. По 
+  сравнению с системой Mathcad построение трехмерных фигур средствами MATLAB происходит 
+  почти на порядок быстрее. Кроме того, при построении таких графиков используется 
+  достаточно совершенный алгоритм удаления невидимых линий, что наряду с большими 
+  размерами графиков и возможностью интерполяции по цвету делает построенные трехмерные 
+  поверхности и фигуры весьма эстетичными и наглядными. Фигуры могут быть прозрачными. 
+  Уже в ранних версиях была введена эффектная возможность быстрого вращения графиков 
+  в любом направлении. В MATLAB 5.3.1 и 6 она улучшена — теперь вращать в пространстве 
+  можно даже плоскость с двумерными графиками.<br>
+  Введен также ряд средств на основе графического интерфейса пользователя (GUI 
+  — Graphic User Interface), привычного для операционных систем Windows 95/98/Ме/ 
+  2000/NT4. Это панели инструментов, редактор и отладчик m-файлов, красочная<br>
+  демонстрация возможностей и т. д. Есть и возможность создавать свои средства 
+  пользовательского интерфейса.
+  </font></p>
+<p align="left"><font size="3" face="Times New Roman, Times, serif"><br>
+  <b><font size="4"><a name="12"></a> Техническая документация по системе</font></b> 
+  </font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Система MATLAB поставляется с обширной технической документацией и с развитой 
+  справочной системой. Система помощи реализована как в стандартном для систем 
+  MATLAB варианте — в интерактивном командном режиме, так и в форме гипертекстовых 
+  страниц с просмотром их браузером помощи. Кроме того, имеется обширный пакет 
+  электронных документов в формате PDF (отдельный компакт-диск в версии 6.0), 
+  для просмотра которых используется приложение Acrobat Reader (распространяется 
+  бесплатно) или Adobe Acrobat. Ниже перечислены наиболее важные из этих документов 
+  (далеко не все) для версии MATLAB 6.0 с указанием их объема в страницах: О «Getting 
+  Started with MATLAB» — начальное знакомство с системой
+MATLAB.
+  </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif"> «Installation Guide 
+    for PC» — инсталляция на ПК класса PC.</font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> «MAT-file format» — 
+    описание форматов МАТ-файлов. </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> «Release Notes for 
+    Release 12» — описание особенностей реализации 12 системы<br>
+    MATLAB.
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> «Using MATLAB» — работа 
+    с MATLAB в командном и программируемом режимах. </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> «Function Reference» 
+    — справочник по функциям в трех томах.<br>
+    том 2
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> «Using MATLAB Graphics» 
+    — справочник по средствам графики и визуализации. </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> «MATLAB Application 
+    Program Interface Guide» — описание интерактивного<br>
+    взаимодействия с языками программирования С и Fortran. </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> «External Interfaces/API» 
+    — описание интерфейса связи с внешними программами
+    API.
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> «Creating Graphical 
+    User Interface» — создание графического интерфейса пользователя.
+    </font></li>
+</ul>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif">Итак, объем фирменной документации 
+  только по системе MATLAB 6.0 достигает почти 5000 страниц, что делает ее трудно 
+  обозримой. Тем более с учетом того, что эта документация является англоязычной.<br>
+  Состав документации может несколько меняться в зависимости от типа поставок. 
+  Помимо этого, различные поставки системы могут содержать и другую техническую 
+  документацию, руководство по работе с системой Simulink, описание пакета символьных 
+  вычислений и т. д.<br>
+  Документацию по системе MATLAB можно рассматривать как многотомный электронный 
+  (и обычный) справочник по современным численным методам и средствам их реализации 
+  на ЭВМ, включая персональные компьютеры. Одновременно — это одно из самых полных 
+  электронных справочных пособий по математике и многочисленным сферам ее применения. 
+  К сожалению, пока указанная документация поставляется с системой только на английском 
+  и на японском языках. Поскольку эта документация доступна каждому пользователю, 
+  рискнувшему установить достаточно полную версию MATLAB 6.0 на свой компьютер, 
+  ссылок на нее в списке литературы данного издания нет.<br>
+  Данная книга дает достаточно полное описание почти всех средств базовой системы 
+  MATLAB. Тем не менее настоятельно рекомендуется обращаться к указанной документации 
+  всякий раз, когда требуется полное знакомство с той или иной областью применения 
+  системы, с ее редкими функциями, операторами или иными средствами, которые не 
+  нашли отражения в данной книге ввиду ограниченного (в сравнении с объемом указанной 
+  документации) объема.</font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  <b><font size="4"><a name="13"></a> MATLAB в Интернете</font></b></font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  Представление математических систем в глобальной сети Интернет сегодня становится 
+  нормой. Свои сайты (страницы) в Интернете имеют все фирмы-разработчики математических 
+  систем.</font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  <font size="4"><a name="14"></a> Главная страница фирмы MathWorks</font></font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><img src="1.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.1.jpg" width="500" height="375"><br>
+  <i><b>Рис. 1.1.</b> Главная страница web-сайта фирмы MathWorks</i></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Math Works, Inc. — создатель системы MATLAB — также имеет свой, регулярно обновляемый 
+  сайт (www.mathworks.com). О важности общения с ним говорит то обстоятельство, 
+  что в меню версии MATLAB 6.0 появилась позиция Web, дающая доступ к основным 
+  разделам этой страницы. Первая же команда позиции меню The Math Works Web Site 
+  дает выход на главную страницу web-сайта фирмы Math Works (рис. 1.2).<br>
+  Следует отметить, что данная команда исполняется только в том случае, если на 
+  компьютере установлен какой-либо из браузеров для работы в сети Интернет, например 
+  входящий в состав операционной системы Windows 98 браузер Microsoft Internet 
+  Explorer 5.0. Приведенные далее копии экрана, иллюстрирующие отражение MATLAB 
+  в Интернете, получены при использовании именно этого браузера. В команной строке 
+  можно набрать команду support, которая откроет этот же сайт в окне браузера 
+  помощи, входящего в состав самой MATLAB.<br>
+  Непосредственное подключение к Интернету изначально не требуется. Однако, разумеется, 
+  вы можете выйти на web-страницу фирмы Math Works и прямо с помощью браузера 
+  даже без установленной на вашем ПК системы MATLAB. Этот процесс подробно описан 
+  в книге и в других книгах об Интернете.</font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  <font size="4"><a name="15"></a> Регистрация через Интернет</font></font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  Если вы удостоились чести стать легальным пользователем системы MATLAB, то первое, 
+  что надо сделать, — это установить систему на ваш компьютер и зарегистрироваться 
+  в фирме Math Works.</font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><img src="1.2.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.2.jpg" width="494" height="555"><br>
+  <i>Рис. 1.2. Интернет-страница MATLAB Access фирмы MathWorks</i></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Отдельный урок 2 посвящен тому, как надо устанавливать (инсталлировать) систему. 
+  Если система у вас уже установлена, то остается зарегистрироваться. Это можно 
+  сделать по телефону (номер указан в документации), по обычной почте (слишком 
+  долго и муторно) и через Интернет (проще всего, если есть доступ).<br>
+  Math Works обычно дает срок в 30 суток для регистрации. До истечения этого срока 
+  вы можете ставить систему на свой ПК и спокойно работать с ней, например, оценивая 
+  то, нужна ли она вам или нет. Однако спустя этот срок возможность запуска системы 
+  будет заблокирована и вам придется вспомнить о необходимости регистрации. Лучше, 
+  естественно, сделать это быстрее, не откладывая это не слишком сложное дело 
+  на долгий срок.<br>
+  Для регистрации через Интернет надо исполнить команду Membership в уже упомянутой 
+  позиции Web меню. После этого автоматически будет запущена система соединения 
+  с вашим Интернет-провайдером и начнется загрузка страницы MATLAB Access (доступ 
+  в MATLAB) с указанным адресом. На рис. 1.2 показано, как выглядит эта страница 
+  при использовании браузера Microsoft Internet Explorer 5.0.</font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><img src="1.3.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.3.jpg" width="494" height="555"><br>
+  <i>Рис. 1.3. Раздел страницы фирмы MathWorks с регистрационной формой</i></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Эта страница содержит гиперссылки на другие страницы сайта. На ней можно найти 
+  и раздел, посвященный регистрации MATLAB (рис. 1.3). Как нетрудно заметить, 
+  форма начинается с поля, в которое надо ввести номер лицензии. Он указывается 
+  в документации, поставляемой с получаемой системой.<br>
+  Регистрационную форму следует заполнить, чтобы стать официально зарегистрированным 
+  пользователем системы MATLAB. Только в этом случае фирма MathWorks обеспечивает 
+  техническую и иную поддержку системы MATLAB. После<br>
+  регистрации пользователь получает быстрый доступ к ресурсам web-сайта фирмы 
+  Math Works. Фамилия пользователя и его данные заносятся в базу данных о пользователях 
+  системы, и она появляется над строкой основных гиперссылок основной страницы 
+  — рис. 1.4. Разумеется, что фамилия и гиперссылка над ней с именем «access» 
+  (доступ) появляются только на странице пользователя, выполнившего регистрацию, 
+  и отсутствуют при просмотре web-страницы другими пользователями.<br>
+  <img src="1.4.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.4.jpg" width="494" height="547"> </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"> <i>Рис. 1.4. Меню гиперссылок 
+  главной страницы Web-сайта фирмы MathWorks с фамилией легального</i></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  пользователя системы MATLAB 6.0<br>
+  Заметим, что основная страница фирмы MathWorks регулярно обновляется и на рис. 
+  1.1 она представлена на момент подготовки рукописи этой книги (март 2001 г.). 
+  На ней рекламируется 12-я реализация (12-й выпуск) системы (система MAT-LAB 
+  6.0 с интегрированными пакетами расширения, включая пакет Simulink 4.0).<br>
+  </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"> <font size="4"><a name="16"></a> 
+  Поддержка системы MATLAB фирмой MathWorks</font></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"> <br>
+  Зарегистрированные пользователи (а частично и другие) могут воспользоваться 
+  специально организованной фирмой MathWorks службой поддержки системы MATLAB. 
+  Для выхода на web-страницу такой поддержки из системы MATLAB достаточно исполнить 
+  команду Technical Support Knowledge Base. Будет загружена страница с разделом 
+  Support, показанная на рис. 1.5.<br>
+  На этой странице имеется множество гипертекстовых ссылок (подчеркнутых снизу), 
+  открывающих доступ к различным ресурсам web-сайта фирмы MathWorks.<i><br>
+  <img src="1.5.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.5.jpg" width="494" height="555"> </i></font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><i>Рис. 1.5. Страница с 
+  разделом Support фирмы MathWorks</i></font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  <font size="4"><a name="17"></a> MATLAB в образовании</font> </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  Как уже отмечалось, MATLAB широко используется в технике, науке и образовании.<br>
+  <img src="1.6.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.6.jpg" width="502" height="551"> </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"> <i>Рис. 1.6. Web-страница, 
+  посвященная использованию MATLAB в образовании</i></font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><i><br>
+  <img src="1.7.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.7.jpg" width="500" height="375"> </i></font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><i>Рис. 1.7. Web-страница, 
+  посвященная книгам по системе MATLAB</i></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  В качестве примера на рис. 1.6 показана web-страница, иллюстрирующая применение 
+  MATLAB в образовании. На этой странице сообщается о существовании студенческих 
+  версий системы MATLAB и специальных академических лицензий для приобретения 
+  MATLAB работниками науки и образования по льготным ценам.<br>
+  <img src="1.8.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.8.jpg" width="500" height="375"> </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><i>Рис. 1.8. Фрагмент web-страницы 
+  </i></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  На одной из страниц (рис. 1.7) можно найти данные о публикациях по системе MATLAB. 
+  (всех версий). Уже из начала этой страницы видно, что число опубликованных книг 
+  по этой системе и ее компонентам и расширениям превышает 400. Это говорит об 
+  огромном интересе к системе MATLAB во всем мире.<br>
+  Книги классифицируются по отношению к тому или иному компоненту системы. Есть 
+  и раздел по книгам на разных языках (не на английском). Увы, в разделе по русскоязычным 
+  книгам имеется только одна книга, показанная на странице, приведенной на рис. 
+  1.8.<br>
+  На сайте фирмы можно найти информацию как о программных продуктах фирмы, так 
+  и о пакетах ее расширения, примеры решения различных задач и т. д. </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><font size="4"><br>
+  <a name="18"></a> Обновление системы MATLAB через Интернет</font> </font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Интернет позволяет производить обновление программных продуктов. Так, обратившись 
+  на сайте фирмы Math Works к странице Downloads (рис. 1.9), вы получите доступ 
+  к FTP (File Transfer Protocol) серверу фирмы Math Works и сможете загрузить 
+  студенческую версию системы MATLAB.<br>
+  <img src="1.9.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.9.jpg" width="502" height="551"> </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"> <i>Рис. 1.9. Web-страница 
+  с анкетой, открывающей доступ к разделу Downloads (перекачка файлов)</i></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Можно также получить версии системы с ограниченным 30 днями сроком действия 
+  — Trial (Пробные). Однако следует отметить, что перекачка даже упрощенных версий 
+  системы по нашему Интернету — большая проблема, поскольку файлы системы очень 
+  громоздки, и надо много часов для их перекачки. Вы можете заказать у фирмы компакт-диски 
+  с системой. Таким же образом делается обновление прежних версий системы, например 
+  MATLAB 5.3.1 до новейшей версии 6.0.<br>
+  Некоторые пользователи ухитряются растягивать время работы с демонстрационной 
+  (и вполне работоспособной) версией MATLAB, переводя часы компьютера на то время, 
+  в течение которого доступ к этой версии открыт. Судя по тому что MathWorks снисходительно 
+  смотрит на это (допуская такую возможность), то для многих это и впрямь неплохой 
+  способ продлить удовольствие от общения с системой MATLAB на длительное время. 
+  Однако надо помнить, что в этом случае вы уже лишаетесь официальной технической 
+  и прочей поддержки фирмы MathWorks. Да и неудобств от этого более чем достаточно. 
+  Не говоря уже о моральной ущербности такого трюка.<br>
+  </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"> <font size="4"><a name="19"></a> 
+  Доступ к FTP-серверу фирмы MathWorks</font> </font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"> <br>
+  Еще одна полезная услуга — доступ к FTP-серверу фирмы MathWorks, на котором 
+  хранится великое множество файлов системы MATLAB и файлов с примерами ее применения. 
+  Рис. 1.10 показывает одну из страниц FTP-сервера с файлами раз-тела Toolbox 
+  системы MATLAB. В этом разделе имеется множество папок с фай-ами. Адрес этой 
+  страницы виден в поле адресов браузера.<br>
+  <img src="1.10.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.10.jpg" width="494" height="555"> </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"> <i>Рис. 1.10. Страница 
+  FTP-сервера фирмы MathWorks</i></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Процесс загрузки файлов хорошо известен пользователям Интернета, и нет смысла 
+  описывать его в деталях. Ограничимся примером, показывающим, как можно скачать 
+  файл одной из функций Бесселя (рис. 1.11). Этот файл сразу же загружается в 
+  редактор m-файлов системы MATLAB и готов к немедленному использованию. Фактически 
+  это означает возможность расширения и модификации системы через Интернет.<br>
+  Эта возможность полезна и в том случае, если вы случайно стерли или неудачно 
+  модифицировали какой-то из m-файлов системы. Вы можете получить из Интернета 
+  его оригинальную копию и восстановить работу вашей системы MATLAB.<br>
+  <img src="1.11.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.11.jpg" width="381" height="162"> </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"> <i>Рис. 1.11. Пример перекачки 
+  m-файла системы MATLAB прямо в редактор т-файлов</i></font></p>
+<p><font size="3" face="Times New Roman, Times, serif"><br>
+  <font size="4"><a name="20"></a> Данные о системных ресурсах и пакетах расширения</font></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Если вас интересуют данные о системных ресурсах или пакетах расширения системы 
+  MATLAB, то их тоже нетрудно получить из Интернета. <br>
+  Страница, показанная на рис. 1.12, дает представление о всех продуктах и услугах 
+  фирмы Math Works. Она открывается исполнением команды Product в позиции Web 
+  меню системы MATLAB 6.0.<br>
+  На этой странице есть и данные о многочисленных пакетах расширения системы MATLAB 
+  6.0.<br>
+  Приведенных данных достаточно для знакомства с Web-узлом фирмы MathWorks и оценки 
+  предлагаемых ею услуг по получению и сопровождению программных продуктов.<br>
+  Версии Windows 98, Millennium Edition, NT4,2000, как и Windows 95 OSR2 и старше, 
+  поступают к вам с уже установленным программным обеспечением OpenGL. Но для 
+  того, чтобы использовать новый, впервые введенный в MATLAB 6 режим рендеринга 
+  графики Open GL, на компьютеры Windows 95 версий ниже OSR2 вам необходимо предварительно 
+  установить программное обеспечение Open GL.</font><font size="3" face="Times New Roman, Times, serif"><br>
+  Это можно сделать, скачав программу с FTP-сервера фирмы Microsoft_ftp:// ftp.microsoft.com/softlib/msfiles/opengl95.exe 
+  или зайдя на web-узел поддерживаемой Silicon Graphics организации Open GL Foundation.www.sgi.com. 
+  С MATLAB 6 проверено программное обеспечение Open GL Microsoft для Windows 95 
+  и NT, CosmoGL (версия Open GL компании Cosmo Software — дочерней фирмы Silicon 
+  Graphics) и совместимое с OpenGL программное обеспечение Mesa (www.mesa3d.org).<br>
+  <img src="1.13.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/1.13.jpg" width="502" height="551"> </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"> <i>Рис. 1.12. Web-страница 
+  с данными о продукции фирмы MathWorks</i></font></p>
+<p align="justify"><font size="3" face="Times New Roman, Times, serif"><br>
+  Но даже.если вы имеете Windows95 OSR2 и старше, вам есть смысл зайти на web-узел 
+  www.sgi.com. Там вы сможете установить последние драйверы Open GL для своих 
+  видеокарт (в том числе и интегрированных в материнские платы), даже если вы 
+  не знаете точное название своей видеокарты.<br>
+  Теперь для того, чтобы MATLAB 6 могла ненавязчиво продемонстрировать свои новые 
+  эффекты трехмерной графики в стиле «Терминатора» и «Парка Юрского периода», 
+  вам достаточно щелкнуть на кнопках управления вашей версии Windows Пуск &gt; 
+  Настройка &gt; Панель управления &gt; Экран &gt; Настройка &gt; Цветовая палитра 
+  &gt; True Color. Приключения начинаются! </font></p>
+<p><font size="3" face="Times New Roman, Times, serif"> <b><font size="4"><a name="21"></a> 
+  Что нового мы узнали?</font></b><br>
+  В этом уроке мы научились: </font></p>
+<ul>
+  <li><font size="3" face="Times New Roman, Times, serif">Разбираться в особенностях 
+    различных версий системы MATLAB.
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Понимать возможности 
+    систем класса MATLAB и их интеграции с другими программными системами.
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Искать техническую 
+    документацию по системе.
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Использовать Интернет-страницы 
+    фирмы Math Works, Inc.
+    </font></li>
+  <li><font size="3" face="Times New Roman, Times, serif"> Готовить свой компьютер 
+    к использованию новых эффектов трехмерной графики MATLAB 6.</font></li>
+</ul>
+</body>
+
+</html>

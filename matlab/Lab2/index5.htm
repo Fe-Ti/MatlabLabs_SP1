@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+
+<title>№</title>
+
+<style>
+<!--
+
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab2/Fon.jpg*//*tpa=http://orloff.am.tpu.ru/matlab/Lab2/Fon.jpg*/);
+}
+.style1 {color: #0033CC}
+.style3 {
+	color: #0033CC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+-->
+</style>
+
+<link href="styles.css" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body lang=RU>
+<span class="style3">4. Численное решение нелинейных уравнений</span>
+<p align="justify"><span class="style1"> </span>  Задача нахождения корней нелинейных уравнений встречается в различных областях научно-технических исследований. Проблема формулируется следующим образом. Пусть задана непрерывная функция f(x) и требуется найти корень уравнения</p>
+<p align="center"><strong> f(x) = 0.</strong></p>
+<p align="justify"> Будем предполагать, что имеется интервал изменения х [a; b], на котором необходимо исследовать функцию f(x) и найти значение х0, при котором f(x0) равно или весьма мало отличается от нуля.</p>
+<p align="justify"> Данная задача в системе MATLAB может быть решена следующим образом. Вначале необходимо построить график функции f(x) на заданном интервале и убедиться в существовании корня или нескольких корней. Затем применить программы поиска корней. Если существует один корень и график f(x) пересекает ось ох, то можно применить программу <strong class="style5">fzero</strong>.  Программа fzero использует известные численные методы: деление отрезка пополам, секущей и обратной квадратичной интерполяции.</p>
+<p><span class="style1">Пример. </span>Найти корень нелинейного уравнения </p>
+<p align="center"><strong>10х + 2х – 100 = 0 </strong></p>
+<p>на отрезке [1.5; 2.5].</p>
+<p>  <img src="index5.files/001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index5.files/001.gif" width="518" height="328">  </p>
+<p align="justify">Появляется окно с графиком функции 10х + 2х – 100, из которого следует, что корень функции на заданном интервале существует. Для точного определения корня применяем функцию <strong>fzero</strong>.</p>
+<p align="justify"><img src="index5.files/002.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index5.files/002.gif" width="559" height="271"></p>
+<p align="justify">Естественно, для работы данной программы нам понадобится m-функция:</p>
+<p align="justify"><img src="index5.files/003.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab2/index5.files/003.gif" width="518" height="198"> </p>
+<p align="justify"><em>Результат</em>: X = 1.9824</p>
+<hr>
+<p align="justify">В более общем случае функция <strong>fzero()</strong> имеет следующие реализации:</p>
+<p align="justify" class="style2"> fzero('f(х)', х)<br>
+  fzero('f (х)', [xl, х2])  </p>
+<p align="justify"> Здесь приняты следующие обозначения:</p>
+<ul>
+  <li> 'f(х)' — решаемое уравнение, взятое в одиночные кавычки;</li>
+  <li> х — начальное приближение (значение) искомого корня;</li>
+  <li> [x1, х2]—область изоляции корня.</li>
+</ul>
+<p align="justify">Например, для решения данной задачи мы могли бы написать</p>
+<p align="justify" class="style2">X = fzero ( '10.^x + 2.*x - 100.0', 2) </p>
+<p align="justify">Очевидно, что в данном случае файл-функция не требуется. </p>
+</body>
+
+</html>

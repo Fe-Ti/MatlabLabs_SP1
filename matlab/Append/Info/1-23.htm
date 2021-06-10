@@ -1,0 +1,138 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+      <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 22. Поддержка звуковой системы </a></font></b> </li>
+    <ul>
+      <li><font face="Times New Roman CYR" size=3><a href="#2">Средства работы со звуком </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#3">Демонстрация возможностей работы со звуком </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#4">Что нового мы узнали? </a></font> </li>
+    
+</ul></ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №22.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Поддержка звуковой системы</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Средства работы со звуком</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Демонстрация возможностей работы со звуком</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Этот небольшой урок посвящен довольно экзотической возможности математической системы
+МАТLАВ — работе со звуком. Стоит напомнить, что для этого компьютер должен быть оснащен звуковой картой и звуковыми колонками. Средства поддержки звука в
+МАТLАВ имеют рудиментарный характер, но все же они есть и позволяют разнообразить выполнение некоторых примеров.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Средства 
+  работы со звуком</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Начиная с версии МАТЬАВ 5.0 в системе несколько расширены средства для работы со звуком. До этого система имела единственную звуковую команду:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">sound(Y.Р5) — воспроизводит сигнал из вектора У с частотой дискретизации Р5 с помощью колонок, подключенных к звуковой карте компьютера. Компоненты У могут принимать значения в следующих пределах -1.0&lt;=у&lt;=1.0. Для воспроизведения стереозвука на допускающих это компьютерных платформах У должен быть матрицей размера <I>Мх2;</I></font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;sound(Y) — функционирует аналогично, принимая частоту дискретизации по умолчанию равной 8192 Гц;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">sound(Y,РS.ВIТS) — функционирует аналогично с заданием разрядности звуковой карты: ВIТS=8 или ВIТ=16.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Теперь появились дополнительные команды воспроизведения звука:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">sound(Y,...) — масштабирует и воспроизводит сигнал из массива У: По синтаксису команда аналогична-sound(
+    Y,...);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">soundsc(Y ,...,SLIМ) — аналогична предшествующей команде, но позволяет задать параметр
+    SLIМ = [MIN(Y) MAX(Y)], определяющий тот диапазон значений
+    Y, который будет соответствовать полному динамическому диапазону звука. По умолчанию
+    SLIМ = [МIN(Y)&nbsp; МАХ(У)].</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Bеер оn или off
+    — соответственно разрешает или запрещает гудок;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;s=bеер — возвращает состояние
+    оn|off</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;bеер — при
+    s=оn издает гудок.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Кроме того, введены команды для считывания и записи файлов звукового формата .WAV, стандартного для операционных систем класса
+Windows</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">wavwrite(Y,WAVEFILE_Е) — записывает файл типа
+    WAVE под именем WAVELIFE. Данные по каждому каналу в случае стерео записывются в разных столбцах массива. Величины должны быть в диапазоне
+    [-1; 1];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">wavwrite(Y.FS.WAVEFILE) — делает то же с заданием частоты дискретизации FS
+    </font><font face="Times New Roman" size="3">(в герцах);&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">wavwrite(Y,FS,NBITS,WAVEFILE) — делает то же с заданием числа бит на отсчет</font>
+    <font face="Times New Roman" size="3">NBITS, причем NBITS&lt;=16;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Y=wavread(FILE) — считывает файл типа WAVE с именем FILE и возвращает данные в массиве
+    Y;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[Y,FS,BITS]=wavread(FILE) — считывает файл типа WAVE с именем FILE и возвращает массив данных Y, частоту дискретизации FS (в герцах) и разрядность BITS кодирования звука (в битах);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[...]=wavread(FILE.N) — возвращает только первые N отсчетов из каждого канала файла;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[...]=wavread(FILE, [N1 N2]) — возвращает только отсчеты с номерами от N1 до N2 из каждого канала;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">SIZ=wavread(FILE, 'size') — возвращает объем аудиоданных в виде вектора SIZ=[samples channels] (samples — число отсчетов, channels — число каналов);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">auwrite - записывает файл в соответствии со звуковым форматом фирм Sun и Next; auread воспроизводит файлы в MATLAB 6 на Sun и в MATLAB 5 на
+    Next.</font></li>
+</ul>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a> Демонстрация 
+  возможностей работы со звуком</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="3">Эта команда служит для 
+  комплексной демонстрации возможностей работы со звуком. Она выводит диалоговое 
+  окно, которое позволяет выбрать несколько видов звукового сигнала, создать для 
+  них массив данных звука и воспроизвести звук (если компьютер оснащен звуковой 
+  картой, совместимой с Sound Вlastеr).</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Кроме того, имеется возможность 
+  графически отобразить временную зависимость звукового сигнала, его частотный 
+  спектр и спектрограмму.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Еще один весьма наглядный 
+  способ представления массива данных звуковых сигналов — это показ их <I>спектрограммы. 
+  </I>Звуковой сигнал при этом делится на множество фрагментов, а спектрограмма 
+  дает представление о распределении частот спектра в разные моменты времени. 
+  Представление о том, насколько любопытной бывает спектрограмма сложного звукового 
+  сигнала, можно получить на примере рис. 22.3. Подобные спектрограммы могут быть 
+  использованы при разработке методов распознавания звуков.</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Демонстрационные примеры можно просмотреть с помощью команды type xpsound. Вы получите доступ к более подробной информации по работе со звуком в системе
+MATLAB.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a> Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Использовать средства работы со звуком.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Запускать демонстрационные примеры работы со звуком.</font></li>
+</ul>
+</BODY>
+</HTML>
+

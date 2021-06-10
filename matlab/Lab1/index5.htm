@@ -1,0 +1,271 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Лабораторная работа</title>
+<base target="_self">
+<style type="text/css">
+<!--
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab1/Fon.jpg*//*tpa=http://orloff.am.tpu.ru/matlab/Lab1/Fon.jpg*/);
+}
+.style1 {font-weight: bold}
+.style2 {
+	color: #990066;
+	font-weight: bold;
+}
+.style3 {color: #FF0000}
+.style4 {color: #0000FF}
+.стиль1 {
+	color: #006633;
+	font-style: italic;
+}
+.стиль2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+-->
+</style>
+</head>
+
+</head>
+
+<body bgcolor="#E7E3E7">
+
+<h3 class="style1">5. Индивидуальное задание </h3>
+
+<p align="justify">Дан ряд  (см. ваш <a href="index6.htm" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index6.htm">вариант</a>) <img src="index5.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image001.gif" width="77" height="60" align="absmiddle"> . Найти сумму ряда аналитически. Вычислить значения частичных сумм ряда</p>
+<p align="center">  <img src="index5.files/image002.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image002.gif" width="104" height="60" align="absmiddle"> </p>
+<p align="justify">и найти величину погрешности при значениях N={10<sup>2</sup>, 10<sup>3</sup>, 10<sup>4</sup>, 10<sup>5</sup>} . Определить количество верных цифр результатов.</p>
+<p><strong>Порядок решения задачи. </strong></p>
+<div align="justify">В MATLAB существует множество способов решения данной задачи, мы рассмотрим только один из них. Вначале вам следует повторить пример. Затем решить свою задачу. При этом следует <span class="style4">копировать в текстовый файл (например WORD или Блокнот) <strong>из командного окна</strong> все вычисления и результаты по каждому пункту, с целью продолжения работы на следующем занятии или дома и в дальнейшем составлении отчета.
+</span></div>
+<p><span class="style2">1.</span> Найдем сумму ряда S аналитически с использованием средств Matlab.</p>
+<p class="style3">&gt;&gt; syms n<br>
+  &gt;&gt; S_inf=symsum(3/(n^2+5*n+6),n,0,inf)<br>
+  S_inf =<br>
+  3/2<br>
+&gt;&gt; </p>
+<p class="style1">Пояснения:</p>
+<p align="justify">а) в MATLAB, как и в других аналогичных системах, сумма от ноля до бесконечности может быть вычислена только аналитически; с этой целью необходимо определить переменную суммирования (в нашем случае <strong>n</strong>) с помощью специальной конструкции <strong>syms</strong>;</p>
+<p>б) функция суммирования числовых рядов в MATLAB имеет вид:</p>
+<p class="style1">symsum(a<sub>n</sub>, n, n1, n2)</p>
+<p align="justify">здесь <strong>a<sub>n</sub></strong>- член числового ряда, <strong>n</strong> - переменная суммирования, <strong>n1</strong> - начальное значение переменной суммирования, <strong>n2</strong> - конечное значение переменной суммирования;</p>
+<p align="justify">в) в нашем случае в качестве <strong>n2</strong> выступает бесконечнось; в MATLAB для обозначения бесконечности используется <em>зарезервированное</em> слово <strong>inf</strong>;</p>
+<p>г) <span class="style3">S_inf = 3/2</span> - так в MATLAB выводится результат расчетов; т.е. сумма ряда равна 1.5;</p>
+<p>д) мы дали переменной, соответствующей сумме бесконечного ряда, имя <span class="style3">S_inf</span>, просто для удобства дальнейшего  использования. <em><strong>Имена переменных, кроме зарезервированных, выбирает пользователь. </strong></em></p>
+<p><span class="style2">2.</span> Для решения задачи сумм нам необходимо знать значение частичных сумм S(N). Решим эту задачу в общем случае:</p>
+<p class="style3">&gt;&gt; syms N<br>
+&gt;&gt; S=symsum(3/(n^2+5*n+6),n,0,N)</p>
+<p>и в результате получим:</p>
+<p>S =<br>
+-3/(N+3)+3/2</p>
+<p>Очевидно, что это означает:</p>
+<p><img src="index5.files/image003.JPG" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image003.JPG" width="144" height="47"> </p>
+<p><span class="style1">Пояснения:</span></p>
+ <p align="justify">а) здесь мы вели еще одну символьную переменную N, поскольку снова выполняли аналитические преобразования; кроме того, данную переменную мы могли бы определить в пункте 1, если бы сразу написали <span class="style3">&gt;&gt; syms n N</span> ; </p>
+ <p>б) в MATLAB переменные <span class="style1">n</span> и <strong>N</strong> <em>различные</em>, т.е. регистр символов имеет значение;</p>
+ <p>в) в ваших задачах могут быть получены более сложные выражения.</p>
+ <p><strong class="style2">3. </strong>Сформируем вектор N={10<sup>2</sup>, 10<sup>3</sup>, 10<sup>4</sup>, 10<sup>5</sup>}. </p>
+<p class="style3">&gt;&gt; N=[10^2, 10^3, 10^4, 10^5]<br>
+  N =<br>
+100 1000 10000 100000<br>
+&gt;&gt;</p>
+<p><span class="style1">Пояснения:</span></p>
+<p>а) операция <span class="style3">^</span> означает возведение в степень;</p>
+<p align="justify">б) в результате применения вышеприведенной команды мы потеряли символьную переменную N, вместо которой теперь мы имеем вектор N из четырех элементов.  </p>
+<p><strong class="style2">4.</strong> Вычислим значения частичных сумм S<sub>i</sub> = S (N<sub>i</sub>) ряда при соответствующих значениях N<sub>i</sub>. </p>
+<p class="style3">&gt;&gt; S=-3.0./(N+3)+3/2<br>
+S =<br>
+1.4709 1.497 1.4997 1.5</p>
+<p>Данный результат необходимо интерпретировать следующим образом:</p>
+<table border="1">
+  <tr>
+    <th scope="col">i</th>
+    <th scope="col">N<sub>i</sub></th>
+    <th scope="col">S(N<sub>i</sub>)</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>100</td>
+    <td><span class="style3">1.4709</span></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1000</td>
+    <td><span class="style3">1.497</span></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>10000</td>
+    <td><span class="style3">1.4997</span></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>100000</td>
+    <td><span class="style3">1.5</span></td>
+  </tr>
+</table>
+<p><span class="style1">Пояснения:</span></p>
+<p align="justify">а) вместо выражения <strong>S(i)=-3.0./(N(i)+3)+3/2</strong> для <em>i=1,2,3,4</em> мы написали <strong>S=-3.0./(N+3)+3/2</strong>; это обычная практика в MATLAB - если в выражении участвует вектор, последовательно вычисляются значения для всех элементов вектора;</p>
+<p align="justify">б) обратите внимание, написано <strong>-3.0./ ...</strong> , а не <strong>-3.0/ ...</strong> ; дело в том, что в MATLAB определены операции сложения или разности вектора с числом, но не определена операция деления числа на вектор [<span class="стиль1">(N+3) есть вектор</span>]; для таких случаев существует операция поэлементного деления <span class="style2">./</span> (точка+слэш); как мы узнаем позднее, такие же особенности присущи и некоторым другим арифметическим операциям с участием векторов; </p>
+<p><span class="style2">5.</span> Для каждой величины S ( N<sub>i</sub>) вычислим абсолютную погрешность <img src="index5.files/image008.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image008.gif" width="17" height="19">. О вычислительных погрешностях см. <a href="zadacha.htm" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.htm">здесь</a>. </p>
+<p>Для вычисления абсолютной погрешности будем использовать встроенную функцию <strong>abs</strong>:</p>
+<p class="style3">&gt;&gt; D=abs(S-3/2)<br>
+D =<br>
+ 0.0291 0.0030 0.0003 0.0000</p>
+<p><span class="style1">Пояснения:</span></p>
+<p>a) поскольку в вычислениях участвует вектор S, в результате мы также получаем вектор из четырех элементов D={0.0291, 0.0030, 0.0003, 0.0000} ;</p>
+<p align="justify">б) это <em><strong>неправильный</strong></em> результат, говорящий нам о том, что при N = 10<sup>5</sup> погрешность вычисления равна нулю; для понимания причин данного результата рассмотрим возможные форматы представления чисел в MATLAB:</p>
+<p align="justify">При вычислениях в MATLAB используется режим двойной точности. Однако, при выводе результатов, по умолчанию выдаются числа с 4 цифрами после десятичной точки в действительной форме. Чтобы изменить данную форму вывода, необходимо в программе перед выводимой величиной использовать команду <span class="style1">format name</span>, где name - имя формата. Для числовых данных name может быть следующим:</p>
+<ul>
+  <li> <strong>short</strong> - короткое представление в фиксированном формате (5 знаков) - <span class="style3">используется по умолчанию</span>;</li>
+  <li><strong>short е</strong> - короткое представление в экспоненциальной форме (5 знаков мантиссы и 3 знака порядка); </li>
+  <li><strong>long</strong> – длинное представление в фиксированном формате (15 знаков); </li>
+  <li><strong>long е</strong> – длинное представление в экспоненциальной форме (15 знаков мантиссы и 3 знака порядка).</li>
+</ul>
+<p align="justify"> В качестве примера рассмотрим 2 числа:
+    
+x = 5/3, y = 1.2783 e - 7</p>
+<table border="1">
+  <tr>
+    <th width="115" scope="col">format</th>
+    <th width="200" scope="col">x</th>
+    <th width="200" scope="col">y</th>
+  </tr>
+  <tr>
+    <td scope="col">format short</td>
+    <td scope="col">1.6667</td>
+    <td>0.0000</td>
+  </tr>
+  <tr>
+    <td>format short e</td>
+    <td>1.6667E+000</td>
+    <td>1.2783E – 007</td>
+  </tr>
+  <tr>
+    <td>format long</td>
+    <td>1.66666666666667</td>
+    <td>0.00000012783000</td>
+  </tr>
+  <tr>
+    <td>format long e</td>
+    <td>1.66666666666667E+000</td>
+    <td>1.27830000000000E – 007</td>
+  </tr>
+</table>
+<p align="justify">  Задание формата сказывается только на форме вывода чисел. Вычисления же происходят в режиме двойной точности, а ввод чисел осуществляется в любом удобном виде.</p>
+<p align="justify">Т.е. мы увидим правильный результат, если введем следующие две строки:</p>
+<p align="justify" class="style3">&gt;&gt; format long<br>
+&gt;&gt; D</p>
+<p align="justify">На экране мы увидим: </p>
+<table border="1">
+  <tr>
+    <th colspan="4" scope="col">D</th>
+  </tr>
+  <tr>
+    <td>0.02912621359223</td>
+    <td>0.00299102691924</td>
+    <td>0.00029991002699</td>
+    <td>0.00002999910003</td>
+  </tr>
+</table>
+<p align="justify">Хотя для отображения погрешности обычно пользуются следующим форматом: </p>
+<p align="justify" class="style3">&gt;&gt; format short e <br>
+&gt;&gt; D</p>
+<p align="justify">На экране мы увидим: </p>
+<table border="1">
+  <tr>
+    <th colspan="4" scope="col">D</th>
+  </tr>
+  <tr>
+    <td>2.9126e-002</td>
+    <td>2.9910e-003</td>
+    <td>2.9991e-004</td>
+    <td>2.9999e-005</td>
+  </tr>
+</table>
+<p>Или, округляя (не в MATLAB) до одной значащей цифры, получим окончательный результат для абсолютной погрешности (в отчете):</p>
+<table border="1">
+  <tr>
+    <td><img src="index5.files/image008.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image008.gif" width="17" height="19"><sub>1</sub></td>
+    <td><img src="index5.files/image008.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image008.gif" width="17" height="19"><sub>2</sub></td>
+    <td><img src="index5.files/image008.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image008.gif" width="17" height="19"><sub>3</sub></td>
+    <td><img src="index5.files/image008.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image008.gif" width="17" height="19"><sub>4</sub></td>
+  </tr>
+  <tr>
+    <td>3*10<sup>-2</sup></td>
+    <td>3*10<sup>-3</sup></td>
+    <td>3*10<sup>-4</sup></td>
+    <td>3*10<sup>-5</sup></td>
+  </tr>
+</table>
+<p><span class="style2">6.</span> Для каждой величины S ( N<sub>i</sub>) вычислим относительную погрешность <img src="index5.files/image007.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image007.gif" width="13" height="20" hspace="0" vspace="0"> и определим количество верных цифр. О вычислительных погрешностях см. <a href="zadacha.htm" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.htm">здесь</a>. </p>
+<p class="style3">&gt;&gt; d=D./1.5</p>
+<p>d =</p>
+<p class="стиль2"> 1.9417e-002 1.9940e-003 1.9994e-004 1.9999e-005</p>
+<p>Далее вам следует самостоятельно округлить полученный результат до одной значащей цифры и заполнить таблицу (в отчете): </p>
+<table border="1">
+  <tr>
+    <td><img src="index5.files/image007.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image007.gif" width="13" height="20" hspace="0" vspace="0"><sub>1</sub></td>
+    <td><img src="index5.files/image007.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image007.gif" width="13" height="20" hspace="0" vspace="0"><sub>2</sub></td>
+    <td><img src="index5.files/image007.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image007.gif" width="13" height="20" hspace="0" vspace="0"><sub>3</sub></td>
+    <td><img src="index5.files/image007.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image007.gif" width="13" height="20" hspace="0" vspace="0"><sub>4</sub></td>
+  </tr>
+  <tr>
+    <td>2*10<sup>-2</sup></td>
+    <td>2*10<sup>-3</sup></td>
+    <td>2*10<sup>-4</sup></td>
+    <td>2*10<sup>-5</sup></td>
+  </tr>
+</table>
+<p><span class="style2">7.</span> Для каждой величины S ( N<sub>i</sub>) определим количество верных цифр. О вычислительных погрешностях см. <a href="zadacha.htm" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.htm">здесь</a>. </p>
+<p>Введем вспомогательный вектор <strong>a</strong>, который в нашем случае примет вид:</p>
+<p class="style3">&gt;&gt; a=[1 1 1 1];</p>
+<p>В ваших вариантах данный вектор будет другим, почему? </p>
+<p>Вычислим количество верных цифр:</p>
+<p class="style3">&gt;&gt; n=1-log10(a.*d)</p>
+<p>n =</p>
+<p> 2.7118e+000 3.7003e+000 4.6991e+000 5.6990e+000</p>
+<p>Здесь <span class="style3">log10</span> - функция вычисения десятичного логарифма, <span class="style3"><strong>.*</strong></span> означает операцию поэлементного умножения двух векторов в отличие от скалярного произведения векторов <span class="style3">*</span>. </p>
+<p>Округлим полученные значения до целых, меньших или равных <strong>n</strong>:</p>
+<p class="style3">&gt;&gt; n=floor(n)</p>
+<p>n =</p>
+<p> 2 3 4 5</p>
+<p><strong class="style2">8.</strong> Запишем численные значения найденных частичных сумм, округлив их до найденного ранее количества верных цифр. </p>
+<p>Для этого  нам необходимы более точные значения частичных сумм:</p>
+<p class="style3">&gt;&gt; format long<br>
+&gt;&gt; S </p>
+<p>S =</p>
+<p> 1.47087378640777 1.49700897308076 1.49970008997301 1.49997000089997</p>
+<p>Окончательно округляем частичные суммы, оставляя только верные цифры:</p>
+<table border="1">
+  <tr>
+    <td>S<sub>1</sub></td>
+    <td>S<sub>2</sub></td>
+    <td>S<sub>3</sub></td>
+    <td>S<sub>4</sub></td>
+  </tr>
+  <tr>
+    <td>1.5<sup></sup></td>
+    <td>1.50</td>
+    <td>1.500</td>
+    <td>1.5000</td>
+  </tr>
+</table>
+<p class="style4">Анализ результатов проведите самостоятельно. </p>
+<p><strong class="style2">9.</strong> Построить график зависимости относительной погрешности в процентах от N. Отформатировать график (он будет являться приложением к отчету):</p>
+<ul>
+  <li>подписать оси координат;</li>
+  <li>нарисовать координатную сетку;</li>
+  <li>дать графику название;</li>
+  <li>и т.д.</li>
+</ul>
+<p class="style2">Дополнительно, по указанию преподавателя.</p>
+<p align="justify"><span class="style4"><strong class="style2">10.</strong> </span>Определить количество верных цифр для частичных сумм, используя понятие абсолютной погрешности (т.е. определение количества верных цифр). Сравнить результаты.</p>
+<p align="justify"><span class="style2">11.</span> Провести анализ рабочей области. Какие характеристики переменных здесь приведены. Привести 1 - 2 примера в отчете. Как добавить или удалить данные столбцы - характеристики (описать в отчете)?</p>
+<p><img src="index5.files/image008.png" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/index5.files/image008.png" width="447" height="256"></p>
+</body>
+
+</html>

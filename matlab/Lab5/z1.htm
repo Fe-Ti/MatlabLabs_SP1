@@ -1,0 +1,655 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Задание1</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:6.0pt;
+	margin-left:0mm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:36.0pt;
+	line-height:150%;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:20.0mm 42.5pt 20.0mm 30.0mm;}
+div.Section1
+	{page:Section1;}
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab5/Fon.jpg*/);
+}
+.style1 {	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #0033CC;
+}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<p class=MsoNormal><span class="style1"><span lang=EN-US style='font-size:12.0pt;font-style: normal'>4.1. Варианты первой задачи</span></span></p>
+
+<p class=MsoBodyText> Построить
+график и вывести в виде таблицы решение задачи Коши на интервале [0; 1] методом
+Рунге-Кутта 4-го порядка.</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;background:#00CCFF;border-collapse:collapse'>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span style='font-size:12.0pt'>№ п/п</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>f(x,y)</span></b></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>y<sub>0</sub></span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>1</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=73 height=24 src="z1.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image001.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span lang=EN-US style='font-size:12.0pt'>0</span><span
+  style='font-size:12.0pt'>.0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>2</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=73 height=24 src="z1.files/image002.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image002.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>3</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=59 height=24 src="z1.files/image003.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image003.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>2.0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>4</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=65 height=29 src="z1.files/image004.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image004.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.3</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>5</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=65 height=29 src="z1.files/image005.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image005.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.4</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>6</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=93 height=24 src="z1.files/image006.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image006.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>7</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=95 height=24 src="z1.files/image007.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image007.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>8</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=68 height=19 src="z1.files/image008.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image008.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.2</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>9</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=89 height=24 src="z1.files/image009.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image009.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.3</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>10</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=89 height=24 src="z1.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image010.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.4</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>11</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=85 height=23 src="z1.files/image011.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image011.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.5</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>12</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=80 height=21 src="z1.files/image012.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image012.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>13</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=91 height=21 src="z1.files/image013.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image013.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.5</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>14</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=51 height=21 src="z1.files/image014.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image014.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.4</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>15</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=67 height=29 src="z1.files/image015.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image015.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.3</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>16</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=73 height=25 src="z1.files/image016.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image016.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.2</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>17</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=99 height=24 src="z1.files/image017.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image017.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>18</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=96 height=24 src="z1.files/image018.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image018.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>19</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=69 height=23 src="z1.files/image019.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image019.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>20</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=65 height=21 src="z1.files/image020.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image020.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.2</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>21</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=71 height=24 src="z1.files/image021.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image021.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.3</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>22</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=65 height=24 src="z1.files/image022.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image022.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.4</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>23</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=67 height=24 src="z1.files/image023.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image023.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.5</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>24</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=87 height=24 src="z1.files/image024.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image024.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.6</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>25</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=52 height=27 src="z1.files/image025.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image025.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.7</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>26</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=73 height=24 src="z1.files/image026.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image026.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>27</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=75 height=24 src="z1.files/image027.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image027.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>28</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=113 height=24 src="z1.files/image028.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image028.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.2</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>29</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><span
+  lang=EN-US><img width=84 height=24 src="z1.files/image029.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image029.gif"></span></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.3</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=57 valign=top style='width:42.55pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><b><span lang=EN-US style='font-size:12.0pt'>30</span></b></p>
+  </td>
+  <td width=162 valign=top style='width:121.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><sub><img width=52
+  height=24 src="z1.files/image030.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/z1.files/image030.gif"></sub></p>
+  </td>
+  <td width=104 valign=top style='width:78.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
+  0mm;line-height:normal'><span style='font-size:12.0pt'>0.4</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+</div>
+
+</body>
+
+</html>

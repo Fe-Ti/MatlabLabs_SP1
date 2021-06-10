@@ -1,0 +1,362 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Задачи на вычислительные погрешности</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0mm;
+	margin-bottom:3.0pt;
+	margin-left:0mm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0mm;
+	margin-bottom:3.0pt;
+	margin-left:0mm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0mm;
+	margin-bottom:3.0pt;
+	margin-left:0mm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;}
+em
+	{font-family:"Times New Roman";}
+p.3, li.3, div.3
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;
+	color:#666699;
+	font-weight:bold;}
+p.1, li.1, div.1
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:12.0pt;
+	margin-left:0mm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	color:#666699;
+	font-weight:bold;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:20.0mm 42.5pt 20.0mm 30.0mm;}
+div.Section1
+	{page:Section1;}
+body {
+	background-image: url("Fon.jpg"/*tpa=http://orloff.am.tpu.ru/matlab/Lab1/Fon.jpg*/);
+}
+.стиль1 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #993300;
+}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<p class=стиль1>ВЫЧИСЛИТЕЛЬНЫЕ ПОГРЕШНОСТИ</p>
+<p class=стиль1>Абсолютная и относительная погрешность</p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#FFCC99'>
+
+<p class=MsoNormal style='text-align:justify;background:#FFCC99;border:none;
+padding:0mm'><b>Определение. </b><i>Приближенным числом </i><sub><img width=15
+height=16 src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> называется число,
+незначительно отличающееся от точного числа <sub><img width=17 height=19
+src="zadacha.files/image002.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image002.gif"></sub> и заменяющее последнее в вычислениях.</p>
+
+</div>
+
+<p class=MsoNormal>Математическая запись <sub><img width=45 height=20
+src="zadacha.files/image003.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image003.gif"></sub></p>
+
+<p class=MsoNormal style='text-align:justify'>Определение. Под абсолютной
+погрешностью &#916; приближенного числа <sub><img width=15 height=16
+src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> понимается разность</p>
+
+<p class=MsoNormal><span lang=EN-US><sub><img width=80 height=28
+src="zadacha.files/image004.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image004.gif"></sub></span></p>
+
+<p class=MsoNormal>Отсюда следует, что <sub><img width=15 height=16
+src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> заключено в пределах</p>
+
+<p class=MsoNormal><sub><img width=133 height=20
+src="zadacha.files/image005.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image005.gif"></sub></p>
+
+<p class=MsoNormal>или</p>
+
+<p class=MsoNormal><sub><img width=76 height=20 src="zadacha.files/image006.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image006.gif"></sub></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#FFCC99'>
+
+<p class=MsoNormal style='text-align:justify;background:#FFCC99;border:none;
+padding:0mm'><b>Определение. </b><i>Относительной погрешностью</i> <sub><img
+width=13 height=20 src="zadacha.files/image007.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image007.gif"></sub> приближенного числа <sub><img
+width=15 height=16 src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> называется отношение
+абсолютной погрешности <sub><img width=17 height=19
+src="zadacha.files/image008.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image008.gif"></sub> этого числа к модулю соответствующего
+точного числа</p>
+
+</div>
+
+<p class=MsoNormal><sub><img width=52 height=53 src="zadacha.files/image009.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image009.gif"></sub></p>
+
+<p class=MsoNormal>Так как <sub><img width=17 height=19
+src="zadacha.files/image002.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image002.gif"></sub> обычно неизвестно, то на практике
+применяют оценку</p>
+
+<p class=MsoNormal><sub><img width=49 height=53 src="zadacha.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image010.gif"></sub></p>
+
+<p class=стиль1>Верные цифры числа</p>
+
+<p class=MsoNormal style='text-align:justify'>Всякое положительное число <sub><img
+width=15 height=16 src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> может быть
+представлено в виде конечной или бесконечной десятичной дроби</p>
+
+<p class=MsoNormal><sub><img width=347 height=28
+src="zadacha.files/image011.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image011.gif"></sub></p>
+
+<p class=MsoNormal>где <sub><img width=17 height=25
+src="zadacha.files/image012.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image012.gif"></sub> - цифра числа <sub><img width=15
+height=16 src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> в <i><span lang=EN-US>i</span></i><span
+lang=EN-US> </span>– м разряде, <i><span lang=EN-US>m</span></i><span
+lang=EN-US> </span>– старший десятичный разряд числа.</p>
+
+<p class=MsoNormal><b><span style='color:#666699'>Пример:</span></b> <sub><img
+width=249 height=24 src="zadacha.files/image013.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image013.gif"></sub></p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#FFCC99'>
+
+<p class=MsoNormal style='background:#FFCC99;border:none;padding:0mm'><b>Определение.
+</b><i>Значащей цифрой</i> приближенного числа <sub><img width=15 height=16
+src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> называется всякая цифра в его
+десятичном представлении, отличная от нуля, и нуль, если он содержится между значащими
+цифраи или является представителем сохраненного десятичного разряда.</p>
+
+</div>
+
+<p class=MsoNormal><b><span style='color:#666699'>Пример.</span></b> <span
+lang=EN-US><sub><img width=15 height=16 src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub></span>=
+0.002080. Здесь только первые три ноля не являются значащими. </p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#FFCC99'>
+
+<p class=MsoNormal style='text-align:justify;background:#FFCC99;border:none;
+padding:0mm'><b>Определение.</b> <i><span lang=EN-US>n</span><span lang=EN-US> </span></i>первых
+значащих цифр приближенного числа <sub><img width=15 height=16
+src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> являются <i>верными</i>, если
+абсолютная погрешность этого числа не превышает половины разряда, выражаемого <i><span
+lang=EN-US>n</span></i><span lang=EN-US> </span>– й значащей цифрой, считая
+слева направо. Цифры, не являющиеся верными, называются <i>сомнительными</i></p>
+
+</div>
+
+<p class=MsoNormal><b><span style='color:#666699'>Пример.</span></b> Если в
+числе <sub><img width=15 height=16 src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub>=
+0.03450 все цифры верные, то <sub><img width=113 height=20
+src="zadacha.files/image014.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image014.gif"></sub>.</p>
+
+<p class=MsoNormal>Таким образом, если для приближенного числа <sub><img
+width=15 height=16 src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> известно, что </p>
+
+<p class=MsoNormal><sub><img width=192 height=48
+src="zadacha.files/image015.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image015.gif"></sub></p>
+
+<p class=MsoNormal>то, по определению, первые <i><span lang=EN-US>n</span></i><span
+lang=EN-US> </span>цифр <sub><img width=121 height=25
+src="zadacha.files/image016.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image016.gif"></sub> этого числа являются верными.</p>
+
+<p class=MsoNormal><b><span style='color:#666699'>Пример. </span></b><sub><img
+width=75 height=20 src="zadacha.files/image017.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image017.gif"></sub>, <sub><img width=77
+height=20 src="zadacha.files/image018.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image018.gif"></sub>. Тогда</p>
+
+<p class=MsoNormal><sub><img width=315 height=49
+src="zadacha.files/image019.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image019.gif"></sub></p>
+
+<p class=MsoNormal style='text-align:justify'>Т.е. <i><span lang=EN-US>m</span></i>-<i><span
+lang=EN-US>n</span></i>+1=-1. Т.к. <i><span lang=EN-US>m</span></i> = 1, то <span
+lang=EN-US>n</span> = 3. Следовательно, приближенное число <sub><img width=15
+height=16 src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub>имеет 3 верных цифры и его
+следует округлить следующим образом: <sub><img width=65 height=20
+src="zadacha.files/image020.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image020.gif"></sub></p>
+
+<p class=стиль1>Связь относительной погрешности с количеством верных знаков числа</p>
+
+<div style='border:solid windowtext 1.0pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#FFCC99'>
+
+<p class=MsoNormal style='text-align:justify;background:#FFCC99;border:none;
+padding:0mm'>Если положительное приближенное число <sub><img width=15
+height=16 src="zadacha.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image001.gif"></sub> имеет относительную
+погрешность <sub><img width=13 height=20 src="zadacha.files/image007.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image007.gif"></sub>,
+то количество верных знаков <i><span lang=EN-US>n</span></i><span lang=EN-US> </span>данного
+числа можно определить по формуле</p>
+
+<p class=MsoNormal style='background:#FFCC99;border:none;padding:0mm'><sub><img
+width=112 height=25 src="zadacha.files/image021.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image021.gif"></sub></p>
+
+<p class=MsoNormal style='background:#FFCC99;border:none;padding:0mm'>и в
+качестве <span lang=EN-US>n</span><span lang=EN-US> </span>взять ближайшее целое
+к <sub><img width=16 height=19 src="zadacha.files/image022.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image022.gif"></sub> число.</p>
+
+</div>
+
+<p class=стиль1>Погрешности арифметических действий</p>
+
+<p class=MsoNormal><sub><img width=255 height=24
+src="zadacha.files/image023.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image023.gif"></sub></p>
+
+<p class=MsoNormal><span lang=EN-US><sub><img width=223 height=52
+src="zadacha.files/image024.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image024.gif"></sub></span></p>
+
+<p class=MsoNormal><span lang=EN-US><sub><img width=128 height=28
+src="zadacha.files/image025.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image025.gif"></sub></span></p>
+
+<p class=стиль1>Общая формула вычисления погрешности</p>
+
+<p class=MsoNormal><sub><img width=265 height=60
+src="zadacha.files/image026.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image026.gif"></sub></p>
+
+<p class=стиль1>Примеры</p>
+
+<p class=MsoNormal><b>Задача 1.</b></p>
+
+<p class=MsoNormal>Округлить сомнительные цифры приближенного числа <span
+lang=EN-US>x</span> с относительной погрешностью <span style='font-family:Symbol'>d</span>,
+оставив в его записи только верные цифры. <i><span lang=EN-US>x</span></i> = 42.221,
+<span style='font-family:Symbol'>d</span> = 0.5%.</p>
+
+<p class=MsoNormal><i>Решение:</i></p>
+
+<p class=MsoNormal>1) Найдем количество верных цифр числа <span lang=EN-US>x</span>:</p>
+
+<p class=MsoNormal><sub><img width=212 height=25
+src="zadacha.files/image027.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image027.gif"></sub></p>
+
+<p class=MsoNormal>Отсюда <i><span lang=EN-US>n</span></i> = 3</p>
+
+<p class=MsoNormal>2) Округляем <i><span lang=EN-US>x</span></i> до трех цифр</p>
+
+<p class=MsoNormal><i><span lang=EN-US>x</span></i><span lang=EN-US> = </span>42<span
+lang=EN-US>.2</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><b>Задача 2.</b></p>
+
+<p class=MsoNormal>Записать формулу для оценки  абсолютной погрешностей функции
+трех переменных:</p>
+
+<p class=MsoNormal><sub><img width=137 height=28
+src="zadacha.files/image028.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image028.gif"></sub>, если <sub><img width=173 height=24
+src="zadacha.files/image029.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image029.gif"></sub></p>
+
+<p class=MsoNormal><i>Решение:</i></p>
+
+<p class=MsoNormal><sub><img width=347 height=119
+src="zadacha.files/image030.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image030.gif"></sub></p>
+
+<p class=MsoNormal><b>Задача 3.</b></p>
+
+<p class=MsoNormal>Дано точное число <span lang=EN-US>b</span> и приближенное
+число <span lang=EN-US>x</span> с погрешностью <sub><img width=17 height=19
+src="zadacha.files/image008.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image008.gif"></sub>. Указать правило оценки абсолютной и
+относительной погрешностей функции: <sub><img width=51 height=28
+src="zadacha.files/image031.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image031.gif"></sub></p>
+
+<p class=MsoNormal><i>Решение:</i></p>
+
+<p class=MsoNormal><sub><img width=197 height=52
+src="zadacha.files/image032.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image032.gif"></sub></p>
+
+<p class=MsoNormal><b>Задача 4.</b></p>
+
+<p class=MsoNormal>Дано число <i>a</i> = 547.78, определенное с абсолютной
+погрешностью <sub><img width=67 height=20 src="zadacha.files/image033.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image033.gif"></sub>.
+Определить количество верных цифр числа а.</p>
+
+<p class=MsoNormal><i>Решение:</i></p>
+
+<p class=MsoNormal>1) Найдем относительную погрешность числа</p>
+
+<p class=MsoNormal><sub><img width=172 height=48
+src="zadacha.files/image034.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image034.gif"></sub></p>
+
+<p class=MsoNormal>2) Найдем количество верных цифр</p>
+
+<p class=MsoNormal><sub><img width=224 height=28
+src="zadacha.files/image035.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image035.gif"></sub></p>
+
+<p class=MsoNormal>Отсюда <i><span lang=EN-US>n</span></i><span lang=EN-US> = </span>4,
+<i><span lang=EN-US>a</span></i><span lang=EN-US> = 547.8</span></p>
+
+<p class=стиль1>Приложение. Производные основных функций</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'>1) <span
+lang=EN-US>const</span><span style='font-family:Symbol'>&cent;</span> = 0;                                      9)
+<span lang=EN-US><sub><img width=99 height=29 src="zadacha.files/image036.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image036.gif"></sub></span>;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'>2) (<span
+lang=EN-US>x<sup>m</sup></span>)<span style='font-family:Symbol'>&cent;</span>
+= <span lang=EN-US>mx<sup>m</sup></span><sup>-1</sup>;                                  10)
+<span lang=EN-US><sub><img width=109 height=29 src="zadacha.files/image037.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image037.gif"></sub></span>;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'>3) <span
+lang=EN-US><sub><img width=87 height=44 src="zadacha.files/image038.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image038.gif"></sub></span>;                                11)
+<span lang=EN-US><sub><img width=99 height=41 src="zadacha.files/image039.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image039.gif"></sub></span>;</p>
+
+<p class=MsoNormal style='text-indent:35.4pt'>4) <span lang=EN-US><sub><img
+width=84 height=52 src="zadacha.files/image040.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image040.gif"></sub></span>;                                 12)
+<span lang=EN-US><sub><img width=115 height=41 src="zadacha.files/image041.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image041.gif"></sub></span>;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'>5) <span
+lang=EN-US><sub><img width=64 height=31 src="zadacha.files/image042.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image042.gif"></sub></span>   ;                                  13)
+<span lang=EN-US><sub><img width=137 height=47 src="zadacha.files/image043.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image043.gif"></sub></span>;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'>6) <span
+lang=EN-US><sub><img width=95 height=31 src="zadacha.files/image044.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image044.gif"></sub></span>;                              14)
+<span lang=EN-US><sub><img width=151 height=47 src="zadacha.files/image045.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image045.gif"></sub></span>;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.4pt'>7) <span
+lang=EN-US><sub><img width=71 height=41 src="zadacha.files/image046.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image046.gif"></sub></span>;                                    15)
+<span lang=EN-US><sub><img width=117 height=41 src="zadacha.files/image047.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image047.gif"></sub></span>;</p>
+
+<p class=MsoNormal style='text-indent:35.4pt'>8) <span lang=EN-US><sub><img
+width=112 height=41 src="zadacha.files/image048.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image048.gif"></sub></span>;                          16)
+<span lang=EN-US><sub><img width=136 height=41 src="zadacha.files/image049.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab1/zadacha.files/image049.gif"></sub></span>.</p>
+
+</div>
+
+</body>
+
+</html>

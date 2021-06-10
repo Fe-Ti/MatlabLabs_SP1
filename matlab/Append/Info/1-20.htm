@@ -1,0 +1,2839 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+      <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 19. Работа с файлами </a></font></b> </li>
+    <ul>
+      <li><font face="Times New Roman CYR" size=3><a href="#2">Открытие и закрытие файлов</a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#3">Операции с двоичными файлами</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#4">Операции над форматированными файлами </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#5">Позиционирование файла</a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#6">Специализированные файлы  </a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#7">Что нового мы узнали? </a></font> </li>
+     
+</ul></ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №19.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Работа с файлами</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Открытие и закрытие файлов&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Операции с двоичными файлами</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Операции над форматированными файлами</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Позиционирование файла&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Специализированные файлы</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Файлы — это довольно распространенные объекты системы MATLAB. О некоторых типах файлов уже говорилось в предшествующих главах. В этом уроке рассматриваются свойства файлов, которые не зависят от их типа и относятся к любым файлам.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Открытие 
+  и закрытие файлов</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3"><I>Файл </I>обычно является некоторой совокупностью данных, объединенных одним именем. Тип файла, как правило, определяется его расширением. Мы рассматриваем файл как некое целое, хотя физически на диске он может быть представлен несколькими областями — говорят, что в этом случае файл фрагментирован.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Перед использованием любого файла он должен быть <I>открыт, </I>а по окончании использования — <I>закрыт. </I>Много файлов может быть открыто и доступно для чтения одновременно. Рассмотрим команды открытия и закрытия файлов.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Команда open имя, где имя должно содержать массив символов или символьную переменную, открывает файлы в зависимости от анализа параметра имя и расширения в имени имя:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">переменная — открывает массив, названный по имени, в редакторе массивов
+        (Array Editor);</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">.mat — открывает файл, сохраняет переменные в структуре в рабочей области;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">.fig — открывает его в редакторе дескрипторонй графики Property
+        Editor;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">.m — открывает m-файл в редакторе-отладчике;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">.mdl - открывает модель в
+        Simulink;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">.р — открывает, если он есть, m-файл с тем же именем;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3"> . html — открывает HTML документ в браузере помощи.</font></li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Если файлы с расширением существуют в пути MATLAB, то открывается тот файл, который возвращается командой which имя, если нет — то файл из файловой системы. Если файл не имеет расширение имени, то он открывается той программой, формат файлов которой был бы обнаружен функцией игпсИГимя файла') По умолчанию для всех файлов с окончаниями, отличными от вышеперечисленных, вызывается openother. Open вызывает функции орепххх, где ххх — расширение файла. Исключение — переменные рабочей области, для которых вызывается openvar, и рисунки, для работы с которыми вызывается openim. Создавая т-файлы с именем орепххх, пользователи могут изменять обработку файлов и добавлять</font>
+<font face="Times New Roman" size="3">новые расширения в список. Закрывать файлы, открытые при помощи open, нужно из редакторов, вызываемых
+ореnххх.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[FILENAME, PATHNAME] = uigetfile(FILTERSPEC. Title). Открывает диалог с именем Title и фильтром FILTERSPEC (например, массивом ячеек, содержащим расширения файлов) и возвращает файл, выбранный пользователем, и путь к нему. Возвращает FILENAME=0, если файл не существует или если пользователь нажал на Cancel. [FILENAME, PATHNAME] = uigetfile (FILTERSPEC, Title. X. Y) размещает окно диалога в точке X, Y (координаты в пикселях).</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">[filename, pathname] = uigetfile('*.m;*.fig;*.mat:*.mdl'. 'All MATLAB Files
+(*.m, *.fig, *.mat. *.mdl)': ...</font><font face="Times New Roman" size="3"><BR>
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[FILENAME, PATHNAME] = uiputfile(FILTERSPEC. TITLE) сохраняет файл в диалоге, управляемом пользователем. Параметры аналогичны таковым в функции
+    </font><font face="Times New Roman" size="3">uigetfile.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Команда ui open открывает диалог, и если пользователь выбрал файл с известным расширением, вызывает его, используя open, или если имя файла имеет неизвестное расширение, то вызывается uigetfile. Входными аргументами uiopen могут быть mat lab, load, figure, simulink, editor. Без входных аргументов или с входным аргументом matlab в окне диалога предлагается выбрать
+    *.m, *.fig, *.mat, </font><font face="Times New Roman" size="3">*.mdl (если Simulink установлен) , * . cdr (если state flow установлен) ,
+    *.rtw,</font> <font face="Times New Roman" size="3">*.tmf, *.tlc, *.c, *.h,
+    *.ads, *.adb (если установлен Real-Time Workshop). С аргументом load —
+    *.mat. С аргументом figure предлагаются *.fig; simul ink —
+    *.mdl, editor - *.m, *.mdt *.cdr, *.rtw, *.tmf, *.tlc, *.c, *.h, *.ads, *.adb.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">uiopen figure.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Команда uiload открывает файл в диалоге, управляемом пользователем, с использованием команды
+    load.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Функция ui import запускает Мастер импорта (Import Wizard), импортирующий из файла в текущей папке или буфера обмена Windows. Она соответствует выбору Import Data из меню File или выбору Paste Special из меню Edit
+MATLAB.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> ui import (FILENAME) — запускает Мастер Импорта, открывая файл FILENAME. Мастер импорта показывает данные для предварительного просмотра. В окне предварительного просмотра появляются данные и их представление в виде переменных MATLAB. Собственно данные, текст и заголовки представляются разными переменными MATLAB. Для данных ASCII вы должны удостовериться, что Мастер импорта распознал разделители столбцов. Самостоятельно он может распознать только символ табуляции, пробел, запятую или точку с запятой. Нужно щелкнуть мышью на кнопке Next и в следующем окне либо подтвердить выбор разделителя, сделанный Мастером, либо выбрать Other и ввести любой разделитель.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">ui import (' -f i le') — вначале выводит диалог выбора файла.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">ui import ('-pastespecial') — вначале выводит для предварительного просмотра содержимое буфера обмена
+    Windows.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">S = ui import (...) хранит результирующие переменные как поля структуры
+    S.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Команда uisave — управляемое пользователем сохранение (команда save описана в уроке 2) с Windows диалогом.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Функция saveas — сохраняет рисунок или модель Simulink в желаемом формате на носителе информации или на устройстве, разрешенном
+    print.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Функция saveas (H, 'FILENAME' ) — сохраняет данные в соответствии с командой дескрипторной графики Н в файле FILENAME. Формат файла определяется расширением имени
+    FILENAME.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Функция saveas (H. 'FILENAME' . 'FORMAT' ) — выполняет то же, но с параметром FORMAT (формат задается тем же способом, что и расширение имени файла и может от него отличаться). FORMAT имеет приоритет перед расширением имени файла. Параметры функции:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">'fig'   — сохранить рисунок (график) в двоичном fig-файле;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">' m ' или ' mf i д ' — сохранить рисунок в двоичном fig-файле и создать
+        m-файл для его загрузки;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">' mmat ' - сохранить рисунок в m-файле как последовательность команд создания рисунка. Может не поддерживать новейшие графические функции.<BR>
+        </font></li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">saveas(gcf. 'output', 'fig') saveasCgcf, 'output',
+'bmp')</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Команда или функция delete удаляет файл или объект графики.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> delete имя файла удаляет файл текущей папки. Может быть использована *. Предпочтительно использование с записью в форме функции
+    delete('mw файла'), когда имя файла — строка.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">delete(H) удаляет графический объект с дескриптором Н. Если этот объект — окно, то оно предварительно закрывается.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Функция close(H) закрывает только графические окна. Для закрытия файлов необходимо использовать команду f
+    close.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Для записи файлов на диск служит команда save, используемая в довольно очевидных формах:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">save</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">save filename     save filename varl var2 ... save ... option   save( ' filename' , ...)</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Соответственно для считывания файлов с диска служит команда
+load:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">load</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">load filename       load filename X Y Z</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">load filename -ascii   load filename -mat</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">S</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В этих командах имя файла указывается по правилам, принятым в операционных системах класса MS-DOS. Эти команды обычно дублируются кнопками панелей инструментов и браузером файлов.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a> Операции 
+  с двоичными файлами</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3"><I>Двоичными, </I>или <I>бинарными, </I>называют файлы, данные которых представляют собой машинные коды. Основные операции с такими кодами перечислены ниже.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">fopen(filename,
+    permission) — открывает файл с именем filename и параметром, определенным в permission, и возвращает идентификатор fid со значением: 0 — чтение с клавиатуры (permission установлено в
+    'r'); 1 — вывод на дисплей (permission установлено в 'а'); 2 — вывод сообщения об ошибке (permission установлен в ' а'); -1 — неудача в открытии файла с выводом сообщения message о типе ошибки. Идентификатор fid часто используется в качестве аргумента другими функциями и программами ввода-вывода. Имя файла filename может содержать путь к файлу.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Если открываемый для чтения файл не найден в текущем каталоге, то функция fopen осуществляет поиск файла по пути, указанном в
+MATLAB.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Параметр permission может принимать одно из следующих основных значений (другие см. в справочной системе):</font>
+</P>
+<ol>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">'r' — открытие файла для чтения (по умолчанию);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">' r+' — открытие файла для чтения и записи;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">'w' — удаление содержимого существующего файла или создание нового и открытие его для записи;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">' а' — создание и открытие нового файла или открытие существующего для
+    </font><font face="Times New Roman" size="3">записи с добавлением в конец файла.</font></li>
+</ol>
+<P align="left">
+<font face="Times New Roman" size="3">Добавление к этой строке ' b' (подразумевается по умолчанию) предписывает системе открыть файл в двоичном режиме.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Добавление же вместо b к этой строке ' t', например ' rt', в операционных системах, которые имеют различие между текстовыми и двоичными файлами, предписывает системе открыть файл в текстовом режиме. Например, во всех версиях MATLAB для Windows/MS-DOS и VMS нельзя открыть текстовый файл без параметра ' rt'. При вводе файлов с использованием fopen в текстовом режиме удаляются все символы &laquo;возврат каретки&raquo; перед символом новой строки.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[fid,message] = fopentfilename.permission,format) — открывает файл, как описано выше, возвращая идентификатор файла и сообщение. Кроме того, значение параметра format позволяет точно определить числовой формат. Возможно 8 форматов, описание которых можно найти в справочной системе. В частности, строка format может иметь значения 'native' (формат компьютера, на котором установлена система), 'vax', 'сгау' (компьютеры VAX и Cray) и т. д.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Определенные вызовы функций fread или fwrite могут отменить числовой формат, заданный при вызове функции
+fopen.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">fids = fopen С all') — возвращает вектор-строку, содержащую идентификаторы всех открытых файлов, не включая стандартные потоки О, 1 и 2. Число элементов вектора равно числу открытых пользователем файлов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[filename,permission,format]
+    -fopen(fid) — возвращает полное имя файла, строку .permission и строку format. При использовании недопустимых значений fid возвращаются пустые строки для всех выходных аргументов.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Команда fclose закрывает файл. Она имеет следующие варианты.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> status = fclose(fid) — закрывает файл, если он открыт. Возвращает статус файла status, равный 0, если закрытие завершилось успешно, и -1 в противном случае. Аргумент fid — это идентификатор, связанный с открытым файлом (см. функцию fopen для более подробного описания);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">status = fclose( 'all') закрывает все открытые файлы. Возвращает 0 в случае успешного завершения и -1 — в противном случае.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Пример открытия и закрытия файла:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fid=fopen('c:\ex'.'а+') fid = 4</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; fclose(4)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left"><font size="3" face="Courier New">0</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[A,count] = fread(fid,size,precision) — считывает двоичные данные из заданного файла и помещает их в матрицу А. Выходной аргумент count содержит число удачно считанных элементов. Значение идентификатора fid — это целое число, возвращенное функцией fopen; size — аргумент, определяющий количество считываемых данных. Если аргумент size не определен, функция f read считывает данные до конца файла.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Используются следующие параметры
+size:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">n — чтение n элементов в вектор-столбец;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;inf — чтение элементов до конца файла и помещение их в вектор-столбец, содержащий такое же количество элементов, что и в файле;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[m.n] — считывает столько элементов, сколько нужно для заполнения матрицы <I>тхп.</I></font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Заполнение происходит по столбцам. Если элементов в файле мало, то матрица дополняется нулями. Если считывание достигает конца файла, не заполнив матрицу необходимого размера, то матрица дополняется нулями. Если происходит ошибка, чтение останавливается на последнем считанном значении. Параметр precision — строка, определяющая числовую точность считывания значений, она контролирует число считанных бит для каждого значения и интерпретирует эти биты как целое число, число с плавающей запятой или как символ</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[A.count] = fread(fid,size.precision,skip) — включает произвольный аргумент skip, который определяет число байтов, которые необходимо пропустить после каждого считывания. Это может быть полезно при извлечении данных г несмежных областях из записей фиксированной длины. Если precision имеет битовый формат, такой как 'bitN<SUP>1</SUP> или 'ubitN', значение skip определяется <I>~ </I>битах. Обширный список возможных значений параметра precision можн найти в справочной системе
+    MATLAB;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">count=fwrite(fid,A,precision) — записывает элементы матрицы А в файл, представляя их с заданной точностью. Данные записываются в файл по столбцам, выходной аргумент count содержит число удачно записанных элементов. Значение идентификатора fid — это целое число, полученное при использовании функции f open. Добавляет символы &laquo;возврат каретки&raquo; перед началом новой строки;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">count=fwrite(fid.A,precision,skip) — делает то же, но включает произвольный аргумент skip, который определяет число байтов, которые надо пропустить перед каждой записью. Это полезно при вставке данных в несмежные области в записях фиксированной длины. Если precision имеет битовый формат, такой как 'bitN' или 'ubitN', значение skip определяется в битах.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fid = fopen('c:\prim','а+')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> fid =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; A=magic(7)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">А =</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="302" HEIGHT="111">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">30<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">39<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">48<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">10<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">19<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">28<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">38<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">47<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">9<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">18<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">27<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">29<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">46<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">17<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">26<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">35<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">37<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">16<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">25<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">34<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">36<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">45<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="15">
+<DIV WIDTH="33" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">24<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">33<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">42<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">44<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="15">
+<DIV WIDTH="33" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">21<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">23<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">32<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">41<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">43<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">12<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">22<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">31<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">40<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">49<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">11<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">20<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Courier New">&raquo; count = fwrite(j.A)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> count =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">49</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; status=fclose(3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> status =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fid&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;fopen('c:\prim'.'r')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> fid =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [B,count] = fread(3.[7.7])&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> В=</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="301" HEIGHT="110">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">30<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">39<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">48<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">1<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">10<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">19<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">28<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="15">
+<DIV WIDTH="32" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">38<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">47<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="15">
+<DIV WIDTH="48" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">7<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">9<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="15">
+<DIV WIDTH="46" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">18<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">27<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="15">
+<DIV WIDTH="33" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">29<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">46<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">6<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">8<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">17<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">26<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">35<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">37<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">5<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">14<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">16<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">25<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">34<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">36<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">45<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="15">
+<DIV WIDTH="32" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">13<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">15<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="15">
+<DIV WIDTH="48" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">24<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">33<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="15">
+<DIV WIDTH="46" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">42<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="15">
+<DIV WIDTH="47" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">44<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="15">
+<DIV WIDTH="33" HEIGHT="15">
+<P align="left">
+<font size="3" face="Courier New">4<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="15">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">21<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">23<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">32<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">41<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">43<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">3<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">12<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="32" HEIGHT="16">
+<DIV WIDTH="32" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">22<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">31<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="48" HEIGHT="16">
+<DIV WIDTH="48" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">40<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">49<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="46" HEIGHT="16">
+<DIV WIDTH="46" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">2<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="47" HEIGHT="16">
+<DIV WIDTH="47" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">11<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="33" HEIGHT="16">
+<DIV WIDTH="33" HEIGHT="16">
+<P align="left">
+<font size="3" face="Courier New">20<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="16">
+<p align="left">
+</TD>
+</TR>
+<TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font size="3" face="Courier New">count =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 49</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a> Операции 
+  над форматированными файлами</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Файлы, содержащие форматированные данные, называют <I>форматированными файлами. </I>Ниже представлены функции, которые служат для работы с такими файлами.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> line = fgetl (fid) — возвращает строку <I>из </I>файла с идентификатором fid с удалением символа конца строки. Если функция fgetl обнаруживает конец файла, то она возвращает значение -1 (см. функцию fopen с более подробным описанием
+    fid);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> line = f gets (fid) — возвращает строку из файла с идентификатором fid, не удаляя символ конца строки. Если функция fgets обнаруживает конец файла, то она возвращает значение -1;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> line = fgets(fid.nchar) — возвращает не больше чем nchar первых символов строки. После признака конца строки или конца файла никакие дополнительные символы не считываются (см. примеры к функции
+    fscanf);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> count = fprintf(fid.format,A....) — форматирует данные, содержащиеся в действительной части матрицы А, под контролем строки format и записывает их в файл с идентификатором fid. Функция fprintf возвращает число записанных байтов. Значение идентификатора fid — целое число, возвращаемое функцией
+    fopen.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Если опустить идентификатор fid в списке аргументов функции fprintf, то вывод будет осуществляться на экран, так же как при использовании стандартного вывода
+(fid=l).</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">fprintf(format,A....) — запись осуществляется на стандартное устройство — экран (но не в файл). Строка format определяет систему счисления, выравнивание, значащие цифры, ширину поля и другие атрибуты выходного формата. Она может содержать обычные буквы алфавита наряду со спецификаторами, знаками выравнивания и т. д.</font></li>
+</ul>
+<P align="left"> <B><font face="Times New Roman" size="3"><i>Таблица 19.1. </i></font> 
+  </B><i><font face="Times New Roman" size="3">Специальные символы в строках формата</font> 
+  </i></P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="412" HEIGHT="161">
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="19">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="85" HEIGHT="19">
+<DIV WIDTH="85" HEIGHT="19">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Символ<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="510" HEIGHT="19">
+<DIV WIDTH="510" HEIGHT="19">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Описание<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="21">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="85" HEIGHT="21">
+<DIV WIDTH="85" HEIGHT="21">
+<P align="left">
+<font face="Times New Roman" size="3">\n<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="510" HEIGHT="21">
+<DIV WIDTH="510" HEIGHT="21">
+<P align="left">
+<font face="Times New Roman" size="3">Новая строка<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="9">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="85" HEIGHT="9">
+<DIV WIDTH="85" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">\t<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="510" HEIGHT="9">
+<DIV WIDTH="510" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Горизонтальная табуляция<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="85" HEIGHT="18">
+<DIV WIDTH="85" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">\b<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="510" HEIGHT="18">
+<DIV WIDTH="510" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Возврат на один символ<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="85" HEIGHT="18">
+<DIV WIDTH="85" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">\r</font><font face="Times New Roman" size="3"><BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="510" HEIGHT="18">
+<DIV WIDTH="510" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Возврат каретки<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="85" HEIGHT="17">
+<DIV WIDTH="85" HEIGHT="17">
+<P align="left">
+<font face="Times New Roman" size="3">\f</font><font face="Times New Roman" size="3"><BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="510" HEIGHT="17">
+<DIV WIDTH="510" HEIGHT="17">
+<P align="left">
+<font face="Times New Roman" size="3">Новая страница<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="85" HEIGHT="18">
+<DIV WIDTH="85" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">\\<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="510" HEIGHT="18">
+<DIV WIDTH="510" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Обратный слеш<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="85" HEIGHT="18">
+<DIV WIDTH="85" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">\&quot; или &quot;<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="510" HEIGHT="18">
+<DIV WIDTH="510" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Одиночная кавычка<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="23">
+<p align="left">
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="85" HEIGHT="23">
+<DIV WIDTH="85" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3">%%<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="510" HEIGHT="23">
+<DIV WIDTH="510" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3">Процент<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font face="Times New Roman" size="3">Функция fprintf ведет себя, как аналогичная функция fprintf О языка ANSI С и с некоторыми исключениями и расширениями. В табл. 19.1 описаны специальные символы, встречающиеся в строке format. Для вывода числовых или символьных данных в строке формата необходимо использовать <I>спецификаторы, </I>перечисленные в табл. 19.2.</font>
+</P>
+<P align="left">
+<B><i><font face="Times New Roman" size="3">Таблица 19.2. </font></i> </B><i><font face="Times New Roman" size="3">Спецификаторы формата вывода данных</font></i>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="550" HEIGHT="548">
+  <TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="40">
+<DIV WIDTH="121" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Спецификатор<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="40">
+<DIV WIDTH="494" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Описание<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="40">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="21">
+<font face="Times New Roman" size="3">&nbsp;%d</font>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="21">
+<font face="Times New Roman" size="3"> Десятичная система обозначений (со знаком)</font>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="21">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="21">
+<font face="Times New Roman" size="3">*с</font>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="21">
+<font face="Times New Roman" size="3">Одиночный символ</font>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="21">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="42">
+<DIV WIDTH="121" HEIGHT="21">
+<P align="left">
+<font face="Times New Roman" size="3">%е
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="42">
+<DIV WIDTH="494" HEIGHT="21">
+<P align="left">
+<font face="Times New Roman" size="3">Экспоненциальное представление чисел с использованием символа &laquo;е&raquo; в нижнем</font>
+<font face="Times New Roman" size="3">регистре, например 3.1415е + 00</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="21">
+<p align="left">
+</TD>
+</TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="21">
+<p align="left">
+</TD>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="40">
+<DIV WIDTH="121" HEIGHT="16">
+<P align="left">
+<font face="Times New Roman" size="3">%Е</font>
+</P>
+</DIV>
+</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="40">
+<DIV WIDTH="494" HEIGHT="16">
+<P align="left">
+<font face="Times New Roman" size="3">Экспоненциальное представление чисел с использованием символа &laquo;Е&raquo; в верхнем</font>
+<font face="Times New Roman" size="3">регистре, например 3.1415Е + 00</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="55">
+<p align="left">
+</TD>
+</TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="1">
+<p align="left">
+</TD>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="40">
+<DIV WIDTH="121" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%f<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="40">
+<DIV WIDTH="494" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Система обозначений с фиксированной точкой<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="40">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="59">
+<DIV WIDTH="121" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%g<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="59">
+<DIV WIDTH="494" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Наиболее компактный вариант из %е и %f. Незначащие нули не выводятся<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="59">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="59">
+<DIV WIDTH="121" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%G<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="59">
+<DIV WIDTH="494" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">То же самое, что и %д, но используется верхний регистр для символа &laquo;Е&raquo;<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="59">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="40">
+<DIV WIDTH="121" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%о<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="40">
+<DIV WIDTH="494" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Восьмеричная система обозначений (без знака)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="40">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="40">
+<DIV WIDTH="121" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%s<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="40">
+<DIV WIDTH="494" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Строка символов<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="40">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="40">
+<DIV WIDTH="121" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%u<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="40">
+<DIV WIDTH="494" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Десятичная система
+обозначений (без знака)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="40">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="1">
+<DIV WIDTH="121" HEIGHT="16">
+<P align="left">
+<font face="Times New Roman" size="3">%x<BR>
+</font>
+</P>
+</DIV>
+<DIV WIDTH="121" HEIGHT="17">
+<P align="left">
+<font face="Times New Roman" size="3">
+<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="1">
+<DIV WIDTH="494" HEIGHT="16">
+<P align="left">
+<font face="Times New Roman" size="3">Шестнадцатеричная
+система обозначений с использованием
+символов нижнего регистра («a»...«f»)</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="59">
+<p align="left">
+</TD>
+</TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="1">
+<p align="left">
+</TD>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="121" HEIGHT="59">
+<DIV WIDTH="121" HEIGHT="16">
+<P align="left">
+<font face="Times New Roman" size="3">%X<BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="494" HEIGHT="59">
+<DIV WIDTH="494" HEIGHT="16">
+<P align="left">
+<font face="Times New Roman" size="3">Шестнадцатеричная система обозначений с использованием верхнего регистра
+символов (&laquo;A&raquo;...&laquo;F&raquo;)</font><font face="Times New Roman" size="3"><BR>
+</font>
+</P>
+</DIV>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="59">
+<p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font face="Times New Roman" size="3">Между знаком процента и буквой в спецификатор могут быть вставлены дополнительные символы. Их значение поясняет табл. 19.3.</font>
+</P>
+<P align="left">
+<B><i><font face="Times New Roman" size="3">Таблица 19.3. </font></i> </B><i><font face="Times New Roman" size="3">Параметры спецификаторов формата</font></i>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="550" HEIGHT="136">
+  <TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="146" HEIGHT="24"> 
+      <DIV WIDTH="132" HEIGHT="24">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Символ<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="192" HEIGHT="24"> 
+      <DIV WIDTH="386" HEIGHT="24">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Описание<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="212" HEIGHT="24"> 
+      <DIV WIDTH="87" HEIGHT="24">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Пример<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="146" HEIGHT="21"> 
+      <DIV WIDTH="132" HEIGHT="21">
+<P align="left">
+<font face="Times New Roman" size="3">Знак &laquo;минус&raquo; (-)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="192" HEIGHT="21"> 
+      <DIV WIDTH="386" HEIGHT="21">
+<P align="left">
+<font face="Times New Roman" size="3">Выравнивание преобразованных аргументов по левому краю<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="212" HEIGHT="21"> 
+      <DIV WIDTH="87" HEIGHT="21">
+<P align="left">
+<font face="Times New Roman" size="3">%-5.2d<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="146" HEIGHT="18"> 
+      <DIV WIDTH="132" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Знак &laquo;плюс&raquo; (+)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="192" HEIGHT="18"> 
+      <DIV WIDTH="386" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Всегда печатать знак числа (+ или -)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="212" HEIGHT="18"> 
+      <DIV WIDTH="87" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%+5.2d<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="146" HEIGHT="18"> 
+      <DIV WIDTH="132" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Ноль (0)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="192" HEIGHT="18"> 
+      <DIV WIDTH="386" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Заполнение нулями вместо пробелов<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="212" HEIGHT="18"> 
+      <DIV WIDTH="87" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%05.2d<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="146" HEIGHT="18"> 
+      <DIV WIDTH="132" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Цифры<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="192" HEIGHT="18"> 
+      <DIV WIDTH="386" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Определяет минимальное число знаков, которые будут напечатаны<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="212" HEIGHT="18"> 
+      <DIV WIDTH="87" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%6f<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="146" HEIGHT="18"> 
+      <DIV WIDTH="132" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Цифры (после точки)<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="192" HEIGHT="18"> 
+      <DIV WIDTH="386" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Число после точки определяет количество символов, печатаемых
+</font><font face="Times New Roman" size="3">справа от десятичной точки</font><font face="Times New Roman" size="3"><BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="212" HEIGHT="18"> 
+      <DIV WIDTH="87" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%6.2f<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> А = fscanf(fid,format) — читает все данные из файла с идентификатором, fid, преобразует их согласно значению параметра format и возвращает в виде матрицы А. Значение идентификатора fid — целое число, возвращаемое функцией fopen. Параметр format представляет собой строку, определяющую формат данных, которые необходимо прочитать;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> [A,count] = fscanf(fid.format,size) — считывает количество данных, определенное параметром size, преобразует их в соответствии с параметром format и возвращает вместе с количеством успешно считанных элементов count. Параметр size — это произвольный аргумент, определяющий количество считываемых данных. Допустимы следующие значения:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">   n — чтение п элементов в вектор-столбец;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">inf — чтение элементов до конца файла и помещение их в вектор-столбец, содержащий такое же количество элементов, что и в файле;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">[m,n] — считывает столько элементов, сколько требуется для заполнения матрицы размера <I>тхп. </I>Заполнение происходит по столбцам. Величина
+        n (но нет!) может принимать значение Inf.</font></li>
+    </ul>
+  </li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Строка format состоит из обычных символов и (или) спецификаторов. Спецификаторы указывают тип считываемых данных и включают символ <I>%, </I>опцию ширины поля и символы формата. Возможные символы формата перечислены в табл. 19.4.</font>
+</P>
+<P align="left">
+<B><i><font face="Times New Roman" size="3">Таблица 19.4. </font></i> </B><font face="Times New Roman" size="3"><i>Символы формата, используемые функцией fscanf</i></font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="395" HEIGHT="430">
+  <TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="40"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="40"> 
+      <DIV WIDTH="78" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Символ<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="40"> 
+      <DIV WIDTH="498" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Описание<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="40"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="49"> 
+      <p align="left">
+</TD>
+    <TD ROWSPAN="2" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="49"> 
+      <DIV WIDTH="78" HEIGHT="20">
+<P align="left">
+<font face="Times New Roman" size="3">%c</font>
+</P>
+</DIV>
+</TD>
+    <TD ROWSPAN="2" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="49"> 
+      <DIV WIDTH="498" HEIGHT="20">
+<P align="left">
+<font face="Times New Roman" size="3">Последовательность символов; параметр ширины поля</font>
+<font face="Times New Roman" size="3">определяет количество считываемых символов<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="49"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="1"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="1"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="40"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="40"> 
+      <DIV WIDTH="78" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%d<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="40"> 
+      <DIV WIDTH="498" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Десятичное число<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="40"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="40"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="40"> 
+      <DIV WIDTH="78" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%e, %f, %g<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="40"> 
+      <DIV WIDTH="498" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Число с плавающей точкой<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="40"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="40"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="40"> 
+      <DIV WIDTH="78" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%i<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="40"> 
+      <DIV WIDTH="498" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Целое число со знаком<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="40"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="40"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="40"> 
+      <DIV WIDTH="78" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%o<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="40"> 
+      <DIV WIDTH="498" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Восьмеричное число со знаком<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="40"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="40"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="40"> 
+      <DIV WIDTH="78" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%s<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="40"> 
+      <DIV WIDTH="498" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Последовательность непробельных символов<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="40"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="40"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="40"> 
+      <DIV WIDTH="78" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%u<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="40"> 
+      <DIV WIDTH="498" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Десятичное целое число со знаком<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="40"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="40"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="40"> 
+      <DIV WIDTH="78" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">%x<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="40"> 
+      <DIV WIDTH="498" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Шестнадцатеричное целое число со знаком<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="40"> 
+      <p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="40"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="40"> 
+      <DIV WIDTH="78" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3">[...]<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="40"> 
+      <DIV WIDTH="498" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3">Последовательность символов<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="40"> 
+      <p align="left">
+</TD>
+</TR>
+<TR>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="21"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="76" HEIGHT="21"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="472" HEIGHT="21"> 
+      <p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="10" HEIGHT="21"> 
+      <p align="left">
+</TD>
+</TR>
+</TABLE>
+<P align="left">
+<font face="Times New Roman" size="3">Между символом <I>% </I>и символом формата допустимо вставлять следующие символы:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> звездочка (*) означает, что соответствующее значение не нужно сохранять в выходной матрице;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> строка цифр задает максимальную ширину поля;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> буква обозначает размер полученного объекта: h для короткого целого числа (например,
+    %n d), 1 для длинного целого числа (например,
+    %ld) или для числа с двойной точностью с плавающей запятой (например,
+    <I>%</I>lg<I>).</I></font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; х = 0:pi/10:pi:y-[x:sin(x)];</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fid = fopent 'c:\sin.txt'. V);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fprintf(fid.'X5.3f *10.6f\n'.y):fclose(fid);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.000         0.000000</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.314         0.309017</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.628 0.587785</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.942         0.809017</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.257 0.951057</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.571 1.000000</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.885         0.951057</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2.199         0.809017</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2.513 0.587785</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2.827 0.309017</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3.142 0.000000</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fid = fopen('c:\sin.txt'.'r');<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; q=fscanf(fid.'*g'.[2.10]):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; q<sup>'</sup></font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0 0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.3140 0.3090</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.6280 0.5878</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.9420 0.8090</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.2570 0.9511</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.5710 1.0000</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">1.8850 0.9511</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2.1990 0.8090</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2.5130 0.5878</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">2.8270 0.3090</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; fgetl(fid)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3.142 0.000000&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; fgets(fid)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">-1</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fclose(fid)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><b><a name="5"></a> Позиционирование 
+  файла</b></font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">При считывании и записи файлов они условно представляются в виде линейно расположенных данных, наподобие записи на непрерывной магнитной ленте. Место, с которого идет считывание в данный момент (или позиция, начиная с которой идет запись), определяется специальным <I>указателем. </I>Файлы последовательного доступа просматриваются строго от начала до конца, а в файлах произвольного доступа указатель может быть размещен в любом месте, начиная с которого ведется запись или считывание данных файла.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Таким образом, указатель обеспечивает позиционирование файлов. Имеется ряд функций позиционирования:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> eofstat = feof(fid) — проверяет, достигнут ли конец файла с идентификатором fid. Возвращает 1, если указатель установлен на конец файла, и 0 — в противном случае;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> message = ferror(fid) — возвращает сведения об ошибке в виде строки message. Аргумент fid — идентификатор открытого файла (см. функцию fopen с ее подробным описанием);</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> message = f error (f id,'clear') — очищает индикатор ошибки для заданного файла;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[message,errnum] =
+    ferror(.) — возвращает номер ошибки errnum последней операции ввода-вывода для заданного файла.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Если последняя операция ввода-вывода, выполненная для определенного значением fid файла, была успешной, значение message — это пустая строка, a errnum принимает значение 0.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Значение errnum, отличное от нуля, говорит о том, что при последней операции ввода-вывода произошла ошибка. Параметр message содержит строку, содержащую информацию о характере возникшей ошибки.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fid=fopen('с:\examplel'.'а+')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> fid =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; t= fread(3,[4.5])&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> t =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Empty matrix: 4-by-0&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; ferror(3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Is the file open for reading? . . .</font><font face="Times New Roman" size="3"><BR>
+</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">frewind(fid) — устанавливает указатель позиции в начало файла с идентификатором fid;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> status - fseekCfid,offset,origin) — устанавливает указатель в файле с идентификатором fid в заданную позицию — на байт, указанный параметром offset относительно origin.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Аргументы:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> fid — идентификатор файла, возвращенный функцией fopen;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">offset — значение, которое интерпретируется следующим образом:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">offset&gt;0 — изменяет позицию указателя на offset байт в направлении к концу файла;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">offset=0 — не меняет позицию указателя;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">offset&lt;0 — изменяет позицию указателя на offset байт в направлении к началу файла;<BR>
+        </font></li>
+    </ul>
+  </li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> origin — аргумент, принимающий следующие значения:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">'bof или -1 — начало файла;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">'cof' или 0 — текущая позиция указателя в файле;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">' eof' или 1 — конец файла;</font></li>
+    </ul>
+  </li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">status — выходной аргумент. Принимает значение 0, если операция fseek произошла успешно, и -1 в противном случае. Если произошла ошибка, используйте функцию ferror для получения более подробной информации;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">position=ftel I (fid) — возвращает позицию указателя для файла с идентификатором fid, полученным с помощью функции fopen. Выходной аргумент position — неотрицательное целое число, определяющее позицию указателя в байтах относительно начала файла. Если запрос был неудачным, position принимает значение -1. Используйте функцию ferror для отображения характера ошибки.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; f id-fopen('с:\example'.'a+')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> fid =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; count = fwrite(3,magic(6))&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> count = 36</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;&raquo; ftelK3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">36</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; frewind(3):ftell(3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fseek(3.12.0);ftell(3)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">12</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; feof(3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; fclose(3)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> s=sprintf(format,A,...) — форматирует данные в матрице А в формате, заданном параметром format, и создает из них строковую переменную s;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[s.errrmsg] = sprintfCformat,A....) — аналогична ранее описанной функции, но дополнительно возвращает строку ошибки errmsg, если ошибка имела место, или пустую строку в противном случае. Строка format определяет систему счисления, выравнивание, значащие цифры, ширину поля и другие атрибуты выходного формата. Она может содержать обычные символы наряду со спецификаторами, знаками выравнивания и т. д. Функция fprintf ведет себя, как и аналогичная функция fprintf
+    0 языка ANSI С, с некоторыми исключениями и расширениями.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Примеры:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; sprintfC'*0.5g'.(l+sqrt(7))/4)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">0.91144</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; sprintfC<I>'%s',</I>'привет')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ans =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">привет</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Функция sscanf аналогична функции fscanf за исключением того, что она считывает данные из символьной переменной системы MATLAB, а не из файла.</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> А = sscanf (s,format) — считывает данные из символьной переменной s, преобразует их согласно значению format и создает на основе этих данных матрицу А. Параметр format определяет формат данных, которые нужно считать;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">А = sscanf(s,format,size) — считывает количество данных, определенное параметром size, и преобразует их согласно строке format. Параметр size представляет собой аргумент, определяющий количество данных для чтения. Допустимы следующие значения:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">n — чтение п элементов в вектор-столбец;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">inf — чтение элементов до конца символьной переменной и помещение их в вектор-столбец, содержащий такое же количество элементов, как и в строковой переменной;</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">[m.n] — считывает столько элементов, сколько требуется для заполнения матрицы размера <I>тхп. </I>Заполнение происходит по столбцам. Величина п (но нет!) может принимать значение Inf.</font></li>
+    </ul>
+  </li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">[A,count,errmsg,nextindex] = sscanf(...) — считывает данные из символьной переменной s, преобразует их согласно значению format и возвращает в матрицу А. Параметр count — выходной.аргумент, который возвращает число успешно считанных элементов; errmsg — выходной аргумент, который возвращает строку ошибки, если ошибка произошла, и пустую строку в противном случае; nextindex — выходной аргумент, который содержит число, на единицу большее, чем количество символов в s.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Строка format состоит из обычных символов и спецификаторов. Спецификаторы указывают тип данных и включают в себя символ <I>%, </I>опцию ширины поля и символы формата. Пояснения можно найти в описании функции fscanf.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пример:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; s = '4.83 3.16 22 45';</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; [A.n,err,next] = sscanf(s. '%f')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">А =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4.8300 - 3.1600</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">22.0000</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">45.0000&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> n =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">4&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> еrr=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">next =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 16</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="6"></a> Специализированные 
+  файлы</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Приведенные ниже функции относятся к некоторым <I>специализированным файлам:</I></font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> М = dlmread(filename, delimiter) — считывает данные из файла filename с ASCII-разделителем, используя разделитель delimiter, в массив М. Используйте '\t', i    чтобы определить в качестве разделителя символ табуляции;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">М = dlmreadCfilename.delimiter,г.с) — считывает данные из файла filename с ASCII-разделителем, используя разделитель delimiter, в массив М, начиная со смещения г (по строкам) и с (по столбцам). Параметры
+    r и с отсчитываются начиная с нуля, так что г=0, с=0 соответствует первому значению в файле;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">М = dlmreadCfilename, deli mi ten,
+    r, с, range) — импортирует индексированный или именованный диапазон данных с разделителями в формате ASCII. Для использования диапазона ячеек нужно определить параметр range в виде range = [ВерхняяСтрока. ЛевыйСтолбец. НижняяСтрока, ПравыйСтолбец].</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Аргументы функции dlmread следующие:</font>
+</P>
+<ol>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">   delimiter — символ, отделяющий отдельные матричные элементы в электронной таблице формата ASCII;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">(,) — разделитель по умолчанию;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;r, с — ячейка электронной таблицы, из которой берутся матричные элементы, соответствующие элементам в верхнем левом углу таблицы;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">range — вектор, определяющий диапазон ячеек электронной таблицы.</font></li>
+</ol>
+<P align="left">
+<font face="Times New Roman" size="3">Команда dlmwrite преобразует матрицу MATLAB в файл с ASCII-разделителями, читаемый программами электронных таблиц:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dl mwri te (f i 1 ename. A. delimiter) — записывает матрицу А в верхнюю левую ячейку электронной таблицы filename, используя разделитель delimiter для отделения элементов матрицы. Используйте ' U' для создания файла с элементами, разделенными табуляцией. Все элементы со значением 0 опускаются. Например, массив [102] появится в файле в виде ' 1., 2' (если разделителем является запятая):</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">dlmwrite(filename,A,delimiter,
+    r,с) — записывает матрицу А в файл filename, начиная с ячейки, определенной
+    r и с, используя разделитель delimiter;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">info=imfinfo(filename.fmt) — возвращает структуру, поля которой содержат информацию об изображении в графическом файле. Аргумент filename — строка,
+    определяющая имя графического файла, fmt — строка, которая определяет формат файла. Файл должен находиться в текущей директории или в директории, указанной в пути MATLAB. Если imflnfo не может найти файл с именем filename, она ищет файл с именем filename.fmt.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">В табл. 19.5 показаны возможные значения для аргумента fmt.&nbsp;</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3"><i> <B>Таблица 19.5. </B>Поддерживаемые графические форматы и их обозначения</i></font>
+</P>
+<table border="2" width="550">
+  <tr>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="266" HEIGHT="23"> 
+      Формат </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="267" HEIGHT="23"> 
+      Тип файла </TD>
+  </tr>
+  <tr>
+    <td width="266"><font face="Times New Roman" size="3">'bmp'</font></td>
+    <td width="267"><font face="Times New Roman" size="3">Windows Bitmap (BMP)&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="266"><font face="Times New Roman" size="3"> 'hdf '</font></td>
+    <td width="267"><font face="Times New Roman" size="3"> Hierarchical Data Format 
+      (HDF)</font></td>
+  </tr>
+  <tr>
+    <td width="266"><font face="Times New Roman" size="3">'jpg<sup>'</sup> или 
+      'jpeg'&nbsp;</font></td>
+    <td width="267"><font face="Times New Roman" size="3"> Joint Photographic 
+      Experts Group (JPEG)</font></td>
+  </tr>
+  <tr>
+    <td width="266"><font face="Times New Roman" size="3">'pcx'&nbsp;</font></td>
+    <td width="267"><font face="Times New Roman" size="3"> Windows Paintbrush 
+      (PCX)&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="266"><font face="Times New Roman" size="3">'tif 'или 'tiff '</font></td>
+    <td width="267"><font face="Times New Roman" size="3"> Tagged Image File Format 
+      (TIFF)</font></td>
+  </tr>
+  <tr>
+    <td width="266"><font face="Times New Roman" size="3"> 'xwd'</font></td>
+    <td width="267"><font face="Times New Roman" size="3"> X Windows Dump (XWD)</font></td>
+  </tr>
+</table>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="1" CELLSPACING="0" CELLPADDING="0" WIDTH="422" HEIGHT="138">
+</TABLE>
+<P align="left">
+<font face="Times New Roman" size="3">Если filename — TIFF- или HDF-файл, содержащий более одного изображения, то 1 nf о представляет собой массив структур с отдельным элементом (т. е. с индивидуальной структурой) для каждого изображения в файле. Например, info(3) будет в таком случае содержать информацию о третьем изображении в файле. Множество полей в info зависит от конкретного файла и его формата. Однако первые девять полей всегда одинаковы. В табл. 19.6 перечислены эти поля и описаны их значения.<BR>
+</font>
+</P>
+<P align="left">
+<B><i><font face="Times New Roman" size="3">Таблица 19.6. </font></i> </B><font face="Times New Roman" size="3"><i>Поля информационной структуры и их значения</i></font>
+</P>
+<table border="2" width="550">
+  <tr>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="0" HEIGHT="23">
+<font face="Times New Roman" size="3"><b>Поле</b></font>
+</TD>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="23">
+<font face="Times New Roman" size="3"><b>Значение</b></font>
+</TD>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3">Filename</font></td>
+    <td width="50%"><font face="Times New Roman" size="3">Строка, содержащая имя файла; если файл находится не в текущей директории, строка содержит полный путь к файлу</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3">FileModDate</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> Строка, содержащая дату последнего изменения файла</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"> FileSize&nbsp;</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> Целое число, указывающее размер файла в байтах&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"> Format</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> Строка, содержащая формат файла, заданный параметром fmt; для JPEG- и TIFF-файлов возвращается значение, состоящее из трех символов&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3">FormatVersion</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> Строка или число, описывающее версию формата&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"> Width</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> Целое число, указывающее ширину изображения в пикселях&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"> Height</font></td>
+    <td width="50%"><font face="Times New Roman" size="3">Целое число,
+      указывающее высоту изображения в
+      пикселях&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"> BitDepth</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> Целое число, указывающее число битов на пиксель&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"> ColorType</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> Строка, описывающая тип изображения: 'truecolor' для RGB изображения, 'grayscale' для полутонового изображения или 'indexed' для изображения с индексированными цветами</font></td>
+  </tr>
+</table>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> info = imfinfo(filename) — пытается определить формат файла по содержимому. Пример:<BR>
+    </font></li>
+</ul>
+<P align="left">
+<font size="3" face="Courier New">&raquo; info = irrifinfo('С:\выставка\Интернет.bmр')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> info =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Filename:   'С:\выставка\Интернет.bmр'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">FileModDate:  '04-Jan-1999 22:35:56'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">FileSize: 481078</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Format: 'bmp'</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">FormatVersion: 'Version 3 (Microsoft Windows 3.x)'</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">или truecolor (RGB) изображение класса uint8, команда imwrite записывает фактические значения массива в файл. Если А имеет класс double, команда imwrite переопределяет значения в массиве перед записью, используя преобразование uint8(round(255*A)). Эта операция преобразует числа с плавающей запятой в диапазоне [0, 1] к 8-битовым целым числам в диапазоне [0, 255]. Допустимые значения параметра ftnt аналогичны тем, что используются в команде imfinfo;</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">imwrite(X,map,filename,fmt) — записывает индексированное изображение, находящееся в массиве X, и соответствующую ему цветовую палитру тар в файл filename. Если X содержит изображение класса uint8, команда imwrite записывает фактические значения массива в файл. Если X имеет класс double, команда imwrite переопределяет значения в массиве перед записью, используя преобразование uintS(X-l). Палитра тар должна иметь класс double; функция imwrite переопределяет значения в тар, используя преобразование uint8(round (255*mар));</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">imwrite (....filename) — записывает изображение в filename в формате, указанном в расширении файла. Расширение может быть одним из допустимых значений параметра fmt;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">imwrite (....Parameter, Value....) определяет параметры, которые контролируют различные свойства выходного файла. Параметры используются для HDF, JPEG, и TIFF файлов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">М = wklread(filename) — считывает электронную таблицу Lotusl23 (WK1) в матрицу М;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">М = wklread(filename.r.c) — считывает данные, начиная с ячейки, определенной значениями (r,с). Параметры г и с отсчитываются от нуля, так что г=0, с=0 определяют первую ячейку в файле;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">М = wklread(filename,r,c,range) — считывает диапазон значений, определенный параметром range, где range может быть представлен в одной из следующих форм:</font>
+    <ul>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">вектор с четырьмя элементами, определяющий диапазон ячеек в формате [верхняя_строка. левый_столбец, нижняя_строка, правый_столбец];</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">диапазон ячеек, определенный строкой, например ' А1... С5';</font></li>
+      <li>
+        <p align="left"><font face="Times New Roman" size="3">имя диапазона, определенное в виде строки, например 'Sales'.</font></li>
+    </ul>
+  </li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">wklwrite(filename.M) — записывает значения матрицы М в файл filename электронной таблицы Lotus 123 WK1;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">wklwrite(filename,M,r,c) — записывает данные, начиная с ячейки, определенной значениями (r,с). Параметры г и с отсчитываются от нуля, так что г=0, с=0 определяют первую ячейку в электронной таблице.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">В табл. 19.7 представлены форматы изображений, доступных для чтения функцией imread. Списки параметров и их возможных значений для функции imwrite содержатся в табл. 19.8.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Необходимо отметить, что большинство рассмотренных выше функций редко применяются пользователями. Но они довольно широко используются в системных целях и представляют большой интерес для
+специалистов.</font>
+</P>
+<P align="left">
+<B><i><font face="Times New Roman" size="3">Таблица 19.7. </font></i> </B><font face="Times New Roman" size="3"><i>Форматы файлов и их краткое описание</i></font>
+</P>
+<table border="2" width="550">
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"><b>Формат</b></font></td>
+    <td width="50%"><font face="Times New Roman" size="3"><b>Варианты</b></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3">BMP</font></td>
+    <td width="50%"><font face="Times New Roman" size="3">1-битовые, 4-битовые, 8-битовые и 24-битовые несжатые изображения; 4-битовые и 8-битовые изображения со сжатием RLE&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"> HDF</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> 8-разрядные растровые изображения, содержащие или не содержащие цветовую палитру; 24-разрядные растровые изображения&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"> JPEG</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> Любые JPEG-изображения; JPEG-изображения с некоторыми обычно используемыми расширениями&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3">PCX</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> 1-битовые, 8-битовые и 24-битовые изображения&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3"> TIFF</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> Любые TIFF-изображения, включая!-битовые, 8-битовые и 24-битовые несжатые изображения; 1-битовые, 8-битовые и 24-битовые изображения с packbit-сжатием; 1-битовые изображения со сжатием CCITT&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Times New Roman" size="3">XWD</font></td>
+    <td width="50%"><font face="Times New Roman" size="3"> 1-битовые и 8-битовые Zpixmaps; XYBitmaps; 1-битовые XYPixmaps</font></td>
+  </tr>
+</table>
+<P align="left">
+<B><i><font face="Times New Roman" size="3">Таблица 19.8. </font></i> </B><font face="Times New Roman" size="3"><i>Параметры, используемые при записи графических файлов</i></font>
+</P>
+<table border="2" width="550">
+  <tr>
+    <td width="33%"><font face="Times New Roman" size="3"><b>Параметр</b></font></td>
+    <td width="33%"><font face="Times New Roman" size="3"><b>           Значение</b></font></td>
+    <td width="34%"><font face="Times New Roman" size="3"><b>Значение по умолчанию</b></font></td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="3"><font face="Times New Roman" size="3">Параметры для HDF-файлов</font></td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Times New Roman" size="3">'Compression'&nbsp;</font></td>
+    <td width="33%"><font face="Times New Roman" size="3">          Одно из следующих значений: 'none', Vie', 'jpeg'</font></td>
+    <td width="34%"><font face="Times New Roman" size="3">'rle'</font></td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Times New Roman" size="3"> 'Quality'</font></td>
+    <td width="33%"><font face="Times New Roman" size="3">                  Число между 0 и 100; параметр поддерживается для 'Compression'='jpeg'; чем больше число, тем выше качество файла (меньше искажений файла при сжатии) и тем больше его размер</font></td>
+    <td width="34%">75</td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Times New Roman" size="3"> 'WriteMode'</font></td>
+    <td width="33%"><font face="Times New Roman" size="3">             Одно из следующих значений: 'overwrite', 'append'</font></td>
+    <td width="34%"><font face="Times New Roman" size="3">'overwrite'</font></td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="3"><font face="Times New Roman" size="3">Параметры для JPEG-файлов</font></td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Times New Roman" size="3">'Quality'</font></td>
+    <td width="33%"><font face="Times New Roman" size="3">&nbsp;Число между 0 и 100; чем больше число, тем выше качество файла (меньше искажений при сжатии файла) и тем больше его размер.</font></td>
+    <td width="34%">75</td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="3"><font face="Times New Roman" size="3">Параметры для TIFF-файлов</font></td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Times New Roman" size="3">'Compression'&nbsp;</font></td>
+    <td width="33%"><font face="Times New Roman" size="3">          Одно из следующих значений: 'none', 'packbits', 'ccitt'; значение 'ccitt' допустимо только для двоичных (двухцветных) изображений</font></td>
+    <td width="34%"><font face="Times New Roman" size="3">'ccitt' для двоичных изображений; 'packbits' для всех остальных&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Times New Roman" size="3">'Description'&nbsp;</font></td>
+    <td width="33%"><font face="Times New Roman" size="3">            Любая строка; значение поля ImageDescription возвращается командой imfinfo</font></td>
+    <td width="34%"><font face="Times New Roman" size="3"> Пустая строка</font></td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Times New Roman" size="3">&nbsp;'Resolution'&nbsp;</font></td>
+    <td width="33%"><font face="Times New Roman" size="3">             Скалярное значение для разрешения в направлениях х и у<BR>
+      </font></td>
+    <td width="34%">72</td>
+  </tr>
+</table>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="7"></a> Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Открывать и закрывать файлы.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Выполнять операции с двоичными и форматированными файлами.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Осуществлять позиционирование файла.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Применять специализированные файлы.</font></li>
+</ul>
+</BODY>
+</HTML>
+

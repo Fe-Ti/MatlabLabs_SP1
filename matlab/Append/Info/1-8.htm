@@ -1,0 +1,2302 @@
+<html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<HEAD>
+<TITLE>1.htm</TITLE>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=WINDOWS-1251">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+
+<STYLE>
+</STYLE>
+</HEAD>
+
+<body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
+<ul>
+  <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 7. Специальная 
+    графика </a></font></b> </li>
+  <ul>
+    <li><font face="Times New Roman CYR" size=3><a href="#2">Движение точки на 
+      плоскости </a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#3">Движение точки в 
+      пространстве</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#4">Основные средства 
+      анимации</a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#5">Вращение фигуры 
+          - логотипа MATLAB </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#6">Волновые колебания 
+          мембраны</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#7">Объекты дескрипторной 
+      графики </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#8">Создание графического 
+          окна и управление им </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#9">Создание координатных 
+          осей и управление ими </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#10">Пример применения 
+          объекта дескрипторной графики </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#11">Дескрипторы 
+          объектов </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#12">Операции над 
+          графическими объектами </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#13">Свойства объектов 
+          - команда get</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#14">Изменение свойств 
+          объекта - команда set </a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#15">Управление работой 
+          средств OpenGL</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#16">Управление прозрачностью 
+      графических объектов </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#17">Примеры, иллюстрирующие 
+          возможности дескрипторной графики</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#18">Основные команды 
+      для создания пользовательского интерфейса </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#19">Пример создания 
+          объекта интерфейса</a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#20">Растровая графика</a></font> 
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#21">Пакет прикладных 
+      программ Images </a></font> 
+      <ul>
+        <li><font face="Times New Roman CYR" size=3><a href="#22">Примеры применения 
+          пакета Images</a></font> </li>
+        <li><font face="Times New Roman CYR" size=3><a href="#23">Примеры программирования 
+          задач со средствами пакета Images </a></font> </li>
+      </ul>
+    </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#24">Галерея трехмерной 
+      графики</a></font> </li>
+    <li><font face="Times New Roman CYR" size=3><a href="#25">Что нового мы узнали? 
+      </a></font> </li>
+  </ul>
+</ul>
+
+
+<A NAME="1"></A> 
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
+  №7.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">Специальная графика</font> 
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Движение точки на плоскости и в пространстве</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Основные средства анимации&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Объекты дескрипторной графики</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Операции над графическими объектами</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Свойства объектов и управление ими</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Управление средствами Open GL</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Управление прозрачностью графических объектов</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Основные команды для создания пользовательского интерфейса</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Растровая графика</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Пакет прикладных программ Images</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">    Галерея трехмерной графики<BR>
+    </font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">В</font> <font face="Times New Roman" size="3">этом уроке мы рассмотрим некоторые виды специальной графики. Это прежде всего <I>анимационная </I>и <I>дескрипторная </I>(handle) графика.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a>Движение 
+  точки на плоскости</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для отображения движения точки по траектории используется команда comet. При этом движущаяся точка напоминает ядро кометы с хвостом. Используются следующие формы представления этой команды:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> comet (Y) — отображает движение &laquo;кометы&raquo; по траектории, заданной вектором
+    Y;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">comet (X.Y) — отображает движение &laquo;кометы&raquo; по траектории, заданной парой векторов Y и
+    X;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">comet (X.Y.p) — аналогична предшествующей команде, но позволяет задавать длину хвоста кометы (отрезка траектории, выделенного цветом) как p*1ength(Y), где length(Y) - размер вектора Y. а р&lt;1. По умолчанию р =
+    0.1 [<i>Обратите внимание, что если Вы используете лупу, как-то иначе пытаетесь изменить размер Вашего рисунка или используете вкладку Copy Figure меню
+    Edit, то график, полученный при использовании comet или
+    cometS, исчезает. — Примеч. ред.</i>]</font></li>
+</ul>
+<P align="left"><img src="7.1.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.1.jpg" width="504" height="392"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 7.1. </font></i> 
+  </B><i><font face="Times New Roman" size="3">Стоп-кадр изображения, полученный 
+  из примера использования команды comet</font></i> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Следующий пример иллюстрирует применение команды
+comet:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; Х=0:0.01:15;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; comet(X.sin(X).0.15)</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Стоп-кадр изображения показан на рис. 7.1. &laquo;Хвост кометы&raquo; на черно-белом рисунке заметить трудно, поскольку он представляет собой отрезок линии с цветом, отличающимся от цвета линии основной части графика.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a>Движение 
+  точки в пространстве</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Есть еще одна команда, которая позволяет наблюдать движение точки, но уже в трехмерном пространстве. Это команда comet3:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> comet3(Z) — отображает движение точки с цветным &laquo;хвостом&raquo; по трехмерной кривой, определенной массивом
+    Z;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> comet3 (X.Y.Z) — отображает движение точки
+    &laquo;кометы&raquo; по кривой в пространстве, заданной точками
+    [X(i),Y(i),Z(i)];</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">comet3(X,Y,Z,p) — аналогична предшествующей команде с заданием длины &laquo;хвоста кометы&raquo; как p*1ength(Z). По умолчанию параметр р равен 0.1.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Ниже представлен пример применения команды
+cometS:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; W=0:pi/500:10*pi;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; comet3(cos(W).sin(W)+W/10.W)</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">На рис. 7.2 показан стоп-кадр 
+  изображения, созданного командой cometS.</font> </P>
+<P align="left"><img src="7.2.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.2.jpg" width="516" height="384"></P>
+<P align="left">
+<B><i><font face="Times New Roman"><font size="3">Рис. 7.2. </font></font></i> </B><i><font size="3" face="Times New Roman">Стоп-кадр изображения, созданного командой comet3</font></i>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Разумеется, движение точки по заданной траектории как в двумерном, так и в трехмерном пространстве является самым простейшим примером анимации. Тем не менее эти средства существенно расширяют возможности графической визуализации при решении ряда задач динамики.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a>Основные 
+  средства анимации</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для более сложных случаев анимации возможно применение техники мультипликации. Она сводится к построению ряда кадров изображения, причем каждый кадр появляется на некоторое время, затем стирается и заменяется на новый кадр, несколько отличающийся от предшествующего. Если это отличие незначительно, то создается иллюзия плавного перемещения объекта.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Отметим кратко основные команды, реализующие анимацию в системе
+MATLAB:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> capture — захват видеоизображения;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> getframe — создание кадра для анимации;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> moviein — выполнение анимации;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> rotate — вращение фигуры;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> frame2im — преобразование кадра в графический образ;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> im2frame — преобразование графического образа в кадр.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Применение некоторых из этих команд мы рассмотрим далее на конкретных примерах. К сожалению, серьезные задачи анимации обычно требуют применения программных средств — главным образом циклов. Мы рассмотрим их далее, но представляется, что читатели знакомы с понятием циклов, так что приведенные примеры не будут слишком сложны. В крайнем случае, оставьте их разбор до знакомства с основами программирования в системе MATLAB (урок 20).</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="5"></a>Вращение 
+  фигуры — логотипа MATLAB</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Рассмотрим вначале не очень сложный пример вращения сложной трехмерной поверхности — логотипа системы MATLAB, который представлен файлами logo.m и logo.mat. Ниже представлен фрагмент программы, обеспечивающий вращение этой поверхности (фигуры) относительно осей системы координат:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">if ~exist('MovieGUIFlag'). figNumber=0; end:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">load logo</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">h=surfl(L.source);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">colormap(M);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ax=[7 52 7 52 -.5 .8]:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">axis(ax);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">axis on:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">shading interp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">m=moviein(25):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">for n=l:25.</font>
+</P>
+<P align="left"><font size="3" face="Courier New">rotate(h.[0 90],15.[21 21 0]);</font>
+</P>
+<P align="left"><font size="3" face="Courier New">h=surfl(get(h.'XData'),get(h.'YData').</font></P>
+<P align="left"><font size="3" face="Courier New">get(h.'ZData'),source);</font> 
+</P>
+<P align="left"><font size="3" face="Courier New">axis(ax);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">axis on;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">shading interp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">m(:,n)=mvframe(figNumber,24); end;</font>
+</P>
+<P align="left"><font size="3" face="Courier New">mvstoretfigNumber.m);</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Эта программа имеет два блока: в первом задается исходная функция и ее образ, а во втором (с циклом for) выполняется создание кадров и их последовательное воспроизведение, создающее эффект анимации. На рис. 7.3 показан стоп-кадр полученной анимации.</font>
+</P>
+<P align="left"><img src="7.3.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.3.jpg" width="425" height="496"> </P>
+<P align="left"><B><font face="Times New Roman" size="3"><i>Рис. 7.3. </i></font> 
+  </B><i><font face="Times New Roman" size="3">Стоп-кадр программы, обеспечивающей 
+  вращение фигуры — логотипа MATLAB</font> </i></P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="6"></a>Волновые 
+  колебания мембраны</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Принцип мультипликации легко распространить на существенно более сложные задачи анимации. В качестве иллюстрации можно рассмотреть системный пример vibes, демонстрирующий волнообразные колебания тонкой пластины — мембраны. Ниже представлен переработанный файл данного примера, в котором сокращены подробные комментарии на английском языке и введены только для пояснения комментарии на русском языке, их следует изъять при попытке запустить программу:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">%Волновые колебания мембраны&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> %Переработка файла VIBES фирмы
+MathWorks. Inc.&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">if~exist('MovieGUIFlag'): figNumber=0; end;&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">hlpStr= ...</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">[' Это пример анимации - наблюдение колебаний '</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">' трехмерной поверхности - мембраны.     ']:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">mvinit(figNumber.hlpStr):</font>
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Загрузка данных функции</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">load vibesdat;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">[n.n] = size(Ll):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">nh = fix(n/2): .</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">x = (-nh:nh)/nh;</font>
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Вычисление коэффициентов</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">clear с</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">for k = 1:12.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">eval(['c(k) = L' num2str(k) '(24,13)73:'])&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">end;</font>
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Установка графических параметров&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">axis([-11-11-11]); caxis(26.9*[-1.5 1]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">colormap(hot); hold on</font>
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Генерация кадров мультипликации</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">delt = 0.1;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">nf names =12:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">M - moviein(nf names):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">fon k - l:nf names,</font>
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Коэффициенты</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">t = k*delt;</font>
+</P>
+<P align="left"><font size="3" face="Courier New">s = c.*sin(sqnt(1ambda)*t);</font>
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Амплитуды</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">L = s(l)*Ll + s(2)*L2 + s(3)*L3 
+  + s(4)*L4 + </font></P>
+<P align="left"><font size="3" face="Courier New">s(5)*L5 + s(6)*L6 + .</font> 
+</P>
+<P align="left"> <font size="3" face="Courier New">S(7)*L7 + s(8)*l_8 + s(9)*L9 
+  + s(10)*L10 + </font></P>
+<P align="left"><font size="3" face="Courier New">s(ll)*Lll + s(12)*L12;</font> 
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Скорость мультипликации&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> s = s .* lambda;</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">V = s(l)*Ll + s(2)*L2 +'sC3)*L3 
+  + </font></P>
+<P align="left"><font size="3" face="Courier New">s(4)*L4 + s(5)*L5 + s(6)*L6 
+  + ... </font></P>
+<P align="left"><font size="3" face="Courier New">s(7)*L7 + s(8)*L8 + s(9)*L9 
+  + s(10)*L10 + </font></P>
+<P align="left"><font size="3" face="Courier New">s(11)*L11 + s(12)*L12;</font> 
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">График поверхности; цвет задается скоростью</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">V(l:nh.l:nh) = NaN*ones(nh,nh);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Cla</font>
+</P>
+<P align="left"><font size="3" face="Courier New">sunf(x.x.L.V);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">axis off</font>
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Создание кадров мультипликации</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">M(:.k) - mvfname(f1gNumben,nfnames): end : hold off</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">%=======================================</font>
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Запись кадров мультипликации&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">mvstone( figNumben , M) ;</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Этот пример дан с целью 
+  иллюстрации, и подробно эту программу мы описывать не будем. К сожалению, в 
+  представленном виде (с русскоязычными комментариями), данная программа MATLAB 
+  6 неработоспособна. Чтобы она работала, эти комментарии должны быть убраны или 
+  заменены англоязычными. В этом случае проблем с запуском программы не будет.</font> 
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="7"></a>Объекты 
+  дескрипторной графики</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Как уже отмечалось, графические средства MATLAB базируются на низкоуровневой графике, которая называется <I>дескрипторной </I>(описательной), или handle графикой. По существу, эта графика обеспечивает объектно-ориентированное программирование как всех рассмотренных выше графических команд, так и пользовательского интерфейса. Графический редактор дескрипторной графики Property Editor в MATLAB 6 является основным редактором графики и нами уже использовался. Хотя обычный пользователь может даже не знать о существовании дескрипторной графики ввиду того, что слово &laquo;дескрипторная&raquo; в сокращенное название графического редактора не входит, все же надо учитывать, что именно дескрипторная графика дает новые, подчас уникальные возможности создания пользовательских графических программ MATLAB 6, не говоря уже о том, что она помогает понять, каким образом реализованы графические средства системы.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Центральным понятием дескрипторной графики является <I>графический объект. </I>Имеются следующие типы таких объектов:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> root (корень) — первичный объект, соответствующий экрану компьютера;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> figure (рисунок) — объект создания графического окна;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">uicontrol (элемент управления, определенный пользователем) — объект создания элемента пользовательского интерфейса;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> axes (оси) — объект, задающий область расположения графика в окне объекта
+    figure;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">uimenu (определенное пользователем меню) — объект создания меню;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> uicontextmenu (определенное пользователем контекстное меню) - объект создания контекстного меню;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> image (образ) — объект создания растровой графики;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">line (линия) — объект создания линии;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">patch (заплата) — объект создания закрашенных фигур;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> rectangle (прямоугольник) - объект создания закрашенных прямоугольников;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> surface (поверхность) — объект создания поверхности;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> text (текст) — объект создания текстовых надписей;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">light (свет) — объект создания эффектов освещенности.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Объекты подчас взаимосвязаны и могут обращаться друг к другу для получения того или иного графического эффекта.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="8"></a>Создание 
+  графического окна и управление им</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Прежде чем мы рассмотрим применение дескрипторной графики на реальных примерах, отметим команды и функции, которые предназначены для создания графических окон и управления ими:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">figure — открыть чистое графическое окно;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> gcf — получить дескриптор графического окна
+    figure;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> elf — очистить графическое окно;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">shg — показать ранее свернутое графическое окно;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> close (закрыть) — закрыть графическое окно;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> refresh (обновить) — обновить графическое окно.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Эти команды и функции достаточно очевидны, и мы не будем обсуждать их подробно. Заметим, что команды help name или doc name позволяют уточнить назначение той или иной команды или функции с обобщенным именем
+name.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="9"></a>Создание 
+  координатных осей и управление ими</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Еще одна группа простых команд служит для создания координатных осей и управления ими:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> axes (оси) — создать оси координат;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> box (ящик) — построить прямоугольник вокруг рисунка;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> сlа — убрать построения
+    axes;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">gса — получить дескриптор графического объекта
+    axes;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">hold — сохранить оси координат;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">ishold — проверка статуса hold (1, если оси сохранены, и 0 в противоположном случае).</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Эти команды также достаточно очевидны. Заметим, что их можно использовать и в обычной (высокоуровневой) графике, например для устранения осей из уже созданного графика.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="10"></a>Пример 
+  применения объекта дескрипторной графики</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Объем и направленность данной книги не позволяют подробно описать все многообразие возможностей дескрипторной графики. Ограничимся пока одним примером. Пусть надо построить линию,-проходящую через три точки с координатами (0,1), (2,4) и (5,-1). Для этого воспользуемся объектом
+line, который порождается одноименной графической функцией:&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; line([0 2 5],[1 4 -1].'Color<sup>'</sup>.'blue')</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">На рис. 7.5 построена заданная линия с помощью дескрипторной команды
+line, которая явно не входит в высокоуровневую графику. Однако нетрудно понять, что именно эта команда составляет основу высокоуровневой команды pi ot, описанной ранее.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Особенность команды 1 i ne заключается в явном задании всех условий построения графика: координат конкретных точек, параметра цвета 'Color' и самого цвета 'blue' (синий). В итоге строятся два отрезка прямой, проходящих через заданные точки и имеющие синий цвет.</font>
+</P>
+<P align="left"><img src="7.5.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.5.jpg" width="488" height="496"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 7.4. </font></i> 
+  </B><i><font face="Times New Roman" size="3">Построение отрезков прямой объектом 
+  line ,</font></i> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="11"></a>Дескрипторы 
+  объектов</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">С понятием объектов дескрипторной графики связана особая характеристика объектов — <I>дескриптор </I>(описатель). Его можно понимать как некое число — своеобразный идентификатор (&laquo;распознаватель&raquo;) объектов.</font>
+</P>
+<P align="left"><img src="7.6.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.6.jpg" width="460" height="496"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 7.5. </font></i> 
+  </B><font face="Times New Roman" size="3"><i>Графики пяти функций, представляющих 
+  значения элементов магической матрицы magic(5)</i></font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Дескриптор объектов root всегда равен 0, а дескриптор объектов figure (рисунок) — это целое число, указывающее на номер графического окна. Дескрипторы других объектов — это числа с плавающей запятой. По значениям дескрипторов MATLAB идентифицирует объекты. Дескриптор одного такого объекта представляет собой одно число, а если объектов несколько — несколько чисел (вектор). Например, следующие команды строят пять графиков, представляющих значения элементов магической матрицы (магического квадрата), в одном окне:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; A=magic(5);&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; h=plot(A)&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">h=</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3.0013</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">101.0009</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">102.0004</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">103.0004</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">104.0004</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">В данном случае вектор 
+  h содержит дескрипторы элементов графика, показанного на рис. 7.5.</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Мы еще раз обращаем ваше внимание на то, что дескрипторы дают лишь внутреннее описание того или иного объекта и ассоциировать их явно с привычными параметрами, например координатами или цветом объекта, не следует. Более того, нет никаких оснований считать их одинаковыми для разных версий MATLAB, для разных компьютерных платформ и даже для одинаковых команд, но в разных местах сессии.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="12"></a>Операции 
+  над графическими объектами</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">К графическим объектам применяется ряд операций:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> set — установка свойств (параметров) графического объекта;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> get — вывод свойств графического объекта;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> reset — восстановить свойства графического объекта по умолчанию;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> delete — удалить созданный графический объект;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">gсо — возвращает дескриптор текущего графического объекта;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> gcbo — возвращает дескриптор объекта, чья функция в данный момент выполняется;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> gcbf — возвращает дескриптор окна, содержащего объект, функция которого в данный момент выполняется;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> drawnow — выполнить очередь задержанных графических команд;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> findobj —
+    найти объекты с заданными свойствами;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">copyobj — скопировать объект и порожденные им объекты.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Кроме того, имеются три утилиты, связанные с операциями над объектами:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> closereq — закрыть окно по запросу;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> ishandle — проверить дескриптор на истинность;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> newplot — восстановить свойства объекта, измененные
+    nextPlot.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Назначение большинства этих операций достаточно очевидно. Мы остановимся на двух наиболее важных операциях, связанных с контролем и установкой свойств объектов.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="13"></a>Свойства 
+  объектов — команда get</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Каждый объект дескрипторной графики имеет множество параметров, определяющих его свойства. Вернемся к нашему примеру с построением графика из двух отрезков линии и повторим этот пример в следующем виде:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; h=line([0 2 5].[1 4 -1],'Color','blue')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">h =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">3.0010</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Теперь объект имеет дескриптор h и его значение выведено наряду с построением графика. Команда get (name) выводит свойства объекта с заданным именем. Для нашего объекта это выглядит следующим образом:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; get(h) Color = [001]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">EraseMode = normal</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">LineStyle=-</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">LineWidth = [0.5]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Marker = none</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">MarkerSize = [6]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">MarkerEdgeColor = auto</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">MarkerFaceColor = none</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">XData = [0 2 5]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">YData = [14 -1]</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ZData - []</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">BeingDeleted = off&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ButtonDownFcn =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Children = []</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;Clipping = on&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> CreateFcn =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> DeleteFcn =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> BusyAction = queue&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> HandleVisibility = on&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> HitTest = on&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Interruptible = on&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Parent = [100.001]&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Selected =off&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> SelectionHighlight = on&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Tag =</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Type=line&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> UIContextMenu - []&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> UserData = []&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Visible - on</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="14"></a>Изменение 
+  свойств объекта — команда set</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">С помощью команды set можно изменить отдельные свойства объекта дескрипторной графики. Эта команда имеет множество параметров, и с ними можно ознакомиться с помощью команд help set или doc set. Ограничимся примером — допустим, нам надо сменить цвет линии с голубого на красный. Для этого достаточно выполнить следующую команду: &raquo;
+set(h,'Color'.'red')</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Обратите внимание, что при этом цвет сменится на ранее построенном рисунке с дескриптором
+h.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="15"></a>Управление 
+  работой средств OpenGL</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Как уже неоднократно отмечалось, одной из новинок системы MATLAB 6 является поддержка графических средств OpenGL. Эти средства обычно используются
+чаще всего при реализации трехмерной графики, например при осуществлении сло.жной функциональной окраски поверхностей и трехмерных фигур с учетом характера освещения и структуры материала (рендеринг), при осуществлении анимации для таких объектов, при построении поверхностей из многоугольников, осуществлении эффектов прозрачности и т. д. Целый ряд примеров этого уже приводился как в уроке 6, так и в данном уроке.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Средства OpenGL в MATLAB задействованы автоматически. Это значит, что они будут использованы, если видеокарта компьютера пользователя поддерживает их и если установлены соответствующие драйверы видеоадаптера. На уровне средств стандартной графики MATLAB никаких функций управления OpenGL нет. Однако дескрипторная графика такую возможность предоставляет с помощью команды opengl selectionjnode</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Эта команда задает графические режимы осуществления рендеринга. Параметр selectl onjnode может
+принимать следующие значения:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> autosel ect — задает автоматическое применение OpenGL и вводит в работу средства OpenGL при наличии возможностей для этого;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> neverselect — отключает автоматическое применение
+    OpenGL;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">advise — выводит сообщение о возможности применения OpenGL, но режим рендеринга (RenderMode) устанавливается вручную.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Просто команда opengl выводит сообщение о текущем значении selectionjnode, например:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; opengl&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> AutoSelect</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">А команда opengl info выводит данные о средствах OpenGL ПК, на котором установлена система MATLAB, например:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; opengl info</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Version = 1.1.0</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Vendor = Microsoft Corporation</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Renderer - GDI Generic</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">MaxTextureSize - 1024</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">Extensions = GL_WIN_swapJiint 
+  GL_EXT_bgra </font></P>
+<P align="left"><font size="3" face="Courier New">GL_EXT_paletted_texture</font> 
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Возможно также управление средствами рендеринга и OpenGL на уровне средств дескрипторной графики с помощью команды set, например:
+set(gcf.'Renderer','OpenGL')</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="16"></a>Управление 
+  прозрачностью графических объектов</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Пожалуй, наиболее впечатляющие и внешне заметные результаты дает применение свойства прозрачности изображений (transparency), доступное только при использовании средств Open GL. Это свойство позволяет строить изображения полупрозрачных струй жидкостей или газов, в которых видны их сгустки или</font>
+<font face="Times New Roman" size="3">вкрапления твердых тел, изображения галактик со звездными вкраплениями, изображения клеток в биологических объектах и т. д.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В книгу &laquo;MATLAB. Using MATLAB Graphics. Version 6.0&raquo; введен обширный раздел, посвященный управлению прозрачностью объектов. Ниже представлена краткая &laquo;выжимка&raquo; из этого раздела.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Свойство прозрачности основано на представлении изображений в виде отдельных слоев, что обычно требует применения многомерных массивов. Данные о прозрачности размещаются в матрице размера mxn AlphaData, элементы которой должны иметь тип double или uint8 (элементы типа NaN недопустимы). Возможности задания прозрачности поддерживаются графическими файлами с расширением PNG. В изображениях, хранящихся в этих файлах, возможна поддержка кодирования цветов с разным разрешением - вплоть до 48 бит при RGB графике.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Для управления прозрачностью служит специальная системная переменная alpha, значение которой лежит в пределах от 0 до 1. Если построенный вами графический объект содержит элементы прозрачности, то для их наблюдения нужно задать команду alpha(x), где х задает уровень прозрачности. Например, задав alpha(0.5), мы получим &laquo;полупрозрачное&raquo; изображение, на котором будут видны обычно скрытые его детали.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Приведем наглядный пример использования свойств прозрачности из описания графики системы MATLAB, где строится график скорости жидкости на пути ракеты подводного базирования в бесконечной емкости:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">[х у z v] = flow;</font>
+</P>
+<P align="left"><font size="3" face="Courier New">p=patch(isosurface(x,y.z,v.-3));</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">isonormals(x.y.z.v.p);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">set(p.'facecolor'.'red'.'edgecolor'.'none');</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">daspect([l 1 1]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">view(3); axis tight: grid on;</font>
+</P>
+<P align="left"><font size="3" face="Courier New">camlight; lighting gouraud;</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Здесь строится график трехмерной 
+  фигуры flow (течение). Она представлена тремя массивами своих точек х, у и z 
+  и дополнительным массивом класса AlphaData — v. При первом построении свойство 
+  прозрачности отсутствует (по умолчанию) и построенная фигура будет иметь вид, 
+  представленный на рис. 7.6.</font> </P>
+<P align="left"><img src="7.7.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.7.jpg" width="448" height="496"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 7.6. </font></i> 
+  </B><i><font face="Times New Roman" size="3">Трехмерная фигура в обычном представлении 
+  (без свойства прозрачности)</font></i> </P>
+<P align="left"> <font face="Times New Roman" size="3">Если исполнить команду 
+  alpha(0.5), то в массиве AlphaData будут заданы эле-менхы, обеспечивающие степень 
+  прозрачности 0.5. При этом изображение объекта будет иметь вид, представленный 
+  на рис. 7.7. Теперь на нем четко видна скрытая ранее твердая сердцевина фигуры 
+  и даже проглядывают координатные оси.</font> </P>
+<P align="left"><img src="7.8.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.8.jpg" width="447" height="500"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 7.7. </font></i> 
+  </B><font face="Times New Roman" size="3"><i>Трехмерная фигура с установкой 
+  свойства прозрачности</i></font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Более подробные сведения об использовании свойства прозрачности можно найти в обширной документации по графике в формате PDF. Эта документация в виде файла graphg.pdf объемом свыше 12 Мбайт поставляется с системой MAT-LAB 6.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="17"></a>Примеры, 
+  иллюстрирующие возможности дескрипторной графики</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Теперь рассмотрим более сложные примеры, наглядно демонстрирующие возможности дескрипторной графики. Воспользовавшись File <I>&gt; </I>New &gt; M-File или edit msl.m. создадим файл msl.m следующего содержания:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">[х.у] - meshgrid([-2:.4:2]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Z =sin(x.<sup>^</sup>2+y.^2);</font>
+</P>
+<P align="left"><font size="3" face="Courier New">fh = figureCPosition'.[350 275 400 300].'Color<sup>'</sup>.
+V);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">ah = axes('Color'.[.8 .8 .8].'XTick'.[-2 -1 0 1 2]....</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'YTick',[-2 -1 0 1 2]};</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">sh = surfaceCXData'.x.'YData'.y.'ZData'.Z....</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'FaceColor',get(ah.'Color')+.!....</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'EdgeColor'. 'k'.'Marker'.'o'....</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'MarkerFaceColor',[.5 1 .85]):</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">В этом файле заданы три 
+  объекта: прямоугольник fh — объект класса figure, оси с метками ah — объект 
+  класса axes и трехмерная поверхность sh — объект класса surface. Она является 
+  результатом наложения объектов fh и ah друг на друга. При этом объект ah класса 
+  axes явно наследует свойства объекта fh класса figure. Наследование здесь проявляется 
+  в том, что при задании свойства &laquo;цвет граней&raquo; (FaceColor) объекта 
+  sh используется осветление (добавлением константы 0.1) цвета осей, полученного 
+  при помощи функции get (ah. color).</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Команда v1ew(3) изменяет 
+  точку обзора трехмерной поверхности. Раньше, когда параметры осей были жестко 
+  заданы, мы смотрели на поверхность строго сверху. Теперь команда v1ew(3) установила 
+  точку обзора трехмерных графиков, принятую по умолчанию. </font></P>
+<P align="left">
+<font face="Times New Roman" size="3">Теперь создадим второй файл — ms2.m:</font>
+</P>
+<P align="left"><font size="3" face="Courier New">h(l) = axes('Position',[0 Oil]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">sphere;</font>
+</P>
+<P align="left"><font size="3" face="Courier New">h(2) = axesCPosition'.[0 0 .4
+.6]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">peaks:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">h(3) = axes('Position'.[0 .5 .5 .5]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">sphere:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">h(4) = axes('Position'.[.5 0 .4 .4]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">sphere;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">h(5) = axes('Position<SUP>1</SUP>.[.5 <I>.5 </I>.5 .3]):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">cylinder([0 0 0.5]);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">set(h,'Visible<SUP>1</SUP>.'off):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">alpha(0.l):</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">set(gcf.'Renderer'.'opengl')'</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Здесь задано 5 трехмерных объектов: три сферы разных размеров, поверхность peaks и цилиндр.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Запустив файл <I>ms2, </I>мы получим еще более интересную картину. Заново будет вычислена величина z, а затем построены изображения пяти фигур:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">z = 3*(1-х).<sup>^</sup>2.*ехр(-(х.<sup>^</sup>2) - (у+1).<sup>^</sup>2)  ...<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">- 10*(х/5 - х.'З - у.&quot;5).*ехр(-х.^2-у.^2)  ...<BR>
+</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">- 1/3*ехр(-(х+1).^2 - у.^2)</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Последовательность наложения 
+  фигур, заданных в файле ms2, определяется последовательностью их появления в 
+  файле. Любопытен вид цилиндра — похоже, что произошедшее с ним преобразование 
+  связано с изменением системы координат с декартовой на сферическую.</font> </P>
+<P align="left"><img src="7.11.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.11.jpg" width="501" height="496"> </P>
+<P align="left"><i><B><font face="Times New Roman" size="3">Рис. 7.8. </font> 
+  </B><font face="Times New Roman" size="3">Комбинированный рисунок, полученный 
+  при запуске файла ms2.m после запуска ms1.m</font></i> </P>
+<P align="left"><font face="Times New Roman" size="3">Чтобы понять, какие из объектов 
+  наследуют свойства других объектов, следует рассмотреть диаграмму иерархии объектов 
+  дескрипторной графики MATLAB, что объекты surface расположены ниже объектов 
+  axes, а те, в свою очередь, расположены ниже объектов класса figure. Поэтому 
+  ясно, что в случае запуска файла msl свойства сетки, построенной с применением 
+  объекта axes, будут унаследованы объектом sh, построенным командой surface.</font> 
+</P>
+<P align="left"><font face="Times New Roman" size="3">&nbsp;[<i>Обратите внимание, 
+  что трехмерная графика в этом примере строится с рендерингом MATLAB 6 ('opengl'). 
+  В MATLAB 5.3 без установки патча Open GL по умолчанию был бы выбран рендеринг 
+  с использованием Z-буфера и на некоторых компьютерах были бы возможны искажения. 
+  Не было бы прозрачной фигуры. В MATLAB 6 при включенном режиме видеоадаптера 
+  TrueColor можно пропустить последнюю команду. Но при необходимости вывода изображения 
+  на печать set(gcf,'Renderer','opengl') можно быстро отредактировать и заменить 
+  на set(gcf,'Renderer', 'painters'). — Примеч. ред.</i></font> <font face="Times New Roman" size="3">]</font></P>
+<P align="left"> <font face="Times New Roman" size="3">Все объекты второго файла 
+  — ms2 — относятся к классу axes. Именно поэтому они строятся поверх объектов, 
+  показанных на рис. 7.10. Координаты всех пяти трехмерных фигур (см. рис. 7.11) 
+  жестко заданы в соответствующих командах axes. В заключение этого раздела следует 
+  еще раз отметить, что дескрипторная графика рассчитана не столько на конкретных 
+  пользователей, использующих MATLAB как прикладную программу, сколько на опытных 
+  разработчиков программного обеспечения для этой системы. Разумеется, это не 
+  исключает полезную возможность изменения параметров графиков путем настройки 
+  свойств графических объектов, что особенно наглядно видно из последних приведенных 
+  примеров. Многие тайны дескрипторной графики познаются только в ходе практических 
+  экспериментов с ней.</font> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="18"></a>Основные 
+  команды для создания пользовательского интерфейса</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Опытные пользователи нередко используют MATLAB для создания своих собственных систем. Этому во многом способствует идеология системы — хранение большей части команд и функций в виде m-файлов. Простота коррекции файлов и отсутствие необходимости явно объявлять создание новых команд и функций привели к появлению множества программных систем на базе MATLAB, особенно в таких областях, как решение задач линейной алгебры, моделирование различных систем и структур и т. д.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В новой версии MATLAB дескрипторная графика позволяет конструировать детали пользовательского интерфейса. Полный список команд и функций для проектирования пользовательского интерфейса можно получить, выполнив команду</font>
+<font face="Times New Roman" size="3">help uitools.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Ниже перечислены все команды и функции данного назначения. Функции пользовательского интерфейса
+GUI:&nbsp;</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">ulcontrol — создание управляющего элемента;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> ulmenu — создание пользовательского меню;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> ginput — графический ввод с помощью мыши.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Перечень команд и функций пользовательского интерфейса:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> dragrect — создание выделяющего прямоугольника с помощью мыши;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">rbbox — растягивание прямоугольника мышью;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> selectmoveresize — интерактивное выделение, перемещение и копирование объектов с помощью мыши;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> waitforbuttonpress — ожидание нажатия клавиши клавиатуры или кнопки мыши
+    в окне;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> waltfor — прекращение выполнения программы в ожидании
+    </font><font face="Times New Roman" size="3">уничтожения заданного графического объекта или изменения его свойств;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">uiwait — прекращение выполнения программы в ожидании вызова функции uiresume или закрытия заданного графического окна;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> inresume — возобновить выполнение после блокировки;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">uisuspend — прекращение интерактивного состояния фигуры;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> uirestore — возобновление интерактивного состояния фигуры.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Средства проектирования пользовательского интерфейса:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> guide — создание
+    GUI;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> align — выровнять положение объектов интерфейса;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">cbedit — изменение повторного вызова объектов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> menuedit — изменение меню;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> propedit — изменение свойств объектов.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Средства создания диалоговых окон:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">dialog — создание диалогового окна;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> axlimdlg — ограничение размеров диалогового окна;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> errordlg — создание окна с сообщением об ошибке;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> helpdlg — создание справочного окна;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">inputdlg — создание окна диалога ввода;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">listdlg — создание окна диалога для выбора вариантов параметра из списка;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> menu — создание меню диалогового ввода;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> msgbox — создание окна сообщений;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> questdlg — создание окна запроса;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> warndlg — создание окна предупреждения;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">uigetfile — создание стандартного окна открытия файлов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> uiputfile — создание стандартного окна записи файлов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> uisetcolor — создание окна выбора цвета;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> uisetfont — создание окна выбора шрифта;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> pagedlg — создание диалогового окна параметров страницы;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> printdlg — создание диалогового окна печати;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> waitbar — создание окна с индикатором прогресса.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Создание меню:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> makemenu — создать структуры меню;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> menubar — устанавливать типовые свойства для объекта
+    MenuBar;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> umtoggle — изменять статус параметра &quot;checked&quot; для объекта
+    uimenu;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> winmenu — создать подменю для меню
+    Window.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Создание кнопок панели инструментов и управление ими:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">btngroup — создать кнопку панели инструментов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> btnstate — запросить статус кнопки;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> btnpress — управление кнопкой;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> btndown — нажать кнопку;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> btnup — отпустить кнопку</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Утилиты задания свойств объектов figure/axes:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> сlruprop — удалить свойство объекта;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">getuprop — запросить свойство объекта;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> setuprop — установить свойство объекта.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Вспомогательные утилиты:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> all child — запросить все порожденные объекты;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> findall — найти все объекты;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> hidegui — скрыть/открыть объекты GUI;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> edtext — интерактивное редактирование объектов text;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> getstatus — запросить свойства строки объекта figure;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> setstatus — установить свойства строки объекта figure;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> popupstr — запросить свойства строки выпадающего меню;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> remapflg — изменить положение объекта figure;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> setptr — установить указатель на объект figure;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">getptr — получить указатель на объект figure;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> overobj — запросить дескриптор объекта, над которым находится курсор мыши.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Таким образом, MATLAB содержит обширный набор команд и функций для создания типовых элементов пользовательского интерфейса. Объем данной книги не позволяет останавливаться на детальном описании этих функций, тем более что оно имеется в справочной системе. Поэтому мы ограничимся единственным примером: создание кнопки, на которой можно щелкнуть мышью и перевести ее в нажатое состояние.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="19"></a>Пример 
+  создания объекта интерфейса</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Ниже представлена программа (распечатка m-файла с именем ui), которая при запуске создает 4 объекта интерфейса:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">kl=uicontrol('Style','pushbutton'....</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'Units'.'normalized'.'Position',[.7 .5 .2 .1],...&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> 'String'.'click here');&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> k2=ui control('Sty!e'.'pushbutton</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'Units'.'normalized','Position'.[.6 .3 .2 .1]....&nbsp;</font>
+</P>
+<P align="left"><font size="3" face="Courier New"> 'String'.'click here');&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ck = uicontrol('Style'. 'pushbutton'. 'String', 'Clear'....</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'Position'. [150 150 100 70]. 'Callback', 'da');&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> hpop = uicontrol('Style', 'popup'....</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">'String'. 'hsv|hot|cool|gray'....</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&nbsp;'Position'. [30 320 100 50],...&nbsp;</font>
+</P>
+<P align="left"><font size="3" face="Courier New">'Callback<sup>'</sup>, 'setmap');</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Первые два объекта kl и 
+  k2 — это малые кнопки с надписью click here (&laquo;щелкни здесь&raquo;). Объект 
+  ck — это большая кнопка Clear (кстати, действующая). Объект hpop — раскрывающийся 
+  список (тоже действующий, хотя и содержащий незаполненные поименованные позиции). 
+  Для создания всех этих объектов используется команда ui control с соответствующими 
+  параметрами, задающими стиль (вид) объекта интерфейса, место его размещения 
+  и надпись (на кнопках). На рис. 7.9 построены все эти объекты, причем раскрывающийся 
+  список показан в открытом состоянии.</font> </P>
+<P align="left"><img src="7.13.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.13.jpg" width="428" height="297"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 7.9. </font></i> 
+  </B><i><font face="Times New Roman" size="3">Пример построения объектов пользовательского 
+  интерфейса</font></i> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Дсскрипторная графика MATLAB позволяет создавать любые детали современного пользовательского интерфейса. Однако надо отметить, что пока она не поддерживает визуально-ориентированное программирование, при котором генерация нужных кодов осуществляется автоматически визуальным выбором нужного объекта интерфейса и размещением его в необходимом месте. Такой вид программирования поддерживает пакет Simulink, который в этой книге описан достаточно кратко.</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="20"></a>Растровая 
+  графика</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Одна из отличительных черт системы MATLAB — мощные возможности в реализации обработки изображений (images) класса BitMap (так называемая растровая графика .bmp). Весьма небольшое число команд такой графики включено в ядро системы. Часть из них была рассмотрена выше. Остановимся на некоторых наиболее важных командах.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Команды image(A) и imagesc(A) служат для представления содержимого матрицы А в виде рисунка. Так, исполнив команду&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> &raquo; image(25+5*peaks)</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">можно наблюдать представление 
+  матрицы трехмерной поверхности peaks в наглядном &laquo;цветовом&raquo; масштабе 
+  (рис. 7.10). При этом цвет каждой точки поверхности задается ее высотой.</font> 
+</P>
+<P align="left"><img src="7.14.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.14.jpg" width="434" height="496"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 7.10. </font></i> 
+  </B><font face="Times New Roman" size="3"><i>Представление матрицы peaks в виде 
+  растрового рисунка</i></font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Для достаточно представительного 
+  отображения матрицы peaks в данном случае пришлось ввести нормирующие множитель 
+  5 и слагаемое 25. Другая команда — Imagesc(A) — этого уже не требует. Результат 
+  исполнения приведенной ниже команды показан на рис. 7.11:</font> </P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; imagesc(peaks)</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">На уровне ядра графических операций поддерживаются довольно очевидные функции преобразования цветовых моделей:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> RGB=hsv2rgb(HSV) — преобразует матрицу изображения HSV в матрицу изображения RGB;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> HSV=rgb2hsv(RGB) — преобразует матрицу изображения RGB в матрицу изображения HSV.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Работа этих функций наглядна лишь при цветной графике. Поскольку иллюстрации в книге черно-белые, мы ограничимся лишь упоминанием о данных функциях преобразования.</font>
+</P>
+<P align="left"><img src="7.15.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/7.15.jpg" width="468" height="496"> </P>
+<P align="left"><B><i><font face="Times New Roman" size="3">Рис. 7.11. </font></i> 
+  </B><i><font face="Times New Roman" size="3">Представление матрицы с помощью 
+  команды imagesc</font></i> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Для получения детальной информации о графических файлах используется команда imfinfo( 'name'), где name — имя файла с расширением. Пример получения информации о файле saturn.tif (снимок планеты Сатурн) приводится ниже:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; imfinfo('saturn.tif')&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> ans =</font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="454" HEIGHT="610">
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="13"> 
+      <DIV WIDTH="200" HEIGHT="13"> 
+        <P align="left"> <font size="3" face="Courier New">ans =<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="13"> 
+      <DIV WIDTH="324" HEIGHT="13"> 
+        <P align="left"> <font size="3" face="Courier New"> <BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="2" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" HEIGHT="17"> 
+      <DIV WIDTH="524" HEIGHT="17"> 
+        <P align="left"> <font size="3" face="Courier New">Filename : ' E : \MATLABR12\tool 
+          box\images\imdemos\saturn .tif '<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">FileModDate:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">'26-Oct-1996 01:12:02'<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">FileSize:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">144184<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">Format :<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">'tif <SUP>w</SUP><BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">FormatVersion:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">[]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">Width:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">438<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="17"> 
+      <DIV WIDTH="200" HEIGHT="17"> 
+        <P align="left"> <font size="3" face="Courier New">Height:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="17"> 
+      <DIV WIDTH="324" HEIGHT="17"> 
+        <P align="left"> <font size="3" face="Courier New">328<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">BitOepth:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">8<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">Color-Type:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">'grayscale'<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">FormatSignature:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">[73 73 42 0]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">ByteOrder:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">'little-endian'<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">NewSubfileType:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">0<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">BitsPerSample:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">8<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">Compression:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">'Uncompressed'<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">Photomet ri с I nterpretati 
+          on :<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">'BlacklsZero'<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">StripOffsets:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">[19x1 double]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">SamplesPerPixel :<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">1<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">RowsPerStrip:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">18<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">StripByteCounts:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">[19x1 double]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">XResolution:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">72<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">YResolution:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">72<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">ResolutionUnit:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">'Inch'<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="17"> 
+      <DIV WIDTH="200" HEIGHT="17"> 
+        <P align="left"> <font size="3" face="Courier New">Colormap:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="17"> 
+      <DIV WIDTH="324" HEIGHT="17"> 
+        <P align="left"> <font size="3" face="Courier New">[]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">PlanarConfiguration:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">'Chunky'<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">TileWidth:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">[]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">Ti 1 eLength :<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">[]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">TileOffsets:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">[]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">TileByteCounts:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">[]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="14"> 
+      <DIV WIDTH="200" HEIGHT="14"> 
+        <P align="left"> <font size="3" face="Courier New">Orientation:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="14"> 
+      <DIV WIDTH="324" HEIGHT="14"> 
+        <P align="left"> <font size="3" face="Courier New">1<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">Fill Order:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">1<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">GrayResponseUnit:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">0.0100<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">MaxSampleValue:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">255&nbsp;<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="16"> 
+      <DIV WIDTH="200" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">MinSampleValue:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="16"> 
+      <DIV WIDTH="324" HEIGHT="16"> 
+        <P align="left"> <font size="3" face="Courier New">0<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="15"> 
+      <DIV WIDTH="200" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">Thresholding:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="15"> 
+      <DIV WIDTH="324" HEIGHT="15"> 
+        <P align="left"> <font size="3" face="Courier New">1<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+  <TR ALIGN="LEFT" VALIGN="TOP"> 
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="226" HEIGHT="61"> 
+      <DIV WIDTH="200" HEIGHT="61"> 
+        <P align="left"> <font size="3" face="Courier New">ImageDescription:<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="228" HEIGHT="61"> 
+      <DIV WIDTH="324" HEIGHT="61"> 
+        <P align="left"> <font size="3" face="Courier New">[1x168 char]<BR>
+          </font> </P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+<P align="left">
+<font face="Times New Roman" size="3">Более интересна работа MATLAB с реальными изображениями. Она положена в основу многочисленных средств создания иллюстраций в пакетах прикладных программ системы MATLAB, и прежде всего специализированного пакета Images (полное название пакета — Image Processing Toolbox (Пакет обработки изображений)).</font>
+</P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="21"></a>Пакет 
+  прикладных программ Images</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">Основные средства по обработке изображений входят в пакет прикладных программ Images. С его возможностями можно детально ознакомиться, выполнив следующую команду:</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">&raquo; help images</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">Image Processing Toolbox.&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Version 2.2.2 (R12) 10-Mar-2000&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Release information.</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">Readme - Display information 
+  about </font></P>
+<P align="left"><font size="3" face="Courier New">versions 2.0. 2.1. and 2.2.&nbsp;</font> 
+</P>
+<P align="left">
+<font size="3" face="Courier New"> Toolbox preferences.</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">iptgetpref - Get value of Image 
+  Processing </font></P>
+<P align="left"><font size="3" face="Courier New">Toolbox preference.</font> </P>
+<P align="left"> <font size="3" face="Courier New">iptsetpref - Set value of Image 
+  Processing </font></P>
+<P align="left"><font size="3" face="Courier New">Toolbox preference. Demos.</font> 
+</P>
+<P align="left">
+<font size="3" face="Courier New">dctdemo- 2-0 DCT image compression demo.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">edgedemo   - Edge detection demo.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">firdemo  - 2-D FIR filtering and filter design demo.</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">imadjdemo - Intensity adjustment 
+  and histogram </font></P>
+<P align="left"><font size="3" face="Courier New">equalization demo.</font> </P>
+<P align="left">
+<font size="3" face="Courier New">landsatdemo - Landsat color composite demo.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">nrfiltdemo - Noise reduction filtering demo.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">qtdemo   - Quadtree decomposition demo.</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">roidemo  - Region-of-interest processing demo.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">В обширном списке (выше он дан лишь выборочно) содержится более сотни команд для работы с растровыми изображениями. Эти изображения могут быть получены со сканера, цифрового фотоаппарата либо от видеокамеры, подключенной к компьютеру через видеобластер или подобное устройство.</font>
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пакет Images поддерживает следующие возможности:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">отображение рисунков различных графических форматов (в том числе с высоким разрешением) на экране дисплея;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> расширенные функции записи рисунков в файл, считывание их из файла и получение информации о файле;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> выполнение геометрических операций с графическими объектами, таких как разворот или интерполяция данных;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> операции на уровне элементарных частей изображений — пикселов;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> аналитические операции с изображениями;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> осуществление компрессии и декомпрессии изображений;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">выполнение различных видов фильтрации изображений и конструирование фильтров;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> выполнение различных преобразований изображений;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> поразрядные (битовые) операции с рисунками;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> операции задания и преобразования цветов;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">&nbsp;преобразование типов и форматов рисунков;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> демонстрация возможностей пакета;&nbsp;</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> организация показа слайдов.</font></li>
+</ul>
+<P align="left">
+<font face="Times New Roman" size="3">Объем данной книги не позволяет описать этот пакет подробно, но в этом нет и особого смысла. Если вы уяснили методы работы с системой MATLAB, вам не составит особого труда ознакомиться с составом всех команд и функций пакета и опробовать их на практике. В связи с этим мы остановимся лишь на нескольких демонстрационных примерах.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="22"></a>Примеры 
+  применения пакета Images</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Есть ряд способов ознакомиться 
+  с весьма обширными и впечатляющими возможностями пакета Images: с помощью демонстрационных 
+  примеров (Demos) в справочной базе данных системы, путем непосредственного запуска 
+  этих примеров (список приводился выше), запуском отдельных команд и т. д.</font> 
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Пример реконструкции изображений с управлением оригиналом, создаваемым изображением и ошибкой реконструкции представлен в файле dctdemo. Он выводит свое окно со средствами пользовательского интерфейса. Можно задать выбор той или иной исходной картинки, задать степень компрессии изображения и визуально наблюдать за характером преобразований (рис. 7.16). Для просмотра следует нажать кнопку Apply (Применить), кнопка Close (Закрыть) закрывает окно, а кнопка Info выводит информацию о примере.</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Другой важной сферой применения 
+  пакета Images является фильтрация изображений, например с целью их очистки от 
+  шумовых помех. В качестве исходного изображения взят фотоснимок планеты Сатурн, 
+  затем с помощью генератора случайных чисел на него нанесены помехи в виде точек. 
+  Имеется возможность оценить степень очистки изображения от помех при использовании 
+  различных алгоритмов фильтрации, представленных в пакете Images рядом функций.</font> 
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Следующий пример иллюстрирует 
+  возможность изменения яркости изображения. Кривая яркости может устанавливаться 
+  перемещением ее точек с помощью мыши. Можно задавать линейный или нелинейный 
+  вид этой кривой и тут же наблюдать изменение характеристик изображения. Вид 
+  кривой существенно влияет на яркость и контрастность изображений и позволяет 
+  выполнять тоновую коррекцию, например осветлять слишком темные изображения или, 
+  наоборот, затемнять светлые изображения.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Наконец, последний в этом 
+  уроке пример (остальные вы можете просмотреть самостоятельно) показывает действенность 
+  алгоритма повышения четкости изображения в произвольной его области. В нашем 
+  случае эта область ограничена треугольником. В окне можно наблюдать (и выбирать) 
+  исходное изображение, задавать область действия алгоритма и просматривать результирующее 
+  изображение.<BR>
+  Даже эти примеры дают возможность оценить обширные возможности пакета Images 
+  в технике обработки реальных изображений.</font> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="23"></a>Примеры 
+  программирования задач со средствами пакета Images</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Вы можете ознакомиться 
+  с каждым демонстрационным примером пакета Images, выполнив команду type fname, 
+  где fname — имя файла с демонстрационным примером. Однако следует отметить, 
+  что демонстрационные программы являются весьма сложными, поскольку создают окна 
+  в виде стандартных панелей с современными элементами пользовательского интерфейса 
+  и переключателями выбора вариантов. Мы рекомендуем читателю воздержаться от 
+  знакомства с этими программами до ознакомления с уроком 20, в котором систематически 
+  описаны средства программирования системы MATLAB. А пока мы ограничимся парой 
+  характерных примеров, наглядно показывающих, что при работе с системой MATLAB 
+  вполне можно руководствоваться народной поговоркой: &laquo;Не боги горшки обжигают&raquo;.</font> 
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Рассмотрим, к примеру, задачу фильтрации искаженного помехами произвольного изображения, представленного некоторым файлом. Реализующая эту сложную и весьма эффективную операцию программа выглядит следующим образом:</font>
+</P>
+<P align="left">
+<I><font size="3" face="Courier New">% </font> </I><font size="3" face="Courier New">Picture filter&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New"> I = imreadCsaturn.tif);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">h = [1 2 1: 0 0 0: -1 -2 -1];</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">I2 - filter2(h.I);</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">imshow(I2,[ ]). colorbar</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">В результате исполнения 
+  этой простой и вполне очевидной программы можно получить отфильтрованное изображение 
+  из файла saturn.tif . Хотите попробовать обработать какой-либо снимок? Все, 
+  что для этого нужно, — подготовить снимок в нужном формате (например, tif) и 
+  заменить во второй строке имя демонстрационного файла на имя вашего файла.</font> 
+</P>
+<P align="left">
+<font face="Times New Roman" size="3">Рассмотрим еще один достаточно простой пример — построение сферы в виде глобуса и наклеивание на полушарие этого глобуса изображения карты погоды:</font>
+</P>
+<P align="left"><font size="3" face="Courier New">load earth   sphere: h -
+findobjC'Type'.'surface');</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">hemisphere= [ones(257.125).X.ones(257,125)];</font>
+</P>
+<P align="left"> <font size="3" face="Courier New">set(h.'CData'.f1i pud(hemi 
+  sphere).'FaceColor'.</font></P>
+<P align="left"><font size="3" face="Courier New">'texturemap')</font> </P>
+<P align="left">
+<font size="3" face="Courier New">colormap(map)</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">axis equal</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">view([90 0])&nbsp;</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">setCgca.'CameraViewAngleMode'.'manual')</font>
+</P>
+<P align="left">
+<font size="3" face="Courier New">view([65 30])</font>
+</P>
+<P align="left"> <font face="Times New Roman" size="3">Пакет Images можно рассматривать 
+  как полезный инструмент для создания новых алгоритмов и методов обработки изображений 
+  и обучения специалистов. Применение его непосредственно для обработки изображений 
+  вполне возможно, но все же едва ли целесообразно. Дело в том, что обширнейшие 
+  возможности по обработке изображений открывают профессиональные графические 
+  пакеты, например Adobe Photoshop, Ulead Photolmpact, Corel Draw и др., в которых 
+  реализованы самые современные методы обработки изображений и использованы последние 
+  новации пользовательского интерфейса. В этом случае достоинство средств MATLAB 
+  проявляется только в математической прозрачности реализаций алгоритмов обработки 
+  изображений.</font> </P>
+<P align="left"> <font face="Times New Roman" size="4"><a name="24"></a>Галерея 
+  трехмерной графики</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Для знакомства с возможностями 
+  трехмерной графики и построением пользовательского интерфейса MATLAB имеет галерею 
+  (Gallery) в виде профессионально выполненных графических программ. Доступ к 
+  ним возможен как из режима демонстрации (команда Examples and Demos в меню Help 
+  командного окна MATLAB), так и путем запуска команды из командной строки с указанием 
+  имени соответствующего файла.</font> </P>
+<P align="left">
+<font face="Times New Roman" size="3"> Галерея представлена фигурами и файлами, список которых приведен в табл. 7.1.</font>
+</P>
+<P align="left">
+<B><i><font face="Times New Roman" size="3">Таблица 7.1. </font></i> </B><font face="Times New Roman" size="3"><i>Состав галереи трехмерной графики MATLAB</i></font>
+</P>
+<TABLE FRAME="BOX" RULES="ALL" BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="368" HEIGHT="174">
+  <TR>
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="0">
+<p align="left">
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="24">
+<p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="24"> 
+      <DIV WIDTH="107" HEIGHT="24">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Имя в галерее<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="91" HEIGHT="24"> 
+      <DIV WIDTH="96" HEIGHT="24">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Файл<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="178" HEIGHT="24"> 
+      <DIV WIDTH="410" HEIGHT="24">
+<P align="left">
+<font face="Times New Roman" size="3"><b>Наименование фигуры<BR>
+</b></font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="20">
+<p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="20"> 
+      <DIV WIDTH="107" HEIGHT="20">
+<P align="left">
+<font face="Times New Roman" size="3">Knot<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="91" HEIGHT="20"> 
+      <DIV WIDTH="96" HEIGHT="20">
+<P align="left">
+<font face="Times New Roman" size="3">Knot.m<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="178" HEIGHT="20"> 
+      <DIV WIDTH="410" HEIGHT="20">
+<P align="left">
+<font face="Times New Roman" size="3">Завязанный узел<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="18"> 
+      <DIV WIDTH="107" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Quiver<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="91" HEIGHT="18"> 
+      <DIV WIDTH="96" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Quivdemo. m<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="178" HEIGHT="18"> 
+      <DIV WIDTH="410" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Векторное объемное поле<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="17">
+<p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="17"> 
+      <DIV WIDTH="107" HEIGHT="17">
+<P align="left">
+<font face="Times New Roman" size="3">Klein II<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="91" HEIGHT="17"> 
+      <DIV WIDTH="96" HEIGHT="17">
+<P align="left">
+<font face="Times New Roman" size="3">Kleinl. m<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="178" HEIGHT="17"> 
+      <DIV WIDTH="410" HEIGHT="17">
+<P align="left">
+<font face="Times New Roman" size="3">Объемное кольцо<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="18"> 
+      <DIV WIDTH="107" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Cruller<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="91" HEIGHT="18"> 
+      <DIV WIDTH="96" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Cruller.m<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="178" HEIGHT="18"> 
+      <DIV WIDTH="410" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Объемное кольцо Мебиуса<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="18"> 
+      <DIV WIDTH="107" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Hoops<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="91" HEIGHT="18"> 
+      <DIV WIDTH="96" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Tory4.m<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="178" HEIGHT="18"> 
+      <DIV WIDTH="410" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Четыре объемных обруча<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="18"> 
+      <DIV WIDTH="107" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Slosh<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="91" HEIGHT="18"> 
+      <DIV WIDTH="96" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Spharm2.m<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="178" HEIGHT="18"> 
+      <DIV WIDTH="410" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Построение фигуры, напоминающей улитку<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="18">
+<p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="18"> 
+      <DIV WIDTH="107" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Modes<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="91" HEIGHT="18"> 
+      <DIV WIDTH="96" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Modes. m<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="178" HEIGHT="18"> 
+      <DIV WIDTH="410" HEIGHT="18">
+<P align="left">
+<font face="Times New Roman" size="3">Демонстрация фаз анимации трехмерной поверхности<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+<TR ALIGN="LEFT" VALIGN="TOP">
+<TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="1" HEIGHT="23">
+<p align="left">
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="98" HEIGHT="23"> 
+      <DIV WIDTH="107" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3">Logo<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="91" HEIGHT="23"> 
+      <DIV WIDTH="96" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3">Logo.m<BR>
+</font>
+</P>
+</DIV>
+</TD>
+    <TD COLSPAN="1" ROWSPAN="1" ALIGN="LEFT" VALIGN="TOP" WIDTH="178" HEIGHT="23"> 
+      <DIV WIDTH="410" HEIGHT="23">
+<P align="left">
+<font face="Times New Roman" size="3">Построение логотипа системы MATLAB<BR>
+</font>
+</P>
+</DIV>
+</TD>
+</TR>
+</TABLE>
+<P align="left"> <font face="Times New Roman" size="3">Обратите внимание на то, 
+  что иногда имя файла не совпадает с именем фигуры в галерее. Некоторые из фигур 
+  галереи мы уже описывали — это knot (см. рис. 4.4) и logo . Ниже приведено еще 
+  несколько примеров, которые дают наглядное представление о возможностях дескрипторной 
+  графики системы MATLAB.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Полезно обратить внимание 
+  на то, что в этом примере сам по себе график — двумерный. Объемный вид поверхности 
+  достигается сочетанием функциональной окраски с изображением графика векторного 
+  поля с помощью стрелок.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Команда kleinl строит график 
+  объемной ленты Мебиуса с одним перекручиванием. Этот график хорошо иллюстрирует 
+  хотя и одноцветную, но функциональную закраску фигуры с имитацией ее освещения</font> 
+  <font face="Times New Roman" size="3">источником света, расположенным вверху 
+  справа, и реализацией эффектов отражения света.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Команда cruller строит 
+  объемное кольцо Мебиуса с двойным перекручиванием. В данном случае используется 
+  обычная функциональная окраска с сохранением линий каркаса фигуры.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Команда tory4 строит четыре 
+  переплетающихся друг с другом тора (объемных кольца) в пространстве (рис. 7.25). 
+  Наглядности этой картины также способствует функциональная окраска торов и видимые 
+  линии каркаса. Обратите внимание, что невидимые линии удалены.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Любопытную фигуру, напоминающую 
+  раковину улитки, строит команда spharm2. Здесь интересно применение многоцветной 
+  функциональной окраски с использованием интерполяции по цвету, а также имитация 
+  эффектов отражения при освещении фигуры источником точечного света. Отчетливо 
+  видны зеркальные блики на поверхности фигуры.</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Еще одна команда — modes 
+  — иллюстрирует построение фаз анимации поверхности . Она генерирует 12 фигур, 
+  отражающих положение поверхности в пространстве в различные моменты времени.</font> 
+</P>
+<P align="left"> <font face="Times New Roman" size="3">В целом указанный набор 
+  программ дает хорошее представление о возможностях трехмерной графики системы 
+  MATLAB. Команда type name, где name — имя соответствующей команды, выводит полный 
+  листинг программы, реализующей построение той или иной фигуры.</font> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="25"></a>Что 
+  нового мы узнали?</font></B> </P>
+<P align="left">
+<font face="Times New Roman" size="3">В этом уроке мы научились:</font>
+</P>
+<ul>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Строить графики с анимацией.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Использовать простые средства дескрипторной графики.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Создавать графические окна и управлять ими.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3">Работать с графическими объектами.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Создавать элементы интерфейса.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Использовать некоторые средства пакета Images для обработки изображений.</font></li>
+  <li>
+    <p align="left"><font face="Times New Roman" size="3"> Просматривать примеры из галереи трехмерной графики.</font></li>
+</ul>
+</BODY>
+</HTML>
+
