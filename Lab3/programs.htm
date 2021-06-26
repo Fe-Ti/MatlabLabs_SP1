@@ -9,11 +9,11 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta name=Generator content="Microsoft Word 11">
 <meta name=Originator content="Microsoft Word 11">
 <link rel=File-List href="programs.files/filelist.xml">
-<title>Программирование в MATLAB (продолжение)</title>
+<title>РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РІ MATLAB (РїСЂРѕРґРѕР»Р¶РµРЅРёРµ)</title>
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
-  <o:Author>Орлов</o:Author>
-  <o:LastAuthor>Орлов</o:LastAuthor>
+  <o:Author>РћСЂР»РѕРІ</o:Author>
+  <o:LastAuthor>РћСЂР»РѕРІ</o:LastAuthor>
   <o:Revision>4</o:Revision>
   <o:TotalTime>78</o:TotalTime>
   <o:Created>2009-03-17T16:18:00Z</o:Created>
@@ -66,7 +66,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
 	font-family:"Times New Roman";
 	mso-fareast-font-family:"Times New Roman";}
 h1
-	{mso-style-next:Обычный;
+	{mso-style-next:РћР±С‹С‡РЅС‹Р№;
 	margin-top:6.0pt;
 	margin-right:0cm;
 	margin-bottom:6.0pt;
@@ -79,7 +79,7 @@ h1
 	font-family:Arial;
 	mso-font-kerning:16.0pt;}
 h2
-	{mso-style-next:Обычный;
+	{mso-style-next:РћР±С‹С‡РЅС‹Р№;
 	margin-top:12.0pt;
 	margin-right:0cm;
 	margin-bottom:6.0pt;
@@ -92,7 +92,7 @@ h2
 	color:#993300;
 	mso-bidi-font-style:italic;}
 h3
-	{mso-style-next:Обычный;
+	{mso-style-next:РћР±С‹С‡РЅС‹Р№;
 	margin-top:6.0pt;
 	margin-right:0cm;
 	margin-bottom:3.0pt;
@@ -132,7 +132,7 @@ p.MsoFooter, li.MsoFooter, div.MsoFooter
 	font-family:"Times New Roman";
 	mso-fareast-font-family:"Times New Roman";}
 p.a, li.a, div.a
-	{mso-style-name:"Строки таблиц";
+	{mso-style-name:"РЎС‚СЂРѕРєРё С‚Р°Р±Р»РёС†";
 	margin:0cm;
 	margin-bottom:.0001pt;
 	text-align:justify;
@@ -164,7 +164,7 @@ div.Section1
 <style>
  /* Style Definitions */
  table.MsoNormalTable
-	{mso-style-name:"Обычная таблица";
+	{mso-style-name:"РћР±С‹С‡РЅР°СЏ С‚Р°Р±Р»РёС†Р°";
 	mso-tstyle-rowband-size:0;
 	mso-tstyle-colband-size:0;
 	mso-style-noshow:yes;
@@ -196,18 +196,18 @@ style='tab-interval:35.4pt'>
 
 <div class=Section1>
 
-<h2>Программирование в <span lang=EN-US style='mso-ansi-language:EN-US'>MATLAB</span>
-(продолжение)</h2>
+<h2>РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РІ <span lang=EN-US style='mso-ansi-language:EN-US'>MATLAB</span>
+(РїСЂРѕРґРѕР»Р¶РµРЅРёРµ)</h2>
 
-<h3>1. Операторы циклов</h3>
+<h3>1. РћРїРµСЂР°С‚РѕСЂС‹ С†РёРєР»РѕРІ</h3>
 
-<p class=MsoNormal>В <span lang=EN-US style='mso-ansi-language:EN-US'>MATLAB</span>
-существует 3 типа операторов цикла. С оператором <b style='mso-bidi-font-weight:
-normal'>:</b> (двоеточие) мы познакомились лаб. раб. 2. Следующий оператор <i
+<p class=MsoNormal>Р’ <span lang=EN-US style='mso-ansi-language:EN-US'>MATLAB</span>
+СЃСѓС‰РµСЃС‚РІСѓРµС‚ 3 С‚РёРїР° РѕРїРµСЂР°С‚РѕСЂРѕРІ С†РёРєР»Р°. РЎ РѕРїРµСЂР°С‚РѕСЂРѕРј <b style='mso-bidi-font-weight:
+normal'>:</b> (РґРІРѕРµС‚РѕС‡РёРµ) РјС‹ РїРѕР·РЅР°РєРѕРјРёР»РёСЃСЊ Р»Р°Р±. СЂР°Р±. 2. РЎР»РµРґСѓСЋС‰РёР№ РѕРїРµСЂР°С‚РѕСЂ <i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
-EN-US'>for</span> … </i><i style='mso-bidi-font-style:normal'><span lang=EN-US
-style='mso-ansi-language:EN-US'>end</span></i> используется для организации
-цикла с фиксированным числом повторений. Он имеет вид:</p>
+EN-US'>for</span> вЂ¦ </i><i style='mso-bidi-font-style:normal'><span lang=EN-US
+style='mso-ansi-language:EN-US'>end</span></i> РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕСЂРіР°РЅРёР·Р°С†РёРё
+С†РёРєР»Р° СЃ С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Рј С‡РёСЃР»РѕРј РїРѕРІС‚РѕСЂРµРЅРёР№. РћРЅ РёРјРµРµС‚ РІРёРґ:</p>
 
 <table border=1 cellpadding=0 cellspacing=0 bgcolor="#FFFFFF" class=MsoNormalTable
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
@@ -218,11 +218,11 @@ style='mso-ansi-language:EN-US'>end</span></i> используется для организации
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=a><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
   normal'><span lang=EN-US style='mso-ansi-language:EN-US'>for</span><span
-  style='mso-spacerun:yes'>  </span></i></b><b style='mso-bidi-font-weight:
+  style='mso-spacerun:yes'>В  </span></i></b><b style='mso-bidi-font-weight:
   normal'><i style='mso-bidi-font-style:normal'><span lang=EN-US
-  style='mso-ansi-language:EN-US'>var</span></i> = Выражение <o:p></o:p></b></p>
+  style='mso-ansi-language:EN-US'>var</span></i> = Р’С‹СЂР°Р¶РµРЅРёРµ <o:p></o:p></b></p>
   <p class=a><b style='mso-bidi-font-weight:normal'><span
-  style='mso-spacerun:yes'>       </span>Операторы <o:p></o:p></b></p>
+  style='mso-spacerun:yes'>В В В В В В  </span>РћРїРµСЂР°С‚РѕСЂС‹ <o:p></o:p></b></p>
   <p class=a><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
   normal'><span lang=EN-US style='mso-ansi-language:EN-US'>end</span></i> ;<o:p></o:p></b></p>
   </td>
@@ -231,79 +231,79 @@ style='mso-ansi-language:EN-US'>end</span></i> используется для организации
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal>Здесь <b><i><span lang=EN-US style='color:red;mso-ansi-language:
-EN-US'>var</span></i></b> – счетчик цикла – любая переменная, обычно это <i
+<p class=MsoNormal>Р—РґРµСЃСЊ <b><i><span lang=EN-US style='color:red;mso-ansi-language:
+EN-US'>var</span></i></b> вЂ“ СЃС‡РµС‚С‡РёРє С†РёРєР»Р° вЂ“ Р»СЋР±Р°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ, РѕР±С‹С‡РЅРѕ СЌС‚Рѕ <i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
 EN-US'>i</span>, </i><i style='mso-bidi-font-style:normal'><span lang=EN-US
 style='mso-ansi-language:EN-US'>j</span>, </i><i style='mso-bidi-font-style:
 normal'><span lang=EN-US style='mso-ansi-language:EN-US'>k</span>, </i><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
 EN-US'>l</span>, </i><i style='mso-bidi-font-style:normal'><span lang=EN-US
-style='mso-ansi-language:EN-US'>m</span><span lang=EN-US> </span></i>и т. д. </p>
+style='mso-ansi-language:EN-US'>m</span><span lang=EN-US> </span></i>Рё С‚. Рґ. </p>
 
-<p class=MsoNormal><i style='mso-bidi-font-style:normal'>Выражение </i>записывается
-в виде <b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+<p class=MsoNormal><i style='mso-bidi-font-style:normal'>Р’С‹СЂР°Р¶РµРЅРёРµ </i>Р·Р°РїРёСЃС‹РІР°РµС‚СЃСЏ
+РІ РІРёРґРµ <b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
 normal'><span lang=EN-US style='color:red;mso-ansi-language:EN-US'>s</span><span
 style='color:red'> : </span></i></b><b style='mso-bidi-font-weight:normal'><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='color:red;
 mso-ansi-language:EN-US'>d</span><span style='color:red'> : </span></i></b><b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
-lang=EN-US style='color:red;mso-ansi-language:EN-US'>e</span></i></b>, где <b
+lang=EN-US style='color:red;mso-ansi-language:EN-US'>e</span></i></b>, РіРґРµ <b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
-lang=EN-US style='color:red;mso-ansi-language:EN-US'>s</span></i></b> –
-начальное значение счетчика цикла <b><i><span lang=EN-US style='color:red;
+lang=EN-US style='color:red;mso-ansi-language:EN-US'>s</span></i></b> вЂ“
+РЅР°С‡Р°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃС‡РµС‚С‡РёРєР° С†РёРєР»Р° <b><i><span lang=EN-US style='color:red;
 mso-ansi-language:EN-US'>var</span></i></b>, <b><i><span lang=EN-US
 style='color:red;mso-ansi-language:EN-US'>d</span></i></b><i style='mso-bidi-font-style:
-normal'> –</i> шаг изменения и <b><i><span style='color:red'>е</span></i></b><i
-style='mso-bidi-font-style:normal'> – </i>конечное значение <b><i><span
+normal'> вЂ“</i> С€Р°Рі РёР·РјРµРЅРµРЅРёСЏ Рё <b><i><span style='color:red'>Рµ</span></i></b><i
+style='mso-bidi-font-style:normal'> вЂ“ </i>РєРѕРЅРµС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ <b><i><span
 lang=EN-US style='color:red;mso-ansi-language:EN-US'>var</span></i></b>.
-Возможна и запись в виде <b style='mso-bidi-font-weight:normal'><i
+Р’РѕР·РјРѕР¶РЅР° Рё Р·Р°РїРёСЃСЊ РІ РІРёРґРµ <b style='mso-bidi-font-weight:normal'><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='color:red;
 mso-ansi-language:EN-US'>s</span><span style='color:red'> : </span></i></b><b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
 lang=EN-US style='color:red;mso-ansi-language:EN-US'>e</span></i></b>,<b
-style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'> </i></b>тогда<b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'> </i></b>С‚РѕРіРґР°<b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'> </i></b><b><i><span
 lang=EN-US style='color:red;mso-ansi-language:EN-US'>d</span></i></b><i
 style='mso-bidi-font-style:normal'><span lang=EN-US> </span></i>= 1. </p>
 
-<p class=MsoNormal>Список операторов завершается ключевым словом <i
+<p class=MsoNormal>РЎРїРёСЃРѕРє РѕРїРµСЂР°С‚РѕСЂРѕРІ Р·Р°РІРµСЂС€Р°РµС‚СЃСЏ РєР»СЋС‡РµРІС‹Рј СЃР»РѕРІРѕРј <i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
 EN-US'>end</span></i>. </p>
 
-<p class=MsoNormal>Оператор <b style='mso-bidi-font-weight:normal'><i
+<p class=MsoNormal>РћРїРµСЂР°С‚РѕСЂ <b style='mso-bidi-font-weight:normal'><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='color:green;
-mso-ansi-language:EN-US'>continue</span></i></b> передает управление в
-следующую итерацию цикла, пропуская операции, которые записаны за ним. </p>
+mso-ansi-language:EN-US'>continue</span></i></b> РїРµСЂРµРґР°РµС‚ СѓРїСЂР°РІР»РµРЅРёРµ РІ
+СЃР»РµРґСѓСЋС‰СѓСЋ РёС‚РµСЂР°С†РёСЋ С†РёРєР»Р°, РїСЂРѕРїСѓСЃРєР°СЏ РѕРїРµСЂР°С†РёРё, РєРѕС‚РѕСЂС‹Рµ Р·Р°РїРёСЃР°РЅС‹ Р·Р° РЅРёРј. </p>
 
-<p class=MsoNormal>Оператор <b style='mso-bidi-font-weight:normal'><i
+<p class=MsoNormal>РћРїРµСЂР°С‚РѕСЂ <b style='mso-bidi-font-weight:normal'><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='color:green;
-mso-ansi-language:EN-US'>break</span></i></b> используется для досрочного
-прерывания цикла. </p>
+mso-ansi-language:EN-US'>break</span></i></b> РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РґРѕСЃСЂРѕС‡РЅРѕРіРѕ
+РїСЂРµСЂС‹РІР°РЅРёСЏ С†РёРєР»Р°. </p>
 
-<p class=MsoNormal>Возможны вложенные циклы </p>
+<p class=MsoNormal>Р’РѕР·РјРѕР¶РЅС‹ РІР»РѕР¶РµРЅРЅС‹Рµ С†РёРєР»С‹ </p>
 
 <p class=MsoNormal style='margin-left:35.4pt;text-indent:35.4pt'><b
-style='mso-bidi-font-weight:normal'><span style='mso-spacerun:yes'> </span></b><b
+style='mso-bidi-font-weight:normal'><span style='mso-spacerun:yes'>В </span></b><b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
 lang=EN-US style='mso-ansi-language:EN-US'>for</span></i><span
-style='mso-spacerun:yes'>  </span></b><b style='mso-bidi-font-weight:normal'><i
+style='mso-spacerun:yes'>В  </span></b><b style='mso-bidi-font-weight:normal'><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='mso-ansi-language:
-EN-US'>i</span></i> = 1 : 3<span style='mso-spacerun:yes'>  </span><o:p></o:p></b></p>
+EN-US'>i</span></i> = 1 : 3<span style='mso-spacerun:yes'>В  </span><o:p></o:p></b></p>
 
 <p class=MsoNormal style='margin-left:70.8pt;text-indent:0cm'><b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
-style='mso-spacerun:yes'>    </span></i></b><b style='mso-bidi-font-weight:
+style='mso-spacerun:yes'>В В В  </span></i></b><b style='mso-bidi-font-weight:
 normal'><i style='mso-bidi-font-style:normal'><span lang=EN-US
 style='mso-ansi-language:EN-US'>for</span></i></b><b style='mso-bidi-font-weight:
 normal'><span lang=EN-US style='mso-ansi-language:EN-US'><span
-style='mso-spacerun:yes'>  </span><i style='mso-bidi-font-style:normal'>j</i> =
-1 : 3<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></b></p>
+style='mso-spacerun:yes'>В  </span><i style='mso-bidi-font-style:normal'>j</i> =
+1 : 3<span style='mso-spacerun:yes'>В  </span><o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-left:70.8pt;text-indent:0cm'><b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
 lang=EN-US style='mso-ansi-language:EN-US'><span
-style='mso-spacerun:yes'>        </span>a </span></i></b><b style='mso-bidi-font-weight:
+style='mso-spacerun:yes'>В В В В В В В  </span>a </span></i></b><b style='mso-bidi-font-weight:
 normal'><span lang=EN-US style='mso-ansi-language:EN-US'>(<i style='mso-bidi-font-style:
 normal'>i</i>, <i style='mso-bidi-font-style:normal'>j</i>) = <i
 style='mso-bidi-font-style:normal'>i </i></span></b><b style='mso-bidi-font-weight:
@@ -316,15 +316,15 @@ lang=EN-US style='mso-ansi-language:EN-US'> j ; <o:p></o:p></span></i></b></p>
 
 <p class=MsoNormal style='margin-left:70.8pt;text-indent:0cm'><b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
-lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>   
+lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>В В В 
 </span>end ; <o:p></o:p></span></i></b></p>
 
 <p class=MsoNormal style='margin-left:70.8pt;text-indent:0cm'><b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
 lang=EN-US style='mso-ansi-language:EN-US'>end</span> ;</i></b></p>
 
-<p class=MsoNormal>В результате выполнения этого цикла формируется матрица <i
-style='mso-bidi-font-style:normal'>а</i></p>
+<p class=MsoNormal>Р’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚РѕРіРѕ С†РёРєР»Р° С„РѕСЂРјРёСЂСѓРµС‚СЃСЏ РјР°С‚СЂРёС†Р° <i
+style='mso-bidi-font-style:normal'>Р°</i></p>
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
  style='margin-left:41.4pt;border-collapse:collapse;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -343,9 +343,9 @@ style='mso-bidi-font-style:normal'>а</i></p>
  <tr style='mso-yfti-irow:1'>
   <td width=84 valign=top style='width:63.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=a><i style='mso-bidi-font-style:normal'><span
-  style='mso-spacerun:yes'>     </span></i><i style='mso-bidi-font-style:normal'><span
+  style='mso-spacerun:yes'>В В В В  </span></i><i style='mso-bidi-font-style:normal'><span
   lang=EN-US style='mso-ansi-language:EN-US'>a</span></i><span
-  style='mso-spacerun:yes'>  </span></p>
+  style='mso-spacerun:yes'>В  </span></p>
   </td>
   <td width=36 valign=top style='width:27.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=a>=</p>
@@ -362,23 +362,23 @@ style='mso-bidi-font-style:normal'>а</i></p>
   <p class=a><o:p>&nbsp;</o:p></p>
   </td>
   <td width=144 valign=top style='width:108.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=a>1<span style='mso-spacerun:yes'>   </span>2<span
-  style='mso-spacerun:yes'>   </span>3</p>
-  <p class=a>2<span style='mso-spacerun:yes'>   </span>4<span
-  style='mso-spacerun:yes'>   </span>6</p>
-  <p class=a>3<span style='mso-spacerun:yes'>   </span>6<span
-  style='mso-spacerun:yes'>   </span>9</p>
+  <p class=a>1<span style='mso-spacerun:yes'>В В  </span>2<span
+  style='mso-spacerun:yes'>В В  </span>3</p>
+  <p class=a>2<span style='mso-spacerun:yes'>В В  </span>4<span
+  style='mso-spacerun:yes'>В В  </span>6</p>
+  <p class=a>3<span style='mso-spacerun:yes'>В В  </span>6<span
+  style='mso-spacerun:yes'>В В  </span>9</p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal>Циклы типа <b style='mso-bidi-font-weight:normal'><i
+<p class=MsoNormal>Р¦РёРєР»С‹ С‚РёРїР° <b style='mso-bidi-font-weight:normal'><i
 style='mso-bidi-font-style:normal'><span lang=EN-US style='color:green;
-mso-ansi-language:EN-US'>while</span><span style='color:green'> … </span></i></b><b
+mso-ansi-language:EN-US'>while</span><span style='color:green'> вЂ¦ </span></i></b><b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
 lang=EN-US style='color:green;mso-ansi-language:EN-US'>end</span></i></b>
-выполняются до тех пор, пока выполняется заданное условие. Оператор
-записывается в виде:</p>
+РІС‹РїРѕР»РЅСЏСЋС‚СЃСЏ РґРѕ С‚РµС… РїРѕСЂ, РїРѕРєР° РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ Р·Р°РґР°РЅРЅРѕРµ СѓСЃР»РѕРІРёРµ. РћРїРµСЂР°С‚РѕСЂ
+Р·Р°РїРёСЃС‹РІР°РµС‚СЃСЏ РІ РІРёРґРµ:</p>
 
 <table border=1 cellpadding=0 cellspacing=0 bgcolor="#FFFFFF" class=MsoNormalTable
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
@@ -389,11 +389,11 @@ lang=EN-US style='color:green;mso-ansi-language:EN-US'>end</span></i></b>
   mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=a><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
   normal'><span lang=EN-US style='mso-ansi-language:EN-US'>while</span></i><span
-  style='mso-spacerun:yes'>  </span>Логическое условие<span
-  style='mso-spacerun:yes'>  </span><o:p></o:p></b></p>
+  style='mso-spacerun:yes'>В  </span>Р›РѕРіРёС‡РµСЃРєРѕРµ СѓСЃР»РѕРІРёРµ<span
+  style='mso-spacerun:yes'>В  </span><o:p></o:p></b></p>
   <p class=a><b style='mso-bidi-font-weight:normal'><span
-  style='mso-spacerun:yes'>       </span>Операторы<span
-  style='mso-spacerun:yes'>  </span><o:p></o:p></b></p>
+  style='mso-spacerun:yes'>В В В В В В  </span>РћРїРµСЂР°С‚РѕСЂС‹<span
+  style='mso-spacerun:yes'>В  </span><o:p></o:p></b></p>
   <p class=a><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
   normal'><span lang=EN-US style='mso-ansi-language:EN-US'>end</span><span
   lang=EN-US> </span></i>;<o:p></o:p></b></p>
@@ -401,15 +401,15 @@ lang=EN-US style='color:green;mso-ansi-language:EN-US'>end</span></i></b>
  </tr>
 </table>
 
-<h3>3. Вычисление определителя квадратной матрицы</h3>
+<h3>3. Р’С‹С‡РёСЃР»РµРЅРёРµ РѕРїСЂРµРґРµР»РёС‚РµР»СЏ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹</h3>
 
-<p class=MsoNormal>Для вычисления определителя квадратной матрицы используется
-функция <i style='mso-bidi-font-style:normal'><span lang=EN-US
+<p class=MsoNormal>Р”Р»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РѕРїСЂРµРґРµР»РёС‚РµР»СЏ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
+С„СѓРЅРєС†РёСЏ <i style='mso-bidi-font-style:normal'><span lang=EN-US
 style='mso-ansi-language:EN-US'>det</span></i>(<i style='mso-bidi-font-style:
-normal'><span lang=EN-US style='mso-ansi-language:EN-US'>a</span></i>). Если
-матрица <i style='mso-bidi-font-style:normal'>а</i> содержит только целые
-числа, то результат – тоже целое число. Определитель вычисляется на основе
-треугольного разложения методом исключения Гаусса. Пример:</p>
+normal'><span lang=EN-US style='mso-ansi-language:EN-US'>a</span></i>). Р•СЃР»Рё
+РјР°С‚СЂРёС†Р° <i style='mso-bidi-font-style:normal'>Р°</i> СЃРѕРґРµСЂР¶РёС‚ С‚РѕР»СЊРєРѕ С†РµР»С‹Рµ
+С‡РёСЃР»Р°, С‚Рѕ СЂРµР·СѓР»СЊС‚Р°С‚ вЂ“ С‚РѕР¶Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ. РћРїСЂРµРґРµР»РёС‚РµР»СЊ РІС‹С‡РёСЃР»СЏРµС‚СЃСЏ РЅР° РѕСЃРЅРѕРІРµ
+С‚СЂРµСѓРіРѕР»СЊРЅРѕРіРѕ СЂР°Р·Р»РѕР¶РµРЅРёСЏ РјРµС‚РѕРґРѕРј РёСЃРєР»СЋС‡РµРЅРёСЏ Р“Р°СѓСЃСЃР°. РџСЂРёРјРµСЂ:</p>
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
@@ -423,22 +423,22 @@ normal'><span lang=EN-US style='mso-ansi-language:EN-US'>a</span></i>). Если
   </td>
   <td width=288 valign=top style='width:216.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=a><span lang=EN-US style='mso-ansi-language:EN-US'>[2<span
-  style='mso-spacerun:yes'>  </span>3<span style='mso-spacerun:yes'>  </span>6
-  ;<span style='mso-spacerun:yes'>  </span></span>1<span lang=EN-US
-  style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>  </span></span>8<span
-  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'> 
-  </span></span>4;<span style='mso-spacerun:yes'>  </span>3<span
+  style='mso-spacerun:yes'>В  </span>3<span style='mso-spacerun:yes'>В  </span>6
+  ;<span style='mso-spacerun:yes'>В  </span></span>1<span lang=EN-US
+  style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>В  </span></span>8<span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>В 
+  </span></span>4;<span style='mso-spacerun:yes'>В  </span>3<span
   style='mso-ansi-language:EN-US'> </span><span
-  style='mso-spacerun:yes'> </span>6<span lang=EN-US style='mso-ansi-language:
-  EN-US'><span style='mso-spacerun:yes'>  </span></span>7<span lang=EN-US
+  style='mso-spacerun:yes'>В </span>6<span lang=EN-US style='mso-ansi-language:
+  EN-US'><span style='mso-spacerun:yes'>В  </span></span>7<span lang=EN-US
   style='mso-ansi-language:EN-US'>]<o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:1'>
   <td width=103 valign=top style='width:77.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=a><i style='mso-bidi-font-style:normal'><span lang=EN-US
-  style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>     </span>a</span></i><span
-  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'> 
+  style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>В В В В  </span>a</span></i><span
+  lang=EN-US style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>В 
   </span><o:p></o:p></span></p>
   </td>
   <td width=48 valign=top style='width:36.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
@@ -457,13 +457,13 @@ normal'><span lang=EN-US style='mso-ansi-language:EN-US'>a</span></i>). Если
   </td>
   <td width=288 valign=top style='width:216.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=a><span lang=EN-US style='mso-ansi-language:EN-US'>2<span
-  style='mso-spacerun:yes'>   </span>3<span style='mso-spacerun:yes'>  
+  style='mso-spacerun:yes'>В В  </span>3<span style='mso-spacerun:yes'>В В 
   </span>6<o:p></o:p></span></p>
   <p class=a><span lang=EN-US style='mso-ansi-language:EN-US'>1<span
-  style='mso-spacerun:yes'>   </span>8<span style='mso-spacerun:yes'>  
+  style='mso-spacerun:yes'>В В  </span>8<span style='mso-spacerun:yes'>В В 
   </span>4<o:p></o:p></span></p>
   <p class=a><span lang=EN-US style='mso-ansi-language:EN-US'>3<span
-  style='mso-spacerun:yes'>   </span>6<span style='mso-spacerun:yes'>  
+  style='mso-spacerun:yes'>В В  </span>6<span style='mso-spacerun:yes'>В В 
   </span>7<o:p></o:p></span></p>
   </td>
  </tr>
@@ -483,9 +483,9 @@ normal'><span lang=EN-US style='mso-ansi-language:EN-US'>a</span></i>). Если
  <tr style='mso-yfti-irow:4'>
   <td width=103 valign=top style='width:77.4pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=a><i style='mso-bidi-font-style:normal'><span lang=EN-US
-  style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>  </span><span
-  style='mso-spacerun:yes'>   </span>ans</span></i><span lang=EN-US
-  style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>В  </span><span
+  style='mso-spacerun:yes'>В В В </span>ans</span></i><span lang=EN-US
+  style='mso-ansi-language:EN-US'><span style='mso-spacerun:yes'>В  </span><o:p></o:p></span></p>
   </td>
   <td width=48 valign=top style='width:36.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=a>=</p>
@@ -512,24 +512,24 @@ normal'><span lang=EN-US style='mso-ansi-language:EN-US'>a</span></i>). Если
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
-<h3><span lang=EN-US style='mso-ansi-language:EN-US'>4</span>. <a name="1"></a>Обращение матриц</h3>
+<h3><span lang=EN-US style='mso-ansi-language:EN-US'>4</span>. <a name="1"></a>РћР±СЂР°С‰РµРЅРёРµ РјР°С‚СЂРёС†</h3>
 
-<p class=MsoNormal>Обращение матриц – одна из наиболее распространенных задач. </p>
+<p class=MsoNormal>РћР±СЂР°С‰РµРЅРёРµ РјР°С‚СЂРёС† вЂ“ РѕРґРЅР° РёР· РЅР°РёР±РѕР»РµРµ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРЅС‹С… Р·Р°РґР°С‡. </p>
 
-<p class=MsoNormal>Эту процедуру выполняет функция <b style='mso-bidi-font-weight:
+<p class=MsoNormal>Р­С‚Сѓ РїСЂРѕС†РµРґСѓСЂСѓ РІС‹РїРѕР»РЅСЏРµС‚ С„СѓРЅРєС†РёСЏ <b style='mso-bidi-font-weight:
 normal'><i style='mso-bidi-font-style:normal'><span lang=EN-US
 style='mso-ansi-language:EN-US'>inv</span></i>(</b><b style='mso-bidi-font-weight:
 normal'><i style='mso-bidi-font-style:normal'><span lang=EN-US
-style='mso-ansi-language:EN-US'>A</span></i>),</b> которая вычисляет элементы
-обратной матрицы для исходной квадратной матрицы <i style='mso-bidi-font-style:
-normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A</span></i>. Выдается
-предупреждающее сообщение, если матрица <i style='mso-bidi-font-style:normal'>х</i>
-близка к <i style='mso-bidi-font-style:normal'>вырожденной</i>. <span
+style='mso-ansi-language:EN-US'>A</span></i>),</b> РєРѕС‚РѕСЂР°СЏ РІС‹С‡РёСЃР»СЏРµС‚ СЌР»РµРјРµРЅС‚С‹
+РѕР±СЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹ РґР»СЏ РёСЃС…РѕРґРЅРѕР№ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹ <i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A</span></i>. Р’С‹РґР°РµС‚СЃСЏ
+РїСЂРµРґСѓРїСЂРµР¶РґР°СЋС‰РµРµ СЃРѕРѕР±С‰РµРЅРёРµ, РµСЃР»Рё РјР°С‚СЂРёС†Р° <i style='mso-bidi-font-style:normal'>С…</i>
+Р±Р»РёР·РєР° Рє <i style='mso-bidi-font-style:normal'>РІС‹СЂРѕР¶РґРµРЅРЅРѕР№</i>. <span
 lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
 
-<p class=MsoNormal>Также обратную матрицу можно вычислить с помощью оператора <b
+<p class=MsoNormal>РўР°РєР¶Рµ РѕР±СЂР°С‚РЅСѓСЋ РјР°С‚СЂРёС†Сѓ РјРѕР¶РЅРѕ РІС‹С‡РёСЃР»РёС‚СЊ СЃ РїРѕРјРѕС‰СЊСЋ РѕРїРµСЂР°С‚РѕСЂР° <b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
-lang=EN-US style='mso-ansi-language:EN-US'>A</span>^-1</i></b> , что означает <b
+lang=EN-US style='mso-ansi-language:EN-US'>A</span>^-1</i></b> , С‡С‚Рѕ РѕР·РЅР°С‡Р°РµС‚ <b
 style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
 lang=EN-US style='mso-ansi-language:EN-US'>A</span></i><sup>-1</sup></b>.</p>
 

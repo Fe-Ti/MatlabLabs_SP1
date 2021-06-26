@@ -183,63 +183,63 @@ body {
 <body lang=RU>
 
 <div class=Section1> 
-  <p class="style3">2. Численное решение обыкновенных дифференциальных уравненийИнтерфейс MATLAB</p>
+  <p class="style3">2. Р§РёСЃР»РµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ РѕР±С‹РєРЅРѕРІРµРЅРЅС‹С… РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹С… СѓСЂР°РІРЅРµРЅРёР№РРЅС‚РµСЂС„РµР№СЃ MATLAB</p>
   <p>&nbsp;</p>
-  <p class="style3"><a name="21"></a>2.1. Численное решение задачи Коши для обыкновенного дифференциального
-    уравнения 1-го порядка
+  <p class="style3"><a name="21"></a>2.1. Р§РёСЃР»РµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ Р·Р°РґР°С‡Рё РљРѕС€Рё РґР»СЏ РѕР±С‹РєРЅРѕРІРµРЅРЅРѕРіРѕ РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅРѕРіРѕ
+    СѓСЂР°РІРЅРµРЅРёСЏ 1-РіРѕ РїРѕСЂСЏРґРєР°
   </p>
-  <p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'>Многие
-задачи физики, химии, экологии, механики и других разделов науки и техники при
-их математическом моделировании сводятся к дифференциальным уравнениям. Поэтому
-решение дифференциальных уравнений является одной из важнейших математических
-задач. В вычислительной математике изучаются численные методы решения
-дифференциальных уравнений, которые особенно эффективны в сочетании с
-использованием персональных компьютеров.</p>
+  <p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'>РњРЅРѕРіРёРµ
+Р·Р°РґР°С‡Рё С„РёР·РёРєРё, С…РёРјРёРё, СЌРєРѕР»РѕРіРёРё, РјРµС…Р°РЅРёРєРё Рё РґСЂСѓРіРёС… СЂР°Р·РґРµР»РѕРІ РЅР°СѓРєРё Рё С‚РµС…РЅРёРєРё РїСЂРё
+РёС… РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕРј РјРѕРґРµР»РёСЂРѕРІР°РЅРёРё СЃРІРѕРґСЏС‚СЃСЏ Рє РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹Рј СѓСЂР°РІРЅРµРЅРёСЏРј. РџРѕСЌС‚РѕРјСѓ
+СЂРµС€РµРЅРёРµ РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹С… СѓСЂР°РІРЅРµРЅРёР№ СЏРІР»СЏРµС‚СЃСЏ РѕРґРЅРѕР№ РёР· РІР°Р¶РЅРµР№С€РёС… РјР°С‚РµРјР°С‚РёС‡РµСЃРєРёС…
+Р·Р°РґР°С‡. Р’ РІС‹С‡РёСЃР»РёС‚РµР»СЊРЅРѕР№ РјР°С‚РµРјР°С‚РёРєРµ РёР·СѓС‡Р°СЋС‚СЃСЏ С‡РёСЃР»РµРЅРЅС‹Рµ РјРµС‚РѕРґС‹ СЂРµС€РµРЅРёСЏ
+РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹С… СѓСЂР°РІРЅРµРЅРёР№, РєРѕС‚РѕСЂС‹Рµ РѕСЃРѕР±РµРЅРЅРѕ СЌС„С„РµРєС‚РёРІРЅС‹ РІ СЃРѕС‡РµС‚Р°РЅРёРё СЃ
+РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹С… РєРѕРјРїСЊСЋС‚РµСЂРѕРІ.</p>
 
-<p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'>Среди
-множества численных методов решения дифференциальных уравнений наиболее простые
-– это <span class=a1>явные одношаговые методы</span>. К ним относятся различные
-модификации <span class=a1>метода Рунге-Кутта</span>.</p>
+<p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'>РЎСЂРµРґРё
+РјРЅРѕР¶РµСЃС‚РІР° С‡РёСЃР»РµРЅРЅС‹С… РјРµС‚РѕРґРѕРІ СЂРµС€РµРЅРёСЏ РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹С… СѓСЂР°РІРЅРµРЅРёР№ РЅР°РёР±РѕР»РµРµ РїСЂРѕСЃС‚С‹Рµ
+вЂ“ СЌС‚Рѕ <span class=a1>СЏРІРЅС‹Рµ РѕРґРЅРѕС€Р°РіРѕРІС‹Рµ РјРµС‚РѕРґС‹</span>. Рљ РЅРёРј РѕС‚РЅРѕСЃСЏС‚СЃСЏ СЂР°Р·Р»РёС‡РЅС‹Рµ
+РјРѕРґРёС„РёРєР°С†РёРё <span class=a1>РјРµС‚РѕРґР° Р СѓРЅРіРµ-РљСѓС‚С‚Р°</span>.</p>
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
  style='border-collapse:collapse'>
  <tr>
   <td width=638 valign=top style='width:478.55pt;background:#FFCC99;padding:
   0mm 5.4pt 0mm 5.4pt'>
-  <p class=MsoNormal style='text-indent:35.45pt'><b>Постановка задачи:</b></p>
-  <p class=MsoNormal>Требуется найти функцию у = у(х), удовлетворяющую
-  уравнению</p>
+  <p class=MsoNormal style='text-indent:35.45pt'><b>РџРѕСЃС‚Р°РЅРѕРІРєР° Р·Р°РґР°С‡Рё:</b></p>
+  <p class=MsoNormal>РўСЂРµР±СѓРµС‚СЃСЏ РЅР°Р№С‚Рё С„СѓРЅРєС†РёСЋ Сѓ = Сѓ(С…), СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‰СѓСЋ
+  СѓСЂР°РІРЅРµРЅРёСЋ</p>
   <p class=MsoBodyText style='text-indent:35.45pt'><sub><img width=85
   height=41 src="index3.files/image001.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image001.gif"></sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)</p>
-  <p class=MsoNormal>и принимающую при х = х<sub>0</sub> заданное значение у<sub>0</sub>:</p>
+  <p class=MsoNormal>Рё РїСЂРёРЅРёРјР°СЋС‰СѓСЋ РїСЂРё С… = С…<sub>0</sub> Р·Р°РґР°РЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ Сѓ<sub>0</sub>:</p>
   <p class=MsoBodyText style='text-indent:35.45pt'><sub><img width=71
   height=24 src="index3.files/image002.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image002.gif"></sub>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)</p>
   </td>
  </tr>
 </table>
 
-<p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'>При этом
-решение необходимо получить в интервале х<sub>0</sub> <span style='font-family:
-Symbol'>&pound;</span> х <span style='font-family:Symbol'>&pound;</span> х<sub>к</sub>.
-Из теории дифференциальных уравнений известно, что решение у(х) задачи Коши
-(1), (2) существует, единственно и является гладкой функцией, если правая часть
+<p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'>РџСЂРё СЌС‚РѕРј
+СЂРµС€РµРЅРёРµ РЅРµРѕР±С…РѕРґРёРјРѕ РїРѕР»СѓС‡РёС‚СЊ РІ РёРЅС‚РµСЂРІР°Р»Рµ С…<sub>0</sub> <span style='font-family:
+Symbol'>&pound;</span> С… <span style='font-family:Symbol'>&pound;</span> С…<sub>Рє</sub>.
+РР· С‚РµРѕСЂРёРё РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹С… СѓСЂР°РІРЅРµРЅРёР№ РёР·РІРµСЃС‚РЅРѕ, С‡С‚Рѕ СЂРµС€РµРЅРёРµ Сѓ(С…) Р·Р°РґР°С‡Рё РљРѕС€Рё
+(1), (2) СЃСѓС‰РµСЃС‚РІСѓРµС‚, РµРґРёРЅСЃС‚РІРµРЅРЅРѕ Рё СЏРІР»СЏРµС‚СЃСЏ РіР»Р°РґРєРѕР№ С„СѓРЅРєС†РёРµР№, РµСЃР»Рё РїСЂР°РІР°СЏ С‡Р°СЃС‚СЊ
 <span lang=EN-US>F</span>(<span lang=EN-US>x</span>, <span lang=EN-US>y</span>)
-удовлетворяет некоторым условиям гладкости. </p>
+СѓРґРѕРІР»РµС‚РІРѕСЂСЏРµС‚ РЅРµРєРѕС‚РѕСЂС‹Рј СѓСЃР»РѕРІРёСЏРј РіР»Р°РґРєРѕСЃС‚Рё. </p>
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
  style='border-collapse:collapse'>
  <tr>
   <td width=638 valign=top style='width:478.55pt;background:#FFCC99;padding:
   0mm 5.4pt 0mm 5.4pt'>
-  <p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'><b>Численное
-  решение задачи Коши </b>методом Рунге-Кутта 4-го порядка заключается в
-  следующем. На заданном интервале [х<sub>0</sub>, х<sub>к</sub>] выбираются
-  узловые точки. Значение решения в нулевой точке известно у(х<sub>0</sub>) = у<sub>0</sub>.
-  В следующей точке у(х<sub>1</sub>) определяется по формуле</p>
+  <p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'><b>Р§РёСЃР»РµРЅРЅРѕРµ
+  СЂРµС€РµРЅРёРµ Р·Р°РґР°С‡Рё РљРѕС€Рё </b>РјРµС‚РѕРґРѕРј Р СѓРЅРіРµ-РљСѓС‚С‚Р° 4-РіРѕ РїРѕСЂСЏРґРєР° Р·Р°РєР»СЋС‡Р°РµС‚СЃСЏ РІ
+  СЃР»РµРґСѓСЋС‰РµРј. РќР° Р·Р°РґР°РЅРЅРѕРј РёРЅС‚РµСЂРІР°Р»Рµ [С…<sub>0</sub>, С…<sub>Рє</sub>] РІС‹Р±РёСЂР°СЋС‚СЃСЏ
+  СѓР·Р»РѕРІС‹Рµ С‚РѕС‡РєРё. Р—РЅР°С‡РµРЅРёРµ СЂРµС€РµРЅРёСЏ РІ РЅСѓР»РµРІРѕР№ С‚РѕС‡РєРµ РёР·РІРµСЃС‚РЅРѕ Сѓ(С…<sub>0</sub>) = Сѓ<sub>0</sub>.
+  Р’ СЃР»РµРґСѓСЋС‰РµР№ С‚РѕС‡РєРµ Сѓ(С…<sub>1</sub>) РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РїРѕ С„РѕСЂРјСѓР»Рµ</p>
   <p class=MsoBodyText style='text-indent:35.45pt'><sub><img width=215
   height=24 src="index3.files/image003.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image003.gif"></sub>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   (3)</p>
-  <p class=MsoNormal>здесь</p>
+  <p class=MsoNormal>Р·РґРµСЃСЊ</p>
   <p class=MsoBodyText style='text-indent:35.45pt'><sub><img width=529
   height=48 src="index3.files/image004.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image004.gif"></sub>&nbsp;&nbsp;&nbsp; (4)</p>
   </td>
@@ -248,69 +248,69 @@ Symbol'>&pound;</span> х <span style='font-family:Symbol'>&pound;</span> х<sub>к
 
 <p class=MsoNormal>&nbsp;</p>
 
-<p class=MsoBodyText style='text-align:justify'>т. е. данный вариант метода
-Рунге-Кутта требует на каждом шаге четырехкратного вычисления правой части
-уравнения (1). Этот алгоритм реализован в программе <b><span lang=EN-US>ode</span>45</b>.
-Кроме этой программы <span lang=EN-US>MATLAB</span> располагает обширным
-набором аналогичных программ, позволяющих успешно решать обыкновенные
-дифференциальные уравнения.</p>
+<p class=MsoBodyText style='text-align:justify'>С‚. Рµ. РґР°РЅРЅС‹Р№ РІР°СЂРёР°РЅС‚ РјРµС‚РѕРґР°
+Р СѓРЅРіРµ-РљСѓС‚С‚Р° С‚СЂРµР±СѓРµС‚ РЅР° РєР°Р¶РґРѕРј С€Р°РіРµ С‡РµС‚С‹СЂРµС…РєСЂР°С‚РЅРѕРіРѕ РІС‹С‡РёСЃР»РµРЅРёСЏ РїСЂР°РІРѕР№ С‡Р°СЃС‚Рё
+СѓСЂР°РІРЅРµРЅРёСЏ (1). Р­С‚РѕС‚ Р°Р»РіРѕСЂРёС‚Рј СЂРµР°Р»РёР·РѕРІР°РЅ РІ РїСЂРѕРіСЂР°РјРјРµ <b><span lang=EN-US>ode</span>45</b>.
+РљСЂРѕРјРµ СЌС‚РѕР№ РїСЂРѕРіСЂР°РјРјС‹ <span lang=EN-US>MATLAB</span> СЂР°СЃРїРѕР»Р°РіР°РµС‚ РѕР±С€РёСЂРЅС‹Рј
+РЅР°Р±РѕСЂРѕРј Р°РЅР°Р»РѕРіРёС‡РЅС‹С… РїСЂРѕРіСЂР°РјРј, РїРѕР·РІРѕР»СЏСЋС‰РёС… СѓСЃРїРµС€РЅРѕ СЂРµС€Р°С‚СЊ РѕР±С‹РєРЅРѕРІРµРЅРЅС‹Рµ
+РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹Рµ СѓСЂР°РІРЅРµРЅРёСЏ.</p>
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
  style='border-collapse:collapse'>
  <tr>
   <td width=638 valign=top style='width:478.55pt;background:#FFFF99;padding:
   0mm 5.4pt 0mm 5.4pt'>
-  <p class=MsoNormal><b>Пример 1. </b>Решить задачу Коши</p>
+  <p class=MsoNormal><b>РџСЂРёРјРµСЂ 1. </b>Р РµС€РёС‚СЊ Р·Р°РґР°С‡Сѓ РљРѕС€Рё</p>
   <p class=MsoBodyText style='text-indent:35.45pt'><sub><img width=252
   height=41 src="index3.files/image005.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image005.gif"></sub>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)</p>
-  <p class=MsoNormal>Точное решение имеет вид</p>
+  <p class=MsoNormal>РўРѕС‡РЅРѕРµ СЂРµС€РµРЅРёРµ РёРјРµРµС‚ РІРёРґ</p>
   <p class=MsoBodyText style='text-indent:35.45pt'><sub><img width=177
   height=24 src="index3.files/image006.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image006.gif"></sub>.</p>
-  <p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'>Выполним
-  решение данной задачи с помощью программы <span lang=EN-US>ode</span>45.
-  Вначале в М-файл записываем правую часть уравнения (5), сам М-файл
-  оформляется как файл – функция, даем ему имя <span lang=EN-US>F</span> и
-  сохраняем (рис.1):</p>
+  <p class=MsoBodyText style='text-align:justify;text-indent:35.45pt'>Р’С‹РїРѕР»РЅРёРј
+  СЂРµС€РµРЅРёРµ РґР°РЅРЅРѕР№ Р·Р°РґР°С‡Рё СЃ РїРѕРјРѕС‰СЊСЋ РїСЂРѕРіСЂР°РјРјС‹ <span lang=EN-US>ode</span>45.
+  Р’РЅР°С‡Р°Р»Рµ РІ Рњ-С„Р°Р№Р» Р·Р°РїРёСЃС‹РІР°РµРј РїСЂР°РІСѓСЋ С‡Р°СЃС‚СЊ СѓСЂР°РІРЅРµРЅРёСЏ (5), СЃР°Рј Рњ-С„Р°Р№Р»
+  РѕС„РѕСЂРјР»СЏРµС‚СЃСЏ РєР°Рє С„Р°Р№Р» вЂ“ С„СѓРЅРєС†РёСЏ, РґР°РµРј РµРјСѓ РёРјСЏ <span lang=EN-US>F</span> Рё
+  СЃРѕС…СЂР°РЅСЏРµРј (СЂРёСЃ.1):</p>
   <p class=MsoNormal><img width=470 height=207 src="index3.files/image007.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image007.jpg"></p>
-  <p class=MsoNormal><i>Рис.1 Окно редактора-отладчика с скрипт-файлом функции</i></p>
+  <p class=MsoNormal><i>Р РёСЃ.1 РћРєРЅРѕ СЂРµРґР°РєС‚РѕСЂР°-РѕС‚Р»Р°РґС‡РёРєР° СЃ СЃРєСЂРёРїС‚-С„Р°Р№Р»РѕРј С„СѓРЅРєС†РёРё</i></p>
   <p class=MsoNormal>&nbsp;</p>
-  <p class=MsoNormal>Для численного решения задачи Коши в другом окне
-  редактора-отладчика скрипт-файлов набираются следующие операторы (рис.2):</p>
+  <p class=MsoNormal>Р”Р»СЏ С‡РёСЃР»РµРЅРЅРѕРіРѕ СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РљРѕС€Рё РІ РґСЂСѓРіРѕРј РѕРєРЅРµ
+  СЂРµРґР°РєС‚РѕСЂР°-РѕС‚Р»Р°РґС‡РёРєР° СЃРєСЂРёРїС‚-С„Р°Р№Р»РѕРІ РЅР°Р±РёСЂР°СЋС‚СЃСЏ СЃР»РµРґСѓСЋС‰РёРµ РѕРїРµСЂР°С‚РѕСЂС‹ (СЂРёСЃ.2):</p>
   <p class=MsoNormal><img width=587 height=345 src="index3.files/image008.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image008.jpg"></p>
-  <p class=MsoNormal><i>Рис.2 Окно редактора-отладчика с скрипт-файлом
-  программы</i></p>
+  <p class=MsoNormal><i>Р РёСЃ.2 РћРєРЅРѕ СЂРµРґР°РєС‚РѕСЂР°-РѕС‚Р»Р°РґС‡РёРєР° СЃ СЃРєСЂРёРїС‚-С„Р°Р№Р»РѕРј
+  РїСЂРѕРіСЂР°РјРјС‹</i></p>
   <p class=MsoNormal>&nbsp;</p>
-  <p class=MsoBodyText style='text-indent:35.45pt'><u>Результаты решения</u>.
-  График решения задачи Коши (5) показан на рис. 3. Численное решение
-  представлено в таблице 1, где приведены только отдельные узловые точки. В
-  программе <span lang=EN-US>ode</span>45 по умолчанию интервал разбивается на
-  40 точек с шагом <span lang=EN-US>h</span><span lang=EN-US> </span>= 1/40 =
+  <p class=MsoBodyText style='text-indent:35.45pt'><u>Р РµР·СѓР»СЊС‚Р°С‚С‹ СЂРµС€РµРЅРёСЏ</u>.
+  Р“СЂР°С„РёРє СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РљРѕС€Рё (5) РїРѕРєР°Р·Р°РЅ РЅР° СЂРёСЃ. 3. Р§РёСЃР»РµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ
+  РїСЂРµРґСЃС‚Р°РІР»РµРЅРѕ РІ С‚Р°Р±Р»РёС†Рµ 1, РіРґРµ РїСЂРёРІРµРґРµРЅС‹ С‚РѕР»СЊРєРѕ РѕС‚РґРµР»СЊРЅС‹Рµ СѓР·Р»РѕРІС‹Рµ С‚РѕС‡РєРё. Р’
+  РїСЂРѕРіСЂР°РјРјРµ <span lang=EN-US>ode</span>45 РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РёРЅС‚РµСЂРІР°Р» СЂР°Р·Р±РёРІР°РµС‚СЃСЏ РЅР°
+  40 С‚РѕС‡РµРє СЃ С€Р°РіРѕРј <span lang=EN-US>h</span><span lang=EN-US> </span>= 1/40 =
   0.025.</p>
   <p class=MsoNormal><img width=560 height=316 src="index3.files/image009.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image009.jpg"></p>
-  <p class=MsoNormal><i>Рис. 3&nbsp; График решения задачи Коши (5)</i></p>
+  <p class=MsoNormal><i>Р РёСЃ. 3&nbsp; Р“СЂР°С„РёРє СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РљРѕС€Рё (5)</i></p>
   <p class=MsoNormal>&nbsp;</p>
-  <p class=MsoNormal>Таблица 1</p>
+  <p class=MsoNormal>РўР°Р±Р»РёС†Р° 1</p>
   <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
    style='margin-left:5.4pt;background:#99CCFF;border-collapse:collapse'>
    <tr>
     <td width=125 valign=top style='width:93.45pt;border:solid windowtext 1.0pt;
     padding:0mm 5.4pt 0mm 5.4pt'>
     <p class=MsoBodyTextIndent align=center style='text-align:center;
-    text-indent:0mm;line-height:normal'><b><span style='font-size:12.0pt'>х</span></b><b><sub><span
+    text-indent:0mm;line-height:normal'><b><span style='font-size:12.0pt'>С…</span></b><b><sub><span
     lang=EN-US style='font-size:12.0pt'>i</span></sub></b></p>
     </td>
     <td width=208 valign=top style='width:155.9pt;border:solid windowtext 1.0pt;
     border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
     <p class=MsoBodyTextIndent align=center style='text-align:center;
-    text-indent:0mm;line-height:normal'><b><span style='font-size:12.0pt'>Метод
-    Рунге-Кутта</span></b></p>
+    text-indent:0mm;line-height:normal'><b><span style='font-size:12.0pt'>РњРµС‚РѕРґ
+    Р СѓРЅРіРµ-РљСѓС‚С‚Р°</span></b></p>
     </td>
     <td width=189 valign=top style='width:50.0mm;border:solid windowtext 1.0pt;
     border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
     <p class=MsoBodyTextIndent align=center style='text-align:center;
-    text-indent:0mm;line-height:normal'><b><span style='font-size:12.0pt'>Точное
-    решение</span></b></p>
+    text-indent:0mm;line-height:normal'><b><span style='font-size:12.0pt'>РўРѕС‡РЅРѕРµ
+    СЂРµС€РµРЅРёРµ</span></b></p>
     </td>
    </tr>
    <tr>
@@ -525,30 +525,30 @@ Symbol'>&pound;</span> х <span style='font-family:Symbol'>&pound;</span> х<sub>к
   </table>
   <p class=MsoBodyTextIndent align=center style='text-align:center;text-indent:
   0mm;line-height:normal'>&nbsp;</p>
-  <p class=MsoBodyText style='text-indent:35.45pt'>Как следует из таблицы1
-  численное решение программой <span lang=EN-US>ode</span>45 дает близкое к
-  точному (по крайней мере первые 5 значащих цифр совпадают ).</p>
+  <p class=MsoBodyText style='text-indent:35.45pt'>РљР°Рє СЃР»РµРґСѓРµС‚ РёР· С‚Р°Р±Р»РёС†С‹1
+  С‡РёСЃР»РµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ РїСЂРѕРіСЂР°РјРјРѕР№ <span lang=EN-US>ode</span>45 РґР°РµС‚ Р±Р»РёР·РєРѕРµ Рє
+  С‚РѕС‡РЅРѕРјСѓ (РїРѕ РєСЂР°Р№РЅРµР№ РјРµСЂРµ РїРµСЂРІС‹Рµ 5 Р·РЅР°С‡Р°С‰РёС… С†РёС„СЂ СЃРѕРІРїР°РґР°СЋС‚ ).</p>
   <p class=MsoNormal>&nbsp;</p>
   </td>
  </tr>
 </table>
 
 <p class=MsoNormal>&nbsp;</p>
-<span class="style3"><a name="22"></a>2.2. Численное решение задачи Коши для системы обыкновенных
-дифференциальных уравнений</span>
-<p style='text-align:justify;text-indent:35.45pt'>В системе MatLab
-предусмотрены специальные средства решения задачи Коши для систем обыкновенных
-дифференциальных уравнений, заданных в  форме<sub><sub><img width=84
-height=41 src="index3.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image010.gif"></sub></sub>&nbsp;где <i>F</i> - вектор правых частей ситемы, <em>x</em> - вектор нетзвестных функций.</p>
+<span class="style3"><a name="22"></a>2.2. Р§РёСЃР»РµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ Р·Р°РґР°С‡Рё РљРѕС€Рё РґР»СЏ СЃРёСЃС‚РµРјС‹ РѕР±С‹РєРЅРѕРІРµРЅРЅС‹С…
+РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹С… СѓСЂР°РІРЅРµРЅРёР№</span>
+<p style='text-align:justify;text-indent:35.45pt'>Р’ СЃРёСЃС‚РµРјРµ MatLab
+РїСЂРµРґСѓСЃРјРѕС‚СЂРµРЅС‹ СЃРїРµС†РёР°Р»СЊРЅС‹Рµ СЃСЂРµРґСЃС‚РІР° СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РљРѕС€Рё РґР»СЏ СЃРёСЃС‚РµРј РѕР±С‹РєРЅРѕРІРµРЅРЅС‹С…
+РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹С… СѓСЂР°РІРЅРµРЅРёР№, Р·Р°РґР°РЅРЅС‹С… РІ  С„РѕСЂРјРµ<sub><sub><img width=84
+height=41 src="index3.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image010.gif"></sub></sub>&nbsp;РіРґРµ <i>F</i> - РІРµРєС‚РѕСЂ РїСЂР°РІС‹С… С‡Р°СЃС‚РµР№ СЃРёС‚РµРјС‹, <em>x</em> - РІРµРєС‚РѕСЂ РЅРµС‚Р·РІРµСЃС‚РЅС‹С… С„СѓРЅРєС†РёР№.</p>
 
 <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
  style='border-collapse:collapse'>
  <tr>
   <td width=638 valign=top style='width:478.55pt;background:#FFCC99;padding:
   0mm 5.4pt 0mm 5.4pt'>
-  <p style='text-align:justify;text-indent:35.45pt'>В простейшем варианте для
-  решения задачи Коши для систем обыкновенных дифференциальных уравнений достаточно
-  воспользоваться командой </p>
+  <p style='text-align:justify;text-indent:35.45pt'>Р’ РїСЂРѕСЃС‚РµР№С€РµРј РІР°СЂРёР°РЅС‚Рµ РґР»СЏ
+  СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РљРѕС€Рё РґР»СЏ СЃРёСЃС‚РµРј РѕР±С‹РєРЅРѕРІРµРЅРЅС‹С… РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹С… СѓСЂР°РІРЅРµРЅРёР№ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ
+  РІРѕСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ РєРѕРјР°РЅРґРѕР№ </p>
   <p style='text-align:justify;text-indent:35.45pt'><b><span style='color:#339966'>[</span></b><b><span
   lang=EN-US style='color:#339966'>T</span><span style='color:#339966'>,&nbsp;</span></b><b><span
   lang=EN-US style='color:#339966'>X</span><span style='color:#339966'>]=</span></b><b><span
@@ -557,49 +557,49 @@ height=41 src="index3.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab
   lang=EN-US style='color:#339966'>DT</span><span style='color:#339966'>], </span></b><b><span
   lang=EN-US style='color:#339966'>X</span><span style='color:#339966'>0, ...)</span></b>,
   </p>
-  <p style='text-align:justify'>где <b><span style='color:#339966'>DT</span></b>
-  - диапазон интегрирования, <b><span style='color:#339966'>X0</span></b> -
-  вектор начальных значений, <b><span style='color:#339966'>F</span></b> - имя
-  функции вычисления правых частей системы (и соответственно имя m-файла), <b><span style='color:#339966'>solver</span></b>
-  - имя используемой функции (решателя). Например:</p>
+  <p style='text-align:justify'>РіРґРµ <b><span style='color:#339966'>DT</span></b>
+  - РґРёР°РїР°Р·РѕРЅ РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ, <b><span style='color:#339966'>X0</span></b> -
+  РІРµРєС‚РѕСЂ РЅР°С‡Р°Р»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёР№, <b><span style='color:#339966'>F</span></b> - РёРјСЏ
+  С„СѓРЅРєС†РёРё РІС‹С‡РёСЃР»РµРЅРёСЏ РїСЂР°РІС‹С… С‡Р°СЃС‚РµР№ СЃРёСЃС‚РµРјС‹ (Рё СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ РёРјСЏ m-С„Р°Р№Р»Р°), <b><span style='color:#339966'>solver</span></b>
+  - РёРјСЏ РёСЃРїРѕР»СЊР·СѓРµРјРѕР№ С„СѓРЅРєС†РёРё (СЂРµС€Р°С‚РµР»СЏ). РќР°РїСЂРёРјРµСЂ:</p>
   <p style='margin-left:53.45pt;text-align:justify;text-indent:-18.0pt'><span
-  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><b>ode45</b> - метод Рунге-Кутта 4 и 5-го порядков,</p>
+  style='font-family:Symbol'>В·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>ode45</b> - РјРµС‚РѕРґ Р СѓРЅРіРµ-РљСѓС‚С‚Р° 4 Рё 5-РіРѕ РїРѕСЂСЏРґРєРѕРІ,</p>
   <p style='margin-left:53.45pt;text-align:justify;text-indent:-18.0pt'><span
-  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><b>ode23</b> - тот же метод 2 и 3-го поряд-ков,</p>
+  style='font-family:Symbol'>В·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>ode23</b> - С‚РѕС‚ Р¶Рµ РјРµС‚РѕРґ 2 Рё 3-РіРѕ РїРѕСЂСЏРґ-РєРѕРІ,</p>
   <p style='margin-left:53.45pt;text-align:justify;text-indent:-18.0pt'><span
-  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><b>ode113</b> - метод Адамса - для нежестких систем,</p>
+  style='font-family:Symbol'>В·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>ode113</b> - РјРµС‚РѕРґ РђРґР°РјСЃР° - РґР»СЏ РЅРµР¶РµСЃС‚РєРёС… СЃРёСЃС‚РµРј,</p>
   <p style='margin-left:53.45pt;text-align:justify;text-indent:-18.0pt'><span
-  style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></span><b>ode23s, ode15s</b> - для жестких систем. </p>
+  style='font-family:Symbol'>В·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><b>ode23s, ode15s</b> - РґР»СЏ Р¶РµСЃС‚РєРёС… СЃРёСЃС‚РµРј. </p>
   <p class=MsoNormal>&nbsp;</p>
   </td>
  </tr>
 </table>
 
-<p style='text-align:justify;text-indent:35.45pt'>Версии решателя различаются
-используемыми методами (по умолчанию относительная погрешность 10<sup>-3</sup>
-и абсолютная 10<sup>-6</sup>) и соответственно временем и успешностью решения.
-Под жесткостью здесь понимается повышенное требование к точности -
-использование минимального шага во всей области интегрирования. При отсутствии
-информации о жесткости рекомендуется попытаться получить решение посредством <i>ode45</i>
-и затем <i>ode15s</i>. </p>
+<p style='text-align:justify;text-indent:35.45pt'>Р’РµСЂСЃРёРё СЂРµС€Р°С‚РµР»СЏ СЂР°Р·Р»РёС‡Р°СЋС‚СЃСЏ
+РёСЃРїРѕР»СЊР·СѓРµРјС‹РјРё РјРµС‚РѕРґР°РјРё (РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅР°СЏ РїРѕРіСЂРµС€РЅРѕСЃС‚СЊ 10<sup>-3</sup>
+Рё Р°Р±СЃРѕР»СЋС‚РЅР°СЏ 10<sup>-6</sup>) Рё СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ РІСЂРµРјРµРЅРµРј Рё СѓСЃРїРµС€РЅРѕСЃС‚СЊСЋ СЂРµС€РµРЅРёСЏ.
+РџРѕРґ Р¶РµСЃС‚РєРѕСЃС‚СЊСЋ Р·РґРµСЃСЊ РїРѕРЅРёРјР°РµС‚СЃСЏ РїРѕРІС‹С€РµРЅРЅРѕРµ С‚СЂРµР±РѕРІР°РЅРёРµ Рє С‚РѕС‡РЅРѕСЃС‚Рё -
+РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ С€Р°РіР° РІРѕ РІСЃРµР№ РѕР±Р»Р°СЃС‚Рё РёРЅС‚РµРіСЂРёСЂРѕРІР°РЅРёСЏ. РџСЂРё РѕС‚СЃСѓС‚СЃС‚РІРёРё
+РёРЅС„РѕСЂРјР°С†РёРё Рѕ Р¶РµСЃС‚РєРѕСЃС‚Рё СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РїРѕРїС‹С‚Р°С‚СЊСЃСЏ РїРѕР»СѓС‡РёС‚СЊ СЂРµС€РµРЅРёРµ РїРѕСЃСЂРµРґСЃС‚РІРѕРј <i>ode45</i>
+Рё Р·Р°С‚РµРј <i>ode15s</i>. </p>
 
 <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
  style='border-collapse:collapse'>
  <tr>
   <td width=638 valign=top style='width:478.55pt;background:#FFCC99;padding:
   0mm 5.4pt 0mm 5.4pt'>
-  <p style='text-align:justify;text-indent:35.45pt'>Если диапазон <span class="style8">DT</span>
-  задан начальным и конечным значением <b>[t<sub>o</sub>,&nbsp;t<sub>n</sub>]</b>,
-  то количество элементов в массиве <span class="style8">Т</span> (и в массиве решений <span class="style8">Х</span>)
-  определяется необходимым для обеспечения точности шагом; при задании <b>DT</b>
-  в виде <b>[t<sub>o</sub>,&nbsp;t<sub>1</sub>,&nbsp;t<sub>2</sub>,...,&nbsp;t<sub>n</sub>]</b>
-  или <b>[t<sub>o</sub>:<span class=symvol><span style='font-family:"Times New Roman";
-  font-style:normal'>&#916;</span></span>t:t<sub>n</sub>]</b> - указанными
-  значениями.</p>
+  <p style='text-align:justify;text-indent:35.45pt'>Р•СЃР»Рё РґРёР°РїР°Р·РѕРЅ <span class="style8">DT</span>
+  Р·Р°РґР°РЅ РЅР°С‡Р°Р»СЊРЅС‹Рј Рё РєРѕРЅРµС‡РЅС‹Рј Р·РЅР°С‡РµРЅРёРµРј <b>[t<sub>o</sub>,&nbsp;t<sub>n</sub>]</b>,
+  С‚Рѕ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ РјР°СЃСЃРёРІРµ <span class="style8">Рў</span> (Рё РІ РјР°СЃСЃРёРІРµ СЂРµС€РµРЅРёР№ <span class="style8">РҐ</span>)
+  РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РЅРµРѕР±С…РѕРґРёРјС‹Рј РґР»СЏ РѕР±РµСЃРїРµС‡РµРЅРёСЏ С‚РѕС‡РЅРѕСЃС‚Рё С€Р°РіРѕРј; РїСЂРё Р·Р°РґР°РЅРёРё <b>DT</b>
+  РІ РІРёРґРµ <b>[t<sub>o</sub>,&nbsp;t<sub>1</sub>,&nbsp;t<sub>2</sub>,...,&nbsp;t<sub>n</sub>]</b>
+  РёР»Рё <b>[t<sub>o</sub>:<span class=symvol><span style='font-family:"Times New Roman";
+  font-style:normal'>&#916;</span></span>t:t<sub>n</sub>]</b> - СѓРєР°Р·Р°РЅРЅС‹РјРё
+  Р·РЅР°С‡РµРЅРёСЏРјРё.</p>
   <p class=MsoNormal>&nbsp;</p>
   </td>
  </tr>
@@ -612,27 +612,27 @@ height=41 src="index3.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab
  <tr>
   <td width=638 valign=top style='width:478.55pt;background:#FFFF99;padding:
   0mm 5.4pt 0mm 5.4pt'>
-  <p style='text-align:justify;text-indent:35.45pt'><b>Пример 2. </b>Для
-  иллюстрации решения системы и ряда нестандартных возможностей рассмотрим
-  задачу выравнивания цен по уровню актива в следующей постановке. </p>
-  <p style='text-align:justify;text-indent:35.45pt'><span style='color:black'>Предположим,
-  что изменение уровня актива <i>у </i>пропорционально разности между
-  предложением <i>s</i> и спросом </span><i><span lang=EN-US style='color:black'>d</span></i><span
-  style='color:black'>, т.е. <i>y'=k(s-d), k&gt;0,</i> и что изменение цены <i>z</i>
-  пропорционально отклонению актива у от некоторого уровня <i>y<sub>0</sub></i>,
-  т.е. <i>z'=-m(y-y0), m&gt;0.</i> Естественно, что предложение и спрос зависят
-  от цены, например, <i>s(z)=az+s0, d(z)= d0 - cz.</i> Соответственно возникает
-  система дифференциальных уравнений </span></p>
+  <p style='text-align:justify;text-indent:35.45pt'><b>РџСЂРёРјРµСЂ 2. </b>Р”Р»СЏ
+  РёР»Р»СЋСЃС‚СЂР°С†РёРё СЂРµС€РµРЅРёСЏ СЃРёСЃС‚РµРјС‹ Рё СЂСЏРґР° РЅРµСЃС‚Р°РЅРґР°СЂС‚РЅС‹С… РІРѕР·РјРѕР¶РЅРѕСЃС‚РµР№ СЂР°СЃСЃРјРѕС‚СЂРёРј
+  Р·Р°РґР°С‡Сѓ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ С†РµРЅ РїРѕ СѓСЂРѕРІРЅСЋ Р°РєС‚РёРІР° РІ СЃР»РµРґСѓСЋС‰РµР№ РїРѕСЃС‚Р°РЅРѕРІРєРµ. </p>
+  <p style='text-align:justify;text-indent:35.45pt'><span style='color:black'>РџСЂРµРґРїРѕР»РѕР¶РёРј,
+  С‡С‚Рѕ РёР·РјРµРЅРµРЅРёРµ СѓСЂРѕРІРЅСЏ Р°РєС‚РёРІР° <i>Сѓ </i>РїСЂРѕРїРѕСЂС†РёРѕРЅР°Р»СЊРЅРѕ СЂР°Р·РЅРѕСЃС‚Рё РјРµР¶РґСѓ
+  РїСЂРµРґР»РѕР¶РµРЅРёРµРј <i>s</i> Рё СЃРїСЂРѕСЃРѕРј </span><i><span lang=EN-US style='color:black'>d</span></i><span
+  style='color:black'>, С‚.Рµ. <i>y'=k(s-d), k&gt;0,</i> Рё С‡С‚Рѕ РёР·РјРµРЅРµРЅРёРµ С†РµРЅС‹ <i>z</i>
+  РїСЂРѕРїРѕСЂС†РёРѕРЅР°Р»СЊРЅРѕ РѕС‚РєР»РѕРЅРµРЅРёСЋ Р°РєС‚РёРІР° Сѓ РѕС‚ РЅРµРєРѕС‚РѕСЂРѕРіРѕ СѓСЂРѕРІРЅСЏ <i>y<sub>0</sub></i>,
+  С‚.Рµ. <i>z'=-m(y-y0), m&gt;0.</i> Р•СЃС‚РµСЃС‚РІРµРЅРЅРѕ, С‡С‚Рѕ РїСЂРµРґР»РѕР¶РµРЅРёРµ Рё СЃРїСЂРѕСЃ Р·Р°РІРёСЃСЏС‚
+  РѕС‚ С†РµРЅС‹, РЅР°РїСЂРёРјРµСЂ, <i>s(z)=az+s0, d(z)= d0 - cz.</i> РЎРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ РІРѕР·РЅРёРєР°РµС‚
+  СЃРёСЃС‚РµРјР° РґРёС„С„РµСЂРµРЅС†РёР°Р»СЊРЅС‹С… СѓСЂР°РІРЅРµРЅРёР№ </span></p>
   
   <p class="style6">y' = k (s(z)-d(z)) <br>
   <i>z'</i> = - m (y-y0) .</p>
-  <p style='text-indent:35.45pt'>Вычисление правых
-  частей оформляем функцией: </p>
+  <p style='text-indent:35.45pt'>Р’С‹С‡РёСЃР»РµРЅРёРµ РїСЂР°РІС‹С…
+  С‡Р°СЃС‚РµР№ РѕС„РѕСЂРјР»СЏРµРј С„СѓРЅРєС†РёРµР№: </p>
   <p class=MsoNormal><img width=497 height=251 src="index3.files/image012.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image012.jpg"></p>
-  <p class=MsoNormal>Если выполнить решение при <i>y<sub>0</sub></i>= 19, <i>z<sub>0</sub></i>=2
+  <p class=MsoNormal>Р•СЃР»Рё РІС‹РїРѕР»РЅРёС‚СЊ СЂРµС€РµРЅРёРµ РїСЂРё <i>y<sub>0</sub></i>= 19, <i>z<sub>0</sub></i>=2
   </p>
   <p class=MsoNormal><img width=497 height=197 src="index3.files/image013.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image013.jpg"></p>
-  <p class=MsoNormal>будет выведена таблица значений искомых функций: </p>
+  <p class=MsoNormal>Р±СѓРґРµС‚ РІС‹РІРµРґРµРЅР° С‚Р°Р±Р»РёС†Р° Р·РЅР°С‡РµРЅРёР№ РёСЃРєРѕРјС‹С… С„СѓРЅРєС†РёР№: </p>
   <p class="style7">ans
   =</p>
   <p class="style7">&nbsp;&nbsp;&nbsp;
@@ -668,38 +668,38 @@ height=41 src="index3.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab
   &nbsp;&nbsp;&nbsp; 8.7000&nbsp;&nbsp; 24.8222&nbsp;&nbsp;&nbsp; 1.0733<br>
   &nbsp;&nbsp;&nbsp; 9.0000&nbsp;&nbsp; 23.8953&nbsp;&nbsp;&nbsp; 0.9115</p>
   <p class=MsoNormal>&nbsp;</p>
-  <p class=MsoNormal>и их графики (рис. 4). </p>
+  <p class=MsoNormal>Рё РёС… РіСЂР°С„РёРєРё (СЂРёСЃ. 4). </p>
   <p class=MsoNormal>&nbsp;</p>
-  <p style='text-align:justify;text-indent:35.45pt'>Эта
-  система уравнений относится к числу т.н. <i>автономных</i>, ибо независимая
-  переменная в нее явно не входит; соответственно может быть установлена связь
-  между найденными решениями: в параметрическом задании линия <i>y=y(t), z=z(t)</i>
-  определяет <i>фазовую кривую (траекторию)</i> системы - гладкую кривую без
-  самопересечений, замкнутую кривую или точку, которая позволяет судить об
-  устойчивости системы. </p>
-  <p style='text-indent:35.45pt'>Так, установив опции (opt) 
-  к построению двумерного фазового портрета (функция odephas2) и номера
-  переменных состояния : </p>
+  <p style='text-align:justify;text-indent:35.45pt'>Р­С‚Р°
+  СЃРёСЃС‚РµРјР° СѓСЂР°РІРЅРµРЅРёР№ РѕС‚РЅРѕСЃРёС‚СЃСЏ Рє С‡РёСЃР»Сѓ С‚.РЅ. <i>Р°РІС‚РѕРЅРѕРјРЅС‹С…</i>, РёР±Рѕ РЅРµР·Р°РІРёСЃРёРјР°СЏ
+  РїРµСЂРµРјРµРЅРЅР°СЏ РІ РЅРµРµ СЏРІРЅРѕ РЅРµ РІС…РѕРґРёС‚; СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ РјРѕР¶РµС‚ Р±С‹С‚СЊ СѓСЃС‚Р°РЅРѕРІР»РµРЅР° СЃРІСЏР·СЊ
+  РјРµР¶РґСѓ РЅР°Р№РґРµРЅРЅС‹РјРё СЂРµС€РµРЅРёСЏРјРё: РІ РїР°СЂР°РјРµС‚СЂРёС‡РµСЃРєРѕРј Р·Р°РґР°РЅРёРё Р»РёРЅРёСЏ <i>y=y(t), z=z(t)</i>
+  РѕРїСЂРµРґРµР»СЏРµС‚ <i>С„Р°Р·РѕРІСѓСЋ РєСЂРёРІСѓСЋ (С‚СЂР°РµРєС‚РѕСЂРёСЋ)</i> СЃРёСЃС‚РµРјС‹ - РіР»Р°РґРєСѓСЋ РєСЂРёРІСѓСЋ Р±РµР·
+  СЃР°РјРѕРїРµСЂРµСЃРµС‡РµРЅРёР№, Р·Р°РјРєРЅСѓС‚СѓСЋ РєСЂРёРІСѓСЋ РёР»Рё С‚РѕС‡РєСѓ, РєРѕС‚РѕСЂР°СЏ РїРѕР·РІРѕР»СЏРµС‚ СЃСѓРґРёС‚СЊ РѕР±
+  СѓСЃС‚РѕР№С‡РёРІРѕСЃС‚Рё СЃРёСЃС‚РµРјС‹. </p>
+  <p style='text-indent:35.45pt'>РўР°Рє, СѓСЃС‚Р°РЅРѕРІРёРІ РѕРїС†РёРё (opt) 
+  Рє РїРѕСЃС‚СЂРѕРµРЅРёСЋ РґРІСѓРјРµСЂРЅРѕРіРѕ С„Р°Р·РѕРІРѕРіРѕ РїРѕСЂС‚СЂРµС‚Р° (С„СѓРЅРєС†РёСЏ odephas2) Рё РЅРѕРјРµСЂР°
+  РїРµСЂРµРјРµРЅРЅС‹С… СЃРѕСЃС‚РѕСЏРЅРёСЏ : </p>
   <p style='text-indent:35.45pt'>&nbsp;</p>
   <p class="style6">&gt;&gt; opt=odeset('OutputSel',[1 2],
   'OutputFcn','odephas2'); <br>
   &gt;&gt; [T,Y]=ode45('odu2', [0:0.3:9],[19 2],opt); </p>
   <p class=MsoNormal>&nbsp;</p>
-  <p class=MsoNormal>получаем фазовый портрет системы, свидетельствующий о ее
-  устойчивости - гармонии между активом и ценами (рис.5). </p>
+  <p class=MsoNormal>РїРѕР»СѓС‡Р°РµРј С„Р°Р·РѕРІС‹Р№ РїРѕСЂС‚СЂРµС‚ СЃРёСЃС‚РµРјС‹, СЃРІРёРґРµС‚РµР»СЊСЃС‚РІСѓСЋС‰РёР№ Рѕ РµРµ
+  СѓСЃС‚РѕР№С‡РёРІРѕСЃС‚Рё - РіР°СЂРјРѕРЅРёРё РјРµР¶РґСѓ Р°РєС‚РёРІРѕРј Рё С†РµРЅР°РјРё (СЂРёСЃ.5). </p>
   <table class=MsoNormalTable border=0 cellpadding=0>
    <tr>
     <td style='padding:.75pt .75pt .75pt .75pt'>
     <p class=MsoNormal align=center style='text-align:center'><a name=Pic6><span
     style='color:blue'><img width=312 height=247 src="index3.files/image014.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image014.gif"
-    alt=Рис.8.6></span><br>
-    <i>Рис.</i></a><i>4 </i></p>
+    alt=Р РёСЃ.8.6></span><br>
+    <i>Р РёСЃ.</i></a><i>4 </i></p>
     </td>
     <td style='padding:.75pt .75pt .75pt .75pt'>
     <p class=MsoNormal align=center style='text-align:center'><a name=Pic7><span
     style='color:blue'><img width=318 height=249 src="index3.files/image015.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image015.gif"
-    alt=Рис.8.7></span><br>
-    <i>Рис.</i></a><i>5 </i></p>
+    alt=Р РёСЃ.8.7></span><br>
+    <i>Р РёСЃ.</i></a><i>5 </i></p>
     </td>
    </tr>
   </table>
@@ -715,23 +715,23 @@ height=41 src="index3.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab
  <tr>
   <td width=638 valign=top style='width:478.55pt;background:#FFFF99;padding:
   0mm 5.4pt 0mm 5.4pt'>
-  <p style='text-align:justify;text-indent:35.45pt'><b>Пример 3. </b>В качестве
-  другого примера подобных задач рассмотрим известную задачу динамики
-  популяций, где рассматривается модель взаимодействия «жертв» и «хищников», в
-  которой учитывается уменьшение численности представителей одной стороны с
-  ростом численности другой. Модель была создана для биологических систем, но с
-  определенными корректурами применима к конкуренции фирм, строительству
-  финансовых пирамид, росту народонаселения, экологической проблематике и др. </p>
-  <p style='text-indent:35.45pt'>Эта модель Вольтерра-Лотка с логистической
-  поправкой описывается системой уравнений</p>
+  <p style='text-align:justify;text-indent:35.45pt'><b>РџСЂРёРјРµСЂ 3. </b>Р’ РєР°С‡РµСЃС‚РІРµ
+  РґСЂСѓРіРѕРіРѕ РїСЂРёРјРµСЂР° РїРѕРґРѕР±РЅС‹С… Р·Р°РґР°С‡ СЂР°СЃСЃРјРѕС‚СЂРёРј РёР·РІРµСЃС‚РЅСѓСЋ Р·Р°РґР°С‡Сѓ РґРёРЅР°РјРёРєРё
+  РїРѕРїСѓР»СЏС†РёР№, РіРґРµ СЂР°СЃСЃРјР°С‚СЂРёРІР°РµС‚СЃСЏ РјРѕРґРµР»СЊ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ В«Р¶РµСЂС‚РІВ» Рё В«С…РёС‰РЅРёРєРѕРІВ», РІ
+  РєРѕС‚РѕСЂРѕР№ СѓС‡РёС‚С‹РІР°РµС‚СЃСЏ СѓРјРµРЅСЊС€РµРЅРёРµ С‡РёСЃР»РµРЅРЅРѕСЃС‚Рё РїСЂРµРґСЃС‚Р°РІРёС‚РµР»РµР№ РѕРґРЅРѕР№ СЃС‚РѕСЂРѕРЅС‹ СЃ
+  СЂРѕСЃС‚РѕРј С‡РёСЃР»РµРЅРЅРѕСЃС‚Рё РґСЂСѓРіРѕР№. РњРѕРґРµР»СЊ Р±С‹Р»Р° СЃРѕР·РґР°РЅР° РґР»СЏ Р±РёРѕР»РѕРіРёС‡РµСЃРєРёС… СЃРёСЃС‚РµРј, РЅРѕ СЃ
+  РѕРїСЂРµРґРµР»РµРЅРЅС‹РјРё РєРѕСЂСЂРµРєС‚СѓСЂР°РјРё РїСЂРёРјРµРЅРёРјР° Рє РєРѕРЅРєСѓСЂРµРЅС†РёРё С„РёСЂРј, СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІСѓ
+  С„РёРЅР°РЅСЃРѕРІС‹С… РїРёСЂР°РјРёРґ, СЂРѕСЃС‚Сѓ РЅР°СЂРѕРґРѕРЅР°СЃРµР»РµРЅРёСЏ, СЌРєРѕР»РѕРіРёС‡РµСЃРєРѕР№ РїСЂРѕР±Р»РµРјР°С‚РёРєРµ Рё РґСЂ. </p>
+  <p style='text-indent:35.45pt'>Р­С‚Р° РјРѕРґРµР»СЊ Р’РѕР»СЊС‚РµСЂСЂР°-Р›РѕС‚РєР° СЃ Р»РѕРіРёСЃС‚РёС‡РµСЃРєРѕР№
+  РїРѕРїСЂР°РІРєРѕР№ РѕРїРёСЃС‹РІР°РµС‚СЃСЏ СЃРёСЃС‚РµРјРѕР№ СѓСЂР°РІРЅРµРЅРёР№</p>
   <p style='text-indent:35.45pt'><sub><img width=179 height=88
   src="index3.files/image016.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image016.gif"></sub>&nbsp;</p>
-  <p>с условиями заданной численности «жертв» и «хищников» в начальный момент
+  <p>СЃ СѓСЃР»РѕРІРёСЏРјРё Р·Р°РґР°РЅРЅРѕР№ С‡РёСЃР»РµРЅРЅРѕСЃС‚Рё В«Р¶РµСЂС‚РІВ» Рё В«С…РёС‰РЅРёРєРѕРІВ» РІ РЅР°С‡Р°Р»СЊРЅС‹Р№ РјРѕРјРµРЅС‚
   t=0. </p>
-  <p style='text-align:justify;text-indent:35.45pt'>Решая эту задачу при
-  различных значениях <span class=symvol><span style='font-family:"Times New Roman";
-  font-style:normal'>&#945;</span></span>, получаем различные фазовые портреты
-  (обычный колебательный процесс и постепенная гибель популяций). </p>
+  <p style='text-align:justify;text-indent:35.45pt'>Р РµС€Р°СЏ СЌС‚Сѓ Р·Р°РґР°С‡Сѓ РїСЂРё
+  СЂР°Р·Р»РёС‡РЅС‹С… Р·РЅР°С‡РµРЅРёСЏС… <span class=symvol><span style='font-family:"Times New Roman";
+  font-style:normal'>&#945;</span></span>, РїРѕР»СѓС‡Р°РµРј СЂР°Р·Р»РёС‡РЅС‹Рµ С„Р°Р·РѕРІС‹Рµ РїРѕСЂС‚СЂРµС‚С‹
+  (РѕР±С‹С‡РЅС‹Р№ РєРѕР»РµР±Р°С‚РµР»СЊРЅС‹Р№ РїСЂРѕС†РµСЃСЃ Рё РїРѕСЃС‚РµРїРµРЅРЅР°СЏ РіРёР±РµР»СЊ РїРѕРїСѓР»СЏС†РёР№). </p>
   <p class=MsoNormal>&nbsp;</p>
   <p class=MsoNormal><img width=463 height=299 src="index3.files/image018.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image018.jpg">&nbsp;
   </p>
@@ -741,14 +741,14 @@ height=41 src="index3.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab
    <tr>
     <td style='padding:.75pt .75pt .75pt .75pt'>
     <p class=MsoNormal align=center style='text-align:center'><img width=305
-    height=238 src="index3.files/image020.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image020.gif" alt=Рис.8.8><br>
-    <i>Рис.6 (</i><span class=symvol><span style='font-family:"Times New Roman";
+    height=238 src="index3.files/image020.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image020.gif" alt=Р РёСЃ.8.8><br>
+    <i>Р РёСЃ.6 (</i><span class=symvol><span style='font-family:"Times New Roman";
     font-style:normal'>&#945;</span></span><i> =0) </i></p>
     </td>
     <td style='padding:.75pt .75pt .75pt .75pt'>
     <p class=MsoNormal align=center style='text-align:center'><img width=314
-    height=244 src="index3.files/image021.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image021.gif" alt=Рис.8.9><br>
-    <i>Рис.7 (</i><span class=symvol><span style='font-family:"Times New Roman";
+    height=244 src="index3.files/image021.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image021.gif" alt=Р РёСЃ.8.9><br>
+    <i>Р РёСЃ.7 (</i><span class=symvol><span style='font-family:"Times New Roman";
     font-style:normal'>&#945;</span></span><i> =0.1)</i></p>
     </td>
    </tr>
@@ -765,13 +765,13 @@ height=41 src="index3.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab
  <tr>
   <td width=638 valign=top style='width:478.55pt;background:#FFFF99;padding:
   0mm 5.4pt 0mm 5.4pt'>
-  <p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><b>Пример 4.
-  </b>Имеется возможность построения и трехмерного фазового портрета с помощью
-  функции odephas3. Например, решение задачи Эйлера свободного движения
-  твердого тела: </p>
+  <p class=MsoNormal style='text-align:justify;text-indent:35.4pt'><b>РџСЂРёРјРµСЂ 4.
+  </b>РРјРµРµС‚СЃСЏ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РїРѕСЃС‚СЂРѕРµРЅРёСЏ Рё С‚СЂРµС…РјРµСЂРЅРѕРіРѕ С„Р°Р·РѕРІРѕРіРѕ РїРѕСЂС‚СЂРµС‚Р° СЃ РїРѕРјРѕС‰СЊСЋ
+  С„СѓРЅРєС†РёРё odephas3. РќР°РїСЂРёРјРµСЂ, СЂРµС€РµРЅРёРµ Р·Р°РґР°С‡Рё Р­Р№Р»РµСЂР° СЃРІРѕР±РѕРґРЅРѕРіРѕ РґРІРёР¶РµРЅРёСЏ
+  С‚РІРµСЂРґРѕРіРѕ С‚РµР»Р°: </p>
   <p style='text-indent:35.45pt'><sub><img width=269 height=43
   src="index3.files/image022.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image022.gif"></sub>&nbsp;</p>
-  <p>выступает в виде: </p>
+  <p>РІС‹СЃС‚СѓРїР°РµС‚ РІ РІРёРґРµ: </p>
   <p class=MsoNormal><img width=383 height=232 src="index3.files/image023.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image023.jpg"></p>
   <p class=MsoNormal><img width=493 height=217 src="index3.files/image024.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image024.jpg"></p>
   <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
@@ -779,13 +779,13 @@ height=41 src="index3.files/image010.gif" tppabs="http://orloff.am.tpu.ru/matlab
    <tr>
     <td style='padding:.75pt .75pt .75pt .75pt'>
     <p class=MsoNormal align=center style='text-align:center'><img width=291
-    height=221 src="index3.files/image025.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image025.gif" alt=Рис.8.10><br>
-    <i>Рис.8. </i></p>
+    height=221 src="index3.files/image025.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image025.gif" alt=Р РёСЃ.8.10><br>
+    <i>Р РёСЃ.8. </i></p>
     </td>
     <td style='padding:.75pt .75pt .75pt .75pt'>
     <p class=MsoNormal align=center style='text-align:center'><a name=Pic11><img
-    width=267 height=210 src="index3.files/image026.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image026.gif" alt=Рис.8.11></a><br>
-    <i>Рис.9.</i> </p>
+    width=267 height=210 src="index3.files/image026.gif" tppabs="http://orloff.am.tpu.ru/matlab/Lab5/index3.files/image026.gif" alt=Р РёСЃ.8.11></a><br>
+    <i>Р РёСЃ.9.</i> </p>
     </td>
    </tr>
   </table>

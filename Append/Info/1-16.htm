@@ -11,89 +11,89 @@
 
 <body background="fon.jpg" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/fon.jpg">
 <ul>
-      <li><b><font face="Times New Roman CYR" size=3><a href="#1">Урок 15. Массивы ячеек </a></font></b> </li>
+      <li><b><font face="Times New Roman CYR" size=3><a href="#1">РЈСЂРѕРє 15. РњР°СЃСЃРёРІС‹ СЏС‡РµРµРє </a></font></b> </li>
     <ul>
-      <li><font face="Times New Roman CYR" size=3><a href="#2">Создание массивов ячеек</a></font> </li>
-      <li><font face="Times New Roman CYR" size=3><a href="#3">Создание ячеек с помощью функции cell</a></font> </li>
-     <li><font face="Times New Roman CYR" size=3><a href="#4">Визуализация массивов ячеек </a></font> </li>
-     <li><font face="Times New Roman CYR" size=3><a href="#5">Создание строкового массива ячеек из массива символов</a></font> </li>
-<li><font face="Times New Roman CYR" size=3><a href="#6">Присваивание с помощью функции deal</a></font> </li>
-      <li><font face="Times New Roman CYR" size=3><a href="#7">Тестирование имен массивов ячеек</a></font> </li>
-     <li><font face="Times New Roman CYR" size=3><a href="#8">Функции преобразования типов данных</a></font> </li>
-     <li><font face="Times New Roman CYR" size=3><a href="#9">Многомерные массивы ячеек</a></font> </li>
-	 <li><font face="Times New Roman CYR" size=3><a href="#10">Вложенные массивы ячеек</a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#2">РЎРѕР·РґР°РЅРёРµ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє</a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#3">РЎРѕР·РґР°РЅРёРµ СЏС‡РµРµРє СЃ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё cell</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#4">Р’РёР·СѓР°Р»РёР·Р°С†РёСЏ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє </a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#5">РЎРѕР·РґР°РЅРёРµ СЃС‚СЂРѕРєРѕРІРѕРіРѕ РјР°СЃСЃРёРІР° СЏС‡РµРµРє РёР· РјР°СЃСЃРёРІР° СЃРёРјРІРѕР»РѕРІ</a></font> </li>
+<li><font face="Times New Roman CYR" size=3><a href="#6">РџСЂРёСЃРІР°РёРІР°РЅРёРµ СЃ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё deal</a></font> </li>
+      <li><font face="Times New Roman CYR" size=3><a href="#7">РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РёРјРµРЅ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#8">Р¤СѓРЅРєС†РёРё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ С‚РёРїРѕРІ РґР°РЅРЅС‹С…</a></font> </li>
+     <li><font face="Times New Roman CYR" size=3><a href="#9">РњРЅРѕРіРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє</a></font> </li>
+	 <li><font face="Times New Roman CYR" size=3><a href="#10">Р’Р»РѕР¶РµРЅРЅС‹Рµ РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє</a></font> </li>
       
-    <li><font face="Times New Roman CYR" size=3><a href="#11">Что новoго мы узнали? 
+    <li><font face="Times New Roman CYR" size=3><a href="#11">Р§С‚Рѕ РЅРѕРІoРіРѕ РјС‹ СѓР·РЅР°Р»Рё? 
       </a></font> </li>
     
 </ul></ul>
 
 
 <A NAME="1"></A> 
-<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">Урок 
-  №15.</font></b></font> </P>
-<P align="left"><font face="Times New Roman" size="5">Массивы ячеек</font> </P>
+<P align="left"><font face="Times New Roman, Times, serif" size="2"><b><font size="3">РЈСЂРѕРє 
+  в„–15.</font></b></font> </P>
+<P align="left"><font face="Times New Roman" size="5">РњР°СЃСЃРёРІС‹ СЏС‡РµРµРє</font> </P>
 <ul>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">    Создание массивов ячеек</font></li>
+    <p align="left"><font face="Times New Roman" size="3">    РЎРѕР·РґР°РЅРёРµ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">    Создание ячеек с помощью функции cell</font></li>
+    <p align="left"><font face="Times New Roman" size="3">    РЎРѕР·РґР°РЅРёРµ СЏС‡РµРµРє СЃ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё cell</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">    Визуализация массивов ячеек</font></li>
+    <p align="left"><font face="Times New Roman" size="3">    Р’РёР·СѓР°Р»РёР·Р°С†РёСЏ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">    Создание строкового массива ячеек из массива символов</font></li>
+    <p align="left"><font face="Times New Roman" size="3">    РЎРѕР·РґР°РЅРёРµ СЃС‚СЂРѕРєРѕРІРѕРіРѕ РјР°СЃСЃРёРІР° СЏС‡РµРµРє РёР· РјР°СЃСЃРёРІР° СЃРёРјРІРѕР»РѕРІ</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">    Присваивание с помощью функции deal</font></li>
+    <p align="left"><font face="Times New Roman" size="3">    РџСЂРёСЃРІР°РёРІР°РЅРёРµ СЃ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё deal</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">    Функция тестирования имен массивов ячеек</font></li>
+    <p align="left"><font face="Times New Roman" size="3">    Р¤СѓРЅРєС†РёСЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ РёРјРµРЅ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">    Функции преобразования типов данных</font></li>
+    <p align="left"><font face="Times New Roman" size="3">    Р¤СѓРЅРєС†РёРё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ С‚РёРїРѕРІ РґР°РЅРЅС‹С…</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">    Многомерные и вложенные массивы ячеек</font></li>
+    <p align="left"><font face="Times New Roman" size="3">    РњРЅРѕРіРѕРјРµСЂРЅС‹Рµ Рё РІР»РѕР¶РµРЅРЅС‹Рµ РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє</font></li>
 </ul>
-<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> Создание 
-  массивов ячеек</font></B> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="2"></a> РЎРѕР·РґР°РЅРёРµ 
+  РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3"><I>Массив ячеек — </I>наиболее сложный тип данных в системе MATLAB. Это массив, элементами которого являются <I>ячейки, </I>содержащие любые типы массивов, включая массивы ячеек. Отличительным атрибутом массивов ячеек является задание содержимого последних в фигурных скобках {}. Создавать массивы ячеек можно с помощью оператора присваивания.</font>
+<font face="Times New Roman" size="3"><I>РњР°СЃСЃРёРІ СЏС‡РµРµРє вЂ” </I>РЅР°РёР±РѕР»РµРµ СЃР»РѕР¶РЅС‹Р№ С‚РёРї РґР°РЅРЅС‹С… РІ СЃРёСЃС‚РµРјРµ MATLAB. Р­С‚Рѕ РјР°СЃСЃРёРІ, СЌР»РµРјРµРЅС‚Р°РјРё РєРѕС‚РѕСЂРѕРіРѕ СЏРІР»СЏСЋС‚СЃСЏ <I>СЏС‡РµР№РєРё, </I>СЃРѕРґРµСЂР¶Р°С‰РёРµ Р»СЋР±С‹Рµ С‚РёРїС‹ РјР°СЃСЃРёРІРѕРІ, РІРєР»СЋС‡Р°СЏ РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє. РћС‚Р»РёС‡РёС‚РµР»СЊРЅС‹Рј Р°С‚СЂРёР±СѓС‚РѕРј РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє СЏРІР»СЏРµС‚СЃСЏ Р·Р°РґР°РЅРёРµ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ РїРѕСЃР»РµРґРЅРёС… РІ С„РёРіСѓСЂРЅС‹С… СЃРєРѕР±РєР°С… {}. РЎРѕР·РґР°РІР°С‚СЊ РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє РјРѕР¶РЅРѕ СЃ РїРѕРјРѕС‰СЊСЋ РѕРїРµСЂР°С‚РѕСЂР° РїСЂРёСЃРІР°РёРІР°РЅРёСЏ.</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">Существуют  два способа присваивания данных отдельным ячейкам:</font>
+<font face="Times New Roman" size="3">РЎСѓС‰РµСЃС‚РІСѓСЋС‚  РґРІР° СЃРїРѕСЃРѕР±Р° РїСЂРёСЃРІР°РёРІР°РЅРёСЏ РґР°РЅРЅС‹С… РѕС‚РґРµР»СЊРЅС‹Рј СЏС‡РµР№РєР°Рј:</font>
 </P>
 <ul>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> индексацией ячеек;</font></li>
+    <p align="left"><font face="Times New Roman" size="3"> РёРЅРґРµРєСЃР°С†РёРµР№ СЏС‡РµРµРє;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> индексацией содержимого.</font></li>
+    <p align="left"><font face="Times New Roman" size="3"> РёРЅРґРµРєСЃР°С†РёРµР№ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ.</font></li>
 </ul>
 <P align="left">
-<font face="Times New Roman" size="3">Рассмотрим первый способ. Для этого создадим файл-сценарий с именем се.m:</font>
+<font face="Times New Roman" size="3">Р Р°СЃСЃРјРѕС‚СЂРёРј РїРµСЂРІС‹Р№ СЃРїРѕСЃРѕР±. Р”Р»СЏ СЌС‚РѕРіРѕ СЃРѕР·РґР°РґРёРј С„Р°Р№Р»-СЃС†РµРЅР°СЂРёР№ СЃ РёРјРµРЅРµРј СЃРµ.m:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">А( !.!)={'Курить вредно!'};&nbsp;</font>
+<font size="3" face="Courier New">Рђ( !.!)={'РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ!'};&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> А(1.2)={[1 2;3 4]};&nbsp;</font>
+<font size="3" face="Courier New"> Рђ(1.2)={[1 2;3 4]};&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">A(2,l)={2+3i};&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> А(2.2)={0:0.1:1}</font>
+<font size="3" face="Courier New"> Рђ(2.2)={0:0.1:1}</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3"><i><img border="0" src="Prim-6.gif" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim-6.gif" align="left" width="36" height="35">Уже отмечалось, что в командном режиме малая русская буква &laquo;с&raquo; в строках ведет к пе-реводу строки ввода. Однако в m-файлах, создаваемых в редакторе/отладчике М-фай-лов, эта недоработка обычно не проявляется. Хотя гарантии в этом, увы, пока нет.</i></font>
+<font face="Times New Roman" size="3"><i><img border="0" src="Prim-6.gif" tppabs="http://orloff.am.tpu.ru/matlab/Append/Info/Prim-6.gif" align="left" width="36" height="35">РЈР¶Рµ РѕС‚РјРµС‡Р°Р»РѕСЃСЊ, С‡С‚Рѕ РІ РєРѕРјР°РЅРґРЅРѕРј СЂРµР¶РёРјРµ РјР°Р»Р°СЏ СЂСѓСЃСЃРєР°СЏ Р±СѓРєРІР° &laquo;СЃ&raquo; РІ СЃС‚СЂРѕРєР°С… РІРµРґРµС‚ Рє РїРµ-СЂРµРІРѕРґСѓ СЃС‚СЂРѕРєРё РІРІРѕРґР°. РћРґРЅР°РєРѕ РІ m-С„Р°Р№Р»Р°С…, СЃРѕР·РґР°РІР°РµРјС‹С… РІ СЂРµРґР°РєС‚РѕСЂРµ/РѕС‚Р»Р°РґС‡РёРєРµ Рњ-С„Р°Р№-Р»РѕРІ, СЌС‚Р° РЅРµРґРѕСЂР°Р±РѕС‚РєР° РѕР±С‹С‡РЅРѕ РЅРµ РїСЂРѕСЏРІР»СЏРµС‚СЃСЏ. РҐРѕС‚СЏ РіР°СЂР°РЅС‚РёРё РІ СЌС‚РѕРј, СѓРІС‹, РїРѕРєР° РЅРµС‚.</i></font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">В этом примере задан массив ячеек с четырьмя элементами: строкой символов, матрицей, комплексным числом и одномерным массивом из 11 чисел. Теперь можно вызвать этот массив:</font>
+<font face="Times New Roman" size="3">Р’ СЌС‚РѕРј РїСЂРёРјРµСЂРµ Р·Р°РґР°РЅ РјР°СЃСЃРёРІ СЏС‡РµРµРє СЃ С‡РµС‚С‹СЂСЊРјСЏ СЌР»РµРјРµРЅС‚Р°РјРё: СЃС‚СЂРѕРєРѕР№ СЃРёРјРІРѕР»РѕРІ, РјР°С‚СЂРёС†РµР№, РєРѕРјРїР»РµРєСЃРЅС‹Рј С‡РёСЃР»РѕРј Рё РѕРґРЅРѕРјРµСЂРЅС‹Рј РјР°СЃСЃРёРІРѕРј РёР· 11 С‡РёСЃРµР». РўРµРїРµСЂСЊ РјРѕР¶РЅРѕ РІС‹Р·РІР°С‚СЊ СЌС‚РѕС‚ РјР°СЃСЃРёРІ:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; се</font>
+<font size="3" face="Courier New">&raquo; СЃРµ</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">А =</font>
+<font size="3" face="Courier New">Рђ =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Курить вредно!'         [2x2   double]&nbsp;</font>
+<font size="3" face="Courier New">'РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ!'         [2x2   double]&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> [2.0000+ 3.00001]       [1x11 double]</font>
@@ -105,10 +105,10 @@
 <font size="3" face="Courier New"> ans =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Курить вредно!'</font>
+<font size="3" face="Courier New">'РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ!'</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo;А(2.1)&nbsp;</font>
+<font size="3" face="Courier New">&raquo;Рђ(2.1)&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> ans =</font>
@@ -117,49 +117,49 @@
 <font size="3" face="Courier New">[2.0000+ 3.00001]</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">Заметим, что к ячейкам такого массива можно обращаться с помощью индексирования, например в виде А(1,1), А(2,1) и т. д.</font>
+<font face="Times New Roman" size="3">Р—Р°РјРµС‚РёРј, С‡С‚Рѕ Рє СЏС‡РµР№РєР°Рј С‚Р°РєРѕРіРѕ РјР°СЃСЃРёРІР° РјРѕР¶РЅРѕ РѕР±СЂР°С‰Р°С‚СЊСЃСЏ СЃ РїРѕРјРѕС‰СЊСЋ РёРЅРґРµРєСЃРёСЂРѕРІР°РЅРёСЏ, РЅР°РїСЂРёРјРµСЂ РІ РІРёРґРµ Рђ(1,1), Рђ(2,1) Рё С‚. Рґ.</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">При индексации содержимого массив ячеек задается следующим образом:</font>
+<font face="Times New Roman" size="3">РџСЂРё РёРЅРґРµРєСЃР°С†РёРё СЃРѕРґРµСЂР¶РёРјРѕРіРѕ РјР°СЃСЃРёРІ СЏС‡РµРµРє Р·Р°РґР°РµС‚СЃСЏ СЃР»РµРґСѓСЋС‰РёРј РѕР±СЂР°Р·РѕРј:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">А{1,1}='Курить вредно!';&nbsp;</font>
+<font size="3" face="Courier New">Рђ{1,1}='РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ!';&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> А{1.2}-[1 2:3 4];&nbsp;</font>
+<font size="3" face="Courier New"> Рђ{1.2}-[1 2:3 4];&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> А{2,1}=2+31;&nbsp;</font>
+<font size="3" face="Courier New"> Рђ{2,1}=2+31;&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> А{2,2}=0:0.1:1;</font>
+<font size="3" face="Courier New"> Рђ{2,2}=0:0.1:1;</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">Теперь можно ознакомиться с созданным массивом ячеек в командном режиме:</font>
+<font face="Times New Roman" size="3">РўРµРїРµСЂСЊ РјРѕР¶РЅРѕ РѕР·РЅР°РєРѕРјРёС‚СЊСЃСЏ СЃ СЃРѕР·РґР°РЅРЅС‹Рј РјР°СЃСЃРёРІРѕРј СЏС‡РµРµРє РІ РєРѕРјР°РЅРґРЅРѕРј СЂРµР¶РёРјРµ:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; А</font>
+<font size="3" face="Courier New">&raquo; Рђ</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">ans =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Курить вредно! '   [2x2 double]</font>
+<font size="3" face="Courier New">'РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ! '   [2x2 double]</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">[2.0000+ 3.0000i] [1x11double]&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> &raquo; А{1,1}&nbsp;</font>
+<font size="3" face="Courier New"> &raquo; Рђ{1,1}&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> ans =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">Курить вредно!&nbsp;</font>
+<font size="3" face="Courier New">РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ!&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> &raquo; А{2.1}</font>
+<font size="3" face="Courier New"> &raquo; Рђ{2.1}</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">&nbsp;ans =</font>
@@ -167,31 +167,31 @@
 <P align="left"><font size="3" face="Courier New">2.0000 + 3.0000i</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">При серьезной работе с массивами структур (записей) и массивами ячеек полезно иметь дополнительную информацию о списках значений. Для получения такой информации следует выполнить команду help
+<font face="Times New Roman" size="3">РџСЂРё СЃРµСЂСЊРµР·РЅРѕР№ СЂР°Р±РѕС‚Рµ СЃ РјР°СЃСЃРёРІР°РјРё СЃС‚СЂСѓРєС‚СѓСЂ (Р·Р°РїРёСЃРµР№) Рё РјР°СЃСЃРёРІР°РјРё СЏС‡РµРµРє РїРѕР»РµР·РЅРѕ РёРјРµС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃРїРёСЃРєР°С… Р·РЅР°С‡РµРЅРёР№. Р”Р»СЏ РїРѕР»СѓС‡РµРЅРёСЏ С‚Р°РєРѕР№ РёРЅС„РѕСЂРјР°С†РёРё СЃР»РµРґСѓРµС‚ РІС‹РїРѕР»РЅРёС‚СЊ РєРѕРјР°РЅРґСѓ help
 list.</font>
 </P>
-<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a> Создание 
-  ячеек с помощью функции cell</font></B> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="3"></a> РЎРѕР·РґР°РЅРёРµ 
+  СЏС‡РµРµРє СЃ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё cell</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3">Для создания массива ячеек может использоваться функция
+<font face="Times New Roman" size="3">Р”Р»СЏ СЃРѕР·РґР°РЅРёСЏ РјР°СЃСЃРёРІР° СЏС‡РµРµРє РјРѕР¶РµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ С„СѓРЅРєС†РёСЏ
 eell :</font>
 </P>
 <ul>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">cell(N) — создает массив ячеек из NxN пустых матриц;</font></li>
+    <p align="left"><font face="Times New Roman" size="3">cell(N) вЂ” СЃРѕР·РґР°РµС‚ РјР°СЃСЃРёРІ СЏС‡РµРµРє РёР· NxN РїСѓСЃС‚С‹С… РјР°С‚СЂРёС†;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">cell(M.N) или cell([M,N]) — создает массив ячеек из MxN пустых матриц;</font></li>
+    <p align="left"><font face="Times New Roman" size="3">cell(M.N) РёР»Рё cell([M,N]) вЂ” СЃРѕР·РґР°РµС‚ РјР°СЃСЃРёРІ СЏС‡РµРµРє РёР· MxN РїСѓСЃС‚С‹С… РјР°С‚СЂРёС†;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">cell(M.N.P,...) или сеll([М N Р ...]) — создает массив из MxNxPx... пустых матриц;</font></li>
+    <p align="left"><font face="Times New Roman" size="3">cell(M.N.P,...) РёР»Рё СЃРµll([Рњ N Р  ...]) вЂ” СЃРѕР·РґР°РµС‚ РјР°СЃСЃРёРІ РёР· MxNxPx... РїСѓСЃС‚С‹С… РјР°С‚СЂРёС†;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">cell (size(A)) — создает массив ячеек из пустых матриц того же размера, что имассив А;&nbsp;</font></li>
+    <p align="left"><font face="Times New Roman" size="3">cell (size(A)) вЂ” СЃРѕР·РґР°РµС‚ РјР°СЃСЃРёРІ СЏС‡РµРµРє РёР· РїСѓСЃС‚С‹С… РјР°С‚СЂРёС† С‚РѕРіРѕ Р¶Рµ СЂР°Р·РјРµСЂР°, С‡С‚Рѕ РёРјР°СЃСЃРёРІ Рђ;&nbsp;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> cell (объект Java) — автоматически преобразует объекты или массивы Java
-    </font><font face="Times New Roman" size="3">(javaarray) в массив ячеек, элементы которого являются объектами
+    <p align="left"><font face="Times New Roman" size="3"> cell (РѕР±СЉРµРєС‚ Java) вЂ” Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РѕР±СЉРµРєС‚С‹ РёР»Рё РјР°СЃСЃРёРІС‹ Java
+    </font><font face="Times New Roman" size="3">(javaarray) РІ РјР°СЃСЃРёРІ СЏС‡РµРµРє, СЌР»РµРјРµРЅС‚С‹ РєРѕС‚РѕСЂРѕРіРѕ СЏРІР»СЏСЋС‚СЃСЏ РѕР±СЉРµРєС‚Р°РјРё
     MATLAB.</font></li>
 </ul>
 <P align="left">
-<font face="Times New Roman" size="3">Следующие примеры поясняют применение данной функции:</font>
+<font face="Times New Roman" size="3">РЎР»РµРґСѓСЋС‰РёРµ РїСЂРёРјРµСЂС‹ РїРѕСЏСЃРЅСЏСЋС‚ РїСЂРёРјРµРЅРµРЅРёРµ РґР°РЅРЅРѕР№ С„СѓРЅРєС†РёРё:</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">&raquo; cell(2)&nbsp;</font>
@@ -209,7 +209,7 @@ eell :</font>
 <font size="3" face="Courier New">&raquo; C=cell(2.3)&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> С =</font>
+<font size="3" face="Courier New"> РЎ =</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">[] [] []</font>
@@ -221,7 +221,7 @@ eell :</font>
 <font size="3" face="Courier New">&raquo; C0=zeros(2.3)</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">С0=</font>
+<font size="3" face="Courier New">РЎ0=</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">0 0 0</font>
@@ -242,48 +242,48 @@ eell :</font>
 <font size="3" face="Courier New">[] [] []</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">Образовавшиеся пустые ячейки можно заполнить, используя операции присваивания:</font>
+<font face="Times New Roman" size="3">РћР±СЂР°Р·РѕРІР°РІС€РёРµСЃСЏ РїСѓСЃС‚С‹Рµ СЏС‡РµР№РєРё РјРѕР¶РЅРѕ Р·Р°РїРѕР»РЅРёС‚СЊ, РёСЃРїРѕР»СЊР·СѓСЏ РѕРїРµСЂР°С†РёРё РїСЂРёСЃРІР°РёРІР°РЅРёСЏ:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; С{1.1}=1;С{1.2}='Привет':С{2,1}='Неllо':С{2.2}=[1 2; 3 4];</font>
+<font size="3" face="Courier New">&raquo; РЎ{1.1}=1;РЎ{1.2}='РџСЂРёРІРµС‚':РЎ{2,1}='РќРµllРѕ':РЎ{2.2}=[1 2; 3 4];</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo;С&nbsp;</font>
+<font size="3" face="Courier New">&raquo;РЎ&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">С =</font>
+<font size="3" face="Courier New">РЎ =</font>
 </P>
 <P align="left">
 <font face="Courier New"><font size="3">[    1]&nbsp;<sup>&nbsp;</sup></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<font size="3">'Привет'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; []</font></font>
+<font size="3">'РџСЂРёРІРµС‚'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; []</font></font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">'Hello<sup>'&nbsp;</sup> [2x2 double]&nbsp;&nbsp;&nbsp;&nbsp;
 []<BR>
 </font>
 </P>
-<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a> Визуализация 
-  массивов ячеек</font></B> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="4"></a> Р’РёР·СѓР°Р»РёР·Р°С†РёСЏ 
+  РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3">Для отображения массива ячеек С служит функция celldlsp(C). Она дает рекурсивное отображение содержимого массива ячеек С. Например, для ранее созданного массива ячеек А получится следующее:</font>
+<font face="Times New Roman" size="3">Р”Р»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РјР°СЃСЃРёРІР° СЏС‡РµРµРє РЎ СЃР»СѓР¶РёС‚ С„СѓРЅРєС†РёСЏ celldlsp(C). РћРЅР° РґР°РµС‚ СЂРµРєСѓСЂСЃРёРІРЅРѕРµ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ РјР°СЃСЃРёРІР° СЏС‡РµРµРє РЎ. РќР°РїСЂРёРјРµСЂ, РґР»СЏ СЂР°РЅРµРµ СЃРѕР·РґР°РЅРЅРѕРіРѕ РјР°СЃСЃРёРІР° СЏС‡РµРµРє Рђ РїРѕР»СѓС‡РёС‚СЃСЏ СЃР»РµРґСѓСЋС‰РµРµ:</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">&raquo; celldisp(A)</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">А{1.1}=</font>
+<font size="3" face="Courier New">Рђ{1.1}=</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">Курить вредно!</font>
+<font size="3" face="Courier New">РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ!</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">А{2.1}=</font>
+<font size="3" face="Courier New">Рђ{2.1}=</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">&nbsp;2.0000 + 3.0000i</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">А{1.2} =</font>
+<font size="3" face="Courier New">Рђ{1.2} =</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">1 2</font>
@@ -292,7 +292,7 @@ eell :</font>
 <font size="3" face="Courier New">3 4</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">А{2.2} -Columns 1 through 7<BR>
+<font size="3" face="Courier New">Рђ{2.2} -Columns 1 through 7<BR>
 </font>
 </P>
 <P align="left">
@@ -305,72 +305,72 @@ eell :</font>
 <font size="3" face="Courier New"> 0.7000 0.8000  0.9000  1.0000</font>
 </P>
  
-<P align="left"> <font face="Times New Roman" size="3">Для более наглядного графического 
-  представления массива ячеек может использоваться команда cell plot:</font> </P>
-<P align="left"> <B><font face="Times New Roman" size="4"><a name="5"></a> Создание 
-  строкового массива ячеек из массива символов</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="3">Р”Р»СЏ Р±РѕР»РµРµ РЅР°РіР»СЏРґРЅРѕРіРѕ РіСЂР°С„РёС‡РµСЃРєРѕРіРѕ 
+  РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ РјР°СЃСЃРёРІР° СЏС‡РµРµРє РјРѕР¶РµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ РєРѕРјР°РЅРґР° cell plot:</font> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="5"></a> РЎРѕР·РґР°РЅРёРµ 
+  СЃС‚СЂРѕРєРѕРІРѕРіРѕ РјР°СЃСЃРёРІР° СЏС‡РµРµРє РёР· РјР°СЃСЃРёРІР° СЃРёРјРІРѕР»РѕРІ</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3">Для создания из массива символов S строкового массива ячеек может использоваться функция eellstr(S). Каждый ряд массива символов превращается в отдельную ячейку. Следующий пример поясняет применение функции
+<font face="Times New Roman" size="3">Р”Р»СЏ СЃРѕР·РґР°РЅРёСЏ РёР· РјР°СЃСЃРёРІР° СЃРёРјРІРѕР»РѕРІ S СЃС‚СЂРѕРєРѕРІРѕРіРѕ РјР°СЃСЃРёРІР° СЏС‡РµРµРє РјРѕР¶РµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ С„СѓРЅРєС†РёСЏ eellstr(S). РљР°Р¶РґС‹Р№ СЂСЏРґ РјР°СЃСЃРёРІР° СЃРёРјРІРѕР»РѕРІ РїСЂРµРІСЂР°С‰Р°РµС‚СЃСЏ РІ РѕС‚РґРµР»СЊРЅСѓСЋ СЏС‡РµР№РєСѓ. РЎР»РµРґСѓСЋС‰РёР№ РїСЂРёРјРµСЂ РїРѕСЏСЃРЅСЏРµС‚ РїСЂРёРјРµРЅРµРЅРёРµ С„СѓРЅРєС†РёРё
 cellstr:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; S={'Привет.';   'дорогой';   'друг'};&nbsp;</font>
+<font size="3" face="Courier New">&raquo; S={'РџСЂРёРІРµС‚.';   'РґРѕСЂРѕРіРѕР№';   'РґСЂСѓРі'};&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> &raquo; C=cellstr(S)&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> С =</font>
+<font size="3" face="Courier New"> РЎ =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Привет.'</font>
+<font size="3" face="Courier New">'РџСЂРёРІРµС‚.'</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'дорогой'</font>
+<font size="3" face="Courier New">'РґРѕСЂРѕРіРѕР№'</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'ДРУГ'</font>
+<font size="3" face="Courier New">'Р”Р РЈР“'</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">Это еще один способ формирования массивов ячеек.</font>
+<font face="Times New Roman" size="3">Р­С‚Рѕ РµС‰Рµ РѕРґРёРЅ СЃРїРѕСЃРѕР± С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє.</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">Функция iscellstr(C) равна 1, если ее аргумент С — строковый массив ячеек, и
-0, если это неверно.</font>
+<font face="Times New Roman" size="3">Р¤СѓРЅРєС†РёСЏ iscellstr(C) СЂР°РІРЅР° 1, РµСЃР»Рё РµРµ Р°СЂРіСѓРјРµРЅС‚ РЎ вЂ” СЃС‚СЂРѕРєРѕРІС‹Р№ РјР°СЃСЃРёРІ СЏС‡РµРµРє, Рё
+0, РµСЃР»Рё СЌС‚Рѕ РЅРµРІРµСЂРЅРѕ.</font>
 </P>
-<P align="left"> <B><font face="Times New Roman" size="4"><a name="6"></a> Присваивание 
-  с помощью функции deal</font></B> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="6"></a> РџСЂРёСЃРІР°РёРІР°РЅРёРµ 
+  СЃ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё deal</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3">С помощью функции deal возможно множественное присваивание входных данных выходным:</font>
+<font face="Times New Roman" size="3">РЎ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё deal РІРѕР·РјРѕР¶РЅРѕ РјРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕРµ РїСЂРёСЃРІР°РёРІР°РЅРёРµ РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С… РІС‹С…РѕРґРЅС‹Рј:</font>
 </P>
 <ul>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">[A.B,C,...]=deal(X,Y,Z,...) — обеспечивает последовательное присваивание входных данных выходным, то есть А=Х, B=Y, C=Z и т. д.;</font></li>
+    <p align="left"><font face="Times New Roman" size="3">[A.B,C,...]=deal(X,Y,Z,...) вЂ” РѕР±РµСЃРїРµС‡РёРІР°РµС‚ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕРµ РїСЂРёСЃРІР°РёРІР°РЅРёРµ РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С… РІС‹С…РѕРґРЅС‹Рј, С‚Рѕ РµСЃС‚СЊ Рђ=РҐ, B=Y, C=Z Рё С‚. Рґ.;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">[A,B,C....]=deal(X) — присваивает единственный вход всем выходам, т. е. А=Х, В=Х, С=Х и т. д.</font></li>
+    <p align="left"><font face="Times New Roman" size="3">[A,B,C....]=deal(X) вЂ” РїСЂРёСЃРІР°РёРІР°РµС‚ РµРґРёРЅСЃС‚РІРµРЅРЅС‹Р№ РІС…РѕРґ РІСЃРµРј РІС‹С…РѕРґР°Рј, С‚. Рµ. Рђ=РҐ, Р’=РҐ, РЎ=РҐ Рё С‚. Рґ.</font></li>
 </ul>
 <P align="left">
-<font face="Times New Roman" size="3">Возможен ряд полезных применений функции
+<font face="Times New Roman" size="3">Р’РѕР·РјРѕР¶РµРЅ СЂСЏРґ РїРѕР»РµР·РЅС‹С… РїСЂРёРјРµРЅРµРЅРёР№ С„СѓРЅРєС†РёРё
 deal:</font>
 </P>
 <ul>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">[S.FIELD]=deal (X) — присваивает всем полям FIELD структуры S значения X. Если S не существует, то нужно использовать конструкцию
+    <p align="left"><font face="Times New Roman" size="3">[S.FIELD]=deal (X) вЂ” РїСЂРёСЃРІР°РёРІР°РµС‚ РІСЃРµРј РїРѕР»СЏРј FIELD СЃС‚СЂСѓРєС‚СѓСЂС‹ S Р·РЅР°С‡РµРЅРёСЏ X. Р•СЃР»Рё S РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ РЅСѓР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєРѕРЅСЃС‚СЂСѓРєС†РёСЋ
     [S(1:M)*.FIELD]= deal(X);</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">[X{:}]=dea1 (A. FIELD) — копирует поля FIELD структуры А в массив ячеек X. Если X не существует, следует использовать конструкцию
+    <p align="left"><font face="Times New Roman" size="3">[X{:}]=dea1 (A. FIELD) вЂ” РєРѕРїРёСЂСѓРµС‚ РїРѕР»СЏ FIELD СЃС‚СЂСѓРєС‚СѓСЂС‹ Рђ РІ РјР°СЃСЃРёРІ СЏС‡РµРµРє X. Р•СЃР»Рё X РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, СЃР»РµРґСѓРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєРѕРЅСЃС‚СЂСѓРєС†РёСЋ
     [X{l:M}]=deal (A.FIELD);</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">[A,B,C,...]=deal (X{:}) — копирует содержимое массива ячеек X в отдельные переменные А, В, С,...;</font></li>
+    <p align="left"><font face="Times New Roman" size="3">[A,B,C,...]=deal (X{:}) вЂ” РєРѕРїРёСЂСѓРµС‚ СЃРѕРґРµСЂР¶РёРјРѕРµ РјР°СЃСЃРёРІР° СЏС‡РµРµРє X РІ РѕС‚РґРµР»СЊРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ Рђ, Р’, РЎ,...;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">[A,B,C,...]=deal(S.FIELD) — копирует содержимое поля FIELD массива структур S в отдельные переменные А, В, С,...;</font></li>
+    <p align="left"><font face="Times New Roman" size="3">[A,B,C,...]=deal(S.FIELD) вЂ” РєРѕРїРёСЂСѓРµС‚ СЃРѕРґРµСЂР¶РёРјРѕРµ РїРѕР»СЏ FIELD РјР°СЃСЃРёРІР° СЃС‚СЂСѓРєС‚СѓСЂ S РІ РѕС‚РґРµР»СЊРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ Рђ, Р’, РЎ,...;</font></li>
 </ul>
 <P align="left">
-<font face="Times New Roman" size="3">Следующий пример иллюстрирует применение функции
+<font face="Times New Roman" size="3">РЎР»РµРґСѓСЋС‰РёР№ РїСЂРёРјРµСЂ РёР»Р»СЋСЃС‚СЂРёСЂСѓРµС‚ РїСЂРёРјРµРЅРµРЅРёРµ С„СѓРЅРєС†РёРё
 deal:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; [X,Y.Z]=deal(1.2+31,'Привет!')&nbsp;</font>
+<font size="3" face="Courier New">&raquo; [X,Y.Z]=deal(1.2+31,'РџСЂРёРІРµС‚!')&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> X =</font>
@@ -389,37 +389,37 @@ deal:</font>
 <font size="3" face="Courier New"> Z =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">Привет!<BR>
+<font size="3" face="Courier New">РџСЂРёРІРµС‚!<BR>
 </font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; [X Y Z]=dealС Привет!')&nbsp;</font>
+<font size="3" face="Courier New">&raquo; [X Y Z]=dealРЎ РџСЂРёРІРµС‚!')&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> X =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">Привет!</font>
+<font size="3" face="Courier New">РџСЂРёРІРµС‚!</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">&nbsp;Y =<BR>
 </font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">Привет!&nbsp;</font>
+<font size="3" face="Courier New">РџСЂРёРІРµС‚!&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> Z =&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> Привет!</font>
+<font size="3" face="Courier New"> РџСЂРёРІРµС‚!</font>
 </P>
-<P align="left"> <B> <font face="Times New Roman" size="4"><a name="7"></a> Тестирование 
-  имен массивов ячеек</font></B> </P>
+<P align="left"> <B> <font face="Times New Roman" size="4"><a name="7"></a> РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ 
+  РёРјРµРЅ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3">Ввиду обилия типов данных в системе MATLAB часто возникает необходимость в их тестировании
-[<i>Помимо функций iscell и iscellstr вы всегда можете использовать для тестирования массивов ячеек функцию 15а(имя объекта,
-'cell') и команду whos имя объекта. — Примеч. ред.</i>]. Для тестирования массивов ячеек может использоваться функция is сеll (С), которая возвращает логическое значение 1, если С — массив ячеек, и 0 в противном случае. Это поясняют следующие примеры:</font>
+<font face="Times New Roman" size="3">Р’РІРёРґСѓ РѕР±РёР»РёСЏ С‚РёРїРѕРІ РґР°РЅРЅС‹С… РІ СЃРёСЃС‚РµРјРµ MATLAB С‡Р°СЃС‚Рѕ РІРѕР·РЅРёРєР°РµС‚ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РІ РёС… С‚РµСЃС‚РёСЂРѕРІР°РЅРёРё
+[<i>РџРѕРјРёРјРѕ С„СѓРЅРєС†РёР№ iscell Рё iscellstr РІС‹ РІСЃРµРіРґР° РјРѕР¶РµС‚Рµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє С„СѓРЅРєС†РёСЋ 15Р°(РёРјСЏ РѕР±СЉРµРєС‚Р°,
+'cell') Рё РєРѕРјР°РЅРґСѓ whos РёРјСЏ РѕР±СЉРµРєС‚Р°. вЂ” РџСЂРёРјРµС‡. СЂРµРґ.</i>]. Р”Р»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє РјРѕР¶РµС‚ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ С„СѓРЅРєС†РёСЏ is СЃРµll (РЎ), РєРѕС‚РѕСЂР°СЏ РІРѕР·РІСЂР°С‰Р°РµС‚ Р»РѕРіРёС‡РµСЃРєРѕРµ Р·РЅР°С‡РµРЅРёРµ 1, РµСЃР»Рё РЎ вЂ” РјР°СЃСЃРёРІ СЏС‡РµРµРє, Рё 0 РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ. Р­С‚Рѕ РїРѕСЏСЃРЅСЏСЋС‚ СЃР»РµРґСѓСЋС‰РёРµ РїСЂРёРјРµСЂС‹:</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">&raquo; t=iscell(A)&nbsp;</font>
@@ -442,27 +442,27 @@ deal:</font>
 <P align="left">
 <font size="3" face="Courier New">0</font>
 </P>
-<P align="left"> <B><font face="Times New Roman" size="4"><a name="8"></a> Функции 
-  преобразования типов данных</font></B> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="8"></a> Р¤СѓРЅРєС†РёРё 
+  РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ С‚РёРїРѕРІ РґР°РЅРЅС‹С…</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3">При обработке сложных данных возникает необходимость в преобразовании их типов. Ниже представлены такие функции, имеющие отношение к массивам ячеек:</font>
+<font face="Times New Roman" size="3">РџСЂРё РѕР±СЂР°Р±РѕС‚РєРµ СЃР»РѕР¶РЅС‹С… РґР°РЅРЅС‹С… РІРѕР·РЅРёРєР°РµС‚ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РІ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРё РёС… С‚РёРїРѕРІ. РќРёР¶Рµ РїСЂРµРґСЃС‚Р°РІР»РµРЅС‹ С‚Р°РєРёРµ С„СѓРЅРєС†РёРё, РёРјРµСЋС‰РёРµ РѕС‚РЅРѕС€РµРЅРёРµ Рє РјР°СЃСЃРёРІР°Рј СЏС‡РµРµРє:</font>
 </P>
 <ul>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">num2cell (A,DIM) — преобразует массив чисел А в массив ячеек, помещая в одну и ту же ячейку элементы, соответствующие одному значению индекса вдоль измерения, указанного параметром DIM. Например, num2cell (A.2) преобразует
-    каждый ряд массива А в отдельную ячейку.
-    cat(DIM.C{:}) осуществляет обратное преобразование.</font></li>
+    <p align="left"><font face="Times New Roman" size="3">num2cell (A,DIM) вЂ” РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РјР°СЃСЃРёРІ С‡РёСЃРµР» Рђ РІ РјР°СЃСЃРёРІ СЏС‡РµРµРє, РїРѕРјРµС‰Р°СЏ РІ РѕРґРЅСѓ Рё С‚Сѓ Р¶Рµ СЏС‡РµР№РєСѓ СЌР»РµРјРµРЅС‚С‹, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ РѕРґРЅРѕРјСѓ Р·РЅР°С‡РµРЅРёСЋ РёРЅРґРµРєСЃР° РІРґРѕР»СЊ РёР·РјРµСЂРµРЅРёСЏ, СѓРєР°Р·Р°РЅРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂРѕРј DIM. РќР°РїСЂРёРјРµСЂ, num2cell (A.2) РїСЂРµРѕР±СЂР°Р·СѓРµС‚
+    РєР°Р¶РґС‹Р№ СЂСЏРґ РјР°СЃСЃРёРІР° Рђ РІ РѕС‚РґРµР»СЊРЅСѓСЋ СЏС‡РµР№РєСѓ.
+    cat(DIM.C{:}) РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚ РѕР±СЂР°С‚РЅРѕРµ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ.</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3">num2cell (A) — преобразует массив чисел А в массив ячеек и возвращает последний. Каждый элемент А превращается в отдельную ячейку. Возвращаемый массив имеет тот же размер и ту же размерность, что и исходный массив А.</font></li>
+    <p align="left"><font face="Times New Roman" size="3">num2cell (A) вЂ” РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РјР°СЃСЃРёРІ С‡РёСЃРµР» Рђ РІ РјР°СЃСЃРёРІ СЏС‡РµРµРє Рё РІРѕР·РІСЂР°С‰Р°РµС‚ РїРѕСЃР»РµРґРЅРёР№. РљР°Р¶РґС‹Р№ СЌР»РµРјРµРЅС‚ Рђ РїСЂРµРІСЂР°С‰Р°РµС‚СЃСЏ РІ РѕС‚РґРµР»СЊРЅСѓСЋ СЏС‡РµР№РєСѓ. Р’РѕР·РІСЂР°С‰Р°РµРјС‹Р№ РјР°СЃСЃРёРІ РёРјРµРµС‚ С‚РѕС‚ Р¶Рµ СЂР°Р·РјРµСЂ Рё С‚Сѓ Р¶Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ, С‡С‚Рѕ Рё РёСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ Рђ.</font></li>
 </ul>
 <P align="left">
-<font face="Times New Roman" size="3">Примеры применения данных функций:</font>
+<font face="Times New Roman" size="3">РџСЂРёРјРµСЂС‹ РїСЂРёРјРµРЅРµРЅРёСЏ РґР°РЅРЅС‹С… С„СѓРЅРєС†РёР№:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; А=[1 2;  3 4: 5 6]&nbsp;</font>
+<font size="3" face="Courier New">&raquo; Рђ=[1 2;  3 4: 5 6]&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> А=</font>
+<font size="3" face="Courier New"> Рђ=</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">1    2</font>
@@ -474,10 +474,10 @@ deal:</font>
 <font size="3" face="Courier New">5 6</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo;С= num2cell(A.2)&nbsp;</font>
+<font size="3" face="Courier New">&raquo;РЎ= num2cell(A.2)&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> С=</font>
+<font size="3" face="Courier New"> РЎ=</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">[1x2 double]</font>
@@ -489,7 +489,7 @@ deal:</font>
 <font size="3" face="Courier New">[1x2 double]&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> &raquo;С{1.1}&nbsp;</font>
+<font size="3" face="Courier New"> &raquo;РЎ{1.1}&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> ans =</font>
@@ -498,7 +498,7 @@ deal:</font>
 <font size="3" face="Courier New">1 2&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> &raquo;С{2.1}&nbsp;</font>
+<font size="3" face="Courier New"> &raquo;РЎ{2.1}&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> ans =</font>
@@ -507,13 +507,13 @@ deal:</font>
 <font size="3" face="Courier New">3 4&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> &raquo;С{3,1}&nbsp;</font>
+<font size="3" face="Courier New"> &raquo;РЎ{3,1}&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> ans =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">5 б&nbsp;</font>
+<font size="3" face="Courier New">5 Р±&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> &raquo; cat(2.C{:})&nbsp;</font>
@@ -548,19 +548,19 @@ deal:</font>
 <ul>
   <li>
     <p align="left"><font face="Times New Roman" size="3">cell2struct(C. FIELDS.
-    DIM) — преобразует массив ячеек С в массив структур, превращая размерность DIM массива ячеек С в поля структуры S. Размерность 1 — столбцы. Размерность 2 — строки. FILEDS — массив символов или строковый массив ячеек.</font></li>
+    DIM) вЂ” РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РјР°СЃСЃРёРІ СЏС‡РµРµРє РЎ РІ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ, РїСЂРµРІСЂР°С‰Р°СЏ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ DIM РјР°СЃСЃРёРІР° СЏС‡РµРµРє РЎ РІ РїРѕР»СЏ СЃС‚СЂСѓРєС‚СѓСЂС‹ S. Р Р°Р·РјРµСЂРЅРѕСЃС‚СЊ 1 вЂ” СЃС‚РѕР»Р±С†С‹. Р Р°Р·РјРµСЂРЅРѕСЃС‚СЊ 2 вЂ” СЃС‚СЂРѕРєРё. FILEDS вЂ” РјР°СЃСЃРёРІ СЃРёРјРІРѕР»РѕРІ РёР»Рё СЃС‚СЂРѕРєРѕРІС‹Р№ РјР°СЃСЃРёРІ СЏС‡РµРµРє.</font></li>
 </ul>
 <P align="left">
-<font face="Times New Roman" size="3">Пример преобразования:</font>
+<font face="Times New Roman" size="3">РџСЂРёРјРµСЂ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; С={' Привет! '.123. 2+31}</font>
+<font size="3" face="Courier New">&raquo; РЎ={' РџСЂРёРІРµС‚! '.123. 2+31}</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&nbsp;С =</font>
+<font size="3" face="Courier New">&nbsp;РЎ =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Привет!'   [123] [2.0000+3.00001]&nbsp;</font>
+<font size="3" face="Courier New">'РџСЂРёРІРµС‚!'   [123] [2.0000+3.00001]&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> &raquo; f={ 'name' . 'number' , 'complex'};&nbsp;</font>
@@ -572,7 +572,7 @@ deal:</font>
 <font size="3" face="Courier New"> S =&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">name: 'Привет! '</font>
+<font size="3" face="Courier New">name: 'РџСЂРёРІРµС‚! '</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">number: 1 2 3</font>
@@ -581,16 +581,16 @@ deal:</font>
 </P>
 <ul>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> struct2cell (S) — преобразует массив структур S размером <I>тхп, </I>в котором содержатся <I>р </I>полей, в массив ячеек, так что возвращаемый массив будет иметь размер <I>рхтхп. </I>Если массив структур многомерный, то возвращаемый массив ячеек будет иметь размер, равный [р size(S)]. Схему структуры с названиями полей возвращаемый массив ячеек не содержит. Пример такого преобразования приводится ниже:</font></li>
+    <p align="left"><font face="Times New Roman" size="3"> struct2cell (S) вЂ” РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ S СЂР°Р·РјРµСЂРѕРј <I>С‚С…Рї, </I>РІ РєРѕС‚РѕСЂРѕРј СЃРѕРґРµСЂР¶Р°С‚СЃСЏ <I>СЂ </I>РїРѕР»РµР№, РІ РјР°СЃСЃРёРІ СЏС‡РµРµРє, С‚Р°Рє С‡С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµРјС‹Р№ РјР°СЃСЃРёРІ Р±СѓРґРµС‚ РёРјРµС‚СЊ СЂР°Р·РјРµСЂ <I>СЂС…С‚С…Рї. </I>Р•СЃР»Рё РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ РјРЅРѕРіРѕРјРµСЂРЅС‹Р№, С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµРјС‹Р№ РјР°СЃСЃРёРІ СЏС‡РµРµРє Р±СѓРґРµС‚ РёРјРµС‚СЊ СЂР°Р·РјРµСЂ, СЂР°РІРЅС‹Р№ [СЂ size(S)]. РЎС…РµРјСѓ СЃС‚СЂСѓРєС‚СѓСЂС‹ СЃ РЅР°Р·РІР°РЅРёСЏРјРё РїРѕР»РµР№ РІРѕР·РІСЂР°С‰Р°РµРјС‹Р№ РјР°СЃСЃРёРІ СЏС‡РµРµРє РЅРµ СЃРѕРґРµСЂР¶РёС‚. РџСЂРёРјРµСЂ С‚Р°РєРѕРіРѕ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РїСЂРёРІРѕРґРёС‚СЃСЏ РЅРёР¶Рµ:</font></li>
 </ul>
 <P align="left">
 <font size="3" face="Courier New">&raquo; C=struct2cellS)</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">С =</font>
+<font size="3" face="Courier New">РЎ =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Привет!'</font>
+<font size="3" face="Courier New">'РџСЂРёРІРµС‚!'</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -599,31 +599,31 @@ deal:</font>
 <P align="left">
 <font size="3" face="Courier New">[2.0000+3.00001]</font>
 </P>
-<P align="left"> <B><font face="Times New Roman" size="4"><a name="9"></a> Многомерные 
-  массивы ячеек</font></B> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="9"></a> РњРЅРѕРіРѕРјРµСЂРЅС‹Рµ 
+  РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3">С помощью функции cat можно формировать многомерные массивы ячеек. Например, трехмерный массив С формируется следующим образом (m-файл с именем се2.m):</font>
+<font face="Times New Roman" size="3">РЎ РїРѕРјРѕС‰СЊСЋ С„СѓРЅРєС†РёРё cat РјРѕР¶РЅРѕ С„РѕСЂРјРёСЂРѕРІР°С‚СЊ РјРЅРѕРіРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє. РќР°РїСЂРёРјРµСЂ, С‚СЂРµС…РјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ РЎ С„РѕСЂРјРёСЂСѓРµС‚СЃСЏ СЃР»РµРґСѓСЋС‰РёРј РѕР±СЂР°Р·РѕРј (m-С„Р°Р№Р» СЃ РёРјРµРЅРµРј СЃРµ2.m):</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">А{1.1}='Курить вредно!';&nbsp;</font>
+<font size="3" face="Courier New">Рђ{1.1}='РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ!';&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> А{1,2}=[1 2:3 4];</font>
+<font size="3" face="Courier New"> Рђ{1,2}=[1 2:3 4];</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&nbsp;А{2.1}=2+31;</font>
+<font size="3" face="Courier New">&nbsp;Рђ{2.1}=2+31;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">А{2.2}=0:0.1:1;</font>
+<font size="3" face="Courier New">Рђ{2.2}=0:0.1:1;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&nbsp;В{1,1}='Пить тоже вредно!';</font>
+<font size="3" face="Courier New">&nbsp;Р’{1,1}='РџРёС‚СЊ С‚РѕР¶Рµ РІСЂРµРґРЅРѕ!';</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&nbsp;В{1,2}=[1 2 3 4];&nbsp;</font>
+<font size="3" face="Courier New">&nbsp;Р’{1,2}=[1 2 3 4];&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> В{2.1}=2;&nbsp;</font>
+<font size="3" face="Courier New"> Р’{2.1}=2;&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">B{2.2}=2*pi;&nbsp;</font>
@@ -632,19 +632,19 @@ deal:</font>
 <font size="3" face="Courier New">C=cat(3.A.B);</font>
 </P>
 <P align="left">
-<font face="Times New Roman" size="3">Теперь можно просмотреть данный массив, имеющий две страницы:</font>
+<font face="Times New Roman" size="3">РўРµРїРµСЂСЊ РјРѕР¶РЅРѕ РїСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ, РёРјРµСЋС‰РёР№ РґРІРµ СЃС‚СЂР°РЅРёС†С‹:</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; се2</font>
+<font size="3" face="Courier New">&raquo; СЃРµ2</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; С&nbsp;</font>
+<font size="3" face="Courier New">&raquo; РЎ&nbsp;</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New"> С(:,:,1) =</font>
+<font size="3" face="Courier New"> РЎ(:,:,1) =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Курить вредно!'        [2x2
+<font size="3" face="Courier New">'РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ!'        [2x2
 double]<BR>
 </font>
 </P>
@@ -653,18 +653,18 @@ double]<BR>
 </font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">С(:.:.2) =<BR>
+<font size="3" face="Courier New">РЎ(:.:.2) =<BR>
 </font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Пить тоже вредно!'      [1x4 double]&nbsp;</font>
+<font size="3" face="Courier New">'РџРёС‚СЊ С‚РѕР¶Рµ РІСЂРµРґРЅРѕ!'      [1x4 double]&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> [         2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [&nbsp;&nbsp;&nbsp; 6.2832]</font>
 </P>
-<P align="left"> <font face="Times New Roman" size="3">Доступ к ячейкам многомерных 
-  массивов очевиден и поясняется следующими примерами:</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Р”РѕСЃС‚СѓРї Рє СЏС‡РµР№РєР°Рј РјРЅРѕРіРѕРјРµСЂРЅС‹С… 
+  РјР°СЃСЃРёРІРѕРІ РѕС‡РµРІРёРґРµРЅ Рё РїРѕСЏСЃРЅСЏРµС‚СЃСЏ СЃР»РµРґСѓСЋС‰РёРјРё РїСЂРёРјРµСЂР°РјРё:</font> </P>
 <P align="left">
 <font size="3" face="Courier New">&raquo; C(l.l.l)&nbsp;</font>
 </P>
@@ -672,7 +672,7 @@ double]<BR>
 <font size="3" face="Courier New"> ans =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Курить вредно!'&nbsp;</font>
+<font size="3" face="Courier New">'РљСѓСЂРёС‚СЊ РІСЂРµРґРЅРѕ!'&nbsp;</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New"> &raquo; C(1.1.2)</font>
@@ -681,16 +681,16 @@ double]<BR>
 <font size="3" face="Courier New">ans =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Пить тоже вредно!'</font>
+<font size="3" face="Courier New">'РџРёС‚СЊ С‚РѕР¶Рµ РІСЂРµРґРЅРѕ!'</font>
 </P>
-<P align="left"> <B><font face="Times New Roman" size="4"><a name="10"></a> Вложенные 
-  массивы ячеек</font></B> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="10"></a> Р’Р»РѕР¶РµРЅРЅС‹Рµ 
+  РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3">Содержимым ячейки массива ячеек может быть, в свою очередь, произвольный массив ячеек. Таким образом, возможно создание <I>вложенных </I>массивов ячеек — пожалуй, самого сложного типа данных.</font>
+<font face="Times New Roman" size="3">РЎРѕРґРµСЂР¶РёРјС‹Рј СЏС‡РµР№РєРё РјР°СЃСЃРёРІР° СЏС‡РµРµРє РјРѕР¶РµС‚ Р±С‹С‚СЊ, РІ СЃРІРѕСЋ РѕС‡РµСЂРµРґСЊ, РїСЂРѕРёР·РІРѕР»СЊРЅС‹Р№ РјР°СЃСЃРёРІ СЏС‡РµРµРє. РўР°РєРёРј РѕР±СЂР°Р·РѕРј, РІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°РЅРёРµ <I>РІР»РѕР¶РµРЅРЅС‹С… </I>РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє вЂ” РїРѕР¶Р°Р»СѓР№, СЃР°РјРѕРіРѕ СЃР»РѕР¶РЅРѕРіРѕ С‚РёРїР° РґР°РЅРЅС‹С….</font>
 </P>
-<P align="left"> <font face="Times New Roman" size="3">В следующем примере показано 
-  формирование массива ячеек А с вложенным в него массивом В (он был создан в 
-  примере выше):</font> </P>
+<P align="left"> <font face="Times New Roman" size="3">Р’ СЃР»РµРґСѓСЋС‰РµРј РїСЂРёРјРµСЂРµ РїРѕРєР°Р·Р°РЅРѕ 
+  С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° СЏС‡РµРµРє Рђ СЃ РІР»РѕР¶РµРЅРЅС‹Рј РІ РЅРµРіРѕ РјР°СЃСЃРёРІРѕРј Р’ (РѕРЅ Р±С‹Р» СЃРѕР·РґР°РЅ РІ 
+  РїСЂРёРјРµСЂРµ РІС‹С€Рµ):</font> </P>
 <P align="left">
 <font size="3" face="Courier New">&raquo; clear A;</font>
 </P>
@@ -698,10 +698,10 @@ double]<BR>
 <font size="3" face="Courier New">&raquo; A(l.l)={{magic(3).{'Hello!'}}};</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo;А(1.2)={В};</font>
+<font size="3" face="Courier New">&raquo;Рђ(1.2)={Р’};</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">&raquo; А</font>
+<font size="3" face="Courier New">&raquo; Рђ</font>
 </P>
 <P align="left">
 <font size="3" face="Courier New">ans =</font>
@@ -719,7 +719,7 @@ double]<BR>
 <font size="3" face="Courier New">&nbsp;ans =</font>
 </P>
 <P align="left">
-<font size="3" face="Courier New">'Пить тоже вредно!'    [1x4
+<font size="3" face="Courier New">'РџРёС‚СЊ С‚РѕР¶Рµ РІСЂРµРґРЅРѕ!'    [1x4
 double]<BR>
 </font>
 </P>
@@ -732,28 +732,28 @@ double]<BR>
 <font size="3" face="Courier New"> &raquo; cellplot(A)</font><font face="Times New Roman" size="3"><BR>
 </font>
 </P>
-<P align="left"> <font face="Times New Roman" size="3">В данном случае вложенный 
-  массив отображается полностью как часть массива А.</font> </P>
-<P align="left"> <B><font face="Times New Roman" size="4"><a name="11"></a> Что 
-  нового мы узнали?</font></B> </P>
+<P align="left"> <font face="Times New Roman" size="3">Р’ РґР°РЅРЅРѕРј СЃР»СѓС‡Р°Рµ РІР»РѕР¶РµРЅРЅС‹Р№ 
+  РјР°СЃСЃРёРІ РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ РїРѕР»РЅРѕСЃС‚СЊСЋ РєР°Рє С‡Р°СЃС‚СЊ РјР°СЃСЃРёРІР° Рђ.</font> </P>
+<P align="left"> <B><font face="Times New Roman" size="4"><a name="11"></a> Р§С‚Рѕ 
+  РЅРѕРІРѕРіРѕ РјС‹ СѓР·РЅР°Р»Рё?</font></B> </P>
 <P align="left">
-<font face="Times New Roman" size="3">В этом уроке мы научились:&nbsp;</font>
+<font face="Times New Roman" size="3">Р’ СЌС‚РѕРј СѓСЂРѕРєРµ РјС‹ РЅР°СѓС‡РёР»РёСЃСЊ:&nbsp;</font>
 </P>
 <ul>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> Создавать ячейки и массивы ячеек.&nbsp;</font></li>
+    <p align="left"><font face="Times New Roman" size="3"> РЎРѕР·РґР°РІР°С‚СЊ СЏС‡РµР№РєРё Рё РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє.&nbsp;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> Осуществлять визуализацию массивов ячеек.&nbsp;</font></li>
+    <p align="left"><font face="Times New Roman" size="3"> РћСЃСѓС‰РµСЃС‚РІР»СЏС‚СЊ РІРёР·СѓР°Р»РёР·Р°С†РёСЋ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє.&nbsp;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> Создавать массивы символьных ячеек из массивов строк.&nbsp;</font></li>
+    <p align="left"><font face="Times New Roman" size="3"> РЎРѕР·РґР°РІР°С‚СЊ РјР°СЃСЃРёРІС‹ СЃРёРјРІРѕР»СЊРЅС‹С… СЏС‡РµРµРє РёР· РјР°СЃСЃРёРІРѕРІ СЃС‚СЂРѕРє.&nbsp;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> Осуществлять присваивание ячейкам значений.&nbsp;</font></li>
+    <p align="left"><font face="Times New Roman" size="3"> РћСЃСѓС‰РµСЃС‚РІР»СЏС‚СЊ РїСЂРёСЃРІР°РёРІР°РЅРёРµ СЏС‡РµР№РєР°Рј Р·РЅР°С‡РµРЅРёР№.&nbsp;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> Использовать функцию тестирования имен массивов ячеек.&nbsp;</font></li>
+    <p align="left"><font face="Times New Roman" size="3"> РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С„СѓРЅРєС†РёСЋ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ РёРјРµРЅ РјР°СЃСЃРёРІРѕРІ СЏС‡РµРµРє.&nbsp;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> Применять функции преобразования типов.&nbsp;</font></li>
+    <p align="left"><font face="Times New Roman" size="3"> РџСЂРёРјРµРЅСЏС‚СЊ С„СѓРЅРєС†РёРё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ С‚РёРїРѕРІ.&nbsp;</font></li>
   <li>
-    <p align="left"><font face="Times New Roman" size="3"> Создавать многомерные и вложенные массивы ячеек.<BR>
+    <p align="left"><font face="Times New Roman" size="3"> РЎРѕР·РґР°РІР°С‚СЊ РјРЅРѕРіРѕРјРµСЂРЅС‹Рµ Рё РІР»РѕР¶РµРЅРЅС‹Рµ РјР°СЃСЃРёРІС‹ СЏС‡РµРµРє.<BR>
     </font></li>
 </ul>
 </BODY>
